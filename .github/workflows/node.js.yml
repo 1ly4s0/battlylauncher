@@ -1,12 +1,31 @@
-name: Build/release
-
+name: Launcher Build
 on:
   push:
-    branches:
-      - master
-      
+    branches: [ master ]
+
 jobs:
-  release:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get version
+        run: echo "version=$(jq -r .version package.json)" >> $GITHUB_ENV
+      
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.version }}
+          release_name: release ${{ env.version }}
+          draft: false
+          prerelease: ${{ contains(env.version, 'beta') || contains(env.version, 'alpha') }}
+
+  build-launcher:
+    needs: create-release
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -17,29 +36,22 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v1
 
-      - name: Install Node.js, NPM and Yarn
-        uses: actions/setup-node@v2
+      - name: Set up Node
+        uses: actions/setup-node@v3
         with:
-          node-version: 16  # Ajusta la versión de Node.js según tus necesidades
+          node-version: 18.x
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.x  # Ajusta la versión de Python según tus necesidades
+          python-version: 3.x
 
       - name: Install Dependencies
         run: npm ci
+        shell: bash
 
-      - name: Get App Version
-        id: get_version
-        run: echo "::set-output name=app_version::$(node -e 'console.log(require("./package.json").version)')"
-
-      - name: Build Electron app
-        uses: electron-userland/electron-builder-action@v2
-        with:
-          # GitHub token, automatically provided to the action
-          # (No need to define this secret in the repo settings)
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-          # Set the version of the app to the one obtained from package.json
-          build_version: ${{ steps.get_version.outputs.app_version }}
+      - name: Build
+        env:
+          GH_TOKEN: ${{ secrets.github_token }}
+        run: npm run build
+        shell: bash
