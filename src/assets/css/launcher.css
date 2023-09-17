@@ -1,0 +1,265 @@
+@import "font.css";
+@import "panels/login.css";
+@import "panels/home.css";
+@import "panels/settings.css";
+@import "panels/mods.css";
+@import "panels/mods/style.css";
+@import "panels/music.css";
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/all.css');
+@import "skin.css";
+
+* {
+    outline: none;
+}
+
+body, html {
+    height: 100%;
+    
+  }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+body {
+    user-select: none;
+    background: linear-gradient(#00000066, #00000066), url("../images/background/light.jpg") black no-repeat center center fixed;
+    background-size: cover; /* Añadir para ajustar el tamaño de la imagen de fondo */
+    background-attachment: fixed; /* Añadir para fijar la imagen de fondo */
+    background-color: black; /* Color de fondo en caso de que la imagen no llene completamente */
+}
+
+body {
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+  
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+  
+.frame {
+  background: #000000;
+  opacity: .7;
+  position: fixed;
+  display: flex; /* Usar flexbox */
+  justify-content: space-between; /* Colocar elementos al principio y al final */
+  top: 0px;
+  right: 0px;
+  left: 0px; /* Para que el frame ocupe todo el ancho */
+  z-index: 11;
+  -webkit-app-region: drag; /* Hacer que el frame sea arrastrable */
+  height: 26px; /* Ajustar la altura del frame */
+}
+
+.frame * {
+  pointer-events: auto;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+
+
+.button-frame {
+  /* Estilos de los botones */
+  width: 30px;
+  height: 26px;
+  transition: color .2s, background-color .2s;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex; /* Para que los botones sean flexibles */
+  align-items: center; /* Centrar verticalmente los botones */
+}
+
+
+
+.titulo {
+  flex: 1; /* Hacer que el título ocupe el espacio disponible */
+  display: flex; /* Alinear el texto verticalmente */
+  align-items: center; /* Centrar verticalmente el texto */
+  padding-left: 10px; /* Añadir espacio a la izquierda */
+  color: #ffffff;
+}
+
+
+
+.battly-title {
+    position: absolute;
+    top: 6px;
+    left: -90%;
+    font-size: 14px;
+    color: #f8f9f9;
+
+}
+
+.preload-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+
+.preload-progress {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 127px;
+}
+
+.dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: 14px;
+    margin-top: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    transform: translateX(0);
+    animation: dot 2.8s infinite;
+}
+
+.dots {
+    transform: translateX(0);
+    margin-top: 12px;
+    margin-left: 31px;
+    animation: dots 2.8s infinite;
+}
+
+.dots span {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+@keyframes dot {
+    50% {
+        transform: translateX(96px);
+    }
+}
+
+@keyframes dots {
+    50% {
+        transform: translateX(-31px);
+    }
+}
+
+.preload-title {
+    font: normal normal bold 30px/40px Poppins;
+    color: #E1E1E1;
+    text-align: center;
+    margin: 2em 0;
+}
+
+.panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.7s ease;
+}
+
+.active {
+    opacity: 1;
+    z-index: 1;
+    pointer-events: all;
+}
+
+.rotation {
+    animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+          .spinner {
+            -webkit-animation: rotate 2s linear infinite;
+                    animation: rotate 2s linear infinite;
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -25px 0 0 -25px;
+            width: 50px;
+            height: 50px;
+          }
+          .spinner .path {
+            stroke: #93bfec;
+            stroke-linecap: round;
+            -webkit-animation: dash 1.5s ease-in-out infinite;
+                    animation: dash 1.5s ease-in-out infinite;
+          }
+          
+          @-webkit-keyframes rotate {
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+          
+          @keyframes rotate {
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+          @-webkit-keyframes dash {
+            0% {
+              stroke-dasharray: 1, 150;
+              stroke-dashoffset: 0;
+            }
+            50% {
+              stroke-dasharray: 90, 150;
+              stroke-dashoffset: -35;
+            }
+            100% {
+              stroke-dasharray: 90, 150;
+              stroke-dashoffset: -124;
+            }
+          }
+          @keyframes dash {
+            0% {
+              stroke-dasharray: 1, 150;
+              stroke-dashoffset: 0;
+            }
+            50% {
+              stroke-dasharray: 90, 150;
+              stroke-dashoffset: -35;
+            }
+            100% {
+              stroke-dasharray: 90, 150;
+              stroke-dashoffset: -124;
+            }
+          }
+          

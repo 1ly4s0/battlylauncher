@@ -1,0 +1,102 @@
+
+  <div class="bottom_bar">
+    <div>
+      <p style="font-size: 40px; color: #fff; font-weight: 800;">Battly <span style="color: #3e8ed0">Music</span></p>
+    </div>
+    <div style="display: flex;">
+      <p style="font-size: 20px; color: #0074F0; font-weight: 800; margin-right: 10px;">Volumen</p>
+      <input name="slider" type="range" style="margin-right: 20px; color: #fff" value="100" id="volumen">
+      <label for="slider" id="label-volumen">100%</label>
+    </div>
+    <div>
+        <button id="return-btn" class="button is-info"><span>Volver <i class="fa-solid fa-circle-play"></i></span></button>
+    </div>
+</div>
+<div style="display: flex;">
+<div class="card musicplayer" id="card-wrapper">
+  <div class="card-content">
+    <div class="content">
+      <div class="top-bar" style="text-align: center;">
+        <i class="material-icons">expand_more</i>
+        <span>Reproduciendo ahora</span>
+        <i class="material-icons">more_horiz</i>
+      </div>
+      <br>
+      <div class="song-details" style="text-align: center;">
+        <p class="artist">Ninguna canción</p>
+      </div>
+      <div class="img-area">
+        <img src="./assets/images/icons/music.gif" alt="">
+      </div>
+      <br>
+      <div class="progress-area">
+        <div class="progress-bar">
+          <audio id="main-audio" src=""></audio>
+        </div>
+        <div class="song-timer">
+          <span class="current-time">0:00</span>
+          <span class="max-duration">0:00</span>
+        </div>
+      </div>
+      <div class="controls">
+        <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+        <i id="prev" class="material-icons">skip_previous</i>
+        <div class="play-pause">
+          <i class="material-icons play">play_arrow</i>
+        </div>
+        <i id="next" class="material-icons">skip_next</i>
+        <i id="more-music" class="material-icons">queue_music</i>
+      </div>
+      <div class="music-list">
+        <div class="header">
+          <div class="row">
+            <span><i class="fa-solid fa-list"></i> Lista de reproducción</span>
+          </div>
+          <i id="close" class="material-icons">close</i>
+        </div>
+        <ul>
+          <!-- here li list are coming from js -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card search">
+  <div class="card-content">
+    <div class="content">
+      <div class="search-container">
+      <input type="text" class="input is-info" id="nombre-de-cancion" placeholder="Nombre de la canción" style="width: 90%; height: 40px;"><button id="reproducir-btn" class="button is-info"><span><i class="fa-solid fa-search"></i> Buscar</span></button>
+        <!--otra card que contenga la información de la canción, con un botón de reproducir, contendrá la imagen, información de la canción, el nomnre del artista y un botón llamado añaadir a la lista de reproducción-->
+        <!--la imagen irá a la izquierda, la información de la canción irá a la derecha-->
+        <!--la información de la canción irá en un div, y el botón de reproducir en otro-->
+        <!--el botón de reproducir tendrá un evento onclick que llamará a una función que reproducirá la canción-->
+
+        
+    </div>
+    <br>
+    <div id="resultados" style="overflow-x: hidden;">
+    <div class="card" style="width: 100%; height: 50px; display: flex;">
+      <div class="card-content" style="display: flex;">
+        
+    
+        <div class="content" style="transform: translate(0px, -10px);">
+          <h4>Busca una canción para reproducirla en Battly</h4>
+        </div>
+      
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  /*
+  function clicked(element){
+  let getLiIndex = element.getAttribute("li-index");
+  musicIndex = getLiIndex; //updating current song index with clicked li index
+  loadMusic(musicIndex);
+  playMusic();
+  playingSong();
+}*/
+</script>
