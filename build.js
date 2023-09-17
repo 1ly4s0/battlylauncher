@@ -42,7 +42,7 @@ builder.build({
             multiLanguageInstaller: true,
             license: "./LICENSE.md",
         },
-        /*
+        
         mac: {
             icon: "./src/assets/images/icon.icns",
             category: "public.app-category.games",
@@ -50,7 +50,7 @@ builder.build({
                 target: "dmg",
                 arch: ["x64", "arm64"]
             }]
-        },*/
+        },
         linux: {
             icon: "./src/assets/images/icon.png",
             target: [{
@@ -59,7 +59,36 @@ builder.build({
             }, {
                 target: "tar.gz",
                 arch: ["x64"]
-            }]
+            },
+            {
+                target: "deb",
+                arch: ["x64"]
+            },
+            {
+                target: "rpm",
+                arch: ["x64"]
+            },
+            {
+                target: "AppImage",
+                arch: ["armv7l"]
+            },
+            {
+                target: "tar.gz",
+                arch: ["armv7l"]
+            },
+            {
+                target: "deb",
+                arch: ["armv7l"]
+            },
+            {
+                target: "rpm",
+                arch: ["armv7l"]
+            },
+            {
+                target: "flatpak",
+                arch: ["x64"]
+            }
+        ]
         }
     }
 }).then(() => {
