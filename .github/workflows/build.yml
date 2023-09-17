@@ -23,7 +23,7 @@ jobs:
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: "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"
+          GITHUB_TOKEN: ${{ secrets.github_token }}
         with:
           tag_name: ${{ env.version }}
           release_name: release ${{ env.version }}
@@ -58,6 +58,6 @@ jobs:
 
       - name: Build
         env:
-          GH_TOKEN: "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"
+          GH_TOKEN: ${{ secrets.github_token }}
         run: npm run build
         shell: bash
