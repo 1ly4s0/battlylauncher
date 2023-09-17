@@ -14,13 +14,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Get version
-        run: echo "version=$(jq -r .version package.json)" >> $GITHUB_ENV
+        run: echo "version=$(jq -r .version package.json)" >> "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"
       
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: "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"
         with:
           tag_name: ${{ env.version }}
           release_name: release ${{ env.version }}
@@ -55,6 +55,6 @@ jobs:
 
       - name: Build
         env:
-          GH_TOKEN: ${{ secrets.github_token }}
+          GH_TOKEN: "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"
         run: npm run build
         shell: bash
