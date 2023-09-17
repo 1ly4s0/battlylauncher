@@ -1,10 +1,8 @@
-name: Node.js CI
-
+# module du helios launcher
+name: Launcher Build
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ master ]
 
 jobs:
   create-release:
@@ -14,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Get version
-        run: echo "version=$(jq -r .version package.json)" >> ${{ secrets.GITHUB_TOKEN }}
+        run: echo "version=$(jq -r .version package.json)" >> $GITHUB_ENV
       
       - name: Create Release
         id: create_release
@@ -55,6 +53,6 @@ jobs:
 
       - name: Build
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.github_token }}
         run: npm run build
         shell: bash
