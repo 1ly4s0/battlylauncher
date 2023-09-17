@@ -1,31 +1,31 @@
-name: Electron Builder Action Fork
-  # You may pin to the exact commit or the version.
-  # uses: cryy/action-electron-builder@a96d2396d667e719bca7a2e6ce3151b32469ece4
-  uses: cryy/action-electron-builder@v1.7.0
-  with:
-    # GitHub authentication token
-    github_token: 
-    # Base64-encoded code signing certificate for macOS
-    mac_certs: # optional
-    # Password for decrypting `mac_certs`
-    mac_certs_password: # optional
-    # Whether the app should be released after a successful build
-    release: # optional
-    # Base64-encoded code signing certificate for Windows
-    windows_certs: # optional
-    # Password for decrypting `windows_certs`
-    windows_certs_password: # optional
-    # Directory where NPM/Yarn commands should be run
-    package_root: # optional, default is .
-    # Name of the optional NPM build script which is executed before `electron-builder`
-    build_script_name: # optional, default is build
-    # Whether the action should execute the NPM build script before running `electron-builder`
-    skip_build: # optional
-    # Whether to run `electron-builder` using the Vue CLI plugin instead of calling the command directly
-    use_vue_cli: # optional
-    # Other arguments to pass to the `electron-builder` command, e.g. configuration overrides
-    args: # optional, default is 
-    # Maximum number of attempts for completing the build and release step
-    max_attempts: # optional, default is 1
-    # Directory where `electron-builder` commands should be run
-    app_root: # optional
+name: Build/release
+
+on: push
+
+jobs:
+  release:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Build/release Electron app
+        uses: motrixapp/action-electron-builder@v2
+        with:
+          # GitHub token, automatically provided to the action
+          # (No need to define this secret in the repo settings)
+          github_token: ${{ secrets.github_token }}
+
+          # If the commit is tagged with a version (e.g. "v1.0.0"),
+          # release the app after building
+          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
