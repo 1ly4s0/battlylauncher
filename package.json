@@ -4,7 +4,7 @@
     "version": "1.4.1-beta",
     "description": "Launcher Personalizado para Minecraft Premium y No premium",
     "main": "src/app.js",
-    "author": "TECNO BROS",
+    "author": "TECNO BROS <contacto@tecnobros.es>",
     "url": "https://api.battlylauncher.com/battlylauncher",
     "engines": {
         "node": "^18.x.x"
