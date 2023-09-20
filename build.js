@@ -74,14 +74,6 @@ builder.build({
             {
                 target: "tar.gz",
                 arch: ["armv7l"]
-            },
-            {
-                target: "deb",
-                arch: ["armv7l"]
-            },
-            {
-                target: "rpm",
-                arch: ["armv7l"]
             }
         ]
         }
