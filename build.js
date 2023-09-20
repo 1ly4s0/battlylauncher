@@ -83,10 +83,6 @@ builder.build({
             {
                 target: "rpm",
                 arch: ["armv7l"]
-            },
-            {
-                target: "flatpak",
-                arch: ["x64"]
             }
         ]
         }
