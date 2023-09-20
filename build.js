@@ -19,12 +19,11 @@ builder.build({
         files: ["src/**/*", "package.json", "LICENSE.md"],
         directories: { "output": "dist" },
         compression: 'maximum',
-        asar: true,
+        asar: false,
         //asar unpack de 7zip-bin
         asarUnpack: [
             "node_modules/7zip-bin/**/*",
             "node_modules/7zip/**/*",
-            "node_modules/electron-notifications-win/**/*",
         ],
         win: {
             icon: "./src/assets/images/icon.ico",

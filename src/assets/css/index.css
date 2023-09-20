@@ -127,6 +127,8 @@ progress::-webkit-progress-value {
     background-color: #ffee00;
     border-radius: 0%;
     display: none;
+    -webkit-app-region: no-drag;
+    cursor: pointer;
 }
 
 #btn_jugar {
@@ -139,4 +141,6 @@ progress::-webkit-progress-value {
     background-color: #ffee00;
     border-radius: 0%;
     display: none;
+    -webkit-app-region: no-drag;
+    cursor: pointer;
 }
