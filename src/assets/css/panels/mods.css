@@ -100,12 +100,18 @@
 }
 
 .bottom_bar_mods {
-  background-color: #1f1f1f;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 75px;
-  width: 100%;
-  position: absolute;
+  padding: 0 20px;
+  background-color: #1f1f1f;
+  position: fixed;
   bottom: 0;
-  z-index: 9;
+  left: 0;
+  width: 100%;
+  z-index: 99;
 }
 .boton-volver {
   position: absolute;
@@ -116,24 +122,23 @@
   font-family: Poppins;
   font-weight: 700;
 }
+
 .buscar-mods {
-   position: absolute;
-   right: 20px;
-   bottom: 15px;
-   margin-right: 20px;
-   width: 20%;
-   font-size: 15px;
-   font-family: Poppins;
-   font-weight: 700;
-   border: none;
-   border-radius: 0px;
-   color: #fff;
+  border-radius: 5px;
+  margin-right: 20px;
+  width: 50%;
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 700;
+  border: none;
+  color: #1f1f1f;
+  margin-left: 5px;
+  height: 38px;
 }
 
 .buscar-mods::placeholder {
-  color: #b6b6b6;
+color: #b6b6b6;
 }
-
   .home-text {
     top: 35px;
     left: 48px;

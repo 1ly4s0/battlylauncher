@@ -40,6 +40,10 @@ body::-webkit-scrollbar {
     width: 0;
 }
 
+.swal2-container {
+  z-index: 999999999;
+}
+
 img {
     -webkit-user-drag: none;
     user-select: none;
