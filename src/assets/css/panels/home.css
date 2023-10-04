@@ -3,6 +3,9 @@
 
 .swal-overlay { font-family: "Poppins"} 
 
+span, div {
+    font-family: 'Poppins';
+}
 
 .player-head {
     margin: auto 30px;

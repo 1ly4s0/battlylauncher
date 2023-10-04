@@ -99,6 +99,10 @@
     width: 0;
 }
 
+.modal {
+  z-index: 10000;
+}
+
 .bottom_bar_mods {
   opacity: 1;
   display: flex;
@@ -131,7 +135,7 @@
   font-family: Poppins;
   font-weight: 700;
   border: none;
-  color: #1f1f1f;
+  color: #fff;
   margin-left: 5px;
   height: 38px;
 }
