@@ -44,7 +44,7 @@
     },
     "devDependencies": {
         "cross-env": "^7.0.3",
-        "electron": "^26.2.4",
+        "electron": "^26.3.0",
         "electron-builder": "^24.4.0",
         "nodemon": "^3.0.1"
     },
