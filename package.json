@@ -24,7 +24,7 @@
         "ext": "js,html,css"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^6.4.0",
+        "@fortawesome/fontawesome-free": "^6.4.2",
         "adm-zip": "^0.5.10",
         "axios": "^1.4.0",
         "discord-rpc": "^4.0.1",
