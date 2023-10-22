@@ -1,4 +1,4 @@
-# Battly Launcher
+# Battly Launcher [![Node.js CI](https://github.com/1ly4s0/battlylauncher/actions/workflows/build.yml/badge.svg)](https://github.com/1ly4s0/battlylauncher/actions/workflows/build.yml)
 
 ![BattlyLauncher_Banner_Low](https://github.com/1ly4s0/battlylauncher/assets/67460389/2574bdeb-c8bb-47ac-b263-e4bd687494af)
 
