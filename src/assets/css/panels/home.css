@@ -1,5 +1,6 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 @import url('../../../../node_modules/@fortawesome/fontawesome-free/css/all.css');
+@import url('../../../../node_modules/bulma-checkradio/dist/css/bulma-checkradio.min.css');
 
 .swal-overlay { font-family: "Poppins"} 
 
@@ -334,4 +335,9 @@ body, html {
 
 #play-btn {
     margin-right: 0px;
+}
+
+*, div {
+    font-family: 'Poppins';
+    font-weight: 700;
 }

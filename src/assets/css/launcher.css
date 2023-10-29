@@ -5,6 +5,7 @@
 @import "panels/mods.css";
 @import "panels/mods/style.css";
 @import "panels/music.css";
+@import "panels/music-small.css";
 @import url('../../../node_modules/@fortawesome/fontawesome-free/css/all.css');
 @import "skin.css";
 

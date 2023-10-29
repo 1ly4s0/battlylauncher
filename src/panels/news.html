@@ -4,7 +4,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
   <style>
-  span, div {
+  span, div, p, *, .content {
     font-family: 'Poppins';
 }
 </style>
@@ -12,7 +12,7 @@
    <body>
       <div class="bottom_bar">
          <div>
-            <p style="font-size: 40px; font-weight: 800; color: #fff">Battly <span style="color: #0074F0">News</span> <span style="font-size: 20px; color: #fff">v1.4</span></p>
+            <p style="font-size: 40px; font-weight: 800; color: #fff">Battly <span style="color: #0074F0">News</span> <span style="font-size: 20px; color: #fff">v1.6</span></p>
          </div>
       </div>
       <div style="display: flex; justify-content: center; align-items: center;">
@@ -27,10 +27,10 @@
           <br>
           <p style="font-size: 30px;">¿Qué hay de nuevo?</p>
           <div class="content">
-            - Sistema de música<br>
-            - Nueva UI para descargar versiones y abrirlas<br>
-            - Añadido quilt al launcher<br>
-            - Añadidas las snapshots y beta's<br>
+            - Sistema de instancias<br>
+            - OptiFine integrado en Battly<br>
+            - Mejorado el instalador de ModPacks<br>
+            - Mejorados muchos bugs de versiones<br>
             <br>
             En resumen, muchas cosas, ahora te cuento más en detalle.
           </div>
@@ -45,33 +45,26 @@
               <p class="subtitle is-6">Fundador de Battly</p>
             </div>
           </div>
-          <button class="button is-info" id="show-panel-2" style="float: right; transform: translate(0px, -70px)" onclick="showCard2()">Siguiente</button>
+          <button class="button is-info" id="show-panel-2" style="float: right; transform: translate(0px, -70px)">Siguiente</button>
         </div>
       </div>
       <div class="card animate__animated" id="card2" style="width: 90%; margin-top: 70px;">
         <div class="card-content">
-          <span style="font-size: 40px;">Sistema de Música integrado en Battly</span>
+          <span style="font-size: 40px;">Sistema de instancias en Battly</span>
           <br>
-          <span style="font-size: 20px;">Si, exactamente lo que lees, un sistema de música en Battly.</span>
+          <span style="font-size: 20px;">Si, exactamente lo que lees, un sistema de instancias en Battly.</span>
           <br>
           <br>
           
           <br>
           <p style="font-size: 30px;">¿Cómo funciona?</p>
           <div class="content">
-            Básicamente es un sistema de música que se conecta a la API de YouTube y reproduce la música que quieras. Es muy sencillo de usar, solo tienes que poner el nombre de la canción y darle a buscar, y si quieres, puedes añadir más canciones a la cola de reproducción.
+            Básicamente es un sistema de versiones personalizadas, que te permite separar las versiones de Minecraft que quieres usar para que cada una tenga sus mods y sus configuraciones, y así no tener que estar instalando y desinstalando mods cada vez que quieras jugar a una versión diferente.
             <br>
             <br>
-            De qué sirve esto dirás, pues muy sencillo, si estás jugando con tus amigos y quieres escuchar música, no tendrás que abrir YouTube en el navegador, solo tendrás que abrir Battly y buscar la canción que quieras.
+            De qué sirve esto dirás, pues muy sencillo, puedes tener una instancia para jugar con tus amigos, otra para jugar con mods, otra para jugar con shaders, etc.
             <br>
             <br>
-            + Optimización
-            <br>
-            + Comodidad
-            <br>
-            + Rapidez
-            <br>
-            - Consumo
           </div>
           <div class="media">
             <div class="media-left">
@@ -84,24 +77,24 @@
               <p class="subtitle is-6">Fundador de Battly</p>
             </div>
           </div>
-          <button class="button is-info" id="show-panel-3" style="float: right; transform: translate(0px, -70px)" onclick="showCard3()">Siguiente</button>
+          <button class="button is-info" id="show-panel-3" style="float: right; transform: translate(0px, -70px)">Siguiente</button>
         </div>
     </div>
     <div class="card animate__animated" id="card3" style="width: 90%; margin-top: 100px;">
       <div class="card-content">
-        <span style="font-size: 40px;">Mejora en el panel de descarga de Mods</span>
+        <span style="font-size: 40px;">OptifFne integrado en Battly</span>
         <br>
-        <span style="font-size: 20px;">Ahora puedes elegir la versión del mod que quieras.</span>
+        <span style="font-size: 20px;">Ahora puedes instalar OptiFine desde Battly.</span>
         <br>
         <br>
         
         <br>
         <p style="font-size: 30px;">¿Cómo funciona?</p>
         <div class="content">
-          Hemos mejorado el panel de descarga de mods, antes era demasiado simple y cutre, ahora tiene muchas más opciones, como elegir la versión específica del mod, eliminar el mod, etc.
+          Os encanta OptiFine, y a mi también, por eso he decidido integrarlo en Battly, para que no tengáis que estar descargando OptiFine y luego instalándolo, ahora puedes hacerlo desde Battly.
           <br>
           <br>
-          Ahora es mucho más agradable de usar y más intuitivo.
+          Ahora es mucho más rápido de instalar, y además, no tienes que preocuparte de nada, ya que se instala automáticamente.
         </div>
         <div class="media">
           <div class="media-left">
@@ -114,12 +107,12 @@
             <p class="subtitle is-6">Fundador de Battly</p>
           </div>
         </div>
-        <button class="button is-info" id="show-panel-4" style="float: right; transform: translate(0px, -70px)" onclick="showCard4()">Siguiente</button>
+        <button class="button is-info" id="show-panel-4" style="float: right; transform: translate(0px, -70px)">Siguiente</button>
       </div>
     </div>
     <div class="card animate__animated" id="card4" style="width: 90%; margin-top: 100px;">
       <div class="card-content">
-        <span style="font-size: 40px;">Nueva UI de descarga y apertura de versiones</span>
+        <span style="font-size: 40px;">Mejorado el instalador de ModPacks</span>
         <br>
         <span style="font-size: 20px;">Te va a impresionar 🤑</span>
         <br>
@@ -128,10 +121,10 @@
         <br>
         <p style="font-size: 30px;">¿Cómo funciona?</p>
         <div class="content">
-          Ahora hay dos apartados diferentes dentro de Battly, uno para descargar versiones y otro para abrirlas. En el de descargar versiones, podrás descargar cualquier versión de Minecraft, desde la 1.0 hasta la última, y ojo, ahora tienen quilt integrado.
+          Antes, al instalar un ModPack, se instalaban todas las configuraciones y mods en la misma carpeta de Battly, lo cual es demasiado molesto cuando quieres usar otro ModPack. Pues ahora, cada vez que instales un ModPack, Battly creará automáticamente una instancia por ti en la que meterá todos los mods y configuraciones.
           <br>
           <br>
-          En el de abrir versiones, podrás abrir cualquier versión que tengas descargada, y si no la tienes, te la descargará automáticamente.
+          Es una muy buena opción ya que todo es mucho más ordenado, automático y no tienes que preocuparte de nada.
         </div>
         <div class="media">
           <div class="media-left">
@@ -144,24 +137,24 @@
             <p class="subtitle is-6">Fundador de Battly</p>
           </div>
         </div>
-        <button class="button is-info" id="show-panel-5" style="float: right; transform: translate(0px, -70px)" onclick="showCard5()">Siguiente</button>
+        <button class="button is-info" id="show-panel-5" style="float: right; transform: translate(0px, -70px)">Siguiente</button>
       </div>
   </div>
   <div class="card animate__animated" id="card5" style="width: 90%; margin-top: 100px;">
     <div class="card-content">
-      <span style="font-size: 40px;">Y cómo último... Mejora en el panel de ajustes</span>
+      <span style="font-size: 40px;">Y cómo último... Mejorados muchos bugs de versiones</span>
       <br>
-      <span style="font-size: 20px;">Hemos añadido muchas más funcionalidades, te va a encantar.</span>
+      <span style="font-size: 20px;">Bugs que ni sentido tenían.</span>
       <br>
       <br>
       
       <br>
       <p style="font-size: 30px;">¿Cómo funciona?</p>
       <div class="content">
-        Hemos añadido increíbles funcionalidades al Launcher (gracias por las sugerencias ❤️), como la personalización del fondo de Battly, la opacidad de la barra inferior, más opciones en el panel de ajustes, entre otras cosas.
+        He mejorado muchos, demasiados errores y bugs a la hora de abrir versiones. Bugs que no permitían usar Forge, iniciar versiones normales o externas. Ahora todo funciona correctamente, o debería.
         <br>
         <br>
-        Vigila qué fondo pones eh, nosotros no nos encargamos de lo que pongas de fondo 😏.
+        También he implementado una opción de Java personalizado, predeterminadamente usará el Java de Battly, así que si usas algún cliente como LabyMod, CMPack, Batmod o Optifine, ya no tienes porqué preocuparte de nada, ya que Battly se encargará de todo.
       </div>
       <div class="media">
         <div class="media-left">

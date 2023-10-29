@@ -44,8 +44,9 @@
               </section>
               <footer class="modal-card-foot">
                 <button class="button is-info" id="mostrarskin-userinfo-btn">Mostrar Skin</button>
-                <button class="button is-info" id="cerrar-userinfo-btn">Cerrar</button>
                 <button class="button is-danger" id="eliminarcuenta-userinfo-btn">Eliminar Cuenta</button>
+                <button class="button is-danger" id="establecer-skin" onclick="js:window.open('https://battlylauncher.com/dashboard', '_blank')">Establecer Skin</button>
+                <button class="button is-info" id="cerrar-userinfo-btn">Cerrar</button>
               </footer>
             </div>
           </div>
@@ -61,18 +62,27 @@
         </div>
     </div>
 
-    <div class="tabs-settings-content" style="height: 400px;">
+    <div class="tabs-settings-content" style="height: 500px;">
         <div class="settings-content-scroll">
             <div class="title-settings" style="font-size: 50px;">Ajustes de Java <i class="fa-brands fa-java fa-sm"></i></div>
             <div class="java-settings">
                 <div class="information">
                     <br>
                     <span style="font-size: 30px; font-weight: 700;">Java</span><br><br>En este apartado podrás configurar la versión de Java que se usará para iniciar tu juego. Si no sabes lo que estás haciendo, no toques nada de este apartado.<br><br>
-                    <b>Ruta de Java - Pronto</b>
+                    <b>Ruta de Java</b>
+                    <br>
+                    <span>
+                        Battly utiliza una versión integrada de Java [Oficial].<br>
+                        Esta versión está disponible en la ruta <b><span id="java-path-txt"></span></b><br>
+                        Sin embargo, puedes especificar tu propio ejecutable si tu versión requiere una versión diferente de Java.
+                    </span>
+                    <br>
                     <div class="java-path">
-                        <input type="text" class="java-path-input input is-info" style="width: 80%; height: 40px;" placeholder="C:\Program Files\Java\jre1.8.0_301\bin\javaw.exe">
-                        <button class="java-path-btn button is-info" style="height: 40px;"><i class="fa-solid fa-folder-open"></i></button>
-                        <button class="java-path-btn button is-info" style="height: 40px;"><i class="fa-solid fa-arrows-rotate"></i></button>
+                        <input type="text" class="java-path-input input is-info" id="ruta-java-input" style="width: 80%; height: 40px;" placeholder="C:\Program Files\Java\jre1.8.0_301\bin\javaw.exe">
+                        <button class="java-path-btn button is-info" id="open-explorer-java-path" style="height: 40px;"><i class="fa-solid fa-folder-open"></i></button>
+                        <button class="java-path-btn button is-info" id="java-path-reset" style="height: 40px;"><i class="fa-solid fa-arrows-rotate"></i></button>
+                        
+                        <input type="file" style="width: 0px; height: 0px;" id="java-path-input-file" accept="application/octet-stream">
                     </div>
                     <br>
                 </div>
