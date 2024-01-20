@@ -1,6 +1,4 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
-@import url('../../../../node_modules/@fortawesome/fontawesome-free/css/all.css');
-@import url('../../../../node_modules/bulma-checkradio/dist/css/bulma-checkradio.min.css');
 
 .swal-overlay { font-family: "Poppins"} 
 
@@ -341,3 +339,28 @@ body, html {
     font-family: 'Poppins';
     font-weight: 700;
 }
+
+  .errores::-webkit-scrollbar {
+      width: var(--scroll-size, 15px);
+  }
+
+  .errores::-webkit-scrollbar-thumb {
+      background: var(--scroll-thumb, linear-gradient(45deg, #00aeff, #a68eff));
+      border-radius: var(--scroll-radius, 3px);
+  }
+
+  .errores::-webkit-scrollbar-track {
+      background: var(--scroll-track, rgb(255 255 255 / 10%));
+  }
+
+  .modal-card-body::-webkit-scrollbar {
+      width: var(--scroll-size, 15px);
+  }
+
+  .modal-card-body::-webkit-scrollbar-thumb {
+      background: var(--scroll-thumb, linear-gradient(45deg, #00aeff, #a68eff));
+  }
+
+  .modal-card-body::-webkit-scrollbar-track {
+      background: var(--scroll-track, rgb(255 255 255 / 10%));
+  }

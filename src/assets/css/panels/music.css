@@ -66,7 +66,7 @@
   height: 6px;
   width: 100%;
   border-radius: 50px;
-  background: #f0f0f0;
+  background: #1f1f1f;
   cursor: pointer;
 }
 .progress-area .progress-bar{
@@ -131,7 +131,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(var(--white) 0%, var(--darkwhite) 100%);
+  background: linear-gradient(#1f1f1f 0%, #585858 100%);
   box-shadow: 0px 0px 5px var(--pink);
 }
 .play-pause::before{
@@ -223,22 +223,23 @@ body {
 }
 
 .musicplayer {
-  width: 350px;
-  height: 550px;
+  width: 25%;
+  height: 75vh;
   overflow: hidden;
-  margin-right: 25px;
-  margin-left: 25px; /* Reducir el margen izquierdo para mantener el ancho total menor que el ancho de la ventana */
-  margin-top: 60px;
+  margin-right: 2%;
+  margin-left: 3%;
+  /* Reducir el margen izquierdo para mantener el ancho total menor que el ancho de la ventana */
+  margin-top: 4%;
   border-radius: 15px;
 }
 
 .search {
-  width: 800px;
-  height: 550px;
+  width: 65%;
+  height: 75vh;
   overflow: auto;
-  margin-left: 25px; /* Reducir el margen izquierdo para mantener el ancho total menor que el ancho de la ventana */
-  margin-right: 25px; /* Reducir el margen derecho para mantener el ancho total menor que el ancho de la ventana */
-  margin-top: 60px;
+  margin-right: 3%;
+  margin-left: 2%;
+  margin-top: 4%;
   border-radius: 15px;
 }
 
@@ -338,4 +339,54 @@ body {
   font-size: 20px;
   color:#3e8ed0;
   opacity: 1;
+}
+
+
+.cards {
+  display: flex;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.grab {
+  cursor: grab;
+}
+
+.thumbnail {
+  width: 20%;
+  height: 22%;
+  object-fit: cover;
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 5px;
+}
+
+.card-content1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.song-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.artist {
+  font-size: 20px;
+  color: #888;
+}
+
+.delete-button {
+  color: #fff;
+  align-self: flex-end;
+}
+
+/* Estilos adicionales para el efecto de selección */
+.seleccionado {
+  background-color: #3e8ed0;
+  color: white;
 }

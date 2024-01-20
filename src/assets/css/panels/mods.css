@@ -1,6 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
 .feature-card2-feature-card {
+    border: 3px solid dimgrey;
     width: 100%;
     display: flex;
     padding: var(--dl-space-space-unit);
@@ -8,9 +9,10 @@
     align-items: flex-start;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: grey;
+    background-color: #151515;
     opacity: 0.9;
-    border-radius: 4px;
+    border-radius: 6px;
+    margin: -5px;
   }
   .feature-card2-icon {
     fill: var(--dl-color-gray-500);
@@ -33,8 +35,10 @@
 
 
   .feature-card2-text {
-    font-weight: 600;
-    margin-bottom: var(--dl-space-space-unit);
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 0px;
   }
   
   .feature-card2-downloads {
@@ -137,11 +141,12 @@
   border: none;
   color: #fff;
   margin-left: 5px;
-  height: 38px;
+  height: 40px;
 }
 
+
 .buscar-mods::placeholder {
-color: #b6b6b6;
+color: #c9c6c6;
 }
   .home-text {
     top: 35px;
