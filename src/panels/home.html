@@ -82,36 +82,37 @@
                 <option value="dx" selected>Elige una versión</option>
             </select>
             </div>
+            <button class="button is-info is-small" id="reiniciar-versiones"><span><i class="fa-solid fa-arrows-rotate"></i></span></button>
             <br>
             <br>
-            <label class="radio" id="radioVanilla" style="display: none;">
-                <input type="radio" name="loader" value="vanilla">
-                Vanilla
-              </label>
-<label class="radio" id="radioFabric" style="display: none;">
-    <input type="radio" name="loader" value="fabric">
-    Fabric
-  </label>
-  <label class="radio" id="radioForge" style="display: none;">
-    <input type="radio" name="loader" value="forge">
-    Forge
-  </label>
-  <label class="radio" id="radioQuilt" style="display: none;">
-    <input type="radio" name="loader" value="quilt">
-    Quilt
-  </label>
-            <p style="font-size: 10px;" id="textInfoStatus"></p>
-            <progress class="progress is-info" id="progressBar1_" style="border-radius: 5px; display: none;" value="1" max="100" style="transition: all 0.5s;"></progress>
-            <br>
-            <p style="font-size: 10px;" id="logTextArea1_"></p>
-            <br>
-            <br>
-            <br>
-    
-            <!-- Content ... -->
-</div>
-</div>
-          </section>
+            <div id="tipo-de-versiones" style="display: none;">
+                <label class="radio" id="radioVanilla" style="display: none;">
+                    <input type="radio" name="loader" value="vanilla">Vanilla
+                </label>
+
+                <label class="radio" id="radioFabric" style="display: none;">
+                    <input type="radio" name="loader" value="fabric">Fabric
+                </label>
+  
+                <label class="radio" id="radioForge" style="display: none;">
+                    <input type="radio" name="loader" value="forge">Forge
+                </label>
+  
+                <label class="radio" id="radioQuilt" style="display: none;">
+                    <input type="radio" name="loader" value="quilt">Quilt
+                </label>
+            </div>
+            <div id="carga-de-versiones" style="display:none;">
+                <br>
+                <p style="font-size: 10px;" id="textInfoStatus"></p>
+                <progress class="progress is-info" id="progressBar1_" style="border-radius: 5px; display: none;" value="1" max="100" style="transition: all 0.5s;"></progress>
+                <br>
+                <p style="font-size: 10px;" id="logTextArea1_"></p>
+                <br>
+            </div>
+        </div>
+    </div>
+    </section>
           <footer class="modal-card-foot" id="footermodaliniciarversion" style="display: none;">
             <button class="button is-success is-small" id="startStartVersion">Iniciar</button>
             <button class="button is-danger is-small" id="cancelStartVersion">Cancelar</button>
@@ -123,10 +124,12 @@
             <button id="settings-btn" class="button is-info"><span style="font-size: 20px;"><i class="fa-solid fa-gear"></i></span></button>
             <button id="btnShowNews" class="button is-info" ><span style="font-size: 20px;"><i class="fa-solid fa-circle-question"></i></span></button>
             <button id="BotonUnirseServidorDiscord" class="button is-info"><span><i class="fa-brands fa-discord"></i> Discord</span></button>
-            <button id="boton_abrir_mods" class="button is-info"><span><i class="fa-solid fa-cube"></i> Mods</span></button>
+            <button id="boton_abrir_mods" class="button is-info"><span><i class="fa-solid fa-cube"></i> Battly Mods</span></button>
+            <button id="music-btn" class="button is-info"><span><i class="fa-solid fa-music"></i> Battly Music</span></button>
+            <button id="friends-btn" class="button is-info"><span><i class="fa-solid fa-users"></i> Battly Social</span></button>
         </div>
         <div>
-            <button id="music-btn" class="button is-info"><span><i class="fa-solid fa-music"></i> Battly Music</span></button>
+            
             <button id="instancias-btn" class="button is-info"><span><i class="fa-solid fa-folder"></i> Instancias</span></button>
             <button id="download-btn" class="button is-info"><span><i class="fa-solid fa-cloud-arrow-down"></i> Descargar</span></button>
             <button id="play-btn" class="button is-info"><span>Jugar <i class="fa-solid fa-circle-play"></i></span></button>
