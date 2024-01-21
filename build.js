@@ -1,7 +1,6 @@
 const builder = require('electron-builder')
 const { productname } = require('./package.json')
 
-
 builder.build({      
     config: {
         publish: [
