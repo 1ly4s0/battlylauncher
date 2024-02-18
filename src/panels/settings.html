@@ -1,15 +1,12 @@
 <div class="settings-content">
     <div class="bottom_bar_settings">
-        <button class="tab-btn-css button is-info tab-btn active-tab-btn default-tab-btn"><span><i
-                    class="fa-solid fa-user"></i> Cuentas</span></button>
-        <button class="tab-btn-css button is-info tab-btn"><span><i class="fa-brands fa-java"></i> Java</span></button>
-        <button class="tab-btn-css button is-info tab-btn"><span><i class="fa-solid fa-memory"></i> RAM</span></button>
-        <button class="tab-btn-css button is-info tab-btn"><span><i class="fa-solid fa-b"></i> Launcher</span></button>
-        <button class="tab-btn-css button is-info tab-btn"><span><i class="fa-solid fa-palette"></i>
-                Tema</span></button>
-        <button class="tab-btn-css button is-info tab-btn"><span><i class="fa-solid fa-image"></i> Fondo</span></button>
-        <button class="tab-btn-css button is-info save-tabs-btn"><span><i class="fa-solid fa-floppy-disk"></i>
-                Guardar</span></button>
+        <button id="accounts-btn" class="tab-btn-css button is-info tab-btn active-tab-btn default-tab-btn"></button>
+        <button id="java-btn" class="tab-btn-css button is-info tab-btn"></button>
+        <button id="ram-btn" class="tab-btn-css button is-info tab-btn"></button>
+        <button id="launcher-btn" class="tab-btn-css button is-info tab-btn"></button>
+        <button id="theme-btn" class="tab-btn-css button is-info tab-btn"></button>
+        <button id="background-btn" class="tab-btn-css button is-info tab-btn"></button>
+        <button id="save-btn" class="tab-btn-css button is-info save-tabs-btn"></button>
     </div>
     <style>
         .modal-card-body {
@@ -21,7 +18,7 @@
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
-                    <p class="modal-card-title">Información de la cuenta</p>
+                    <p id="account-information" class="modal-card-title"></p>
                     <button class="delete" aria-label="close" id="cerrar2-userinfo-btn"></button>
                 </header>
                 <section class="modal-card-body" style="overflow: hidden;">
@@ -39,7 +36,7 @@
                                         <p>
                                             <strong id="user-name" style="font-size: 20px;">1ly4s0</strong>
                                             <br>
-                                            ID de MC: <span id="user-uuid"></span>
+                                            <span id="mc-id-text"></span> <span id="user-uuid"></span>
                                             <br>
                                         </p>
                                     </div>
@@ -49,21 +46,19 @@
                     </div>
                 </section>
                 <footer class="modal-card-foot">
-                    <button class="button is-info" id="mostrarskin-userinfo-btn">Mostrar Skin</button>
-                    <button class="button is-danger" id="eliminarcuenta-userinfo-btn">Eliminar Cuenta</button>
-                    <button class="button is-danger" id="establecer-skin"
-                        onclick="js:window.open('https://battlylauncher.com/dashboard', '_blank')">Establecer
-                        Skin</button>
+                    <button class="button is-info" id="mostrarskin-userinfo-btn"></button>
+                    <button class="button is-danger" id="eliminarcuenta-userinfo-btn"></button>
+                    <button class="button is-danger" id="establecer-skin" onclick="js:window.open('https://battlylauncher.com/dashboard', '_blank')"></button>
                     <button class="button is-info" id="cerrar-userinfo-btn">Cerrar</button>
                 </footer>
             </div>
         </div>
 
         <div class="center-align">
-            <div class="title-settings" style="font-size: 50px;">Mis cuentas</div>
+            <div class="title-settings" id="my-accounts" style="font-size: 50px;"></div>
             <div class="accounts">
                 <div class="account" id="add-account-btn">
-                    <div class="account-name" style="font-size: 30px;">Añadir cuenta</div>
+                    <div class="account-name" id="add-account-text" style="font-size: 30px;"></div>
                     <div class="account-delete" id="add-account"><i class="fa-solid fa-square-plus"></i></div>
                 </div>
             </div>
@@ -72,22 +67,12 @@
 
     <div class="tabs-settings-content" style="height: 500px;">
         <div class="settings-content-scroll">
-            <div class="title-settings" style="font-size: 50px;">Ajustes de Java <i class="fa-brands fa-java fa-sm"></i>
+            <div class="title-settings" id="java-settings" style="font-size: 50px;">
             </div>
             <div class="java-settings">
                 <div class="information">
                     <br>
-                    <span style="font-size: 30px; font-weight: 700;">Java</span><br><br>En este apartado podrás
-                    configurar la versión de Java que se usará para iniciar tu juego. Si no sabes lo que estás haciendo,
-                    no toques nada de este apartado.<br><br>
-                    <b>Ruta de Java</b>
-                    <br>
-                    <span>
-                        Battly utiliza una versión integrada de Java [Oficial].<br>
-                        Esta versión está disponible en la ruta <b><span id="java-path-txt"></span></b><br>
-                        Sin embargo, puedes especificar tu propio ejecutable si tu versión requiere una versión
-                        diferente de Java.
-                    </span>
+                    <span id="java-text-info"> </span><b><span id="java-path-txt"></span></b><br><span id="java-text-info2"></span>
                     <br>
                     <div class="java-path">
                         <input type="text" class="java-path-input input is-info" id="ruta-java-input"
@@ -110,20 +95,11 @@
 
     <div class="tabs-settings-content">
         <div class="settings-content-scroll">
-            <div class="title-settings" style="font-size: 50px;">Ajustes de la RAM <i
-                    class="fa-solid fa-memory fa-sm"></i></div>
+            <div class="title-settings" style="font-size: 50px;" id="ram-settings"></div>
             <div class="java-settings">
                 <div class="information">
                     <br>
-                    <span style="font-size: 30px; font-weight: 700;">RAM</span><br><br>En este aparado podrás configurar
-                    la RAM que se le asignará a tu juego. Esto es importante para que tu juego funcione correctamente.
-                    Si no sabes lo que estás haciendo, no toques nada de este apartado.<br><br>
-                    <b>RAM máxima:</b> Indica la cantidad total de RAM asignada a tu juego. Se recomienda que no excedas
-                    el 50% de la cantidad total de RAM presente en tu PC para que funcione correctamente. Si la PC tiene
-                    más de 8GB de RAM, se recomienda asignarle 3GB. Si la PC tiene 4 GB o menos, no asignes más de 2
-                    GB.<br><br>
-                    <b>RAM mínima:</b> Indica la cantidad mínima de RAM asignada al iniciar tu juego. Se recomienda no
-                    poner más de 3GB para este valor. El valor típico es de 1 GB.
+                    <span style="font-size: 30px; font-weight: 700;">RAM</span><br><br><span id="ram-text-info"></span>
                     <br>
                     <div class="ram-info">
                         <div class="memory-slider" min="0.5" max="8" step="0.5">
@@ -139,8 +115,8 @@
                         </div>
 
                         <div class="ram-info-block">
-                            <b>Tienes un total de <span id="total-ram">0 GB</span> RAM.</b><br>
-                            <b>Tienes un total de <span id="free-ram">0 GB</span> de RAM disponibles.</b>
+                            <b><span id="you-have-a-total"></span> <span id="total-ram">0 GB</span> <span id="of-ram"></span></b><br>
+                            <b><span id="you-have-a-total"></span> <span id="free-ram">0 GB</span> <span id="of-ram-disponible"></span></b>
                         </div>
                     </div>
                     <br>
@@ -152,29 +128,26 @@
 
     <div class="tabs-settings-content">
         <div class="center-page">
-            <div class="title-settings" style="font-size: 50px;">Configuración de Battly</div>
+            <div class="title-settings" style="font-size: 50px;" id="battly-settings"></div>
             <div class="java-settings">
                 <div class="information">
                     <br>
-                    <span style="font-size: 30px; font-weight: 700;">Inicio de Minecraft</span><br><br>En este apartado
-                    podrás configurar la acción que realizará Battly al abrir Minecraft, ya sea cerrar Battly, cerrar
-                    Minecraft o mantener Battly abierto. Si no sabes lo que estás haciendo, no toques nada de este
-                    apartado.<br><br>
-                    <br>
-                    <b style="font-size: 20px;">Qué hacer al abrir Minecraft:</b>
-                    <br>
+                    <span id="battly-settings-information"></span>
                     <input type="checkbox" class="checkbox-settings" id="launcher-close"><label for="launcher-close">
                         <div class="checkround"></div>
-                    </label> Ocultar Battly después de iniciar Minecraft</br>
+                    </label>
+                    <span id="minimalize-battly"></span>
+                    </br>
                     <input type="checkbox" class="checkbox-settings" id="launcher-open"><label for="launcher-open">
                         <div class="checkround"></div>
-                    </label> Mantener Battly abierto después de iniciar Minecraft</br>
+                    </label>
+                <span id="keep-battly-opened"></span>
+            </br>
                     <br>
                     <br>
-                    <b style="font-size: 20px;">Registros de Battly:</b>
+                    <b id="battly-logs-text" style="font-size: 20px;"></b>
                     <br>
-                    <button class="button is-info" id="obtener-socketid"><span><i class="fa-solid fa-chart-simple"></i>
-                            Obtener ID única</span></button>
+                    <button class="button is-info" id="obtener-socketid"></button>
                 </div>
             </div>
         </div>
@@ -182,33 +155,32 @@
 
     <div class="tabs-settings-content">
         <div class="settings-content-scroll">
-            <div class="title-settings" style="font-size: 50px;">Personalizar Battly</div>
+            <div class="title-settings" id="battly-theme" style="font-size: 50px;"></div>
             <div class="java-settings">
                 <div class="information">
                     <br>
-                    <span style="font-size: 30px; font-weight: 700;">¡Bienvenido/a!</span>
+                    <span style="font-size: 30px; font-weight: 700;" id="welcome"></span>
                     <br>
                     <br>
-                    ¡Bienvenido/a al nuevo panel de personalización de Battly! Aquí podrás personalizar Battly a tu
-                    gusto, cambiando el tema, las imágenes de fondo y mucho más. ¡Esperamos que te guste!
+                    <span id="battly-theme-text"></span>
 
                     <br><br>
                     <br>
-                    <b style="font-size: 20px;">Ajustar el tema</b>
+                    <b style="font-size: 20px;" id="change-theme-text"></b>
                     <br>
-                    Color de los botones
+                    <span id="buttons-color"></span>
                     <input type="color" id="theme-color" value="#ff0000">
                     <br>
                     <br>
-                    Color de la barra inferior
+                    <span id="bottom-bar-text"></span>
                     <input type="color" id="theme-color-bottom-bar" value="#ff0000">
                     <br>
                     <br>
-                    Transparencia de la barra inferior
+                    <span id="bottom-bar-opacity"></span>
                     <input type="range" id="theme-opacity-bottom-bar" min="0.1" max="1" step="0.1" value="1">
                     <br>
                     <br>
-                    Sonido de inicio
+                    <span id="starting-music"></span>
                     <div class="select is-info">
                         <select id="sonido-inicio">
                             <option value="start">Retro</option>
@@ -238,7 +210,7 @@
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
-                    <p class="modal-card-title">Recortar Imagen</p>
+                    <p class="modal-card-title" id="resize-image-text"></p>
                 </header>
                 <section class="modal-card-body">
 
@@ -252,19 +224,19 @@
                     </div>
                 </section>
                 <footer class="modal-card-foot">
-                    <button class="button is-success" id="establecer-fondo">Establecer Fondo</button>
-                    <button class="button is-info" id="cerrar-preview-btn">Cancelar</button>
+                    <button class="button is-success" id="establecer-fondo"></button>
+                    <button class="button is-info" id="cerrar-preview-btn"></button>
                 </footer>
             </div>
         </div>
         <div class="settings-content-scroll">
-            <div class="title-settings" style="font-size: 50px;">Personalizar Fondo</div>
+            <div class="title-settings" id="customize-background" style="font-size: 50px;"></div>
             <div class="java-settings">
                 <div class="information">
                     <br>
-                    <b style="font-size: 20px;">Ajustar el fondo</b>
+                    <b style="font-size: 20px;" id="resize-background"></b>
                     <br>
-                    Imagen de fondo
+                    <span id="background-image-text"></span>
                     <div class="file is-info is-boxed">
                         <label class="file-label">
                             <input class="file-input" type="file" name="resume" id="background-input" accept="image/*">
@@ -272,8 +244,8 @@
                                 <span class="file-icon">
                                     <i class="fas fa-cloud-upload-alt"></i>
                                 </span>
-                                <span class="file-label">
-                                    Seleccionar imagen
+                                <span class="file-label" id="select-a-background">
+                                    
                                 </span>
                             </span>
                         </label>
@@ -281,7 +253,7 @@
                     <br>
                     <br>
 
-                    <button class="button is-info" id="restablecer-fondo">Restablecer fondo</button>
+                    <button class="button is-info" id="restablecer-fondo"></button>
                     <!--
                     <input type="checkbox" class="checkbox-settings" id="launcher-close"><label for="launcher-close"><div class="checkround"></div></label>  Imagen 1</br>
                     <input type="checkbox" class="checkbox-settings" id="launcher-close-all"><label for="launcher-close-all"><div class="checkround"></div></label> Imagen 2</br>

@@ -43,10 +43,15 @@
 }
 
 .panel-amigos {
-    position: absolute;
+    position: fixed;
+    overflow-y: auto;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -45%);
     width: 90%;
     height: 70%;
+}
+
+.panel-amigos::-webkit-scrollbar {
+    width: 0px;
 }

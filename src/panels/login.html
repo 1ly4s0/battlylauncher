@@ -1,11 +1,11 @@
 <div class="login-content">
     <div class="login-card">
-        <p>Usa tu cuenta de <span class="store">Battly, Mojang</span> o <span class="store">Microsoft</span> para iniciar sesión en Battly</p>
+        <p id="use_account_battly_or_microsoft"></p>
         <div class="login-type">
             <button class="mojang login-type-btn" id="battly_btn"><i class="fas fa-font"></i> Battly</button>
             <button class="microsoft login-type-btn"><i class="fa-brands fa-microsoft"></i> Microsoft</button>
         </div>
-        <button class="cancel cancel-login" style="display: none;">Cancelar</button>
+        <button class="cancel cancel-login" id="cancel-btn-login" style="display: none;"></button>
     </div>
 
     <div class="login-card-offline">
@@ -13,62 +13,27 @@
             <small class="info-login">&nbsp;</small>
 
             <div class="login-card-mojang-input">
-                <label><i class="fa-solid fa-user"></i> Nombre de usuario</label>
+                <label id="username_text"></label>
                 <input type="text" class="Mail login-mojang-input" spellcheck="false">
                 <small class="error-mail">&nbsp;</small>
             </div>
 
             <div class="login-card-mojang-input">
-                <label><i class="fa-solid fa-key"></i> Contraseña</label>
+                <label id="password_text"></label>
                 <input type="password" class="Password login-mojang-input" spellcheck="false">
                 <small class="error-password">&nbsp;</small>
             </div>
 
             <div class="login-options">
                 <div class="btn-option-login">
-                    <button class="login-btn"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</button>
-                    <button class="login-btn" id="register_open_btn"><i class="fa-solid fa-plus"></i> Registrarse</a>
-                    <button class="cancel cancel-mojang">Cancelar</button>
+                    <button class="login-btn" id="login-button"></button>
+                    <button class="login-btn" id="register_open_btn"></a>
+                    <button class="cancel cancel-mojang" id="cancel_login_two"></button>
                     <br>
-                    <label>¿Olvidaste tu contraseña?</label>
-                    <a href="https://discord.gg/tecno-bros-885235460178342009" target="_blank">Recupérala aquí</a>
+                    <label id="lost_your_account"></label>
+                    <a href="https://discord.gg/tecno-bros-885235460178342009" id="recover_it_here" target="_blank">Recupérala aquí</a>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="login-card-mojang" id="panel_mojang">
-        <div class="card-body">
-            <small class="info-login" id="info_text_mojang">&nbsp;</small>
-
-            <div class="login-card-mojang-input">
-                <label>Correo Electrónico</label>
-                <input type="text" class="Mail login-mojang-input" id="mail_input_mojang" spellcheck="false">
-                <small class="error-mail">&nbsp;</small>
-            </div>
-
-            <div class="login-card-mojang-input">
-                <label>Contraseña</label>
-                <input type="password" class="Password login-mojang-input" id="password_input_mojang" spellcheck="false">
-                <small class="error-password">&nbsp;</small>
-            </div>
-
-            <div class="login-options">
-                <div class="btn-option-login">
-                    <button class="login-btn" id="login_btn_mojang">Iniciar Sesión</button>
-                    <button class="cancel cancel-mojang" id="canel_btn_mojang">Cancelar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Connecting panel-->
-    <div class="login-card-mojang" id="login_microsoft_loading">
-        <div class="card-body">
-            <h3>Se ha abierto una pestaña de inicio de sesión, completa los datos ahí.</h3>
-            <p>¿No se ha abierto?</p>
-            <button class="microsoft login-type-btn" id="abrir_login_microsoft">Abrir pestaña</button>
-            <button class="cancel cancel-login" id="cancel_login_microsoft">Cancelar</button>
         </div>
     </div>
 

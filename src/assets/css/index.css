@@ -115,8 +115,8 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    background-color: rgb(255, 0, 0);
-    border-radius: 10px;
+    background-color: #3e8ed0;
+    border-radius: 5px;
 }
 
 #btn_actualizar {
@@ -126,11 +126,17 @@ progress::-webkit-progress-value {
     text-align: center;
     font: normal normal bold 18px/27px Poppins;
     transform: translate(50%, 50%);
-    background-color: #ffee00;
+    background-color: #3e8ed0;
     border-radius: 0%;
-    display: none;
     -webkit-app-region: no-drag;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    display: none;
+}
+
+#btn_actualizar:hover {
+    background-color: #2196F3;
 }
 
 #btn_jugar {
@@ -140,9 +146,15 @@ progress::-webkit-progress-value {
     text-align: center;
     font: normal normal bold 18px/27px Poppins;
     transform: translate(170%, 50%);
-    background-color: #ffee00;
+    background-color: #3e8ed0;
     border-radius: 0%;
-    display: none;
     -webkit-app-region: no-drag;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    display: none;
+}
+
+#btn_jugar:hover {
+    background-color: #2196F3;
 }

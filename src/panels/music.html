@@ -9,8 +9,8 @@
       <label for="slider" id="label-volumen">100%</label>
     </div>
     <div>
-      <button id="show-playlists" class="button is-info"><span><i class="fa-solid fa-list-ul"></i> Playlists</span></button>
-        <button id="return-btn" class="button is-info"><span>Volver <i class="fa-solid fa-circle-play"></i></span></button>
+      <button id="show-playlists" class="button is-info"></button>
+        <button id="return-btn" class="button is-info"></button>
     </div>
 </div>
 <div style="display: flex;">
@@ -19,12 +19,12 @@
     <div class="content">
       <div class="top-bar" style="text-align: center;">
         <i class="material-icons">expand_more</i>
-        <span style="color: #fff">Reproduciendo ahora</span>
+        <span style="color: #fff" id="playing-now"></span>
         <i class="material-icons">more_horiz</i>
       </div>
       <br>
       <div class="song-details" style="text-align: center;">
-        <p class="artist" style="color: #fff">Ninguna canción</p>
+        <p class="artist" style="color: #fff" id="no_song"></p>
       </div>
       <div class="img-area">
         <img src="./assets/images/icons/music.gif" alt="">
@@ -52,19 +52,14 @@
 <div class="card search" style="background-color: #1f1f1f">
   <div class="card-content">
     <div class="content">
-      <h2 style="color: #fff">Tu playlist</h2>
+      <h2 style="color: #fff" id="your_playlist"></h2>
       <div class="search-container">
         <input type="text" class="input is-info" id="nombre-de-cancion" placeholder="Nombre de la canción"
           style="width: 90%; color: #fff; height: 40px; background-color: rgb(62, 142, 208);">
           <button id="reproducir-btn" class="button is-info" style="background-color: rgb(62, 142, 208);">
-            <span>
-              <i class="fa-solid fa-search"></i> Buscar
-            </span>
           </button>
           <button id="save-playlist" class="button is-info" style="background-color: rgb(62, 142, 208);">
-            <span>
-              <i class="fa-solid fa-save"></i> Guardar playlist
-            </span>
+            
           </button>
       </div>
       <br>
