@@ -1,49 +1,50 @@
 {
-    "name": "BattlyLauncher",
-    "productname": "Battly Launcher",
-    "version": "1.7.1",
-    "description": "El mejor Launcher Personalizado para Minecraft Premium y No premium",
-    "main": "src/app.js",
-    "author": "TECNO BROS <contacto@tecnobros.es>",
-    "url": "https://api.battlylauncher.com/battlylauncher",
-    "engines": {
-        "node": "^18.x.x"
-    },
-    "scripts": {
-        "start:dev": "cross-env-shell NODE_ENV=dev electron .",
-        "start": "cross-env-shell NODE_ENV=dev electron .",
-        "build": "node build.js",
-        "dev": "nodemon --exec npm start",
-        "git": "electron-builder build --linux",
-        "publish": "electron-builder --win -p always",
-        "build-mac": "electron-builder build --mac",
-        "build-clean": "rm -rf dist"
-    },
-    "license": "CC0",
-    "nodemonConfig": {
-        "ext": "js,html,css"
-    },
-    "dependencies": {
-        "adm-zip": "^0.5.10",
-        "axios": "^1.6.4",
-        "electron-updater": "^6.1.7",
-        "minecraft-launcher-core": "^3.17.3",
-        "nbtify": "^1.85.0",
-        "node-fetch": "^2.7.0",
-        "protobufjs": "^7.2.5",
-        "socket.io-client": "^4.7.3",
-        "ws": "^8.16.0",
-        "ytdl-core": "^4.9.1"
-    },
-    "devDependencies": {
-        "cross-env": "^7.0.3",
-        "electron": "^22.3.27",
-        "electron-builder": "^24.9.1",
-        "nodemon": "^3.0.2"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/1ly4s0/battlylauncher.git"
-    },
-    "private": true
+  "name": "BattlyLauncher",
+  "productname": "Battly Launcher",
+  "version": "1.7.2",
+  "description": "El mejor Launcher Personalizado para Minecraft Premium y No premium",
+  "main": "src/app.js",
+  "author": "TECNO BROS <contacto@tecnobros.es>",
+  "url": "https://api.battlylauncher.com/battlylauncher",
+  "engines": {
+    "node": "^18.x.x"
+  },
+  "scripts": {
+    "start:dev": "cross-env-shell NODE_ENV=dev electron .",
+    "start": "cross-env-shell NODE_ENV=dev electron .",
+    "build": "node build.js",
+    "dev": "nodemon --exec npm start",
+    "git": "electron-builder build --linux",
+    "publish": "electron-builder --win -p always",
+    "build-mac": "electron-builder build --mac",
+    "build-clean": "rm -rf dist"
+  },
+  "license": "CC0",
+  "nodemonConfig": {
+    "ext": "js,html,css"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "axios": "^1.6.4",
+    "electron-updater": "^6.1.7",
+    "javascript-obfuscator": "^4.1.0",
+    "minecraft-launcher-core": "^3.17.3",
+    "nbtify": "^1.85.0",
+    "node-fetch": "^2.7.0",
+    "protobufjs": "^7.2.5",
+    "socket.io-client": "^4.7.3",
+    "ws": "^8.16.0",
+    "ytdl-core": "^4.9.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^22.3.27",
+    "electron-builder": "^24.9.1",
+    "nodemon": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1ly4s0/battlylauncher.git"
+  },
+  "private": true
 }

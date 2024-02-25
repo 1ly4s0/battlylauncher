@@ -1,1 +1,1172 @@
-'use strict';(function(_0x2cc70c,_0x41a2e0){const _0x42e437=a169_0x5142,_0x4bde5a=_0x2cc70c();while(!![]){try{const _0x45f327=-parseInt(_0x42e437(0x117))/0x1+parseInt(_0x42e437(0x1db))/0x2+parseInt(_0x42e437(0x1ce))/0x3*(-parseInt(_0x42e437(0x104))/0x4)+parseInt(_0x42e437(0x1a9))/0x5+parseInt(_0x42e437(0x11e))/0x6*(parseInt(_0x42e437(0x192))/0x7)+parseInt(_0x42e437(0x18b))/0x8*(-parseInt(_0x42e437(0x177))/0x9)+parseInt(_0x42e437(0x1a2))/0xa;if(_0x45f327===_0x41a2e0)break;else _0x4bde5a['push'](_0x4bde5a['shift']());}catch(_0x288790){_0x4bde5a['push'](_0x4bde5a['shift']());}}}(a169_0x2d00,0xd321d));function a169_0x5142(_0x1f93e4,_0x2c7f07){const _0x2d0065=a169_0x2d00();return a169_0x5142=function(_0x5142ee,_0x5a1bed){_0x5142ee=_0x5142ee-0xe5;let _0xb1611f=_0x2d0065[_0x5142ee];return _0xb1611f;},a169_0x5142(_0x1f93e4,_0x2c7f07);}const a169_0x428e3a=a169_0x33a2;(function(_0x2d0db6,_0x26f9bb){const _0x2d5610=a169_0x5142,_0x40257e=a169_0x33a2,_0x3364d4=_0x2d0db6();while(!![]){try{const _0x3c365a=parseInt(_0x40257e(0x172))/0x1*(-parseInt(_0x40257e(0x184))/0x2)+-parseInt(_0x40257e(0xb8))/0x3+-parseInt(_0x40257e(0x99))/0x4+parseInt(_0x40257e(0x10b))/0x5*(-parseInt(_0x40257e(0xa2))/0x6)+parseInt(_0x40257e(0xd3))/0x7*(-parseInt(_0x40257e(0x14c))/0x8)+-parseInt(_0x40257e(0x108))/0x9*(parseInt(_0x40257e(0x12a))/0xa)+parseInt(_0x40257e(0x9c))/0xb;if(_0x3c365a===_0x26f9bb)break;else _0x3364d4[_0x2d5610(0x17d)](_0x3364d4[_0x2d5610(0x17c)]());}catch(_0x5b9fef){_0x3364d4[_0x2d5610(0x17d)](_0x3364d4['shift']());}}}(a169_0x44e1,0xb1872));const a169_0x15baf1=a169_0x4a9a;(function(_0x408a10,_0x4881e4){const _0x38609d=a169_0x5142,_0x489ba5=a169_0x33a2,_0x534096=a169_0x4a9a,_0xdb0900=_0x408a10();while(!![]){try{const _0x88c186=-parseInt(_0x534096(0x8f))/0x1*(-parseInt(_0x534096(0x12b))/0x2)+parseInt(_0x534096(0xf8))/0x3+parseInt(_0x534096(0x191))/0x4+-parseInt(_0x534096(0x163))/0x5*(parseInt(_0x534096(0x140))/0x6)+-parseInt(_0x534096(0x10c))/0x7*(-parseInt(_0x534096(0x164))/0x8)+parseInt(_0x534096(0x112))/0x9*(parseInt(_0x534096(0x14f))/0xa)+-parseInt(_0x534096(0x16d))/0xb;if(_0x88c186===_0x4881e4)break;else _0xdb0900['push'](_0xdb0900[_0x489ba5(0x95)]());}catch(_0x184ae7){_0xdb0900[_0x38609d(0x17d)](_0xdb0900[_0x489ba5(0x95)]());}}}(a169_0x4298,0x51c13));const a169_0x580248=a169_0x49e8;function a169_0x2d00(){const _0x1e8911=['textAlign','/.battly/instances/','/.battly/mods','is-48x48','boton_abrir_mods','\x20-\x20','<!--$1-->','fire','Tipo\x20de\x20archivo:\x20','https://battlylauncher.com/assets/img/mc-icon.png','none','span','mkdirSync','fabric','file\x20is-small\x20is-boxed\x20has-name','9511068IZhmGQ','264031KvLxDx','#fff','is-active','3561382nXlvZB','platform','/files/','content','card-footer-item','mouseleave','1310404moSMhB','no_description','join','82CtfbqD','searching_mods','forge-','$2a$10$S7nVFhQKpxteK4Fwf9yoxejmI.NjJiE53Qh4IeaDbIu/./oTM/MKa','20SjHbfY','\x0a<hr>\x0a','CargarMods','style','description','/mods','isIntersecting','2359590STnWRp','subtitle','delete','Estás\x20utilizando\x20Quilt','40px','click','zIndex','Versiones\x20soportadas:','mod_information','files','catch','292ZfhBdn','error','https://api.modrinth.com/v2/project/','init','<h3>$1</h3>\x0a','footer','/icon.png','mod_downloaded_successfully','data','installing_file','finish','slice','Image','remove','log','file','header','<li>$1</li>\x0a','new-notification','1493594NhNCPD','then','classList','fs-extra','feature-card2-text','feature-card2-download-icon','is-danger','137868qqpNwk','media','zip','alignItems','fin','toUpperCase','icon_url','.zip,\x20.mrpack','manifest.json','top-end','dependencies','block','replace','version_number','Error\x20al\x20descargar\x20el\x20mod\x20','quilt-','140240fqNRkJ','19274csMitp','env','downloaded_successfully_two','ShowPanelInfo','\x0a\x20\x20<br>\x0a\x20\x20<hr>\x0a\x20\x20','</button>','title','max','overrides','mods_container','is-4','forEach','arrayBuffer','call','forge','\x0a\x20\x20<br>\x0a\x20\x20<br>\x0a\x20\x20','error_downloading_dependency','9WNHVvB','minecraft','resumeTimer','10px','width','7njjKrr','boton_buscar_mods','322186cuVpBS','modal-card-head','lang','La\x20random\x20string\x20es\x20','Nombre\x20del\x20archivo:\x20','/.battly/instances','mods','version','is-info','feature-card2-feature-card','<a\x20href=\x22$2\x22\x20target=\x22_blank\x22>$1</a>','modal-card-foot','modal-background','button\x20is-info','24wykmzN','selectedIndex','quilt-loader','mrpack','modal-card-body','charAt','deleted_successfully','\x0a\x20\x20<br>\x0a\x20\x20<i\x20class=\x22fa-solid\x20fa-download\x22></i>\x20','node-fetch','https://api.curseforge.com/v1/mods/','stringify','modLoaders','compatible_with_curseforge_or_modrinth','2802608meVMdU','project_id','5koDiKZ','<i\x20class=\x22fa-solid\x20fa-circle-info\x22></i>\x20','home','error_downloading_mod','DescargarMod','./assets/js/libs/sweetalert/sweetalert2.all.min','/Library/Application\x20Support','card-content','transform','fabric-','battly_mods','scrollbarWidth','modrinth.index.json','9193689wzTXJs','option','from','<h2>$1</h2>\x0a','feature-card2-icon','file-cta','360GSwRia','darwin','ObtenerMod','downloading_mod','55038038uElEMu','shift','push','unlink','<b>$1</b>','fabric-loader','is-hidden','querySelector','projectID','<i>$1</i>','loading-text','random','510AsEOdk','length','modal','adm-zip','108968azdigb','getElementById','toString','writeFile','createElement','modal-card','className','371lXnUZL','pop','ModPack\x20','file-icon','label','Estás\x20utilizando\x20Fabric','fileID','progress','height','install','success','setAttribute','name','stopTimer','auto','scrollHeight','9292560tTfIRa','database','innerText','installing_mod','followers','figure','4672uTVUxd','4258550leMlOW','<br><br>','10jhutGs','mouseenter','file-input','installing_modpack_can_take','DescargarDependencias','download_mod','fileSize','close','is-link','quilt','input','modal-card-title','card','marginRight','dependency','assets/images/pregunta.png','GetLang','#d3d3d3\x20#d3d3d3','filename','select','ZIP/MRPACK','author','BuscarMods','image','button_instalar_modpack','utf8','/.battly/temp','.preload-content','loading_mod_information','scrollbarColor','0px','input_buscar_mods','textContent','translate(0px,\x20-5px)','Información\x20del\x20mod\x20\x20-\x20Descarga:\x20','12063HzPNNB','Loaders:\x20','4690792luRTTo','cancel','readFile','9999','info','https://api.modrinth.com/v2/projects_random?count=100','value','/version','innerHTML','resume','install_modpack_text','395928rKMMrT','hits','fas\x20fa-upload','the_file_is_not_compatible','BuscarModsPorNombre','accept','24808aWCIcB','copy','1240362AjcrMI','fontSize','you_didnt_selected_any_file','addEventListener','Ruta\x20del\x20archivo:\x20','\x0a\x20\x20','electron','media-left','148hkfQEk','file-name','createWriteStream','select_a_file','12834855sNdRKP','card-footer','modpack_installed_correctly','https://api.modrinth.com/v2/search?limit=20&query=','game_versions','summary','add','1400271wmNYpH','7742722LHHEJN','feature-card2-container','substring','startsWith','assets/images/descargar.png','div'];a169_0x2d00=function(){return _0x1e8911;};return a169_0x2d00();}(function(_0x48ff8f,_0x1355bb){const _0x4c933f=a169_0x4a9a,_0x5664b4=a169_0x49e8,_0x194e84=_0x48ff8f();while(!![]){try{const _0x50a432=-parseInt(_0x5664b4(0xd8))/0x1*(-parseInt(_0x5664b4(0xec))/0x2)+parseInt(_0x5664b4(0x167))/0x3+parseInt(_0x5664b4(0x1b5))/0x4*(parseInt(_0x5664b4(0xf9))/0x5)+-parseInt(_0x5664b4(0x1c1))/0x6*(parseInt(_0x5664b4(0xfd))/0x7)+parseInt(_0x5664b4(0x1ea))/0x8*(-parseInt(_0x5664b4(0x1a5))/0x9)+-parseInt(_0x5664b4(0x1e5))/0xa*(parseInt(_0x5664b4(0x1e4))/0xb)+parseInt(_0x5664b4(0x18a))/0xc*(parseInt(_0x5664b4(0x172))/0xd);if(_0x50a432===_0x1355bb)break;else _0x194e84[_0x4c933f(0x110)](_0x194e84[_0x4c933f(0x13c)]());}catch(_0x484d6c){_0x194e84[_0x4c933f(0x110)](_0x194e84[_0x4c933f(0x13c)]());}}}(a169_0x31d6,0xe82ea));import{database,changePanel,addAccount,accountSelect}from'../utils.js';function a169_0x4298(){const _0x4015c3=a169_0x5142,_0x5bb01d=a169_0x33a2,_0x34e545=['view_on_modrinth',_0x5bb01d(0x141),_0x5bb01d(0x15c),_0x5bb01d(0x7e),_0x5bb01d(0xee),_0x5bb01d(0xcd),_0x5bb01d(0xd8),_0x5bb01d(0x126),_0x5bb01d(0xa4),_0x5bb01d(0x146),_0x4015c3(0x165),_0x5bb01d(0x17b),_0x4015c3(0x169),_0x4015c3(0x12e),'Sin\x20descripción',_0x5bb01d(0xc4),_0x5bb01d(0x83),_0x5bb01d(0x16f),_0x5bb01d(0x15a),_0x5bb01d(0xfe),_0x4015c3(0x1ed),_0x4015c3(0x158),_0x4015c3(0x154),_0x5bb01d(0xa1),_0x5bb01d(0x17c),_0x5bb01d(0x150),_0x4015c3(0x1c5),_0x5bb01d(0xb3),_0x5bb01d(0xe7),_0x5bb01d(0x8d),_0x5bb01d(0x132),_0x5bb01d(0x94),_0x5bb01d(0xa6),_0x5bb01d(0x136),_0x5bb01d(0xae),_0x5bb01d(0x11d),_0x5bb01d(0x90),_0x5bb01d(0x13b),'json',_0x4015c3(0x1cd),'<h1>$1</h1>\x0a',_0x5bb01d(0x77),_0x4015c3(0x1de),_0x5bb01d(0x157),_0x5bb01d(0x6e),_0x5bb01d(0x11e),_0x5bb01d(0x120),_0x4015c3(0x101),_0x5bb01d(0x151),_0x4015c3(0x1aa),_0x5bb01d(0xdc),_0x5bb01d(0x98),_0x5bb01d(0xf0),_0x5bb01d(0x168),_0x5bb01d(0x181),_0x5bb01d(0x6d),_0x5bb01d(0xe6),_0x5bb01d(0xd1),_0x5bb01d(0xb1),_0x5bb01d(0x15b),_0x5bb01d(0x12d),_0x5bb01d(0x158),'writeFileSync',_0x5bb01d(0x129),'instance.json','change',_0x5bb01d(0x178),_0x5bb01d(0xcb),_0x5bb01d(0xf7),_0x5bb01d(0xe2),_0x4015c3(0x1d3),_0x5bb01d(0xa8),_0x4015c3(0x193),_0x5bb01d(0x12f),_0x4015c3(0x1cc),_0x4015c3(0x191),'\x20/\x20',_0x4015c3(0x114),_0x4015c3(0x200),_0x4015c3(0x1a4),_0x4015c3(0x188),_0x5bb01d(0x7d),_0x5bb01d(0x133),_0x5bb01d(0x186),_0x5bb01d(0xba),'mods_container',_0x5bb01d(0xb4),_0x5bb01d(0xeb),_0x5bb01d(0x189),_0x5bb01d(0x135),_0x5bb01d(0xe3),_0x4015c3(0x15f),_0x5bb01d(0xc1),_0x5bb01d(0x177),_0x5bb01d(0x7f),_0x5bb01d(0x17f),_0x4015c3(0x173),_0x5bb01d(0xb5),_0x4015c3(0xf4),_0x5bb01d(0xcc),_0x4015c3(0x189),_0x5bb01d(0x12c),_0x5bb01d(0xbd),_0x5bb01d(0x75),_0x5bb01d(0x78),_0x5bb01d(0xad),_0x5bb01d(0x161),_0x4015c3(0x1f6),_0x5bb01d(0xd0),'img',_0x4015c3(0x1f5),_0x5bb01d(0x122),_0x5bb01d(0x18c),'<u>$1</u>',_0x5bb01d(0xf3),_0x4015c3(0x1e9),_0x5bb01d(0x152),_0x5bb01d(0xed),'get',_0x4015c3(0x1fd),_0x5bb01d(0x8e),_0x5bb01d(0x182),_0x5bb01d(0x14d),_0x5bb01d(0x91),_0x5bb01d(0xac),_0x5bb01d(0x17e),_0x5bb01d(0x13a),_0x5bb01d(0xc6),_0x4015c3(0x1c1),_0x5bb01d(0x69),_0x5bb01d(0x11a),_0x5bb01d(0xbf),_0x5bb01d(0xd9),'9aVMROB',_0x5bb01d(0x121),_0x4015c3(0x1d9),_0x4015c3(0x1a7),_0x5bb01d(0x7b),_0x5bb01d(0x7a),_0x5bb01d(0x166),_0x5bb01d(0x9d),'ObtenerModData',_0x5bb01d(0x130),_0x5bb01d(0x80),_0x5bb01d(0x82),_0x5bb01d(0xa5),'path',_0x4015c3(0x10f),_0x5bb01d(0x79),_0x5bb01d(0x6b),_0x4015c3(0x13c),_0x5bb01d(0x125),_0x5bb01d(0x16b),_0x5bb01d(0xab),_0x5bb01d(0x10d),_0x4015c3(0xe5),_0x5bb01d(0x183),_0x5bb01d(0xa0),'2IzGrDn',_0x5bb01d(0x104),_0x5bb01d(0xb6),'/download-url',_0x5bb01d(0x138),_0x5bb01d(0x119),_0x5bb01d(0xdd),_0x4015c3(0x16b),_0x5bb01d(0x140),_0x5bb01d(0x117),_0x4015c3(0x186),_0x5bb01d(0x81),_0x5bb01d(0x112),_0x5bb01d(0x188),_0x5bb01d(0x118),_0x5bb01d(0xbe),_0x5bb01d(0x149),_0x5bb01d(0x95),_0x5bb01d(0xf8),_0x5bb01d(0x13c),_0x5bb01d(0x124),_0x5bb01d(0xf6),_0x5bb01d(0x144),_0x5bb01d(0xb7),_0x4015c3(0x1d8),'preventDefault',_0x5bb01d(0x127),_0x5bb01d(0xe4),_0x5bb01d(0x15e),_0x5bb01d(0xa9),_0x4015c3(0x1b6),_0x4015c3(0x1e8),_0x4015c3(0x1fb),_0x5bb01d(0x164),_0x5bb01d(0x10f),_0x5bb01d(0x71),_0x5bb01d(0x8c),_0x5bb01d(0x87),_0x4015c3(0x1ea),_0x5bb01d(0x185),_0x5bb01d(0xe8),_0x4015c3(0x1f0),_0x5bb01d(0xe9),_0x5bb01d(0xb0),_0x5bb01d(0x169),_0x5bb01d(0x101),_0x4015c3(0x170),_0x5bb01d(0xef),_0x4015c3(0x17e),_0x4015c3(0x149),_0x5bb01d(0x96),_0x5bb01d(0xda),_0x5bb01d(0xd4),_0x4015c3(0x1e3),_0x4015c3(0x20f),_0x5bb01d(0x116),_0x4015c3(0x164),_0x5bb01d(0x70),_0x5bb01d(0x17d),_0x5bb01d(0x8a),_0x5bb01d(0xa3),_0x5bb01d(0xc8),_0x4015c3(0xfa),_0x5bb01d(0x13f),_0x4015c3(0x136),_0x5bb01d(0x154),_0x5bb01d(0x173),_0x5bb01d(0x18b),_0x5bb01d(0x100),_0x5bb01d(0x15f),_0x4015c3(0x15b),'src',_0x4015c3(0x1bc),_0x5bb01d(0x160),_0x5bb01d(0x131),_0x5bb01d(0x14e),_0x5bb01d(0x6f),_0x4015c3(0x1b2),_0x4015c3(0x203),_0x4015c3(0x1f8),_0x5bb01d(0x93),'APPDATA',_0x5bb01d(0x84),_0x5bb01d(0xc3),_0x5bb01d(0xbc),_0x5bb01d(0xff),_0x5bb01d(0x92),_0x5bb01d(0x156),_0x5bb01d(0x6c),_0x5bb01d(0x17a),_0x5bb01d(0x163),_0x5bb01d(0x86),_0x4015c3(0x1d0),_0x5bb01d(0xdf),_0x5bb01d(0x142),_0x5bb01d(0x153),_0x5bb01d(0x114),_0x5bb01d(0x8b),_0x5bb01d(0xb2),_0x5bb01d(0xd6),_0x5bb01d(0xea),_0x4015c3(0x148),_0x5bb01d(0x11c),_0x5bb01d(0x109),_0x5bb01d(0xdb),_0x4015c3(0x1c3),_0x5bb01d(0x12e),_0x5bb01d(0xe1),_0x5bb01d(0xf9),_0x5bb01d(0x6a),_0x4015c3(0x1ec),_0x5bb01d(0x16a),_0x5bb01d(0x180),_0x4015c3(0x198),_0x5bb01d(0xca),_0x5bb01d(0xfd),_0x5bb01d(0xb9),_0x5bb01d(0xbb),_0x5bb01d(0x89),_0x5bb01d(0xde),_0x5bb01d(0x15d),_0x5bb01d(0x123),_0x5bb01d(0xa7),_0x4015c3(0x1c8),_0x5bb01d(0xe5),_0x5bb01d(0xf1),_0x5bb01d(0x170),_0x4015c3(0x125),_0x5bb01d(0x76),_0x5bb01d(0x171)];return a169_0x4298=function(){return _0x34e545;},a169_0x4298();}const {ipcRenderer}=require(a169_0x580248(0x1fd)),axios=require(a169_0x15baf1(0xcc)),dataDirectory=process[a169_0x15baf1(0x17e)][a169_0x580248(0x1a9)]||(process[a169_0x580248(0x105)]==a169_0x428e3a(0xd7)?process[a169_0x580248(0x1f6)][a169_0x580248(0x1f1)]+a169_0x580248(0x164):process[a169_0x428e3a(0xc3)][a169_0x580248(0x1f1)]),fs=require('fs'),Swal=require(a169_0x15baf1(0x99)),Toast=Swal[a169_0x580248(0x118)]({'toast':!![],'position':a169_0x15baf1(0xf2),'showConfirmButton':![],'timer':0xbb8,'timerProgressBar':!![],'didOpen':_0x1a781b=>{const _0x3a77a2=a169_0x15baf1,_0x3a1f74=a169_0x580248;_0x1a781b[_0x3a1f74(0x1e9)](_0x3a1f74(0x121),Swal[_0x3a77a2(0x18a)]),_0x1a781b[_0x3a1f74(0x1e9)](_0x3a1f74(0x125),Swal[_0x3a1f74(0xdb)]);}});function a169_0x31d6(){const _0x399de7=a169_0x5142,_0x7923ed=a169_0x428e3a,_0x47c283=a169_0x15baf1,_0x1d60b4=[_0x47c283(0xdd),_0x47c283(0xe7),_0x47c283(0xa3),_0x47c283(0x162),_0x47c283(0x192),_0x47c283(0xbf),_0x47c283(0x149),_0x47c283(0x12e),_0x47c283(0x8a),_0x7923ed(0x81),_0x7923ed(0xaf),_0x47c283(0x18c),_0x47c283(0x95),_0x7923ed(0x155),_0x47c283(0x17b),_0x47c283(0x14d),_0x47c283(0x171),_0x7923ed(0xa6),_0x47c283(0x118),_0x7923ed(0xb7),_0x47c283(0x17d),_0x47c283(0x19b),_0x7923ed(0x10e),_0x47c283(0xa9),_0x47c283(0x9a),_0x7923ed(0xad),_0x7923ed(0x127),_0x47c283(0xbc),_0x7923ed(0x9a),_0x47c283(0xf3),_0x7923ed(0x167),_0x47c283(0x169),_0x7923ed(0x9e),_0x47c283(0x1a1),_0x7923ed(0xf4),_0x47c283(0x155),_0x47c283(0x127),_0x7923ed(0x185),_0x47c283(0x111),_0x47c283(0xb4),_0x7923ed(0x113),_0x47c283(0x114),_0x47c283(0xc4),_0x47c283(0x15e),_0x47c283(0xd6),_0x47c283(0x148),_0x47c283(0xf1),_0x47c283(0x185),_0x47c283(0xc2),_0x47c283(0x137),_0x47c283(0x167),_0x7923ed(0x162),_0x47c283(0x1a0),_0x47c283(0xde),_0x7923ed(0x13e),_0x7923ed(0x137),_0x47c283(0x14e),_0x47c283(0xe3),_0x7923ed(0x120),_0x47c283(0xcf),_0x47c283(0x124),_0x7923ed(0x11f),_0x47c283(0xc7),_0x47c283(0xcb),_0x399de7(0x1ac),_0x47c283(0xc3),_0x47c283(0xa1),_0x47c283(0xb9),_0x47c283(0x13d),_0x399de7(0x209),_0x47c283(0xd3),_0x7923ed(0x7c),_0x47c283(0x143),_0x7923ed(0x110),_0x47c283(0x161),_0x47c283(0xd2),_0x399de7(0x1c7),_0x7923ed(0x9b),_0x47c283(0x8e),_0x47c283(0x139),_0x47c283(0x16c),_0x47c283(0x123),_0x47c283(0x176),_0x47c283(0x180),_0x47c283(0x96),_0x7923ed(0x102),_0x47c283(0x175),_0x47c283(0x178),_0x47c283(0xfa),_0x7923ed(0x145),_0x47c283(0xb0),_0x47c283(0x103),_0x47c283(0xc9),_0x7923ed(0x74),_0x47c283(0xbe),_0x47c283(0x196),_0x7923ed(0x14b),_0x47c283(0x190),_0x47c283(0x10a),_0x47c283(0xae),_0x7923ed(0x187),_0x47c283(0x8c),_0x47c283(0xe5),_0x47c283(0x19a),_0x47c283(0x9d),_0x47c283(0x88),_0x47c283(0xa6),_0x47c283(0xdb),_0x7923ed(0x13a),_0x7923ed(0x106),_0x47c283(0x116),_0x47c283(0xd5),_0x7923ed(0x97),_0x47c283(0xe9),_0x47c283(0xee),_0x47c283(0x18d),_0x47c283(0xea),_0x47c283(0x11a),_0x47c283(0x135),_0x7923ed(0xd2),_0x399de7(0x1f2),_0x47c283(0x173),_0x47c283(0x15c),_0x47c283(0x183),_0x47c283(0xb3),_0x47c283(0x131),_0x47c283(0x156),_0x47c283(0x125),_0x47c283(0x157),_0x47c283(0x19f),_0x47c283(0x105),_0x47c283(0xf4),_0x7923ed(0xf5),_0x47c283(0x144),_0x47c283(0x160),_0x47c283(0x19c),_0x47c283(0x189),_0x47c283(0x165),_0x7923ed(0x159),_0x47c283(0xc6),_0x399de7(0x194),_0x47c283(0xb5),_0x47c283(0x122),_0x7923ed(0xa7),_0x399de7(0x172),_0x47c283(0x18e),_0x47c283(0xeb),_0x47c283(0x107),_0x7923ed(0x15f),_0x7923ed(0xc7),_0x47c283(0xd9),_0x47c283(0xe1),_0x47c283(0x159),_0x47c283(0x15a),_0x7923ed(0x148),_0x47c283(0xaa),_0x47c283(0x11d),_0x47c283(0xac),_0x47c283(0x1a4),_0x47c283(0x129),_0x7923ed(0xe4),_0x47c283(0xcc),_0x47c283(0x9b),_0x47c283(0xc1),_0x47c283(0x89),_0x47c283(0x93),_0x47c283(0xc0),_0x47c283(0x182),_0x47c283(0x14b),_0x7923ed(0x16d),_0x7923ed(0x111),_0x7923ed(0xc9),_0x47c283(0x168),'name',_0x47c283(0x158),_0x47c283(0x91),_0x47c283(0x101),_0x47c283(0x18b),_0x47c283(0xf0),_0x47c283(0x1a2),_0x7923ed(0x88),_0x47c283(0x1a3),_0x47c283(0x12c),_0x47c283(0x9e),_0x47c283(0x166),_0x7923ed(0xc2),_0x47c283(0x8b),'message',_0x47c283(0x188),_0x47c283(0x141),_0x47c283(0x11b),_0x7923ed(0x13d),_0x47c283(0x19d),_0x47c283(0xf7),_0x47c283(0xc8),_0x7923ed(0x147),_0x7923ed(0x103),_0x47c283(0x12d),_0x7923ed(0x134),_0x47c283(0xcd),_0x47c283(0x17c),_0x47c283(0x14c),_0x47c283(0xb1),_0x399de7(0x141),_0x47c283(0x13a),_0x7923ed(0x128),_0x47c283(0xd8),_0x47c283(0xe4),_0x7923ed(0xc0),_0x47c283(0x13f),_0x47c283(0x15b),_0x47c283(0x12a),_0x399de7(0x1eb),_0x7923ed(0xfc),_0x47c283(0x199),_0x47c283(0x147),_0x47c283(0x119),_0x47c283(0x126),'src',_0x7923ed(0xec),_0x7923ed(0x143),_0x47c283(0x19e),_0x47c283(0x106),_0x47c283(0xfe),_0x47c283(0xfc),_0x47c283(0x198),_0x47c283(0x98),_0x47c283(0x10f),_0x7923ed(0xcf),_0x7923ed(0x175),_0x47c283(0x186),_0x47c283(0x90),_0x7923ed(0xfa),_0x47c283(0x10d),_0x399de7(0x1f4),_0x47c283(0xb7),_0x47c283(0x11e),_0x7923ed(0x139),_0x7923ed(0x107),_0x47c283(0xb6),_0x47c283(0x97),_0x47c283(0xdf),_0x47c283(0x109),_0x47c283(0x133),_0x47c283(0x197),_0x47c283(0xaf),_0x399de7(0xf1),_0x47c283(0x9c),_0x47c283(0x194),_0x47c283(0x177),_0x47c283(0xd0),_0x7923ed(0xc5),_0x47c283(0x195),_0x399de7(0xfb),_0x7923ed(0x14f),_0x47c283(0x16b),_0x47c283(0x153),_0x47c283(0xfb),_0x47c283(0xed),_0x47c283(0x128),_0x399de7(0xf2),_0x47c283(0x12f),_0x47c283(0x102),_0x47c283(0x132),_0x7923ed(0x151),_0x47c283(0x187),_0x7923ed(0x18a),_0x47c283(0x11c),_0x47c283(0xab),_0x7923ed(0xaa),_0x47c283(0xa8),_0x7923ed(0x12b),'HOME',_0x47c283(0xe8),_0x47c283(0x16e),_0x47c283(0x121),_0x47c283(0xec),_0x7923ed(0xc3),_0x47c283(0x181),_0x7923ed(0x16e),_0x7923ed(0x176),_0x47c283(0xd7),_0x7923ed(0x11b),_0x47c283(0x150),_0x47c283(0x100),_0x7923ed(0x85),_0x47c283(0x13b),_0x7923ed(0x10c),_0x399de7(0xef),_0x47c283(0x184),_0x7923ed(0x73),_0x399de7(0x19d),_0x47c283(0xe0),_0x47c283(0xa4),_0x47c283(0x16f)];return a169_0x31d6=function(){return _0x1d60b4;},a169_0x31d6();}import{Lang}from'../utils/lang.js';function a169_0x49e8(_0x1d4da5,_0x25d4cb){const _0x58a6ac=a169_0x31d6();return a169_0x49e8=function(_0x3657d0,_0x32467e){_0x3657d0=_0x3657d0-0xd8;let _0x1bffad=_0x58a6ac[_0x3657d0];return _0x1bffad;},a169_0x49e8(_0x1d4da5,_0x25d4cb);}function a169_0x33a2(_0x4d8d4b,_0x120ad5){const _0x35cda9=a169_0x44e1();return a169_0x33a2=function(_0x59a75d,_0x2c2f34){_0x59a75d=_0x59a75d-0x68;let _0x4aed05=_0x35cda9[_0x59a75d];return _0x4aed05;},a169_0x33a2(_0x4d8d4b,_0x120ad5);}class Mods{static ['id']=a169_0x580248(0x140);async[a169_0x580248(0x14e)](_0x304a99){const _0x5be659=a169_0x15baf1,_0x174206=a169_0x580248;this[_0x174206(0x145)]=_0x304a99,this[_0x174206(0x1e1)]=await new database()[_0x174206(0x14e)](),this[_0x174206(0x15b)]=await new Lang()[_0x5be659(0xf5)](),this[_0x174206(0x11e)](),this[_0x174206(0x1ca)](),this[_0x174206(0x17d)](),this[_0x174206(0x104)]();}async[a169_0x580248(0x104)](){const _0x251238=a169_0x15baf1,_0x4f0dcd=a169_0x580248;let _0x1d8012=document[_0x4f0dcd(0x16c)](_0x4f0dcd(0x1d9));_0x1d8012[_0x4f0dcd(0x1e9)](_0x251238(0x142),async()=>{const _0x13d2eb=a169_0x5142,_0x574830=a169_0x33a2,_0x38230=_0x251238,_0x590c35=_0x4f0dcd,_0x3da357=document[_0x590c35(0x13d)](_0x590c35(0x1aa));_0x3da357[_0x590c35(0x1af)]=_0x38230(0x193),_0x3da357[_0x590c35(0x122)][_0x590c35(0x19b)]=_0x590c35(0x127);const _0x4ffbff=document[_0x590c35(0x13d)](_0x590c35(0x1aa));_0x4ffbff[_0x590c35(0x1af)]=_0x590c35(0x1e7),_0x3da357[_0x590c35(0x175)](_0x4ffbff);const _0x520ef9=document[_0x590c35(0x13d)](_0x590c35(0x1aa));_0x520ef9[_0x590c35(0x1af)]=_0x574830(0x7a),_0x3da357[_0x590c35(0x175)](_0x520ef9);const _0x37f630=document[_0x590c35(0x13d)](_0x590c35(0x141));_0x37f630[_0x38230(0xd8)]=_0x38230(0x190),_0x520ef9[_0x590c35(0x175)](_0x37f630);const _0x1e17b7=document[_0x590c35(0x13d)]('p');_0x1e17b7[_0x590c35(0x1af)]=_0x590c35(0xe7),_0x1e17b7[_0x590c35(0x1b2)]=this[_0x590c35(0x15b)][_0x590c35(0x15f)],_0x37f630[_0x590c35(0x175)](_0x1e17b7);const _0x50acb1=document[_0x590c35(0x13d)](_0x590c35(0xed));_0x50acb1[_0x590c35(0x1af)]=_0x590c35(0x1de),_0x50acb1[_0x590c35(0xdd)](_0x574830(0xab),_0x574830(0xce)),_0x37f630[_0x590c35(0x175)](_0x50acb1);const _0x51bb15=document[_0x590c35(0x13d)](_0x590c35(0x134));_0x51bb15[_0x590c35(0x1af)]=_0x590c35(0x1b4),_0x520ef9[_0x590c35(0x175)](_0x51bb15);const _0x4689c8=document[_0x590c35(0x13d)]('p');_0x4689c8[_0x590c35(0x1b2)]=this[_0x590c35(0x15b)][_0x590c35(0x1a0)],_0x51bb15[_0x590c35(0x175)](_0x4689c8);const _0x56a0f4=document[_0x590c35(0x13d)](_0x574830(0x164));_0x56a0f4[_0x590c35(0x1af)]=_0x13d2eb(0x20b),_0x56a0f4[_0x590c35(0x122)][_0x38230(0xfd)]=_0x38230(0xc4),_0x51bb15[_0x590c35(0x175)](_0x56a0f4);const _0x435626=document[_0x574830(0x12d)](_0x590c35(0x113));_0x435626[_0x38230(0xd8)]=_0x590c35(0x1e6),_0x56a0f4[_0x590c35(0x175)](_0x435626);const _0x40d507=document[_0x590c35(0x13d)](_0x590c35(0x1da));_0x40d507[_0x590c35(0x1af)]=_0x590c35(0xe6),_0x40d507[_0x13d2eb(0x19d)](_0x574830(0x105),_0x38230(0x94)),_0x40d507[_0x590c35(0xdd)](_0x590c35(0x18e),_0x590c35(0x10a)),_0x40d507[_0x574830(0x9f)](_0x38230(0xc5),_0x590c35(0xe9)),_0x435626[_0x38230(0x170)](_0x40d507);const _0x109515=document[_0x590c35(0x13d)](_0x590c35(0x19e));_0x109515[_0x38230(0xd8)]=_0x590c35(0x102),_0x435626[_0x590c35(0x175)](_0x109515);const _0x3d656a=document[_0x590c35(0x13d)](_0x38230(0x141));_0x3d656a[_0x590c35(0x1af)]=_0x38230(0xb2),_0x109515[_0x590c35(0x175)](_0x3d656a);const _0x108eca=document[_0x590c35(0x13d)]('i');_0x108eca[_0x590c35(0x1af)]=_0x590c35(0x133),_0x3d656a[_0x590c35(0x175)](_0x108eca);const _0x310953=document[_0x38230(0xc9)](_0x590c35(0x19e));_0x310953[_0x590c35(0x1af)]=_0x590c35(0x1e6),_0x310953[_0x590c35(0x1b2)]=this[_0x590c35(0x15b)][_0x590c35(0x13b)],_0x109515[_0x590c35(0x175)](_0x310953);const _0x410c40=document[_0x38230(0xc9)](_0x574830(0x144));_0x410c40[_0x590c35(0x1af)]=_0x590c35(0x1b7),_0x410c40[_0x590c35(0x122)][_0x38230(0x104)]=_0x590c35(0x10b),_0x410c40[_0x590c35(0x1b2)]=_0x590c35(0x19a),_0x435626[_0x590c35(0x175)](_0x410c40);const _0x50aac3=document[_0x590c35(0x13d)](_0x590c35(0xf5));_0x50aac3[_0x590c35(0x1af)]=_0x590c35(0x178),_0x520ef9[_0x574830(0x15f)](_0x50aac3);const _0x3be4f=document[_0x38230(0xc9)](_0x590c35(0xed));_0x3be4f[_0x38230(0xd8)]=_0x590c35(0xe3),_0x3be4f[_0x590c35(0x1b2)]=this[_0x590c35(0x15b)][_0x590c35(0xdf)],_0x50aac3[_0x590c35(0x175)](_0x3be4f);const _0x3b0d61=document[_0x590c35(0x13d)](_0x590c35(0xed));_0x3b0d61[_0x590c35(0x1af)]=_0x590c35(0xed),_0x3b0d61[_0x590c35(0x1b2)]=this[_0x590c35(0x15b)][_0x38230(0xa0)],_0x50aac3[_0x590c35(0x175)](_0x3b0d61),document[_0x590c35(0x110)][_0x574830(0x15f)](_0x3da357),_0x50acb1[_0x38230(0xbd)](_0x590c35(0xf4),()=>{const _0x3d6c2c=_0x590c35;_0x3da357[_0x3d6c2c(0xfb)]();}),_0x3b0d61[_0x590c35(0x1e9)](_0x38230(0x142),()=>{const _0x5a1071=_0x590c35;_0x3da357[_0x5a1071(0xfb)]();}),_0x40d507[_0x38230(0xbd)](_0x38230(0xce),()=>{const _0x26c1f8=_0x590c35,_0x1c2c30=_0x40d507[_0x26c1f8(0x1a6)][0x0];_0x1c2c30&&(_0x410c40[_0x26c1f8(0x1b2)]=_0x1c2c30[_0x26c1f8(0x18e)]);}),_0x3be4f[_0x590c35(0x1e9)](_0x13d2eb(0xfe),async()=>{const _0x2c88fa=_0x13d2eb,_0x569097=_0x574830,_0x3c0cd9=_0x38230,_0x308454=_0x590c35;if(_0x40d507[_0x308454(0x1a6)][_0x3c0cd9(0xdd)]==0x0)Toast[_0x3c0cd9(0x125)]({'icon':_0x308454(0x12f),'title':this[_0x308454(0x15b)][_0x3c0cd9(0x130)]});else{_0x50aac3[_0x3c0cd9(0x145)]();const _0x5e0e73=_0x40d507[_0x308454(0x1a6)][0x0];console[_0x3c0cd9(0xe9)](_0x5e0e73),_0x51bb15[_0x569097(0x127)]();const _0x344597=document[_0x569097(0x12d)](_0x308454(0x134));_0x344597[_0x308454(0x1af)]=_0x308454(0x1b4),_0x520ef9[_0x3c0cd9(0x170)](_0x344597);const _0x28ec61=document[_0x308454(0x13d)]('p');_0x28ec61[_0x3c0cd9(0x143)]=this[_0x308454(0x15b)][_0x308454(0x10d)],_0x344597[_0x3c0cd9(0x170)](_0x28ec61);const _0x22749a=document[_0x308454(0x13d)](_0x3c0cd9(0x138));_0x22749a[_0x308454(0x1af)]=_0x308454(0x1ed),_0x22749a[_0x3c0cd9(0x146)]='0',_0x22749a[_0x308454(0x1e0)]=_0x308454(0x1c3),_0x344597[_0x3c0cd9(0x170)](_0x22749a),_0x50aac3['remove']();const _0x3a536d=document[_0x308454(0x13d)](_0x308454(0xf5));_0x3a536d[_0x3c0cd9(0xd8)]=_0x3c0cd9(0xe1),_0x520ef9[_0x308454(0x175)](_0x3a536d);const _0x53d112=require(_0x308454(0x1a3)),_0xce74b7=require(_0x308454(0x135)),_0x5f0a16=require(_0x3c0cd9(0x11f)),_0x1180c3=_0x308454(0x1d7);async function _0x3bed22(_0x88f94c,_0x312493){const _0x4fdf78=_0x569097,_0x1ccaee=_0x3c0cd9,_0x25c552=_0x308454;console[_0x25c552(0x152)](_0x25c552(0x1c8)+_0x312493);let _0x2e7fc7=_0x88f94c[_0x25c552(0x18e)],_0x4a79de=_0x88f94c[_0x25c552(0x1cb)]?_0x88f94c[_0x1ccaee(0xca)]:this[_0x25c552(0x15b)][_0x25c552(0x137)],_0x35c5e7=_0x88f94c[_0x25c552(0x191)][_0x25c552(0x1ac)],_0x5cec31,_0x428b38,_0x767448=_0x88f94c[_0x25c552(0x191)][_0x25c552(0x198)],_0x407d50=_0x88f94c[_0x1ccaee(0x101)][_0x25c552(0x1f7)];if(_0x767448)_0x5cec31=_0x25c552(0x192),_0x428b38=_0x767448,console[_0x1ccaee(0xe9)](_0x25c552(0x119));else _0x407d50?(_0x5cec31=_0x25c552(0x1f7),_0x767448=_0x88f94c[_0x25c552(0x191)][_0x25c552(0x1f7)],_0x428b38=_0x767448,console[_0x25c552(0x152)](_0x25c552(0x195))):(_0x5cec31=_0x25c552(0x14d),_0x767448=_0x88f94c[_0x25c552(0x191)][_0x25c552(0x1c9)],_0x428b38=_0x767448,console[_0x1ccaee(0xe9)](_0x25c552(0x1f3)));console[_0x25c552(0x152)](_0x2e7fc7),console[_0x1ccaee(0xe9)](_0x4a79de),console[_0x25c552(0x152)](_0x35c5e7),console[_0x25c552(0x152)](_0x5cec31),console[_0x1ccaee(0xe9)](_0x428b38);if(_0x2e7fc7&&_0x4a79de&&_0x35c5e7&&_0x5cec31&&_0x428b38){_0xce74b7(_0x1ccaee(0x10e))[_0x4fdf78(0x130)](_0x1c6743=>_0x1c6743[_0x25c552(0x109)]())[_0x25c552(0x19f)](_0x11dcdb=>{const _0x45f6bc=_0x25c552;_0x53d112[_0x45f6bc(0x120)](dataDirectory+_0x45f6bc(0x131)+_0x312493+_0x45f6bc(0x1b0),_0x11dcdb);});let _0x7b55eb={'name':_0x2e7fc7,'description':_0x4a79de,'version':_0x35c5e7,'image':dataDirectory+_0x25c552(0x131)+_0x312493+_0x25c552(0x1b0),'id':_0x312493,'loader':_0x5cec31,'loaderVersion':_0x428b38},_0x5c3eee=JSON[_0x25c552(0x1f2)](_0x7b55eb);_0x53d112[_0x1ccaee(0xcb)](_0x5f0a16[_0x25c552(0x10e)](dataDirectory+_0x25c552(0x131)+_0x312493,_0x25c552(0x1a8)),_0x5c3eee);let _0x3fa6e5=[],_0xaf64ad=_0x88f94c[_0x25c552(0x1a6)][_0x25c552(0xe1)],_0xbf7084=0x0,_0x14c62f=0x0;_0x22749a[_0x25c552(0x1e0)]=_0xaf64ad;for(let _0x3dc7ec=0x0;_0x3dc7ec<_0x88f94c[_0x1ccaee(0x12d)][_0x25c552(0xe1)];_0x3dc7ec++){const _0x599222=_0x88f94c[_0x25c552(0x1a6)][_0x3dc7ec];let _0x271974=_0x599222[_0x1ccaee(0x11f)],_0x3cfecc=_0x599222[_0x1ccaee(0xf9)],_0x41e251=_0x599222[_0x25c552(0x190)],_0xd114b9=_0x271974[_0x25c552(0x13a)]('/'),_0x12635c=_0xd114b9[_0x25c552(0x1ce)](0x0,_0xd114b9[_0x25c552(0xe1)]-0x1),_0x4dfb63=_0x12635c[_0x25c552(0x10e)]('/'),_0x504a1a=dataDirectory+_0x25c552(0x131)+_0x312493+'/'+_0x4dfb63;console[_0x25c552(0x152)](_0x504a1a),!_0x53d112[_0x25c552(0x1d3)](_0x504a1a)&&_0x53d112[_0x25c552(0x126)](_0x504a1a,{'recursive':!![]});for(let _0x28dc55 of _0x41e251){await _0xce74b7(_0x28dc55)[_0x4fdf78(0x130)](_0xdd11fb=>{const _0x4d278e=_0x4fdf78,_0x266132=_0x1ccaee,_0x5f1375=_0x25c552,_0x20f6bf=_0x53d112[_0x5f1375(0x123)](dataDirectory+_0x5f1375(0x131)+_0x312493+'/'+_0x271974);_0xdd11fb[_0x5f1375(0x110)][_0x5f1375(0x1c4)](_0x20f6bf),_0xbf7084++,_0x22749a[_0x5f1375(0x181)]=_0xbf7084,console[_0x5f1375(0x152)](_0xbf7084+_0x266132(0xd9)+_0xaf64ad+_0x5f1375(0x1fb)),_0x28ec61[_0x5f1375(0x129)]=this[_0x5f1375(0x15b)][_0x5f1375(0x10d)]+_0x5f1375(0x13f)+this[_0x5f1375(0x15b)][_0x266132(0xb8)]+'\x20'+_0x271974+'\x20('+_0xbf7084+_0x4d278e(0x165)+_0xaf64ad+')',_0xbf7084==_0xaf64ad&&(_0x3da357[_0x5f1375(0xfb)](),ipcRenderer[_0x5f1375(0x1be)](_0x5f1375(0x116),{'title':this[_0x5f1375(0x15b)][_0x4d278e(0x7b)],'body':_0x5f1375(0x16d)+_0x2e7fc7+'\x20'+this[_0x266132(0x15c)][_0x5f1375(0x11d)]+'.'}));});}}}}async function _0x21cb59(_0x2327b2,_0x5c4f6e,_0x136f35,_0x8aaddd){const _0x551130=_0x3c0cd9,_0x9b62ef=_0x308454,_0xab988d=_0x9b62ef(0x184)+_0x2327b2+_0x9b62ef(0xf0)+_0x5c4f6e+_0x9b62ef(0xe8),_0x5e1e53=_0x9b62ef(0x184)+_0x2327b2,_0x3d9c8c=require(_0x9b62ef(0x182)),_0x24c57c=await _0x3d9c8c[_0x9b62ef(0x13c)](_0x5e1e53,{'headers':{'x-api-key':_0x1180c3}});try{const _0x55d8fe=await _0xce74b7(_0xab988d,{'headers':{'X-Api-Key':_0x1180c3}});if(_0x55d8fe['ok']){const {data:_0x5b2df9}=await _0x55d8fe[_0x9b62ef(0x15d)](),_0x52f1e5=await _0xce74b7(_0x5b2df9);if(_0x52f1e5['ok']){const _0x2edfa6=await _0x52f1e5[_0x9b62ef(0x109)]();await _0x53d112[_0x9b62ef(0x199)](_0x5f0a16[_0x551130(0x148)](_0x136f35,_0x24c57c[_0x9b62ef(0x17a)][_0x9b62ef(0x17a)][_0x9b62ef(0x18e)][_0x9b62ef(0xe4)](/[\/\\:*?"<>|]/g,'_')+_0x9b62ef(0x1ad)),_0x2edfa6);}else{}}else{}}catch(_0x137061){console[_0x9b62ef(0x12f)](_0x9b62ef(0x1cf)+_0x2327b2+'-'+_0x5c4f6e+':'),console[_0x9b62ef(0x12f)](_0x137061);}}let _0x221568=_0x5e0e73[_0x3c0cd9(0x11f)];const _0x250635=require(_0x308454(0x11c)),_0x1d5399=_0x5e0e73[_0x3c0cd9(0x16a)][_0x308454(0x13a)]('.')[_0x308454(0x150)]();console[_0x308454(0x152)](_0x1d5399);const _0x1257ce=_0x5e0e73[_0x308454(0x18e)][_0x3c0cd9(0x162)]('.'+_0x1d5399,'');console[_0x308454(0x152)](_0x308454(0x18c)+_0x1d5399),console[_0x308454(0x152)](_0x308454(0xf7)+_0x1257ce);let _0x487ac0;if(_0x1d5399===_0x308454(0x130)){let _0x276a24=Math[_0x308454(0x157)]()[_0x308454(0x169)](0x24)[_0x3c0cd9(0x137)](0x2,0x8);!_0x53d112[_0x308454(0x1d3)](dataDirectory+_0x308454(0x154))&&_0x53d112[_0x308454(0x126)](dataDirectory+_0x308454(0x154)),!_0x53d112[_0x308454(0x1d3)](dataDirectory+_0x308454(0x131)+_0x276a24)?_0x53d112[_0x3c0cd9(0x108)](dataDirectory+_0x308454(0x131)+_0x276a24):(_0x276a24=Math[_0x308454(0x157)]()[_0x308454(0x169)](0x24)[_0x308454(0x112)](0x2,0x8),_0x53d112[_0x3c0cd9(0x108)](dataDirectory+_0x308454(0x131)+_0x276a24));const _0x27ce34=dataDirectory+_0x3c0cd9(0x16c)+_0x276a24;console[_0x308454(0x152)](_0x308454(0xe0)+_0x27ce34),!_0x53d112[_0x308454(0x1d3)](_0x27ce34)&&_0x53d112[_0x308454(0x126)](_0x27ce34),!_0x53d112[_0x308454(0x1d3)](dataDirectory+_0x308454(0x165))&&_0x53d112[_0x308454(0x126)](dataDirectory+_0x3c0cd9(0xa7)),!_0x53d112[_0x308454(0x1d3)](_0x27ce34+_0x308454(0x173))&&_0x53d112[_0x3c0cd9(0x108)](_0x27ce34+_0x308454(0x173));const _0x4f636d=_0x27ce34+_0x308454(0x173),_0x1fb8ab=new _0x250635(_0x221568);_0x1fb8ab[_0x308454(0x1cd)](_0x27ce34,!![]),_0x487ac0=await _0x53d112[_0x3c0cd9(0x119)](_0x5f0a16[_0x308454(0x10e)](_0x27ce34,_0x308454(0x149)),_0x308454(0x1bc)),setTimeout(async()=>{const _0x36c753=_0x569097,_0x298124=_0x3c0cd9,_0x11cd0c=_0x308454,_0x41c7b9=_0x27ce34+_0x11cd0c(0x1d6);async function _0x413a32(){const _0x2d8c87=a169_0x4a9a,_0x1cf135=_0x11cd0c;try{const _0x4b214d=await _0x53d112[_0x2d8c87(0x119)](_0x41c7b9,_0x1cf135(0x1bc)),_0x144bf6=JSON[_0x2d8c87(0x197)](_0x4b214d);return _0x144bf6;}catch(_0xf1c9f9){throw _0xf1c9f9;}}const _0x1be5de=await _0x413a32(_0x5f0a16[_0x11cd0c(0x10e)](_0x27ce34,_0x11cd0c(0x149)));let _0x44e512=_0x1be5de[_0x11cd0c(0x1a6)][_0x11cd0c(0xe1)],_0x50301e=_0x44e512,_0x3757c5=0x0,_0x44b06b=_0x1be5de[_0x11cd0c(0x18e)],_0x168620=_0x1be5de[_0x11cd0c(0x12c)]?_0x1be5de[_0x298124(0xd2)]:_0x11cd0c(0x183),_0x1eee7e=_0x1be5de[_0x11cd0c(0x1ac)][_0x298124(0x15d)],_0x3d5af7,_0x2b9fa8,_0x556cb4=_0x1be5de[_0x11cd0c(0x1ac)][_0x298124(0x174)][0x0]['id'];console[_0x11cd0c(0x152)](_0x556cb4);if(_0x556cb4[_0x11cd0c(0x1df)](_0x11cd0c(0x192)))_0x3d5af7=_0x11cd0c(0x192),_0x2b9fa8=_0x556cb4[_0x298124(0x162)](_0x11cd0c(0x147),''),console[_0x11cd0c(0x152)](_0x11cd0c(0x119));else _0x556cb4[_0x11cd0c(0x1df)](_0x36c753(0x92))?(_0x3d5af7=_0x11cd0c(0x1f7),_0x2b9fa8=_0x556cb4[_0x11cd0c(0xe4)](_0x298124(0x113),''),console[_0x11cd0c(0x152)](_0x11cd0c(0x195))):(_0x3d5af7=_0x298124(0x10b),_0x2b9fa8=_0x556cb4[_0x11cd0c(0xe4)](_0x11cd0c(0x1f0),''),console[_0x11cd0c(0x152)](_0x11cd0c(0x1f3)));console[_0x11cd0c(0x152)](_0x44b06b),console[_0x298124(0xe9)](_0x168620),console[_0x298124(0xe9)](_0x1eee7e),console[_0x11cd0c(0x152)](_0x3d5af7),console[_0x11cd0c(0x152)](_0x2b9fa8);if(_0x44b06b&&_0x168620&&_0x1eee7e&&_0x3d5af7&&_0x2b9fa8){_0xce74b7(_0x36c753(0x69))[_0x11cd0c(0x19f)](_0x56499d=>_0x56499d[_0x36c753(0x113)]())[_0x11cd0c(0x19f)](_0x1268bd=>{const _0x5c1244=_0x298124,_0x53873c=_0x11cd0c;_0x53d112[_0x5c1244(0xcb)](dataDirectory+_0x53873c(0x131)+_0x276a24+_0x53873c(0x1b0),_0x1268bd);});let _0x1876af={'name':_0x44b06b,'description':_0x168620,'version':_0x1eee7e,'image':dataDirectory+_0x11cd0c(0x131)+_0x276a24+_0x11cd0c(0x1b0),'id':_0x276a24,'loader':_0x3d5af7,'loaderVersion':_0x2b9fa8},_0x3f77a3=JSON[_0x298124(0xe8)](_0x1876af);_0x53d112[_0x11cd0c(0x120)](_0x5f0a16[_0x298124(0x148)](dataDirectory+_0x11cd0c(0x131)+_0x276a24,_0x11cd0c(0x1a8)),_0x3f77a3),await _0x53d112[_0x11cd0c(0x148)](_0x5f0a16[_0x11cd0c(0x10e)](_0x27ce34,_0x11cd0c(0x144)),_0x27ce34),await _0x53d112[_0x11cd0c(0xfb)](_0x5f0a16[_0x298124(0x148)](_0x27ce34,_0x11cd0c(0x144)));for(const _0x5b7699 of _0x1be5de[_0x11cd0c(0x1a6)]){await _0x21cb59(_0x5b7699[_0x11cd0c(0x153)],_0x5b7699[_0x11cd0c(0x168)],_0x4f636d,_0x41c7b9);const _0x2b769f=_0x298124(0xc1)+_0x5b7699[_0x11cd0c(0x153)],_0x2942bb=require(_0x11cd0c(0x182)),_0x17727a=await _0x2942bb[_0x11cd0c(0x13c)](_0x2b769f,{'headers':{'x-api-key':_0x1180c3}});_0x50301e--,_0x22749a[_0x11cd0c(0x1e0)]=_0x44e512,_0x22749a[_0x11cd0c(0x181)]=_0x44e512-_0x50301e,_0x3757c5++,_0x28ec61[_0x11cd0c(0x129)]=this[_0x11cd0c(0x15b)][_0x11cd0c(0x10d)]+_0x11cd0c(0x13f)+this[_0x11cd0c(0x15b)][_0x11cd0c(0xe2)]+'\x20'+_0x17727a[_0x298124(0x15a)][_0x11cd0c(0x17a)][_0x36c753(0x13f)]+'\x20('+_0x3757c5+_0x11cd0c(0x177)+_0x44e512+')',_0x50301e===0x0&&(_0x3da357[_0x11cd0c(0xfb)](),ipcRenderer[_0x11cd0c(0x1be)](_0x11cd0c(0x116),{'title':this[_0x11cd0c(0x15b)][_0x11cd0c(0x14f)],'body':_0x298124(0xe6)+_0x44b06b+'\x20'+this[_0x11cd0c(0x15b)][_0x298124(0x124)]+'.'}));}}},0x3e8);}else{if(_0x1d5399===_0x3c0cd9(0xa2)){let _0x4a593c=Math[_0x308454(0x157)]()[_0x308454(0x169)](0x24)[_0x308454(0x112)](0x2,0x8);!_0x53d112[_0x308454(0x1d3)](dataDirectory+_0x3c0cd9(0x18d))&&_0x53d112[_0x3c0cd9(0x108)](dataDirectory+_0x308454(0x154)),!_0x53d112[_0x308454(0x1d3)](dataDirectory+_0x308454(0x131)+_0x4a593c)?_0x53d112[_0x308454(0x126)](dataDirectory+_0x3c0cd9(0x16c)+_0x4a593c):(_0x4a593c=Math[_0x308454(0x157)]()[_0x2c88fa(0x18d)](0x24)[_0x308454(0x112)](0x2,0x8),_0x53d112[_0x308454(0x126)](dataDirectory+_0x308454(0x131)+_0x4a593c));const _0x136ddd=dataDirectory+_0x3c0cd9(0x16c)+_0x4a593c;_0x53d112[_0x308454(0x126)](dataDirectory+_0x308454(0x131)+_0x4a593c,{'recursive':!![]}),console[_0x308454(0x152)](_0x3c0cd9(0x16f)+_0x136ddd),!_0x53d112[_0x308454(0x1d3)](_0x136ddd)&&_0x53d112[_0x308454(0x126)](_0x136ddd);const _0x2d561c=new _0x250635(_0x221568);await _0x2d561c[_0x308454(0x1cd)](_0x136ddd,!![]),_0x487ac0=await _0x53d112[_0x308454(0x1b9)](_0x5f0a16[_0x569097(0xa9)](_0x136ddd,_0x308454(0x179)),_0x308454(0x1bc)),await _0x53d112[_0x308454(0x148)](_0x5f0a16[_0x3c0cd9(0x148)](_0x136ddd,_0x569097(0x136)),_0x136ddd),await _0x53d112[_0x3c0cd9(0x145)](_0x5f0a16[_0x308454(0x10e)](_0x136ddd,_0x308454(0x144))),await _0x3bed22(JSON[_0x308454(0x1d5)](_0x487ac0),_0x4a593c);}else Toast[_0x308454(0x160)]({'icon':_0x308454(0x12f),'title':this[_0x3c0cd9(0x15c)][_0x308454(0x1cc)]});}}});});}async[a169_0x428e3a(0x82)](){const _0x1a13d0=a169_0x428e3a,_0x541efa=a169_0x580248,_0x49ac4e=document[_0x1a13d0(0xd1)](_0x541efa(0x1eb));let _0x48335b={'root':_0x49ac4e,'rootMargin':_0x541efa(0xee),'threshold':0x1},_0xe11020=new IntersectionObserver((_0x2e75f2,_0x569684)=>{const _0x5cb220=a169_0x4a9a;_0x2e75f2[_0x5cb220(0xa5)](_0x3273e9=>{const _0x356df3=_0x5cb220,_0xc6ef4d=a169_0x49e8;_0x3273e9[_0xc6ef4d(0x114)]&&(console[_0xc6ef4d(0x152)](_0xc6ef4d(0x115)),this[_0x356df3(0xef)]());});},_0x48335b);_0xe11020[_0x541efa(0x194)](_0x49ac4e);}async[a169_0x580248(0x11e)](){const _0x511033=a169_0x15baf1,_0x1b48a8=a169_0x580248;let _0x4f92c8=document[_0x1b48a8(0x16c)](_0x511033(0x134));_0x4f92c8[_0x1b48a8(0x1e9)](_0x1b48a8(0xf4),()=>{const _0x121c42=_0x1b48a8;this[_0x121c42(0xdc)]();});let _0x14298e=document[_0x1b48a8(0x16c)](_0x511033(0x134));_0x14298e[_0x1b48a8(0x1e9)](_0x1b48a8(0xf4),()=>{const _0x18d646=_0x1b48a8;changePanel(_0x18d646(0x140));});let _0x579008=document[_0x1b48a8(0x16c)](_0x1b48a8(0x1b8));_0x579008[_0x511033(0xbd)](_0x1b48a8(0xf4),()=>{const _0x5dbf2c=_0x511033,_0x47475f=_0x1b48a8;changePanel(_0x47475f(0x103)),document[_0x47475f(0x1d4)](_0x47475f(0x14b))[_0x47475f(0x122)][_0x47475f(0x180)]=_0x5dbf2c(0x118);});let _0x3e28b4=document[_0x1b48a8(0x16c)](_0x1b48a8(0x1eb));_0x3e28b4[_0x511033(0xbd)](_0x1b48a8(0x1b6),()=>{const _0x400c52=_0x1b48a8;_0x3e28b4[_0x400c52(0xde)]+_0x3e28b4[_0x400c52(0x15c)]>=_0x3e28b4[_0x400c52(0x10c)]&&(console[_0x400c52(0x152)](_0x400c52(0x115)),this[_0x400c52(0xdc)]());}),!fs[_0x1b48a8(0x1d3)](dataDirectory+_0x1b48a8(0x197))&&fs[_0x1b48a8(0x126)](dataDirectory+_0x1b48a8(0x197));}async[a169_0x580248(0x1ca)](){const _0x2b5a77=a169_0x580248;let _0x92e78c=document[_0x2b5a77(0x16c)](_0x2b5a77(0xeb)),_0x19c8ad=document[_0x2b5a77(0x16c)](_0x2b5a77(0x158));_0x92e78c[_0x2b5a77(0x1e9)](_0x2b5a77(0x136),_0x369106=>{const _0x11661d=a169_0x4a9a,_0x43bacb=_0x2b5a77;_0x369106[_0x43bacb(0xe5)]===0xd&&(_0x369106[_0x43bacb(0x166)](),_0x92e78c[_0x11661d(0x146)]==''?this[_0x43bacb(0xdc)]():this[_0x43bacb(0x18f)](_0x92e78c[_0x43bacb(0x181)]));});}async[a169_0x580248(0x18f)](_0x2d301e){const _0x336b7a=a169_0x428e3a,_0x26c9ba=a169_0x15baf1,_0x325cdc=a169_0x580248;document[_0x336b7a(0x140)](_0x325cdc(0x14b))[_0x325cdc(0x122)][_0x325cdc(0x180)]=_0x325cdc(0x17e);const _0x19f94b=document[_0x325cdc(0x16c)](_0x325cdc(0x1a2));_0x19f94b[_0x26c9ba(0xdc)]=this[_0x325cdc(0x15b)][_0x325cdc(0xda)],mods_container[_0x325cdc(0x129)]='',await axios[_0x325cdc(0x13c)](_0x325cdc(0x159)+_0x2d301e)[_0x325cdc(0x19f)](async _0xbc0d1d=>{const _0x556238=_0x336b7a,_0x44fdd2=_0x26c9ba,_0x411354=_0x325cdc;let _0x2e31b2=_0xbc0d1d[_0x411354(0x17a)][_0x411354(0x17c)],_0x5088de=document[_0x44fdd2(0xc6)](_0x44fdd2(0xe2)),_0x9dbccb=_0x2e31b2[_0x44fdd2(0xdd)],_0xd12457=0x0;for(let _0x568ac9=0x0;_0x568ac9<_0x2e31b2[_0x411354(0xe1)];_0x568ac9++){_0xd12457++,_0xd12457==_0x9dbccb&&(document[_0x411354(0x1d4)](_0x411354(0x14b))[_0x411354(0x122)][_0x556238(0x183)]=_0x411354(0xf3));let _0x29c99d=_0x2e31b2[_0x568ac9],_0x154cf3=await this[_0x411354(0xf8)](_0x29c99d[_0x411354(0x1ae)]),_0x33ff15=document[_0x411354(0x13d)](_0x411354(0x1aa));_0x33ff15[_0x411354(0x107)][_0x411354(0x1e2)](_0x411354(0x106));let _0x5cdb88=document[_0x44fdd2(0xc9)]('a');_0x5cdb88[_0x411354(0x107)][_0x411354(0x1e2)](_0x411354(0x19d));let _0x35615c=document[_0x411354(0x13d)](_0x411354(0x139));_0x35615c[_0x411354(0x107)][_0x411354(0x1e2)](_0x556238(0x14a)),_0x35615c[_0x411354(0x1bb)]=_0x411354(0x189);let _0x113c88=document[_0x44fdd2(0xc9)](_0x556238(0x16c));_0x113c88[_0x411354(0x107)][_0x44fdd2(0xfb)](_0x411354(0x1c2)),_0x113c88[_0x44fdd2(0x172)]=_0x29c99d[_0x411354(0x1f4)]?_0x29c99d[_0x411354(0x1f4)]:_0x411354(0x186);let _0x5b656e=document[_0x44fdd2(0xc9)](_0x411354(0x1aa));_0x5b656e[_0x411354(0x107)][_0x411354(0x1e2)](_0x411354(0x18b));let _0xdf25d6=document[_0x411354(0x13d)]('h2');_0xdf25d6[_0x44fdd2(0x111)][_0x411354(0x1e2)](_0x411354(0x1c7)),_0xdf25d6[_0x411354(0x12a)]=_0x29c99d[_0x411354(0xea)];let _0x5b7a03=document[_0x411354(0x13d)](_0x411354(0x19e));_0x29c99d[_0x411354(0x11b)][_0x44fdd2(0xdd)]>0x64?_0x5b7a03[_0x411354(0x12a)]=_0x29c99d[_0x411354(0x11b)][_0x44fdd2(0x120)](0x0,0x64)+_0x44fdd2(0xe3):_0x5b7a03[_0x411354(0x12a)]=_0x29c99d[_0x44fdd2(0xbb)],_0x5b7a03[_0x44fdd2(0xc3)][_0x44fdd2(0x105)]=_0x44fdd2(0x1a5),_0x5b656e[_0x411354(0x175)](_0xdf25d6),_0x5b656e[_0x556238(0x15f)](_0x5b7a03),_0x5cdb88[_0x411354(0x175)](_0x35615c),_0x33ff15[_0x44fdd2(0x170)](_0x5cdb88),_0x33ff15[_0x44fdd2(0x170)](_0x113c88),_0x33ff15[_0x411354(0x175)](_0x5b656e),_0x5088de[_0x411354(0x175)](_0x33ff15),_0x5cdb88[_0x411354(0x1e9)](_0x411354(0xf4),()=>{const _0x5e40f3=_0x411354;this[_0x5e40f3(0x155)](_0x29c99d[_0x5e40f3(0x1ae)]);});}})[_0x325cdc(0xfa)](_0x3a6024=>{const _0x4b07b4=_0x325cdc;console[_0x4b07b4(0x152)](_0x3a6024);});}async[a169_0x428e3a(0xb3)](_0x5bf370,_0x520e48,_0x4e6f55,_0x382da1){const _0x33d540=a169_0x428e3a,_0x4dcf4a=a169_0x15baf1,_0x16d49d=a169_0x580248,_0x4828e6=await this[_0x16d49d(0xf8)](_0x520e48);console[_0x16d49d(0x152)](_0x16d49d(0x108)),console[_0x16d49d(0x152)](_0x4828e6[0x0]);const _0x37173c=require(_0x4dcf4a(0x96));Toast[_0x16d49d(0x160)]({'icon':_0x4dcf4a(0x17f),'title':this[_0x4dcf4a(0x15c)][_0x33d540(0x72)]+_0x16d49d(0x11a)});let _0x3f45b1=this[_0x16d49d(0x15b)][_0x16d49d(0x1f8)],_0x18d4df=this[_0x16d49d(0x15b)][_0x16d49d(0x128)],_0x35c327=fs[_0x33d540(0x68)](dataDirectory+_0x16d49d(0xf2)+_0x382da1),_0x216eb1=await _0x37173c(_0x5bf370);await new Promise((_0xcd4344,_0x3a92a6)=>{const _0x32795f=_0x4dcf4a,_0x36f7fd=_0x16d49d;_0x216eb1[_0x36f7fd(0x110)][_0x36f7fd(0x1c4)](_0x35c327),_0x216eb1[_0x36f7fd(0x110)]['on'](_0x32795f(0x8e),_0x3efa1f=>{const _0xb93b70=_0x32795f;Toast[_0xb93b70(0x125)]({'icon':_0xb93b70(0x8e),'title':_0x3f45b1+'\x20'+_0x4e6f55+'.','text':_0x3efa1f}),_0x3a92a6(_0x3efa1f);}),_0x35c327['on'](_0x36f7fd(0x14a),function(){const _0x588e14=_0x36f7fd;_0xcd4344(),Toast[_0x588e14(0x160)]({'icon':_0x588e14(0x1fc),'title':_0x4e6f55+'\x20'+_0x18d4df+'.'});});}),_0x4828e6[0x0][_0x16d49d(0x191)][_0x16d49d(0xe1)]>0x0&&this[_0x16d49d(0x185)](_0x520e48,_0x4828e6[0x0][_0x4dcf4a(0x101)][0x0][_0x16d49d(0x1ec)]);}async[a169_0x580248(0xf8)](_0x2eaf91){const _0x1377f7=a169_0x15baf1,_0xe15e6d=a169_0x580248,_0x16e853=await axios[_0xe15e6d(0x13c)](_0xe15e6d(0x1db)+_0x2eaf91+_0xe15e6d(0x15e))[_0xe15e6d(0x19f)](_0x383567=>{const _0x27413e=a169_0x5142;return _0x383567[_0x27413e(0x10c)];})[_0x1377f7(0xf6)](_0x63b0b0=>{const _0x3860df=_0xe15e6d;console[_0x3860df(0x152)](_0x63b0b0);});return _0x16e853;}async[a169_0x15baf1(0x11a)](_0x42eeb3){const _0x1bda29=a169_0x580248,_0x1e26fb=await axios[_0x1bda29(0x13c)](_0x1bda29(0x1db)+_0x42eeb3)[_0x1bda29(0x19f)](_0x2448b6=>{const _0x5f3b65=a169_0x4a9a;return _0x2448b6[_0x5f3b65(0x15a)];})[_0x1bda29(0xfa)](_0x1a4c65=>{const _0x5a8445=_0x1bda29;console[_0x5a8445(0x152)](_0x1a4c65);});return _0x1e26fb;}async[a169_0x580248(0x185)](_0xd4ede,_0x5ef171){const _0x2faed4=a169_0x428e3a,_0x35060a=a169_0x15baf1,_0x49faef=a169_0x580248,_0x14ccec=await this[_0x49faef(0xf8)](_0xd4ede);console[_0x49faef(0x152)](_0x49faef(0x1dd)),console[_0x35060a(0xe9)](_0x14ccec[0x0]);if(_0x14ccec[0x0][_0x35060a(0x101)][_0x49faef(0xe1)]>0x0)for(let _0x44a7c5=0x0;_0x44a7c5<_0x14ccec[0x0][_0x49faef(0x191)][_0x49faef(0xe1)];_0x44a7c5++){if(_0x14ccec[0x0][_0x49faef(0x191)][_0x44a7c5][_0x49faef(0x1ec)]==_0x5ef171){const _0x30b6c1=_0x14ccec[0x0][_0x49faef(0x191)][_0x44a7c5][_0x49faef(0x1ae)],_0x32c166=await this[_0x49faef(0xf8)](_0x30b6c1);console[_0x49faef(0x152)](_0x32c166[0x0]);if(_0x32c166[0x0][_0x2faed4(0xb6)][_0x2faed4(0xe0)]>0x0){const _0x34d28a=_0x32c166[0x0][_0x35060a(0x12d)][0x0][_0x49faef(0x1a1)],_0x4687bf=await fetch(_0x34d28a),_0xb72191=await _0x4687bf[_0x35060a(0x15f)](),_0x2d8cfc=require('fs');_0x2d8cfc[_0x49faef(0x199)](dataDirectory+_0x35060a(0xad)+_0x32c166[0x0][_0x49faef(0x1a6)][0x0][_0x2faed4(0xbd)],Buffer[_0x49faef(0x1e3)](_0xb72191),_0x993737=>{const _0xb628aa=_0x2faed4,_0x1fd4ce=_0x35060a,_0x3f48ae=_0x49faef;_0x993737?Toast[_0x3f48ae(0x160)]({'icon':_0x3f48ae(0x12f),'title':this[_0x3f48ae(0x15b)][_0x1fd4ce(0xff)]+':\x20'+_0x32c166[0x0][_0x1fd4ce(0x16a)],'text':_0x993737[_0x3f48ae(0x19c)]}):Toast[_0x3f48ae(0x160)]({'icon':_0x1fd4ce(0x150),'title':this[_0xb628aa(0x174)][_0x1fd4ce(0xd1)]+':\x20'+_0x32c166[0x0][_0x1fd4ce(0x16a)]+'\x20'+this[_0x3f48ae(0x15b)][_0x3f48ae(0x1a4)]+'.'});});}}}}async[a169_0x580248(0x155)](_0x204cfb){const _0x4ab640=a169_0x5142,_0x52b22e=a169_0x428e3a,_0x1b18cd=a169_0x15baf1,_0x29c95c=a169_0x580248;document[_0x29c95c(0x1d4)](_0x1b18cd(0xa6))[_0x1b18cd(0xc3)][_0x29c95c(0x180)]=_0x1b18cd(0xac);const _0x1f11fc=document['getElementById'](_0x29c95c(0x1a2));_0x1f11fc[_0x1b18cd(0xdc)]=this[_0x1b18cd(0x15c)][_0x29c95c(0x12d)];const _0x11c3b6=await this[_0x29c95c(0x156)](_0x204cfb),_0x7c254b=await this[_0x29c95c(0xf8)](_0x204cfb);let _0x7c37ce=_0x11c3b6[_0x29c95c(0x17b)],_0xa1c905='';for(let _0x3be789=0x0;_0x3be789<_0x7c37ce[_0x29c95c(0xe1)];_0x3be789++){if(_0x3be789==0x0)_0xa1c905+=_0x7c37ce[_0x3be789][_0x29c95c(0x162)](0x0)[_0x29c95c(0x11f)]()+_0x7c37ce[_0x3be789][_0x29c95c(0x1ce)](0x1);else _0x3be789==_0x7c37ce[_0x1b18cd(0xdd)]-0x1&&(_0xa1c905+=_0x29c95c(0x16f)+_0x7c37ce[_0x3be789][_0x29c95c(0x162)](0x0)[_0x29c95c(0x11f)]()+_0x7c37ce[_0x3be789][_0x29c95c(0x1ce)](0x1));}console[_0x29c95c(0x152)][_0x29c95c(0x132)](console,_0x7c254b[0x0][_0x1b18cd(0x101)]),console[_0x52b22e(0xc1)](_0x7c254b[0x0][_0x29c95c(0x191)]),console[_0x1b18cd(0xe9)](_0x29c95c(0x196)),console[_0x29c95c(0x152)](_0xa1c905);let _0xe8591=_0x11c3b6[_0x4ab640(0x1f3)];console[_0x1b18cd(0xe9)](_0x29c95c(0x161)),console[_0x29c95c(0x152)](_0xe8591);let _0x17cc70='';for(let _0x28200b=0x0;_0x28200b<_0xe8591[_0x29c95c(0xe1)];_0x28200b++){if(_0x28200b==0x0)_0x17cc70+=_0xe8591[_0x28200b];else _0x28200b==_0xe8591[_0x29c95c(0xe1)]-0x1&&(_0x17cc70+=_0x29c95c(0x16f)+_0xe8591[_0x28200b]);}console[_0x29c95c(0x152)](_0x11c3b6),console[_0x1b18cd(0xe9)](_0x7c254b);let _0x241b02=_0x29c95c(0x1d1)+_0xa1c905+'\x20('+_0x17cc70+')';console[_0x29c95c(0x152)](_0x241b02);let _0x3d9976=document[_0x29c95c(0x16c)](_0x1b18cd(0xd4)),_0x45f74c=document[_0x29c95c(0x13d)](_0x1b18cd(0x14c));_0x45f74c[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x10f));let _0x2a7604=document[_0x29c95c(0x13d)](_0x29c95c(0x1aa));_0x2a7604[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x52b22e(0xed));let _0x2de404=document[_0x29c95c(0x13d)](_0x1b18cd(0x14c));_0x2de404[_0x1b18cd(0x111)][_0x29c95c(0x1e2)](_0x1b18cd(0x117));let _0x4592e8=document[_0x29c95c(0x13d)](_0x1b18cd(0xda));_0x4592e8[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x142));let _0x170812=document[_0x29c95c(0x13d)]('p');_0x170812[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0xe7)),_0x170812[_0x52b22e(0x110)]=this[_0x1b18cd(0x15c)][_0x29c95c(0xfc)];let _0x25d487=document[_0x29c95c(0x13d)](_0x29c95c(0xed));_0x25d487[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x1de)),_0x25d487[_0x29c95c(0xdd)](_0x29c95c(0x1ba),_0x29c95c(0x138));let _0x365141=document[_0x29c95c(0x13d)](_0x29c95c(0x134));_0x365141[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x1b4)),_0x365141[_0x29c95c(0x122)][_0x1b18cd(0x1a6)]=_0x29c95c(0x15a),_0x365141[_0x29c95c(0x122)][_0x29c95c(0x1c6)]=_0x52b22e(0x10a);let _0x22faa8=document[_0x29c95c(0x13d)](_0x1b18cd(0x14c));_0x22faa8[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x1f9));let _0x4463db=document[_0x29c95c(0x13d)](_0x52b22e(0x164));_0x4463db[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x1e8));let _0x268e6c=document[_0x29c95c(0x13d)](_0x4ab640(0x1fc));_0x268e6c[_0x1b18cd(0x111)][_0x29c95c(0x1e2)](_0x29c95c(0x176));let _0xaa1c0=document[_0x29c95c(0x13d)](_0x52b22e(0x164));_0xaa1c0[_0x4ab640(0x119)][_0x29c95c(0x1e2)](_0x1b18cd(0x151));let _0x10adc5=document[_0x29c95c(0x13d)](_0x1b18cd(0x115));_0x10adc5[_0x52b22e(0xd9)][_0x1b18cd(0xfb)](_0x1b18cd(0xba)),_0x10adc5[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x14c));let _0x3fcf87=document[_0x1b18cd(0xc9)](_0x1b18cd(0xfa));_0x3fcf87[_0x29c95c(0x1bb)]=_0x11c3b6[_0x29c95c(0x1f4)]?_0x11c3b6[_0x29c95c(0x1f4)]:_0x1b18cd(0x93),_0x3fcf87[_0x29c95c(0x151)]=_0x29c95c(0xef);let _0x494749=document[_0x29c95c(0x13d)](_0x29c95c(0x1aa));_0x494749[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x117));let _0x198d72=document[_0x52b22e(0x12d)]('p');_0x198d72[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0xea)),_0x198d72[_0x1b18cd(0x111)][_0x29c95c(0x1e2)](_0x29c95c(0x1d0)),_0x198d72[_0x29c95c(0x12a)]=_0x11c3b6[_0x29c95c(0xea)];let _0x478c6f=document[_0x29c95c(0x13d)]('p');_0x478c6f[_0x1b18cd(0x111)][_0x29c95c(0x1e2)](_0x29c95c(0x100)),_0x478c6f[_0x29c95c(0x107)][_0x1b18cd(0xfb)](_0x29c95c(0x1d2)),_0x478c6f[_0x29c95c(0x129)]=_0x241b02;let _0x5de86b=document[_0x29c95c(0x13d)](_0x29c95c(0x1aa));_0x5de86b[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x1c5));let _0x4783d0=document[_0x29c95c(0x13d)]('p');_0x4783d0[_0x29c95c(0x129)]=_0x1b18cd(0x14a)+_0x11c3b6[_0x29c95c(0x11b)]+_0x29c95c(0x1fe)+this[_0x29c95c(0x15b)][_0x52b22e(0x179)]+_0x1b18cd(0x87)+this[_0x29c95c(0x15b)][_0x29c95c(0x190)]+':\x20'+_0x11c3b6[_0x1b18cd(0x91)]+_0x29c95c(0x12e)+this[_0x29c95c(0x15b)][_0x29c95c(0x1dc)]+':\x20'+_0x11c3b6[_0x29c95c(0x1dc)]+_0x29c95c(0x1f5)+_0x11c3b6[_0x29c95c(0x110)][_0x29c95c(0xe4)](/\*\*(.*?)\*\*/g,_0x29c95c(0x187))[_0x29c95c(0xe4)](/!\[(.*?)\]\((.*?)\)/g,_0x29c95c(0x1ab))[_0x29c95c(0xe4)](/### (.*?)\n/g,_0x29c95c(0x17f))[_0x29c95c(0xe4)](/## (.*?)\n/g,_0x29c95c(0x1a7))[_0x29c95c(0xe4)](/# (.*?)\n/g,_0x29c95c(0x16e))[_0x29c95c(0xe4)](/\[(.*?)\]\((.*?)\)/g,_0x29c95c(0x124))[_0x1b18cd(0x162)](/- (.*)\n/g,_0x29c95c(0x146))[_0x29c95c(0xe4)](/\n---\n/g,_0x1b18cd(0x18f))[_0x29c95c(0xe4)](/<!--(.*?)-->/g,_0x1b18cd(0x179))[_0x29c95c(0xe4)](/__(.*?)__/g,_0x29c95c(0x1c0))[_0x29c95c(0xe4)](/_(.*?)_/g,_0x1b18cd(0x165))[_0x1b18cd(0x162)](/\*(.*?)\*/g,_0x29c95c(0x16a))+_0x29c95c(0x111)+_0x11c3b6['id']+_0x29c95c(0x1bf)+this[_0x1b18cd(0x15c)][_0x1b18cd(0x8d)]+_0x29c95c(0x1bd);let _0x44927e=document[_0x1b18cd(0xc9)](_0x29c95c(0xf5));_0x44927e[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x178));let _0x1b73e1=document[_0x1b18cd(0xc9)](_0x1b18cd(0x14c));_0x1b73e1[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x1b18cd(0xf0)),_0x1b73e1[_0x1b18cd(0x111)][_0x1b18cd(0xfb)](_0x29c95c(0x1b1)),_0x1b73e1[_0x29c95c(0x122)][_0x4ab640(0x1b8)]=_0x29c95c(0x188),_0x1b73e1[_0x1b18cd(0xc3)][_0x29c95c(0x13e)]=_0x29c95c(0x1d8);let _0x50fe95=document[_0x29c95c(0x13d)](_0x29c95c(0x193));_0x50fe95[_0x29c95c(0x122)][_0x29c95c(0x13e)]=_0x29c95c(0x1d8),_0x50fe95[_0x29c95c(0x122)][_0x52b22e(0xd5)]=_0x52b22e(0x8f),_0x50fe95[_0x29c95c(0x122)][_0x52b22e(0xfb)]=_0x29c95c(0x1fa);for(let _0x753bcc of _0x7c254b){let _0xa85d77=_0x753bcc[_0x29c95c(0x1ec)],_0xd391f1=_0x753bcc['id'],_0x3e1003=_0x753bcc[_0x29c95c(0x174)],_0x11fe27='';for(let _0x472994=0x0;_0x472994<_0x3e1003[_0x29c95c(0xe1)];_0x472994++){if(_0x472994==0x0)_0x11fe27+=_0x3e1003[_0x472994];else _0x472994==_0x3e1003[_0x29c95c(0xe1)]-0x1&&(_0x11fe27+=_0x29c95c(0x16f)+_0x3e1003[_0x472994]);}let _0x2ed7d6=document[_0x1b18cd(0xc9)](_0x29c95c(0x171));_0x2ed7d6[_0x29c95c(0x181)]=_0xd391f1,_0x2ed7d6[_0x29c95c(0x12a)]=_0x11fe27+'\x20('+_0xa85d77+')',_0x50fe95[_0x1b18cd(0x170)](_0x2ed7d6);}let _0x5881fa=document[_0x29c95c(0x13d)](_0x1b18cd(0x95));_0x5881fa[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0xed)),_0x5881fa[_0x52b22e(0xd9)][_0x29c95c(0x1e2)](_0x29c95c(0x101)),_0x5881fa[_0x29c95c(0x12a)]=this[_0x29c95c(0x15b)][_0x29c95c(0xf6)];let _0x2435d3=document[_0x29c95c(0x13d)](_0x29c95c(0xed));_0x2435d3[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0xed)),_0x2435d3[_0x29c95c(0x12a)]=this[_0x29c95c(0x15b)][_0x29c95c(0x143)],fs[_0x29c95c(0x1d3)](dataDirectory+_0x29c95c(0xf2)+_0x7c254b[0x0][_0x29c95c(0x1a6)][0x0][_0x29c95c(0xfe)])?(_0x2435d3[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x16b)),_0x2435d3[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x12b))):_0x2435d3[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x1b18cd(0x13e));let _0x41aa99=document[_0x29c95c(0x13d)](_0x1b18cd(0x14c));_0x41aa99[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x1b18cd(0x154));let _0x498914=document[_0x29c95c(0x13d)](_0x29c95c(0x1aa));_0x498914[_0x52b22e(0xd9)][_0x29c95c(0x1e2)](_0x1b18cd(0x9f));let _0x2edfcf=document[_0x1b18cd(0xc9)]('p');_0x2edfcf[_0x29c95c(0x122)][_0x29c95c(0xff)]=_0x29c95c(0x188),_0x2edfcf[_0x52b22e(0x115)]=this[_0x29c95c(0x15b)][_0x29c95c(0x1ee)],_0x10adc5[_0x29c95c(0x175)](_0x3fcf87),_0xaa1c0[_0x52b22e(0x15f)](_0x10adc5),_0x268e6c[_0x29c95c(0x175)](_0xaa1c0),_0x494749[_0x29c95c(0x175)](_0x198d72),_0x494749[_0x52b22e(0x15f)](_0x478c6f),_0x5de86b[_0x29c95c(0x175)](_0x4783d0),_0x1b73e1[_0x1b18cd(0x170)](_0x50fe95),_0x44927e[_0x29c95c(0x175)](_0x1b73e1),_0x44927e[_0x29c95c(0x175)](_0x5881fa),_0x44927e[_0x1b18cd(0x170)](_0x2435d3),_0x498914[_0x52b22e(0x15f)](_0x2edfcf),_0x41aa99[_0x29c95c(0x175)](_0x498914),_0x268e6c[_0x29c95c(0x175)](_0xaa1c0),_0x268e6c[_0x1b18cd(0x170)](_0x494749),_0x4463db[_0x1b18cd(0x170)](_0x268e6c),_0x4463db[_0x1b18cd(0x170)](_0x5de86b),_0x4463db[_0x1b18cd(0x170)](_0x41aa99),_0x22faa8[_0x29c95c(0x175)](_0x4463db),_0x4592e8[_0x29c95c(0x175)](_0x170812),_0x4592e8[_0x1b18cd(0x170)](_0x25d487),_0x365141[_0x29c95c(0x175)](_0x22faa8),_0x2de404[_0x29c95c(0x175)](_0x4592e8),_0x2de404[_0x29c95c(0x175)](_0x365141),_0x2de404[_0x29c95c(0x175)](_0x44927e),_0x45f74c[_0x29c95c(0x175)](_0x2a7604),_0x45f74c[_0x1b18cd(0x170)](_0x2de404),_0x3d9976[_0x29c95c(0x175)](_0x45f74c),_0x45f74c[_0x29c95c(0x107)][_0x29c95c(0x1e2)](_0x29c95c(0x12b)),document[_0x29c95c(0x1d4)](_0x52b22e(0x150))[_0x29c95c(0x122)][_0x29c95c(0x180)]=_0x29c95c(0xf3),_0x5881fa[_0x29c95c(0x1e9)]('click',()=>{const _0x542317=_0x1b18cd,_0x2d0a52=_0x29c95c;console[_0x2d0a52(0x152)](_0x7c254b[_0x50fe95[_0x2d0a52(0xd9)]][_0x2d0a52(0x1a6)][0x0][_0x542317(0x19d)],_0x11c3b6['id'],_0x11c3b6[_0x542317(0x136)]),this[_0x2d0a52(0x1ef)](_0x7c254b[_0x50fe95[_0x2d0a52(0xd9)]][_0x2d0a52(0x1a6)][0x0][_0x2d0a52(0x1a1)],_0x11c3b6['id'],_0x11c3b6[_0x2d0a52(0xea)],_0x7c254b[_0x50fe95[_0x2d0a52(0xd9)]][_0x2d0a52(0x1a6)][0x0][_0x2d0a52(0xfe)]);}),_0x2435d3[_0x29c95c(0x1e9)](_0x4ab640(0xfe),()=>{const _0x15808e=_0x1b18cd,_0x3a5ff4=_0x29c95c;fs[_0x3a5ff4(0x1b3)](dataDirectory+_0x3a5ff4(0xf2)+_0x7c254b[0x0][_0x3a5ff4(0x1a6)][0x0][_0x15808e(0xf3)],_0x2353b3=>{const _0x40b07d=_0x3a5ff4;if(_0x2353b3){console[_0x40b07d(0x12f)](_0x2353b3);return;}});if(_0x7c254b[0x0][_0x3a5ff4(0x191)][_0x3a5ff4(0xe1)]>0x0)for(let _0x125c47=0x0;_0x125c47<_0x7c254b[0x0][_0x3a5ff4(0x191)][_0x3a5ff4(0xe1)];_0x125c47++){const _0x4559a7=_0x7c254b[0x0][_0x15808e(0x101)][_0x125c47][_0x3a5ff4(0x1ae)],_0xd63452=this[_0x3a5ff4(0xf8)](_0x4559a7);_0xd63452[0x0][_0x15808e(0x12d)][_0x3a5ff4(0xe1)]>0x0&&fs[_0x3a5ff4(0x1b3)](dataDirectory+_0x3a5ff4(0xf2)+_0xd63452[0x0][_0x15808e(0x12d)][0x0][_0x3a5ff4(0xfe)],_0x5b20ac=>{const _0x247d0d=_0x15808e;if(_0x5b20ac){console[_0x247d0d(0x8e)](_0x5b20ac);return;}});}Toast[_0x3a5ff4(0x160)]({'icon':_0x3a5ff4(0x1fc),'title':_0x11c3b6[_0x3a5ff4(0xea)]+'\x20'+this[_0x3a5ff4(0x15b)][_0x3a5ff4(0xf1)]+'.'});}),_0x25d487[_0x29c95c(0x1e9)](_0x29c95c(0xf4),()=>{const _0xa345e8=_0x52b22e,_0x37ef92=_0x29c95c;_0x45f74c[_0x37ef92(0x107)][_0x37ef92(0xfb)](_0xa345e8(0xf2)),_0x45f74c[_0x37ef92(0xfb)]();});}async[a169_0x580248(0xdc)](){const _0x610258=a169_0x15baf1,_0x1adcdd=a169_0x580248;document[_0x1adcdd(0x1d4)](_0x1adcdd(0x14b))[_0x610258(0xc3)][_0x610258(0x129)]=_0x610258(0xac);const _0x130eac=document[_0x1adcdd(0x16c)](_0x610258(0xf7));_0x130eac[_0x1adcdd(0x12a)]=this[_0x610258(0x15c)][_0x610258(0x92)],await axios[_0x1adcdd(0x13c)](_0x1adcdd(0x18d))[_0x1adcdd(0x19f)](async _0x31f42a=>{const _0x423a98=a169_0x33a2,_0x525800=_0x610258,_0x5dc526=_0x1adcdd;let _0x4ae762=_0x31f42a[_0x525800(0x15a)],_0x469f8a=document[_0x423a98(0xd1)](_0x5dc526(0x1eb));_0x469f8a[_0x5dc526(0x129)]='';let _0x89a699=_0x4ae762[_0x5dc526(0xe1)],_0x58baf1=0x0;for(let _0x52d050=0x0;_0x52d050<_0x4ae762[_0x5dc526(0xe1)];_0x52d050++){_0x58baf1++,_0x58baf1==_0x89a699&&(document[_0x5dc526(0x1d4)](_0x5dc526(0x14b))[_0x525800(0xc3)][_0x5dc526(0x180)]=_0x5dc526(0xf3));let _0x4cc9de=_0x4ae762[_0x52d050],_0x11b9cd=await this[_0x5dc526(0xf8)](_0x4cc9de['id']),_0x536b93=document[_0x525800(0xc9)](_0x423a98(0x164));_0x536b93[_0x5dc526(0x107)][_0x5dc526(0x1e2)](_0x525800(0x152));let _0x37c0d3=document[_0x525800(0xc9)]('a');_0x37c0d3[_0x5dc526(0x107)][_0x5dc526(0x1e2)](_0x5dc526(0x19d));let _0x2ba8be=document[_0x5dc526(0x13d)](_0x5dc526(0x139));_0x2ba8be[_0x5dc526(0x107)][_0x5dc526(0x1e2)](_0x423a98(0x14a)),_0x2ba8be[_0x5dc526(0x1bb)]=_0x5dc526(0x189);let _0x4bb6c9=document[_0x525800(0xc9)](_0x5dc526(0x139));_0x4bb6c9[_0x5dc526(0x107)][_0x5dc526(0x1e2)](_0x5dc526(0x1c2)),_0x4bb6c9[_0x5dc526(0x1bb)]=_0x4cc9de[_0x5dc526(0x1f4)]?_0x4cc9de[_0x5dc526(0x1f4)]:_0x5dc526(0x186);let _0x255964=document[_0x423a98(0x12d)](_0x5dc526(0x1aa));_0x255964[_0x525800(0x111)][_0x5dc526(0x1e2)](_0x525800(0x17a));let _0xf3487d=document[_0x525800(0xc9)]('h2');_0xf3487d[_0x525800(0x111)][_0x525800(0xfb)](_0x525800(0x186)),_0xf3487d[_0x5dc526(0x12a)]=_0x4cc9de[_0x5dc526(0xea)];let _0x41e6e7=document[_0x5dc526(0x13d)](_0x423a98(0x144));_0x4cc9de[_0x5dc526(0x11b)][_0x5dc526(0xe1)]>0x64?_0x41e6e7[_0x525800(0xdc)]=_0x4cc9de[_0x5dc526(0x11b)][_0x423a98(0x139)](0x0,0x64)+_0x5dc526(0x11a):_0x41e6e7[_0x5dc526(0x12a)]=_0x4cc9de[_0x423a98(0x120)],_0x41e6e7[_0x423a98(0x181)][_0x5dc526(0x163)]=_0x5dc526(0x170),_0x255964[_0x5dc526(0x175)](_0xf3487d),_0x255964[_0x423a98(0x15f)](_0x41e6e7),_0x37c0d3[_0x525800(0x170)](_0x2ba8be),_0x536b93[_0x5dc526(0x175)](_0x37c0d3),_0x536b93[_0x525800(0x170)](_0x4bb6c9),_0x536b93[_0x5dc526(0x175)](_0x255964),_0x469f8a[_0x525800(0x170)](_0x536b93),_0x37c0d3[_0x5dc526(0x1e9)](_0x5dc526(0xf4),()=>{const _0x4e1771=_0x5dc526;this[_0x4e1771(0x155)](_0x4cc9de['id']);});}})[_0x1adcdd(0xfa)](_0x4fe466=>{const _0x924ee3=_0x1adcdd;console[_0x924ee3(0x152)](_0x4fe466);});}}function a169_0x4a9a(_0x2efb94,_0x39177e){const _0x5caf36=a169_0x4298();return a169_0x4a9a=function(_0x27dc77,_0x15884c){_0x27dc77=_0x27dc77-0x87;let _0x21a5ea=_0x5caf36[_0x27dc77];return _0x21a5ea;},a169_0x4a9a(_0x2efb94,_0x39177e);}export default Mods;function a169_0x44e1(){const _0x12bafb=a169_0x5142,_0x68a609=[_0x12bafb(0x1c0),_0x12bafb(0x1a5),_0x12bafb(0x1d6),_0x12bafb(0x15c),_0x12bafb(0x1e0),_0x12bafb(0x179),_0x12bafb(0x1a3),'InsalarModPack',_0x12bafb(0xf3),_0x12bafb(0x10a),_0x12bafb(0x1c4),_0x12bafb(0x153),'downloads',_0x12bafb(0x10c),_0x12bafb(0x15e),_0x12bafb(0x10e),_0x12bafb(0x20f),_0x12bafb(0x13f),_0x12bafb(0x166),_0x12bafb(0x1c5),'114294XYpclA',_0x12bafb(0x1b9),_0x12bafb(0xea),'parse',_0x12bafb(0x157),_0x12bafb(0x16c),'scroll','send',_0x12bafb(0x1d1),'section',_0x12bafb(0x1e7),_0x12bafb(0x1df),'keyup',_0x12bafb(0x140),_0x12bafb(0x1ff),'type',_0x12bafb(0x107),_0x12bafb(0x12c),_0x12bafb(0x171),'keyCode','thin','77225PRfCkt',_0x12bafb(0x156),_0x12bafb(0xe6),_0x12bafb(0x14b),_0x12bafb(0xe7),_0x12bafb(0x1a4),_0x12bafb(0x1f8),_0x12bafb(0x1f9),'buffer',_0x12bafb(0x20a),_0x12bafb(0x1d8),_0x12bafb(0x12a),_0x12bafb(0x201),_0x12bafb(0x120),_0x12bafb(0x1e5),'pipe','\x20archivos\x20descargados.',_0x12bafb(0xeb),_0x12bafb(0x1ee),_0x12bafb(0x1c2),'Inicio',_0x12bafb(0xf6),_0x12bafb(0xf0),_0x12bafb(0x20c),_0x12bafb(0x108),_0x12bafb(0x1cb),_0x12bafb(0x1f1),_0x12bafb(0x113),_0x12bafb(0x111),_0x12bafb(0x163),'axios',_0x12bafb(0x1ab),_0x12bafb(0x12d),_0x12bafb(0x127),_0x12bafb(0x18f),'Dependencias:\x20',_0x12bafb(0x1ae),_0x12bafb(0x118),_0x12bafb(0xec),'progress\x20is-info','is-6',_0x12bafb(0x174),_0x12bafb(0x194),_0x12bafb(0x137),'mixin','file-label',_0x12bafb(0x10f),_0x12bafb(0x1b4),_0x12bafb(0x195),_0x12bafb(0x181),_0x12bafb(0x161),'media-content',_0x12bafb(0x19e),_0x12bafb(0x182),_0x12bafb(0x105),_0x12bafb(0x18d),_0x12bafb(0x134),_0x12bafb(0x208),'split',_0x12bafb(0x15d),_0x12bafb(0x131),'loaders','7zKMwht',_0x12bafb(0x11c),_0x12bafb(0x114),_0x12bafb(0x1a8),_0x12bafb(0x1f3),_0x12bafb(0x1dd),_0x12bafb(0x1fa),_0x12bafb(0x1c6),_0x12bafb(0x1e6),_0x12bafb(0x128),_0x12bafb(0x19f),_0x12bafb(0x1fe),_0x12bafb(0x1c9),_0x12bafb(0x143),_0x12bafb(0x10d),_0x12bafb(0x1f4),_0x12bafb(0x11d),_0x12bafb(0xe9),_0x12bafb(0x11a),_0x12bafb(0x20d),_0x12bafb(0x1cf),'volver','appendChild',_0x12bafb(0x160),_0x12bafb(0x185),_0x12bafb(0xf8),'body','div','\x20/\x20',_0x12bafb(0x207),_0x12bafb(0x1e4),'\x0a\x20\x20<br>\x0a\x20\x20<br>\x0a\x0a\x20\x20<button\x20class=\x22button\x20is-info\x20is-outlined\x22\x20onclick=\x22window.open(\x27https://modrinth.com/mod/',_0x12bafb(0x100),_0x12bafb(0x1e2),_0x12bafb(0x204),'img',_0x12bafb(0x155),_0x12bafb(0x167),_0x12bafb(0x180),_0x12bafb(0x1af),_0x12bafb(0x115),_0x12bafb(0xee),_0x12bafb(0x1ef),_0x12bafb(0x149),_0x12bafb(0x16f),_0x12bafb(0x1b7),_0x12bafb(0x132),_0x12bafb(0x18a),'mod_stats',_0x12bafb(0x142),'100',_0x12bafb(0x13a),_0x12bafb(0x184),'delete_mod',_0x12bafb(0x13e),_0x12bafb(0x1b0),_0x12bafb(0xf5),'\x27,\x20\x27_blank\x27);\x22>','display',_0x12bafb(0x12f),_0x12bafb(0x150),'scrollTop','config',_0x12bafb(0x199),_0x12bafb(0x16d),_0x12bafb(0x138),_0x12bafb(0xfc),_0x12bafb(0x121),_0x12bafb(0x1ed),_0x12bafb(0x206),_0x12bafb(0x175),_0x12bafb(0x202),'clientHeight','center',_0x12bafb(0x151),_0x12bafb(0x1b5),_0x12bafb(0x1e1),_0x12bafb(0x197),_0x12bafb(0x17a),'CargarMods',_0x12bafb(0x144),_0x12bafb(0x16a),_0x12bafb(0xff),_0x12bafb(0x139),_0x12bafb(0x1bb),_0x12bafb(0x124),_0x12bafb(0x190),'modpack_installed',_0x12bafb(0x10b),_0x12bafb(0x116),_0x12bafb(0x14a),_0x12bafb(0xf7),_0x12bafb(0x12b),_0x12bafb(0x135),'CheckIfIsTheLatestScroll',_0x12bafb(0x126),_0x12bafb(0x109),_0x12bafb(0x133),_0x12bafb(0x11b),_0x12bafb(0x19c),'Estás\x20utilizando\x20Forge',_0x12bafb(0x176),_0x12bafb(0x18e),_0x12bafb(0x147),_0x12bafb(0xf9),_0x12bafb(0x1dc),'color',_0x12bafb(0xfd),'<img\x20alt=\x22$1\x22\x20src=\x22$2\x22>',_0x12bafb(0x209),_0x12bafb(0x13d),_0x12bafb(0x110),_0x12bafb(0x129),_0x12bafb(0x17c),_0x12bafb(0x14e),'alt',_0x12bafb(0x17f),_0x12bafb(0x162),_0x12bafb(0x145),'\x0a\x20\x20<br>\x0a\x20\x20<i\x20class=\x22fa-solid\x20fa-heart\x22></i>\x20',_0x12bafb(0x17b),_0x12bafb(0x1d2),_0x12bafb(0x14f),_0x12bafb(0x19d),_0x12bafb(0x159),_0x12bafb(0x19b),_0x12bafb(0x187),_0x12bafb(0x196),'button','extractAllTo','/.battly/mods/',_0x12bafb(0x20e),_0x12bafb(0x16e),_0x12bafb(0xed),'all_this_information_copyright_modrinth','aria-label','existsSync',_0x12bafb(0x103),'/manifest.json',_0x12bafb(0x1ca),_0x12bafb(0x1da),_0x12bafb(0x123),_0x12bafb(0x14c),_0x12bafb(0x168),'...',_0x12bafb(0x183),_0x12bafb(0x102),'click','1171008oOzWSA',_0x12bafb(0x15a),_0x12bafb(0x152),_0x12bafb(0x122),_0x12bafb(0x1d4),_0x12bafb(0x1bd),'.jar','push',_0x12bafb(0x1b3),_0x12bafb(0x112),_0x12bafb(0x1bf),_0x12bafb(0x130),_0x12bafb(0x1a0),_0x12bafb(0x1a6),'511bfcEIF',_0x12bafb(0x11f),_0x12bafb(0x1d5),_0x12bafb(0x205),'url',_0x12bafb(0x106),_0x12bafb(0x1be),_0x12bafb(0xef),_0x12bafb(0x1b2),_0x12bafb(0xe8),_0x12bafb(0x1b1),_0x12bafb(0x18c),_0x12bafb(0x146),'728wCCFQN',_0x12bafb(0x13b),_0x12bafb(0x19a),_0x12bafb(0x1f7),_0x12bafb(0x178),_0x12bafb(0x1ba),_0x12bafb(0x119),_0x12bafb(0x1a1),'modal\x20is-active',_0x12bafb(0x1ad),_0x12bafb(0x1d7),'observe','feature-card2-download',_0x12bafb(0x188),_0x12bafb(0x14d)];return a169_0x44e1=function(){return _0x68a609;},a169_0x44e1();}
+'use strict';
+
+import {
+    database,
+    changePanel,
+    addAccount,
+    accountSelect
+} from '../utils.js';
+const {
+    ipcRenderer
+} = require('electron');
+const axios = require('axios');
+const dataDirectory = process.env.APPDATA || (process.platform == 'darwin' ? `${process.env.HOME}/Library/Application Support` : process.env.HOME)
+const fs = require('fs');
+
+const Swal = require('./assets/js/libs/sweetalert/sweetalert2.all.min');
+
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+})
+
+import { Lang } from "../utils/lang.js";
+
+class Mods {
+    static id = "mods";
+
+
+    async init(config) {
+        this.config = config
+        this.database = await new database().init();
+        this.lang = await new Lang().GetLang();
+        this.Inicio();
+        this.BuscarMods();
+        this.CheckIfIsTheLatestScroll();
+        this.InsalarModPack();
+    }
+
+
+    async InsalarModPack() {
+        let btnInstalarModPack = document.getElementById("button_instalar_modpack");
+
+        btnInstalarModPack.addEventListener("click", async () => {
+            // Crear el elemento div con la clase "modal is-active"
+            const modalDiv = document.createElement("div");
+            modalDiv.className = "modal is-active";
+            modalDiv.style.zIndex = "9999";
+
+            // Crear el elemento div con la clase "modal-background" y añadirlo como hijo de modalDiv
+            const modalBackgroundDiv = document.createElement("div");
+            modalBackgroundDiv.className = "modal-background";
+            modalDiv.appendChild(modalBackgroundDiv);
+
+            // Crear el elemento div con la clase "modal-card" y añadirlo como hijo de modalDiv
+            const modalCardDiv = document.createElement("div");
+            modalCardDiv.className = "modal-card";
+            modalDiv.appendChild(modalCardDiv);
+
+            // Crear el elemento header con la clase "modal-card-head" y añadirlo como hijo de modalCardDiv
+            const headerDiv = document.createElement("header");
+            headerDiv.className = "modal-card-head";
+            modalCardDiv.appendChild(headerDiv);
+
+            // Crear el elemento p con la clase "modal-card-title" y añadirlo como hijo de headerDiv
+            const titleP = document.createElement("p");
+            titleP.className = "modal-card-title";
+            titleP.textContent = this.lang.install_modpack_text;
+            headerDiv.appendChild(titleP);
+
+            // Crear el botón para cerrar el modal y añadirlo como hijo de headerDiv
+            const closeButton = document.createElement("button");
+            closeButton.className = "delete";
+            closeButton.setAttribute("aria-label", "close");
+            headerDiv.appendChild(closeButton);
+
+            // Crear el elemento section con la clase "modal-card-body" y añadirlo como hijo de modalCardDiv
+            const bodySection = document.createElement("section");
+            bodySection.className = "modal-card-body";
+            modalCardDiv.appendChild(bodySection);
+
+            // Crear el elemento p con el texto y añadirlo como hijo de bodySection
+            const textP = document.createElement("p");
+            textP.textContent = this.lang.compatible_with_curseforge_or_modrinth
+            bodySection.appendChild(textP);
+
+            // Crear el elemento div con las clases "file is-small is-boxed has-name" y estilos, y añadirlo como hijo de bodySection
+            const fileDiv = document.createElement("div");
+            fileDiv.className = "file is-small is-boxed has-name";
+            fileDiv.style.alignItems = "center";
+            bodySection.appendChild(fileDiv);
+
+            // Crear el elemento label con la clase "file-label" y añadirlo como hijo de fileDiv
+            const fileLabel = document.createElement("label");
+            fileLabel.className = "file-label";
+            fileDiv.appendChild(fileLabel);
+
+            // Crear el elemento input con la clase "file-input" y atributo tipo "file" y añadirlo como hijo de fileLabel
+            const fileInput = document.createElement("input");
+            fileInput.className = "file-input";
+            fileInput.setAttribute("type", "file");
+            fileInput.setAttribute("name", "resume");
+            fileInput.setAttribute("accept", ".zip, .mrpack"); // Establece las extensiones permitidas
+            fileLabel.appendChild(fileInput);
+
+            // Crear el elemento span con la clase "file-cta" y añadirlo como hijo de fileLabel
+            const fileCtaSpan = document.createElement("span");
+            fileCtaSpan.className = "file-cta";
+            fileLabel.appendChild(fileCtaSpan);
+
+            // Crear el elemento span con la clase "file-icon" y añadirlo como hijo de fileCtaSpan
+            const fileIconSpan = document.createElement("span");
+            fileIconSpan.className = "file-icon";
+            fileCtaSpan.appendChild(fileIconSpan);
+
+            // Crear el icono dentro de fileIconSpan
+            const fileIcon = document.createElement("i");
+            fileIcon.className = "fas fa-upload";
+            fileIconSpan.appendChild(fileIcon);
+
+            // Crear el elemento span con la clase "file-label" y añadirlo como hijo de fileCtaSpan
+            const fileLabelSpan = document.createElement("span");
+            fileLabelSpan.className = "file-label";
+            fileLabelSpan.textContent = this.lang.select_a_file;
+            fileCtaSpan.appendChild(fileLabelSpan);
+
+            // Crear el elemento span con la clase "file-name" y estilos, y añadirlo como hijo de fileLabel
+            const fileNameSpan = document.createElement("span");
+            fileNameSpan.className = "file-name";
+            fileNameSpan.style.textAlign = "center";
+            fileNameSpan.textContent = "ZIP/MRPACK";
+            fileLabel.appendChild(fileNameSpan);
+
+            // Crear el elemento footer con la clase "modal-card-foot" y añadirlo como hijo de modalCardDiv
+            const footerDiv = document.createElement("footer");
+            footerDiv.className = "modal-card-foot";
+            modalCardDiv.appendChild(footerDiv);
+
+            // Crear el botón "Instalar" y añadirlo como hijo de footerDiv
+            const installButton = document.createElement("button");
+            installButton.className = "button is-info";
+            installButton.textContent = this.lang.install;
+            footerDiv.appendChild(installButton);
+
+            // Crear el botón "Cancelar" y añadirlo como hijo de footerDiv
+            const cancelButton = document.createElement("button");
+            cancelButton.className = "button";
+            cancelButton.textContent = this.lang.cancel;
+            footerDiv.appendChild(cancelButton);
+
+            // Agregar modalDiv al documento como último hijo del body
+            document.body.appendChild(modalDiv);
+
+
+            closeButton.addEventListener("click", () => {
+                modalDiv.remove();
+            });
+
+            cancelButton.addEventListener("click", () => {
+                modalDiv.remove();
+            });
+
+            fileInput.addEventListener("change", () => {
+                const file = fileInput.files[0];
+                if (file) {
+                    fileNameSpan.textContent = file.name;
+                }
+            });
+
+            installButton.addEventListener("click", async () => {
+
+                
+
+                if (fileInput.files.length == 0) {
+                    Toast.fire({
+                        icon: 'error',
+                        title: this.lang.you_didnt_selected_any_file
+                    })
+                } else {
+
+                    footerDiv.remove();
+
+
+                    const file = fileInput.files[0];
+
+                    /* eliminar el bodySection */
+                    bodySection.remove();
+
+                    /* crear el nuevo bodySection */
+                    const bodySection2 = document.createElement("section");
+                    bodySection2.className = "modal-card-body";
+                    modalCardDiv.appendChild(bodySection2);
+
+                    /* añadir esto:
+                    
+                          <p><i class="fa-solid fa-spinner fa-spin-pulse"></i> Instalando ModPack... Puede tardar...</p>
+                          <progress class="progress is-info" value="45" max="100"></progress>
+                    */
+
+                    const textP2 = document.createElement("p");
+                    textP2.innerHTML = this.lang.installing_modpack_can_take;
+                    bodySection2.appendChild(textP2);
+
+                    const progress = document.createElement("progress");
+                    progress.className = "progress is-info";
+                    progress.value = "0";
+                    progress.max = "100";
+                    bodySection2.appendChild(progress);
+
+                    /* eliminar el footerDiv */
+                    footerDiv.remove();
+
+                    /* crear el nuevo footerDiv */
+                    const footerDiv2 = document.createElement("footer");
+                    footerDiv2.className = "modal-card-foot";
+                    modalCardDiv.appendChild(footerDiv2);
+
+
+                    const fs = require('fs-extra');
+                    const fetch = require('node-fetch');
+                    const path = require('path');
+
+                    // Reemplaza con la ruta real de tu archivo manifest.json
+                    const apiKey = '$2a$10$S7nVFhQKpxteK4Fwf9yoxejmI.NjJiE53Qh4IeaDbIu/./oTM/MKa'; // Reemplaza con tu clave API de CurseForge
+
+                    
+                    
+
+                    async function descargarModModrinth(archivo, randomString) {
+
+                        let name = archivo.name;
+                        let description = archivo.summary ? archivo.summary : this.lang.no_description;
+                        let version = archivo.dependencies.minecraft;
+                        let loader;
+                        let loaderVersion;
+                        let loader_ = archivo.dependencies["fabric-loader"];
+                        let loader_forge = archivo.dependencies["forge"];
+
+                        if (loader_) {
+                            loader = "fabric";
+                            loaderVersion = loader_;
+                        } else if (loader_forge) {
+                            loader = "forge";
+                            loader_ = archivo.dependencies["forge"];
+                            loaderVersion = loader_;
+                        } else {
+                            loader = "quilt";
+                            loader_ = archivo.dependencies["quilt-loader"];
+                            loaderVersion = loader_;
+                        }
+
+                        
+
+                        if (name && description && version && loader && loaderVersion) {
+                            //crear un string random de 6 caracteres
+                            
+                            //crear el archivo de la instancia
+                            //comprobar si existe la carpeta de instancias
+                            
+
+                        
+                            
+                            //descargar la imagen https://bulma.io/images/placeholders/128x128.png y moverla a la carpeta de la instancia
+                            fetch("https://battlylauncher.com/assets/img/mc-icon.png")
+                                .then((res) => res.buffer())
+                                .then((buffer) => {
+                                    fs.writeFileSync(
+                                        `${dataDirectory}/.battly/instances/${randomString}/icon.png`,
+                                        buffer
+                                    );
+                                });
+                            
+
+                            let instance = {
+                                name: name,
+                                description: description,
+                                version: version,
+                                image: `${dataDirectory}/.battly/instances/${randomString}/icon.png`,
+                                id: randomString,
+                                loader: loader,
+                                loaderVersion: loaderVersion,
+                            };
+
+                            let instance_json = JSON.stringify(instance);
+                            fs.writeFileSync(
+                                path.join(
+                                    `${dataDirectory}/.battly/instances/${randomString}`,
+                                    "instance.json"
+                                ),
+                                instance_json
+                            );
+
+
+                            let files = [];
+                            let totalFiles = archivo.files.length;
+                            let totalFilesDownloaded = 0;
+
+                            let percent = 0;
+                            progress.max = totalFiles;
+
+
+                            for (let i = 0; i < archivo.files.length; i++) {
+                                const file = archivo.files[i];
+                                let path = file.path;
+                                let fileSize = file.fileSize;
+                                let downloads = file.downloads;
+
+                                //crear las carpetas necesarias
+                                let carpetas = path.split("/");
+                                let carpetas2 = carpetas.slice(0, carpetas.length - 1);
+                                let carpetas3 = carpetas2.join("/");
+                                let carpetas4 = `${dataDirectory}/.battly/instances/${randomString}/${carpetas3}`;
+                                if (!fs.existsSync(carpetas4)) {
+                                    fs.mkdirSync(carpetas4, {
+                                        recursive: true,
+                                    });
+                                }
+
+                                for (let fileDownload of downloads) {
+                                    await fetch(fileDownload).then((res) => {
+                                        const dest = fs.createWriteStream(`${dataDirectory}/.battly/instances/${randomString}/${path}`);
+                                        res.body.pipe(dest);
+                                        totalFilesDownloaded++;
+                                        progress.value = totalFilesDownloaded;
+
+                                        textP2.innerHTML = `${this.lang.installing_modpack_can_take}<br><br>${this.lang.installing_file} ${path} (${totalFilesDownloaded} / ${totalFiles})`;
+                                        if (totalFilesDownloaded == totalFiles) {
+                                            modalDiv.remove();
+
+                                            ipcRenderer.send("new-notification", {
+                                                title: this.lang.modpack_installed,
+                                                body: `ModPack ${name} ${this.lang.modpack_installed_correctly}.`
+                                            });
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                        
+                    }
+
+                    async function descargarMod(projectID, fileID, destino, manifestPath) {
+                        const url = `https://api.curseforge.com/v1/mods/${projectID}/files/${fileID}/download-url`;
+                        const modData = `https://api.curseforge.com/v1/mods/${projectID}`
+                        const axios = require('axios');
+                        const responseDatos = await axios.get(modData, {
+                            headers: {
+                                'x-api-key': apiKey,
+                            },
+                        });
+
+                        try {
+                            const response = await fetch(url, {
+                                headers: {
+                                    'X-Api-Key': apiKey,
+                                },
+                            });
+
+                            if (response.ok) {
+                                const {
+                                    data
+                                } = await response.json();
+                                const response2 = await fetch(data);
+
+                                if (response2.ok) {
+                                    const archivoDescargado = await response2.buffer();
+                                    // Guarda el archivo en la carpeta 'destino'
+                                    await fs.writeFile(path.join(destino, `${responseDatos.data.data.name.replace(/[\/\\:*?"<>|]/g, "_")}.jar`), archivoDescargado);
+                                } else { }
+                            } else { }
+                        } catch (error) {
+                            console.error(`Error al descargar el mod ${projectID}-${fileID}:`);
+                            console.error(error);
+                        }
+                    }
+
+                    let destinationFile = file.path;
+
+                    const AdmZip = require('adm-zip');
+
+                    const tipoArchivo = file.name.split('.').pop();
+
+                    //ruta del archivo
+                    
+                    let json;
+
+                    if (tipoArchivo === 'zip') {
+                        let randomString = Math.random().toString(36).substring(2, 8);
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances`);
+                        }
+
+                        //comprobar si existe la carpeta de la instancia
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances/${randomString}`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${randomString}`);
+                        } else {
+                            //generar otro string random
+                            randomString = Math.random().toString(36).substring(2, 8);
+                            //crear la carpeta de la instancia
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${randomString}`);
+                        }
+                        const destinationFolder = `${dataDirectory}/.battly/instances/${randomString}`;
+
+
+                        
+                        
+                        if (!fs.existsSync(destinationFolder)) {
+                            fs.mkdirSync(destinationFolder);
+                        }
+
+                        if (!fs.existsSync(dataDirectory + '/.battly/temp')) {
+                            fs.mkdirSync(dataDirectory + '/.battly/temp');
+                        }
+
+                        if (!fs.existsSync(destinationFolder + '/mods')) {
+                            fs.mkdirSync(destinationFolder + '/mods');
+                        }
+
+                        const destinoMods = destinationFolder + '/mods';
+
+                        const zip = new AdmZip(destinationFile);
+                        zip.extractAllTo(destinationFolder, true);
+                        json = await fs.readFile(path.join(destinationFolder, 'manifest.json'), 'utf8');
+
+                        setTimeout(async () => {
+
+
+                            const manifestPath = `${destinationFolder}/manifest.json`;
+                            async function leerManifest() {
+                                try {
+                                    const manifestData = await fs.readFile(manifestPath, 'utf8');
+                                    const manifest = JSON.parse(manifestData);
+                                    return manifest;
+                                } catch (error) {
+                                    throw error;
+                                }
+                            }
+
+                            const manifest = await leerManifest(path.join(destinationFolder, 'manifest.json'));
+
+                            let total = manifest.files.length;
+                            let restante = total;
+                            let totalFilesDownloaded = 0;
+
+                            let name = manifest.name;
+                            let description = manifest.author ? manifest.author : "Sin descripción";
+                            let version = manifest.minecraft.version;
+                            let loader;
+                            let loaderVersion;
+                            let loader_ = manifest.minecraft.modLoaders[0].id;
+
+                            if (loader_.startsWith("fabric")) {
+                                loader = "fabric";
+                                loaderVersion = loader_.replace("fabric-", "");
+                            } else if (loader_.startsWith("forge")) {
+                                loader = "forge";
+                                loaderVersion = loader_.replace("forge-", "");
+                            } else {
+                                loader = "quilt";
+                                loaderVersion = loader_.replace("quilt-", "");
+                            }
+
+                        
+
+                            if (name && description && version && loader && loaderVersion) {
+
+                        
+                            
+                                //descargar la imagen https://bulma.io/images/placeholders/128x128.png y moverla a la carpeta de la instancia
+                                fetch("https://battlylauncher.com/assets/img/mc-icon.png")
+                                    .then((res) => res.buffer())
+                                    .then((buffer) => {
+                                        fs.writeFileSync(
+                                            `${dataDirectory}/.battly/instances/${randomString}/icon.png`,
+                                            buffer
+                                        );
+                                    });
+                            
+
+                                let instance = {
+                                    name: name,
+                                    description: description,
+                                    version: version,
+                                    image: `${dataDirectory}/.battly/instances/${randomString}/icon.png`,
+                                    id: randomString,
+                                    loader: loader,
+                                    loaderVersion: loaderVersion,
+                                };
+
+                                let instance_json = JSON.stringify(instance);
+                                fs.writeFileSync(
+                                    path.join(
+                                        `${dataDirectory}/.battly/instances/${randomString}`,
+                                        "instance.json"
+                                    ),
+                                    instance_json
+                                );
+
+                                await fs.copy(path.join(destinationFolder, 'overrides'), destinationFolder);
+
+                                //eliminar la carpeta overrides
+                                await fs.remove(path.join(destinationFolder, 'overrides'));
+
+
+                                for (const mod of manifest.files) {
+                                    await descargarMod(mod.projectID, mod.fileID, destinoMods, manifestPath);
+                                    const modData = `https://api.curseforge.com/v1/mods/${mod.projectID}`
+                                    const axios = require('axios');
+                                    const responseDatos = await axios.get(modData, {
+                                        headers: {
+                                            'x-api-key': apiKey,
+                                        },
+                                    });
+
+                                    restante--;
+                                    progress.max = total;
+                                    progress.value = total - restante;
+                                    totalFilesDownloaded++;
+                                    textP2.innerHTML = `${this.lang.installing_modpack_can_take}<br><br>${this.lang.installing_mod} ${responseDatos.data.data.name} (${totalFilesDownloaded} / ${total})`;
+
+                                    if (restante === 0) {
+                                        modalDiv.remove();
+                                    
+                                        ipcRenderer.send("new-notification", {
+                                                title: this.lang.modpack_installed,
+                                                body: `ModPack ${name} ${this.lang.modpack_installed_correctly}.`
+                                            });
+                                    }
+                                   
+                                }
+                            }
+                        }, 1000);
+                    } else if (tipoArchivo === 'mrpack') {
+                        let randomString = Math.random().toString(36).substring(2, 8);
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances`);
+                        }
+
+                        //comprobar si existe la carpeta de la instancia
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances/${randomString}`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${randomString}`);
+                        } else {
+                            //generar otro string random
+                            randomString = Math.random().toString(36).substring(2, 8);
+                            //crear la carpeta de la instancia
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${randomString}`);
+                        }
+                        const destinationFolder = `${dataDirectory}/.battly/instances/${randomString}`;
+                        
+                        fs.mkdirSync(`${dataDirectory}/.battly/instances/${randomString}`, {
+                            recursive: true
+                        });
+
+                        if (!fs.existsSync(destinationFolder)) {
+                            fs.mkdirSync(destinationFolder);
+                        }
+
+                        const zip = new AdmZip(destinationFile);
+                        await zip.extractAllTo(destinationFolder, true);
+                        json = await fs.readFile(path.join(destinationFolder, 'modrinth.index.json'), 'utf8');
+
+                        //mover lo que hay en la carpeta overrides a la carpeta battly
+                        await fs.copy(path.join(destinationFolder, 'overrides'), destinationFolder);
+
+                        //eliminar la carpeta overrides
+                        await fs.remove(path.join(destinationFolder, 'overrides'));
+
+                        await descargarModModrinth(JSON.parse(json), randomString);
+                        
+                    } else {
+                        Toast.fire({
+                            icon: 'error',
+                            title: this.lang.the_file_is_not_compatible
+                        })
+                    }
+
+
+                }
+            });
+
+        });
+    }
+
+    async CheckIfIsTheLatestScroll() {
+        const modsContainer = document.getElementById('mods_container');
+
+        let options = {
+            root: modsContainer,
+            rootMargin: '0px',
+            threshold: 1.0
+        };
+
+        //comprobar si ha scrolleado hasta el final con un observer
+        let observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    this.CargarMods();
+                }
+            });
+        }, options);
+
+        observer.observe(modsContainer);
+
+    }
+
+    async Inicio() {
+        let btnOpenMods = document.getElementById("boton_abrir_mods");
+        btnOpenMods.addEventListener("click", () => {
+            this.CargarMods();
+        });
+        let boton_mods = document.getElementById("boton_abrir_mods");
+        boton_mods.addEventListener("click", () => {
+            changePanel("mods");
+        });
+
+        let boton_volver = document.getElementById("volver");
+        boton_volver.addEventListener("click", () => {
+            changePanel("home");
+            document.querySelector(".preload-content").style.display = "none";
+        });
+
+        let mods_container = document.getElementById("mods_container");
+        /* comprobar si se ha deslizado el scroll hasta el final */
+        mods_container.addEventListener("scroll", () => {
+            if (mods_container.scrollTop + mods_container.clientHeight >= mods_container.scrollHeight) {
+                this.CargarMods();
+            }
+        });
+
+        //comprobar si existe el directorio de mods
+        if (!fs.existsSync(`${dataDirectory}/.battly/mods`)) {
+            fs.mkdirSync(`${dataDirectory}/.battly/mods`);
+        }
+    }
+
+    async BuscarMods() {
+        let input_buscar_mods = document.getElementById("input_buscar_mods");
+        let boton_buscar_mods = document.getElementById("boton_buscar_mods");
+
+        //al hacer click en enter que ejecute la función this.CargarMods(input_buscar_mods.value);
+        input_buscar_mods.addEventListener("keyup", (event) => {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                if (input_buscar_mods.value == "") {
+                    this.CargarMods();
+                } else {
+                    this.BuscarModsPorNombre(input_buscar_mods.value);
+                }
+            }
+        });
+    }
+
+    async BuscarModsPorNombre(nombre) {
+        document.querySelector(".preload-content").style.display = "block";
+        const loadingText = document.getElementById("loading-text");
+        loadingText.innerText = this.lang.searching_mods;
+
+        mods_container.innerHTML = "";
+        await axios.get(`https://api.modrinth.com/v2/search?limit=100&query=${nombre}&facets=[["project_type:mod"]]`).then(async (response) => {
+            let mods = response.data.hits;
+            let mods_container = document.getElementById("mods_container");
+
+            let totalMods = mods.length;
+            let totalModsCargados = 0;
+
+            for (let i = 0; i < mods.length; i++) {
+                totalModsCargados++;
+                if (totalModsCargados == totalMods) {
+                    document.querySelector(".preload-content").style.display = "none";
+                }
+                let mod = mods[i];
+
+                let mod_data = await this.ObtenerMod(mod.project_id);
+
+                let mod_card = document.createElement("div");
+                mod_card.classList.add("feature-card2-feature-card");
+
+                let mod_download = document.createElement("a");
+                mod_download.classList.add("feature-card2-download");
+
+                let mod_download_icon = document.createElement("img");
+                mod_download_icon.classList.add("feature-card2-download-icon");
+                mod_download_icon.src = "assets/images/descargar.png";
+
+                let mod_icon = document.createElement("img");
+                mod_icon.classList.add("feature-card2-icon");
+                mod_icon.src = mod.icon_url ? mod.icon_url : "assets/images/pregunta.png";
+
+                let mod_container = document.createElement("div");
+                mod_container.classList.add("feature-card2-container");
+
+                let mod_name = document.createElement("h2");
+                mod_name.classList.add("feature-card2-text");
+                mod_name.innerText = mod.title;
+
+                let mod_description = document.createElement("span");
+                if (mod.description.length > 100) {
+                    mod_description.innerText = mod.description.slice(0, 100) + "...";
+                } else {
+                    mod_description.innerText = mod.description;
+                }
+                mod_description.style.color = "#fff";
+
+                mod_container.appendChild(mod_name);
+                mod_container.appendChild(mod_description);
+
+                mod_download.appendChild(mod_download_icon);
+
+                mod_card.appendChild(mod_download);
+                mod_card.appendChild(mod_icon);
+                mod_card.appendChild(mod_container);
+
+                mods_container.appendChild(mod_card);
+
+                mod_download.addEventListener("click", () => {
+                    this.ShowPanelInfo(mod.project_id);
+                });
+            }
+        }).catch((error) => {
+            console.log(error);
+        });
+    }
+
+    async DescargarMod(downloadLink, mod, nombre, fileName) {
+
+        const mod_data = await this.ObtenerMod(mod);
+
+        const fetch = require('node-fetch');
+
+        Toast.fire({
+            icon: 'info',
+            title: `${this.lang.downloading_mod}...`
+        })
+
+        let error_downloading_mod = this.lang.error_downloading_mod;
+        let mod_downloaded_successfully = this.lang.mod_downloaded_successfully;
+
+        let file = fs.createWriteStream(`${dataDirectory}/.battly/mods/${fileName}`);
+        let request = await fetch(downloadLink);
+        await new Promise((resolve, reject) => {
+            request.body.pipe(file);
+            request.body.on("error", (err) => {
+                Toast.fire({
+                    icon: 'error',
+                    title: `${error_downloading_mod} ${nombre}.`,
+                    text: err
+                })
+                reject(err);
+            });
+            file.on("finish", function () {
+                resolve();
+                Toast.fire({
+                    icon: 'success',
+                    title: `${nombre} ${mod_downloaded_successfully}.`
+                })
+            });
+        });
+
+
+
+        if (mod_data[0].dependencies.length > 0) {
+            this.DescargarDependencias(mod, mod_data[0].dependencies[0].version_number);
+        }
+    }
+
+    async ObtenerMod(id) {
+        const mod_data = await axios.get(`https://api.modrinth.com/v2/project/${id}/version`).then((response) => {
+            return response.data;
+        }).catch((error) => {
+            console.log(error);
+        });
+        return mod_data;
+    }
+
+    async ObtenerModData(id) {
+        const mod_data = await axios.get(`https://api.modrinth.com/v2/project/${id}`).then((response) => {
+            return response.data;
+        }).catch((error) => {
+            console.log(error);
+        });
+        return mod_data;
+    }
+
+    async DescargarDependencias(mod, version) {
+        console.log(version);
+        const mod_data = await this.ObtenerMod(mod);
+        console.log(mod_data[0].dependencies)
+
+        if (mod_data[0].dependencies.length > 0) {
+            for (let i = 0; i < mod_data[0].dependencies.length; i++) {
+                if (mod_data[0].dependencies[i].version_number == version) {
+                    const dependency = mod_data[0].dependencies[i].project_id;
+                    const dependency_data = await this.ObtenerMod(dependency);
+                    if (dependency_data[0].files.length > 0) {
+                        const downloadLink = dependency_data[0].files[0].url;
+                        const response = await fetch(downloadLink);
+                        const fileBuffer = await response.arrayBuffer();
+                        const fs = require('fs');
+                        fs.writeFile(`${dataDirectory}/.battly/mods/${dependency_data[0].files[0].filename}`, Buffer.from(fileBuffer), (err) => {
+                            if (err) {
+                                Toast.fire({
+                                    icon: 'error',
+                                    title: `${this.lang.error_downloading_dependency}: ${dependency_data[0].name}`,
+                                    text: err.message
+                                });
+                            } else {
+                                Toast.fire({
+                                    icon: 'success',
+                                    title: `${this.lang.dependency}: ${dependency_data[0].name} ${this.lang.downloaded_successfully_two}.`
+                                });
+                            }
+                        });
+                    }
+                }
+            }
+        }
+    }
+
+    async ShowPanelInfo(id) {
+        document.querySelector(".preload-content").style.display = "block";
+        const loadingText = document.getElementById("loading-text");
+        loadingText.innerText = this.lang.loading_mod_information;
+        const mod_data = await this.ObtenerModData(id);
+        const mod_data_downloads = await this.ObtenerMod(id);
+
+
+        let loaders = mod_data.loaders;
+        let loadersText = "";
+        for (let i = 0; i < loaders.length; i++) {
+            /* jungar todo y mostrar algo como Forge - Fabric - Rift , que el último no tenga el - */
+            if (i == 0) {
+                loadersText += loaders[i].charAt(0).toUpperCase() + loaders[i].slice(1);
+            } else if (i == loaders.length - 1) {
+                loadersText += " - " + loaders[i].charAt(0).toUpperCase() + loaders[i].slice(1);
+            }
+        }
+
+        let versiones_soportadas = mod_data.game_versions;
+        let versiones_soportadas_text = "";
+
+        for (let i = 0; i < versiones_soportadas.length; i++) {
+            /* Solo poner la primera y la última versión, ejemplo: si las soportadas son ["1.16.5", "1.17.1", "1.17.2"] solo poner 1.16.5 - 1.17.2 */
+            if (i == 0) {
+                versiones_soportadas_text += versiones_soportadas[i];
+            } else if (i == versiones_soportadas.length - 1) {
+                versiones_soportadas_text += " - " + versiones_soportadas[i];
+            }
+        }
+
+        let loadersInfo = `<i class="fa-solid fa-circle-info"></i> ${loadersText} (${versiones_soportadas_text})`;
+
+        let mod_body = document.getElementById("battly_mods");
+
+
+        // Crear elementos
+        let modalDiv = document.createElement("div");
+        modalDiv.classList.add("modal");
+        //añadir el z-index para que se vea por encima de todo
+
+        let modalBackgroundDiv = document.createElement("div");
+        modalBackgroundDiv.classList.add("modal-background");
+
+        let modalCardDiv = document.createElement("div");
+        modalCardDiv.classList.add("modal-card");
+
+        let modalHeader = document.createElement("header");
+        modalHeader.classList.add("modal-card-head");
+
+        let modalTitle = document.createElement("p");
+        modalTitle.classList.add("modal-card-title");
+        modalTitle.innerText = this.lang.mod_information;
+
+        let modalCloseButton = document.createElement("button");
+        modalCloseButton.classList.add("delete");
+        modalCloseButton.setAttribute("aria-label", "close");
+
+        let modalSection = document.createElement("section");
+        modalSection.classList.add("modal-card-body");
+        modalSection.style.scrollbarColor = "#d3d3d3 #d3d3d3";
+        modalSection.style.scrollbarWidth = "thin";
+
+        // Crear contenido de la tarjeta
+        let cardDiv = document.createElement("div");
+        cardDiv.classList.add("card");
+
+        let cardContentDiv = document.createElement("div");
+        cardContentDiv.classList.add("card-content");
+
+        // Crear contenido de media
+        let mediaDiv = document.createElement("div");
+        mediaDiv.classList.add("media");
+
+        let mediaLeftDiv = document.createElement("div");
+        mediaLeftDiv.classList.add("media-left");
+
+        let mediaImage = document.createElement("figure");
+        mediaImage.classList.add("image");
+        mediaImage.classList.add("is-48x48");
+
+        let mediaImageSrc = document.createElement("img");
+        mediaImageSrc.src = mod_data.icon_url ? mod_data.icon_url : "assets/images/pregunta.png";
+        mediaImageSrc.alt = "Image";
+
+        let mediaContentDiv = document.createElement("div");
+        mediaContentDiv.classList.add("media-content");
+
+        let mediaTitle = document.createElement("p");
+        mediaTitle.classList.add("title");
+        mediaTitle.classList.add("is-4");
+        mediaTitle.innerText = mod_data.title;
+
+        let mediaSubtitle = document.createElement("p");
+        mediaSubtitle.classList.add("subtitle");
+        mediaSubtitle.classList.add("is-6");
+        mediaSubtitle.innerHTML = loadersInfo;
+
+        // ...
+
+        // Crear contenido de contenido
+        let contentDiv = document.createElement("div");
+        contentDiv.classList.add("content");
+
+        let contentText = document.createElement("p");
+        contentText.innerHTML = `
+  ${mod_data.description}
+  <br>
+  <hr>
+  ${this.lang.mod_stats}
+  <br>
+  <i class="fa-solid fa-download"></i> ${this.lang.downloads}: ${mod_data.downloads}
+  <br>
+  <i class="fa-solid fa-heart"></i> ${this.lang.followers}: ${mod_data.followers}
+  <br>
+  <br>
+  ${mod_data.body.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>').replace(/!\[(.*?)\]\((.*?)\)/g, '<img alt="$1" src="$2">').replace(/### (.*?)\n/g, '<h3>$1</h3>\n').replace(/## (.*?)\n/g, '<h2>$1</h2>\n').replace(/# (.*?)\n/g, '<h1>$1</h1>\n').replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>').replace(/- (.*)\n/g, '<li>$1</li>\n').replace(/\n---\n/g, '\n<hr>\n').replace(/<!--(.*?)-->/g, '<!--$1-->').replace(/__(.*?)__/g, '<u>$1</u>').replace(/_(.*?)_/g, '<i>$1</i>').replace(/\*(.*?)\*/g, '<i>$1</i>')}
+  <br>
+  <br>
+
+  <button class="button is-info is-outlined" onclick="window.open('https://modrinth.com/mod/${mod_data.id}', '_blank');">${this.lang.view_on_modrinth}</button>`;
+
+        // ...
+
+        // Crear footer
+        let footerDiv = document.createElement("footer");
+        footerDiv.classList.add("modal-card-foot");
+
+        let selectDiv = document.createElement("div");
+        selectDiv.classList.add("select");
+        selectDiv.classList.add("is-link");
+        selectDiv.style.marginRight = "10px";
+        selectDiv.style.width = "auto";
+
+        let selectElement = document.createElement("select");
+        selectElement.style.width = "auto";
+        selectElement.style.height = "40px";
+        selectElement.style.transform = "translate(0px, -5px)";
+        for (let version of mod_data_downloads) {
+            let versionName = version.version_number;
+            let versionID = version.id;
+            let supportedVersions = version.game_versions;
+            let supportedVersionsText = "";
+            for (let i = 0; i < supportedVersions.length; i++) {
+                //poner todas las versiones separadas por - y la última no tenga el -
+                if (i == 0) {
+                    supportedVersionsText += supportedVersions[i];
+                } else if (i == supportedVersions.length - 1) {
+                    supportedVersionsText += " - " + supportedVersions[i];
+                }
+            }
+            let optionElement = document.createElement("option");
+            optionElement.value = versionID;
+            optionElement.innerText = `${supportedVersionsText} (${versionName})`
+            selectElement.appendChild(optionElement);
+        }
+
+        let downloadButton = document.createElement("button");
+        downloadButton.classList.add("button");
+        downloadButton.classList.add("is-info");
+        downloadButton.innerText = this.lang.download_mod;
+
+        let deleteButton = document.createElement("button");
+        deleteButton.classList.add("button");
+        deleteButton.innerText = this.lang.delete_mod;
+        if (fs.existsSync(`${dataDirectory}/.battly/mods/${mod_data_downloads[0].files[0].filename}`)) {
+            deleteButton.classList.add("is-danger");
+            deleteButton.classList.add("is-active");
+
+        } else {
+            deleteButton.classList.add("is-hidden");
+        }
+
+        let cardFooterDiv = document.createElement("div");
+        cardFooterDiv.classList.add("card-footer");
+
+        let cardFooterItem = document.createElement("div");
+        cardFooterItem.classList.add("card-footer-item");
+
+        let cardFooterText = document.createElement("p");
+        cardFooterText.style.fontSize = "10px";
+        cardFooterText.innerHTML = this.lang.all_this_information_copyright_modrinth;
+
+        // Agregar elementos al DOM
+        mediaImage.appendChild(mediaImageSrc);
+        mediaLeftDiv.appendChild(mediaImage);
+        mediaDiv.appendChild(mediaLeftDiv);
+
+        mediaContentDiv.appendChild(mediaTitle);
+        mediaContentDiv.appendChild(mediaSubtitle);
+
+        contentDiv.appendChild(contentText);
+
+        selectDiv.appendChild(selectElement);
+
+        footerDiv.appendChild(selectDiv);
+        footerDiv.appendChild(downloadButton);
+        footerDiv.appendChild(deleteButton);
+
+        cardFooterItem.appendChild(cardFooterText);
+
+        cardFooterDiv.appendChild(cardFooterItem);
+
+        mediaDiv.appendChild(mediaLeftDiv);
+        mediaDiv.appendChild(mediaContentDiv);
+
+        cardContentDiv.appendChild(mediaDiv);
+        cardContentDiv.appendChild(contentDiv);
+        cardContentDiv.appendChild(cardFooterDiv);
+
+        cardDiv.appendChild(cardContentDiv);
+
+        modalHeader.appendChild(modalTitle);
+        modalHeader.appendChild(modalCloseButton);
+
+        modalSection.appendChild(cardDiv);
+
+        modalCardDiv.appendChild(modalHeader);
+        modalCardDiv.appendChild(modalSection);
+        modalCardDiv.appendChild(footerDiv);
+
+        modalDiv.appendChild(modalBackgroundDiv);
+        modalDiv.appendChild(modalCardDiv);
+
+        mod_body.appendChild(modalDiv);
+
+        modalDiv.classList.add("is-active");
+
+        document.querySelector(".preload-content").style.display = "none";
+
+
+
+
+        downloadButton.addEventListener("click", () => {
+            this.DescargarMod(mod_data_downloads[selectElement.selectedIndex].files[0].url, mod_data.id, mod_data.title, mod_data_downloads[selectElement.selectedIndex].files[0].filename);
+        });
+
+        deleteButton.addEventListener("click", () => {
+            /* eliminar el archivo */
+            fs.unlink(`${dataDirectory}/.battly/mods/${mod_data_downloads[0].files[0].filename}`, (err) => {
+                if (err) {
+                    console.error(err)
+                    return
+                }
+            });
+
+            /* eliminar las dependencias */
+            if (mod_data_downloads[0].dependencies.length > 0) {
+                for (let i = 0; i < mod_data_downloads[0].dependencies.length; i++) {
+                    const dependency = mod_data_downloads[0].dependencies[i].project_id;
+                    const dependency_data = this.ObtenerMod(dependency);
+                    if (dependency_data[0].files.length > 0) {
+                        fs.unlink(`${dataDirectory}/.battly/mods/${dependency_data[0].files[0].filename}`, (err) => {
+                            if (err) {
+                                console.error(err)
+                                return
+                            }
+                        });
+                    }
+                }
+            }
+
+            Toast.fire({
+                icon: 'success',
+                title: `${mod_data.title} ${this.lang.deleted_successfully}.`
+            })
+
+        });
+
+        modalCloseButton.addEventListener("click", () => {
+            modalDiv.classList.remove("is-active");
+            modalDiv.remove();
+        });
+    }
+
+
+    async CargarMods() {
+        document.querySelector(".preload-content").style.display = "block";
+        const loadingText = document.getElementById("loading-text");
+        loadingText.innerText = this.lang.searching_mods;
+        await axios.get("https://api.modrinth.com/v2/search?limit=100&index=relevance").then(async (response) => {
+            let mods = response.data.hits;
+            let mods_container = document.getElementById("mods_container");
+            mods_container.innerHTML = "";
+
+
+            let totalMods = mods.length;
+            let totalModsCargados = 0;
+
+            for (let i = 0; i < mods.length; i++) {
+                totalModsCargados++;
+                if (totalModsCargados == totalMods) {
+                    document.querySelector(".preload-content").style.display = "none";
+                }
+                let mod = mods[i];
+
+                let mod_card = document.createElement("div");
+                mod_card.classList.add("feature-card2-feature-card");
+
+                let mod_download = document.createElement("a");
+                mod_download.classList.add("feature-card2-download");
+
+                let mod_download_icon = document.createElement("img");
+                mod_download_icon.classList.add("feature-card2-download-icon");
+                mod_download_icon.src = "assets/images/descargar.png";
+
+                let mod_icon = document.createElement("img");
+                mod_icon.classList.add("feature-card2-icon");
+                mod_icon.src = mod.icon_url ? mod.icon_url : "assets/images/pregunta.png";
+
+                let mod_container = document.createElement("div");
+                mod_container.classList.add("feature-card2-container");
+
+                let mod_name = document.createElement("h2");
+                mod_name.classList.add("feature-card2-text");
+                mod_name.innerText = mod.title;
+
+                let mod_description = document.createElement("span");
+                if (mod.description.length > 100) {
+                    mod_description.innerText = mod.description.slice(0, 100) + "...";
+                } else {
+                    mod_description.innerText = mod.description;
+                }
+                mod_description.style.color = "#fff";
+
+                mod_container.appendChild(mod_name);
+                mod_container.appendChild(mod_description);
+
+                mod_download.appendChild(mod_download_icon);
+
+                mod_card.appendChild(mod_download);
+                mod_card.appendChild(mod_icon);
+                mod_card.appendChild(mod_container);
+
+                mods_container.appendChild(mod_card);
+
+                mod_download.addEventListener("click", () => {
+                    this.ShowPanelInfo(mod.project_id);
+                });
+            }
+
+        }).catch((error) => {
+            console.log(error);
+        });
+    }
+}
+
+export default Mods;

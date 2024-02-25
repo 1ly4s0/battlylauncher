@@ -1,1 +1,968 @@
-'use strict';(function(_0x78db13,_0x2efb73){const _0x667fce=a171_0x1315,_0x39f64b=_0x78db13();while(!![]){try{const _0x3e89f1=-parseInt(_0x667fce(0x113))/0x1+parseInt(_0x667fce(0x128))/0x2+parseInt(_0x667fce(0x10b))/0x3+-parseInt(_0x667fce(0x13a))/0x4*(-parseInt(_0x667fce(0xc4))/0x5)+-parseInt(_0x667fce(0xf2))/0x6*(-parseInt(_0x667fce(0xfe))/0x7)+-parseInt(_0x667fce(0x148))/0x8*(-parseInt(_0x667fce(0x14f))/0x9)+-parseInt(_0x667fce(0x137))/0xa;if(_0x3e89f1===_0x2efb73)break;else _0x39f64b['push'](_0x39f64b['shift']());}catch(_0x5b555a){_0x39f64b['push'](_0x39f64b['shift']());}}}(a171_0x3d03,0xbd801));const a171_0x5e648d=a171_0x3efa;(function(_0x3362f5,_0x17a925){const _0x259fd2=a171_0x1315,_0x40564e=a171_0x3efa,_0x57dbdb=_0x3362f5();while(!![]){try{const _0x5d8c61=-parseInt(_0x40564e(0x19a))/0x1*(parseInt(_0x40564e(0x1fc))/0x2)+parseInt(_0x40564e(0x140))/0x3+parseInt(_0x40564e(0x155))/0x4+-parseInt(_0x40564e(0x1e1))/0x5+parseInt(_0x40564e(0x13b))/0x6+parseInt(_0x40564e(0x1eb))/0x7*(parseInt(_0x40564e(0x163))/0x8)+-parseInt(_0x40564e(0x1e3))/0x9*(parseInt(_0x40564e(0x15a))/0xa);if(_0x5d8c61===_0x17a925)break;else _0x57dbdb['push'](_0x57dbdb['shift']());}catch(_0x4c60f0){_0x57dbdb[_0x259fd2(0x168)](_0x57dbdb[_0x259fd2(0x11b)]());}}}(a171_0x2bbc,0x3944a));function a171_0x39e7(_0x9de50f,_0x5db91e){const _0x1c171d=a171_0x1340();return a171_0x39e7=function(_0x5663d9,_0x5ab68f){_0x5663d9=_0x5663d9-0x66;let _0x2d5604=_0x1c171d[_0x5663d9];return _0x2d5604;},a171_0x39e7(_0x9de50f,_0x5db91e);}const a171_0x216d4e=a171_0x39e7;(function(_0x271a52,_0x5cafe8){const _0x31f2ad=a171_0x1315,_0x1bc663=a171_0x3efa,_0x400b31=a171_0x39e7,_0x527b9d=_0x271a52();while(!![]){try{const _0x4db017=parseInt(_0x400b31(0x121))/0x1+-parseInt(_0x400b31(0xeb))/0x2+parseInt(_0x400b31(0x66))/0x3*(-parseInt(_0x400b31(0xf1))/0x4)+parseInt(_0x400b31(0xb2))/0x5*(-parseInt(_0x400b31(0x114))/0x6)+-parseInt(_0x400b31(0xcf))/0x7+-parseInt(_0x400b31(0x9f))/0x8+parseInt(_0x400b31(0xee))/0x9;if(_0x4db017===_0x5cafe8)break;else _0x527b9d[_0x31f2ad(0x168)](_0x527b9d[_0x1bc663(0x152)]());}catch(_0x2ceded){_0x527b9d[_0x31f2ad(0x168)](_0x527b9d[_0x31f2ad(0x11b)]());}}}(a171_0x1340,0xdfcfa));function a171_0x1315(_0x15047b,_0x726499){const _0x3d0382=a171_0x3d03();return a171_0x1315=function(_0x131560,_0x3c5aca){_0x131560=_0x131560-0xab;let _0x5256b9=_0x3d0382[_0x131560];return _0x5256b9;},a171_0x1315(_0x15047b,_0x726499);}const a171_0x3bc1e8=a171_0x2b18;(function(_0x46bc14,_0x52c2c7){const _0x2c3bb0=a171_0x3efa,_0x2568f6=a171_0x39e7,_0x329f10=a171_0x2b18,_0x567b7e=_0x46bc14();while(!![]){try{const _0x14eca9=-parseInt(_0x329f10(0x1a9))/0x1+-parseInt(_0x329f10(0x13b))/0x2+-parseInt(_0x329f10(0x1fa))/0x3+parseInt(_0x329f10(0x1b5))/0x4+parseInt(_0x329f10(0x1a2))/0x5*(-parseInt(_0x329f10(0x1f6))/0x6)+parseInt(_0x329f10(0x134))/0x7*(parseInt(_0x329f10(0x208))/0x8)+parseInt(_0x329f10(0x1b1))/0x9;if(_0x14eca9===_0x52c2c7)break;else _0x567b7e[_0x2568f6(0x12b)](_0x567b7e[_0x2568f6(0xc0)]());}catch(_0x5adeb2){_0x567b7e[_0x2568f6(0x12b)](_0x567b7e[_0x2c3bb0(0x152)]());}}}(a171_0x4eda,0xe76f3));const {ipcMain,ipcRenderer}=require(a171_0x3bc1e8(0x192));import{database,changePanel,addAccount,accountSelect}from'../utils.js';function a171_0x1340(){const _0x528177=a171_0x1315,_0x311a5a=a171_0x3efa,_0x268132=[_0x311a5a(0x1f0),_0x311a5a(0x1cf),'loading',_0x311a5a(0x172),'config',_0x311a5a(0x1d8),_0x311a5a(0x173),_0x311a5a(0x151),_0x311a5a(0x1ef),_0x311a5a(0x14c),_0x311a5a(0x180),_0x311a5a(0x18a),_0x311a5a(0x1d3),_0x311a5a(0x18c),_0x311a5a(0x17a),_0x311a5a(0x1b0),_0x311a5a(0x16e),_0x311a5a(0x1df),_0x311a5a(0x19f),'existsSync',_0x528177(0x118),_0x528177(0x158),_0x311a5a(0x1a1),_0x311a5a(0x184),_0x311a5a(0x148),_0x311a5a(0x143),_0x311a5a(0x1c5),_0x528177(0xe3),_0x311a5a(0x14e),_0x311a5a(0x13e),_0x311a5a(0x19d),_0x311a5a(0x186),_0x311a5a(0x1e0),_0x528177(0x167),_0x311a5a(0x1b7),_0x311a5a(0x1aa),_0x311a5a(0x1f5),_0x311a5a(0x14a),_0x311a5a(0x15e),_0x311a5a(0x1ed),_0x311a5a(0x13c),_0x311a5a(0x1f2),_0x311a5a(0x157),_0x311a5a(0x15d),_0x311a5a(0x1b4),_0x311a5a(0x1b6),_0x311a5a(0x1d0),_0x311a5a(0x1da),_0x311a5a(0x192),_0x311a5a(0x176),_0x311a5a(0x179),_0x311a5a(0x177),_0x528177(0x11f),_0x528177(0xed),_0x311a5a(0x14b),_0x311a5a(0x1bd),_0x528177(0x110),_0x311a5a(0x1cd),'./assets/js/libs/sweetalert/sweetalert2.all.min',_0x311a5a(0x1bf),_0x311a5a(0x1bc),_0x311a5a(0x175),'#444444',_0x528177(0x144),_0x311a5a(0x167),_0x528177(0xdb),_0x311a5a(0x150),_0x311a5a(0x16c),'.song-details\x20.artist',_0x311a5a(0x205),'1531910NNJEqT',_0x311a5a(0x13f),'stringify',_0x311a5a(0x153),_0x311a5a(0x1fa),_0x311a5a(0x1b5),_0x311a5a(0x166),'videos',_0x311a5a(0x14d),_0x311a5a(0x194),_0x311a5a(0x1bb),_0x311a5a(0x18b),_0x311a5a(0x1fe),'PlayLists',_0x311a5a(0x152),_0x311a5a(0x1c4),'span',_0x528177(0xd3),_0x311a5a(0x1af),_0x311a5a(0x1d1),_0x311a5a(0x1f6),_0x311a5a(0x13d),_0x528177(0x151),_0x311a5a(0x1c9),_0x528177(0x121),_0x311a5a(0x136),_0x528177(0x13c),_0x311a5a(0x165),_0x311a5a(0x1a3),_0x311a5a(0x1e7),_0x311a5a(0x17b),_0x311a5a(0x145),_0x528177(0xac),_0x528177(0x173),_0x311a5a(0x1f7),_0x528177(0x104),_0x311a5a(0x1a8),_0x311a5a(0x142),_0x311a5a(0x20b),'resumeTimer',_0x311a5a(0x1ff),_0x311a5a(0x1b9),_0x311a5a(0x1dd),_0x311a5a(0x1d5),_0x528177(0xc0),_0x311a5a(0x13a),_0x528177(0x149),_0x311a5a(0x18d),_0x528177(0xf4),_0x311a5a(0x1fd),_0x311a5a(0x1b3),_0x311a5a(0x171),_0x311a5a(0x19e),_0x528177(0x12a),_0x311a5a(0x1d2),_0x311a5a(0x1cb),_0x311a5a(0x1ac),_0x311a5a(0x1c1),_0x311a5a(0x1d4),_0x528177(0x150),_0x311a5a(0x190),'modal-card-foot',_0x311a5a(0x137),_0x311a5a(0x207),_0x311a5a(0x139),_0x311a5a(0x168),_0x311a5a(0x15f),_0x311a5a(0x206),_0x311a5a(0x1be),_0x311a5a(0x1a4),_0x528177(0xcd),_0x311a5a(0x1e9),_0x311a5a(0x1ba),_0x311a5a(0x178),'modal-card-head',_0x311a5a(0x1c0),_0x528177(0x136),_0x311a5a(0x1ad),_0x311a5a(0x1ee),_0x311a5a(0x209),_0x311a5a(0x20a),_0x528177(0xfc),_0x311a5a(0x149),_0x311a5a(0x14f),_0x311a5a(0x1c3),_0x528177(0xce),_0x311a5a(0x1e4),_0x311a5a(0x193),_0x311a5a(0x1f8),_0x311a5a(0x200),_0x311a5a(0x1e8),_0x311a5a(0x17c),_0x311a5a(0x1ea),_0x311a5a(0x1a0),_0x528177(0x109),_0x311a5a(0x1c7),_0x528177(0xe5),_0x311a5a(0x154),_0x311a5a(0x147),_0x311a5a(0x170),_0x311a5a(0x1a6),_0x311a5a(0x164),_0x311a5a(0x1a5),_0x311a5a(0x1f3),_0x311a5a(0x188),'\x22\x20class=\x22audio-duration\x22>',_0x311a5a(0x202),_0x528177(0xd4),_0x311a5a(0x16d),_0x311a5a(0x201),_0x311a5a(0x1ce),_0x311a5a(0x138),_0x311a5a(0x15c),_0x311a5a(0x156),_0x311a5a(0x16f),_0x311a5a(0x162),'card-header\x20is-flex',_0x311a5a(0x17f),'play_arrow',_0x311a5a(0x185),_0x311a5a(0x1de),_0x311a5a(0x197),_0x528177(0x170),_0x311a5a(0x1fb),'close',_0x311a5a(0x1d9),_0x528177(0x163),_0x311a5a(0x141),_0x311a5a(0x16b),_0x311a5a(0x191),_0x311a5a(0x17d),_0x311a5a(0x18e),_0x311a5a(0x161),_0x311a5a(0x174),_0x528177(0x146),_0x311a5a(0x1a7),_0x311a5a(0x159),_0x311a5a(0x181),_0x311a5a(0x1c6),_0x311a5a(0x15b),_0x311a5a(0x1a2),_0x311a5a(0x158),_0x528177(0x152)];return a171_0x1340=function(){return _0x268132;},a171_0x1340();}function a171_0x2bbc(){const _0x483dc9=a171_0x1315,_0x2cdcb4=[_0x483dc9(0x11d),_0x483dc9(0x103),'splice',_0x483dc9(0xe4),_0x483dc9(0x161),'aria-label','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<audio\x20class=\x22','1584126XTIeSM','116248wHRRkm','currentTime',_0x483dc9(0x101),_0x483dc9(0xc8),'map',_0x483dc9(0x171),_0x483dc9(0x143),'484719nDrLld',_0x483dc9(0x174),_0x483dc9(0xbd),_0x483dc9(0xae),_0x483dc9(0xca),_0x483dc9(0x10d),_0x483dc9(0x132),_0x483dc9(0x16e),_0x483dc9(0xb8),_0x483dc9(0x10c),_0x483dc9(0xf3),'zIndex',_0x483dc9(0xe6),'next',_0x483dc9(0x15e),_0x483dc9(0x14c),'target','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>',_0x483dc9(0x11b),'platform',_0x483dc9(0xc3),_0x483dc9(0x169),'paused',_0x483dc9(0xf0),_0x483dc9(0x160),_0x483dc9(0x14b),_0x483dc9(0xc5),_0x483dc9(0x131),_0x483dc9(0x124),_0x483dc9(0xf5),_0x483dc9(0xf8),_0x483dc9(0xbc),_0x483dc9(0xc1),'song-title',_0x483dc9(0xef),_0x483dc9(0x145),_0x483dc9(0x120),_0x483dc9(0x112),'card-content','getting_songs','createElement',_0x483dc9(0x13e),_0x483dc9(0xdd),_0x483dc9(0x115),_0x483dc9(0xeb),'<span><i\x20class=\x22fa-solid\x20fa-circle-check\x22></i>\x20',_0x483dc9(0x16c),'section',_0x483dc9(0x16a),'Canción\x20no\x20encontrada\x20en\x20YouTube.','marginRight','classList',_0x483dc9(0x114),_0x483dc9(0xcf),'contains','643784mbqQHi','div',_0x483dc9(0xf6),_0x483dc9(0xc9),'<span><i\x20class=\x22fa-solid\x20fa-xmark\x22></i>\x20','label-volumen','/battly',_0x483dc9(0xcb),_0x483dc9(0x10e),_0x483dc9(0x100),_0x483dc9(0x134),_0x483dc9(0xbb),_0x483dc9(0xe1),_0x483dc9(0x16b),_0x483dc9(0xd0),_0x483dc9(0x102),_0x483dc9(0xdf),'.play-pause',_0x483dc9(0x12d),_0x483dc9(0xcc),_0x483dc9(0x11a),_0x483dc9(0x14d),_0x483dc9(0x111),_0x483dc9(0xb9),_0x483dc9(0x15b),'30355236fztHQb','./assets/images/icons/loading.gif',_0x483dc9(0x15a),_0x483dc9(0x11c),_0x483dc9(0xd6),_0x483dc9(0x12f),_0x483dc9(0xd5),_0x483dc9(0x168),_0x483dc9(0xd1),_0x483dc9(0xfa),_0x483dc9(0xff),_0x483dc9(0x15c),_0x483dc9(0xc6),_0x483dc9(0xfd),_0x483dc9(0xd7),_0x483dc9(0x16f),_0x483dc9(0x140),_0x483dc9(0xb1),_0x483dc9(0xd9),_0x483dc9(0xb6),_0x483dc9(0x130),_0x483dc9(0x123),'timeupdate','save_playlist_text',_0x483dc9(0xad),_0x483dc9(0xc7),'is-success',_0x483dc9(0xd2),'img',_0x483dc9(0x147),_0x483dc9(0x172),_0x483dc9(0x133),_0x483dc9(0x127),'getItem','querySelector','button',_0x483dc9(0x142),_0x483dc9(0xbe),'card-header-title',_0x483dc9(0xdc),_0x483dc9(0x139),'height',_0x483dc9(0xf1),'songs_loaded_playing','src',_0x483dc9(0x12b),_0x483dc9(0x165),_0x483dc9(0xe2),_0x483dc9(0xec),'1466060fgXNZr',_0x483dc9(0xf9),_0x483dc9(0x11e),_0x483dc9(0x164),_0x483dc9(0x15f),'modal-card-body',_0x483dc9(0xe8),_0x483dc9(0x10a),_0x483dc9(0x175),_0x483dc9(0x162),_0x483dc9(0x129),_0x483dc9(0xb7),_0x483dc9(0xab),'top-end',_0x483dc9(0xfb),_0x483dc9(0x122),_0x483dc9(0x105),_0x483dc9(0x107),_0x483dc9(0xbf),_0x483dc9(0xe0),'lengthSeconds','readFileSync','you_need_to_set_a_playlist_name',_0x483dc9(0x117),_0x483dc9(0x108),_0x483dc9(0x14e),_0x483dc9(0xb0),_0x483dc9(0x138),_0x483dc9(0xea),_0x483dc9(0x125),_0x483dc9(0x159),_0x483dc9(0x155),_0x483dc9(0x16d),_0x483dc9(0x144),_0x483dc9(0xb2),_0x483dc9(0xe9),'APPDATA','input\x20is-info','210399IboRGp',_0x483dc9(0x106),'error','volume','3043201ScznlP',_0x483dc9(0xd8),'volumen',_0x483dc9(0x141),_0x483dc9(0x126),'innerHTML',_0x483dc9(0xb3),'thumbnail',_0x483dc9(0xaf),_0x483dc9(0x135),_0x483dc9(0xde),_0x483dc9(0x116),_0x483dc9(0x13f),_0x483dc9(0x14a),_0x483dc9(0x154),_0x483dc9(0xda),_0x483dc9(0x166),_0x483dc9(0xee),_0x483dc9(0xf7),_0x483dc9(0x10f),_0x483dc9(0x153),_0x483dc9(0xba),_0x483dc9(0x156),_0x483dc9(0xe7),_0x483dc9(0xc2),'beforeend',_0x483dc9(0x12c),_0x483dc9(0x15d)];return a171_0x2bbc=function(){return _0x2cdcb4;},a171_0x2bbc();}const Swal=require(a171_0x3bc1e8(0x148)),usetube=require(a171_0x3bc1e8(0x211)),ytdl=require(a171_0x216d4e(0xc1)),dataDirectory=(process[a171_0x3bc1e8(0x1fb)][a171_0x3bc1e8(0x17c)]||(process[a171_0x3bc1e8(0x14e)]==a171_0x3bc1e8(0x1a1)?process[a171_0x3bc1e8(0x1fb)][a171_0x216d4e(0x11f)]+a171_0x216d4e(0x122):process[a171_0x3bc1e8(0x1fb)][a171_0x3bc1e8(0x16c)]))+a171_0x3bc1e8(0x1d0),fs=require('fs'),Toast=Swal[a171_0x3bc1e8(0x149)]({'toast':!![],'position':a171_0x3bc1e8(0x160),'showConfirmButton':![],'timer':0x1388,'timerProgressBar':![],'didOpen':_0x2a0644=>{const _0x5ae5e1=a171_0x216d4e,_0x2647a6=a171_0x3bc1e8;_0x2a0644[_0x2647a6(0x178)](_0x2647a6(0x1f0),Swal[_0x2647a6(0x20f)]),_0x2a0644[_0x5ae5e1(0x10a)](_0x2647a6(0x1f4),Swal[_0x2647a6(0x1ab)]);}});function a171_0x2b18(_0x2ad2d3,_0x2cb4d0){const _0x3766f7=a171_0x4eda();return a171_0x2b18=function(_0xc7be1e,_0x2631d3){_0xc7be1e=_0xc7be1e-0x133;let _0x9ebbc1=_0x3766f7[_0xc7be1e];return _0x9ebbc1;},a171_0x2b18(_0x2ad2d3,_0x2cb4d0);}let musicList_=[];function a171_0x3d03(){const _0x4eaa9f=['delete-button','database','return-btn','playlist_name','search','main-audio','text','success','mimeType','lang','/mqdefault.jpg','46005vNziHb','900BNlhYd','audio','init','#fff','No\x20se\x20encontró\x20un\x20formato\x20de\x20audio\x20adecuado','reproducir-btn','env','mouseenter','fontSize','#next','/.battly','music-img','width','songPlaying','save','.progress-bar','Error\x20al\x20obtener\x20información\x20del\x20video:','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22','#main-audio','0px','cards','innerText','.progress-area','./assets/js/libs/youtube/usetube','modal-background','indexOf','749093jQivAy','floor','.img-area\x20img','add','ended','15612876ZRSojh','deg','includes','darwin','getElementById','playlist_saved_correctly','catch','find','play','set-song','25468CpNwPm','input','button\x20is-info','is-loading','116598AKoXAy','formats','.current-time','modal-card-title','audio/mp4','5929000OCYzVV','data-id','parse','.max-duration','getInfo','stopTimer','backgroundColor','63rZjcNV','3oTDZuE','color','1563822KHivZy','buttons','GetLang','15PHdXll','url','card','<i\x20class=\x22fa-solid\x20fa-play\x22></i>','style','nombre-de-cancion','welcome_to_the_new_playlists_system','4002036IwGGrt','title','modal-card','home','</span>','textContent','button\x20is-danger','5762911mZTqlj','31169BZiObY','value','cancel','duration','/battly/launcher','finded','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>','remove','shift','insertAdjacentHTML','1272oOjCTj','mkdirSync','seleccionado','grab','3518682heNYVV','is-danger','body','/Library/Application\x20Support','center','random','pause','3089152kvRHbi','author','thumbnails','fire','card-content1','20px','send','is-active','videoDetails','card-wrapper','song-playing','songs','15705QACVpE','artist','70px','46038550VjqVFz','close','already_have_a_playlist_with_this_name','412uKiIcF','t-duration','modal\x20is-active','play-pause','https://img.youtube.com/vi/','<li\x20li-index=\x22','type','searchVideo','mixin','--thumb-rotate','/battly/launcher/music/playlists.json','8ymHFeU','playlist','name','50584CQwJmJ','music','addEventListener','textAlign','you_dont_have_songs_in_your_playlist','electron','log','2007RAQtQp','margin','#prev','setProperty','show-playlists','0\x20auto','header','HOME','\x22></audio>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>','disabled','clientWidth','playlist_deleted_correctly','#444444','<span><i\x20class=\x22fa-solid\x20fa-search\x22></i>\x20','prev','highestaudio','getting','is-info','appendChild','load','delete','ytdl-core','borderRadius','save-playlist','then','push','1202096reUTTd','mouseleave','footer','className','562525gobpPH','30PznznD','writeFileSync','4047141aZvFxh','offsetX','alt','16bPlvaR','not_founded','/battly/launcher/music','loadeddata','querySelector','length','modal','setAttribute','utf8','Nuevo\x20orden:','77220lhObUR','\x22\x20src=\x22','classList','error','click','saved_playlists','5px'];a171_0x3d03=function(){return _0x4eaa9f;};return a171_0x3d03();}import{Lang}from'../utils/lang.js';let lang;class Music{static ['id']=a171_0x3bc1e8(0x138);async[a171_0x5e648d(0x1a9)](_0x1ac2b1){const _0xd656e0=a171_0x5e648d,_0x355b78=a171_0x216d4e,_0x19dfbc=a171_0x3bc1e8;this[_0x355b78(0x70)]=_0x1ac2b1,this[_0x19dfbc(0x1cc)]=await new database()[_0x19dfbc(0x1ba)](),this[_0x19dfbc(0x20d)]=await new Lang()[_0xd656e0(0x208)](),lang=this[_0x19dfbc(0x20d)],this[_0x19dfbc(0x177)](),this[_0x355b78(0xbf)]();}async[a171_0x3bc1e8(0x167)](){const _0x4ff4fd=a171_0x216d4e,_0x45743e=a171_0x3bc1e8;!fs[_0x45743e(0x175)](''+dataDirectory)&&fs[_0x45743e(0x1ed)](''+dataDirectory),!fs[_0x45743e(0x175)](dataDirectory+_0x45743e(0x19f))&&fs[_0x45743e(0x1ed)](dataDirectory+_0x45743e(0x19f)),!fs[_0x45743e(0x175)](dataDirectory+_0x4ff4fd(0x71))&&fs[_0x4ff4fd(0x106)](dataDirectory+_0x45743e(0x1e3)),!fs[_0x4ff4fd(0x7f)](dataDirectory+_0x45743e(0x1d1))&&fs[_0x45743e(0x1ed)](dataDirectory+_0x45743e(0x1d1)),!fs[_0x4ff4fd(0x7f)](dataDirectory+_0x45743e(0x1c1))&&fs[_0x45743e(0x16d)](dataDirectory+_0x45743e(0x1c1),JSON[_0x45743e(0x1dc)]([])),document[_0x45743e(0x1c5)](_0x45743e(0x1aa))[_0x45743e(0x178)](_0x45743e(0x174),async()=>{const _0x12c169=a171_0x3efa,_0x2904dc=_0x4ff4fd,_0x194242=_0x45743e;let _0x548dac=await fs[_0x194242(0x154)](dataDirectory+_0x12c169(0x1e2),_0x194242(0x185)),_0x99a85a=JSON[_0x194242(0x14a)](_0x548dac);if(musicList_[_0x2904dc(0xd6)]===0x0)return Toast[_0x194242(0x1b7)]({'icon':_0x2904dc(0xf9),'title':lang[_0x194242(0x1a6)]});const _0xe44bd0=document[_0x194242(0x20e)](_0x194242(0x1d5));_0xe44bd0[_0x194242(0x1eb)]=_0x2904dc(0xcc),_0xe44bd0[_0x2904dc(0x12f)][_0x2904dc(0xa2)]='4';const _0x4a143b=document[_0x2904dc(0xf3)](_0x2904dc(0xfb));_0x4a143b[_0x194242(0x1eb)]=_0x194242(0x201),_0xe44bd0[_0x194242(0x155)](_0x4a143b);const _0x2c7681=document[_0x2904dc(0xf3)](_0x194242(0x1d5));_0x2c7681[_0x194242(0x1eb)]=_0x194242(0x1ca),_0x2c7681[_0x194242(0x207)][_0x2904dc(0x8a)]=_0x12c169(0x18f),_0xe44bd0[_0x194242(0x155)](_0x2c7681);const _0x397cde=document[_0x2904dc(0xf3)](_0x194242(0x194));_0x397cde[_0x194242(0x1eb)]=_0x2904dc(0xfc),_0x397cde[_0x194242(0x207)][_0x2904dc(0x8a)]=_0x2904dc(0xaa),_0x2c7681[_0x194242(0x155)](_0x397cde);let _0x311db0=document[_0x194242(0x20e)](_0x194242(0x1b8));_0x311db0[_0x194242(0x162)][_0x194242(0x183)](_0x2904dc(0x130)),_0x311db0[_0x194242(0x189)]('aria-label',_0x12c169(0x1dc));const _0x53252a=document[_0x194242(0x20e)]('p');_0x53252a[_0x194242(0x1eb)]=_0x2904dc(0x97),_0x53252a[_0x194242(0x207)][_0x194242(0x16f)]=_0x2904dc(0x94),_0x53252a[_0x194242(0x188)]=lang[_0x194242(0x1ce)],_0x397cde[_0x2904dc(0xd8)](_0x53252a),_0x397cde[_0x194242(0x155)](_0x311db0);const _0x47908c=document[_0x194242(0x20e)](_0x194242(0x1b0));_0x47908c[_0x194242(0x1eb)]=_0x2904dc(0x67),_0x47908c[_0x194242(0x207)][_0x2904dc(0x8a)]=_0x2904dc(0xaa),_0x47908c[_0x194242(0x207)][_0x194242(0x16f)]=_0x194242(0x199),_0x2c7681[_0x194242(0x155)](_0x47908c);const _0xcde7e4=document[_0x194242(0x20e)]('p');_0xcde7e4[_0x194242(0x188)]=lang[_0x194242(0x1bd)],_0x47908c[_0x194242(0x155)](_0xcde7e4);const _0x20c706=document[_0x194242(0x20e)](_0x2904dc(0x125));_0x20c706[_0x2904dc(0x10f)]=_0x194242(0x136),_0x20c706[_0x194242(0x1eb)]=_0x194242(0x187),_0x47908c[_0x194242(0x155)](_0x20c706);const _0x418c79=document[_0x194242(0x20e)](_0x194242(0x13e));_0x418c79[_0x194242(0x1eb)]=_0x194242(0x1d7),_0x418c79[_0x194242(0x207)][_0x194242(0x18a)]=_0x194242(0x1de),_0x2c7681[_0x2904dc(0xd8)](_0x418c79);const _0x4755e6=document[_0x194242(0x20e)](_0x194242(0x1b8));_0x4755e6[_0x194242(0x1eb)]=_0x194242(0x1ae),_0x4755e6[_0x194242(0x188)]=lang[_0x194242(0x1f9)],_0x418c79[_0x194242(0x155)](_0x4755e6),_0x4755e6[_0x194242(0x178)](_0x194242(0x174),()=>{const _0x2c6cc4=_0x12c169,_0x564b57=_0x2904dc,_0x4e6461=_0x194242,_0xdf06b=_0x20c706[_0x4e6461(0x145)];if(_0xdf06b[_0x4e6461(0x203)]<0x0)return Toast[_0x4e6461(0x1b7)]({'icon':_0x4e6461(0x17a),'title':lang[_0x2c6cc4(0x1d7)]});for(let _0x208782 in _0x99a85a){if(_0x208782[_0x564b57(0xff)]===_0xdf06b)return Toast[_0x4e6461(0x1b7)]({'icon':_0x564b57(0xf9),'title':lang[_0x4e6461(0x1ec)]});}let _0x54a53c={'name':_0xdf06b,'songs':musicList_};_0x99a85a[_0x564b57(0x12b)](_0x54a53c),fs[_0x4e6461(0x16d)](dataDirectory+'/battly/launcher/music/playlists.json',JSON[_0x564b57(0xb4)](_0x99a85a)),_0xe44bd0[_0x4e6461(0x1e4)](),Toast[_0x4e6461(0x1b7)]({'icon':_0x4e6461(0x1ff),'title':lang[_0x564b57(0x108)]});}),_0x311db0[_0x194242(0x178)](_0x194242(0x174),()=>{const _0x564cad=_0x12c169;_0xe44bd0[_0x564cad(0x18b)]();});const _0x1c30d8=document[_0x194242(0x20e)](_0x194242(0x1b8));_0x1c30d8[_0x2904dc(0x7c)]=_0x194242(0x1f8),_0x1c30d8[_0x194242(0x188)]=lang[_0x194242(0x1da)],_0x418c79[_0x2904dc(0xd8)](_0x1c30d8),_0x1c30d8[_0x194242(0x178)](_0x194242(0x174),()=>{const _0x23ac85=_0x194242;_0xe44bd0[_0x23ac85(0x1e4)]();}),document[_0x194242(0x1fc)][_0x194242(0x155)](_0xe44bd0);});}async[a171_0x3bc1e8(0x177)](){const _0x5ce6a8=a171_0x5e648d,_0x375815=a171_0x216d4e,_0x4f4dea=a171_0x3bc1e8;document[_0x4f4dea(0x1c5)](_0x4f4dea(0x1d2))[_0x4f4dea(0x178)](_0x4f4dea(0x174),async()=>{const _0x477d65=a171_0x1315,_0x31f0d2=a171_0x3efa,_0xfb9f97=a171_0x39e7,_0x1c0e52=_0x4f4dea;let _0xc568de=await fs[_0x1c0e52(0x154)](dataDirectory+_0x1c0e52(0x1c1),_0x477d65(0xb0)),_0x4eddbf=JSON[_0x1c0e52(0x14a)](_0xc568de);const _0x173c8=document[_0x1c0e52(0x20e)](_0x1c0e52(0x1d5));_0x173c8[_0x1c0e52(0x1eb)]=_0x1c0e52(0x1e0),_0x173c8[_0xfb9f97(0x12f)][_0x1c0e52(0x146)]='4';const _0x59cfef=document[_0x1c0e52(0x20e)](_0x1c0e52(0x1d5));_0x59cfef[_0x1c0e52(0x1eb)]=_0x1c0e52(0x201),_0x173c8[_0xfb9f97(0xd8)](_0x59cfef);const _0x29f876=document[_0x1c0e52(0x20e)](_0x1c0e52(0x1d5));_0x29f876[_0x1c0e52(0x1eb)]=_0x1c0e52(0x1ca),_0x29f876[_0xfb9f97(0x12f)][_0x1c0e52(0x18a)]=_0xfb9f97(0xaa),_0x173c8[_0x1c0e52(0x155)](_0x29f876);const _0x13f506=document[_0xfb9f97(0xf3)](_0x1c0e52(0x194));_0x13f506[_0xfb9f97(0x7c)]=_0xfb9f97(0xfc),_0x13f506[_0x1c0e52(0x207)][_0x1c0e52(0x18a)]=_0x1c0e52(0x1de),_0x29f876[_0x1c0e52(0x155)](_0x13f506);let _0x295d58=document[_0x1c0e52(0x20e)](_0x1c0e52(0x1b8));_0x295d58[_0x1c0e52(0x162)][_0x1c0e52(0x183)](_0x1c0e52(0x1e9)),_0x295d58[_0x1c0e52(0x189)](_0x1c0e52(0x209),_0x1c0e52(0x1c2)),_0x295d58[_0x1c0e52(0x178)](_0x1c0e52(0x174),()=>{const _0x295b80=_0x1c0e52;_0x173c8[_0x295b80(0x1e4)]();});const _0x30cb50=document[_0xfb9f97(0xf3)]('p');_0x30cb50[_0x1c0e52(0x1eb)]=_0x1c0e52(0x1c3),_0x30cb50[_0x1c0e52(0x207)][_0x1c0e52(0x16f)]=_0x1c0e52(0x199),_0x30cb50[_0xfb9f97(0xa4)]=lang[_0x1c0e52(0x1d4)],_0x13f506[_0x1c0e52(0x155)](_0x30cb50),_0x13f506[_0x1c0e52(0x155)](_0x295d58);const _0x3ef356=document[_0x31f0d2(0x168)](_0xfb9f97(0x124));_0x3ef356[_0x1c0e52(0x1eb)]=_0x1c0e52(0x1d6),_0x3ef356[_0x477d65(0x108)][_0x1c0e52(0x18a)]=_0x1c0e52(0x1de),_0x3ef356[_0x1c0e52(0x207)][_0xfb9f97(0x76)]=_0x1c0e52(0x199),_0x29f876[_0x1c0e52(0x155)](_0x3ef356);const _0x3be16f=document[_0x1c0e52(0x20e)]('p');_0x3be16f[_0x1c0e52(0x161)]=lang[_0x31f0d2(0x1c8)],_0x3ef356[_0x1c0e52(0x155)](_0x3be16f);for(let _0x1ce20d of _0x4eddbf){console[_0x31f0d2(0x1da)](_0x1ce20d);const _0x3bfa07=document[_0x1c0e52(0x20e)](_0xfb9f97(0xfb));_0x3bfa07[_0xfb9f97(0x7c)]=_0x1c0e52(0x181),_0x3ef356[_0x1c0e52(0x155)](_0x3bfa07);const _0x3da624=document[_0x1c0e52(0x20e)](_0x477d65(0x155));_0x3da624[_0x1c0e52(0x1eb)]=_0x1c0e52(0x1e7),_0x3bfa07[_0x1c0e52(0x155)](_0x3da624);const _0x295435=document[_0x1c0e52(0x20e)]('p');_0x295435[_0x1c0e52(0x1eb)]=_0x1c0e52(0x169),_0x295435[_0x1c0e52(0x188)]=_0x1ce20d[_0x1c0e52(0x156)],_0x3da624[_0x31f0d2(0x20b)](_0x295435);const _0x52e885=document[_0x1c0e52(0x20e)](_0x1c0e52(0x1d5));_0x52e885[_0x1c0e52(0x1eb)]=_0x1c0e52(0x18b),_0x52e885[_0x1c0e52(0x207)][_0x1c0e52(0x1f1)]=_0x1c0e52(0x13c),_0x3da624[_0x1c0e52(0x155)](_0x52e885);const _0x2d5736=document[_0x1c0e52(0x20e)](_0x1c0e52(0x1b8));_0x2d5736[_0x1c0e52(0x1eb)]=_0x1c0e52(0x1ae),_0x2d5736[_0x1c0e52(0x207)][_0xfb9f97(0x6f)]=_0x1c0e52(0x190),_0x52e885[_0x1c0e52(0x155)](_0x2d5736),_0x2d5736[_0x1c0e52(0x178)](_0xfb9f97(0xce),async()=>{const _0x7e426d=_0x31f0d2,_0x5d2e9a=_0xfb9f97,_0x37506e=_0x1c0e52;musicList_=_0x1ce20d[_0x37506e(0x158)];let _0x1a6e8e=[];const _0x5a7fdf=document[_0x37506e(0x20e)](_0x7e426d(0x178));_0x5a7fdf[_0x37506e(0x162)][_0x37506e(0x183)](_0x37506e(0x14c),_0x37506e(0x191)),_0x5a7fdf[_0x37506e(0x207)][_0x37506e(0x146)]='4';const _0x5053aa=document[_0x5d2e9a(0xf3)](_0x37506e(0x1d5));_0x5053aa[_0x37506e(0x162)][_0x37506e(0x183)](_0x37506e(0x201));const _0x596e18=document[_0x37506e(0x20e)](_0x5d2e9a(0xfb));_0x596e18[_0x37506e(0x162)][_0x7e426d(0x1bf)](_0x5d2e9a(0xd1)),_0x596e18[_0x5d2e9a(0x12f)][_0x37506e(0x18a)]=_0x5d2e9a(0xaa),_0x596e18[_0x5d2e9a(0x12f)][_0x37506e(0x14d)]=_0x37506e(0x13c);const _0x2f4a66=document[_0x37506e(0x20e)](_0x37506e(0x1b0));_0x2f4a66[_0x5d2e9a(0x72)][_0x7e426d(0x1bf)](_0x5d2e9a(0x67)),_0x2f4a66[_0x37506e(0x207)][_0x37506e(0x18a)]=_0x37506e(0x1de),_0x2f4a66[_0x7e426d(0x1d9)][_0x37506e(0x19e)]=_0x37506e(0x1a8);const _0x16dda7=document[_0x7e426d(0x168)](_0x5d2e9a(0xea));_0x16dda7[_0x37506e(0x13f)]=_0x37506e(0x20a),_0x16dda7[_0x37506e(0x207)][_0x37506e(0x157)]=_0x37506e(0x214),_0x16dda7[_0x5d2e9a(0x12f)][_0x37506e(0x15c)]=_0x37506e(0x214),_0x16dda7[_0x37506e(0x207)][_0x5d2e9a(0xed)]=_0x37506e(0x186),_0x16dda7[_0x37506e(0x151)]='';const _0x3f0167=document[_0x37506e(0x20e)]('p');_0x3f0167[_0x37506e(0x207)][_0x5d2e9a(0x76)]=_0x37506e(0x199),_0x3f0167['style'][_0x37506e(0x1e5)]=_0x37506e(0x137),_0x3f0167[_0x5d2e9a(0xb6)]=lang[_0x37506e(0x1b2)],_0x2f4a66[_0x37506e(0x155)](_0x16dda7),_0x2f4a66[_0x37506e(0x155)](_0x3f0167),_0x596e18[_0x37506e(0x155)](_0x2f4a66),_0x5a7fdf[_0x37506e(0x155)](_0x5053aa),_0x5a7fdf[_0x37506e(0x155)](_0x596e18),document[_0x37506e(0x1fc)][_0x37506e(0x155)](_0x5a7fdf),_0x173c8[_0x37506e(0x1e4)]();for(let _0x2c4465 of _0x1ce20d[_0x37506e(0x158)]){_0x3f0167[_0x37506e(0x1ad)]=lang[_0x37506e(0x18e)]+'\x20'+_0x2c4465[_0x37506e(0x156)]+'\x20('+_0x1a6e8e[_0x37506e(0x203)]+'/'+_0x1ce20d[_0x5d2e9a(0xc4)][_0x37506e(0x203)]+')',await ytdl[_0x5d2e9a(0x6d)](_0x2c4465[_0x37506e(0x1b6)],{'quality':_0x7e426d(0x14e)})[_0x5d2e9a(0x8d)](_0x26ecc6=>{const _0x55e5d5=a171_0x1315,_0x3538fc=_0x7e426d,_0x3cc7cc=_0x5d2e9a,_0x42ac51=_0x37506e,_0x501bc3=_0x26ecc6[_0x3cc7cc(0x91)][_0x42ac51(0x15f)](_0x40edd1=>_0x40edd1[_0x42ac51(0x16e)][_0x42ac51(0x1bf)](_0x42ac51(0x176)));if(!_0x501bc3){console[_0x55e5d5(0xb5)](_0x42ac51(0x1c8));return;}const _0x159620=_0x501bc3[_0x42ac51(0x1b6)];_0x1a6e8e[_0x42ac51(0x163)]({'url':_0x2c4465[_0x42ac51(0x1b6)],'name':_0x2c4465[_0x42ac51(0x156)],'author':_0x2c4465[_0x42ac51(0x17f)],'img':_0x2c4465[_0x42ac51(0x140)],'audio':_0x159620,'duration':_0x2c4465[_0x42ac51(0x182)]});const _0x10eca0=document[_0x42ac51(0x1c5)](_0x3cc7cc(0x138));let _0x10adb2=0x1;if(_0x1a6e8e[_0x42ac51(0x203)]===_0x1ce20d[_0x55e5d5(0x133)][_0x42ac51(0x203)]){_0x3507f1(0x1),musicList_=_0x1a6e8e,document[_0x42ac51(0x1c5)](_0x42ac51(0x20b))[_0x42ac51(0x161)]='';const _0x231240=_0x1ce20d[_0x42ac51(0x158)][_0x42ac51(0x195)]((_0x2ed322,_0x1e9249)=>{const _0x185c3e=_0x3cc7cc,_0x4def16=_0x42ac51,_0x2ff569=musicList_[_0x4def16(0x15f)](_0xca0117=>_0xca0117[_0x185c3e(0xff)]===_0x2ed322[_0x185c3e(0xff)]);return{..._0x2ff569,'index':_0x1e9249};});for(let _0x5229c3 of _0x231240){_0x3f0167[_0x42ac51(0x1ad)]=lang[_0x3cc7cc(0x6e)]+'\x20'+_0x5229c3[_0x42ac51(0x156)]+'\x20('+_0x10adb2+'/'+_0x231240[_0x42ac51(0x203)]+')',_0x10adb2++;const _0x358e4b=document[_0x42ac51(0x20e)](_0x3538fc(0x178));_0x358e4b[_0x42ac51(0x162)][_0x3cc7cc(0xa7)](_0x42ac51(0x181)),_0x358e4b[_0x42ac51(0x162)][_0x42ac51(0x183)](_0x42ac51(0x153)),_0x358e4b[_0x42ac51(0x189)](_0x42ac51(0x147),_0x10adb2+0x1);const _0x1153c9=document[_0x42ac51(0x20e)](_0x42ac51(0x140));_0x1153c9['src']=_0x5229c3[_0x42ac51(0x140)],_0x1153c9[_0x42ac51(0x151)]=lang[_0x42ac51(0x152)],_0x1153c9[_0x42ac51(0x162)][_0x42ac51(0x183)](_0x3cc7cc(0x95)),_0x358e4b[_0x42ac51(0x155)](_0x1153c9);const _0x516ff2=document[_0x42ac51(0x20e)](_0x42ac51(0x1d5));_0x516ff2[_0x42ac51(0x162)][_0x42ac51(0x183)](_0x3538fc(0x166)),_0x516ff2[_0x3cc7cc(0x72)][_0x42ac51(0x183)](_0x42ac51(0x19d));const _0x5bf7f7=document[_0x42ac51(0x20e)](_0x42ac51(0x1d5));_0x5bf7f7[_0x42ac51(0x162)][_0x42ac51(0x183)](_0x42ac51(0x1e8)),_0x5bf7f7[_0x3cc7cc(0xb6)]=_0x5229c3[_0x42ac51(0x156)],_0x516ff2[_0x42ac51(0x155)](_0x5bf7f7);const _0x3ee08f=document[_0x42ac51(0x20e)](_0x3cc7cc(0xfb));_0x3ee08f['classList'][_0x42ac51(0x183)](_0x42ac51(0x1a7)),_0x3ee08f[_0x3cc7cc(0xb6)]=_0x5229c3[_0x42ac51(0x17f)],_0x516ff2[_0x42ac51(0x155)](_0x3ee08f);const _0x4bc84c=document[_0x3cc7cc(0xf3)](_0x42ac51(0x1b8));_0x4bc84c[_0x42ac51(0x162)][_0x42ac51(0x183)](_0x42ac51(0x213)),_0x4bc84c[_0x42ac51(0x162)][_0x55e5d5(0xe2)](_0x42ac51(0x1b8)),_0x4bc84c[_0x3cc7cc(0x72)][_0x3538fc(0x1bf)](_0x3cc7cc(0x9a)),_0x4bc84c[_0x3538fc(0x1fa)]=lang[_0x42ac51(0x1e9)],_0x4bc84c[_0x42ac51(0x178)](_0x42ac51(0x174),async()=>{const _0x2a0f58=_0x3cc7cc,_0x4a1280=_0x42ac51;_0x4bc84c[_0x4a1280(0x13d)]=!![],_0x4bc84c[_0x4a1280(0x162)][_0x2a0f58(0xa7)](_0x4a1280(0x1e2));const _0x28717e=_0x231240[_0x4a1280(0x1db)](_0x5229c3);_0x28717e>-0x1&&_0x231240[_0x4a1280(0x184)](_0x28717e,0x1),_0x358e4b[_0x2a0f58(0xbd)](),_0x4bc84c[_0x4a1280(0x13d)]=![],_0x4bc84c[_0x2a0f58(0x72)][_0x2a0f58(0xbd)](_0x4a1280(0x1e2)),_0x4bc84c[_0x4a1280(0x162)][_0x4a1280(0x1e4)](_0x4a1280(0x202)),_0x4bc84c[_0x4a1280(0x162)][_0x4a1280(0x183)](_0x4a1280(0x1ee)),setTimeout(()=>{const _0x4f89ac=_0x2a0f58,_0x5d09c3=_0x4a1280;_0x4bc84c[_0x5d09c3(0x162)][_0x4f89ac(0xbd)](_0x5d09c3(0x1ee)),_0x4bc84c[_0x4f89ac(0x72)][_0x5d09c3(0x183)](_0x5d09c3(0x18c));},0x7d0);}),_0x516ff2[_0x42ac51(0x155)](_0x4bc84c),_0x358e4b[_0x42ac51(0x155)](_0x516ff2),_0x10eca0[_0x42ac51(0x155)](_0x358e4b);}}});}_0x3f0167[_0x5d2e9a(0x6c)]=lang[_0x37506e(0x1e6)]+'\x20'+_0x1a6e8e[0x0][_0x37506e(0x156)],setTimeout(()=>{const _0x173ba1=_0x37506e;_0x5a7fdf[_0x173ba1(0x1e4)]();},0x1388);});const _0x55ca99=document[_0x1c0e52(0x20e)](_0x1c0e52(0x15a));_0x55ca99[_0x1c0e52(0x161)]=_0x1c0e52(0x18f),_0x2d5736[_0x1c0e52(0x155)](_0x55ca99);const _0x215312=document[_0x1c0e52(0x20e)](_0x1c0e52(0x1b8));_0x215312[_0x1c0e52(0x1eb)]=_0xfb9f97(0xe1),_0x52e885['appendChild'](_0x215312),_0x215312[_0x1c0e52(0x178)](_0x1c0e52(0x174),()=>{const _0x550a5d=_0xfb9f97,_0x53f341=_0x1c0e52,_0x4f8e5a=_0x4eddbf[_0x53f341(0x1db)](_0x1ce20d);_0x4f8e5a>-0x1&&_0x4eddbf[_0x53f341(0x184)](_0x4f8e5a,0x1),fs[_0x53f341(0x16d)](dataDirectory+_0x53f341(0x1c1),JSON[_0x53f341(0x1dc)](_0x4eddbf)),_0x3bfa07[_0x53f341(0x1e4)](),Toast[_0x550a5d(0xa3)]({'icon':_0x550a5d(0xde),'title':lang[_0x550a5d(0x9c)]});});const _0x423516=document[_0xfb9f97(0xf3)](_0x1c0e52(0x15a));_0x423516[_0x1c0e52(0x161)]=_0x1c0e52(0x198),_0x215312[_0x31f0d2(0x20b)](_0x423516);const _0x18b41b=document[_0x1c0e52(0x20e)](_0x1c0e52(0x1d5));_0x18b41b[_0x1c0e52(0x207)][_0xfb9f97(0xdb)]=_0x1c0e52(0x13c),_0x3ef356[_0x1c0e52(0x155)](_0x18b41b);}document[_0x1c0e52(0x1fc)][_0x1c0e52(0x155)](_0x173c8);});let _0x5295e9=new Sortable(document[_0x375815(0x111)](_0x4f4dea(0x20b)),{'animation':0xfa,'ghostClass':_0x375815(0xa0),'chosenClass':_0x4f4dea(0x1a4)});const _0x54f213=document[_0x4f4dea(0x1c5)](_0x4f4dea(0x196));document[_0x375815(0x111)](_0x4f4dea(0x1c7))[_0x4f4dea(0x178)](_0x4f4dea(0x174),()=>{const _0x169178=_0x4f4dea;changePanel(_0x169178(0x15d));});const _0x21ae7f=document[_0x4f4dea(0x1c5)](_0x375815(0x68)),_0x4154e1=_0x21ae7f[_0x4f4dea(0x142)](_0x4f4dea(0x165)),_0x3b711c=document[_0x4f4dea(0x142)](_0x4f4dea(0x1a0)),_0x313c60=_0x21ae7f[_0x375815(0xd2)](_0x4f4dea(0x14f)),_0x121322=_0x21ae7f[_0x375815(0xd2)](_0x4f4dea(0x1bc)),_0x2db963=_0x21ae7f[_0x4f4dea(0x142)](_0x4f4dea(0x1d8)),_0x2a597f=_0x21ae7f[_0x4f4dea(0x142)](_0x4f4dea(0x17b)),_0x2e8b21=_0x21ae7f[_0x4f4dea(0x142)](_0x4f4dea(0x197)),_0x517e17=_0x2e8b21['querySelector'](_0x375815(0x11d));function _0x511e43(_0x4e9b75){const _0x200bf1=_0x4f4dea;ytdl[_0x200bf1(0x1f2)](_0x4e9b75,{'quality':_0x200bf1(0x19c)})[_0x200bf1(0x1c9)](_0x2c76b3=>{const _0x36552c=a171_0x3efa,_0x41b5d2=a171_0x39e7,_0x120341=_0x200bf1,_0x2c3a87=_0x2c76b3[_0x36552c(0x14a)][_0x41b5d2(0xaf)](_0x244f70=>_0x244f70[_0x120341(0x16e)][_0x41b5d2(0x75)](_0x41b5d2(0x9e)));if(!_0x2c3a87){console[_0x120341(0x17a)](_0x120341(0x1c8));return;}const _0x1c225b=_0x2c3a87[_0x120341(0x1b6)],_0x33ba2f=_0x2c76b3[_0x120341(0x135)][_0x120341(0x200)],_0x567edf=Math[_0x120341(0x1c4)](_0x33ba2f/0x3c),_0x28751c=_0x33ba2f%0x3c,_0x9b5689=_0x567edf+':'+_0x28751c;musicList_[_0x120341(0x163)]({'url':_0x4e9b75,'name':_0x2c76b3[_0x41b5d2(0xf7)][_0x41b5d2(0x104)],'author':_0x2c76b3[_0x120341(0x135)][_0x120341(0x17f)][_0x41b5d2(0xff)],'img':_0x2c76b3[_0x120341(0x135)][_0x120341(0x180)][0x0][_0x41b5d2(0xc5)],'audio':_0x1c225b,'duration':_0x9b5689}),_0x2fd3ed(musicList_[_0x41b5d2(0xd6)]);})[_0x200bf1(0x166)](_0xcaf8a9=>{const _0x16c2ed=a171_0x1315,_0x42cdd6=a171_0x3efa,_0x368aa6=_0x200bf1;console[_0x368aa6(0x17a)](_0x42cdd6(0x196)),console[_0x16c2ed(0xb5)](_0xcaf8a9);});}async function _0x244b6f(_0x4c2bc0){const _0x53686f=a171_0x1315,_0x145f89=a171_0x3efa,_0x525e77=_0x375815,_0x2c045f=_0x4f4dea;let _0x4ecfb6=document[_0x525e77(0x111)](_0x2c045f(0x17d));_0x4ecfb6[_0x2c045f(0x13d)]=!![],_0x4ecfb6[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x2c045f(0x1e2));let _0x98e852=await usetube[_0x2c045f(0x1d3)](_0x4c2bc0);console[_0x2c045f(0x143)](_0x98e852),_0x98e852=_0x98e852[_0x2c045f(0x15e)];if(_0x98e852[_0x2c045f(0x203)]>0x0){const _0x4c2fb2=document[_0x2c045f(0x1c5)](_0x2c045f(0x20b));_0x4c2fb2[_0x2c045f(0x161)]='';for(let _0x37ef30=0x0;_0x37ef30<_0x98e852[_0x2c045f(0x203)];_0x37ef30++){const _0x550e73=_0x98e852[_0x37ef30],_0x5917f8=_0x550e73['id'],_0x9e6712=_0x550e73[_0x53686f(0x10c)],_0x5281bb=_0x550e73[_0x2c045f(0x1a7)],_0x29773f=_0x2c045f(0x212)+_0x5917f8+_0x2c045f(0x17e),_0xf478dd=document[_0x2c045f(0x20e)](_0x2c045f(0x1d5));_0xf478dd[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x2c045f(0x181)),_0xf478dd[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x2c045f(0x153)),_0xf478dd[_0x145f89(0x1f3)](_0x525e77(0x92),_0x37ef30+0x1);const _0x12b9fd=document[_0x2c045f(0x20e)](_0x2c045f(0x140));_0x12b9fd[_0x2c045f(0x13f)]=_0x29773f,_0x12b9fd[_0x2c045f(0x151)]=lang[_0x2c045f(0x152)],_0x12b9fd[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x525e77(0x95)),_0xf478dd[_0x2c045f(0x155)](_0x12b9fd);const _0x437ff5=document[_0x2c045f(0x20e)](_0x2c045f(0x1d5));_0x437ff5[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x2c045f(0x1a3)),_0x437ff5[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x2c045f(0x19d));const _0x168f99=document[_0x2c045f(0x20e)](_0x2c045f(0x1d5));_0x168f99[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x525e77(0x136)),_0x168f99[_0x2c045f(0x1ad)]=_0x9e6712,_0x437ff5[_0x525e77(0xd8)](_0x168f99);const _0x2b8844=document[_0x2c045f(0x20e)](_0x2c045f(0x1d5));_0x2b8844[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x2c045f(0x1a7)),_0x2b8844[_0x145f89(0x1fa)]=_0x5281bb,_0x437ff5[_0x2c045f(0x155)](_0x2b8844);const _0x8b0a8f=document[_0x145f89(0x168)](_0x2c045f(0x1b8));_0x8b0a8f[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x2c045f(0x213)),_0x8b0a8f[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x2c045f(0x1b8)),_0x8b0a8f[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x525e77(0x6a)),_0x8b0a8f[_0x2c045f(0x1ad)]=lang[_0x2c045f(0x183)],_0x8b0a8f[_0x525e77(0x10a)](_0x2c045f(0x174),async()=>{const _0x2b0305=_0x525e77,_0x4b83a0=_0x2c045f;_0x8b0a8f[_0x4b83a0(0x13d)]=!![],_0x8b0a8f[_0x4b83a0(0x162)][_0x4b83a0(0x183)](_0x4b83a0(0x1e2)),await _0x511e43(_0x5917f8),_0x8b0a8f[_0x4b83a0(0x13d)]=![],_0x8b0a8f[_0x2b0305(0x72)][_0x4b83a0(0x1e4)](_0x4b83a0(0x1e2)),_0x8b0a8f[_0x4b83a0(0x162)][_0x4b83a0(0x1e4)](_0x4b83a0(0x202)),_0x8b0a8f[_0x4b83a0(0x162)][_0x2b0305(0xa7)](_0x4b83a0(0x1ee)),setTimeout(()=>{const _0x4b2a04=a171_0x1315,_0x1c169a=a171_0x3efa,_0x41d5f8=_0x2b0305,_0x12d434=_0x4b83a0;_0x8b0a8f[_0x12d434(0x162)][_0x12d434(0x1e4)](_0x12d434(0x1ee)),_0x8b0a8f[_0x12d434(0x162)][_0x41d5f8(0xa7)](_0x12d434(0x202)),_0x5295e9=new Sortable(document[_0x12d434(0x1c5)](_0x12d434(0x20b)),{'animation':0x96,'ghostClass':_0x12d434(0x1a4),'chosenClass':_0x12d434(0x1a4),'onEnd':_0x1bf9ee});const _0x124e09=document[_0x12d434(0x1c5)](_0x12d434(0x20b));_0x124e09[_0x12d434(0x161)]='';for(let _0x201c6e of musicList_){const _0xe5b4ae=document[_0x12d434(0x20e)](_0x1c169a(0x178));_0xe5b4ae[_0x12d434(0x162)][_0x12d434(0x183)](_0x12d434(0x181)),_0xe5b4ae[_0x12d434(0x162)][_0x12d434(0x183)](_0x1c169a(0x1a2)),_0xe5b4ae[_0x12d434(0x162)][_0x12d434(0x183)](_0x12d434(0x1ea)),_0xe5b4ae[_0x12d434(0x189)](_0x12d434(0x147),_0x37ef30+0x1);const _0x551317=document[_0x41d5f8(0xf3)](_0x12d434(0x140));_0x551317[_0x12d434(0x13f)]=_0x201c6e[_0x12d434(0x140)],_0x551317[_0x12d434(0x151)]=lang[_0x12d434(0x152)],_0x551317[_0x12d434(0x162)][_0x12d434(0x183)](_0x41d5f8(0x95)),_0xe5b4ae[_0x12d434(0x155)](_0x551317);const _0x488715=document[_0x41d5f8(0xf3)](_0x12d434(0x1d5));_0x488715[_0x12d434(0x162)][_0x12d434(0x183)](_0x41d5f8(0xb8)),_0x488715[_0x41d5f8(0x72)][_0x12d434(0x183)](_0x12d434(0x19d));const _0x1ab685=document[_0x41d5f8(0xf3)](_0x12d434(0x1d5));_0x1ab685[_0x12d434(0x162)][_0x12d434(0x183)](_0x12d434(0x1e8)),_0x1ab685[_0x12d434(0x1ad)]=_0x201c6e[_0x41d5f8(0xff)],_0x488715[_0x1c169a(0x20b)](_0x1ab685);const _0x5c83b0=document[_0x12d434(0x20e)](_0x41d5f8(0xfb));_0x5c83b0[_0x12d434(0x162)][_0x12d434(0x183)](_0x12d434(0x1a7)),_0x5c83b0[_0x12d434(0x1ad)]=_0x201c6e[_0x41d5f8(0xe9)],_0x488715[_0x12d434(0x155)](_0x5c83b0);const _0xfc5d06=document[_0x12d434(0x20e)](_0x12d434(0x1b8));_0xfc5d06[_0x12d434(0x162)][_0x12d434(0x183)](_0x12d434(0x213)),_0xfc5d06[_0x12d434(0x162)][_0x12d434(0x183)](_0x12d434(0x1b8)),_0xfc5d06[_0x41d5f8(0x72)][_0x41d5f8(0xa7)](_0x12d434(0x18c)),_0xfc5d06[_0x1c169a(0x1fa)]=lang[_0x4b2a04(0x163)],_0xfc5d06[_0x12d434(0x178)](_0x12d434(0x174),async()=>{const _0x3f1e03=_0x4b2a04,_0x402c16=_0x1c169a,_0x2015e5=_0x41d5f8,_0x595b04=_0x12d434;_0xfc5d06[_0x3f1e03(0x158)]=!![],_0xfc5d06[_0x595b04(0x162)][_0x595b04(0x183)](_0x402c16(0x1ba));const _0x1d6887=musicList_[_0x595b04(0x1db)](_0x201c6e);_0x1d6887>-0x1&&musicList_[_0x595b04(0x184)](_0x1d6887,0x1),_0xe5b4ae[_0x595b04(0x1e4)](),_0xfc5d06[_0x595b04(0x13d)]=![],_0xfc5d06[_0x595b04(0x162)][_0x595b04(0x1e4)](_0x2015e5(0xfa)),_0xfc5d06[_0x595b04(0x162)][_0x595b04(0x1e4)](_0x402c16(0x158)),_0xfc5d06[_0x2015e5(0x72)][_0x595b04(0x183)](_0x595b04(0x1ee)),setTimeout(()=>{const _0x14cfc6=_0x2015e5,_0xbccea7=_0x595b04;_0xfc5d06[_0xbccea7(0x162)][_0x14cfc6(0xbd)](_0xbccea7(0x1ee)),_0xfc5d06[_0xbccea7(0x162)][_0xbccea7(0x183)](_0xbccea7(0x18c));},0x7d0);}),_0x488715[_0x41d5f8(0xd8)](_0xfc5d06),_0xe5b4ae[_0x12d434(0x155)](_0x488715),_0x124e09[_0x12d434(0x155)](_0xe5b4ae);}function _0x1bf9ee(_0x57c049){const _0x183d4a=_0x41d5f8,_0x2abc4b=_0x12d434,{oldIndex:_0x200f50,newIndex:_0x376b44}=_0x57c049,_0x5b99f1=musicList_[_0x2abc4b(0x184)](_0x200f50,0x1)[0x0];musicList_[_0x2abc4b(0x184)](_0x376b44,0x0,_0x5b99f1),console[_0x183d4a(0x9b)](_0x183d4a(0x82)),console[_0x183d4a(0x9b)](musicList_);}},0x7d0);}),_0x437ff5[_0x2c045f(0x155)](_0x8b0a8f),_0xf478dd[_0x525e77(0xd8)](_0x437ff5),_0x4c2fb2[_0x2c045f(0x155)](_0xf478dd);}_0x4ecfb6[_0x2c045f(0x13d)]=![],_0x4ecfb6[_0x525e77(0x72)][_0x525e77(0xbd)](_0x525e77(0xfa)),_0x4ecfb6[_0x2c045f(0x162)][_0x2c045f(0x1e4)](_0x2c045f(0x202)),_0x4ecfb6[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x145f89(0x1aa)),_0x4ecfb6[_0x145f89(0x1f0)]=_0x2c045f(0x168)+lang[_0x2c045f(0x1f5)]+_0x2c045f(0x1af),setTimeout(()=>{const _0x3be429=_0x145f89,_0x20cfdc=_0x525e77,_0x1bc55f=_0x2c045f;_0x4ecfb6[_0x20cfdc(0x72)][_0x3be429(0x18b)](_0x1bc55f(0x1ee)),_0x4ecfb6[_0x1bc55f(0x162)][_0x1bc55f(0x183)](_0x1bc55f(0x202)),_0x4ecfb6[_0x1bc55f(0x161)]=_0x1bc55f(0x1b3)+lang[_0x1bc55f(0x210)]+_0x1bc55f(0x1af);},0x7d0);}else console[_0x525e77(0x9b)](_0x2c045f(0x1fe)),_0x4ecfb6[_0x2c045f(0x13d)]=![],_0x4ecfb6[_0x2c045f(0x162)][_0x2c045f(0x1e4)](_0x525e77(0xfa)),_0x4ecfb6[_0x2c045f(0x162)][_0x2c045f(0x1e4)](_0x2c045f(0x202)),_0x4ecfb6[_0x2c045f(0x162)][_0x2c045f(0x183)](_0x2c045f(0x18c)),_0x4ecfb6[_0x525e77(0x6c)]=_0x2c045f(0x1be)+lang[_0x2c045f(0x16b)]+_0x2c045f(0x1af),setTimeout(()=>{const _0x10cb57=_0x525e77,_0x1e6d40=_0x2c045f;_0x4ecfb6[_0x10cb57(0x72)][_0x1e6d40(0x1e4)](_0x1e6d40(0x18c)),_0x4ecfb6[_0x10cb57(0x72)][_0x1e6d40(0x183)](_0x1e6d40(0x202)),_0x4ecfb6[_0x1e6d40(0x161)]=_0x1e6d40(0x1b3)+lang[_0x1e6d40(0x210)]+_0x1e6d40(0x1af);},0xbb8);}let _0x14559=document[_0x5ce6a8(0x1c7)](_0x375815(0x93));_0x14559[_0x4f4dea(0x178)](_0x4f4dea(0x19b),function(_0x4eaab3){const _0x4fb3b8=_0x375815,_0x3f50e9=_0x4f4dea;let _0x4f100d=document[_0x3f50e9(0x1c5)](_0x3f50e9(0x204));_0x4f100d[_0x3f50e9(0x161)]=_0x4eaab3[_0x3f50e9(0x1fd)][_0x3f50e9(0x145)]+'%';let _0x42c551=_0x4eaab3[_0x3f50e9(0x1fd)][_0x3f50e9(0x145)]/0x64;_0x14559[_0x4fb3b8(0x12f)][_0x3f50e9(0x1cd)](_0x4fb3b8(0xb3),_0x42c551*0x2d0+_0x3f50e9(0x150)),_0x2a597f[_0x3f50e9(0x20c)]=_0x42c551;});function _0x2fd3ed(_0x286d03){const _0x3399d6=_0x4f4dea,_0x13e965=musicList_[_0x286d03-0x1];musicList_[_0x3399d6(0x203)]===0x1&&_0x3507f1(_0x286d03);}const _0x51a8b2=document[_0x4f4dea(0x1c5)](_0x4f4dea(0x17d));_0x51a8b2[_0x5ce6a8(0x1f8)](_0x4f4dea(0x174),()=>{const _0x1603ca=_0x375815,_0x3c01b1=_0x4f4dea,_0x5b7bfc=document[_0x1603ca(0x111)](_0x3c01b1(0x13a))[_0x3c01b1(0x145)];_0x244b6f(_0x5b7bfc);});let _0x371510=Math[_0x4f4dea(0x1c4)](Math[_0x4f4dea(0x193)]()*musicList_[_0x4f4dea(0x203)]+0x1),_0x288235=![];window[_0x4f4dea(0x178)](_0x4f4dea(0x177),()=>{_0x31b22f(_0x371510),_0x55d950();});function _0x31b22f(_0x2b925b){const _0x29474d=_0x5ce6a8,_0x135124=_0x4f4dea;_0x3b711c[_0x135124(0x1ad)]=musicList_[_0x2b925b-0x1][_0x135124(0x156)]+'\x0a'+musicList_[_0x2b925b-0x1][_0x135124(0x17f)],_0x4154e1[_0x135124(0x13f)]=musicList_[_0x2b925b-0x1][_0x135124(0x140)],_0x2a597f[_0x135124(0x13f)]=musicList_[_0x2b925b-0x1][_0x29474d(0x19c)],console[_0x135124(0x143)](musicList_[_0x2b925b-0x1]),localStorage[_0x135124(0x164)](_0x29474d(0x1ab),musicList_[_0x2b925b-0x1]),document[_0x135124(0x1c5)](_0x135124(0x206))[_0x135124(0x13f)]=musicList_[_0x2b925b-0x1][_0x135124(0x140)],ipcRenderer[_0x135124(0x141)](_0x135124(0x1cb),musicList_[_0x2b925b-0x1]);}function _0x3e7917(){const _0xe9eba6=a171_0x1315,_0x433732=_0x375815,_0x4b875c=_0x4f4dea;_0x21ae7f[_0xe9eba6(0xb4)][_0x4b875c(0x183)](_0x4b875c(0x172)),_0x313c60[_0x433732(0xd2)]('i')[_0x433732(0xb6)]=_0x4b875c(0x133),_0x2a597f[_0x4b875c(0x14b)]();}function _0x5c32e5(){const _0x375600=_0x4f4dea;_0x21ae7f[_0x375600(0x162)][_0x375600(0x1e4)](_0x375600(0x172)),_0x313c60[_0x375600(0x142)]('i')[_0x375600(0x1ad)]=_0x375600(0x1c0),_0x2a597f[_0x375600(0x133)]();}function _0x9080c0(){const _0x27ec6c=_0x4f4dea;_0x371510--,_0x371510<0x1?_0x371510=musicList_[_0x27ec6c(0x203)]:_0x371510=_0x371510,_0x31b22f(_0x371510),_0x3e7917(),_0x55d950();}function _0x3780f5(){const _0x6e1abc=_0x4f4dea;_0x371510++,_0x371510>musicList_[_0x6e1abc(0x203)]?_0x371510=0x1:_0x371510=_0x371510,_0x31b22f(_0x371510),_0x3e7917(),_0x55d950();}_0x313c60[_0x4f4dea(0x178)](_0x375815(0xce),()=>{const _0x10d5e5=_0x375815,_0x4cdbf0=_0x4f4dea,_0x26ba43=_0x21ae7f[_0x4cdbf0(0x162)][_0x4cdbf0(0x159)](_0x10d5e5(0x123));_0x26ba43?_0x5c32e5():_0x3e7917(),_0x55d950();}),_0x121322[_0x4f4dea(0x178)](_0x4f4dea(0x174),()=>{_0x9080c0();}),_0x2db963[_0x4f4dea(0x178)](_0x4f4dea(0x174),()=>{_0x3780f5();}),ipcRenderer['on'](_0x4f4dea(0x18d),()=>{const _0x40a190=_0x375815,_0x4ff835=_0x4f4dea,_0x5a08c2=_0x21ae7f[_0x40a190(0x72)][_0x4ff835(0x159)](_0x4ff835(0x172));_0x5a08c2?_0x5c32e5():_0x3e7917(),_0x55d950();}),ipcRenderer['on'](_0x4f4dea(0x139),()=>{_0x3780f5();}),ipcRenderer['on'](_0x4f4dea(0x1ef),()=>{_0x9080c0();}),_0x2a597f[_0x5ce6a8(0x1f8)](_0x4f4dea(0x1f7),_0x24d88f=>{const _0x350b46=_0x5ce6a8,_0x598b5b=_0x375815,_0x2dc3e9=_0x4f4dea,_0x1d43fe=_0x24d88f[_0x2dc3e9(0x1fd)][_0x2dc3e9(0x1ac)],_0x422d2f=_0x24d88f[_0x2dc3e9(0x1fd)][_0x598b5b(0xc6)];let _0x49f208=_0x1d43fe/_0x422d2f*0x64;_0x517e17[_0x2dc3e9(0x207)][_0x2dc3e9(0x157)]=_0x49f208+'%';let _0x260ced=_0x21ae7f[_0x598b5b(0xd2)](_0x2dc3e9(0x179)),_0x26de90=_0x21ae7f[_0x350b46(0x1b2)](_0x2dc3e9(0x1e1));_0x2a597f[_0x2dc3e9(0x178)](_0x2dc3e9(0x15b),()=>{const _0x2fd297=_0x2dc3e9;let _0x1bb8b7=_0x2a597f[_0x2fd297(0x182)],_0x17a099=Math[_0x2fd297(0x1c4)](_0x1bb8b7/0x3c),_0x3ca3b7=Math[_0x2fd297(0x1c4)](_0x1bb8b7%0x3c);_0x3ca3b7<0xa&&(_0x3ca3b7='0'+_0x3ca3b7),_0x26de90[_0x2fd297(0x1ad)]=_0x17a099+':'+_0x3ca3b7;});let _0x1d581d=Math[_0x2dc3e9(0x1c4)](_0x1d43fe/0x3c),_0x533a35=Math[_0x598b5b(0xec)](_0x1d43fe%0x3c);_0x533a35<0xa&&(_0x533a35='0'+_0x533a35),_0x260ced[_0x2dc3e9(0x1ad)]=_0x1d581d+':'+_0x533a35;}),_0x2e8b21[_0x4f4dea(0x178)](_0x375815(0xce),_0xcc637f=>{const _0x2cc71c=_0x4f4dea;let _0x2c8f12=_0x2e8b21[_0x2cc71c(0x1c6)],_0x18e60c=_0xcc637f[_0x2cc71c(0x16a)],_0x503bc2=_0x2a597f[_0x2cc71c(0x182)];_0x2a597f[_0x2cc71c(0x1ac)]=_0x18e60c/_0x2c8f12*_0x503bc2,_0x3e7917(),_0x55d950();}),_0x2a597f[_0x4f4dea(0x178)](_0x4f4dea(0x171),()=>{const _0x1e6803=_0x375815,_0x6b6744=_0x4f4dea;let _0x2b5005=Math[_0x1e6803(0xec)](Math[_0x6b6744(0x193)]()*musicList_[_0x6b6744(0x203)]+0x1);do{_0x2b5005=Math[_0x1e6803(0xec)](Math[_0x6b6744(0x193)]()*musicList_[_0x6b6744(0x203)]+0x1);}while(_0x371510==_0x2b5005);_0x371510=_0x2b5005,_0x31b22f(_0x371510),_0x3e7917(),_0x55d950();});const _0x1cf083=_0x21ae7f[_0x4f4dea(0x142)]('ul');for(let _0x5257c6=0x0;_0x5257c6<musicList_[_0x4f4dea(0x203)];_0x5257c6++){let _0x10b874=_0x4f4dea(0x205)+(_0x5257c6+0x1)+_0x4f4dea(0x1df)+musicList_[_0x5257c6][_0x4f4dea(0x156)]+_0x4f4dea(0x1b4)+musicList_[_0x5257c6]['author']+_0x375815(0xbb)+musicList_[_0x5257c6][_0x4f4dea(0x13f)]+_0x4f4dea(0x1cf)+musicList_[_0x5257c6][_0x4f4dea(0x182)]+_0x4f4dea(0x1a5)+musicList_[_0x5257c6][_0x4f4dea(0x13f)]+_0x4f4dea(0x173)+musicList_[_0x5257c6][_0x4f4dea(0x1d9)]+_0x4f4dea(0x1f3);_0x1cf083[_0x4f4dea(0x1dd)](_0x4f4dea(0x1bb),_0x10b874);let _0x225128=_0x1cf083[_0x4f4dea(0x142)]('#'+musicList_[_0x5257c6][_0x4f4dea(0x13f)]),_0xaf03f1=_0x1cf083[_0x4f4dea(0x142)]('.'+musicList_[_0x5257c6][_0x4f4dea(0x13f)]);_0xaf03f1[_0x4f4dea(0x178)](_0x4f4dea(0x15b),()=>{const _0x3e8956=_0x5ce6a8,_0x2c87b6=_0x4f4dea;let _0x151cbe=_0xaf03f1[_0x2c87b6(0x182)],_0xb6ab8=Math[_0x3e8956(0x1d4)](_0x151cbe/0x3c),_0x41e49d=Math[_0x2c87b6(0x1c4)](_0x151cbe%0x3c);_0x41e49d<0xa&&(_0x41e49d='0'+_0x41e49d);;_0x225128[_0x2c87b6(0x1ad)]=_0xb6ab8+':'+_0x41e49d,_0x225128[_0x2c87b6(0x189)](_0x2c87b6(0x170),_0xb6ab8+':'+_0x41e49d);});}function _0x3507f1(_0x496e0c){_0x371510=_0x496e0c,_0x31b22f(_0x371510),_0x3e7917();}function _0x55d950(){const _0x2ae0dc=_0x4f4dea;let _0x4506ae=localStorage[_0x2ae0dc(0x144)](_0x2ae0dc(0x19a));ipcRenderer[_0x2ae0dc(0x141)](_0x2ae0dc(0x1b9),_0x4506ae);}}}function a171_0x3efa(_0x29406e,_0x2c5b57){const _0x2c86b6=a171_0x2bbc();return a171_0x3efa=function(_0x5840de,_0x4c9111){_0x5840de=_0x5840de-0x136;let _0x2bf486=_0x2c86b6[_0x5840de];return _0x2bf486;},a171_0x3efa(_0x29406e,_0x2c5b57);}export default Music;function a171_0x4eda(){const _0x10ace6=a171_0x1315,_0x1eaea9=a171_0x5e648d,_0x4e32a4=a171_0x216d4e,_0x44cc19=[_0x4e32a4(0x111),_0x4e32a4(0x7d),_0x1eaea9(0x182),_0x4e32a4(0x7a),_0x4e32a4(0x8d),_0x10ace6(0x10d),_0x4e32a4(0xa1),_0x4e32a4(0x10b),_0x4e32a4(0x6b),_0x4e32a4(0x139),_0x4e32a4(0x11b),_0x4e32a4(0xa9),_0x4e32a4(0xc9),_0x4e32a4(0xda),_0x4e32a4(0x100),_0x1eaea9(0x1cc),_0x1eaea9(0x178),_0x4e32a4(0x67),_0x4e32a4(0xef),_0x4e32a4(0x107),_0x1eaea9(0x19c),_0x4e32a4(0x132),_0x4e32a4(0x90),_0x4e32a4(0xb4),_0x4e32a4(0x109),_0x4e32a4(0xaa),_0x4e32a4(0x73),_0x4e32a4(0xcc),_0x1eaea9(0x199),_0x4e32a4(0xfa),_0x4e32a4(0x71),_0x1eaea9(0x18b),_0x4e32a4(0xf8),_0x4e32a4(0xbc),_0x4e32a4(0x126),_0x4e32a4(0x136),_0x4e32a4(0x130),_0x4e32a4(0x117),'className',_0x1eaea9(0x1b8),_0x4e32a4(0x106),_0x4e32a4(0x8f),_0x4e32a4(0xf5),_0x4e32a4(0x77),_0x4e32a4(0x6f),_0x1eaea9(0x1cf),_0x10ace6(0x157),_0x4e32a4(0x115),_0x4e32a4(0x80),_0x4e32a4(0xca),_0x4e32a4(0x116),_0x1eaea9(0x18d),_0x4e32a4(0xc3),_0x4e32a4(0x12c),_0x1eaea9(0x17e),_0x4e32a4(0x118),_0x4e32a4(0xae),_0x4e32a4(0xe5),_0x4e32a4(0xde),_0x4e32a4(0xdd),_0x1eaea9(0x16a),_0x10ace6(0x160),_0x4e32a4(0xd6),_0x4e32a4(0x10d),_0x4e32a4(0xd4),_0x4e32a4(0x129),_0x4e32a4(0x12f),_0x4e32a4(0xd3),_0x4e32a4(0xcb),_0x4e32a4(0x133),_0x4e32a4(0x138),_0x4e32a4(0x10e),_0x1eaea9(0x203),_0x4e32a4(0xf3),_0x4e32a4(0x103),_0x4e32a4(0xd7),_0x4e32a4(0x8e),_0x1eaea9(0x169),_0x4e32a4(0x135),_0x4e32a4(0xfe),_0x4e32a4(0x7b),_0x4e32a4(0xcd),_0x4e32a4(0xf7),_0x4e32a4(0x78),_0x1eaea9(0x189),_0x4e32a4(0xe0),_0x4e32a4(0xba),_0x4e32a4(0x110),_0x4e32a4(0xf2),_0x4e32a4(0x84),_0x4e32a4(0x81),_0x4e32a4(0x83),_0x4e32a4(0xa8),_0x4e32a4(0xea),_0x10ace6(0x12e),_0x4e32a4(0xd2),_0x4e32a4(0x9b),_0x1eaea9(0x1b1),_0x4e32a4(0x137),_0x4e32a4(0xa2),_0x1eaea9(0x15e),_0x4e32a4(0xa6),_0x4e32a4(0x98),_0x1eaea9(0x1c2),_0x4e32a4(0xfd),_0x4e32a4(0x85),_0x4e32a4(0xf6),_0x4e32a4(0xb5),_0x4e32a4(0x11a),_0x4e32a4(0x112),_0x1eaea9(0x1ae),_0x4e32a4(0x95),_0x4e32a4(0x69),_0x1eaea9(0x1d6),_0x1eaea9(0x20b),_0x10ace6(0x147),_0x1eaea9(0x198),_0x4e32a4(0xc4),_0x4e32a4(0x9d),_0x4e32a4(0xc2),_0x4e32a4(0xa5),_0x4e32a4(0xdb),_0x4e32a4(0x127),_0x4e32a4(0xb9),_0x4e32a4(0xaf),_0x4e32a4(0x120),_0x1eaea9(0x1f0),_0x4e32a4(0x72),_0x4e32a4(0x12b),'setItem',_0x1eaea9(0x183),_0x4e32a4(0xdc),_0x4e32a4(0xbf),_0x4e32a4(0x11e),_0x4e32a4(0x99),_0x4e32a4(0x89),_0x4e32a4(0x131),_0x4e32a4(0x11f),_0x4e32a4(0x7e),_0x1eaea9(0x160),_0x4e32a4(0x76),_0x10ace6(0x13b),_0x4e32a4(0x87),_0x4e32a4(0x123),_0x1eaea9(0x1f1),_0x4e32a4(0xce),_0x4e32a4(0x7f),_0x4e32a4(0x9e),_0x1eaea9(0x1ca),_0x4e32a4(0x10a),_0x4e32a4(0xe2),_0x4e32a4(0xf9),_0x4e32a4(0xe6),_0x1eaea9(0x1e5),_0x1eaea9(0x144),_0x4e32a4(0x113),_0x4e32a4(0xe9),_0x4e32a4(0xe7),_0x4e32a4(0x10c),_0x4e32a4(0xc6),_0x4e32a4(0xa7),_0x4e32a4(0x101),_0x1eaea9(0x1db),_0x1eaea9(0x1f9),_0x1eaea9(0x1e6),_0x4e32a4(0xa4),_0x4e32a4(0x119),_0x4e32a4(0x8a),_0x4e32a4(0x8b),_0x4e32a4(0x9a),_0x10ace6(0x13d),_0x4e32a4(0x86),_0x4e32a4(0xe8),_0x1eaea9(0x1ec),_0x1eaea9(0x195),_0x4e32a4(0x79),_0x4e32a4(0x74),_0x4e32a4(0x8c),_0x4e32a4(0xc7),_0x4e32a4(0xb7),_0x4e32a4(0xad),'<i\x20class=\x22fa-solid\x20fa-trash\x22></i>',_0x4e32a4(0x94),'songPlaying',_0x4e32a4(0x125),_0x4e32a4(0x88),_0x4e32a4(0xb1),_0x4e32a4(0x13a),_0x4e32a4(0x134),_0x4e32a4(0xb0),_0x4e32a4(0x11c),_0x4e32a4(0xd5),_0x4e32a4(0xb8),_0x4e32a4(0xa0),_0x4e32a4(0xf0),_0x4e32a4(0x105),_0x1eaea9(0x1f4),_0x4e32a4(0x12a),_0x1eaea9(0x187),_0x4e32a4(0x12d),_0x4e32a4(0xd9),_0x4e32a4(0xdf),_0x4e32a4(0xb6),_0x4e32a4(0x96),_0x4e32a4(0xbe),_0x4e32a4(0x124),_0x4e32a4(0x102),_0x4e32a4(0xac),_0x1eaea9(0x19b),_0x10ace6(0x119),_0x4e32a4(0xe3),_0x4e32a4(0xc5),_0x1eaea9(0x1bd),_0x4e32a4(0xe4),_0x1eaea9(0x146),_0x1eaea9(0x1a9),_0x1eaea9(0x204),_0x4e32a4(0xc8),_0x4e32a4(0xf4),_0x4e32a4(0xd0),_0x4e32a4(0x75),_0x4e32a4(0x128),_0x4e32a4(0xab),_0x4e32a4(0x12e),_0x4e32a4(0x97),_0x4e32a4(0xec)];return a171_0x4eda=function(){return _0x44cc19;},a171_0x4eda();}
+
+'use strict';
+
+const { ipcMain, ipcRenderer } = require('electron');
+import { database, changePanel, addAccount, accountSelect } from '../utils.js';
+
+const Swal = require('./assets/js/libs/sweetalert/sweetalert2.all.min');
+const usetube = require('./assets/js/libs/youtube/usetube');
+
+const ytdl = require('ytdl-core');
+
+const dataDirectory = `${process.env.APPDATA || (process.platform == 'darwin' ? `${process.env.HOME}/Library/Application Support` : process.env.HOME)}/.battly`
+const fs = require('fs');
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 5000,
+  timerProgressBar: false,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  },
+});
+
+let musicList_ = [];       
+import { Lang } from "../utils/lang.js";
+let lang;
+
+class Music {
+    static id = "music";
+    async init(config) {
+        this.config = config
+      this.database = await new database().init();
+      this.lang = await new Lang().GetLang();
+      lang = this.lang;
+      this.load();
+      this.PlayLists();
+  }
+  
+  async PlayLists() {
+    if (!fs.existsSync(`${dataDirectory}`)) {
+      fs.mkdirSync(`${dataDirectory}`);
+    }
+
+    if (!fs.existsSync(`${dataDirectory}/battly`)) {
+      fs.mkdirSync(`${dataDirectory}/battly`);
+    }
+
+    if (!fs.existsSync(`${dataDirectory}/battly/launcher`)) {
+      fs.mkdirSync(`${dataDirectory}/battly/launcher`);
+    }
+
+    if (!fs.existsSync(`${dataDirectory}/battly/launcher/music`)) {
+      fs.mkdirSync(`${dataDirectory}/battly/launcher/music`);
+    }
+
+    if (!fs.existsSync(`${dataDirectory}/battly/launcher/music/playlists.json`)) {
+      fs.writeFileSync(`${dataDirectory}/battly/launcher/music/playlists.json`, JSON.stringify([]));
+    }
+
+    document.getElementById("save-playlist").addEventListener("click", async () => {
+      let playlistsFile = await fs.readFileSync(`${dataDirectory}/battly/launcher/music/playlists.json`, 'utf8');
+      let playlists = JSON.parse(playlistsFile);
+
+      if (musicList_.length === 0) return Toast.fire({
+        icon: 'error',
+        title: lang.you_dont_have_songs_in_your_playlist
+      });
+
+      // Crear el elemento div principal con la clase "modal is-active" y estilo z-index
+      const modalDiv = document.createElement('div');
+      modalDiv.className = 'modal is-active';
+      modalDiv.style.zIndex = '4';
+
+      // Crear el elemento div con la clase "modal-background" y agregarlo al div principal
+      const modalBackgroundDiv = document.createElement('div');
+      modalBackgroundDiv.className = 'modal-background';
+      modalDiv.appendChild(modalBackgroundDiv);
+
+      // Crear el elemento div con la clase "modal-card" y estilo de fondo y agregarlo al div principal
+      const modalCardDiv = document.createElement('div');
+      modalCardDiv.className = 'modal-card';
+      modalCardDiv.style.backgroundColor = '#444444';
+      modalDiv.appendChild(modalCardDiv);
+
+      // Crear el elemento header con la clase "modal-card-head" y estilo de fondo y agregarlo al div modal-card
+      const headerDiv = document.createElement('header');
+      headerDiv.className = 'modal-card-head';
+      headerDiv.style.backgroundColor = '#444444';
+      modalCardDiv.appendChild(headerDiv);
+
+      let modalCloseButton = document.createElement("button");
+      modalCloseButton.classList.add("delete");
+      modalCloseButton.setAttribute("aria-label", "close");
+
+      // Crear el elemento p con la clase "modal-card-title", estilo de color y texto, y agregarlo al div header
+      const titleP = document.createElement('p');
+      titleP.className = 'modal-card-title';
+      titleP.style.color = '#fff';
+      titleP.textContent = lang.save_playlist_text;
+      headerDiv.appendChild(titleP);
+      headerDiv.appendChild(modalCloseButton);
+
+      // Crear el elemento section con la clase "modal-card-body" y estilos de fondo y color, y agregarlo al div modal-card
+      const bodySection = document.createElement('section');
+      bodySection.className = 'modal-card-body';
+      bodySection.style.backgroundColor = '#444444';
+      bodySection.style.color = '#fff';
+      modalCardDiv.appendChild(bodySection);
+
+      // Crear el elemento p con el título de la playlist y agregarlo al div section
+      const playlistTitleP = document.createElement('p');
+      playlistTitleP.textContent = lang.playlist_name;
+      bodySection.appendChild(playlistTitleP);
+
+      // Crear el elemento input con la clase "input is-info" y agregarlo al div section
+      const inputText = document.createElement('input');
+      inputText.type = 'text';
+      inputText.className = 'input is-info';
+      bodySection.appendChild(inputText);
+
+      // Crear el elemento footer con la clase "modal-card-foot" y estilo de fondo y agregarlo al div modal-card
+      const footerDiv = document.createElement('footer');
+      footerDiv.className = 'modal-card-foot';
+      footerDiv.style.backgroundColor = '#444444';
+      modalCardDiv.appendChild(footerDiv);
+
+      // Crear el elemento button con la clase "button is-info" y texto "Guardar", y agregarlo al div footer
+      const saveButton = document.createElement('button');
+      saveButton.className = 'button is-info';
+      saveButton.textContent = lang.save;
+      footerDiv.appendChild(saveButton);
+
+      saveButton.addEventListener('click', () => {
+        const playlistName = inputText.value;
+
+        if (playlistName.length < 0) return Toast.fire({
+          icon: 'error',
+          title: lang.you_need_to_set_a_playlist_name
+        });
+
+        for (let playlist in playlists) {
+          if (playlist.name === playlistName) return Toast.fire({
+            icon: 'error',
+            title: lang.already_have_a_playlist_with_this_name
+          });
+        }
+
+        let newPlaylist = {
+          name: playlistName,
+          songs: musicList_,
+        }
+
+        playlists.push(newPlaylist);
+
+        fs.writeFileSync(`${dataDirectory}/battly/launcher/music/playlists.json`, JSON.stringify(playlists));
+
+        modalDiv.remove();
+
+        Toast.fire({
+          icon: 'success',
+          title: lang.playlist_saved_correctly
+        });
+      });
+
+      modalCloseButton.addEventListener('click', () => {
+        modalDiv.remove();
+      });
+
+      // Crear el elemento button con la clase "button is-danger" y texto "Cancelar", y agregarlo al div footer
+      const cancelButton = document.createElement('button');
+      cancelButton.className = 'button is-danger';
+      cancelButton.textContent = lang.cancel;
+      footerDiv.appendChild(cancelButton);
+      
+      cancelButton.addEventListener('click', () => {
+        modalDiv.remove();
+      });
+
+      // Agregar el div principal al cuerpo del documento
+      document.body.appendChild(modalDiv);
+    });
+  }
+
+  async load() {
+
+    document.getElementById("show-playlists").addEventListener("click", async () => {
+      let playlistsFile = await fs.readFileSync(`${dataDirectory}/battly/launcher/music/playlists.json`, 'utf8');
+      let playlists = JSON.parse(playlistsFile);
+      // Crear el elemento div principal con la clase "modal is-active" y estilo z-index
+      const modalDiv = document.createElement('div');
+      modalDiv.className = 'modal is-active';
+      modalDiv.style.zIndex = '4';
+
+      // Crear el elemento div con la clase "modal-background" y agregarlo al div principal
+      const modalBackgroundDiv = document.createElement('div');
+      modalBackgroundDiv.className = 'modal-background';
+      modalDiv.appendChild(modalBackgroundDiv);
+
+      // Crear el elemento div con la clase "modal-card" y estilo de fondo y agregarlo al div principal
+      const modalCardDiv = document.createElement('div');
+      modalCardDiv.className = 'modal-card';
+      modalCardDiv.style.backgroundColor = '#444444';
+      modalDiv.appendChild(modalCardDiv);
+
+      // Crear el elemento header con la clase "modal-card-head" y estilo de fondo y agregarlo al div modal-card
+      const headerDiv = document.createElement('header');
+      headerDiv.className = 'modal-card-head';
+      headerDiv.style.backgroundColor = '#444444';
+      modalCardDiv.appendChild(headerDiv);
+
+      let modalCloseButton = document.createElement("button");
+      modalCloseButton.classList.add("delete");
+      modalCloseButton.setAttribute("aria-label", "close");
+
+      modalCloseButton.addEventListener('click', () => {
+        modalDiv.remove();
+      });
+
+      // Crear el elemento p con la clase "modal-card-title", estilo de color y texto, y agregarlo al div header
+      const titleP = document.createElement('p');
+      titleP.className = 'modal-card-title';
+      titleP.style.color = '#fff';
+      titleP.textContent = lang.saved_playlists;
+      headerDiv.appendChild(titleP);
+      headerDiv.appendChild(modalCloseButton);
+
+      // Crear el elemento section con la clase "modal-card-body" y estilos de fondo y color, y agregarlo al div modal-card
+      const bodySection = document.createElement('section');
+      bodySection.className = 'modal-card-body';
+      bodySection.style.backgroundColor = '#444444';
+      bodySection.style.color = '#fff';
+      modalCardDiv.appendChild(bodySection);
+
+      // Crear el elemento p con el mensaje de bienvenida y agregarlo al div section
+      const welcomeP = document.createElement('p');
+      welcomeP.innerHTML = lang.welcome_to_the_new_playlists_system;
+      bodySection.appendChild(welcomeP);
+
+      for (let playlist of playlists) {
+        const cardDiv = document.createElement('div');
+        cardDiv.className = 'card';
+        bodySection.appendChild(cardDiv);
+
+        // Crear el elemento header con la clase "card-header is-flex" y agregarlo al div card
+        const cardHeaderDiv = document.createElement('header');
+        cardHeaderDiv.className = 'card-header is-flex';
+        cardDiv.appendChild(cardHeaderDiv);
+
+        // Crear el elemento p con la clase "card-header-title" y texto "Playlist 1", y agregarlo al div card-header
+        const cardTitleP = document.createElement('p');
+        cardTitleP.className = 'card-header-title';
+        cardTitleP.textContent = playlist.name;
+        cardHeaderDiv.appendChild(cardTitleP);
+
+        // Crear el elemento div con la clase "buttons" y estilo de margen derecho, y agregarlo al div card-header
+        const buttonsDiv = document.createElement('div');
+        buttonsDiv.className = 'buttons';
+        buttonsDiv.style.marginRight = '5px';
+        cardHeaderDiv.appendChild(buttonsDiv);
+
+        // Crear el elemento button con la clase "button is-info" y estilo de margen derecho, y agregarlo al div buttons
+        const playButton = document.createElement('button');
+        playButton.className = 'button is-info';
+        playButton.style.marginRight = '0px';
+        buttonsDiv.appendChild(playButton);
+
+        playButton.addEventListener('click', async () => {
+          musicList_ = playlist.songs;
+          let newMusicList = [];
+
+          // Crear el elemento modal
+          const modal = document.createElement("div");
+          modal.classList.add("modal", "is-active");
+          modal.style.zIndex = "4";
+
+          // Crear el fondo del modal
+          const modalBackground = document.createElement("div");
+          modalBackground.classList.add("modal-background");
+
+          // Crear la tarjeta del modal
+          const modalCard = document.createElement("div");
+          modalCard.classList.add("modal-card");
+          modalCard.style.backgroundColor = "#444444";
+          modalCard.style.borderRadius = "5px";
+
+          // Crear el cuerpo de la tarjeta del modal
+          const modalCardBody = document.createElement("section");
+          modalCardBody.classList.add("modal-card-body");
+          modalCardBody.style.backgroundColor = "#444444";
+          modalCardBody.style.textAlign = "center";
+
+          // Crear la imagen
+          const image = document.createElement("img");
+          image.src = "./assets/images/icons/loading.gif";
+          image.style.width = "70px";
+          image.style.height = "70px";
+          image.style.margin = "0 auto";
+          image.alt = "";
+
+          // Crear el párrafo
+          const paragraph = document.createElement("p");
+          paragraph.style.color = "#fff";
+          paragraph.style.fontSize = "20px";
+          paragraph.innerText = lang.getting_songs;
+
+          // Agregar la imagen y el párrafo al cuerpo de la tarjeta del modal
+          modalCardBody.appendChild(image);
+          modalCardBody.appendChild(paragraph);
+
+          // Agregar el cuerpo de la tarjeta al modal
+          modalCard.appendChild(modalCardBody);
+
+          // Agregar el fondo del modal y la tarjeta del modal al modal
+          modal.appendChild(modalBackground);
+          modal.appendChild(modalCard);
+
+          // Agregar el modal al documento body
+          document.body.appendChild(modal);
+
+          modalDiv.remove();
+
+          for (let song of playlist.songs) {
+            paragraph.innerText = `${lang.getting} ${song.name} (${newMusicList.length}/${playlist.songs.length})`;
+            await ytdl.getInfo(song.url, { quality: 'highestaudio' })
+              .then(info => {
+                const audioFormat = info.formats.find(format => format.mimeType.includes('audio/mp4'));
+      
+                if (!audioFormat) {
+                  console.error("No se encontró un formato de audio adecuado");
+                  return;
+                }
+      
+                const audioUrl = audioFormat.url;
+
+                newMusicList.push({
+                  url: song.url,
+                  name: song.name,
+                  author: song.author,
+                  img: song.img,
+                  audio: audioUrl,
+                  duration: song.duration
+                });
+
+                
+
+                const resultsDiv = document.getElementById("playlist");
+                let i = 1;
+
+                if (newMusicList.length === playlist.songs.length) {
+                  clicked(1);
+                  musicList_ = newMusicList;
+
+                  document.getElementById("playlist").innerHTML = "";
+  
+                  // Mapear el array original para mantener el orden
+                  const orderedMusicList = playlist.songs.map((song, index) => {
+                    const music = musicList_.find(item => item.name === song.name);
+                    return { ...music, index }; // Añadir el índice al objeto si es necesario
+                  });
+
+                  for (let music of orderedMusicList) {
+                    paragraph.innerText = `${lang.loading} ${music.name} (${i}/${orderedMusicList.length})`;
+                    i++;
+
+                    const cardDiv = document.createElement("div");
+                    cardDiv.classList.add("card");
+                    cardDiv.classList.add("cards");
+                    cardDiv.setAttribute("data-id", i + 1);
+
+                    const img = document.createElement("img");
+                    img.src = music.img;
+                    img.alt = lang.thumbnail;
+                    img.classList.add("thumbnail");
+                    cardDiv.appendChild(img);
+
+                    const cardContentDiv = document.createElement("div");
+                    cardContentDiv.classList.add("card-content");
+                    cardContentDiv.classList.add("card-content1");
+
+                    const songTitleDiv = document.createElement("div");
+                    songTitleDiv.classList.add("song-title");
+                    songTitleDiv.innerText = music.name;
+                    cardContentDiv.appendChild(songTitleDiv);
+
+                    const artistDiv = document.createElement("div");
+                    artistDiv.classList.add("artist");
+                    artistDiv.innerText = music.author;
+                    cardContentDiv.appendChild(artistDiv);
+
+                    const button = document.createElement("button");
+                    button.classList.add("delete-button");
+                    button.classList.add("button");
+                    button.classList.add("is-danger");
+                    button.innerText = lang.delete;
+
+                    button.addEventListener("click", async () => {
+                      button.disabled = true;
+                      button.classList.add("is-loading");
+                      const index = orderedMusicList.indexOf(music);
+                      if (index > -1) {
+                        orderedMusicList.splice(index, 1);
+                      }
+                      cardDiv.remove();
+                      button.disabled = false;
+                      button.classList.remove("is-loading");
+                      button.classList.remove("is-info");
+                      button.classList.add("is-success");
+
+                      setTimeout(() => {
+                        button.classList.remove("is-success");
+                        button.classList.add("is-danger");
+                      }, 2000);
+                    });
+
+                    cardContentDiv.appendChild(button);
+                    cardDiv.appendChild(cardContentDiv);
+
+                    resultsDiv.appendChild(cardDiv);
+                  }
+                }
+              });
+          }
+
+          paragraph.innerHTML = `${lang.songs_loaded_playing} ${newMusicList[0].name}`;
+          setTimeout(() => {
+            modal.remove();
+          }, 5000);
+        });
+
+        // Crear el elemento span con el ícono de reproducción y agregarlo al botón playButton
+        const playIconSpan = document.createElement('span');
+        playIconSpan.innerHTML = '<i class="fa-solid fa-play"></i>';
+        playButton.appendChild(playIconSpan);
+
+        // Crear el elemento button con la clase "button is-danger", y agregarlo al div buttons
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'button is-danger';
+        buttonsDiv.appendChild(deleteButton);
+
+        deleteButton.addEventListener('click', () => {
+          const index = playlists.indexOf(playlist);
+          if (index > -1) {
+            playlists.splice(index, 1);
+          }
+          fs.writeFileSync(`${dataDirectory}/battly/launcher/music/playlists.json`, JSON.stringify(playlists));
+          cardDiv.remove();
+          Toast.fire({
+            icon: 'success',
+            title: lang.playlist_deleted_correctly
+          });
+        });
+
+        // Crear el elemento span con el ícono de eliminación y agregarlo al botón deleteButton
+        const deleteIconSpan = document.createElement('span');
+        deleteIconSpan.innerHTML = '<i class="fa-solid fa-trash"></i>';
+        deleteButton.appendChild(deleteIconSpan);
+
+        //crear un separador de 5px
+        const separator = document.createElement('div');
+        separator.style.height = '5px';
+        bodySection.appendChild(separator);
+      }
+      document.body.appendChild(modalDiv);
+    });
+      
+    let sortable = new Sortable(document.getElementById('playlist'), {
+      animation: 250, // Duración de la animación en milisegundos
+      ghostClass: 'seleccionado', // Clase de estilo para el elemento seleccionado
+      chosenClass: 'seleccionado', // Clase de estilo para el elemento elegido
+    });
+
+    const playlistAudio = document.getElementById("main-audio");
+
+        
+
+        
+
+    document.getElementById("return-btn").addEventListener("click", () => {
+      changePanel("home");
+    });
+
+    const wrapper = document.getElementById("card-wrapper"),
+      musicImg = wrapper.querySelector(".img-area img"),
+      musicName = document.querySelector(".song-details .artist"),
+      playPauseBtn = wrapper.querySelector(".play-pause"),
+      prevBtn = wrapper.querySelector("#prev"),
+      nextBtn = wrapper.querySelector("#next"),
+      mainAudio = wrapper.querySelector("#main-audio"),
+      progressArea = wrapper.querySelector(".progress-area"),
+      progressBar = progressArea.querySelector(".progress-bar");
+    
+      
+          
+      
+          
+      
+    function playAudioFromVideoId(videoId) {
+      ytdl.getInfo(videoId, { quality: 'highestaudio' })
+        .then(info => {
+          const audioFormat = info.formats.find(format => format.mimeType.includes('audio/mp4'));
+      
+          if (!audioFormat) {
+            console.error("No se encontró un formato de audio adecuado");
+            return;
+          }
+      
+          const audioUrl = audioFormat.url;
+      
+          /* formato: { name: "Nice piano and ukulele", author: "Royalty", img: "https://www.bensound.com/bensound-img/buddy.jpg", audio: "https://www.bensound.com/bensound-music/bensound-buddy.mp3", duration: "2:02" },
+          */
+      
+          //convertir a minutos:segundos
+          const duration = info.videoDetails.lengthSeconds;
+          const minutes = Math.floor(duration / 60);
+          const seconds = duration % 60;
+          const durationString = minutes + ":" + seconds;
+      
+          musicList_.push({
+            url: videoId,
+            name: info.videoDetails.title,
+            author: info.videoDetails.author.name,
+            img: info.videoDetails.thumbnails[0].url,
+            audio: audioUrl,
+            duration: durationString
+          });
+      
+          addMusicToPlaylist(musicList_.length);
+        })
+        .catch(error => {
+          console.error("Error al obtener información del video:");
+          console.error(error);
+        });
+    }
+
+    async function searchAndShowResults(songName) {
+      let btnSearch = document.getElementById("reproducir-btn");
+      btnSearch.disabled = true;
+      btnSearch.classList.add("is-loading");
+      let results = await usetube.searchVideo(songName)
+      results = results.videos;
+
+      if (results.length > 0) {
+            
+
+        const resultsDiv = document.getElementById("playlist");
+        resultsDiv.innerHTML = "";
+
+        for (let i = 0; i < results.length; i++) {
+          const result = results[i];
+          const videoId = result.id;
+          const title = result.title;
+          const author = result.artist;
+          const thumbnail = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+
+          /* crear esto:
+          <div class="card cards" data-id="1">
+  <!-- Datos de la primera canción -->
+  <img
+    src="miniatura"
+    alt="Miniatura" class="thumbnail">
+  <div class="card-content">
+    <div class="song-title">Nombre de la Canción 1</div>
+    <div class="artist">Nombre del Artista</div>
+    <button class="delete-button button is-infio">Añadir</button>
+  </div>
+</div>
+          */
+                
+          const cardDiv = document.createElement("div");
+          cardDiv.classList.add("card");
+          cardDiv.classList.add("cards");
+          cardDiv.setAttribute("data-id", i + 1);
+
+          const img = document.createElement("img");
+          img.src = thumbnail;
+          img.alt = lang.thumbnail;
+          img.classList.add("thumbnail");
+          cardDiv.appendChild(img);
+
+          const cardContentDiv = document.createElement("div");
+          cardContentDiv.classList.add("card-content");
+          cardContentDiv.classList.add("card-content1");
+
+          const songTitleDiv = document.createElement("div");
+          songTitleDiv.classList.add("song-title");
+          songTitleDiv.innerText = title;
+          cardContentDiv.appendChild(songTitleDiv);
+
+          const artistDiv = document.createElement("div");
+          artistDiv.classList.add("artist");
+          artistDiv.innerText = author;
+          cardContentDiv.appendChild(artistDiv);
+
+          const button = document.createElement("button");
+          button.classList.add("delete-button");
+          button.classList.add("button");
+          button.classList.add("is-info");
+          button.innerText = lang.add;
+
+          button.addEventListener("click", async () => {
+            button.disabled = true;
+            button.classList.add("is-loading");
+            await playAudioFromVideoId(videoId);
+            button.disabled = false;
+            button.classList.remove("is-loading");
+            button.classList.remove("is-info");
+            button.classList.add("is-success");
+
+            setTimeout(() => {
+              button.classList.remove("is-success");
+              button.classList.add("is-info");
+
+
+
+              sortable = new Sortable(document.getElementById('playlist'), {
+                animation: 150,
+                ghostClass: 'seleccionado',
+                chosenClass: 'seleccionado',
+                onEnd: handleSortEnd, // Llamar a la función handleSortEnd al finalizar el arrastre
+              });
+
+
+                  
+              const resultsDiv = document.getElementById("playlist");
+              resultsDiv.innerHTML = "";
+
+              for (let music of musicList_) {
+
+                //eliminar los elementos de la lista de reproducción
+                    
+                /* crear esto:
+                <div class="card cards grab" data-id="1">
+        <!-- Datos de la primera canción -->
+        <img
+          src="miniatura"
+          alt="Miniatura" class="thumbnail">
+        <div class="card-content">
+          <div class="song-title">Nombre de la Canción 1</div>
+          <div class="artist">Nombre del Artista</div>
+          <button class="delete-button button is-infio">Eliminar</button>
+        </div>
+      </div>
+                */
+                    
+                const cardDiv = document.createElement("div");
+                cardDiv.classList.add("card");
+                cardDiv.classList.add("cards");
+                cardDiv.classList.add("grab");
+                cardDiv.setAttribute("data-id", i + 1);
+        
+                const img = document.createElement("img");
+                img.src = music.img;
+                img.alt = lang.thumbnail;
+                img.classList.add("thumbnail");
+                cardDiv.appendChild(img);
+        
+                const cardContentDiv = document.createElement("div");
+                cardContentDiv.classList.add("card-content");
+                cardContentDiv.classList.add("card-content1");
+        
+                const songTitleDiv = document.createElement("div");
+                songTitleDiv.classList.add("song-title");
+                songTitleDiv.innerText = music.name;
+                cardContentDiv.appendChild(songTitleDiv);
+        
+                const artistDiv = document.createElement("div");
+                artistDiv.classList.add("artist");
+                artistDiv.innerText = music.author;
+                cardContentDiv.appendChild(artistDiv);
+        
+                const button = document.createElement("button");
+                button.classList.add("delete-button");
+                button.classList.add("button");
+                button.classList.add("is-danger");
+                button.innerText = lang.delete;
+        
+                button.addEventListener("click", async () => {
+                  button.disabled = true;
+                  button.classList.add("is-loading");
+                  const index = musicList_.indexOf(music);
+                  if (index > -1) {
+                    musicList_.splice(index, 1);
+                  }
+                  cardDiv.remove();
+                  button.disabled = false;
+                  button.classList.remove("is-loading");
+                  button.classList.remove("is-info");
+                  button.classList.add("is-success");
+        
+                  setTimeout(() => {
+                    button.classList.remove("is-success");
+                    button.classList.add("is-danger");
+                  }, 2000);
+                });
+                      
+                cardContentDiv.appendChild(button);
+                cardDiv.appendChild(cardContentDiv);
+                      
+                resultsDiv.appendChild(cardDiv);
+              }
+
+              function handleSortEnd(event) {
+                const { oldIndex, newIndex } = event;
+
+                // Actualizar el array musicList_ según la nueva ordenación
+                const movedMusic = musicList_.splice(oldIndex, 1)[0];
+                musicList_.splice(newIndex, 0, movedMusic);
+
+              }
+
+            }, 2000);
+          });
+                
+          cardContentDiv.appendChild(button);
+          cardDiv.appendChild(cardContentDiv);
+                
+          resultsDiv.appendChild(cardDiv);
+                  
+        }
+
+        btnSearch.disabled = false;
+        btnSearch.classList.remove("is-loading");
+        btnSearch.classList.remove("is-info");
+        btnSearch.classList.add("is-success");
+        btnSearch.innerHTML = `<span><i class="fa-solid fa-circle-check"></i> ${lang.finded}</span>`;
+
+        setTimeout(() => {
+          btnSearch.classList.remove("is-success");
+          btnSearch.classList.add("is-info");
+          btnSearch.innerHTML = `<span><i class="fa-solid fa-search"></i> ${lang.search}</span>`;
+        }, 2000);
+
+      } else {
+        btnSearch.disabled = false;
+        btnSearch.classList.remove("is-loading");
+        btnSearch.classList.remove("is-info");
+        btnSearch.classList.add("is-danger");
+        btnSearch.innerHTML = `<span><i class="fa-solid fa-xmark"></i> ${lang.not_founded}</span>`;
+
+        setTimeout(() => {
+          btnSearch.classList.remove("is-danger");
+          btnSearch.classList.add("is-info");
+          btnSearch.innerHTML = `<span><i class="fa-solid fa-search"></i> ${lang.search}</span>`;
+        }, 3000);
+      }
+    }
+
+    let volumenAudio = document.getElementById("volumen")
+    volumenAudio.addEventListener("input", function (e) {
+      let labelVolumen = document.getElementById("label-volumen");
+      labelVolumen.innerHTML = e.target.value + "%";
+      let value = e.target.value / 100;
+      volumenAudio.style.setProperty("--thumb-rotate", `${value * 720}deg`);
+      mainAudio.volume = value;
+    });
+
+      
+
+    function addMusicToPlaylist(index) {
+      const newMusic = musicList_[index - 1];
+
+
+      //si no hay ninguna canción reproduciéndose en el array, reproducir la canción recién agregada
+      if (musicList_.length === 1) {
+        clicked(index);
+      }
+    }
+      
+      
+      
+    const btnDownload = document.getElementById("reproducir-btn");
+    btnDownload.addEventListener("click", () => {
+      const songName = document.getElementById("nombre-de-cancion").value;
+      searchAndShowResults(songName);
+    });
+      
+      
+      
+      
+      
+    let musicIndex = Math.floor((Math.random() * musicList_.length) + 1);
+    let isMusicPaused = false;
+      
+    window.addEventListener("load", () => {
+      loadMusic(musicIndex);
+      playingSong();
+    });
+      
+    function loadMusic(indexNumb) {
+      musicName.innerText = musicList_[indexNumb - 1].name + '\n' + musicList_[indexNumb - 1].author;
+      musicImg.src = musicList_[indexNumb - 1].img;
+      mainAudio.src = musicList_[indexNumb - 1].audio;
+      localStorage.setItem("songPlaying", musicList_[indexNumb - 1]);
+      document.getElementById("music-img").src = musicList_[indexNumb - 1].img;
+      /*width: 64px;
+  height: 36px;*/
+      //dejar sólo 30 caracteres en el título
+      //document.getElementById("music-description").innerText = musicList_[indexNumb - 1].name.substring(0, 50) + "...";
+
+      ipcRenderer.send("set-song", musicList_[indexNumb - 1]);
+    }
+      
+    //play music function
+    function playMusic() {
+      wrapper.classList.add("paused");
+      playPauseBtn.querySelector("i").innerText = "pause";
+      mainAudio.play();
+    }
+      
+    //pause music function
+    function pauseMusic() {
+      wrapper.classList.remove("paused");
+      playPauseBtn.querySelector("i").innerText = "play_arrow";
+      mainAudio.pause();
+    }
+      
+    //prev music function
+    function prevMusic() {
+      musicIndex--; //decrement of musicIndex by 1
+      //if musicIndex is less than 1 then musicIndex will be the array length so the last music play
+      musicIndex < 1 ? musicIndex = musicList_.length : musicIndex = musicIndex;
+      loadMusic(musicIndex);
+      playMusic();
+      playingSong();
+    }
+      
+    //next music function
+    function nextMusic() {
+      musicIndex++; //increment of musicIndex by 1
+      //if musicIndex is greater than array length then musicIndex will be 1 so the first music play
+      musicIndex > musicList_.length ? musicIndex = 1 : musicIndex = musicIndex;
+      loadMusic(musicIndex);
+      playMusic();
+      playingSong();
+    }
+      
+      
+    // play or pause button event
+    playPauseBtn.addEventListener("click", () => {
+      const isMusicPlay = wrapper.classList.contains("paused");
+      //if isPlayMusic is true then call pauseMusic else call playMusic
+      isMusicPlay ? pauseMusic() : playMusic();
+      playingSong();
+    });
+      
+    //prev music button event
+    prevBtn.addEventListener("click", () => {
+      prevMusic();
+    });
+      
+    //next music button event
+    nextBtn.addEventListener("click", () => {
+      nextMusic();
+    });
+
+    ipcRenderer.on('play-pause', () => {
+      const isMusicPlay = wrapper.classList.contains("paused");
+      //if isPlayMusic is true then call pauseMusic else call playMusic
+      isMusicPlay ? pauseMusic() : playMusic();
+      playingSong();
+    });
+
+    ipcRenderer.on('next', () => {
+      nextMusic();
+    });
+
+    ipcRenderer.on('prev', () => {
+      prevMusic();
+    });
+      
+    // update progress bar width according to music current time
+    mainAudio.addEventListener("timeupdate", (e) => {
+      const currentTime = e.target.currentTime; //getting playing song currentTime
+      const duration = e.target.duration; //getting playing song total duration
+      let progressWidth = (currentTime / duration) * 100;
+      progressBar.style.width = `${progressWidth}%`;
+      
+      let musicCurrentTime = wrapper.querySelector(".current-time"),
+        musicDuartion = wrapper.querySelector(".max-duration");
+      mainAudio.addEventListener("loadeddata", () => {
+        // update song total duration
+        let mainAdDuration = mainAudio.duration;
+        let totalMin = Math.floor(mainAdDuration / 60);
+        let totalSec = Math.floor(mainAdDuration % 60);
+        if (totalSec < 10) { //if sec is less than 10 then add 0 before it
+          totalSec = `0${totalSec}`;
+        }
+        musicDuartion.innerText = `${totalMin}:${totalSec}`;
+      });
+      // update playing song current time
+      let currentMin = Math.floor(currentTime / 60);
+      let currentSec = Math.floor(currentTime % 60);
+      if (currentSec < 10) { //if sec is less than 10 then add 0 before it
+        currentSec = `0${currentSec}`;
+      }
+      musicCurrentTime.innerText = `${currentMin}:${currentSec}`;
+    });
+      
+    // update playing song currentTime on according to the progress bar width
+    progressArea.addEventListener("click", (e) => {
+      let progressWidth = progressArea.clientWidth; //getting width of progress bar
+      let clickedOffsetX = e.offsetX; //getting offset x value
+      let songDuration = mainAudio.duration; //getting song total duration
+        
+      mainAudio.currentTime = (clickedOffsetX / progressWidth) * songDuration;
+      playMusic(); //calling playMusic function
+      playingSong();
+    });
+      
+    //code for what to do after song ended
+    mainAudio.addEventListener("ended", () => {
+      let randIndex = Math.floor((Math.random() * musicList_.length) + 1); //genereting random index/numb with max range of array length
+      do {
+        randIndex = Math.floor((Math.random() * musicList_.length) + 1);
+      } while (musicIndex == randIndex); //this loop run until the next random number won't be the same of current musicIndex
+      musicIndex = randIndex; //passing randomIndex to musicIndex
+      loadMusic(musicIndex);
+      playMusic();
+      playingSong();
+    });
+      
+      
+    const ulTag = wrapper.querySelector("ul");
+    // let create li tags according to array length for list
+    for (let i = 0; i < musicList_.length; i++) {
+      //let's pass the song name, artist from the array
+      let liTag = `<li li-index="${i + 1}">
+                      <div class="row">
+                        <span>${musicList_[i].name}</span>
+                        <p>${musicList_[i].author}</p>
+                      </div>
+                      <span id="${musicList_[i].src}" class="audio-duration">${musicList_[i].duration}</span>
+                      <audio class="${musicList_[i].src}" src="${musicList_[i].audio}"></audio>
+                    </li>`;
+      ulTag.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
+      
+      let liAudioDuartionTag = ulTag.querySelector(`#${musicList_[i].src}`);
+      let liAudioTag = ulTag.querySelector(`.${musicList_[i].src}`);
+      liAudioTag.addEventListener("loadeddata", () => {
+        let duration = liAudioTag.duration;
+        let totalMin = Math.floor(duration / 60);
+        let totalSec = Math.floor(duration % 60);
+        if (totalSec < 10) { //if sec is less than 10 then add 0 before it
+          totalSec = `0${totalSec}`;
+        };
+        liAudioDuartionTag.innerText = `${totalMin}:${totalSec}`; //passing total duation of song
+        liAudioDuartionTag.setAttribute("t-duration", `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
+      });
+    }
+      
+    //particular li clicked function
+    function clicked(index) {
+      musicIndex = index; // Actualiza el índice de la canción actual
+      loadMusic(musicIndex);
+      playMusic();
+    }
+
+    function playingSong() {
+      let songPlaying = localStorage.getItem("songPlaying");
+      ipcRenderer.send("song-playing", songPlaying);
+    }
+  }
+}
+
+export default Music;

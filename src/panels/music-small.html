@@ -44,15 +44,10 @@
         </div>
   </body>
   <script>
-    console.log("ShowMusicInfo");
     
         const { ipcRenderer } = require("electron");
-        console.log(ipcRenderer);
 
         ipcRenderer.on('get-song-test', (event, song) => {
-            console.log("la cancion es: ");
-            console.log(song);
-            //document.getElementById("musicSmallName").innerText = song.name; limitado a 50 caracteres
             document.getElementById("musicSmallName").innerText = song.name.substring(0, 30) + "...";
             document.getElementById("musicSmallDesc").innerText = song.author;
             document.getElementById("musicSmallImg").src = song.img;

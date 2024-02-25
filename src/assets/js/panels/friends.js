@@ -1,5 +1,1463 @@
 /**
  * @author TECNO BROS
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
+ 
  */
-'use strict';const a166_0x32efc9=a166_0x2018;(function(_0x85b9b8,_0x305c43){const _0x34933e=a166_0x2018,_0x445de2=_0x85b9b8();while(!![]){try{const _0x436519=-parseInt(_0x34933e(0x1c8))/0x1*(-parseInt(_0x34933e(0x1dc))/0x2)+-parseInt(_0x34933e(0x23a))/0x3+parseInt(_0x34933e(0x19f))/0x4*(parseInt(_0x34933e(0x1cb))/0x5)+-parseInt(_0x34933e(0x25f))/0x6*(-parseInt(_0x34933e(0x208))/0x7)+-parseInt(_0x34933e(0x227))/0x8+parseInt(_0x34933e(0x266))/0x9+parseInt(_0x34933e(0x26a))/0xa;if(_0x436519===_0x305c43)break;else _0x445de2['push'](_0x445de2['shift']());}catch(_0x16d91b){_0x445de2['push'](_0x445de2['shift']());}}}(a166_0xbc5c,0xd9690));const a166_0x1e3183=a166_0x4463;(function(_0x4ce6f8,_0x51eaa1){const _0xe7a7d7=a166_0x2018,_0x55fb7a=a166_0x4463,_0x553bd1=_0x4ce6f8();while(!![]){try{const _0x364a69=parseInt(_0x55fb7a(0x227))/0x1*(-parseInt(_0x55fb7a(0x1a0))/0x2)+parseInt(_0x55fb7a(0x19a))/0x3+parseInt(_0x55fb7a(0x1ad))/0x4*(parseInt(_0x55fb7a(0x198))/0x5)+-parseInt(_0x55fb7a(0x1b3))/0x6+-parseInt(_0x55fb7a(0x213))/0x7*(-parseInt(_0x55fb7a(0x1d5))/0x8)+parseInt(_0x55fb7a(0x1e1))/0x9*(parseInt(_0x55fb7a(0x1a7))/0xa)+-parseInt(_0x55fb7a(0x1aa))/0xb;if(_0x364a69===_0x51eaa1)break;else _0x553bd1[_0xe7a7d7(0x1d0)](_0x553bd1[_0xe7a7d7(0x1d9)]());}catch(_0xd93f9d){_0x553bd1[_0xe7a7d7(0x1d0)](_0x553bd1['shift']());}}}(a166_0xf6c4,0x6edb4));const a166_0x1a7038=a166_0x1a55;function a166_0x4463(_0x2b1fb6,_0x312d65){const _0x22134c=a166_0xf6c4();return a166_0x4463=function(_0xe98c21,_0x363f87){_0xe98c21=_0xe98c21-0x16f;let _0x9c7a44=_0x22134c[_0xe98c21];return _0x9c7a44;},a166_0x4463(_0x2b1fb6,_0x312d65);}(function(_0x183233,_0x27908d){const _0x52ad46=a166_0x2018,_0x2fe3f6=a166_0x4463,_0x53f289=a166_0x1a55,_0x1b5267=_0x183233();while(!![]){try{const _0x9ee79=parseInt(_0x53f289(0x265))/0x1+parseInt(_0x53f289(0x236))/0x2+-parseInt(_0x53f289(0x29b))/0x3+parseInt(_0x53f289(0x26f))/0x4+parseInt(_0x53f289(0x1df))/0x5+-parseInt(_0x53f289(0x243))/0x6+-parseInt(_0x53f289(0x24b))/0x7;if(_0x9ee79===_0x27908d)break;else _0x1b5267['push'](_0x1b5267[_0x2fe3f6(0x219)]());}catch(_0x278f76){_0x1b5267[_0x2fe3f6(0x189)](_0x1b5267[_0x52ad46(0x1d9)]());}}}(a166_0x5a56,0x2739f));const a166_0x4e4148=a166_0x5ce5;(function(_0x8834a6,_0x2a2e83){const _0x3ddff4=a166_0x2018,_0x52ba5b=a166_0x1a55,_0x1a138a=a166_0x5ce5,_0x51be78=_0x8834a6();while(!![]){try{const _0x23e96a=-parseInt(_0x1a138a(0x22d))/0x1*(parseInt(_0x1a138a(0x1d1))/0x2)+-parseInt(_0x1a138a(0x217))/0x3*(parseInt(_0x1a138a(0x238))/0x4)+parseInt(_0x1a138a(0x215))/0x5*(-parseInt(_0x1a138a(0x1f4))/0x6)+parseInt(_0x1a138a(0x246))/0x7*(-parseInt(_0x1a138a(0x237))/0x8)+-parseInt(_0x1a138a(0x20a))/0x9+-parseInt(_0x1a138a(0x23f))/0xa+parseInt(_0x1a138a(0x290))/0xb;if(_0x23e96a===_0x2a2e83)break;else _0x51be78[_0x52ba5b(0x24d)](_0x51be78[_0x52ba5b(0x29f)]());}catch(_0x17e660){_0x51be78[_0x52ba5b(0x24d)](_0x51be78[_0x3ddff4(0x1d9)]());}}}(a166_0x1e24,0x324b3));import{logger,database,changePanel}from'../utils.js';const {ipcRenderer}=require(a166_0x4e4148(0x22a)),pkg=require(a166_0x1e3183(0x1f0)),fetch=require(a166_0x4e4148(0x21d)),axios=require(a166_0x4e4148(0x25b)),Swal=require(a166_0x4e4148(0x28e)),Toast=Swal[a166_0x1a7038(0x1f1)]({'toast':!![],'position':a166_0x4e4148(0x204),'showConfirmButton':![],'timer':0x1388,'timerProgressBar':!![],'didOpen':_0x3b9f38=>{const _0x543bb9=a166_0x1e3183,_0x1820e5=a166_0x1a7038,_0x7c1bc8=a166_0x4e4148;_0x3b9f38[_0x543bb9(0x1fa)](_0x7c1bc8(0x285),Swal[_0x7c1bc8(0x279)]),_0x3b9f38[_0x7c1bc8(0x24d)](_0x7c1bc8(0x1c6),Swal[_0x1820e5(0x1f2)]);}});let amigos;function a166_0x1e24(){const _0x41f2b8=a166_0x2018,_0x50e75f=a166_0x1e3183,_0x2c1af2=a166_0x1a7038,_0x46f9da=[_0x2c1af2(0x247),_0x41f2b8(0x212),_0x2c1af2(0x23f),_0x2c1af2(0x23b),_0x2c1af2(0x1f6),_0x2c1af2(0x24d),_0x2c1af2(0x1f4),_0x2c1af2(0x25b),_0x2c1af2(0x2a1),_0x2c1af2(0x285),_0x2c1af2(0x21c),_0x2c1af2(0x218),_0x2c1af2(0x215),_0x2c1af2(0x201),_0x2c1af2(0x233),_0x2c1af2(0x223),_0x2c1af2(0x248),_0x2c1af2(0x289),_0x2c1af2(0x257),_0x2c1af2(0x25f),_0x2c1af2(0x245),_0x2c1af2(0x2a3),_0x2c1af2(0x28f),_0x50e75f(0x1f1),_0x2c1af2(0x299),'Forge',_0x41f2b8(0x242),_0x2c1af2(0x28d),_0x2c1af2(0x242),_0x2c1af2(0x26b),_0x2c1af2(0x297),_0x2c1af2(0x295),_0x2c1af2(0x27c),_0x2c1af2(0x2a7),_0x2c1af2(0x24a),_0x2c1af2(0x266),_0x2c1af2(0x276),_0x2c1af2(0x1da),_0x41f2b8(0x259),_0x2c1af2(0x238),_0x50e75f(0x218),_0x2c1af2(0x205),_0x2c1af2(0x23e),_0x2c1af2(0x211),_0x2c1af2(0x283),_0x50e75f(0x170),_0x2c1af2(0x225),_0x2c1af2(0x1fe),_0x2c1af2(0x27f),_0x50e75f(0x204),_0x2c1af2(0x219),_0x2c1af2(0x2a5),_0x2c1af2(0x296),_0x2c1af2(0x222),_0x2c1af2(0x1e1),_0x2c1af2(0x298),_0x50e75f(0x1cf),_0x50e75f(0x1b1),_0x2c1af2(0x256),_0x2c1af2(0x255),_0x2c1af2(0x1e7),_0x50e75f(0x172),_0x2c1af2(0x1fc),_0x50e75f(0x1ca),_0x2c1af2(0x1db),_0x2c1af2(0x250),_0x2c1af2(0x26a),_0x2c1af2(0x27b),_0x50e75f(0x217),_0x2c1af2(0x286),_0x2c1af2(0x253),_0x2c1af2(0x273),_0x50e75f(0x1f7),_0x2c1af2(0x1e4),_0x2c1af2(0x203),_0x2c1af2(0x221),_0x2c1af2(0x287),_0x2c1af2(0x1e6),_0x2c1af2(0x28e),_0x2c1af2(0x23d),_0x2c1af2(0x26d),_0x2c1af2(0x24e),_0x41f2b8(0x257),_0x41f2b8(0x202),_0x50e75f(0x233),_0x2c1af2(0x23a),_0x2c1af2(0x22b),_0x50e75f(0x1e5),_0x2c1af2(0x214),_0x2c1af2(0x246),_0x2c1af2(0x268),_0x2c1af2(0x25a),_0x2c1af2(0x1fb),_0x41f2b8(0x23b),_0x50e75f(0x17a),_0x2c1af2(0x284),_0x50e75f(0x18d),_0x2c1af2(0x29c),_0x50e75f(0x1cb),_0x2c1af2(0x22c),_0x41f2b8(0x219),_0x2c1af2(0x252),_0x2c1af2(0x264),_0x2c1af2(0x1e9),_0x2c1af2(0x200),_0x2c1af2(0x1fa),_0x2c1af2(0x1fd),_0x2c1af2(0x1f5),_0x2c1af2(0x26e),_0x2c1af2(0x1ef),_0x2c1af2(0x1f7),_0x2c1af2(0x262),_0x2c1af2(0x28a),_0x41f2b8(0x1d7),_0x2c1af2(0x1e8),_0x2c1af2(0x206),_0x2c1af2(0x270),_0x2c1af2(0x213),_0x2c1af2(0x230),_0x50e75f(0x221),_0x2c1af2(0x260),_0x41f2b8(0x261),_0x2c1af2(0x22d),_0x2c1af2(0x28c),_0x2c1af2(0x279),_0x2c1af2(0x226),_0x2c1af2(0x1ff),_0x2c1af2(0x21d),_0x41f2b8(0x19e),_0x2c1af2(0x26c),_0x2c1af2(0x220),_0x2c1af2(0x22e),_0x2c1af2(0x229),_0x2c1af2(0x267),_0x50e75f(0x1fe),_0x2c1af2(0x228),_0x50e75f(0x1cc),_0x2c1af2(0x239),_0x41f2b8(0x1e2),_0x2c1af2(0x281),_0x2c1af2(0x244),_0x50e75f(0x1a1),_0x2c1af2(0x25c),_0x2c1af2(0x25e),_0x2c1af2(0x22a),_0x50e75f(0x18c),_0x2c1af2(0x234),_0x50e75f(0x187),'8FfiedJ',_0x2c1af2(0x2a8),'socket',_0x2c1af2(0x1de),_0x2c1af2(0x28b),_0x2c1af2(0x2a0),_0x2c1af2(0x275),_0x2c1af2(0x288),_0x2c1af2(0x249),_0x2c1af2(0x1f8),_0x2c1af2(0x274),_0x2c1af2(0x258),_0x50e75f(0x175),_0x50e75f(0x1c7),_0x2c1af2(0x269),_0x41f2b8(0x253),_0x41f2b8(0x246),_0x2c1af2(0x254),_0x2c1af2(0x293),_0x50e75f(0x196),_0x2c1af2(0x207),'modal\x20is-active',_0x2c1af2(0x292),_0x2c1af2(0x21f),_0x50e75f(0x1e3),_0x50e75f(0x1d2),_0x2c1af2(0x202),_0x2c1af2(0x1ed),_0x2c1af2(0x216),_0x2c1af2(0x227),_0x50e75f(0x22c),_0x50e75f(0x22f),_0x50e75f(0x21c),_0x2c1af2(0x27e),_0x50e75f(0x19b),_0x2c1af2(0x20a),_0x2c1af2(0x24f),_0x2c1af2(0x29d),_0x50e75f(0x174),_0x2c1af2(0x21e),'modal-card-body',_0x50e75f(0x1c0),_0x2c1af2(0x259),_0x2c1af2(0x271),_0x2c1af2(0x29e),_0x50e75f(0x205),_0x2c1af2(0x294),_0x2c1af2(0x1e0),_0x2c1af2(0x208),_0x2c1af2(0x20c),_0x2c1af2(0x21a),_0x2c1af2(0x2a6),_0x2c1af2(0x282),_0x2c1af2(0x1ea),_0x2c1af2(0x235),_0x2c1af2(0x1f3),_0x2c1af2(0x217),_0x2c1af2(0x1ec),_0x2c1af2(0x241),_0x2c1af2(0x224)];return a166_0x1e24=function(){return _0x46f9da;},a166_0x1e24();}function a166_0x2018(_0x3e05a0,_0x1d93c6){const _0xbc5cc8=a166_0xbc5c();return a166_0x2018=function(_0x20180c,_0xa009b3){_0x20180c=_0x20180c-0x19a;let _0xac2124=_0xbc5cc8[_0x20180c];return _0xac2124;},a166_0x2018(_0x3e05a0,_0x1d93c6);}function a166_0x5a56(){const _0x5baba5=a166_0x2018,_0x35afc3=a166_0x1e3183,_0x557eef=[_0x5baba5(0x241),_0x5baba5(0x1a6),_0x35afc3(0x20d),_0x35afc3(0x1b7),_0x35afc3(0x21a),_0x35afc3(0x22a),_0x5baba5(0x20b),'none',_0x35afc3(0x1f2),_0x35afc3(0x1e4),'url(\x27https://minotar.net/skin/MHF_Steve.png\x27)',_0x35afc3(0x1c4),_0x35afc3(0x1ff),_0x35afc3(0x1e7),_0x35afc3(0x1f9),_0x35afc3(0x1a2),_0x35afc3(0x1bf),_0x5baba5(0x21f),_0x35afc3(0x188),_0x5baba5(0x254),_0x35afc3(0x1c9),_0x35afc3(0x1ae),_0x35afc3(0x171),_0x35afc3(0x1bd),'push',_0x35afc3(0x17b),_0x35afc3(0x1d9),_0x35afc3(0x232),'content',_0x35afc3(0x206),_0x5baba5(0x247),_0x35afc3(0x178),_0x35afc3(0x1b4),_0x5baba5(0x200),_0x35afc3(0x17f),_0x35afc3(0x1a8),_0x5baba5(0x20c),_0x5baba5(0x223),_0x35afc3(0x210),_0x35afc3(0x1b8),_0x5baba5(0x1bc),_0x35afc3(0x1c5),_0x5baba5(0x1ca),'https://battlylauncher.com/assets/img/ares.png',_0x5baba5(0x20f),_0x35afc3(0x1fb),_0x35afc3(0x1de),_0x35afc3(0x1a5),_0x35afc3(0x177),'mouseleave',_0x5baba5(0x20e),_0x35afc3(0x173),_0x35afc3(0x1b2),_0x35afc3(0x1c6),_0x35afc3(0x1cd),_0x35afc3(0x19e),_0x35afc3(0x1e6),_0x5baba5(0x213),_0x35afc3(0x21b),_0x5baba5(0x1eb),_0x35afc3(0x181),_0x5baba5(0x244),_0x35afc3(0x1da),_0x35afc3(0x22b),'url(http://api.battlylauncher.com/api/skin/',_0x35afc3(0x1e9),_0x35afc3(0x215),_0x35afc3(0x204),_0x5baba5(0x206),_0x35afc3(0x233),_0x35afc3(0x183),'marginLeft',_0x35afc3(0x218),_0x35afc3(0x231),_0x35afc3(0x1df),_0x35afc3(0x1ed),_0x35afc3(0x1bc),_0x35afc3(0x21e),_0x35afc3(0x186),_0x35afc3(0x220),_0x35afc3(0x1fc),_0x5baba5(0x1ae),_0x5baba5(0x1fc),_0x5baba5(0x211),_0x35afc3(0x1f5),_0x35afc3(0x19f),_0x35afc3(0x1b5),_0x5baba5(0x214),_0x35afc3(0x1be),_0x35afc3(0x1d6),_0x35afc3(0x1e8),_0x35afc3(0x1eb),_0x35afc3(0x1c3),_0x5baba5(0x1de),_0x35afc3(0x1ac),_0x35afc3(0x1bb),_0x35afc3(0x195),_0x35afc3(0x20c),_0x5baba5(0x23d),_0x35afc3(0x179),'button\x20is-success\x20is-square',_0x35afc3(0x21c),_0x35afc3(0x1fd),_0x35afc3(0x197),_0x35afc3(0x1ea),_0x35afc3(0x228),_0x35afc3(0x219),_0x35afc3(0x1ec),_0x35afc3(0x1ba),_0x35afc3(0x1b9),_0x35afc3(0x17d),_0x5baba5(0x1a2),'alignItems',_0x35afc3(0x1dd),_0x35afc3(0x1ee),_0x35afc3(0x17c),_0x35afc3(0x223),_0x35afc3(0x17e),_0x35afc3(0x1c2),_0x35afc3(0x222),_0x5baba5(0x239),_0x35afc3(0x1d0),_0x5baba5(0x1d1),_0x35afc3(0x1a4),_0x35afc3(0x18f),_0x5baba5(0x1ab),_0x35afc3(0x200),_0x35afc3(0x202),_0x35afc3(0x1a1),_0x35afc3(0x1db),_0x35afc3(0x184),_0x35afc3(0x1e2),_0x35afc3(0x1e0),_0x5baba5(0x1b7),_0x5baba5(0x1d2),_0x35afc3(0x1af),_0x5baba5(0x1a4),_0x35afc3(0x1cb),_0x35afc3(0x22e),_0x35afc3(0x208),_0x35afc3(0x185),_0x35afc3(0x1c1),'APPDATA',_0x35afc3(0x20f),_0x35afc3(0x176),_0x5baba5(0x221),'username',_0x35afc3(0x1a3),_0x35afc3(0x211),_0x35afc3(0x1f8),_0x35afc3(0x22d),_0x35afc3(0x20e),_0x35afc3(0x21f),_0x35afc3(0x1d3),_0x35afc3(0x214),_0x35afc3(0x212),_0x35afc3(0x1ce),_0x35afc3(0x21d),_0x35afc3(0x16f),_0x35afc3(0x1f4),_0x35afc3(0x201),_0x35afc3(0x194),_0x35afc3(0x191),_0x35afc3(0x226),_0x35afc3(0x229),_0x5baba5(0x24b),_0x5baba5(0x1e1),_0x5baba5(0x265),_0x35afc3(0x221),_0x5baba5(0x250),_0x35afc3(0x1a9),_0x35afc3(0x1cf),_0x35afc3(0x193),_0x35afc3(0x19d),_0x35afc3(0x18a),_0x35afc3(0x1f3),'Ares',_0x35afc3(0x1b6),_0x35afc3(0x18b),_0x5baba5(0x1b4),_0x35afc3(0x1d8),_0x35afc3(0x192),_0x35afc3(0x1ca),_0x5baba5(0x1d6),_0x35afc3(0x224),_0x35afc3(0x1d7),_0x35afc3(0x199),_0x35afc3(0x18e),_0x35afc3(0x1c8),'Añadir\x20amigo',_0x35afc3(0x1d4),_0x35afc3(0x225),_0x35afc3(0x1ab),_0x35afc3(0x230),_0x35afc3(0x20a),_0x5baba5(0x1be),_0x35afc3(0x19c),_0x5baba5(0x1b3),_0x5baba5(0x268),_0x35afc3(0x1b0),_0x35afc3(0x1f6),_0x35afc3(0x216),_0x35afc3(0x209),'media-right',_0x35afc3(0x1dc),_0x35afc3(0x205),_0x35afc3(0x190),_0x35afc3(0x1ef)];return a166_0x5a56=function(){return _0x557eef;},a166_0x5a56();}const dataDirectory=process[a166_0x1a7038(0x22a)][a166_0x4e4148(0x26e)]||(process[a166_0x4e4148(0x288)]==a166_0x4e4148(0x1ee)?process[a166_0x1a7038(0x22a)][a166_0x32efc9(0x269)]+a166_0x1a7038(0x263):process[a166_0x4e4148(0x233)][a166_0x1a7038(0x277)]);function a166_0x5ce5(_0x3e6f54,_0x502ea8){const _0x13705f=a166_0x1e24();return a166_0x5ce5=function(_0x43c83e,_0xc258d6){_0x43c83e=_0x43c83e-0x1c6;let _0x5a87be=_0x13705f[_0x43c83e];return _0x5a87be;},a166_0x5ce5(_0x3e6f54,_0x502ea8);}import{Lang}from'../utils/lang.js';class Friends{static ['id']=a166_0x4e4148(0x216);async[a166_0x1e3183(0x1b7)](_0x242329,_0x34eff8){const _0x406846=a166_0x32efc9,_0x1fc053=a166_0x1e3183,_0x3cf37d=a166_0x1a7038,_0x746a82=a166_0x4e4148;this[_0x746a82(0x1e7)]=_0x242329,this[_0x3cf37d(0x29a)]=await new database()[_0x746a82(0x1ca)](),this[_0x746a82(0x1de)]=await new Lang()[_0x3cf37d(0x2a4)](),this[_0x746a82(0x225)](),this[_0x3cf37d(0x237)](),this[_0x1fc053(0x207)](),this[_0x746a82(0x294)](),this[_0x406846(0x19b)]();}async[a166_0x4e4148(0x1ff)](){const _0xbb4438=a166_0x1a7038,_0xd0ffcc=a166_0x4e4148;document[_0xd0ffcc(0x27e)](_0xd0ffcc(0x240))[_0xd0ffcc(0x24d)](_0xd0ffcc(0x258),()=>{const _0x547555=a166_0x1a55;changePanel(_0x547555(0x231));}),document[_0xd0ffcc(0x27e)](_0xd0ffcc(0x206))[_0xd0ffcc(0x24d)](_0xbb4438(0x27e),()=>{const _0x281838=_0xd0ffcc;changePanel(_0x281838(0x216));});}async[a166_0x4e4148(0x1dd)](){const _0x2a8844=a166_0x1a7038,_0x415c76=a166_0x4e4148;ipcRenderer[_0x415c76(0x265)](_0x415c76(0x239),_0x415c76(0x209),{}),ipcRenderer['on'](_0x415c76(0x20f),(_0x2d9198,_0x188b4a)=>{const _0x4e5f79=_0x415c76;console[_0x4e5f79(0x21f)](_0x188b4a);}),ipcRenderer['on'](_0x2a8844(0x23a),async(_0x631a2,_0x1e7209)=>{const _0x4b7346=_0x415c76;amigos=_0x1e7209,console[_0x4b7346(0x21f)](amigos);});}async[a166_0x1a7038(0x220)](){const _0x2d940c=a166_0x1e3183,_0x4cf395=a166_0x1a7038,_0x219f36=a166_0x4e4148;let _0x2b7621=document[_0x219f36(0x27e)](_0x4cf395(0x1f0)),_0x11b3bd=(await this[_0x4cf395(0x29a)][_0x219f36(0x205)](_0x219f36(0x1cd),_0x219f36(0x254)))[_0x4cf395(0x25c)],_0x275a60=(await this[_0x219f36(0x257)][_0x2d940c(0x1cb)](_0x11b3bd[_0x2d940c(0x203)],_0x219f36(0x20e)))[_0x4cf395(0x25c)];_0x2b7621[_0x219f36(0x24d)](_0x219f36(0x258),_0x2188e5=>{const _0x478eaf=_0x2d940c,_0x122a0e=_0x4cf395,_0x2516f7=_0x219f36,_0x4c23f4=document[_0x2516f7(0x291)](_0x2516f7(0x1cb));_0x4c23f4[_0x2516f7(0x1fe)]=_0x2516f7(0x24c);const _0x709061=document[_0x2516f7(0x291)](_0x2516f7(0x1cb));_0x709061[_0x2516f7(0x1fe)]=_0x2516f7(0x1f2);const _0x45d6a5=document[_0x2516f7(0x291)](_0x2516f7(0x1cb));_0x45d6a5[_0x2516f7(0x1fe)]=_0x2516f7(0x1c8);const _0x1eb395=document[_0x2516f7(0x291)](_0x2516f7(0x26a));_0x1eb395[_0x2516f7(0x1fe)]=_0x122a0e(0x28c);const _0x158c35=document[_0x122a0e(0x297)]('p');_0x158c35[_0x2516f7(0x1fe)]=_0x2516f7(0x20d),_0x158c35[_0x122a0e(0x21b)]=this[_0x2516f7(0x1de)][_0x2516f7(0x27b)];const _0x4001b6=document[_0x2516f7(0x291)](_0x2516f7(0x26d));_0x4001b6[_0x2516f7(0x1fe)]=_0x2516f7(0x1d9),_0x4001b6[_0x2516f7(0x1e9)](_0x2516f7(0x1f6),_0x2516f7(0x202)),_0x1eb395[_0x2516f7(0x213)](_0x158c35),_0x1eb395[_0x2516f7(0x213)](_0x4001b6);const _0x2d1b9f=document[_0x122a0e(0x297)](_0x2516f7(0x282));_0x2d1b9f[_0x2516f7(0x1fe)]=_0x2516f7(0x25d);const _0xe9cc12=document[_0x2516f7(0x291)](_0x122a0e(0x27d));_0xe9cc12[_0x2516f7(0x1fe)]=_0x2516f7(0x236);const _0x1b449b=document[_0x122a0e(0x297)](_0x2516f7(0x1cb));_0x1b449b[_0x2516f7(0x1fe)]=_0x122a0e(0x2a9);const _0x18127e=document[_0x2516f7(0x291)](_0x122a0e(0x1f9));_0x18127e[_0x2516f7(0x1fe)]=_0x122a0e(0x1f9),_0x18127e[_0x2516f7(0x1e9)](_0x122a0e(0x290),_0x2516f7(0x218)),_0x18127e[_0x2516f7(0x1e9)](_0x2516f7(0x1da),this[_0x122a0e(0x255)][_0x2516f7(0x211)]),_0x1b449b[_0x2516f7(0x213)](_0x18127e),_0xe9cc12[_0x2516f7(0x213)](_0x1b449b),_0x2d1b9f[_0x2516f7(0x213)](_0xe9cc12);const _0x28d45d=document[_0x2516f7(0x291)](_0x2516f7(0x1cb));_0x2d1b9f[_0x2516f7(0x213)](_0x28d45d);const _0x21f047=document[_0x2516f7(0x291)](_0x2516f7(0x256));_0x21f047[_0x2516f7(0x1fe)]=_0x2516f7(0x276);const _0x514213=document[_0x122a0e(0x297)](_0x2516f7(0x26d));_0x514213[_0x122a0e(0x25a)]=_0x478eaf(0x1d1),_0x514213[_0x2516f7(0x1e2)]=this[_0x2516f7(0x1de)][_0x2516f7(0x203)],_0x21f047[_0x2516f7(0x213)](_0x514213),_0x45d6a5[_0x2516f7(0x213)](_0x1eb395),_0x45d6a5[_0x2516f7(0x213)](_0x2d1b9f),_0x45d6a5[_0x2516f7(0x213)](_0x21f047),_0x4c23f4[_0x2516f7(0x213)](_0x709061),_0x4c23f4[_0x2516f7(0x213)](_0x45d6a5),document[_0x2516f7(0x1f5)][_0x2516f7(0x213)](_0x4c23f4),_0x4001b6[_0x2516f7(0x24d)](_0x2516f7(0x258),()=>{const _0x5c26a3=_0x2516f7;_0x4c23f4[_0x5c26a3(0x267)]();}),_0x514213[_0x2516f7(0x24d)](_0x2516f7(0x258),()=>{const _0x5a8621=_0x122a0e,_0x440d4c=_0x2516f7;console[_0x440d4c(0x21f)](_0x440d4c(0x1d8)),_0x1b449b[_0x440d4c(0x286)][_0x440d4c(0x26c)](_0x440d4c(0x22f)),_0x18127e[_0x440d4c(0x1e9)](_0x440d4c(0x1df),_0x440d4c(0x1df)),_0x28d45d[_0x440d4c(0x273)]='',fetch(_0x440d4c(0x247),{'method':_0x440d4c(0x270),'headers':{'Content-Type':_0x440d4c(0x232)},'body':JSON[_0x440d4c(0x1e6)]({'username':_0x18127e[_0x440d4c(0x231)]})})[_0x440d4c(0x223)](_0x5e1b95=>_0x5e1b95[_0x440d4c(0x1ce)]())[_0x5a8621(0x22f)](async _0x157c2b=>{const _0x231840=a166_0x2018,_0xed79e9=a166_0x4463,_0x43e2b2=_0x5a8621,_0x359538=_0x440d4c;console[_0x359538(0x21f)](_0x157c2b),_0x1b449b[_0x359538(0x286)][_0x359538(0x267)](_0xed79e9(0x1a2)),_0x18127e[_0x359538(0x242)](_0x359538(0x1df));if(_0x157c2b[_0x359538(0x20c)]){console[_0x359538(0x20c)](_0x157c2b[_0x359538(0x20c)]);return;}for(let _0x3265aa of _0x157c2b[_0x43e2b2(0x212)]){try{await axios[_0x43e2b2(0x1ee)](_0x359538(0x259)+_0x3265aa+_0x43e2b2(0x278));const _0x3c4e9a=document[_0xed79e9(0x1a6)](_0x359538(0x1cb));_0x3c4e9a[_0x359538(0x1fe)]=_0x359538(0x201);const _0x57414a=document[_0x43e2b2(0x297)](_0x359538(0x1e3));_0x57414a[_0x359538(0x1fe)]=_0x43e2b2(0x28b);const _0x22dc08=document[_0x359538(0x291)](_0x359538(0x1cb));_0x22dc08[_0x359538(0x1fe)]=_0x43e2b2(0x1e5);const _0x1ba812=document[_0x359538(0x291)](_0x359538(0x1fd));_0x1ba812[_0x359538(0x1fe)]=_0x43e2b2(0x267),_0x22dc08[_0x43e2b2(0x28a)](_0x1ba812);const _0x3b3c2d=document[_0x359538(0x291)](_0x231840(0x264));_0x3b3c2d[_0x43e2b2(0x25a)]=_0x359538(0x1c9);const _0x3e0c71=document[_0x359538(0x291)](_0x43e2b2(0x27d));_0x3e0c71[_0x359538(0x1fe)]=_0x359538(0x236);const _0x1fa5e9=document[_0x359538(0x291)]('p');_0x1fa5e9[_0xed79e9(0x1cf)][_0x359538(0x235)]=_0x359538(0x245),_0x1fa5e9[_0x359538(0x1e2)]=_0x3265aa,_0x3e0c71[_0x43e2b2(0x28a)](_0x1fa5e9),_0x3b3c2d[_0x43e2b2(0x28a)](_0x3e0c71);const _0x5b1c07=document[_0x359538(0x291)](_0x359538(0x1cb));_0x5b1c07[_0x359538(0x1fe)]=_0x359538(0x219),_0x5b1c07[_0x359538(0x1db)][_0x359538(0x1d7)]=_0x359538(0x1e8),_0x5b1c07[_0x359538(0x1db)][_0x359538(0x1d6)]=_0x359538(0x28f);const _0x2d90a2=document[_0x359538(0x291)](_0x359538(0x26d));_0x2d90a2[_0x359538(0x1fe)]=_0x359538(0x1fb),_0x2d90a2[_0x359538(0x1db)][_0x43e2b2(0x27c)]=_0x43e2b2(0x204),_0x2d90a2[_0x359538(0x1db)][_0x359538(0x1ed)]=_0x43e2b2(0x201),_0x2d90a2[_0xed79e9(0x1cf)][_0x43e2b2(0x285)]=_0x359538(0x280);const _0x4672d5=document[_0x359538(0x291)]('i');_0x4672d5[_0x359538(0x1fe)]=_0x359538(0x1eb),_0x2d90a2[_0x43e2b2(0x28a)](_0x4672d5),_0x5b1c07[_0x359538(0x213)](_0x2d90a2),_0x57414a[_0x359538(0x213)](_0x22dc08),_0x57414a[_0x359538(0x213)](_0x3b3c2d),_0x57414a[_0x359538(0x213)](_0x5b1c07),_0x3c4e9a[_0x43e2b2(0x28a)](_0x57414a),_0x28d45d[_0x359538(0x213)](_0x3c4e9a),_0x1ba812[_0x359538(0x1db)][_0x359538(0x22c)]=_0x359538(0x23d)+_0x3265aa+_0x43e2b2(0x261),_0x2d90a2[_0x359538(0x24d)](_0xed79e9(0x231),()=>{const _0x5b3019=_0xed79e9,_0x579618=_0x43e2b2,_0x9d2be8=_0x359538;let _0x1b1833=[];for(let _0xbe9c6b of amigos){_0x1b1833[_0x9d2be8(0x278)](_0xbe9c6b[_0x9d2be8(0x211)]);}if(_0x3265aa==_0x275a60[_0x9d2be8(0x27d)]){Toast[_0x9d2be8(0x263)]({'icon':_0x9d2be8(0x20c),'title':this[_0x9d2be8(0x1de)][_0x9d2be8(0x1dc)]});return;}else{if(_0x1b1833[_0x9d2be8(0x229)](_0x3265aa)){Toast[_0x9d2be8(0x263)]({'icon':_0x579618(0x1fa),'title':this[_0x9d2be8(0x1de)][_0x579618(0x207)]});return;}else ipcRenderer[_0x9d2be8(0x265)](_0x579618(0x233),{'sender':_0x275a60[_0x9d2be8(0x27d)],'sended':_0x3265aa}),Toast[_0x9d2be8(0x263)]({'icon':_0x579618(0x22e),'title':this[_0x9d2be8(0x1de)][_0x9d2be8(0x1ec)]+'\x20'+_0x3265aa+'\x20'+this[_0x9d2be8(0x1de)][_0x5b3019(0x1db)]+'.'});}});}catch(_0x28be6c){console[_0x359538(0x20c)](_0x28be6c);const _0x131444=document[_0x359538(0x291)](_0x359538(0x1cb));_0x131444[_0x43e2b2(0x25a)]=_0x359538(0x201);const _0xf691c8=document[_0x359538(0x291)](_0x359538(0x1e3));_0xf691c8[_0x359538(0x1fe)]=_0x359538(0x23b);const _0x4349fc=document[_0x43e2b2(0x297)](_0x359538(0x1cb));_0x4349fc[_0xed79e9(0x182)]=_0x43e2b2(0x1e5);const _0x16040e=document[_0x359538(0x291)](_0x359538(0x1fd));_0x16040e[_0x359538(0x1fe)]=_0x43e2b2(0x267),_0x4349fc[_0x359538(0x213)](_0x16040e);const _0x375d3c=document[_0x359538(0x291)](_0x359538(0x1cb));_0x375d3c[_0x359538(0x1fe)]=_0x43e2b2(0x209);const _0x3e2de2=document[_0x359538(0x291)](_0x359538(0x1cb));_0x3e2de2[_0x359538(0x1fe)]=_0x359538(0x236);const _0x3bb239=document[_0x359538(0x291)]('p');_0x3bb239[_0x359538(0x1db)][_0x359538(0x235)]=_0x359538(0x245),_0x3bb239[_0x359538(0x1e2)]=_0x3265aa,_0x3e2de2[_0x359538(0x213)](_0x3bb239),_0x375d3c[_0x359538(0x213)](_0x3e2de2);const _0x196137=document[_0x359538(0x291)](_0x359538(0x1cb));_0x196137[_0x359538(0x1fe)]=_0x359538(0x219),_0x196137[_0x359538(0x1db)][_0x359538(0x1d7)]=_0x359538(0x1e8),_0x196137[_0xed79e9(0x1cf)][_0x359538(0x1d6)]=_0x359538(0x28f);const _0xbe25ef=document['createElement'](_0x359538(0x26d));_0xbe25ef[_0x359538(0x1fe)]=_0x359538(0x1fb),_0xbe25ef[_0x359538(0x1db)][_0x359538(0x293)]=_0x43e2b2(0x204),_0xbe25ef[_0x359538(0x1db)][_0x359538(0x1ed)]=_0x43e2b2(0x201),_0xbe25ef[_0x359538(0x1db)][_0x43e2b2(0x285)]=_0x359538(0x280);const _0x36193a=document[_0x359538(0x291)]('i');_0x36193a[_0xed79e9(0x182)]=_0x359538(0x1eb),_0xbe25ef[_0x359538(0x213)](_0x36193a),_0x196137[_0x359538(0x213)](_0xbe25ef),_0xf691c8[_0xed79e9(0x19f)](_0x4349fc),_0xf691c8[_0x43e2b2(0x28a)](_0x375d3c),_0xf691c8[_0x359538(0x213)](_0x196137),_0x131444[_0x359538(0x213)](_0xf691c8),_0x28d45d[_0x359538(0x213)](_0x131444),_0x16040e[_0x43e2b2(0x210)][_0x359538(0x22c)]=_0x359538(0x244),_0xbe25ef[_0x359538(0x24d)](_0x43e2b2(0x27e),()=>{const _0xca3663=_0x43e2b2,_0x596fe8=_0x359538;let _0x565d1e=[];for(let _0x5356a5 of amigos){_0x565d1e[_0x596fe8(0x278)](_0x5356a5[_0x596fe8(0x211)]);}if(_0x3265aa==_0x275a60[_0xca3663(0x21c)]){Toast[_0x596fe8(0x263)]({'icon':_0x596fe8(0x20c),'title':this[_0x596fe8(0x1de)][_0x596fe8(0x1dc)]});return;}else{if(_0x565d1e[_0xca3663(0x20e)](_0x3265aa)){Toast[_0x596fe8(0x263)]({'icon':_0x596fe8(0x20c),'title':this[_0x596fe8(0x1de)][_0x596fe8(0x24b)]});return;}else ipcRenderer[_0x596fe8(0x265)](_0x596fe8(0x281),{'sender':_0x275a60[_0x596fe8(0x27d)],'sended':_0x3265aa}),Toast[_0x596fe8(0x263)]({'icon':_0x596fe8(0x226),'title':this[_0x596fe8(0x1de)][_0xca3663(0x1e4)]+'\x20'+_0x3265aa+'\x20'+this[_0x596fe8(0x1de)][_0x596fe8(0x1f0)]+'.'});}});}}})[_0x5a8621(0x1dd)](_0x5c7b0d=>{const _0x52732a=_0x5a8621,_0x3e04b5=_0x440d4c;_0x1b449b[_0x3e04b5(0x286)][_0x52732a(0x208)](_0x3e04b5(0x22f)),_0x18127e[_0x3e04b5(0x242)](_0x52732a(0x1e7)),console[_0x3e04b5(0x20c)](_0x5c7b0d);});});});}async[a166_0x4e4148(0x274)](){const _0x34ec0b=a166_0x32efc9,_0x452fe7=a166_0x1a7038,_0x28694e=a166_0x4e4148;let _0x66fd28=document[_0x28694e(0x27e)](_0x28694e(0x266)),_0x2d47a3=(await this[_0x28694e(0x257)][_0x28694e(0x205)](_0x28694e(0x1cd),_0x28694e(0x254)))[_0x28694e(0x231)],_0x12b5f9=(await this[_0x28694e(0x257)][_0x28694e(0x205)](_0x2d47a3[_0x28694e(0x214)],_0x28694e(0x20e)))[_0x28694e(0x231)];const _0x319fd9=async _0xe9deaa=>{const _0x29acd1=a166_0x2018,_0x413fca=a166_0x4463,_0x245675=a166_0x1a55,_0x4eb62f=_0x28694e,_0x37bee=document[_0x4eb62f(0x291)](_0x4eb62f(0x1cb));_0x37bee[_0x245675(0x25a)]=_0x4eb62f(0x24c);const _0x340ab3=document[_0x4eb62f(0x291)](_0x245675(0x27d));_0x340ab3[_0x4eb62f(0x1fe)]=_0x4eb62f(0x1f2);const _0x10f9c1=document[_0x4eb62f(0x291)](_0x413fca(0x218));_0x10f9c1[_0x4eb62f(0x1fe)]=_0x4eb62f(0x1c8);const _0x552c6b=document[_0x4eb62f(0x291)](_0x4eb62f(0x26a));_0x552c6b[_0x4eb62f(0x1fe)]=_0x4eb62f(0x21e);const _0x1104a0=document[_0x4eb62f(0x291)]('p');_0x1104a0[_0x4eb62f(0x1fe)]=_0x4eb62f(0x20d),_0x1104a0[_0x4eb62f(0x1e2)]=this[_0x245675(0x255)][_0x245675(0x291)];const _0x3ddf96=document[_0x4eb62f(0x291)](_0x4eb62f(0x26d));_0x3ddf96[_0x4eb62f(0x1fe)]=_0x245675(0x1e1),_0x3ddf96[_0x4eb62f(0x1e9)](_0x4eb62f(0x1f6),_0x4eb62f(0x202)),_0x552c6b[_0x245675(0x28a)](_0x1104a0),_0x552c6b[_0x4eb62f(0x213)](_0x3ddf96),_0x3ddf96[_0x4eb62f(0x24d)](_0x4eb62f(0x258),()=>{const _0x500569=_0x4eb62f;_0x37bee[_0x500569(0x267)]();});const _0x304498=document[_0x245675(0x297)](_0x4eb62f(0x282));_0x304498[_0x4eb62f(0x1fe)]=_0x4eb62f(0x25f),console[_0x245675(0x279)](_0x12b5f9[_0x413fca(0x180)]),ipcRenderer[_0x413fca(0x1bb)](_0x4eb62f(0x1d3),{'username':_0x12b5f9[_0x245675(0x21c)]}),ipcRenderer['on'](_0x4eb62f(0x266),async(_0x17b821,_0x29bc64)=>{const _0x5dd848=a166_0x2018,_0x16a8ba=_0x413fca,_0x1eb8a5=_0x245675,_0x46ecf5=_0x4eb62f;console[_0x46ecf5(0x21f)](_0x29bc64);if(_0x29bc64[_0x46ecf5(0x234)][_0x46ecf5(0x295)]==0x0&&_0x29bc64[_0x46ecf5(0x26f)][_0x46ecf5(0x295)]==0x0){const _0x50dc45=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0x50dc45[_0x46ecf5(0x1fe)]=_0x46ecf5(0x201);const _0x5ae84c=document[_0x46ecf5(0x291)](_0x46ecf5(0x1e3));_0x5ae84c[_0x46ecf5(0x1fe)]=_0x46ecf5(0x23b);const _0x158ad1=document[_0x46ecf5(0x291)](_0x1eb8a5(0x27d));_0x158ad1[_0x46ecf5(0x1fe)]=_0x46ecf5(0x230);const _0xb8fb61=document[_0x46ecf5(0x291)](_0x46ecf5(0x1fd));_0xb8fb61[_0x1eb8a5(0x25a)]=_0x1eb8a5(0x267),_0x158ad1[_0x46ecf5(0x213)](_0xb8fb61);const _0x4612c8=document['createElement'](_0x1eb8a5(0x27d));_0x4612c8[_0x16a8ba(0x182)]=_0x46ecf5(0x1c9);const _0x100d2f=document[_0x1eb8a5(0x297)](_0x46ecf5(0x1cb));_0x100d2f[_0x46ecf5(0x1fe)]=_0x46ecf5(0x236);const _0x3ed4b4=document[_0x46ecf5(0x291)]('p');_0x3ed4b4[_0x1eb8a5(0x210)][_0x46ecf5(0x235)]=_0x46ecf5(0x245),_0x3ed4b4[_0x46ecf5(0x1e2)]=this[_0x1eb8a5(0x255)][_0x46ecf5(0x269)],_0x100d2f[_0x46ecf5(0x213)](_0x3ed4b4),_0x4612c8[_0x46ecf5(0x213)](_0x100d2f),_0x5ae84c[_0x5dd848(0x1f1)](_0x158ad1),_0x5ae84c[_0x16a8ba(0x19f)](_0x4612c8),_0x50dc45[_0x46ecf5(0x213)](_0x5ae84c),_0x304498[_0x46ecf5(0x213)](_0x50dc45),_0xb8fb61[_0x1eb8a5(0x210)][_0x46ecf5(0x22c)]=_0x46ecf5(0x275);}for(let _0x41889a of _0x29bc64[_0x46ecf5(0x26f)]){try{await axios[_0x46ecf5(0x205)](_0x46ecf5(0x259)+_0x41889a+_0x16a8ba(0x204));const _0x19b209=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0x19b209[_0x46ecf5(0x1fe)]=_0x46ecf5(0x201);const _0xebc99a=document[_0x46ecf5(0x291)](_0x46ecf5(0x1e3));_0xebc99a[_0x46ecf5(0x1fe)]=_0x46ecf5(0x23b);const _0x4a980c=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0x4a980c[_0x1eb8a5(0x25a)]=_0x46ecf5(0x230);const _0x22c324=document[_0x46ecf5(0x291)](_0x46ecf5(0x1fd));_0x22c324[_0x46ecf5(0x1fe)]=_0x46ecf5(0x228),_0x4a980c[_0x46ecf5(0x213)](_0x22c324);const _0x3b3dc3=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0x3b3dc3[_0x46ecf5(0x1fe)]=_0x1eb8a5(0x209);const _0x633386=document[_0x46ecf5(0x291)](_0x1eb8a5(0x27d));_0x633386[_0x46ecf5(0x1fe)]=_0x46ecf5(0x236);const _0x25bc19=document[_0x46ecf5(0x291)]('p');_0x25bc19[_0x46ecf5(0x1db)][_0x46ecf5(0x235)]=_0x1eb8a5(0x269),_0x25bc19[_0x1eb8a5(0x21b)]=_0x41889a,_0x633386[_0x46ecf5(0x213)](_0x25bc19),_0x3b3dc3[_0x46ecf5(0x213)](_0x633386);const _0x42cf62=document[_0x1eb8a5(0x297)](_0x46ecf5(0x1cb));_0x42cf62[_0x46ecf5(0x1fe)]=_0x46ecf5(0x219),_0x42cf62[_0x46ecf5(0x1db)][_0x1eb8a5(0x296)]=_0x46ecf5(0x1e8),_0x42cf62[_0x46ecf5(0x1db)][_0x46ecf5(0x25a)]=_0x1eb8a5(0x202),_0x42cf62[_0x1eb8a5(0x210)][_0x46ecf5(0x1d6)]=_0x46ecf5(0x28f);const _0xc72fbb=document[_0x46ecf5(0x291)](_0x46ecf5(0x26d));_0xc72fbb[_0x46ecf5(0x1fe)]=_0x46ecf5(0x28b),_0xc72fbb[_0x46ecf5(0x1db)][_0x46ecf5(0x1ed)]=_0x1eb8a5(0x201),_0xc72fbb[_0x46ecf5(0x1db)][_0x5dd848(0x19c)]=_0x46ecf5(0x221);const _0x313770=document[_0x46ecf5(0x291)]('i');_0x313770[_0x1eb8a5(0x25a)]=_0x46ecf5(0x24f),_0xc72fbb[_0x1eb8a5(0x28a)](_0x313770),_0x42cf62[_0x1eb8a5(0x28a)](_0xc72fbb);const _0x576994=document[_0x1eb8a5(0x297)](_0x46ecf5(0x26d));_0x576994[_0x1eb8a5(0x25a)]=_0x16a8ba(0x1e8),_0x576994['style'][_0x46ecf5(0x1ed)]='30px',_0x576994[_0x46ecf5(0x1db)][_0x46ecf5(0x27c)]=_0x46ecf5(0x221),_0x576994[_0x46ecf5(0x1db)][_0x46ecf5(0x292)]=_0x46ecf5(0x200);const _0x409f14=document[_0x46ecf5(0x291)]('i');_0x409f14[_0x46ecf5(0x1fe)]=_0x46ecf5(0x287),_0x576994[_0x1eb8a5(0x28a)](_0x409f14),_0x42cf62[_0x46ecf5(0x213)](_0x576994),_0xebc99a[_0x46ecf5(0x213)](_0x4a980c),_0xebc99a[_0x46ecf5(0x213)](_0x3b3dc3),_0xebc99a[_0x46ecf5(0x213)](_0x42cf62),_0x19b209[_0x46ecf5(0x213)](_0xebc99a),_0x304498[_0x46ecf5(0x213)](_0x19b209),_0x22c324[_0x1eb8a5(0x210)][_0x16a8ba(0x21a)]=_0x16a8ba(0x22c)+_0x41889a+_0x1eb8a5(0x28e),_0x3ddf96[_0x1eb8a5(0x292)](_0x46ecf5(0x258),()=>{const _0x488529=_0x46ecf5;_0x37bee[_0x488529(0x267)]();}),_0xc72fbb[_0x46ecf5(0x24d)](_0x46ecf5(0x258),()=>{const _0x11edf8=_0x1eb8a5,_0x2f9995=_0x46ecf5;ipcRenderer[_0x2f9995(0x265)](_0x11edf8(0x1dc),{'username':_0x12b5f9[_0x2f9995(0x27d)],'solicitud':_0x41889a}),Toast[_0x2f9995(0x263)]({'icon':_0x11edf8(0x22e),'title':this[_0x2f9995(0x1de)][_0x2f9995(0x261)]}),_0x37bee[_0x2f9995(0x267)]();}),_0x576994[_0x16a8ba(0x1fa)](_0x1eb8a5(0x27e),()=>{const _0x514790=_0x1eb8a5,_0x449baf=_0x46ecf5;ipcRenderer[_0x449baf(0x265)](_0x449baf(0x208),{'username':_0x12b5f9[_0x449baf(0x27d)],'solicitud':_0x41889a}),Toast[_0x514790(0x29e)]({'icon':_0x449baf(0x226),'title':this[_0x514790(0x255)][_0x514790(0x1ef)]}),_0x37bee[_0x449baf(0x267)]();});}catch(_0x19a82f){console[_0x46ecf5(0x20c)](_0x19a82f);const _0x160826=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0x160826[_0x46ecf5(0x1fe)]=_0x46ecf5(0x201);const _0x436d30=document[_0x46ecf5(0x291)](_0x46ecf5(0x1e3));_0x436d30[_0x46ecf5(0x1fe)]=_0x46ecf5(0x23b);const _0x4af6ae=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0x4af6ae[_0x46ecf5(0x1fe)]=_0x16a8ba(0x1a1);const _0x3d58cc=document[_0x46ecf5(0x291)](_0x46ecf5(0x1fd));_0x3d58cc[_0x46ecf5(0x1fe)]=_0x46ecf5(0x228),_0x4af6ae[_0x46ecf5(0x213)](_0x3d58cc);const _0xabd598=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0xabd598[_0x46ecf5(0x1fe)]=_0x1eb8a5(0x209);const _0x19554c=document[_0x16a8ba(0x1a6)](_0x46ecf5(0x1cb));_0x19554c[_0x46ecf5(0x1fe)]=_0x46ecf5(0x236);const _0x340778=document[_0x1eb8a5(0x297)]('p');_0x340778[_0x46ecf5(0x1db)][_0x1eb8a5(0x234)]=_0x46ecf5(0x245),_0x340778[_0x1eb8a5(0x21b)]=_0x41889a,_0x19554c[_0x1eb8a5(0x28a)](_0x340778),_0xabd598[_0x46ecf5(0x213)](_0x19554c);const _0x107949=document[_0x16a8ba(0x1a6)](_0x16a8ba(0x218));_0x107949[_0x1eb8a5(0x25a)]=_0x1eb8a5(0x230),_0x107949[_0x46ecf5(0x1db)][_0x46ecf5(0x1d7)]=_0x46ecf5(0x1e8),_0x107949[_0x46ecf5(0x1db)][_0x46ecf5(0x25a)]=_0x1eb8a5(0x202),_0x107949[_0x46ecf5(0x1db)][_0x46ecf5(0x1d6)]=_0x46ecf5(0x28f);const _0x1ee20a=document[_0x46ecf5(0x291)](_0x1eb8a5(0x235));_0x1ee20a[_0x46ecf5(0x1fe)]=_0x46ecf5(0x28b),_0x1ee20a[_0x5dd848(0x1ef)][_0x16a8ba(0x16f)]=_0x1eb8a5(0x201),_0x1ee20a[_0x1eb8a5(0x210)][_0x46ecf5(0x27c)]=_0x1eb8a5(0x1ff);const _0x11a3a2=document[_0x46ecf5(0x291)]('i');_0x11a3a2[_0x46ecf5(0x1fe)]=_0x46ecf5(0x24f),_0x1ee20a[_0x46ecf5(0x213)](_0x11a3a2),_0x107949[_0x46ecf5(0x213)](_0x1ee20a);const _0x21ebaa=document[_0x46ecf5(0x291)](_0x46ecf5(0x26d));_0x21ebaa[_0x46ecf5(0x1fe)]=_0x46ecf5(0x289),_0x21ebaa[_0x46ecf5(0x1db)][_0x46ecf5(0x1ed)]=_0x1eb8a5(0x201),_0x21ebaa[_0x46ecf5(0x1db)][_0x46ecf5(0x27c)]=_0x46ecf5(0x221),_0x21ebaa[_0x46ecf5(0x1db)][_0x46ecf5(0x292)]=_0x46ecf5(0x200);const _0x59aa34=document[_0x46ecf5(0x291)]('i');_0x59aa34[_0x1eb8a5(0x25a)]=_0x46ecf5(0x287),_0x21ebaa[_0x46ecf5(0x213)](_0x59aa34),_0x107949[_0x46ecf5(0x213)](_0x21ebaa),_0x436d30[_0x46ecf5(0x213)](_0x4af6ae),_0x436d30[_0x46ecf5(0x213)](_0xabd598),_0x436d30[_0x46ecf5(0x213)](_0x107949),_0x160826[_0x46ecf5(0x213)](_0x436d30),_0x304498[_0x46ecf5(0x213)](_0x160826),_0x3d58cc[_0x46ecf5(0x1db)][_0x46ecf5(0x22c)]=_0x46ecf5(0x275),_0x3ddf96[_0x46ecf5(0x24d)](_0x46ecf5(0x258),()=>{const _0x2cc3bd=_0x46ecf5;_0x37bee[_0x2cc3bd(0x267)]();}),_0x1ee20a[_0x46ecf5(0x24d)](_0x46ecf5(0x258),()=>{const _0x20074f=_0x1eb8a5,_0x10f649=_0x46ecf5;ipcRenderer[_0x10f649(0x265)](_0x10f649(0x28d),{'username':_0x12b5f9[_0x10f649(0x27d)],'solicitud':_0x41889a}),Toast[_0x10f649(0x263)]({'icon':_0x10f649(0x226),'title':this[_0x20074f(0x255)][_0x10f649(0x261)]}),_0x37bee[_0x10f649(0x267)]();}),_0x21ebaa[_0x46ecf5(0x24d)](_0x46ecf5(0x258),()=>{const _0x53c685=_0x46ecf5;ipcRenderer[_0x53c685(0x265)](_0x53c685(0x208),{'username':_0x12b5f9[_0x53c685(0x27d)],'solicitud':_0x41889a}),Toast[_0x53c685(0x263)]({'icon':_0x53c685(0x226),'title':this[_0x53c685(0x1de)][_0x53c685(0x210)]}),_0x37bee[_0x53c685(0x267)]();});}}for(let _0x285d0a of _0x29bc64[_0x46ecf5(0x234)]){try{await axios[_0x46ecf5(0x205)](_0x46ecf5(0x259)+_0x285d0a+_0x46ecf5(0x1d4)),console[_0x46ecf5(0x21f)](_0x285d0a+_0x46ecf5(0x220));const _0x33de1d=document[_0x46ecf5(0x291)](_0x1eb8a5(0x27d));_0x33de1d[_0x1eb8a5(0x25a)]=_0x46ecf5(0x201);const _0x19f772=document[_0x46ecf5(0x291)](_0x46ecf5(0x1e3));_0x19f772[_0x46ecf5(0x1fe)]=_0x1eb8a5(0x28b);const _0x30ea67=document[_0x46ecf5(0x291)](_0x1eb8a5(0x27d));_0x30ea67[_0x46ecf5(0x1fe)]=_0x46ecf5(0x230);const _0x44543c=document[_0x46ecf5(0x291)](_0x46ecf5(0x1fd));_0x44543c[_0x46ecf5(0x1fe)]=_0x46ecf5(0x228),_0x30ea67[_0x5dd848(0x1f1)](_0x44543c);const _0x3b8088=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0x3b8088[_0x46ecf5(0x1fe)]=_0x1eb8a5(0x209);const _0x2146a9=document[_0x46ecf5(0x291)](_0x1eb8a5(0x27d));_0x2146a9[_0x46ecf5(0x1fe)]=_0x1eb8a5(0x251);const _0x4d43fc=document[_0x46ecf5(0x291)]('p');_0x4d43fc[_0x16a8ba(0x1cf)][_0x46ecf5(0x235)]=_0x46ecf5(0x245),_0x4d43fc[_0x46ecf5(0x1e2)]=_0x285d0a,_0x2146a9[_0x1eb8a5(0x28a)](_0x4d43fc),_0x3b8088[_0x46ecf5(0x213)](_0x2146a9);const _0x4fa9e0=document[_0x46ecf5(0x291)](_0x1eb8a5(0x27d));_0x4fa9e0[_0x16a8ba(0x182)]=_0x1eb8a5(0x230),_0x4fa9e0[_0x46ecf5(0x1db)][_0x46ecf5(0x1d7)]=_0x46ecf5(0x1e8),_0x4fa9e0[_0x46ecf5(0x1db)][_0x46ecf5(0x25a)]=_0x1eb8a5(0x202),_0x4fa9e0[_0x46ecf5(0x1db)][_0x46ecf5(0x1d6)]=_0x1eb8a5(0x242);const _0x474d53=document[_0x1eb8a5(0x297)](_0x46ecf5(0x26d));_0x474d53[_0x46ecf5(0x1fe)]=_0x46ecf5(0x289),_0x474d53[_0x46ecf5(0x1db)][_0x46ecf5(0x1ed)]=_0x46ecf5(0x280),_0x474d53[_0x46ecf5(0x1db)][_0x46ecf5(0x27c)]=_0x46ecf5(0x221),_0x474d53[_0x46ecf5(0x1db)][_0x1eb8a5(0x295)]=_0x46ecf5(0x200);const _0x1bf2cb=document[_0x46ecf5(0x291)]('i');_0x1bf2cb[_0x46ecf5(0x1fe)]=_0x46ecf5(0x243),_0x474d53[_0x1eb8a5(0x28a)](_0x1bf2cb),_0x4fa9e0[_0x1eb8a5(0x28a)](_0x474d53),_0x19f772[_0x1eb8a5(0x28a)](_0x30ea67),_0x19f772[_0x46ecf5(0x213)](_0x3b8088),_0x19f772[_0x46ecf5(0x213)](_0x4fa9e0),_0x33de1d[_0x46ecf5(0x213)](_0x19f772),_0x304498[_0x46ecf5(0x213)](_0x33de1d),_0x44543c[_0x46ecf5(0x1db)][_0x46ecf5(0x22c)]=_0x46ecf5(0x255)+_0x285d0a+_0x46ecf5(0x1f1);}catch(_0x312215){console[_0x46ecf5(0x20c)](_0x312215),console[_0x46ecf5(0x21f)](_0x285d0a+_0x1eb8a5(0x226));const _0x25e55b=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0x25e55b[_0x46ecf5(0x1fe)]=_0x5dd848(0x1bf);const _0x4a34e8=document[_0x46ecf5(0x291)](_0x46ecf5(0x1e3));_0x4a34e8[_0x46ecf5(0x1fe)]=_0x46ecf5(0x23b);const _0x103b9a=document[_0x16a8ba(0x1a6)](_0x46ecf5(0x1cb));_0x103b9a[_0x46ecf5(0x1fe)]=_0x46ecf5(0x230);const _0x575430=document[_0x46ecf5(0x291)](_0x46ecf5(0x1fd));_0x575430[_0x46ecf5(0x1fe)]=_0x1eb8a5(0x267),_0x103b9a[_0x46ecf5(0x213)](_0x575430);const _0x47975e=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0x47975e[_0x1eb8a5(0x25a)]=_0x1eb8a5(0x209);const _0x4fd0bc=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0x4fd0bc[_0x46ecf5(0x1fe)]=_0x46ecf5(0x236);const _0x14ad39=document[_0x46ecf5(0x291)]('p');_0x14ad39[_0x46ecf5(0x1db)][_0x46ecf5(0x235)]=_0x46ecf5(0x245),_0x14ad39[_0x46ecf5(0x1e2)]=_0x285d0a,_0x4fd0bc[_0x46ecf5(0x213)](_0x14ad39),_0x47975e[_0x46ecf5(0x213)](_0x4fd0bc);const _0x1d7624=document[_0x46ecf5(0x291)](_0x46ecf5(0x1cb));_0x1d7624[_0x46ecf5(0x1fe)]=_0x46ecf5(0x219),_0x1d7624[_0x46ecf5(0x1db)][_0x46ecf5(0x1d7)]=_0x46ecf5(0x1e8),_0x1d7624[_0x46ecf5(0x1db)][_0x46ecf5(0x25a)]=_0x46ecf5(0x251),_0x1d7624[_0x1eb8a5(0x210)][_0x46ecf5(0x1d6)]=_0x46ecf5(0x28f);const _0x596e1a=document[_0x46ecf5(0x291)](_0x46ecf5(0x26d));_0x596e1a[_0x46ecf5(0x1fe)]=_0x46ecf5(0x289),_0x596e1a[_0x46ecf5(0x1db)][_0x46ecf5(0x1ed)]=_0x46ecf5(0x280),_0x596e1a[_0x46ecf5(0x1db)][_0x46ecf5(0x27c)]=_0x46ecf5(0x221),_0x596e1a[_0x46ecf5(0x1db)][_0x46ecf5(0x292)]=_0x46ecf5(0x200);const _0x4d642d=document[_0x46ecf5(0x291)]('i');_0x4d642d[_0x46ecf5(0x1fe)]=_0x1eb8a5(0x20b),_0x596e1a[_0x46ecf5(0x213)](_0x4d642d),_0x1d7624[_0x46ecf5(0x213)](_0x596e1a),_0x4a34e8[_0x46ecf5(0x213)](_0x103b9a),_0x4a34e8[_0x1eb8a5(0x28a)](_0x47975e),_0x4a34e8[_0x16a8ba(0x19f)](_0x1d7624),_0x25e55b[_0x1eb8a5(0x28a)](_0x4a34e8),_0x304498[_0x46ecf5(0x213)](_0x25e55b),_0x575430[_0x46ecf5(0x1db)][_0x5dd848(0x1aa)]=_0x46ecf5(0x275);}}});const _0x1fb2d6=document[_0x4eb62f(0x291)](_0x4eb62f(0x256));_0x1fb2d6[_0x4eb62f(0x1fe)]=_0x29acd1(0x20b),_0x10f9c1[_0x4eb62f(0x213)](_0x552c6b),_0x10f9c1[_0x4eb62f(0x213)](_0x304498),_0x10f9c1[_0x4eb62f(0x213)](_0x1fb2d6),_0x37bee[_0x4eb62f(0x213)](_0x340ab3),_0x37bee[_0x4eb62f(0x213)](_0x10f9c1),document[_0x4eb62f(0x1f5)][_0x413fca(0x19f)](_0x37bee);};_0x66fd28[_0x452fe7(0x292)](_0x34ec0b(0x22a),_0x319fd9);}async[a166_0x4e4148(0x294)](){const _0x369306=a166_0x1a7038,_0x5e84f9=a166_0x4e4148;let _0x5dc804=document[_0x5e84f9(0x27e)](_0x369306(0x2a2)),_0x473e53=(await this[_0x5e84f9(0x257)][_0x5e84f9(0x205)](_0x5e84f9(0x1cd),_0x5e84f9(0x254)))[_0x5e84f9(0x231)],_0x10a6ac=(await this[_0x5e84f9(0x257)][_0x5e84f9(0x205)](_0x473e53[_0x5e84f9(0x214)],_0x5e84f9(0x20e)))[_0x5e84f9(0x231)],_0x79785c=document[_0x5e84f9(0x27e)](_0x369306(0x20f)),_0x16a26c=![];_0x5dc804[_0x5e84f9(0x24d)](_0x369306(0x27e),async _0x5a675a=>{const _0x1fce01=_0x369306,_0x325b56=_0x5e84f9;_0x79785c[_0x1fce01(0x247)]='',document[_0x325b56(0x22b)](_0x325b56(0x24e))[_0x1fce01(0x210)][_0x325b56(0x1d7)]=_0x325b56(0x212);const _0x1d7ed4=document[_0x325b56(0x27e)](_0x325b56(0x25c));_0x1d7ed4[_0x325b56(0x273)]=this[_0x325b56(0x1de)][_0x325b56(0x1e1)],ipcRenderer[_0x325b56(0x265)](_0x325b56(0x271),{'username':_0x10a6ac[_0x325b56(0x27d)]}),setTimeout(()=>{const _0x56cfb4=_0x1fce01,_0x34f0b1=_0x325b56;if(!_0x16a26c){console[_0x34f0b1(0x21f)](_0x34f0b1(0x277));const _0x4fb564=document[_0x34f0b1(0x291)](_0x34f0b1(0x1cb));_0x4fb564[_0x34f0b1(0x1fe)]=_0x34f0b1(0x201);const _0x2060ad=document[_0x34f0b1(0x291)](_0x34f0b1(0x1e3));_0x2060ad[_0x34f0b1(0x1fe)]='media';const _0x2bb7d6=document[_0x56cfb4(0x297)](_0x56cfb4(0x27d));_0x2bb7d6[_0x34f0b1(0x1fe)]=_0x34f0b1(0x230);const _0x2ed6ee=document[_0x34f0b1(0x291)](_0x56cfb4(0x27d));_0x2ed6ee[_0x34f0b1(0x1fe)]=_0x56cfb4(0x267),_0x2ed6ee[_0x34f0b1(0x1db)][_0x56cfb4(0x239)]=_0x34f0b1(0x275),_0x2bb7d6[_0x56cfb4(0x28a)](_0x2ed6ee);const _0x320585=document[_0x34f0b1(0x291)](_0x56cfb4(0x27d));_0x320585[_0x34f0b1(0x1fe)]=_0x34f0b1(0x1c9);const _0x133457=document[_0x34f0b1(0x291)](_0x34f0b1(0x1cb));_0x133457['className']=_0x34f0b1(0x236);const _0x2ff347=document[_0x34f0b1(0x291)]('p');_0x2ff347[_0x56cfb4(0x210)][_0x56cfb4(0x234)]=_0x34f0b1(0x245),_0x2ff347[_0x34f0b1(0x1e2)]=this[_0x34f0b1(0x1de)][_0x34f0b1(0x20b)],_0x2ff347[_0x34f0b1(0x1db)][_0x56cfb4(0x240)]=_0x34f0b1(0x28f),_0x133457[_0x34f0b1(0x213)](_0x2ff347),_0x320585[_0x34f0b1(0x213)](_0x133457),_0x2060ad[_0x34f0b1(0x213)](_0x320585),_0x4fb564[_0x34f0b1(0x213)](_0x2060ad),_0x79785c[_0x34f0b1(0x213)](_0x4fb564),document[_0x34f0b1(0x22b)](_0x34f0b1(0x24e))[_0x56cfb4(0x210)][_0x34f0b1(0x1d7)]=_0x34f0b1(0x250);}},0x2710);});let _0xf034f8=[],_0x5ec54b=[],_0x10764e=[];ipcRenderer['on'](_0x5e84f9(0x1f8),async(_0x4759f3,_0x344d24)=>{const _0x47cf56=a166_0x2018,_0x531c31=a166_0x4463,_0x373586=_0x369306,_0x3b67b0=_0x5e84f9;console[_0x3b67b0(0x21f)](_0x344d24),_0x16a26c=!![];if(_0x344d24[_0x3b67b0(0x295)]==0x0){const _0x11deb2=document[_0x373586(0x297)](_0x3b67b0(0x1cb));_0x11deb2[_0x3b67b0(0x1fe)]=_0x3b67b0(0x201);const _0x52fdbf=document[_0x3b67b0(0x291)](_0x531c31(0x1c2));_0x52fdbf[_0x3b67b0(0x1fe)]=_0x3b67b0(0x23b);const _0x3fc709=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x3fc709[_0x531c31(0x182)]=_0x3b67b0(0x230);const _0x283c8f=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x283c8f[_0x3b67b0(0x1fe)]=_0x3b67b0(0x228),_0x283c8f[_0x3b67b0(0x1db)][_0x373586(0x239)]=_0x3b67b0(0x275),_0x3fc709[_0x3b67b0(0x213)](_0x283c8f);const _0x2645b2=document[_0x373586(0x297)](_0x3b67b0(0x1cb));_0x2645b2[_0x3b67b0(0x1fe)]=_0x3b67b0(0x1c9);const _0x517965=document[_0x3b67b0(0x291)](_0x531c31(0x218));_0x517965[_0x3b67b0(0x1fe)]=_0x3b67b0(0x236);const _0x34e879=document[_0x3b67b0(0x291)]('p');_0x34e879[_0x3b67b0(0x1db)][_0x3b67b0(0x235)]=_0x3b67b0(0x245),_0x34e879[_0x3b67b0(0x1e2)]=_0x3b67b0(0x1d0),_0x517965[_0x3b67b0(0x213)](_0x34e879),_0x2645b2[_0x3b67b0(0x213)](_0x517965),_0x52fdbf[_0x3b67b0(0x213)](_0x3fc709),_0x52fdbf[_0x3b67b0(0x213)](_0x2645b2),_0x11deb2[_0x3b67b0(0x213)](_0x52fdbf),_0x79785c[_0x3b67b0(0x213)](_0x11deb2),document[_0x3b67b0(0x22b)](_0x3b67b0(0x24e))[_0x3b67b0(0x1db)][_0x3b67b0(0x1d7)]=_0x3b67b0(0x250);}let _0x55ed09=_0x344d24[_0x3b67b0(0x268)]((_0x138112,_0x5c9dc0)=>{const _0x5a4b97=_0x373586,_0x1934a7=_0x3b67b0;if(_0x138112[_0x5a4b97(0x246)]===_0x5a4b97(0x289)&&_0x5c9dc0[_0x1934a7(0x1fc)]===_0x1934a7(0x224))return-0x1;else{if(_0x138112[_0x1934a7(0x1fc)]===_0x1934a7(0x284)&&_0x5c9dc0[_0x1934a7(0x1fc)]===_0x5a4b97(0x26d))return-0x1;else{if(_0x138112[_0x1934a7(0x1fc)]===_0x5a4b97(0x26c)&&_0x5c9dc0[_0x1934a7(0x1fc)]===_0x5a4b97(0x289))return 0x1;else{if(_0x138112[_0x1934a7(0x1fc)]===_0x1934a7(0x224)&&_0x5c9dc0[_0x1934a7(0x1fc)]===_0x1934a7(0x1f3))return-0x1;else{if(_0x138112[_0x1934a7(0x1fc)]===_0x1934a7(0x1f3)&&_0x5c9dc0[_0x5a4b97(0x246)]===_0x1934a7(0x284))return 0x1;else{if(_0x138112[_0x1934a7(0x1fc)]===_0x1934a7(0x1f3)&&_0x5c9dc0[_0x5a4b97(0x246)]===_0x1934a7(0x224))return 0x1;else{let _0x4b3354=_0x138112[_0x5a4b97(0x1f7)][_0x1934a7(0x1cc)](),_0x542165=_0x5c9dc0[_0x1934a7(0x211)][_0x1934a7(0x1cc)]();if(_0x4b3354<_0x542165)return-0x1;if(_0x4b3354>_0x542165)return 0x1;return 0x0;}}}}}}});for(let _0x1c4a48 of _0x55ed09){let _0x6bfd06=_0x1c4a48[_0x3b67b0(0x211)],_0x2db20a=_0x1c4a48[_0x3b67b0(0x1fc)],_0x41451d=_0x1c4a48[_0x373586(0x250)]?_0x1c4a48[_0x3b67b0(0x1e4)]:_0x3b67b0(0x283);if(_0x2db20a===_0x373586(0x26c))try{await axios[_0x3b67b0(0x205)](_0x3b67b0(0x259)+_0x6bfd06+_0x373586(0x278));const _0x12664a=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x12664a[_0x3b67b0(0x1fe)]=_0x3b67b0(0x1ea);const _0x29a385=document[_0x3b67b0(0x291)](_0x3b67b0(0x1e3));_0x29a385[_0x3b67b0(0x1fe)]=_0x373586(0x28b);const _0x5f454c=document[_0x373586(0x297)](_0x3b67b0(0x1cb));_0x5f454c[_0x3b67b0(0x1fe)]=_0x3b67b0(0x230);const _0x2deb6a=document[_0x3b67b0(0x291)](_0x3b67b0(0x1fa));_0x2deb6a[_0x531c31(0x182)]=_0x373586(0x254);const _0x220c4f=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x220c4f[_0x3b67b0(0x1fe)]=_0x373586(0x267),_0x220c4f[_0x3b67b0(0x260)]=_0x373586(0x216),_0x220c4f[_0x3b67b0(0x1db)][_0x3b67b0(0x264)]=_0x3b67b0(0x200);const _0x485660=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x485660[_0x3b67b0(0x1fe)]=_0x3b67b0(0x23e);const _0x28d1d5=document[_0x373586(0x297)](_0x3b67b0(0x1fd));_0x28d1d5[_0x373586(0x224)]=_0x3b67b0(0x1e0),_0x28d1d5[_0x3b67b0(0x260)]=_0x3b67b0(0x249),_0x28d1d5[_0x3b67b0(0x1db)][_0x531c31(0x1fc)]=_0x3b67b0(0x252),_0x28d1d5[_0x3b67b0(0x1db)][_0x3b67b0(0x264)]=_0x3b67b0(0x200),_0x485660[_0x3b67b0(0x213)](_0x28d1d5),_0x2deb6a[_0x3b67b0(0x213)](_0x220c4f),_0x2deb6a[_0x373586(0x28a)](_0x485660),_0x5f454c[_0x373586(0x28a)](_0x2deb6a);const _0x5f13f4=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x5f13f4[_0x373586(0x25a)]=_0x3b67b0(0x1c9);const _0x278ea5=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x278ea5[_0x3b67b0(0x1fe)]=_0x3b67b0(0x236);const _0x5765f6=document[_0x3b67b0(0x291)](_0x3b67b0(0x28a));_0x5765f6[_0x373586(0x25a)]=_0x3b67b0(0x1f9),_0x5765f6[_0x3b67b0(0x1e2)]=_0x6bfd06;const _0x2e203a=document[_0x531c31(0x1a6)](_0x3b67b0(0x21c));_0x2e203a[_0x3b67b0(0x1db)][_0x3b67b0(0x293)]=_0x373586(0x1de);const _0x4f376a=document[_0x3b67b0(0x291)](_0x531c31(0x173));_0x4f376a[_0x3b67b0(0x272)]=_0x3b67b0(0x24a),_0x4f376a[_0x3b67b0(0x260)]='',_0x4f376a[_0x373586(0x210)][_0x373586(0x285)]=_0x3b67b0(0x222),_0x4f376a[_0x3b67b0(0x1db)][_0x373586(0x296)]=_0x373586(0x20d),_0x2e203a[_0x373586(0x28a)](_0x4f376a);const _0x215b4a=document[_0x3b67b0(0x291)]('br'),_0x5f0d1a=document[_0x3b67b0(0x291)](_0x373586(0x24c));_0x5f0d1a[_0x3b67b0(0x1e2)]=this[_0x373586(0x255)][_0x3b67b0(0x25e)];const _0x55a912=document[_0x3b67b0(0x291)]('p');_0x55a912[_0x3b67b0(0x213)](_0x5765f6),_0x55a912[_0x3b67b0(0x213)](_0x2e203a),_0x55a912[_0x3b67b0(0x213)](_0x215b4a),_0x55a912[_0x3b67b0(0x213)](_0x5f0d1a),_0x278ea5[_0x3b67b0(0x213)](_0x55a912),_0x5f13f4[_0x3b67b0(0x213)](_0x278ea5),_0x29a385[_0x3b67b0(0x213)](_0x5f454c),_0x29a385[_0x373586(0x28a)](_0x5f13f4),_0x12664a[_0x3b67b0(0x213)](_0x29a385),_0x79785c[_0x3b67b0(0x213)](_0x12664a),_0x220c4f[_0x3b67b0(0x1db)][_0x531c31(0x21a)]=_0x531c31(0x22c)+_0x6bfd06+_0x373586(0x28e);}catch(_0x31bc02){console[_0x3b67b0(0x20c)](_0x31bc02);const _0x393468=document[_0x3b67b0(0x291)](_0x373586(0x27d));_0x393468[_0x373586(0x25a)]=_0x3b67b0(0x1ea);const _0xd504e=document[_0x373586(0x297)](_0x3b67b0(0x1e3));_0xd504e[_0x3b67b0(0x1fe)]=_0x3b67b0(0x23b);const _0x575119=document[_0x373586(0x297)](_0x3b67b0(0x1cb));_0x575119[_0x3b67b0(0x1fe)]=_0x3b67b0(0x230);const _0x36d6af=document[_0x531c31(0x1a6)](_0x3b67b0(0x1fa));_0x36d6af[_0x3b67b0(0x1fe)]=_0x47cf56(0x1cf);const _0x5cb47e=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x5cb47e[_0x3b67b0(0x1fe)]=_0x3b67b0(0x228),_0x5cb47e[_0x3b67b0(0x260)]=_0x3b67b0(0x253),_0x5cb47e[_0x3b67b0(0x1db)][_0x373586(0x232)]=_0x3b67b0(0x200);const _0x4ed18d=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x4ed18d[_0x373586(0x25a)]=_0x3b67b0(0x23e);const _0x14b53b=document[_0x3b67b0(0x291)](_0x3b67b0(0x1fd));_0x14b53b[_0x3b67b0(0x272)]=_0x3b67b0(0x1e0),_0x14b53b[_0x3b67b0(0x260)]=_0x3b67b0(0x249),_0x14b53b[_0x373586(0x210)][_0x3b67b0(0x27c)]=_0x3b67b0(0x252),_0x14b53b[_0x3b67b0(0x1db)][_0x3b67b0(0x264)]=_0x3b67b0(0x200),_0x4ed18d[_0x3b67b0(0x213)](_0x14b53b),_0x36d6af[_0x373586(0x28a)](_0x5cb47e),_0x36d6af[_0x3b67b0(0x213)](_0x4ed18d),_0x575119[_0x3b67b0(0x213)](_0x36d6af);const _0x4c0747=document[_0x531c31(0x1a6)](_0x3b67b0(0x1cb));_0x4c0747[_0x3b67b0(0x1fe)]=_0x373586(0x209);const _0x21ff55=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x21ff55[_0x373586(0x25a)]=_0x3b67b0(0x236);const _0x3457dd=document[_0x3b67b0(0x291)](_0x373586(0x1e2));_0x3457dd[_0x3b67b0(0x1fe)]=_0x3b67b0(0x1f9),_0x3457dd[_0x3b67b0(0x1e2)]=_0x6bfd06;const _0x3c1da9=document[_0x3b67b0(0x291)](_0x531c31(0x1bd));_0x3c1da9[_0x3b67b0(0x1db)][_0x3b67b0(0x293)]=_0x3b67b0(0x23a);const _0x1624ed=document[_0x531c31(0x1a6)](_0x3b67b0(0x1fd));_0x1624ed[_0x3b67b0(0x272)]=_0x373586(0x25d),_0x1624ed[_0x3b67b0(0x260)]='',_0x1624ed[_0x3b67b0(0x1db)][_0x531c31(0x1fc)]=_0x3b67b0(0x222),_0x1624ed[_0x3b67b0(0x1db)][_0x531c31(0x20c)]=_0x3b67b0(0x21a),_0x3c1da9[_0x3b67b0(0x213)](_0x1624ed);const _0xea100=document[_0x3b67b0(0x291)]('br'),_0x594376=document[_0x3b67b0(0x291)](_0x3b67b0(0x21c));_0x594376[_0x373586(0x21b)]=this[_0x3b67b0(0x1de)][_0x3b67b0(0x25e)];const _0x500bdf=document[_0x3b67b0(0x291)]('p');_0x500bdf[_0x3b67b0(0x213)](_0x3457dd),_0x500bdf[_0x3b67b0(0x213)](_0x3c1da9),_0x500bdf[_0x3b67b0(0x213)](_0xea100),_0x500bdf[_0x373586(0x28a)](_0x594376),_0x21ff55[_0x3b67b0(0x213)](_0x500bdf),_0x4c0747[_0x531c31(0x19f)](_0x21ff55),_0xd504e[_0x3b67b0(0x213)](_0x575119),_0xd504e[_0x373586(0x28a)](_0x4c0747),_0x393468[_0x3b67b0(0x213)](_0xd504e),_0x79785c[_0x373586(0x28a)](_0x393468),_0x5cb47e[_0x3b67b0(0x1db)][_0x373586(0x239)]=_0x3b67b0(0x275);}else{if(_0x2db20a===_0x373586(0x289)){let _0x3be935,_0x428145;if(_0x41451d[_0x3b67b0(0x229)](_0x3b67b0(0x28c)))_0x3be935=_0x3b67b0(0x28c),_0x428145=_0x3b67b0(0x1d5);else{if(_0x41451d[_0x3b67b0(0x229)](_0x531c31(0x21e)))_0x3be935=_0x3b67b0(0x26b),_0x428145=_0x47cf56(0x204);else{if(_0x41451d[_0x3b67b0(0x229)](_0x373586(0x283)))_0x3be935=_0x3b67b0(0x1cf),_0x428145=_0x373586(0x1e3);else{if(_0x41451d[_0x3b67b0(0x229)](_0x3b67b0(0x23c)))_0x3be935=_0x373586(0x2a0),_0x428145=_0x3b67b0(0x27a);else{if(_0x41451d[_0x3b67b0(0x229)](_0x3b67b0(0x241)))_0x3be935=_0x3b67b0(0x241),_0x428145=_0x3b67b0(0x22e);else{if(_0x41451d[_0x3b67b0(0x229)](_0x3b67b0(0x227)))_0x3be935=_0x3b67b0(0x227),_0x428145=_0x3b67b0(0x1ef);else{if(_0x41451d[_0x3b67b0(0x229)](_0x3b67b0(0x1f7)))_0x3be935=_0x373586(0x27a),_0x428145=_0x373586(0x272);else{if(_0x41451d[_0x3b67b0(0x229)](_0x3b67b0(0x27f)))_0x3be935=_0x3b67b0(0x27f),_0x428145=_0x3b67b0(0x21b);else{if(_0x41451d[_0x3b67b0(0x229)](_0x373586(0x276)))_0x3be935=_0x3b67b0(0x1c7),_0x428145=_0x3b67b0(0x207);else _0x41451d[_0x3b67b0(0x229)](_0x3b67b0(0x1d2))?(_0x3be935=_0x3b67b0(0x1d2),_0x428145=_0x373586(0x26a)):(_0x3be935=_0x47cf56(0x1a7),_0x428145=_0x3b67b0(0x1e5));}}}}}}}}try{await axios[_0x3b67b0(0x205)](_0x3b67b0(0x259)+_0x6bfd06+_0x3b67b0(0x1d4));const _0x52b738=document[_0x3b67b0(0x291)](_0x373586(0x27d));_0x52b738[_0x3b67b0(0x1fe)]=_0x373586(0x273);const _0x315346=document[_0x3b67b0(0x291)](_0x3b67b0(0x1e3));_0x315346[_0x3b67b0(0x1fe)]=_0x3b67b0(0x23b);const _0xd733d4=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0xd733d4[_0x3b67b0(0x1fe)]=_0x373586(0x1e5);const _0x33d2c8=document[_0x3b67b0(0x291)](_0x3b67b0(0x1fa));_0x33d2c8[_0x3b67b0(0x1fe)]=_0x373586(0x254);const _0x5c2b0e=document[_0x373586(0x297)](_0x373586(0x27d));_0x5c2b0e[_0x3b67b0(0x1fe)]=_0x3b67b0(0x228),_0x5c2b0e[_0x531c31(0x1c0)]=_0x373586(0x216),_0x5c2b0e[_0x3b67b0(0x1db)][_0x373586(0x232)]=_0x3b67b0(0x200);const _0x84cc58=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x84cc58[_0x3b67b0(0x1fe)]=_0x3b67b0(0x23e);const _0x21cc4c=document[_0x373586(0x297)](_0x3b67b0(0x1fd));_0x21cc4c[_0x3b67b0(0x272)]=_0x428145,_0x21cc4c[_0x3b67b0(0x260)]=_0x3b67b0(0x249),_0x21cc4c[_0x3b67b0(0x1db)][_0x3b67b0(0x27c)]=_0x3b67b0(0x252),_0x21cc4c[_0x3b67b0(0x1db)][_0x3b67b0(0x264)]=_0x3b67b0(0x200),_0x84cc58[_0x3b67b0(0x213)](_0x21cc4c),_0x33d2c8[_0x3b67b0(0x213)](_0x5c2b0e),_0x33d2c8[_0x3b67b0(0x213)](_0x84cc58),_0xd733d4[_0x3b67b0(0x213)](_0x33d2c8);const _0x2602a6=document[_0x373586(0x297)](_0x3b67b0(0x1cb));_0x2602a6[_0x3b67b0(0x1fe)]=_0x3b67b0(0x1c9);const _0x4d18b7=document[_0x373586(0x297)](_0x3b67b0(0x1cb));_0x4d18b7[_0x3b67b0(0x1fe)]=_0x3b67b0(0x236);const _0x205d16=document[_0x3b67b0(0x291)](_0x3b67b0(0x28a));_0x205d16[_0x3b67b0(0x1fe)]=_0x3b67b0(0x1f9),_0x205d16[_0x3b67b0(0x1e2)]=_0x6bfd06;const _0x5afd6f=document[_0x373586(0x297)](_0x3b67b0(0x21c));_0x5afd6f[_0x3b67b0(0x1db)][_0x3b67b0(0x293)]=_0x3b67b0(0x23a);const _0x5e9149=document[_0x3b67b0(0x291)](_0x3b67b0(0x1fd));_0x5e9149[_0x3b67b0(0x272)]=_0x373586(0x271),_0x5e9149[_0x3b67b0(0x260)]='',_0x5e9149[_0x3b67b0(0x1db)][_0x3b67b0(0x27c)]=_0x3b67b0(0x222),_0x5e9149[_0x3b67b0(0x1db)][_0x3b67b0(0x1d7)]=_0x3b67b0(0x21a),_0x5afd6f[_0x3b67b0(0x213)](_0x5e9149);const _0x1a68af=document[_0x373586(0x297)]('br'),_0x2bc353=document[_0x3b67b0(0x291)](_0x3b67b0(0x21c));_0x2bc353[_0x3b67b0(0x1e2)]=_0x41451d;const _0x512a89=document[_0x3b67b0(0x291)]('p');_0x512a89[_0x3b67b0(0x213)](_0x205d16),_0x512a89[_0x3b67b0(0x213)](_0x5afd6f),_0x512a89[_0x373586(0x28a)](_0x1a68af),_0x512a89[_0x3b67b0(0x213)](_0x2bc353),_0x4d18b7[_0x3b67b0(0x213)](_0x512a89),_0x2602a6[_0x3b67b0(0x213)](_0x4d18b7),_0x315346[_0x3b67b0(0x213)](_0xd733d4),_0x315346[_0x3b67b0(0x213)](_0x2602a6),_0x52b738[_0x3b67b0(0x213)](_0x315346),_0x79785c[_0x3b67b0(0x213)](_0x52b738),_0x5c2b0e[_0x3b67b0(0x1db)][_0x3b67b0(0x22c)]=_0x3b67b0(0x255)+_0x6bfd06+_0x3b67b0(0x1f1);}catch(_0x2b4cf4){console[_0x3b67b0(0x20c)](_0x2b4cf4);const _0x4be50e=document[_0x373586(0x297)](_0x531c31(0x218));_0x4be50e[_0x3b67b0(0x1fe)]=_0x3b67b0(0x1ea);const _0x4f1c70=document[_0x373586(0x297)](_0x3b67b0(0x1e3));_0x4f1c70[_0x3b67b0(0x1fe)]=_0x373586(0x28b);const _0x46a242=document[_0x3b67b0(0x291)](_0x531c31(0x218));_0x46a242[_0x3b67b0(0x1fe)]=_0x3b67b0(0x230);const _0x1628d4=document[_0x3b67b0(0x291)](_0x373586(0x1eb));_0x1628d4[_0x3b67b0(0x1fe)]=_0x531c31(0x178);const _0x4e6a5e=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x4e6a5e[_0x373586(0x25a)]=_0x3b67b0(0x228),_0x4e6a5e[_0x3b67b0(0x260)]=_0x3b67b0(0x253),_0x4e6a5e[_0x373586(0x210)][_0x3b67b0(0x264)]=_0x3b67b0(0x200);const _0x5e5be1=document[_0x47cf56(0x23d)](_0x3b67b0(0x1cb));_0x5e5be1[_0x531c31(0x182)]=_0x3b67b0(0x23e);const _0x2c4213=document[_0x3b67b0(0x291)](_0x3b67b0(0x1fd));_0x2c4213[_0x3b67b0(0x272)]=_0x428145,_0x2c4213[_0x3b67b0(0x260)]=_0x3b67b0(0x249),_0x2c4213[_0x3b67b0(0x1db)][_0x3b67b0(0x27c)]=_0x373586(0x1ed),_0x2c4213[_0x3b67b0(0x1db)][_0x3b67b0(0x264)]=_0x3b67b0(0x200),_0x5e5be1[_0x3b67b0(0x213)](_0x2c4213),_0x1628d4[_0x3b67b0(0x213)](_0x4e6a5e),_0x1628d4[_0x373586(0x28a)](_0x5e5be1),_0x46a242[_0x3b67b0(0x213)](_0x1628d4);const _0x1e76d8=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x1e76d8[_0x3b67b0(0x1fe)]=_0x47cf56(0x259);const _0x401a24=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x401a24[_0x3b67b0(0x1fe)]=_0x373586(0x251);const _0xc770b5=document[_0x3b67b0(0x291)](_0x3b67b0(0x28a));_0xc770b5[_0x531c31(0x182)]=_0x3b67b0(0x1f9),_0xc770b5[_0x3b67b0(0x1e2)]=_0x6bfd06;const _0x38f397=document[_0x373586(0x297)](_0x3b67b0(0x21c));_0x38f397[_0x3b67b0(0x1db)][_0x3b67b0(0x293)]=_0x3b67b0(0x23a);const _0x5e4be6=document[_0x3b67b0(0x291)](_0x3b67b0(0x1fd));_0x5e4be6[_0x3b67b0(0x272)]=_0x3b67b0(0x262),_0x5e4be6[_0x3b67b0(0x260)]='',_0x5e4be6[_0x373586(0x210)][_0x3b67b0(0x27c)]=_0x47cf56(0x240),_0x5e4be6[_0x373586(0x210)][_0x373586(0x296)]=_0x3b67b0(0x21a),_0x38f397[_0x3b67b0(0x213)](_0x5e4be6);const _0x4a37b0=document[_0x373586(0x297)]('br'),_0x2fe6c0=document[_0x3b67b0(0x291)](_0x3b67b0(0x21c));_0x2fe6c0[_0x3b67b0(0x1e2)]=_0x41451d;const _0x5eb8bd=document[_0x373586(0x297)]('p');_0x5eb8bd[_0x373586(0x28a)](_0xc770b5),_0x5eb8bd[_0x3b67b0(0x213)](_0x38f397),_0x5eb8bd[_0x3b67b0(0x213)](_0x4a37b0),_0x5eb8bd[_0x3b67b0(0x213)](_0x2fe6c0),_0x401a24[_0x3b67b0(0x213)](_0x5eb8bd),_0x1e76d8[_0x3b67b0(0x213)](_0x401a24),_0x4f1c70[_0x3b67b0(0x213)](_0x46a242),_0x4f1c70[_0x3b67b0(0x213)](_0x1e76d8),_0x4be50e[_0x3b67b0(0x213)](_0x4f1c70),_0x79785c[_0x3b67b0(0x213)](_0x4be50e),_0x4e6a5e[_0x3b67b0(0x1db)][_0x3b67b0(0x22c)]=_0x3b67b0(0x275);}}else try{await axios[_0x3b67b0(0x205)](_0x3b67b0(0x259)+_0x6bfd06+_0x373586(0x278));const _0x409390=document[_0x373586(0x297)](_0x373586(0x27d));_0x409390[_0x373586(0x25a)]=_0x3b67b0(0x1ea);const _0x182f13=document[_0x3b67b0(0x291)](_0x3b67b0(0x1e3));_0x182f13[_0x3b67b0(0x1fe)]=_0x3b67b0(0x23b);const _0x591bd8=document[_0x373586(0x297)](_0x3b67b0(0x1cb));_0x591bd8[_0x373586(0x25a)]=_0x3b67b0(0x230);const _0xfa8c6=document[_0x3b67b0(0x291)](_0x3b67b0(0x1fa));_0xfa8c6[_0x3b67b0(0x1fe)]=_0x3b67b0(0x248);const _0x30fb9e=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x30fb9e[_0x3b67b0(0x1fe)]=_0x373586(0x267),_0x30fb9e[_0x531c31(0x1c0)]=_0x3b67b0(0x253),_0x30fb9e[_0x3b67b0(0x1db)][_0x3b67b0(0x264)]=_0x3b67b0(0x200),_0xfa8c6[_0x3b67b0(0x213)](_0x30fb9e),_0x591bd8[_0x3b67b0(0x213)](_0xfa8c6);const _0x5b6d39=document[_0x373586(0x297)](_0x3b67b0(0x1cb));_0x5b6d39[_0x3b67b0(0x1fe)]=_0x3b67b0(0x1c9);const _0x8c7b4c=document[_0x373586(0x297)](_0x3b67b0(0x1cb));_0x8c7b4c[_0x3b67b0(0x1fe)]=_0x3b67b0(0x236);const _0x3339da=document[_0x3b67b0(0x291)](_0x373586(0x1e2));_0x3339da[_0x3b67b0(0x1fe)]=_0x3b67b0(0x1f9),_0x3339da[_0x3b67b0(0x1e2)]=_0x6bfd06;const _0x73145e=document[_0x373586(0x297)](_0x47cf56(0x261));_0x73145e[_0x3b67b0(0x1db)][_0x3b67b0(0x293)]=_0x3b67b0(0x23a);const _0x521653=document[_0x531c31(0x1a6)](_0x3b67b0(0x1fd));_0x521653[_0x3b67b0(0x272)]=_0x373586(0x280),_0x521653[_0x3b67b0(0x260)]='',_0x521653[_0x373586(0x210)][_0x3b67b0(0x27c)]=_0x3b67b0(0x222),_0x521653[_0x3b67b0(0x1db)][_0x531c31(0x20c)]=_0x3b67b0(0x21a),_0x73145e[_0x3b67b0(0x213)](_0x521653);const _0x3d123d=document[_0x3b67b0(0x291)]('br'),_0x2bd419=document[_0x3b67b0(0x291)](_0x3b67b0(0x21c));_0x2bd419[_0x3b67b0(0x1e2)]=_0x3b67b0(0x283);const _0x36be95=document[_0x373586(0x297)]('p');_0x36be95[_0x3b67b0(0x213)](_0x3339da),_0x36be95[_0x3b67b0(0x213)](_0x73145e),_0x36be95[_0x3b67b0(0x213)](_0x3d123d),_0x36be95[_0x373586(0x28a)](_0x2bd419),_0x8c7b4c[_0x3b67b0(0x213)](_0x36be95),_0x5b6d39[_0x373586(0x28a)](_0x8c7b4c),_0x182f13[_0x3b67b0(0x213)](_0x591bd8),_0x182f13[_0x3b67b0(0x213)](_0x5b6d39),_0x409390[_0x3b67b0(0x213)](_0x182f13),_0x79785c[_0x3b67b0(0x213)](_0x409390),_0x30fb9e[_0x3b67b0(0x1db)][_0x373586(0x239)]=_0x3b67b0(0x255)+_0x6bfd06+_0x3b67b0(0x1f1);}catch(_0x570e48){console[_0x3b67b0(0x20c)](_0x570e48);const _0x3d98e9=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x3d98e9[_0x3b67b0(0x1fe)]=_0x3b67b0(0x1ea);const _0x491482=document[_0x3b67b0(0x291)](_0x3b67b0(0x1e3));_0x491482[_0x3b67b0(0x1fe)]=_0x3b67b0(0x23b);const _0x25581e=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x25581e[_0x3b67b0(0x1fe)]=_0x373586(0x1e5);const _0x435365=document[_0x3b67b0(0x291)](_0x3b67b0(0x1fa));_0x435365[_0x531c31(0x182)]=_0x3b67b0(0x248);const _0x2a1d03=document[_0x3b67b0(0x291)](_0x3b67b0(0x1cb));_0x2a1d03[_0x3b67b0(0x1fe)]=_0x3b67b0(0x228),_0x2a1d03[_0x3b67b0(0x260)]=_0x3b67b0(0x253),_0x2a1d03[_0x3b67b0(0x1db)][_0x3b67b0(0x264)]=_0x3b67b0(0x200),_0x435365[_0x3b67b0(0x213)](_0x2a1d03),_0x25581e[_0x3b67b0(0x213)](_0x435365);const _0x2bf1a9=document[_0x373586(0x297)](_0x3b67b0(0x1cb));_0x2bf1a9[_0x3b67b0(0x1fe)]=_0x3b67b0(0x1c9);const _0x281fb8=document[_0x531c31(0x1a6)](_0x3b67b0(0x1cb));_0x281fb8['className']=_0x3b67b0(0x236);const _0x1b8374=document[_0x531c31(0x1a6)](_0x373586(0x1e2));_0x1b8374[_0x3b67b0(0x1fe)]=_0x47cf56(0x268),_0x1b8374[_0x373586(0x21b)]=_0x6bfd06;const _0x425ef5=document[_0x373586(0x297)](_0x3b67b0(0x21c));_0x425ef5[_0x373586(0x210)][_0x531c31(0x20b)]=_0x3b67b0(0x23a);const _0x25bf75=document[_0x373586(0x297)](_0x3b67b0(0x1fd));_0x25bf75[_0x3b67b0(0x272)]=_0x531c31(0x1ed),_0x25bf75[_0x47cf56(0x1c0)]='',_0x25bf75[_0x3b67b0(0x1db)][_0x3b67b0(0x27c)]=_0x3b67b0(0x222),_0x25bf75[_0x3b67b0(0x1db)][_0x3b67b0(0x1d7)]=_0x3b67b0(0x21a),_0x425ef5[_0x3b67b0(0x213)](_0x25bf75);const _0xe708d9=document[_0x531c31(0x1a6)]('br'),_0x1dae8b=document[_0x3b67b0(0x291)](_0x3b67b0(0x21c));_0x1dae8b[_0x3b67b0(0x1e2)]=_0x3b67b0(0x283);const _0x1eef49=document[_0x3b67b0(0x291)]('p');_0x1eef49[_0x373586(0x28a)](_0x1b8374),_0x1eef49[_0x3b67b0(0x213)](_0x425ef5),_0x1eef49[_0x3b67b0(0x213)](_0xe708d9),_0x1eef49[_0x3b67b0(0x213)](_0x1dae8b),_0x281fb8[_0x531c31(0x19f)](_0x1eef49),_0x2bf1a9[_0x3b67b0(0x213)](_0x281fb8),_0x491482[_0x3b67b0(0x213)](_0x25581e),_0x491482[_0x3b67b0(0x213)](_0x2bf1a9),_0x3d98e9[_0x3b67b0(0x213)](_0x491482),_0x79785c[_0x373586(0x28a)](_0x3d98e9),_0x2a1d03[_0x3b67b0(0x1db)][_0x3b67b0(0x22c)]=_0x373586(0x23f);}}document[_0x3b67b0(0x22b)](_0x373586(0x21f))[_0x3b67b0(0x1db)][_0x3b67b0(0x1d7)]=_0x373586(0x23c);}});}}function a166_0x1a55(_0x5a7042,_0x97ce5f){const _0x32f5c0=a166_0x5a56();return a166_0x1a55=function(_0x3674df,_0xfd9f6b){_0x3674df=_0x3674df-0x1da;let _0x12ed43=_0x32f5c0[_0x3674df];return _0x12ed43;},a166_0x1a55(_0x5a7042,_0x97ce5f);}export default Friends;function a166_0xf6c4(){const _0x4469b0=a166_0x32efc9,_0x43296b=[_0x4469b0(0x1d5),_0x4469b0(0x22d),'marginTop',_0x4469b0(0x1bc),_0x4469b0(0x1bd),_0x4469b0(0x238),_0x4469b0(0x23c),_0x4469b0(0x1c5),_0x4469b0(0x226),_0x4469b0(0x1fb),'usuarios',_0x4469b0(0x251),_0x4469b0(0x1f1),_0x4469b0(0x252),_0x4469b0(0x24a),_0x4469b0(0x1fd),_0x4469b0(0x25e),_0x4469b0(0x225),_0x4469b0(0x232),_0x4469b0(0x23d),_0x4469b0(0x255),_0x4469b0(0x1b6),_0x4469b0(0x1e8),_0x4469b0(0x20d),_0x4469b0(0x1d3),_0x4469b0(0x25b),_0x4469b0(0x237),_0x4469b0(0x203),'POST',_0x4469b0(0x24c),_0x4469b0(0x23f),_0x4469b0(0x248),_0x4469b0(0x256),_0x4469b0(0x1ba),_0x4469b0(0x1f9),_0x4469b0(0x1ad),_0x4469b0(0x1a0),_0x4469b0(0x220),'friends-btn','add_friend_text',_0x4469b0(0x1f6),_0x4469b0(0x24e),_0x4469b0(0x261),_0x4469b0(0x1d4),'fa-solid\x20fa-xmark','alt','resumeTimer',_0x4469b0(0x231),_0x4469b0(0x1c1),_0x4469b0(0x21a),_0x4469b0(0x1b5),_0x4469b0(0x1da),_0x4469b0(0x1e9),'darwin',_0x4469b0(0x1a5),_0x4469b0(0x1f0),'get',_0x4469b0(0x1ee),_0x4469b0(0x1af),'30px',_0x4469b0(0x1ef),_0x4469b0(0x262),_0x4469b0(0x21d),_0x4469b0(0x22b),'Battly',_0x4469b0(0x258),_0x4469b0(0x236),_0x4469b0(0x1e4),'in_the_main_menu',_0x4469b0(0x25a),_0x4469b0(0x1a1),_0x4469b0(0x1fa),_0x4469b0(0x228),_0x4469b0(0x19d),'header',_0x4469b0(0x1f8),'obtener-solicitudes',_0x4469b0(0x222),_0x4469b0(0x1ce),_0x4469b0(0x1e7),_0x4469b0(0x1c4),_0x4469b0(0x24f),'figure','offline',_0x4469b0(0x22e),'button\x20is-danger\x20is-square',_0x4469b0(0x201),_0x4469b0(0x1fe),'type',_0x4469b0(0x215),_0x4469b0(0x21e),_0x4469b0(0x1c6),'fontSize',_0x4469b0(0x235),_0x4469b0(0x1ab),_0x4469b0(0x1c9),_0x4469b0(0x25d),_0x4469b0(0x1c2),_0x4469b0(0x249),'node-fetch','fa-solid\x20fa-plus',_0x4469b0(0x22f),_0x4469b0(0x20a),_0x4469b0(0x1de),'block',_0x4469b0(0x19c),_0x4469b0(0x267),_0x4469b0(0x250),_0x4469b0(0x1ff),_0x4469b0(0x25c),_0x4469b0(0x1b9),_0x4469b0(0x1e6),_0x4469b0(0x1d7),'.png',_0x4469b0(0x1ec),_0x4469b0(0x234),_0x4469b0(0x200),'add-friends','then',_0x4469b0(0x22c),_0x4469b0(0x1e0),_0x4469b0(0x263),_0x4469b0(0x212),_0x4469b0(0x1ed),_0x4469b0(0x1b2),'https://cdn.discordapp.com/attachments/933698201486237716/1170390085561237674/OptiFine_Logo.webp',_0x4469b0(0x1bb),_0x4469b0(0x1ea),_0x4469b0(0x1dd),_0x4469b0(0x1a8),_0x4469b0(0x269),_0x4469b0(0x1e5),'config',_0x4469b0(0x264),_0x4469b0(0x1d9),_0x4469b0(0x1aa),_0x4469b0(0x229),_0x4469b0(0x217),'column','Fabric',_0x4469b0(0x245),_0x4469b0(0x207),_0x4469b0(0x209),_0x4469b0(0x242),'control\x20is-info',_0x4469b0(0x240),_0x4469b0(0x1a9),_0x4469b0(0x1f4),_0x4469b0(0x205),_0x4469b0(0x1df),_0x4469b0(0x259),_0x4469b0(0x1cd),_0x4469b0(0x1c3),_0x4469b0(0x1d8),_0x4469b0(0x19b),_0x4469b0(0x24d),_0x4469b0(0x1ac),_0x4469b0(0x1db),_0x4469b0(0x22a),'details',_0x4469b0(0x21c),_0x4469b0(0x19a),_0x4469b0(0x224),_0x4469b0(0x230),'assets/images/icon.png','img',_0x4469b0(0x21b),'fa-solid\x20fa-ban','accounts','277809qBBFxW','image\x20is-64x64',_0x4469b0(0x216),_0x4469b0(0x1bf),_0x4469b0(0x1f7),'12FsximW',_0x4469b0(0x1f5),_0x4469b0(0x1cc),'mouseenter',_0x4469b0(0x1d6),_0x4469b0(0x1b8),'className','stringify',_0x4469b0(0x1c7),_0x4469b0(0x243),_0x4469b0(0x1e3),_0x4469b0(0x1f3),_0x4469b0(0x1f2),'push',_0x4469b0(0x210),_0x4469b0(0x1b0),_0x4469b0(0x260),_0x4469b0(0x233),_0x4469b0(0x218),_0x4469b0(0x1b1),_0x4469b0(0x1a3),'you_already_have_this_friend',_0x4469b0(0x23e)];return a166_0xf6c4=function(){return _0x43296b;},a166_0xf6c4();}function a166_0xbc5c(){const _0x2a11fb=['898142DWKEYg','addEventListener','fire','marginLeft','fa-solid\x20fa-ban','25214OrqgkF','Quilt','.png\x27)','success','request_sent_to','67985FJccwy','lista-de-amigos','url(https://minotar.net/skin/MHF_Steve.png)','error_loading_friends','161277MbRpkB','borderRadius','loading_friends','querySelector','style','textContent','appendChild','innerHTML','content','remove','platform','send','30nNDHyr','/Library/Application\x20Support','media','box\x20friend-card','LabyMod','https://battlylauncher.com/assets/img/labymod.png','is-loading','loading-text','obtener-amigos','GetOnlineUsers','BatMod','aria-label','length','https://battlylauncher.com/assets/img/fabric.png','1277YfdSWf','log','close','3752norelg','inline','1789290byknCn','modal-card-foot','request_accepted','3489255YZvbke','mc-face-viewer-8x','.png)','text','status-overlay','Solicitudes','onlineUsers','modal-card-head','OptiFine','placeholder','database','AddFriend','https://battlylauncher.com/assets/img/batmod.png','textAlign','resultado-amigos\x20modal-card-body','CMPack','button\x20is-info','assets/images/status/offline.png','estado','value','Error\x20al\x20obtener\x20la\x20lista\x20de\x20amigos.\x20Comprueba\x20tu\x20conexión\x20a\x20internet\x20y\x20vuelve\x20a\x20intentarlo\x20más\x20tarde.','2774502XbhzMg','className','No\x20tienes\x20amigos','solicitudes','http://api.battlylauncher.com/api/skin/','9730088RUyFpv','correctly','661976rOLVwy','click','none','accounts-selected','friends','center','error','23639zipxGL','article','getOnlineUsers','search','rechazar-solicitud','../package.json','8CXsiyE','28cbZcix','364505raHODZ','catch','5042919lxxPyl','5px','.preload-content','createElement','you_dont_have_any_friend_requests','you_cannot_add_yourself','15px','button','aceptar-solicitud','mixin','https://battlylauncher.com/assets/img/cmpack.png','modal-card-title','http://api.battlylauncher.com/api/users/buscarUsuarios','setAttribute','20px','ausente','media-left','flexDirection','back-chat-btn','request_rejected','https://battlylauncher.com/assets/img/vanilla.png','1234','includes','online','382XQWhzN','1092987bWKLmy','Offline','14270vlAvwQ','2118264eoeYcw','body','section','media-content','https://pbs.twimg.com/profile_images/778706890914095109/fhMDH9o6_400x400.jpg','Status','https://battlylauncher.com/assets/img/quilt.png','button\x20is-info\x20is-square','chat-btn','1638YdMIqe','enviadas','span','3px','display','div','sort','4518090RkPuoC','858345siXWaU','friend-username','HOME','17215740LoNYNn','height','Chat','width','chat','then','16WRigqo','init','axios','GetLang','enviarSolicitud','25px','3410570RHyOaW','538138uXXSiY','Desconocida','10px','src','backgroundImage','strong','footer','Image','flex','14202859ombHey','recibidas','delete','stopTimer','env','getElementById','application/json','removeAttribute','add','assets/images/status/idle.png','toUpperCase','lang','input','assets/images/status/online.png','top-end','electron','box','alt','friend_requests','auto','Vanilla','fa-solid\x20fa-check','1157112EuIZHu','ObtenerAmigos','disabled','50HPOkTU','modal-background','classList','1180105WoNRRe','modal-card','amigos','2169sejBLQ','image\x20is-64x64','push','180030yoDbmu','figure','4bHpyJx','./assets/js/libs/sweetalert/sweetalert2.all.min','json','name','selected','url(\x27http://api.battlylauncher.com/api/skin/','shift','https://battlylauncher.com/assets/img/logo_500.png','\x20solicitud','18950BkVoMl'];a166_0xbc5c=function(){return _0x2a11fb;};return a166_0xbc5c();}
+
+'use strict';
+
+import { logger, database, changePanel } from '../utils.js';
+
+const { ipcRenderer } = require('electron');
+const pkg = require('../package.json');
+const fetch = require('node-fetch');
+const axios = require("axios");
+
+const Swal = require("./assets/js/libs/sweetalert/sweetalert2.all.min");
+const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 5000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+});
+
+let amigos;
+
+const dataDirectory = process.env.APPDATA || (process.platform == 'darwin' ? `${process.env.HOME}/Library/Application Support` : process.env.HOME)
+import { Lang } from "../utils/lang.js";
+
+class Friends {
+    static id = "friends";
+    async init(config, news) {
+        this.config = config;
+        this.database = await new database().init();
+        this.lang = await new Lang().GetLang();
+        this.AddFriend();
+        this.Solicitudes();
+        this.GetOnlineUsers();
+        this.ObtenerAmigos();
+        this.Chat();
+    }
+
+    async Chat() {
+        document.getElementById("chat-btn").addEventListener("click", () => {
+            changePanel("chat");
+        });
+
+        document.getElementById("back-chat-btn").addEventListener("click", () => {
+            changePanel("friends");
+        });
+    }
+
+    async GetOnlineUsers() {
+        ipcRenderer.send("socket", "getOnlineUsers", {});
+
+        ipcRenderer.on("onlineUsers", (e, data) => {
+        });
+
+        ipcRenderer.on('amigos', async (e, amigos_) => {
+            amigos = amigos_;
+        });
+    }
+
+    async AddFriend() {
+        let btnAddFriends = document.getElementById('add-friends');
+        
+        let uuid = (await this.database.get("1234", "accounts-selected")).value;
+        let account = (await this.database.get(uuid.selected, "accounts")).value;
+
+        btnAddFriends.addEventListener('click', (e) => {
+            // Crear el elemento modal
+            const modal = document.createElement('div');
+            modal.className = 'modal is-active';
+
+            // Crear el fondo del modal
+            const modalBackground = document.createElement('div');
+            modalBackground.className = 'modal-background';
+
+            // Crear el contenido del modal
+            const modalCard = document.createElement('div');
+            modalCard.className = 'modal-card';
+
+            // Crear el encabezado del modal
+            const modalHeader = document.createElement('header');
+            modalHeader.className = 'modal-card-head';
+
+            const modalTitle = document.createElement('p');
+            modalTitle.className = 'modal-card-title';
+            modalTitle.textContent = this.lang.add_friend_text;
+
+            const closeButton = document.createElement('button');
+            closeButton.className = 'delete';
+            closeButton.setAttribute('aria-label', 'close');
+
+            modalHeader.appendChild(modalTitle);
+            modalHeader.appendChild(closeButton);
+
+            // Crear el cuerpo del modal
+            const modalBody = document.createElement('section');
+            modalBody.className = 'resultado-amigos modal-card-body';
+
+            const inputContainer = document.createElement('div');
+            inputContainer.className = 'content';
+
+            const inputControl = document.createElement('div');
+            inputControl.className = 'control is-info';
+
+            const input = document.createElement('input');
+            input.className = 'input';
+            input.setAttribute('type', 'text');
+            input.setAttribute('placeholder', this.lang.username);
+
+            inputControl.appendChild(input);
+            inputContainer.appendChild(inputControl);
+            modalBody.appendChild(inputContainer);
+
+            // Crear el contenido de la caja en el cuerpo del modal
+            //crea un div
+
+            const users = document.createElement('div');
+            modalBody.appendChild(users);
+
+            // Crear el pie del modal
+            const modalFooter = document.createElement('footer');
+            modalFooter.className = 'modal-card-foot';
+
+            const searchButton = document.createElement('button');
+            searchButton.className = 'button is-info';
+            searchButton.textContent = this.lang.search;
+
+            modalFooter.appendChild(searchButton);
+
+            // Agregar elementos al modal
+            modalCard.appendChild(modalHeader);
+            modalCard.appendChild(modalBody);
+            modalCard.appendChild(modalFooter);
+
+            modal.appendChild(modalBackground);
+            modal.appendChild(modalCard);
+
+            // Agregar el modal al documento
+            document.body.appendChild(modal);
+
+            closeButton.addEventListener('click', () => {
+                modal.remove();
+            });
+
+            searchButton.addEventListener('click', () => {
+                inputControl.classList.add('is-loading');
+                input.setAttribute('disabled', 'disabled');
+
+                users.innerHTML = '';
+
+                fetch('http://api.battlylauncher.com/api/users/buscarUsuarios', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: input.value
+                    })
+                }).then(res => res.json()).then(async res => {
+                    inputControl.classList.remove('is-loading');
+                    input.removeAttribute('disabled');
+
+                    if (res.error) {
+                        console.error(res.error);
+                        return;
+                    }
+
+                    /* para cada usuario en el array de respuesta (data.usuarios) => crear esto:
+
+                    <div class="box">
+                    <article class="media">
+                        <div class="media-left">
+                            <figure class="image is-32x32">
+                                <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p style="font-size: 20px;">
+                                    Usuario
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media-right" style="display: flex; align-items: center;">
+                            <button class="button is-info is-square" style="margin-left: auto; height: 30px; width: 10px;">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </article>
+                    </div>
+
+                    Y añadirlo debajo del input
+
+                    */
+                    
+                    for (let user of res.usuarios) {
+                        try {
+                            await axios.get(`http://api.battlylauncher.com/api/skin/${user}.png`)
+                            const box = document.createElement('div');
+                            box.className = 'box';
+
+                            const mediaArticle = document.createElement('article');
+                            mediaArticle.className = 'media';
+
+                            const mediaLeft = document.createElement('div');
+                            mediaLeft.className = 'media-left';
+
+                            // Crear la imagen dentro del visor de cara
+                            const imgInsideFaceViewer = document.createElement('img');
+                            imgInsideFaceViewer.className = 'mc-face-viewer-8x';
+
+                            mediaLeft.appendChild(imgInsideFaceViewer);
+
+                            const mediaContent = document.createElement('div');
+                            mediaContent.className = 'media-content';
+
+                            const content = document.createElement('div');
+                            content.className = 'content';
+
+                            const userParagraph = document.createElement('p');
+                            userParagraph.style.fontSize = '20px';
+                            userParagraph.textContent = user;
+
+                            content.appendChild(userParagraph);
+                            mediaContent.appendChild(content);
+
+                            const mediaRight = document.createElement('div');
+                            mediaRight.className = 'media-right';
+                            mediaRight.style.display = 'flex';
+                            mediaRight.style.alignItems = 'center';
+
+                            const addButton = document.createElement('button');
+                            addButton.className = 'button is-info is-square';
+                            addButton.style.marginLeft = 'auto';
+                            addButton.style.height = '30px';
+                            addButton.style.width = '30px';
+
+                            const plusIcon = document.createElement('i');
+                            plusIcon.className = 'fa-solid fa-plus';
+
+                            addButton.appendChild(plusIcon);
+                            mediaRight.appendChild(addButton);
+
+                            mediaArticle.appendChild(mediaLeft);
+                            mediaArticle.appendChild(mediaContent);
+                            mediaArticle.appendChild(mediaRight);
+
+                            box.appendChild(mediaArticle);
+                            users.appendChild(box);
+                            imgInsideFaceViewer.style.backgroundImage = `url(http://api.battlylauncher.com/api/skin/${user}.png)`
+
+
+                            addButton.addEventListener('click', () =>
+                            {
+
+                                let amigosArray = [];
+                                for (let amigo of amigos) {
+                                    amigosArray.push(amigo.username);
+                                }
+                                
+                                if (user == account.name) {
+                                    Toast.fire({
+                                        icon: "error",
+                                        title: this.lang.you_cannot_add_yourself
+                                    });
+                                    return;
+                                } else if (amigosArray.includes(user)) {
+                                    Toast.fire({
+                                        icon: "error",
+                                        title: this.lang.you_already_have_this_friend,
+                                    });
+                                    return;
+                                } else {
+                                    ipcRenderer.send('enviarSolicitud', {
+                                        sender: account.name,
+                                        sended: user,
+                                        password: account.password
+                                    });
+
+                                    Toast.fire({
+                                        icon: "success",
+                                        title: `${this.lang.request_sent_to} ${user} ${this.lang.correctly}.`,
+                                    });
+                                }
+                            });
+                                    
+                        } catch (error) {
+                            console.log(`❌ Error al obtener la skin de ${user}.`);
+                            const box = document.createElement('div');
+                            box.className = 'box';
+
+                            const mediaArticle = document.createElement('article');
+                            mediaArticle.className = 'media';
+
+                            const mediaLeft = document.createElement('div');
+                            mediaLeft.className = 'media-left';
+
+                            // Crear la imagen dentro del visor de cara
+                            const imgInsideFaceViewer = document.createElement('img');
+                            imgInsideFaceViewer.className = 'mc-face-viewer-8x';
+
+                            mediaLeft.appendChild(imgInsideFaceViewer);
+
+                            const mediaContent = document.createElement('div');
+                            mediaContent.className = 'media-content';
+
+                            const content = document.createElement('div');
+                            content.className = 'content';
+
+                            const userParagraph = document.createElement('p');
+                            userParagraph.style.fontSize = '20px';
+                            userParagraph.textContent = user;
+
+                            content.appendChild(userParagraph);
+                            mediaContent.appendChild(content);
+
+                            const mediaRight = document.createElement('div');
+                            mediaRight.className = 'media-right';
+                            mediaRight.style.display = 'flex';
+                            mediaRight.style.alignItems = 'center';
+
+                            const addButton = document.createElement('button');
+                            addButton.className = 'button is-info is-square';
+                            addButton.style.marginLeft = 'auto';
+                            addButton.style.height = '30px';
+                            addButton.style.width = '30px';
+
+                            const plusIcon = document.createElement('i');
+                            plusIcon.className = 'fa-solid fa-plus';
+
+                            addButton.appendChild(plusIcon);
+                            mediaRight.appendChild(addButton);
+
+                            mediaArticle.appendChild(mediaLeft);
+                            mediaArticle.appendChild(mediaContent);
+                            mediaArticle.appendChild(mediaRight);
+
+                            box.appendChild(mediaArticle);
+                            users.appendChild(box);
+                            imgInsideFaceViewer.style.backgroundImage = `url(https://minotar.net/skin/MHF_Steve.png)`
+
+                            addButton.addEventListener('click', () =>
+                            {
+
+                                let amigosArray = [];
+                                for (let amigo of amigos) {
+                                    amigosArray.push(amigo.username);
+                                }
+                                
+                                if (user == account.name) {
+                                    Toast.fire({
+                                        icon: "error",
+                                        title: this.lang.you_cannot_add_yourself
+                                    });
+                                    return;
+                                } else if (amigosArray.includes(user)) {
+                                    Toast.fire({
+                                        icon: "error",
+                                        title: this.lang.you_already_have_this_friend,
+                                    });
+                                    return;
+                                } else {
+                                    ipcRenderer.send('enviarSolicitud', {
+                                        sender: account.name,
+                                        sended: user,
+                                        password: account.password
+                                    });
+
+                                    Toast.fire({
+                                        icon: "success",
+                                        title: `${this.lang.request_sent_to} ${user} ${this.lang.correctly}.`,
+                                    });
+                                }
+                            });
+                        }
+                    }
+
+                }).catch(err => {
+                    inputControl.classList.remove('is-loading');
+                    input.removeAttribute('disabled');
+                    console.error(err);
+                });
+            });
+
+        });
+    }
+
+
+
+    async Solicitudes() {
+        let btnSolicitudes = document.getElementById('solicitudes');
+        let uuid = (await this.database.get("1234", "accounts-selected")).value;
+        let account = (await this.database.get(uuid.selected, "accounts")).value;
+
+        // Definir la función del evento fuera del addEventListener
+        const handleSolicitudesClick = async (e) => {
+            // Crear el elemento modal
+            const modal = document.createElement('div');
+            modal.className = 'modal is-active';
+
+            // Crear el fondo del modal
+            const modalBackground = document.createElement('div');
+            modalBackground.className = 'modal-background';
+
+            // Crear el contenido del modal
+            const modalCard = document.createElement('div');
+            modalCard.className = 'modal-card';
+
+            // Crear el encabezado del modal
+            const modalHeader = document.createElement('header');
+            modalHeader.className = 'modal-card-head';
+
+            const modalTitle = document.createElement('p');
+            modalTitle.className = 'modal-card-title';
+            modalTitle.textContent = this.lang.friend_requests;
+
+            const closeButton = document.createElement('button');
+            closeButton.className = 'delete';
+            closeButton.setAttribute('aria-label', 'close');
+
+            modalHeader.appendChild(modalTitle);
+            modalHeader.appendChild(closeButton);
+
+            closeButton.addEventListener('click', () => {
+                modal.remove();
+            });
+
+            // Crear el cuerpo del modal
+            const modalBody = document.createElement('section');
+            modalBody.className = 'modal-card-body';
+
+            ipcRenderer.send('obtener-solicitudes', {
+                username: account.name,
+                password: account.password
+            });
+            ipcRenderer.on('solicitudes', async (e, solicitudes) => {
+
+                if (solicitudes.enviadas.length == 0 && solicitudes.recibidas.length == 0) {
+                    const box = document.createElement('div');
+                    box.className = 'box';
+
+                    const article = document.createElement('article');
+                    article.className = 'media';
+
+                    const mediaLeft = document.createElement('div');
+                    mediaLeft.className = 'media-left';
+
+                    const img = document.createElement('img');
+                    img.className = 'mc-face-viewer-8x';
+                    mediaLeft.appendChild(img);
+
+                    const mediaContent = document.createElement('div');
+                    mediaContent.className = 'media-content';
+
+                    const content = document.createElement('div');
+                    content.className = 'content';
+
+                    const userParagraph = document.createElement('p');
+                    userParagraph.style.fontSize = '20px';
+                    userParagraph.textContent = this.lang.you_dont_have_any_friend_requests;
+
+                    content.appendChild(userParagraph);
+                    mediaContent.appendChild(content);
+
+                    article.appendChild(mediaLeft);
+                    article.appendChild(mediaContent);
+
+                    box.appendChild(article);
+
+                    modalBody.appendChild(box);
+                    
+                    img.style.backgroundImage = "url('https://minotar.net/skin/MHF_Steve.png')";
+                }
+
+                for (let solicitud of solicitudes.recibidas) {
+                    try {
+                        await axios.get(`http://api.battlylauncher.com/api/skin/${solicitud}.png`)
+
+                        const box1 = document.createElement('div');
+                        box1.className = 'box';
+
+                        const article1 = document.createElement('article');
+                        article1.className = 'media';
+
+                        const mediaLeft1 = document.createElement('div');
+                        mediaLeft1.className = 'media-left';
+
+                        const img1 = document.createElement('img');
+                        img1.className = 'mc-face-viewer-8x';
+
+                        mediaLeft1.appendChild(img1);
+
+                        const mediaContent1 = document.createElement('div');
+                        mediaContent1.className = 'media-content';
+
+                        const content1 = document.createElement('div');
+                        content1.className = 'content';
+
+                        const userParagraph1 = document.createElement('p');
+                        userParagraph1.style.fontSize = '20px';
+                        userParagraph1.textContent = solicitud;
+
+                        content1.appendChild(userParagraph1);
+                        mediaContent1.appendChild(content1);
+
+                        const mediaRight1 = document.createElement('div');
+                        mediaRight1.className = 'media-right';
+                        mediaRight1.style.display = 'flex';
+                        mediaRight1.style.flexDirection = 'column';
+                        mediaRight1.style.alignItems = 'center';
+
+                        const acceptButton1 = document.createElement('button');
+                        acceptButton1.className = 'button is-success is-square';
+                        acceptButton1.style.height = '30px';
+                        acceptButton1.style.width = '10px';
+
+                        const acceptIcon1 = document.createElement('i');
+                        acceptIcon1.className = 'fa-solid fa-check';
+
+                        acceptButton1.appendChild(acceptIcon1);
+                        mediaRight1.appendChild(acceptButton1);
+
+                        const rejectButton1 = document.createElement('button');
+                        rejectButton1.className = 'button is-danger is-square';
+                        rejectButton1.style.height = '30px';
+                        rejectButton1.style.width = '10px';
+                        rejectButton1.style.marginTop = '5px';
+
+                        const rejectIcon1 = document.createElement('i');
+                        rejectIcon1.className = 'fa-solid fa-xmark';
+
+                        rejectButton1.appendChild(rejectIcon1);
+                        mediaRight1.appendChild(rejectButton1);
+
+                        article1.appendChild(mediaLeft1);
+                        article1.appendChild(mediaContent1);
+                        article1.appendChild(mediaRight1);
+
+                        box1.appendChild(article1);
+
+                        modalBody.appendChild(box1);
+                        img1.style.backgroundImage = "url('http://api.battlylauncher.com/api/skin/" + solicitud + ".png')";
+
+
+                        closeButton.addEventListener('click', () => {
+                            modal.remove();
+                        });
+
+                        acceptButton1.addEventListener('click', () => {
+                            ipcRenderer.send('aceptar-solicitud', {
+                                username: account.name,
+                                solicitud: solicitud,
+                                password: account.password
+                            });
+
+                            Toast.fire({
+                                icon: "success",
+                                title: this.lang.request_accepted
+                            });
+
+                            modal.remove();
+                        });
+
+                        rejectButton1.addEventListener('click', () => {
+                            ipcRenderer.send('rechazar-solicitud', {
+                                username: account.name,
+                                solicitud: solicitud,
+                                password: account.password
+                            });
+
+                            Toast.fire({
+                                icon: "success",
+                                title: this.lang.request_rejected
+                            });
+
+                            modal.remove();
+                        });
+                    } catch (error) {
+                            console.log(`❌ Error al obtener la skin de ${user}.`);
+                        const box1 = document.createElement('div');
+                        box1.className = 'box';
+
+                        const article1 = document.createElement('article');
+                        article1.className = 'media';
+
+                        const mediaLeft1 = document.createElement('div');
+                        mediaLeft1.className = 'media-left';
+
+                        const img1 = document.createElement('img');
+                        img1.className = 'mc-face-viewer-8x';
+
+                        mediaLeft1.appendChild(img1);
+
+                        const mediaContent1 = document.createElement('div');
+                        mediaContent1.className = 'media-content';
+
+                        const content1 = document.createElement('div');
+                        content1.className = 'content';
+
+                        const userParagraph1 = document.createElement('p');
+                        userParagraph1.style.fontSize = '20px';
+                        userParagraph1.textContent = solicitud;
+
+                        content1.appendChild(userParagraph1);
+                        mediaContent1.appendChild(content1);
+
+                        const mediaRight1 = document.createElement('div');
+                        mediaRight1.className = 'media-right';
+                        mediaRight1.style.display = 'flex';
+                        mediaRight1.style.flexDirection = 'column';
+                        mediaRight1.style.alignItems = 'center';
+
+                        const acceptButton1 = document.createElement('button');
+                        acceptButton1.className = 'button is-success is-square';
+                        acceptButton1.style.height = '30px';
+                        acceptButton1.style.width = '10px';
+
+                        const acceptIcon1 = document.createElement('i');
+                        acceptIcon1.className = 'fa-solid fa-check';
+
+                        acceptButton1.appendChild(acceptIcon1);
+                        mediaRight1.appendChild(acceptButton1);
+
+                        const rejectButton1 = document.createElement('button');
+                        rejectButton1.className = 'button is-danger is-square';
+                        rejectButton1.style.height = '30px';
+                        rejectButton1.style.width = '10px';
+                        rejectButton1.style.marginTop = '5px';
+
+                        const rejectIcon1 = document.createElement('i');
+                        rejectIcon1.className = 'fa-solid fa-xmark';
+
+                        rejectButton1.appendChild(rejectIcon1);
+                        mediaRight1.appendChild(rejectButton1);
+
+                        article1.appendChild(mediaLeft1);
+                        article1.appendChild(mediaContent1);
+                        article1.appendChild(mediaRight1);
+
+                        box1.appendChild(article1);
+
+                        modalBody.appendChild(box1);
+                        img1.style.backgroundImage = "url('https://minotar.net/skin/MHF_Steve.png')";
+
+
+                        closeButton.addEventListener('click', () => {
+                            modal.remove();
+                        });
+
+                        acceptButton1.addEventListener('click', () => {
+                            ipcRenderer.send('aceptar-solicitud', {
+                                username: account.name,
+                                solicitud: solicitud,
+                                password: account.password
+                            });
+
+                            Toast.fire({
+                                icon: "success",
+                                title: this.lang.request_accepted
+                            });
+
+                            modal.remove();
+                        });
+
+                        rejectButton1.addEventListener('click', () => {
+                            ipcRenderer.send('rechazar-solicitud', {
+                                username: account.name,
+                                solicitud: solicitud,
+                                password: account.password
+                            });
+
+                            Toast.fire({
+                                icon: "success",
+                                title: this.lang.request_rejected
+                            });
+
+                            modal.remove();
+                        });
+                    }
+                }
+
+                for (let solicitud of solicitudes.enviadas) {
+                    try {
+                        await axios.get(`http://api.battlylauncher.com/api/skin/${solicitud}.png`)
+                    
+                        // Crear el segundo cuadro de solicitud
+                        const box2 = document.createElement('div');
+                        box2.className = 'box';
+
+                        const article2 = document.createElement('article');
+                        article2.className = 'media';
+
+                        const mediaLeft2 = document.createElement('div');
+                        mediaLeft2.className = 'media-left';
+
+                        const img2 = document.createElement('img');
+                        img2.className = 'mc-face-viewer-8x';
+
+                        mediaLeft2.appendChild(img2);
+
+                        const mediaContent2 = document.createElement('div');
+                        mediaContent2.className = 'media-content';
+
+                        const content2 = document.createElement('div');
+                        content2.className = 'content';
+
+                        const userParagraph2 = document.createElement('p');
+                        userParagraph2.style.fontSize = '20px';
+                        userParagraph2.textContent = solicitud;
+
+                        content2.appendChild(userParagraph2);
+                        mediaContent2.appendChild(content2);
+
+                        const mediaRight2 = document.createElement('div');
+                        mediaRight2.className = 'media-right';
+                        mediaRight2.style.display = 'flex';
+                        mediaRight2.style.flexDirection = 'column';
+                        mediaRight2.style.alignItems = 'center';
+
+                        const rejectButton2 = document.createElement('button');
+                        rejectButton2.className = 'button is-danger is-square';
+                        rejectButton2.style.height = '30px';
+                        rejectButton2.style.width = '10px';
+                        rejectButton2.style.marginTop = '5px';
+
+                        const rejectIcon2 = document.createElement('i');
+                        rejectIcon2.className = 'fa-solid fa-ban';
+
+                        rejectButton2.appendChild(rejectIcon2);
+                        mediaRight2.appendChild(rejectButton2);
+
+                        article2.appendChild(mediaLeft2);
+                        article2.appendChild(mediaContent2);
+                        article2.appendChild(mediaRight2);
+
+                        box2.appendChild(article2);
+
+                        modalBody.appendChild(box2);
+                        img2.style.backgroundImage = "url('http://api.battlylauncher.com/api/skin/" + solicitud + ".png')";
+                    } catch (error) {
+                            console.log(`❌ Error al obtener la skin de ${user}.`);
+                        // Crear el segundo cuadro de solicitud
+                        const box2 = document.createElement('div');
+                        box2.className = 'box';
+
+                        const article2 = document.createElement('article');
+                        article2.className = 'media';
+
+                        const mediaLeft2 = document.createElement('div');
+                        mediaLeft2.className = 'media-left';
+
+                        const img2 = document.createElement('img');
+                        img2.className = 'mc-face-viewer-8x';
+
+                        mediaLeft2.appendChild(img2);
+
+                        const mediaContent2 = document.createElement('div');
+                        mediaContent2.className = 'media-content';
+
+                        const content2 = document.createElement('div');
+                        content2.className = 'content';
+
+                        const userParagraph2 = document.createElement('p');
+                        userParagraph2.style.fontSize = '20px';
+                        userParagraph2.textContent = solicitud;
+
+                        content2.appendChild(userParagraph2);
+                        mediaContent2.appendChild(content2);
+
+                        const mediaRight2 = document.createElement('div');
+                        mediaRight2.className = 'media-right';
+                        mediaRight2.style.display = 'flex';
+                        mediaRight2.style.flexDirection = 'column';
+                        mediaRight2.style.alignItems = 'center';
+
+                        const rejectButton2 = document.createElement('button');
+                        rejectButton2.className = 'button is-danger is-square';
+                        rejectButton2.style.height = '30px';
+                        rejectButton2.style.width = '10px';
+                        rejectButton2.style.marginTop = '5px';
+
+                        const rejectIcon2 = document.createElement('i');
+                        rejectIcon2.className = 'fa-solid fa-ban';
+
+                        rejectButton2.appendChild(rejectIcon2);
+                        mediaRight2.appendChild(rejectButton2);
+
+                        article2.appendChild(mediaLeft2);
+                        article2.appendChild(mediaContent2);
+                        article2.appendChild(mediaRight2);
+
+                        box2.appendChild(article2);
+
+                        modalBody.appendChild(box2);
+                        img2.style.backgroundImage = "url('https://minotar.net/skin/MHF_Steve.png')";
+                    }
+                }
+            });
+
+
+            // Crear el pie del modal
+            const modalFooter = document.createElement('footer');
+            modalFooter.className = 'modal-card-foot';
+
+            // Agregar elementos al modal
+            modalCard.appendChild(modalHeader);
+            modalCard.appendChild(modalBody);
+            modalCard.appendChild(modalFooter);
+
+            modal.appendChild(modalBackground);
+            modal.appendChild(modalCard);
+            
+            
+            document.body.appendChild(modal);
+        };
+
+        // Añadir el manejador de eventos al botón
+        btnSolicitudes.addEventListener('click', handleSolicitudesClick);
+    }
+
+
+    async ObtenerAmigos() {
+        let btnAmigos = document.getElementById('friends-btn');
+        let uuid = (await this.database.get("1234", "accounts-selected")).value;
+        let account = (await this.database.get(uuid.selected, "accounts")).value;
+
+        let panelAmigos = document.getElementById('lista-de-amigos');
+
+        let amigosObtenidos = false;
+
+        // Definir la función del evento fuera del addEventListener
+        btnAmigos.addEventListener('click', async (e) => {
+            panelAmigos.innerHTML = '';
+        
+            document.querySelector(".preload-content").style.display = "block";
+            const loadingText = document.getElementById("loading-text");
+            loadingText.innerHTML = this.lang.loading_friends;
+
+            ipcRenderer.send('obtener-amigos', {
+                username: account.name,
+                password: account.password
+            });
+
+            setTimeout(() => {
+                if (!amigosObtenidos) {
+                    console.log('❌ Error al obtener la lista de amigos. Comprueba tu conexión a internet y vuelve a intentarlo más tarde.');
+                    const box = document.createElement('div');
+                    box.className = 'box';
+
+                    const article = document.createElement('article');
+                    article.className = 'media';
+
+                    const mediaLeft = document.createElement('div');
+                    mediaLeft.className = 'media-left';
+
+                    const img = document.createElement('div');
+                    img.className = 'mc-face-viewer-8x';
+                    img.style.backgroundImage = "url('https://minotar.net/skin/MHF_Steve.png')";
+                    mediaLeft.appendChild(img);
+
+                    const mediaContent = document.createElement('div');
+                    mediaContent.className = 'media-content';
+
+                    const content = document.createElement('div');
+                    content.className = 'content';
+
+                    const userParagraph = document.createElement('p');
+                    userParagraph.style.fontSize = '20px';
+                    userParagraph.textContent = this.lang.error_loading_friends;
+                    userParagraph.style.textAlign = 'center';
+
+                    content.appendChild(userParagraph);
+                    mediaContent.appendChild(content);
+
+                    article.appendChild(mediaContent);
+
+                    box.appendChild(article);
+
+                    panelAmigos.appendChild(box);
+
+                    document.querySelector(".preload-content").style.display = "none";
+                }
+            }, 10000);
+
+        });
+
+        let amigosOnline = [];
+        let amigosAusente = [];
+        let amigosOffline = [];
+        ipcRenderer.on('amigos', async (e, amigos) => {
+
+            amigosObtenidos = true;
+        
+            if (amigos.length == 0) {
+                const box = document.createElement('div');
+                box.className = 'box';
+
+                const article = document.createElement('article');
+                article.className = 'media';
+
+                const mediaLeft = document.createElement('div');
+                mediaLeft.className = 'media-left';
+
+                const img = document.createElement('div');
+                img.className = 'mc-face-viewer-8x';
+                img.style.backgroundImage = "url('https://minotar.net/skin/MHF_Steve.png')";
+                mediaLeft.appendChild(img);
+
+                const mediaContent = document.createElement('div');
+                mediaContent.className = 'media-content';
+
+                const content = document.createElement('div');
+                content.className = 'content';
+
+                const userParagraph = document.createElement('p');
+                userParagraph.style.fontSize = '20px';
+                userParagraph.textContent = 'No tienes amigos';
+
+                content.appendChild(userParagraph);
+                mediaContent.appendChild(content);
+
+                article.appendChild(mediaLeft);
+                article.appendChild(mediaContent);
+
+                box.appendChild(article);
+
+                panelAmigos.appendChild(box);
+
+                document.querySelector(".preload-content").style.display = "none";
+            }
+
+            //ordenar los amigos para mostrar los que están ausentes, online y offline
+            let amigosOrdenados = amigos.sort((a, b) => {
+                if (a.estado === "ausente" && b.estado === "online") {
+                    return -1;
+                } else if (a.estado === "ausente" && b.estado === "offline") {
+                    return -1;
+                } else if (a.estado === "online" && b.estado === "ausente") {
+                    return 1;
+                } else if (a.estado === "online" && b.estado === "offline") {
+                    return -1;
+                } else if (a.estado === "offline" && b.estado === "ausente") {
+                    return 1;
+                } else if (a.estado === "offline" && b.estado === "online") {
+                    return 1;
+                } else {
+                    //ordenar alfabéticamente ignorando mayúsculas
+                    let nameA = a.username.toUpperCase();
+                    let nameB = b.username.toUpperCase();
+                    if (nameA < nameB) {
+                        return -1;
+                    }
+                    if (nameA > nameB) {
+                        return 1;
+                    }
+                    return 0;
+                }
+            });
+
+            for (let amigo of amigosOrdenados) {
+                let username = amigo.username;
+                let status = amigo.estado;
+                let details = amigo.details ? amigo.details : 'Offline';
+
+                if (status === "online") {
+                    try {
+                        await axios.get(`http://api.battlylauncher.com/api/skin/${username}.png`)
+
+                    
+                        const box = document.createElement('div');
+                        box.className = 'box friend-card';
+
+                        const article = document.createElement('article');
+                        article.className = 'media';
+
+                        const mediaLeft = document.createElement('div');
+                        mediaLeft.className = 'media-left';
+
+                        const figure = document.createElement('figure');
+                        figure.className = 'image is-64x64';
+
+                        const img = document.createElement('div');
+                        img.className = 'mc-face-viewer-8x';
+                        img.alt = 'Image';
+                        img.style.borderRadius = '5px';
+
+                        const statusOverlay = document.createElement('div');
+                        statusOverlay.className = 'status-overlay';
+
+                        const statusImg = document.createElement('img');
+                        statusImg.src = 'assets/images/icon.png';
+                        statusImg.alt = 'Status';
+                        statusImg.style.width = '25px';
+                        statusImg.style.borderRadius = '5px';
+
+                        statusOverlay.appendChild(statusImg);
+                        figure.appendChild(img);
+                        figure.appendChild(statusOverlay);
+                        mediaLeft.appendChild(figure);
+
+                        const mediaContent = document.createElement('div');
+                        mediaContent.className = 'media-content';
+
+                        const content = document.createElement('div');
+                        content.className = 'content';
+
+                        const strong = document.createElement('strong');
+                        strong.className = 'friend-username';
+                        strong.textContent = username;
+
+                        const span = document.createElement('span');
+                        span.style.marginLeft = '3px';
+
+                        const statusImg2 = document.createElement('img');
+                        statusImg2.src = 'assets/images/status/online.png';
+                        statusImg2.alt = '';
+                        statusImg2.style.width = '15px';
+                        statusImg2.style.display = 'inline';
+
+                        span.appendChild(statusImg2);
+
+                        const br = document.createElement('br');
+
+                        const status = document.createElement('span');
+                        status.textContent = this.lang.in_the_main_menu;
+
+                        // Agregamos la etiqueta <p> y colocamos strong, span, br y status dentro de ella
+                        const paragraph = document.createElement('p');
+                        paragraph.appendChild(strong);
+                        paragraph.appendChild(span);
+                        paragraph.appendChild(br);
+                        paragraph.appendChild(status);
+
+                        content.appendChild(paragraph);
+                        mediaContent.appendChild(content);
+
+                        article.appendChild(mediaLeft);
+                        article.appendChild(mediaContent);
+
+                        box.appendChild(article);
+
+                        panelAmigos.appendChild(box);
+                        img.style.backgroundImage = `url('http://api.battlylauncher.com/api/skin/${username}.png')`;
+
+                    } catch (error) {
+                            console.log(`❌ Error al obtener la skin de ${username}.`);
+
+                        const box = document.createElement('div');
+                        box.className = 'box friend-card';
+
+                        const article = document.createElement('article');
+                        article.className = 'media';
+
+                        const mediaLeft = document.createElement('div');
+                        mediaLeft.className = 'media-left';
+
+                        const figure = document.createElement('figure');
+                        figure.className = 'image is-64x64';
+
+                        const img = document.createElement('div');
+                        img.className = 'mc-face-viewer-8x';
+                        img.alt = 'Image';
+                        img.style.borderRadius = '5px';
+
+                        const statusOverlay = document.createElement('div');
+                        statusOverlay.className = 'status-overlay';
+
+                        const statusImg = document.createElement('img');
+                        statusImg.src = 'assets/images/icon.png';
+                        statusImg.alt = 'Status';
+                        statusImg.style.width = '25px';
+                        statusImg.style.borderRadius = '5px';
+
+                        statusOverlay.appendChild(statusImg);
+                        figure.appendChild(img);
+                        figure.appendChild(statusOverlay);
+                        mediaLeft.appendChild(figure);
+
+                        const mediaContent = document.createElement('div');
+                        mediaContent.className = 'media-content';
+
+                        const content = document.createElement('div');
+                        content.className = 'content';
+
+                        const strong = document.createElement('strong');
+                        strong.className = 'friend-username';
+                        strong.textContent = username;
+
+                        const span = document.createElement('span');
+                        span.style.marginLeft = '3px';
+
+                        const statusImg2 = document.createElement('img');
+                        statusImg2.src = 'assets/images/status/online.png';
+                        statusImg2.alt = '';
+                        statusImg2.style.width = '15px';
+                        statusImg2.style.display = 'inline';
+
+                        span.appendChild(statusImg2);
+
+                        const br = document.createElement('br');
+
+                        const status = document.createElement('span');
+                        status.textContent = this.lang.in_the_main_menu;
+
+                        // Agregamos la etiqueta <p> y colocamos strong, span, br y status dentro de ella
+                        const paragraph = document.createElement('p');
+                        paragraph.appendChild(strong);
+                        paragraph.appendChild(span);
+                        paragraph.appendChild(br);
+                        paragraph.appendChild(status);
+
+                        content.appendChild(paragraph);
+                        mediaContent.appendChild(content);
+
+                        article.appendChild(mediaLeft);
+                        article.appendChild(mediaContent);
+
+                        box.appendChild(article);
+
+                        panelAmigos.appendChild(box);
+                        img.style.backgroundImage = `url('https://minotar.net/skin/MHF_Steve.png')`;
+                    }
+
+                } else if (status === "ausente") {
+                    
+                    let version;
+                    let icon;
+
+                    if (details.includes("Forge")) {
+                        version = "Forge";
+                        icon = "https://pbs.twimg.com/profile_images/778706890914095109/fhMDH9o6_400x400.jpg";
+                    } else if (details.includes("Fabric")) {
+                        version = "Fabric";
+                        icon = "https://battlylauncher.com/assets/img/fabric.png";
+                    } else if (details.includes("Quilt")) {
+                        version = "Quilt";
+                        icon = "https://battlylauncher.com/assets/img/quilt.png";
+                    } else if (details.includes("OptiFine")) {
+                        version = "OptiFine";
+                        icon = "https://cdn.discordapp.com/attachments/933698201486237716/1170390085561237674/OptiFine_Logo.webp";
+                    } else if (details.includes("Vanilla")) {
+                        version = "Vanilla";
+                        icon = "https://battlylauncher.com/assets/img/vanilla.png";
+                    } else if (details.includes("LabyMod")) {
+                        version = "LabyMod";
+                        icon = "https://battlylauncher.com/assets/img/labymod.png";
+                    } else if (details.includes("CMPack")) {
+                        version = "CMPack";
+                        icon = "https://battlylauncher.com/assets/img/cmpack.png";
+                    } else if (details.includes("Ares")) {
+                        version = "Ares";
+                        icon = "https://battlylauncher.com/assets/img/ares.png";
+                    } else if (details.includes("BatMod")) {
+                        version = "BatMod";
+                        icon = "https://battlylauncher.com/assets/img/batmod.png";
+                    } else if (details.includes("Battly")) {
+                        version = "Battly";
+                        icon = "https://battlylauncher.com/assets/img/logo_500.png";
+                    } else {
+                        version = "Desconocida";
+                        icon = "https://battlylauncher.com/assets/img/logo_500.png";
+                    }
+
+                    try {
+                        await axios.get(`http://api.battlylauncher.com/api/skin/${username}.png`)
+
+                        const box = document.createElement('div');
+                        box.className = 'box friend-card';
+
+                        const article = document.createElement('article');
+                        article.className = 'media';
+
+                        const mediaLeft = document.createElement('div');
+                        mediaLeft.className = 'media-left';
+
+                        const figure = document.createElement('figure');
+                        figure.className = 'image is-64x64';
+
+                        const img = document.createElement('div');
+                        img.className = 'mc-face-viewer-8x';
+                        img.alt = 'Image';
+                        img.style.borderRadius = '5px';
+
+                        const statusOverlay = document.createElement('div');
+                        statusOverlay.className = 'status-overlay';
+
+                        const statusImg = document.createElement('img');
+                        statusImg.src = icon;
+                        statusImg.alt = 'Status';
+                        statusImg.style.width = '25px';
+                        statusImg.style.borderRadius = '5px';
+                    
+                        statusOverlay.appendChild(statusImg);
+                        figure.appendChild(img);
+                        figure.appendChild(statusOverlay);
+                        mediaLeft.appendChild(figure);
+
+                        const mediaContent = document.createElement('div');
+                        mediaContent.className = 'media-content';
+                    
+                        const content = document.createElement('div');
+                        content.className = 'content';
+
+                        const strong = document.createElement('strong');
+                        strong.className = 'friend-username';
+                        strong.textContent = username;
+
+                        const span = document.createElement('span');
+                        span.style.marginLeft = '3px';
+
+                        const statusImg2 = document.createElement('img');
+                        statusImg2.src = 'assets/images/status/idle.png';
+                        statusImg2.alt = '';
+                        statusImg2.style.width = '15px';
+                        statusImg2.style.display = 'inline';
+
+                        span.appendChild(statusImg2);
+
+                        const br = document.createElement('br');
+
+                        const status = document.createElement('span');
+                        status.textContent = details;
+
+                        const paragraph = document.createElement('p');
+                        paragraph.appendChild(strong);
+                        paragraph.appendChild(span);
+                        paragraph.appendChild(br);
+                        paragraph.appendChild(status);
+
+                        content.appendChild(paragraph);
+                        mediaContent.appendChild(content);
+
+                        article.appendChild(mediaLeft);
+                        article.appendChild(mediaContent);
+
+                        box.appendChild(article);
+
+                        panelAmigos.appendChild(box);
+                        img.style.backgroundImage = `url('http://api.battlylauncher.com/api/skin/${username}.png')`;
+                    } catch (error) {
+                            console.log(`❌ Error al obtener la skin de ${username}.`);
+                        const box = document.createElement('div');
+                        box.className = 'box friend-card';
+
+                        const article = document.createElement('article');
+                        article.className = 'media';
+
+                        const mediaLeft = document.createElement('div');
+                        mediaLeft.className = 'media-left';
+
+                        const figure = document.createElement('figure');
+                        figure.className = 'image is-64x64';
+
+                        const img = document.createElement('div');
+                        img.className = 'mc-face-viewer-8x';
+                        img.alt = 'Image';
+                        img.style.borderRadius = '5px';
+
+                        const statusOverlay = document.createElement('div');
+                        statusOverlay.className = 'status-overlay';
+
+                        const statusImg = document.createElement('img');
+                        statusImg.src = icon;
+                        statusImg.alt = 'Status';
+                        statusImg.style.width = '25px';
+                        statusImg.style.borderRadius = '5px';
+                    
+                        statusOverlay.appendChild(statusImg);
+                        figure.appendChild(img);
+                        figure.appendChild(statusOverlay);
+                        mediaLeft.appendChild(figure);
+
+                        const mediaContent = document.createElement('div');
+                        mediaContent.className = 'media-content';
+                    
+                        const content = document.createElement('div');
+                        content.className = 'content';
+
+                        const strong = document.createElement('strong');
+                        strong.className = 'friend-username';
+                        strong.textContent = username;
+
+                        const span = document.createElement('span');
+                        span.style.marginLeft = '3px';
+
+                        const statusImg2 = document.createElement('img');
+                        statusImg2.src = 'assets/images/status/idle.png';
+                        statusImg2.alt = '';
+                        statusImg2.style.width = '15px';
+                        statusImg2.style.display = 'inline';
+
+                        span.appendChild(statusImg2);
+
+                        const br = document.createElement('br');
+
+                        const status = document.createElement('span');
+                        status.textContent = details;
+
+                        const paragraph = document.createElement('p');
+                        paragraph.appendChild(strong);
+                        paragraph.appendChild(span);
+                        paragraph.appendChild(br);
+                        paragraph.appendChild(status);
+
+                        content.appendChild(paragraph);
+                        mediaContent.appendChild(content);
+
+                        article.appendChild(mediaLeft);
+                        article.appendChild(mediaContent);
+
+                        box.appendChild(article);
+
+                        panelAmigos.appendChild(box);
+                        img.style.backgroundImage = `url('https://minotar.net/skin/MHF_Steve.png')`;
+                    }
+
+                } else {                    
+                    try {
+                        await axios.get(`http://api.battlylauncher.com/api/skin/${username}.png`)
+                    
+                        const box = document.createElement('div');
+                        box.className = 'box friend-card';
+
+                        const article = document.createElement('article');
+                        article.className = 'media';
+
+                        const mediaLeft = document.createElement('div');
+                        mediaLeft.className = 'media-left';
+
+                        const figure = document.createElement('figure');
+                        figure.className = 'image is-64x64';
+
+                        const img = document.createElement('div');
+                        img.className = 'mc-face-viewer-8x';
+                        img.alt = 'Image';
+                        img.style.borderRadius = '5px';
+
+                        figure.appendChild(img);
+                        mediaLeft.appendChild(figure);
+
+                        const mediaContent = document.createElement('div');
+                        mediaContent.className = 'media-content';
+
+                        const content = document.createElement('div');
+                        content.className = 'content';
+
+                        const strong = document.createElement('strong');
+                        strong.className = 'friend-username';
+                        strong.textContent = username;
+
+                        const span = document.createElement('span');
+                        span.style.marginLeft = '3px';
+
+                        const statusImg = document.createElement('img');
+                        statusImg.src = 'assets/images/status/offline.png';
+                        statusImg.alt = '';
+                        statusImg.style.width = '15px';
+                        statusImg.style.display = 'inline';
+
+                        span.appendChild(statusImg);
+
+                        const br = document.createElement('br');
+
+                        const status = document.createElement('span');
+                        status.textContent = 'Offline';
+
+                        const paragraph = document.createElement('p');
+                        paragraph.appendChild(strong);
+                        paragraph.appendChild(span);
+                        paragraph.appendChild(br);
+                        paragraph.appendChild(status);
+
+                        content.appendChild(paragraph);
+                        mediaContent.appendChild(content);
+
+                        article.appendChild(mediaLeft);
+                        article.appendChild(mediaContent);
+
+                        box.appendChild(article);
+
+                        panelAmigos.appendChild(box);
+                        img.style.backgroundImage = `url('http://api.battlylauncher.com/api/skin/${username}.png')`;
+                    }
+                    
+                    catch (error) {
+                            console.log(`❌ Error al obtener la skin de ${username}.`);
+                        const box = document.createElement('div');
+                        box.className = 'box friend-card';
+
+                        const article = document.createElement('article');
+                        article.className = 'media';
+
+                        const mediaLeft = document.createElement('div');
+                        mediaLeft.className = 'media-left';
+
+                        const figure = document.createElement('figure');
+                        figure.className = 'image is-64x64';
+
+                        const img = document.createElement('div');
+                        img.className = 'mc-face-viewer-8x';
+                        img.alt = 'Image';
+                        img.style.borderRadius = '5px';
+
+                        figure.appendChild(img);
+                        mediaLeft.appendChild(figure);
+
+                        const mediaContent = document.createElement('div');
+                        mediaContent.className = 'media-content';
+
+                        const content = document.createElement('div');
+                        content.className = 'content';
+
+                        const strong = document.createElement('strong');
+                        strong.className = 'friend-username';
+                        strong.textContent = username;
+
+                        const span = document.createElement('span');
+                        span.style.marginLeft = '3px';
+
+                        const statusImg = document.createElement('img');
+                        statusImg.src = 'assets/images/status/offline.png';
+                        statusImg.alt = '';
+                        statusImg.style.width = '15px';
+                        statusImg.style.display = 'inline';
+
+                        span.appendChild(statusImg);
+
+                        const br = document.createElement('br');
+
+                        const status = document.createElement('span');
+                        status.textContent = 'Offline';
+
+                        const paragraph = document.createElement('p');
+                        paragraph.appendChild(strong);
+                        paragraph.appendChild(span);
+                        paragraph.appendChild(br);
+                        paragraph.appendChild(status);
+
+                        content.appendChild(paragraph);
+                        mediaContent.appendChild(content);
+
+                        article.appendChild(mediaLeft);
+                        article.appendChild(mediaContent);
+
+                        box.appendChild(article);
+
+                        panelAmigos.appendChild(box);
+                        img.style.backgroundImage = `url('https://minotar.net/skin/MHF_Steve.png')`;
+                    }
+                }
+
+                document.querySelector(".preload-content").style.display = "none";
+            }
+        });
+    }
+}
+export default Friends;

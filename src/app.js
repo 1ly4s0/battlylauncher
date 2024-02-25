@@ -1,5 +1,440 @@
 /**
  * @author TECNO BROS
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
+ 
  */
-function a0_0xd877(){const _0x20d3b0=['894546dpRpgn','ready','dev','isMaximized','setProgressBar','title','2894774OmCaGS','createWindow','avisoObtenerLogs','battly_512','-forge','maximize','</text>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<text>','165871jsIxyz','2728864diuXWl','./assets/js/windows/mainWindow.js','Aceptar','socket.io-client','shift','enviarSocketID','unmaximize','catch','372318OMEpHI','obtenerLogs','set-song','update-window-close','./assets/js/windows/updateWindow.js','minimize','obtenerAmigos','restartLauncher','getWindow','new-notification','ipc','setPath','4320900JICiiz','battly','login','./AppData/Launcher','uncaughtException','now','aceptar-solicitud','destroyWindow','6OxecQo','request','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<toast>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<visual>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<binding\x20template=\x22ToastGeneric\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<text>Solicitud\x20de\x20amistad</text>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<text>','update-downloaded','webContents','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20activationType=\x22protocol\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</actions>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</toast>','setAppUserModelId','obtenerSocketID','onlineUsers','3010280PklnGq','solicitudes','NODE_TLS_REJECT_UNAUTHORIZED','⏬\x20Descargar','electron-updater','main-window-hide','download-progress','3272224eFPCPN','downloadUpdate','userData','delete-status-discord','84XoFxlg','size_actual','quit','</text>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</binding>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</visual>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<actions>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<action\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content=\x22Abrir\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20arguments=\x22','1053747dletMT','pid','2HhcrkF','hide','start-update','main-window-open','connect','notificacion','https://battlylauncher.com','progress_actual','battlylauncher','click','169248kmHejK','.battly','main-window-maximize','setAsDefaultProtocolClient','amigos','\x20-\x20Fabric','resolve','new-status-discord','1514487YweGAY','defaultApp','update-window-dev-tools','whenReady','2569592sycRcC','5585624EILyWB','2817IfBbCJ','5076WdKrVz','Battly\x20Launcher','log','checkForUpdates','writeFileSync','electron','main-window-progress_','path','get-song','readFileSync','1103864apmLog','endsWith','updateStatus','main-window-progress-reset','NODE_ENV','7ryjJrO','obtener-solicitudes','progress','main-window-show','90zmhWdC','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20activationType=\x22protocol\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<action\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content=\x22Rechazar\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20arguments=\x22','replace','469752EtlZcf','socket','env','1068RlwRIS','relaunch','push','13480naUwyx','main-window-dev-tools','361755iSsnoq','window-all-closed','obtener-amigos','./assets/js/libs/mc/Index','win32','2845iovKpg','mc_512','update-app','new-status-discord-jugando','rechazarSolicitud','./assets/js/libs/discord/Index','show','update-available','\x20te\x20ha\x20enviado\x20una\x20solicitud\x20de\x20amistad.','main-window-progress','3684021mfdMnN','Microsoft-window','openExternal','body','2XfIMTy','En\x20el\x20menú\x20de\x20inicio','update-not-available','134265vhZwBr','Solicitud\x20de\x20amistad','mostrarSolicitudes','-fabric','autoDownload','70yAPlgU','http://api.battlylauncher.com','/Registro.log','emit','/Library/Application\x20Support'];a0_0xd877=function(){return _0x20d3b0;};return a0_0xd877();}const a0_0x5b6004=a0_0x457f;(function(_0x437ce6,_0x3dfc02){const _0x43b882=a0_0x457f,_0x13c236=_0x437ce6();while(!![]){try{const _0x54b243=-parseInt(_0x43b882(0xb6))/0x1+parseInt(_0x43b882(0xd1))/0x2*(-parseInt(_0x43b882(0x85))/0x3)+-parseInt(_0x43b882(0xaa))/0x4+-parseInt(_0x43b882(0xd4))/0x5*(-parseInt(_0x43b882(0xb3))/0x6)+-parseInt(_0x43b882(0xaf))/0x7*(-parseInt(_0x43b882(0x9d))/0x8)+-parseInt(_0x43b882(0xbe))/0x9*(-parseInt(_0x43b882(0xd9))/0xa)+parseInt(_0x43b882(0xcd))/0xb;if(_0x54b243===_0x3dfc02)break;else _0x13c236['push'](_0x13c236['shift']());}catch(_0x2e7619){_0x13c236['push'](_0x13c236['shift']());}}}(a0_0xd877,0x3b667));const a0_0x2f23ac=a0_0x1617;(function(_0x5451d7,_0x482e3d){const _0x43850e=a0_0x457f,_0x429cd1=a0_0x1617,_0xe688fc=_0x5451d7();while(!![]){try{const _0x4bf15c=parseInt(_0x429cd1(0x14e))/0x1+parseInt(_0x429cd1(0xe4))/0x2+-parseInt(_0x429cd1(0x173))/0x3+parseInt(_0x429cd1(0xe0))/0x4+-parseInt(_0x429cd1(0x13d))/0x5*(parseInt(_0x429cd1(0x12c))/0x6)+parseInt(_0x429cd1(0x167))/0x7+-parseInt(_0x429cd1(0x135))/0x8;if(_0x4bf15c===_0x482e3d)break;else _0xe688fc['push'](_0xe688fc[_0x43850e(0xf0)]());}catch(_0x1a438f){_0xe688fc[_0x43850e(0xbb)](_0xe688fc['shift']());}}}(a0_0x4b38,0xa3909));const a0_0xd6e7f1=a0_0x45e4;(function(_0x5165fd,_0x2b6976){const _0x3640d9=a0_0x1617,_0x1d7d8f=a0_0x45e4,_0x21862a=_0x5165fd();while(!![]){try{const _0x45bed0=parseInt(_0x1d7d8f(0x117))/0x1+parseInt(_0x1d7d8f(0x1a1))/0x2*(-parseInt(_0x1d7d8f(0x134))/0x3)+-parseInt(_0x1d7d8f(0x14d))/0x4*(parseInt(_0x1d7d8f(0x144))/0x5)+parseInt(_0x1d7d8f(0x187))/0x6*(-parseInt(_0x1d7d8f(0x147))/0x7)+-parseInt(_0x1d7d8f(0x11f))/0x8+-parseInt(_0x1d7d8f(0x11b))/0x9*(parseInt(_0x1d7d8f(0x1ac))/0xa)+-parseInt(_0x1d7d8f(0x191))/0xb*(-parseInt(_0x1d7d8f(0x112))/0xc);if(_0x45bed0===_0x2b6976)break;else _0x21862a[_0x3640d9(0xfe)](_0x21862a[_0x3640d9(0x10d)]());}catch(_0x3c9447){_0x21862a[_0x3640d9(0xfe)](_0x21862a[_0x3640d9(0x10d)]());}}}(a0_0x3731,0xf1f83));const a0_0x312f2e=a0_0x1b11;(function(_0x362c88,_0x4a45ae){const _0x191e24=a0_0x45e4,_0x150f65=a0_0x1b11,_0x13df6d=_0x362c88();while(!![]){try{const _0x3fccff=-parseInt(_0x150f65(0x9a))/0x1+parseInt(_0x150f65(0x86))/0x2+parseInt(_0x150f65(0xb8))/0x3*(parseInt(_0x150f65(0xd7))/0x4)+-parseInt(_0x150f65(0xe6))/0x5+-parseInt(_0x150f65(0xc9))/0x6+-parseInt(_0x150f65(0xba))/0x7+-parseInt(_0x150f65(0x91))/0x8;if(_0x3fccff===_0x4a45ae)break;else _0x13df6d[_0x191e24(0x150)](_0x13df6d[_0x191e24(0x128)]());}catch(_0x388f91){_0x13df6d[_0x191e24(0x150)](_0x13df6d[_0x191e24(0x128)]());}}}(a0_0x98ec,0xb2b52));const {app,ipcMain,protocol,BrowserWindow,shell,ipcRenderer}=require(a0_0x312f2e(0xfd)),{Microsoft}=require(a0_0xd6e7f1(0x161)),{autoUpdater}=require(a0_0x312f2e(0x101)),{io}=require(a0_0x312f2e(0xfa)),socket=io(a0_0xd6e7f1(0x17c));process[a0_0x312f2e(0xaf)][a0_0x312f2e(0xbd)]='0';const fs=require('fs'),path=require(a0_0x312f2e(0xb9)),dataDirectory=process[a0_0x312f2e(0xaf)][a0_0x312f2e(0x8e)]||(process[a0_0x312f2e(0xac)]==a0_0x2f23ac(0xff)?process[a0_0x312f2e(0xaf)][a0_0xd6e7f1(0x18c)]+a0_0x312f2e(0x112):process[a0_0x312f2e(0xaf)][a0_0xd6e7f1(0x18c)]),{Notification}=require(a0_0xd6e7f1(0x155));app[a0_0x312f2e(0x10f)](a0_0x312f2e(0x103));function a0_0x1617(_0x251506,_0x42d9d6){const _0x1852a7=a0_0x4b38();return a0_0x1617=function(_0x524330,_0x8108af){_0x524330=_0x524330-0xdf;let _0x3e698c=_0x1852a7[_0x524330];return _0x3e698c;},a0_0x1617(_0x251506,_0x42d9d6);}let dev=process[a0_0x312f2e(0xaf)][a0_0xd6e7f1(0x199)]===a0_0x312f2e(0xfb);if(!fs[a0_0x312f2e(0xc5)](path[a0_0x312f2e(0xdb)](dataDirectory,a0_0xd6e7f1(0x18e))))fs[a0_0xd6e7f1(0x11e)](path[a0_0xd6e7f1(0x169)](dataDirectory,a0_0x312f2e(0xe2)));socket['on'](a0_0x312f2e(0xcb),()=>{}),socket['on'](a0_0x312f2e(0xbf),async _0xf51e52=>{const _0x1a6aeb=a0_0xd6e7f1,_0x4eb1ef=a0_0x312f2e,{titulo:_0x3c3468,descripcion:_0xb67b83,url:_0x3b9647}=_0xf51e52;let _0x235b08;process[_0x4eb1ef(0xac)]===_0x4eb1ef(0xec)?_0x235b08=new Notification({'toastXml':_0x4eb1ef(0x9d)+_0x3c3468+_0x1a6aeb(0x138)+_0xb67b83+_0x4eb1ef(0xef)+_0x3b9647+_0x1a6aeb(0x176)}):_0x235b08=new Notification({'title':_0x3c3468,'body':_0xb67b83,'icon':path[_0x4eb1ef(0xdb)](__dirname,_0x1a6aeb(0x11d))}),_0x235b08[_0x1a6aeb(0x16f)](),_0x235b08['on'](_0x4eb1ef(0x8b),(_0x10150f,_0x3799e7)=>{const _0x4bce64=_0x4eb1ef;shell[_0x4bce64(0xf0)](''+_0x3b9647);});}),socket['on'](a0_0x312f2e(0x119),async _0x49ab74=>{const _0x2bca70=a0_0xd6e7f1,_0x244072=a0_0x312f2e,{username:_0x569dde}=_0x49ab74;let _0x4b530d;process['platform']===_0x2bca70(0x14f)?_0x4b530d=new Notification({'toastXml':_0x244072(0x114)+_0x569dde+_0x2bca70(0x137)+_0x569dde+_0x244072(0xdd)+_0x569dde+_0x2bca70(0x176)}):_0x4b530d=new Notification({'title':_0x244072(0x116),'body':_0x569dde+_0x244072(0x9c),'icon':path[_0x244072(0xdb)](__dirname,_0x244072(0xee)),'actions':[{'type':_0x244072(0xb0),'text':_0x2bca70(0x12d)},{'type':_0x244072(0xb0),'text':_0x244072(0x106)}]}),_0x4b530d[_0x244072(0xb1)](),_0x4b530d['on'](_0x244072(0x8f),(_0x46272c,_0x2bcc17)=>{const _0x485783=_0x244072,_0x4236d4=MainWindow[_0x485783(0xcc)]();_0x4236d4[_0x485783(0x111)][_0x485783(0x107)](_0x485783(0xa2),{'username':_0x569dde});});}),ipcMain['on'](a0_0x312f2e(0xf5),async(_0x12b6b2,_0x2c1450)=>{const _0x233723=a0_0x312f2e,{sender:_0xca6fea,sended:_0x21d7ec}=_0x2c1450;socket[_0x233723(0xaa)](_0x233723(0xf5),{'username':_0xca6fea,'amigo':_0x21d7ec});}),ipcMain['on'](a0_0x312f2e(0x105),async(_0x2034ee,_0xcc5c03,_0x55cb98)=>{const _0x1973e8=a0_0x312f2e;socket[_0x1973e8(0xaa)](_0xcc5c03,_0x55cb98);}),socket['on'](a0_0x2f23ac(0x16a),_0x46d7b1=>{const _0x3b747d=a0_0x457f,_0x4103e8=a0_0x312f2e,_0xc257df=MainWindow[_0x4103e8(0xcc)]();_0xc257df[_0x3b747d(0x10c)][_0x4103e8(0x107)](_0x4103e8(0xa1),_0x46d7b1);});function a0_0x3731(){const _0x37999f=a0_0x457f,_0x431cd6=a0_0x2f23ac,_0xa37cc3=[_0x431cd6(0x13b),_0x431cd6(0x16e),_0x431cd6(0xf6),_0x37999f(0xee),_0x431cd6(0xe3),_0x431cd6(0x158),_0x431cd6(0x13e),_0x431cd6(0x11b),_0x431cd6(0xea),_0x431cd6(0x176),_0x37999f(0xf4),_0x431cd6(0x159),_0x431cd6(0x139),_0x431cd6(0x126),_0x37999f(0xea),_0x431cd6(0x134),_0x431cd6(0x108),_0x431cd6(0x168),_0x431cd6(0x105),_0x431cd6(0x13f),_0x37999f(0xdb),_0x431cd6(0xef),_0x431cd6(0x102),_0x431cd6(0x171),_0x431cd6(0xe7),'SET_ACTIVITY',_0x431cd6(0x109),_0x37999f(0x79),_0x431cd6(0xe8),_0x431cd6(0xf9),_0x431cd6(0x156),_0x431cd6(0x10e),_0x431cd6(0x161),_0x37999f(0x75),_0x37999f(0x8f),_0x37999f(0xb9),_0x431cd6(0xfb),_0x431cd6(0x15a),_0x431cd6(0xfe),'\x20-\x20Forge','118174uyFrUm',_0x37999f(0x8a),_0x431cd6(0x17b),_0x37999f(0xa5),_0x431cd6(0x16d),_0x431cd6(0xf3),'unhandledRejection','👥\x20Discord',_0x431cd6(0x13a),_0x431cd6(0x163),_0x37999f(0x84),_0x431cd6(0x120),_0x431cd6(0x153),'getAuth',_0x431cd6(0x148),_0x431cd6(0x101),_0x37999f(0xf5),_0x431cd6(0xe5),_0x431cd6(0x138),_0x431cd6(0x133),'then',_0x431cd6(0xff),_0x431cd6(0x15c),_0x431cd6(0x145),_0x431cd6(0x104),_0x431cd6(0xf2),_0x431cd6(0x115),_0x431cd6(0x129),_0x431cd6(0x144),_0x431cd6(0x11f),_0x431cd6(0x12a),_0x431cd6(0x100),_0x431cd6(0x123),_0x37999f(0xa6),_0x431cd6(0xf8),_0x431cd6(0x146),_0x431cd6(0x165),_0x431cd6(0x137),_0x37999f(0xa2),_0x431cd6(0x166),'getLogs',_0x37999f(0xef),_0x37999f(0xda),_0x37999f(0x98),_0x431cd6(0x155),_0x431cd6(0x128),_0x431cd6(0x12d),'https://discord.gg/tecno-bros-885235460178342009',_0x37999f(0xf1),_0x37999f(0xca),_0x431cd6(0x130),_0x37999f(0xfe),_0x431cd6(0x14a),_0x431cd6(0x111),_0x431cd6(0x110),_0x37999f(0xb4),_0x431cd6(0x136),_0x431cd6(0x154),'HOME',_0x431cd6(0x170),_0x431cd6(0xec),'aceptarSolicitud',_0x37999f(0xd3),_0x431cd6(0xf1),'Minecraft',_0x431cd6(0x164),_0x431cd6(0x107),_0x431cd6(0x177),_0x37999f(0x7f),_0x431cd6(0x10c),_0x431cd6(0xf4),_0x37999f(0xae),_0x431cd6(0xfc),_0x431cd6(0xed),_0x37999f(0xb2),_0x431cd6(0x117),_0x431cd6(0x12e),_0x431cd6(0x124),'request',_0x37999f(0x87),_0x431cd6(0x12f),_0x431cd6(0xdf),_0x431cd6(0xf0),_0x431cd6(0x160),_0x431cd6(0x10a),_0x431cd6(0x151),_0x431cd6(0x121),_0x431cd6(0x118),_0x431cd6(0x11e),_0x431cd6(0x16b),'44230xKwIlK',_0x431cd6(0x15d),_0x431cd6(0x106),_0x431cd6(0xf5),_0x37999f(0x7e),_0x431cd6(0x119),_0x431cd6(0x15e),_0x431cd6(0x11d),'quitAndInstall',_0x431cd6(0x157),_0x431cd6(0xfd),_0x431cd6(0x152),_0x431cd6(0x143),_0x431cd6(0x140),_0x431cd6(0x16c),_0x37999f(0xb1),_0x431cd6(0x17a),'mkdirSync',_0x431cd6(0x142),_0x431cd6(0x125),_0x431cd6(0x11c),_0x431cd6(0x149),_0x431cd6(0x162),_0x37999f(0xf2),_0x431cd6(0x10f),_0x431cd6(0x10b),_0x431cd6(0xfa),_0x431cd6(0x10d),_0x431cd6(0x11a)];return a0_0x3731=function(){return _0xa37cc3;},a0_0x3731();}function a0_0x45e4(_0x1af9fc,_0x6134cc){const _0x55a769=a0_0x3731();return a0_0x45e4=function(_0x59f39d,_0x473386){_0x59f39d=_0x59f39d-0x110;let _0x2dd779=_0x55a769[_0x59f39d];return _0x2dd779;},a0_0x45e4(_0x1af9fc,_0x6134cc);}let shown=![];socket['on'](a0_0x312f2e(0xdc),async _0x2af1b7=>{const _0x320227=a0_0xd6e7f1,_0x511572=a0_0x312f2e;if(shown){const _0xfe8855=fs[_0x511572(0x8c)](dataDirectory+_0x511572(0xd3),_0x511572(0xea)),_0x3a4d26=MainWindow[_0x511572(0xcc)]();_0x3a4d26[_0x320227(0x148)][_0x511572(0x107)](_0x320227(0x15d),{'RegistroLog':_0xfe8855}),setTimeout(()=>{const _0x452f36=_0x511572;socket[_0x452f36(0xaa)](_0x452f36(0xa9),_0xfe8855);},0xbb8);}else{const {user:_0x22e129,razon:_0x2a04c9}=_0x2af1b7,_0x12f46b=MainWindow[_0x511572(0xcc)]();_0x12f46b[_0x511572(0x111)][_0x511572(0x107)](_0x511572(0xf4),{'user':_0x22e129,'razon':_0x2a04c9});}}),ipcMain['on'](a0_0xd6e7f1(0x162),async(_0x482090,_0x16acba)=>{const _0x589736=a0_0x2f23ac,_0x3adbd2=a0_0xd6e7f1,_0x1ca64d=a0_0x312f2e,_0x36fc68=fs[_0x3adbd2(0x171)](dataDirectory+_0x589736(0xdf),_0x1ca64d(0xea));socket[_0x1ca64d(0xaa)](_0x1ca64d(0xa9),_0x36fc68),shown=!![];}),ipcMain['on'](a0_0x312f2e(0x10b),async(_0x2b2e87,_0x4990fb)=>{const _0x3d2fa6=a0_0xd6e7f1,_0x55eec9=a0_0x312f2e,_0x35be86=socket['id'],_0x115396=MainWindow[_0x55eec9(0xcc)]();_0x115396[_0x55eec9(0x111)][_0x3d2fa6(0x130)](_0x55eec9(0xa0),{'sessionID':_0x35be86});}),ipcMain['on'](a0_0x312f2e(0xce),async(_0x46a632,_0x4c2876)=>{const _0x112bd8=a0_0x312f2e;socket[_0x112bd8(0xaa)](_0x112bd8(0xce),_0x4c2876);}),ipcMain['on'](a0_0x312f2e(0xca),async(_0x49018c,_0x223347)=>{const _0x6441f9=a0_0x312f2e;socket[_0x6441f9(0xaa)](_0x6441f9(0x87),_0x223347);}),socket['on'](a0_0x312f2e(0x87),_0x5865c7=>{const _0x364c16=a0_0xd6e7f1,_0x1789da=a0_0x312f2e,_0x506499=MainWindow[_0x1789da(0xcc)]();_0x506499[_0x364c16(0x148)][_0x1789da(0x107)](_0x1789da(0xab),_0x5865c7);}),ipcMain['on'](a0_0x312f2e(0xbb),async(_0x3c5255,_0x1ba7a7)=>{const _0x2881ba=a0_0x312f2e;socket[_0x2881ba(0xaa)](_0x2881ba(0xf3),_0x1ba7a7);}),ipcMain['on'](a0_0x312f2e(0x10d),async(_0x2c0bb4,_0x4f5b21)=>{const _0x58faf2=a0_0x312f2e;socket[_0x58faf2(0xaa)](_0x58faf2(0x109),_0x4f5b21);}),ipcMain['on'](a0_0x312f2e(0xe8),async(_0x134cc6,_0x475fdd)=>{const _0x51298d=a0_0x312f2e;socket[_0x51298d(0xaa)](_0x51298d(0xe4),_0x475fdd);}),socket['on'](a0_0xd6e7f1(0x19f),_0x11c426=>{const _0x3e3d47=a0_0xd6e7f1,_0x5f4499=a0_0x312f2e,_0x3dbd09=MainWindow[_0x5f4499(0xcc)]();_0x3dbd09[_0x3e3d47(0x148)][_0x5f4499(0x107)](_0x3e3d47(0x17f),_0x11c426);}),!dev&&(process[a0_0x312f2e(0x118)]?process[a0_0x312f2e(0xcf)][a0_0x312f2e(0xd6)]>=0x2&&(app[a0_0x312f2e(0x115)](a0_0xd6e7f1(0x13c),process[a0_0x312f2e(0xd1)],[path[a0_0x312f2e(0xd0)](process[a0_0x2f23ac(0x136)][0x1])]),app[a0_0x312f2e(0x115)](a0_0xd6e7f1(0x14c),process[a0_0x312f2e(0xd1)],[path[a0_0xd6e7f1(0x156)](process[a0_0xd6e7f1(0x18a)][0x1])])):(app[a0_0x312f2e(0x115)](a0_0xd6e7f1(0x13c)),app[a0_0x312f2e(0x115)](a0_0x312f2e(0xa7))));function a0_0x98ec(){const _0x4b6a9f=a0_0x457f,_0x56ec1b=a0_0x2f23ac,_0x2af2b1=a0_0xd6e7f1,_0x44cc32=[_0x56ec1b(0x102),_0x2af2b1(0x196),_0x2af2b1(0x13a),_0x2af2b1(0x19d),_0x2af2b1(0x157),_0x2af2b1(0x1a5),_0x2af2b1(0x18b),_0x2af2b1(0x186),_0x2af2b1(0x197),_0x2af2b1(0x131),_0x2af2b1(0x18a),_0x2af2b1(0x156),_0x56ec1b(0x116),_0x2af2b1(0x146),_0x2af2b1(0x1a3),_0x2af2b1(0x188),_0x2af2b1(0x1a4),_0x2af2b1(0x16d),_0x2af2b1(0x1a7),_0x2af2b1(0x1ab),_0x2af2b1(0x14a),_0x2af2b1(0x192),_0x2af2b1(0x169),_0x2af2b1(0x17a),_0x2af2b1(0x189),_0x2af2b1(0x16c),_0x56ec1b(0x16f),_0x56ec1b(0x175),_0x2af2b1(0x194),_0x2af2b1(0x18e),_0x2af2b1(0x154),_0x2af2b1(0x19f),_0x2af2b1(0x166),_0x2af2b1(0x142),_0x2af2b1(0x19c),_0x2af2b1(0x179),_0x2af2b1(0x111),_0x2af2b1(0x163),_0x56ec1b(0x113),_0x2af2b1(0x14f),_0x2af2b1(0x127),_0x2af2b1(0x11d),_0x2af2b1(0x15c),_0x56ec1b(0x14f),_0x2af2b1(0x15f),_0x2af2b1(0x16a),_0x2af2b1(0x18f),_0x2af2b1(0x1a8),_0x2af2b1(0x12a),_0x56ec1b(0x114),_0x56ec1b(0x15c),_0x2af2b1(0x1a2),_0x2af2b1(0x19a),_0x2af2b1(0x17b),_0x2af2b1(0x12e),_0x2af2b1(0x143),_0x2af2b1(0x155),_0x2af2b1(0x185),_0x2af2b1(0x126),_0x2af2b1(0x11c),_0x2af2b1(0x177),_0x2af2b1(0x1a6),_0x2af2b1(0x135),_0x2af2b1(0x17e),_0x56ec1b(0x14d),_0x56ec1b(0x15b),_0x2af2b1(0x130),_0x2af2b1(0x167),_0x2af2b1(0x15a),_0x2af2b1(0x198),_0x56ec1b(0xf7),_0x2af2b1(0x18d),_0x2af2b1(0x136),_0x56ec1b(0x132),_0x4b6a9f(0x10e),_0x56ec1b(0xe6),_0x56ec1b(0x156),_0x4b6a9f(0xdd),_0x2af2b1(0x119),_0x56ec1b(0xeb),_0x2af2b1(0x122),_0x2af2b1(0x13d),_0x2af2b1(0x139),_0x2af2b1(0x132),_0x2af2b1(0x193),_0x56ec1b(0x112),_0x2af2b1(0x172),_0x2af2b1(0x133),_0x2af2b1(0x110),_0x56ec1b(0x14b),_0x2af2b1(0x123),_0x2af2b1(0x171),_0x2af2b1(0x178),_0x2af2b1(0x125),_0x2af2b1(0x12b),_0x2af2b1(0x190),_0x2af2b1(0x160),_0x2af2b1(0x1a0),_0x2af2b1(0x184),_0x2af2b1(0x19e),_0x56ec1b(0x141),_0x2af2b1(0x181),_0x2af2b1(0x145),_0x2af2b1(0x121),_0x2af2b1(0x159),_0x2af2b1(0x120),_0x2af2b1(0x115),_0x2af2b1(0x19b),_0x2af2b1(0x15e),_0x2af2b1(0x11e),_0x2af2b1(0x183),_0x2af2b1(0x182),_0x2af2b1(0x14b),_0x2af2b1(0x116),_0x2af2b1(0x12c),_0x56ec1b(0x103),_0x56ec1b(0x122),_0x2af2b1(0x1a9),_0x2af2b1(0x14c),_0x2af2b1(0x124),_0x2af2b1(0x1ae),_0x56ec1b(0x147),_0x56ec1b(0x172),_0x2af2b1(0x15b),_0x56ec1b(0x15d),_0x2af2b1(0x13b),_0x56ec1b(0x179),_0x56ec1b(0x15f),_0x2af2b1(0x16f),_0x56ec1b(0x150),_0x56ec1b(0x13c),_0x2af2b1(0x151),_0x2af2b1(0x170),_0x2af2b1(0x113),_0x2af2b1(0x114),_0x56ec1b(0xe1),_0x2af2b1(0x180),_0x2af2b1(0x152),_0x2af2b1(0x195),_0x2af2b1(0x173),_0x2af2b1(0x165),_0x2af2b1(0x158),_0x56ec1b(0x174),_0x2af2b1(0x1aa),_0x56ec1b(0x131),_0x2af2b1(0x16b),_0x2af2b1(0x164),_0x2af2b1(0x13f)];return a0_0x98ec=function(){return _0x44cc32;},a0_0x98ec();}function a0_0x457f(_0x1861ae,_0x51b099){const _0xd877b7=a0_0xd877();return a0_0x457f=function(_0x457f1f,_0x32119b){_0x457f1f=_0x457f1f-0x75;let _0x513547=_0xd877b7[_0x457f1f];return _0x513547;},a0_0x457f(_0x1861ae,_0x51b099);}function a0_0x4b38(){const _0x4bed59=a0_0x457f,_0x28ff03=['push','darwin',_0x4bed59(0xa9),_0x4bed59(0xc1),'existsSync',_0x4bed59(0x102),_0x4bed59(0x86),_0x4bed59(0x101),'sendLogs',_0x4bed59(0xcc),_0x4bed59(0xe2),_0x4bed59(0xbc),_0x4bed59(0xf9),_0x4bed59(0x103),_0x4bed59(0xd8),_0x4bed59(0xf0),_0x4bed59(0x10b),'APPDATA',_0x4bed59(0xab),_0x4bed59(0x108),_0x4bed59(0xe4),_0x4bed59(0xf3),_0x4bed59(0xbd),'Client','execPath',_0x4bed59(0xe7),'destroy',_0x4bed59(0x81),'main-window-progress-loading',_0x4bed59(0xac),_0x4bed59(0xf6),'delete-and-new-status-discord',_0x4bed59(0xe3),_0x4bed59(0xc9),'getLogsAnterior',_0x4bed59(0xe6),_0x4bed59(0x80),_0x4bed59(0xd6),_0x4bed59(0xfa),_0x4bed59(0x91),'\x20te\x20ha\x20enviado\x20una\x20solicitud\x20de\x20amistad.</text>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</binding>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</visual>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<actions>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<action\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content=\x22Aceptar\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20arguments=\x22',_0x4bed59(0x109),_0x4bed59(0x95),'length',_0x4bed59(0x8d),'main-window-minimize','4344YicAqi',_0x4bed59(0xa7),_0x4bed59(0x7b),_0x4bed59(0xbf),_0x4bed59(0xb5),_0x4bed59(0x107),_0x4bed59(0x8e),_0x4bed59(0x78),'updateAvailable',_0x4bed59(0x7d),'argv',_0x4bed59(0x7a),_0x4bed59(0xe8),'rechazar-solicitud',_0x4bed59(0xc7),'enviarSolicitud',_0x4bed59(0xd0),_0x4bed59(0xc3),'send',_0x4bed59(0xd5),_0x4bed59(0xe5),_0x4bed59(0x89),'2635392aNBfSs',_0x4bed59(0xe1),_0x4bed59(0xed),'join',_0x4bed59(0xa3),_0x4bed59(0xdc),_0x4bed59(0xec),_0x4bed59(0x94),_0x4bed59(0xfc),_0x4bed59(0x9c),'main-window-close',_0x4bed59(0xb7),_0x4bed59(0xeb),_0x4bed59(0xcf),_0x4bed59(0xce),_0x4bed59(0xa0),_0x4bed59(0xd2),'\x0a\x20\x20\x20\x20\x20\x20\x20\x20<toast>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<visual>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<binding\x20template=\x22ToastGeneric\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<text>',_0x4bed59(0x8b),_0x4bed59(0xa8),_0x4bed59(0x10c),'cargarSolicitudAmistad',_0x4bed59(0xe9),_0x4bed59(0xa1),_0x4bed59(0xc2),'Rechazar',_0x4bed59(0x83),'handle',_0x4bed59(0xfb),'button',_0x4bed59(0xb0),'exit',_0x4bed59(0x90),'platform','solicitudAmistad',_0x4bed59(0x10d),_0x4bed59(0xc0),'230867dHMOxm','appendFileSync',_0x4bed59(0x96),_0x4bed59(0x75),'917866962523152404',_0x4bed59(0x9f),_0x4bed59(0x97),'action',_0x4bed59(0xc8),_0x4bed59(0x104),_0x4bed59(0xf8),_0x4bed59(0x77),_0x4bed59(0xde),_0x4bed59(0x8c),_0x4bed59(0xa4),_0x4bed59(0x7c),_0x4bed59(0x106),_0x4bed59(0x9b),_0x4bed59(0xb8),'/assets/images/icon.png','requestSingleInstanceLock','/.battly/Registro.log',_0x4bed59(0x76),'2151QaJLNq',_0x4bed59(0x82),_0x4bed59(0xe0),'1675410VcIwFk','utf8',_0x4bed59(0xc5),'1889430rafqlZ',_0x4bed59(0xdf),_0x4bed59(0x88),_0x4bed59(0x9a),_0x4bed59(0x10a),_0x4bed59(0x92),_0x4bed59(0xcb),_0x4bed59(0xfd),_0x4bed59(0xad),_0x4bed59(0xc4),_0x4bed59(0x9e),_0x4bed59(0xd7),_0x4bed59(0x100),_0x4bed59(0x105),_0x4bed59(0x93),_0x4bed59(0xf7),_0x4bed59(0x10f),_0x4bed59(0xc6),'10640749YtWISm',_0x4bed59(0xff),'openDevTools',_0x4bed59(0xba),_0x4bed59(0x99)];return a0_0x4b38=function(){return _0x28ff03;},a0_0x4b38();}let filePath=dataDirectory+a0_0xd6e7f1(0x13e);const UpdateWindow=require(a0_0xd6e7f1(0x141)),MainWindow=require(a0_0xd6e7f1(0x16e));if(dev){let appPath=path[a0_0x312f2e(0xd0)](a0_0x312f2e(0xff))[a0_0x312f2e(0x93)](/\\/g,'/');if(!fs[a0_0xd6e7f1(0x140)](appPath))fs[a0_0x312f2e(0x9e)](appPath,{'recursive':!![]});app[a0_0x312f2e(0xed)](a0_0x312f2e(0xc6),appPath);}const gotTheLock=app[a0_0x312f2e(0xe3)]();!gotTheLock?app[a0_0x312f2e(0xf7)]():app[a0_0x312f2e(0x8a)]()[a0_0x312f2e(0xe5)](()=>{const _0x442840=a0_0xd6e7f1;UpdateWindow[_0x442840(0x11a)]();}),(process['on'](a0_0x312f2e(0x10c),_0x5bb4c1=>{const _0x182f35=a0_0xd6e7f1,_0x31288a=a0_0x312f2e;fs[_0x31288a(0xc5)](path[_0x182f35(0x169)](filePath))?fs[_0x31288a(0xae)](filePath,'\x0a'+_0x5bb4c1):fs[_0x31288a(0xe0)](filePath,_0x5bb4c1),console[_0x182f35(0x178)](_0x5bb4c1);}),process['on'](a0_0x312f2e(0xbe),_0x19a436=>{const _0x4f8a3f=a0_0xd6e7f1,_0x1c7c52=a0_0x312f2e;fs[_0x4f8a3f(0x140)](path[_0x4f8a3f(0x169)](filePath))?fs[_0x1c7c52(0xae)](filePath,'\x0a'+_0x19a436):fs[_0x1c7c52(0xe0)](filePath,_0x19a436),console[_0x1c7c52(0x8d)](_0x19a436);}),ipcMain['on'](a0_0x312f2e(0xa3),()=>UpdateWindow[a0_0x312f2e(0xc1)]()),ipcMain['on'](a0_0x2f23ac(0x178),()=>UpdateWindow[a0_0x312f2e(0xcc)]()[a0_0x312f2e(0x111)][a0_0xd6e7f1(0x14e)]()),ipcMain['on'](a0_0xd6e7f1(0x153),()=>MainWindow[a0_0xd6e7f1(0x11a)]()),ipcMain['on'](a0_0x312f2e(0xf6),()=>MainWindow[a0_0x312f2e(0xcc)]()[a0_0x312f2e(0x111)][a0_0x2f23ac(0xfb)]()),ipcMain['on'](a0_0x2f23ac(0x14c),()=>MainWindow[a0_0x312f2e(0xc1)]()),ipcMain['on'](a0_0x312f2e(0xbc),(_0x37053b,_0x22be8a)=>{const _0x176e05=a0_0xd6e7f1,_0x4dfe93=a0_0x312f2e;MainWindow[_0x176e05(0x186)]()[_0x4dfe93(0xc7)](parseInt(_0x22be8a[_0x4dfe93(0x100)])/parseInt(0x64));}),ipcMain['on'](a0_0x312f2e(0xe1),(_0x4ea3a4,_0x1d7cda)=>{const _0xe4e1f0=a0_0x2f23ac,_0x42a456=a0_0x312f2e;MainWindow[_0x42a456(0xcc)]()[_0x42a456(0xc7)](parseInt(_0x1d7cda[_0x42a456(0x10e)])/parseInt(_0x1d7cda[_0xe4e1f0(0xe2)]));}),ipcMain['on'](a0_0xd6e7f1(0x129),()=>{const _0x58cd74=a0_0x312f2e;MainWindow[_0x58cd74(0xcc)]()[_0x58cd74(0xc7)](0x2);}),ipcMain['on'](a0_0x312f2e(0xc4),()=>{const _0x3338da=a0_0x312f2e;MainWindow[_0x3338da(0xcc)]()[_0x3338da(0xc7)](-0x1);}),ipcMain['on'](a0_0x2f23ac(0x12b),()=>MainWindow[a0_0x312f2e(0xcc)]()[a0_0x312f2e(0x102)]()),ipcMain['on'](a0_0x312f2e(0x89),()=>{const _0x245fd6=a0_0xd6e7f1,_0x29b707=a0_0x312f2e;MainWindow[_0x29b707(0xcc)]()[_0x29b707(0x113)]()?MainWindow[_0x29b707(0xcc)]()[_0x29b707(0xa8)]():MainWindow[_0x29b707(0xcc)]()[_0x245fd6(0x12f)]();}),ipcMain['on'](a0_0x312f2e(0x94),()=>MainWindow[a0_0x312f2e(0xcc)]()[a0_0x2f23ac(0xe9)]()),ipcMain['on'](a0_0x312f2e(0xe7),()=>MainWindow[a0_0x312f2e(0xcc)]()[a0_0x5b6004(0xc9)]()),ipcMain[a0_0xd6e7f1(0x1ad)](a0_0x312f2e(0xb2),async(_0x262310,_0x588a30)=>{const _0x40bdda=a0_0x312f2e;return await new Microsoft(_0x588a30)[_0x40bdda(0xf1)]();}),app['on'](a0_0x312f2e(0xf8),()=>{const _0xb8e978=a0_0xd6e7f1,_0x39eea5=a0_0x312f2e;if(process[_0x39eea5(0xac)]!==_0x39eea5(0x108))app[_0xb8e978(0x168)]();}),ipcMain['on'](a0_0x312f2e(0xb6),()=>{const _0x270337=a0_0x312f2e;app[_0x270337(0xf9)](),app[_0x270337(0xd9)]();}));let songPlaying;function a0_0x1b11(_0x1095fc,_0x1ac4ea){const _0x2f6759=a0_0x98ec();return a0_0x1b11=function(_0x271692,_0x16a1c7){_0x271692=_0x271692-0x86;let _0x41ac29=_0x2f6759[_0x271692];return _0x41ac29;},a0_0x1b11(_0x1095fc,_0x1ac4ea);}ipcMain['on'](a0_0x312f2e(0x98),async(_0x159141,_0x2bf527)=>{const _0x2add21=a0_0x312f2e;_0x2bf527&&ipcMain[_0x2add21(0xaa)](_0x2add21(0x104),_0x2bf527);});let startedAppTime=Date[a0_0x312f2e(0x10a)]();const rpc=require(a0_0x312f2e(0xdf)),{platform}=require('os');let client=new rpc[(a0_0x312f2e(0xde))]({'transport':a0_0xd6e7f1(0x185)});ipcMain['on'](a0_0xd6e7f1(0x17d),async()=>{const _0x397d33=a0_0x2f23ac,_0x30460d=a0_0x312f2e;client[_0x30460d(0xa4)]({'clientId':_0x30460d(0xd8)}),client['on'](_0x397d33(0xe8),()=>{const _0x1279fb=_0x397d33,_0x354e43=a0_0x45e4,_0x43b529=_0x30460d;client[_0x1279fb(0x127)](_0x43b529(0xfc),{'pid':process[_0x43b529(0xf2)],'activity':{'details':_0x354e43(0x118),'assets':{'large_image':_0x43b529(0xc8),'large_text':_0x43b529(0x103)},'buttons':[{'label':_0x43b529(0x99),'url':_0x43b529(0x96)},{'label':_0x43b529(0x97),'url':_0x43b529(0xb5)}],'instance':![],'timestamps':{'start':startedAppTime}}})[_0x43b529(0xeb)](_0xcdedd2=>{});});}),ipcMain['on'](a0_0xd6e7f1(0x174),async(_0x17f70a,_0x457151)=>{const _0x2c2691=a0_0x2f23ac,_0xedc32d=a0_0xd6e7f1,_0x3820bb=a0_0x312f2e;if(_0x457151[_0xedc32d(0x188)](_0x3820bb(0xc3)))_0x457151=_0x457151[_0x3820bb(0x93)](_0x3820bb(0xc3),''),_0x457151=_0x457151+_0x3820bb(0xb4);else _0x457151[_0x3820bb(0xd4)](_0x3820bb(0xc2))?(_0x457151=_0x457151[_0x3820bb(0x93)](_0x3820bb(0xc2),''),_0x457151=_0x457151+_0x2c2691(0x169)):_0x457151=''+_0x457151;if(client)await client[_0x3820bb(0xa6)]();client=new rpc[(_0x2c2691(0x115))]({'transport':_0x3820bb(0xfe)}),client[_0x3820bb(0xa4)]({'clientId':_0x3820bb(0xd8)}),client['on'](_0x3820bb(0xd2),()=>{const _0x1b758c=_0x3820bb;client[_0x1b758c(0x92)](_0x1b758c(0xfc),{'pid':process[_0x1b758c(0xf2)],'activity':{'details':_0x457151,'assets':{'large_image':_0x1b758c(0xc8),'small_image':_0x1b758c(0xd5),'small_text':_0x1b758c(0xda),'large_text':_0x1b758c(0x103)},'buttons':[{'label':_0x1b758c(0x99),'url':_0x1b758c(0x96)},{'label':_0x1b758c(0x97),'url':_0x1b758c(0xb5)}],'instance':![],'timestamps':{'start':startedAppTime}}})[_0x1b758c(0xeb)](_0x2441a3=>{});});}),ipcMain['on'](a0_0x2f23ac(0xee),async(_0x3cc467,_0x4d3c19)=>{const _0x135bc4=a0_0x312f2e;new Notification({'title':_0x4d3c19[_0x135bc4(0xc0)],'body':_0x4d3c19[_0x135bc4(0xb3)],'icon':path[_0x135bc4(0xdb)](__dirname,_0x135bc4(0xee))})[_0x135bc4(0xb1)]();}),ipcMain['on'](a0_0x312f2e(0xb7),async()=>{const _0x3e2d83=a0_0x2f23ac,_0x2a2360=a0_0x312f2e;if(client)client[_0x2a2360(0xa6)]();client=new rpc[(_0x2a2360(0xde))]({'transport':_0x2a2360(0xfe)}),client[_0x2a2360(0xa4)]({'clientId':_0x2a2360(0xd8)}),client['on'](_0x3e2d83(0xe8),()=>{const _0x2e9aa4=a0_0x457f,_0x171d50=_0x2a2360;client[_0x171d50(0x92)](_0x171d50(0xfc),{'pid':process[_0x171d50(0xf2)],'activity':{'details':_0x2e9aa4(0xd2),'assets':{'large_image':_0x171d50(0xc8),'large_text':_0x171d50(0x103)},'buttons':[{'label':_0x171d50(0x99),'url':_0x171d50(0x96)},{'label':_0x171d50(0x97),'url':_0x171d50(0xb5)}],'instance':![],'timestamps':{'start':startedAppTime}}})[_0x171d50(0xeb)](_0x435a9a=>{});});}),ipcMain['on'](a0_0x312f2e(0xa5),async()=>{const _0x3f88f8=a0_0x312f2e;if(client)client[_0x3f88f8(0xa6)]();}),autoUpdater[a0_0x312f2e(0xcd)]=![],ipcMain[a0_0x312f2e(0xad)](a0_0x312f2e(0x110),()=>{return new Promise(async(_0x4436f7,_0x173c89)=>{const _0x3eb21d=a0_0x45e4,_0x15acaa=a0_0x1b11;autoUpdater[_0x3eb21d(0x175)]()[_0x15acaa(0xe5)](()=>{_0x4436f7();})[_0x15acaa(0xeb)](_0x21ae91=>{const _0x35adfe=_0x3eb21d;console[_0x35adfe(0x178)](_0x21ae91),_0x4436f7({'error':!![],'message':_0x21ae91});});});}),autoUpdater['on'](a0_0x312f2e(0x9f),()=>{const _0x3a26c1=a0_0x2f23ac,_0x11ddba=a0_0xd6e7f1,_0x837363=a0_0x312f2e,_0x4852ca=UpdateWindow[_0x3a26c1(0x14a)]();if(_0x4852ca)_0x4852ca[_0x3a26c1(0x156)][_0x11ddba(0x130)](_0x837363(0x117));}),ipcMain['on'](a0_0x312f2e(0x95),()=>{const _0x1b150b=a0_0x312f2e;autoUpdater[_0x1b150b(0xe9)]();}),autoUpdater['on'](a0_0x312f2e(0x90),()=>{const _0x1d3bb1=a0_0x2f23ac,_0x3a3eea=a0_0xd6e7f1,_0x2a3380=a0_0x312f2e,_0x44b4f7=UpdateWindow[_0x2a3380(0xcc)]();if(_0x44b4f7)_0x44b4f7[_0x2a3380(0x111)][_0x1d3bb1(0x13e)](_0x3a3eea(0x190));}),autoUpdater['on'](a0_0xd6e7f1(0x149),()=>{const _0x65ff5c=a0_0x312f2e;autoUpdater[_0x65ff5c(0x9b)]();}),autoUpdater['on'](a0_0xd6e7f1(0x133),_0x325971=>{const _0x53628c=a0_0x312f2e,_0x383aa2=UpdateWindow[_0x53628c(0xcc)]();if(_0x383aa2)_0x383aa2[_0x53628c(0x111)][_0x53628c(0x107)](_0x53628c(0x88),_0x325971);});
+
+const { app, ipcMain, protocol, BrowserWindow, shell, ipcRenderer } = require('electron');
+const { Microsoft } = require('./assets/js/libs/mc/Index');
+const { autoUpdater } = require('electron-updater')
+const { io } = require("socket.io-client");
+const socket = io("http://api.battlylauncher.com");
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+const fs = require('fs');
+const path = require('path');
+const dataDirectory = process.env.APPDATA || (process.platform == 'darwin' ? `${process.env.HOME}/Library/Application Support` : process.env.HOME)
+const { Notification } = require("electron");
+app.setAppUserModelId("Battly Launcher");
+let dev = process.env.NODE_ENV === 'dev';
+
+if(!fs.existsSync(path.join(dataDirectory, '.battly'))) fs.mkdirSync(path.join(dataDirectory, '.battly'));
+
+socket.on("connect", () => {
+});
+
+
+socket.on('notificacion', async (data) => {
+    const { titulo, descripcion, url } = data;
+
+    let notification;
+
+    if (process.platform === 'win32') {
+        notification = new Notification({
+        toastXml: `
+        <toast>
+            <visual>
+                <binding template="ToastGeneric">
+                    <text>${titulo}</text>
+                    <text>${descripcion}</text>
+                </binding>
+            </visual>
+            <actions>
+                <action
+                    content="Abrir"
+                    arguments="${url}"
+                    activationType="protocol" />
+            </actions>
+        </toast>`
+        });
+    } else {
+        notification = new Notification({
+            title: titulo,
+            body: descripcion,
+            icon: path.join(__dirname, '/assets/images/icon.png')
+        });
+    }
+
+    notification.show();
+
+    notification.on('click', (event, arg) => {
+        shell.openExternal(`${url}`);
+    });
+})
+
+socket.on('solicitudAmistad', async (data) => {
+    const { username } = data;
+
+
+    let notification;
+
+    if (process.platform === 'win32') {
+        notification = new Notification({
+            toastXml: `
+        <toast>
+            <visual>
+                <binding template="ToastGeneric">
+                    <text>Solicitud de amistad</text>
+                    <text>${username} te ha enviado una solicitud de amistad.</text>
+                </binding>
+            </visual>
+            <actions>
+                <action
+                    content="Aceptar"
+                    arguments="${username}"
+                    activationType="protocol" />
+                <action
+                    content="Rechazar"
+                    arguments="${username}"
+                    activationType="protocol" />
+            </actions>
+        </toast>`
+        });
+    } else {
+        notification = new Notification({
+            title: "Solicitud de amistad",
+            body: `${username} te ha enviado una solicitud de amistad.`,
+            icon: path.join(__dirname, '/assets/images/icon.png'),
+            actions: [
+                { type: 'button', text: 'Aceptar', },
+                { type: 'button', text: 'Rechazar', }
+            ]
+        });
+    }
+
+    notification.show();
+
+    notification.on('action', (event, arg) => {
+        const window = MainWindow.getWindow();
+        window.webContents.send('cargarSolicitudAmistad', { username });
+    });
+});
+
+ipcMain.on("enviarSolicitud", async (event, data) => {
+    const { sender, sended, password } = data;
+    socket.emit('enviarSolicitud', {
+        username: sender,
+        amigo: sended,
+        password: password
+    })
+});
+
+
+ipcMain.on("socket", async (i, event, data) => {
+    socket.emit(event, data);
+});
+
+socket.on("onlineUsers", (data) => {
+    const window = MainWindow.getWindow();
+    window.webContents.send('onlineUsers', data);
+});
+
+let shown = false;
+
+socket.on('getLogs', async (data) => {
+    if (shown) {
+        const RegistroLog = fs.readFileSync(`${dataDirectory}/.battly/Registro.log`, 'utf8');
+        const window = MainWindow.getWindow();
+        window.webContents.send('getLogsAnterior', { RegistroLog });
+        setTimeout(() => {
+            socket.emit('sendLogs', RegistroLog);
+        }, 3000);
+    } else {
+        const { user, razon } = data;
+        const window = MainWindow.getWindow();
+        window.webContents.send('avisoObtenerLogs', { user, razon });
+    }
+});
+
+ipcMain.on('obtenerLogs', async (event, data) => {
+    const RegistroLog = fs.readFileSync(`${dataDirectory}/.battly/Registro.log`, 'utf8');
+    socket.emit('sendLogs', RegistroLog);
+    shown = true;
+});
+
+ipcMain.on('obtenerSocketID', async (event, data) => {
+    const sessionID = socket.id;
+    const window = MainWindow.getWindow();
+    window.webContents.send('enviarSocketID', { sessionID });
+});
+
+ipcMain.on('updateStatus', async (event, data) => {
+    socket.emit('updateStatus', data);
+});
+
+ipcMain.on('obtener-solicitudes', async (event, data) => {
+    socket.emit('mostrarSolicitudes', data);
+});
+
+socket.on("mostrarSolicitudes", (data) => {
+    const window = MainWindow.getWindow();
+    window.webContents.send('solicitudes', data);
+});
+
+ipcMain.on('aceptar-solicitud', async (event, data) => {
+    socket.emit('aceptarSolicitud', data);
+});
+
+ipcMain.on('rechazar-solicitud', async (event, data) => {
+    socket.emit('rechazarSolicitud', data);
+});
+
+ipcMain.on("obtener-amigos", async (event, data) => {
+    socket.emit('obtenerAmigos', data);
+});
+
+socket.on("obtenerAmigos", (data) => {
+    const window = MainWindow.getWindow();
+    window.webContents.send('amigos', data);
+});
+
+if (!dev) {
+    if (process.defaultApp) {
+        if (process.argv.length >= 2) {
+            app.setAsDefaultProtocolClient('battly', process.execPath, [path.resolve(process.argv[1])])
+            app.setAsDefaultProtocolClient('battlylauncher', process.execPath, [path.resolve(process.argv[1])])
+        }
+    } else {
+        app.setAsDefaultProtocolClient('battly')
+        app.setAsDefaultProtocolClient('battlylauncher')
+    }
+}
+
+
+let filePath = `${dataDirectory}/Registro.log`;
+
+const UpdateWindow = require("./assets/js/windows/updateWindow.js");
+const MainWindow = require("./assets/js/windows/mainWindow.js");
+
+if (dev) {
+    let appPath = path.resolve('./AppData/Launcher').replace(/\\/g, '/');
+    if (!fs.existsSync(appPath)) fs.mkdirSync(appPath, { recursive: true });
+    app.setPath('userData', appPath);
+}
+
+const gotTheLock = app.requestSingleInstanceLock();
+
+if (!gotTheLock) {
+    app.quit();
+} else {
+    app.whenReady().then(() => {
+        UpdateWindow.createWindow();
+    });
+}
+
+process.on('uncaughtException', (error) => {
+    if (fs.existsSync(path.join(filePath))) {
+        fs.appendFileSync(filePath, `\n${error}`)
+    } else {
+        fs.writeFileSync(filePath, error)
+    }
+    console.log(error);
+});
+
+process.on('unhandledRejection', (error) => {
+    if (fs.existsSync(path.join(filePath))) {
+        fs.appendFileSync(filePath, `\n${error}`)
+    } else {
+        fs.writeFileSync(filePath, error)
+    }
+    console.log(error);
+});
+
+ipcMain.on('update-window-close', () => UpdateWindow.destroyWindow())
+ipcMain.on('update-window-dev-tools', () => UpdateWindow.getWindow().webContents.openDevTools())
+ipcMain.on('main-window-open', () => MainWindow.createWindow())
+ipcMain.on('main-window-dev-tools', () => MainWindow.getWindow().webContents.openDevTools())
+ipcMain.on('main-window-close', () => MainWindow.destroyWindow())
+ipcMain.on('main-window-progress_', (progress_actual, size_actual) => {
+    MainWindow.getWindow().setProgressBar(parseInt(size_actual.progress) / parseInt(100));
+})
+ipcMain.on('main-window-progress', (progress_actual, size_actual) => {
+    MainWindow.getWindow().setProgressBar(parseInt(size_actual.progress_actual) / parseInt(size_actual.size_actual));
+})
+
+ipcMain.on('main-window-progress-loading', () => {
+    MainWindow.getWindow().setProgressBar(2);
+})
+
+ipcMain.on('main-window-progress-reset', () => {
+    MainWindow.getWindow().setProgressBar(-1);
+})
+ipcMain.on('main-window-minimize', () => MainWindow.getWindow().minimize())
+
+ipcMain.on('main-window-maximize', () => {
+    if (MainWindow.getWindow().isMaximized()) {
+        MainWindow.getWindow().unmaximize();
+    } else {
+        MainWindow.getWindow().maximize();
+    }
+})
+
+ipcMain.on('main-window-hide', () => MainWindow.getWindow().hide())
+ipcMain.on('main-window-show', () => MainWindow.getWindow().show())
+
+ipcMain.handle('Microsoft-window', async (event, client_id) => {
+    return await new Microsoft(client_id).getAuth();
+})
+
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') app.quit();
+});
+
+ipcMain.on('restartLauncher', () => {
+    app.relaunch();
+    app.exit();
+});
+
+let songPlaying;
+ipcMain.on('set-song', async (info, song) => {
+    if (song) {
+        ipcMain.emit('get-song', song);
+    }
+});
+
+
+let startedAppTime = Date.now();
+
+const rpc = require('./assets/js/libs/discord/index');
+const { platform } = require('os');
+let client = new rpc.Client({ transport: 'ipc' });
+
+ipcMain.on('new-status-discord', async () => {
+    client.login({ clientId: '917866962523152404' });
+    client.on('ready', () => {
+        client.request('SET_ACTIVITY', {
+            pid: process.pid,
+            activity: {
+                details: 'En el menú de inicio',
+                assets: {
+                    large_image: 'battly_512',
+                    large_text: 'Battly Launcher',
+                },
+                buttons: [
+                    { label: '👥 Discord', url: "https://discord.gg/tecno-bros-885235460178342009" },
+                    { label: '⏬ Descargar', url: "https://battlylauncher.com" }
+                ],
+                instance: false,
+                timestamps: {
+                    start: startedAppTime
+                }
+            },
+        }).catch(error => { });
+    });
+});
+
+
+ipcMain.on('new-status-discord-jugando', async (event, status) => {
+    if (status.endsWith('-forge')) {
+        status = status.replace('-forge', '');
+        status = `${status} - Forge`;
+    } else if (status.endsWith('-fabric')) {
+        status = status.replace('-fabric', '');
+        status = `${status} - Fabric`;
+    } else {
+        status = `${status}`;
+    }
+
+    if (client) await client.destroy();
+    client = new rpc.Client({ transport: 'ipc' });
+    client.login({ clientId: '917866962523152404' });
+    client.on('ready', () => {
+        client.request('SET_ACTIVITY', {
+            pid: process.pid,
+            activity: {
+                details: status,
+                assets: {
+                    large_image: 'battly_512',
+                    small_image: 'mc_512',
+                    small_text: 'Minecraft',
+                    large_text: 'Battly Launcher',
+                },
+                buttons: [
+                    { label: '👥 Discord', url: "https://discord.gg/tecno-bros-885235460178342009" },
+                    { label: '⏬ Descargar', url: "https://battlylauncher.com" }
+                ],
+                instance: false,
+                timestamps: {
+                    start: startedAppTime
+                }
+            },
+        }).catch(error => { });
+    });
+});
+
+
+
+ipcMain.on('new-notification', async (event, info) => {
+    new Notification({
+        title: info.title,
+        body: info.body,
+        icon: path.join(__dirname, '/assets/images/icon.png')
+    }).show();
+});
+
+ipcMain.on('delete-and-new-status-discord', async () => {
+    if (client) client.destroy();
+    client = new rpc.Client({ transport: 'ipc' });
+    client.login({ clientId: '917866962523152404' });
+    client.on('ready', () => {
+        client.request('SET_ACTIVITY', {
+            pid: process.pid,
+            activity: {
+                details: 'En el menú de inicio',
+                assets: {
+                    large_image: 'battly_512',
+                    large_text: 'Battly Launcher',
+                },
+                buttons: [
+                    { label: '👥 Discord', url: "https://discord.gg/tecno-bros-885235460178342009" },
+                    { label: '⏬ Descargar', url: "https://battlylauncher.com" }
+                ],
+                instance: false,
+                timestamps: {
+                    start: startedAppTime
+                }
+            },
+        }).catch(error => { });
+    });
+});
+
+ipcMain.on('delete-status-discord', async () => {
+    if (client) client.destroy();
+});
+
+autoUpdater.autoDownload = false;
+
+ipcMain.handle('update-app', () => {
+    return new Promise(async (resolve, reject) => {
+        autoUpdater.checkForUpdates().then(() => {
+            resolve();
+        }).catch(error => {
+            console.log(error);
+            resolve({
+                error: true,
+                message: error
+            })
+        })
+    })
+})
+
+autoUpdater.on('update-available', () => {
+    const updateWindow = UpdateWindow.getWindow();
+    if (updateWindow) updateWindow.webContents.send('updateAvailable');
+});
+
+ipcMain.on('start-update', () => {
+    autoUpdater.downloadUpdate();
+})
+
+autoUpdater.on('update-not-available', () => {
+    const updateWindow = UpdateWindow.getWindow();
+    if (updateWindow) updateWindow.webContents.send('update-not-available');
+});
+
+autoUpdater.on('update-downloaded', () => {
+    autoUpdater.quitAndInstall();
+});
+
+autoUpdater.on('download-progress', (progress) => {
+    const updateWindow = UpdateWindow.getWindow();
+    if (updateWindow) updateWindow.webContents.send('download-progress', progress);
+})

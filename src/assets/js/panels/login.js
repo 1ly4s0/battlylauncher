@@ -1,5 +1,381 @@
 /**
  * @author TECNO BROS
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
+ 
  */
-'use strict';(function(_0x4bd002,_0x498764){const _0x3431c2=a168_0x1a57,_0x4e80cd=_0x4bd002();while(!![]){try{const _0x16b5f3=parseInt(_0x3431c2(0xbf))/0x1*(parseInt(_0x3431c2(0x91))/0x2)+parseInt(_0x3431c2(0xd6))/0x3+-parseInt(_0x3431c2(0xcc))/0x4+-parseInt(_0x3431c2(0xb9))/0x5*(parseInt(_0x3431c2(0xda))/0x6)+-parseInt(_0x3431c2(0x75))/0x7*(parseInt(_0x3431c2(0xe5))/0x8)+-parseInt(_0x3431c2(0xa8))/0x9+-parseInt(_0x3431c2(0x99))/0xa*(-parseInt(_0x3431c2(0xc9))/0xb);if(_0x16b5f3===_0x498764)break;else _0x4e80cd['push'](_0x4e80cd['shift']());}catch(_0x19e71f){_0x4e80cd['push'](_0x4e80cd['shift']());}}}(a168_0xcf64,0x3a25f));function a168_0x1264(_0x569feb,_0x5f23ba){const _0x4970a1=a168_0x359a();return a168_0x1264=function(_0x1c6ba4,_0x4a4ae7){_0x1c6ba4=_0x1c6ba4-0x165;let _0x4365ab=_0x4970a1[_0x1c6ba4];return _0x4365ab;},a168_0x1264(_0x569feb,_0x5f23ba);}(function(_0x16349e,_0x29082b){const _0xf67230=a168_0x1a57,_0x3251dc=a168_0x1264,_0x5e726f=_0x16349e();while(!![]){try{const _0x29006a=-parseInt(_0x3251dc(0x1b2))/0x1*(-parseInt(_0x3251dc(0x1ab))/0x2)+-parseInt(_0x3251dc(0x176))/0x3*(parseInt(_0x3251dc(0x166))/0x4)+parseInt(_0x3251dc(0x16e))/0x5+-parseInt(_0x3251dc(0x19e))/0x6+-parseInt(_0x3251dc(0x1c1))/0x7+parseInt(_0x3251dc(0x1cc))/0x8+-parseInt(_0x3251dc(0x1ce))/0x9*(parseInt(_0x3251dc(0x178))/0xa);if(_0x29006a===_0x29082b)break;else _0x5e726f[_0xf67230(0x9d)](_0x5e726f[_0xf67230(0xd5)]());}catch(_0x2af879){_0x5e726f['push'](_0x5e726f[_0xf67230(0xd5)]());}}}(a168_0x359a,0xb4bd2));const a168_0x443c58=a168_0x59ef;(function(_0x17261c,_0x1e4145){const _0x4b18a6=a168_0x1a57,_0x4cca78=a168_0x1264,_0x197e76=a168_0x59ef,_0x4cadfb=_0x17261c();while(!![]){try{const _0x4c9fc9=parseInt(_0x197e76(0x204))/0x1+parseInt(_0x197e76(0x1ef))/0x2+parseInt(_0x197e76(0x1c0))/0x3*(-parseInt(_0x197e76(0x208))/0x4)+parseInt(_0x197e76(0x1b8))/0x5*(parseInt(_0x197e76(0x20b))/0x6)+-parseInt(_0x197e76(0x1e1))/0x7+-parseInt(_0x197e76(0x1eb))/0x8+-parseInt(_0x197e76(0x1d1))/0x9;if(_0x4c9fc9===_0x1e4145)break;else _0x4cadfb[_0x4cca78(0x1bf)](_0x4cadfb[_0x4cca78(0x1cf)]());}catch(_0x234314){_0x4cadfb[_0x4b18a6(0x9d)](_0x4cadfb['shift']());}}}(a168_0x3310,0x7dbf3));const a168_0x4e8d24=a168_0xf54b;function a168_0x3310(){const _0xe118b0=a168_0x1a57,_0x36f5d6=a168_0x1264,_0x3091c4=[_0x36f5d6(0x182),_0xe118b0(0xd5),_0x36f5d6(0x175),_0x36f5d6(0x18a),_0x36f5d6(0x19a),_0x36f5d6(0x18b),_0x36f5d6(0x1c0),_0x36f5d6(0x16b),_0x36f5d6(0x1ac),_0x36f5d6(0x17a),_0x36f5d6(0x1b9),_0x36f5d6(0x1d1),_0xe118b0(0xb8),_0x36f5d6(0x1d3),_0x36f5d6(0x1ae),_0x36f5d6(0x18c),_0xe118b0(0xc2),_0x36f5d6(0x19b),_0x36f5d6(0x183),_0x36f5d6(0x16f),_0x36f5d6(0x184),_0x36f5d6(0x192),'.mojang','set_your_username',_0xe118b0(0x9a),_0x36f5d6(0x169),_0x36f5d6(0x17d),_0x36f5d6(0x18f),_0x36f5d6(0x186),_0xe118b0(0xba),_0x36f5d6(0x189),_0x36f5d6(0x1aa),_0x36f5d6(0x16c),_0x36f5d6(0x1a9),_0x36f5d6(0x1af),_0x36f5d6(0x1d5),_0xe118b0(0xc3),_0x36f5d6(0x19f),_0x36f5d6(0x16a),_0x36f5d6(0x16d),_0x36f5d6(0x1b8),_0x36f5d6(0x165),_0x36f5d6(0x1b4),_0x36f5d6(0x1c2),_0x36f5d6(0x1bf),_0x36f5d6(0x1a8),_0x36f5d6(0x191),_0x36f5d6(0x17f),_0x36f5d6(0x1bd),_0x36f5d6(0x1d6),_0x36f5d6(0x1b5),_0x36f5d6(0x185),_0x36f5d6(0x197),_0x36f5d6(0x1a7),_0x36f5d6(0x19c),_0xe118b0(0x8d),_0x36f5d6(0x17e),_0xe118b0(0xd2),_0x36f5d6(0x167),'invoke',_0xe118b0(0xa0),_0x36f5d6(0x1bb),_0x36f5d6(0x198),_0x36f5d6(0x1c3),_0x36f5d6(0x190),_0x36f5d6(0x1a5),_0x36f5d6(0x1b1),'1854180bTaAzh',_0xe118b0(0x76),_0xe118b0(0xe3),_0x36f5d6(0x1be),_0x36f5d6(0x174),_0xe118b0(0xb1),_0x36f5d6(0x1a1),_0xe118b0(0xa5),_0x36f5d6(0x1b0),_0x36f5d6(0x1ad),_0x36f5d6(0x179),_0x36f5d6(0x194),_0x36f5d6(0x18d),_0x36f5d6(0x196),_0x36f5d6(0x188),_0x36f5d6(0x168),_0xe118b0(0xab),_0x36f5d6(0x1a0),_0x36f5d6(0x1c9),_0x36f5d6(0x187),_0xe118b0(0xc6),_0x36f5d6(0x171),_0x36f5d6(0x17b),_0x36f5d6(0x19d),_0x36f5d6(0x177),'accounts','digest',_0x36f5d6(0x181),_0x36f5d6(0x1a4),_0x36f5d6(0x1ca),_0x36f5d6(0x1b6),_0x36f5d6(0x180),_0x36f5d6(0x193),'961208CguMNu',_0x36f5d6(0x17c),_0x36f5d6(0x1cb),_0x36f5d6(0x1b7),_0x36f5d6(0x1c5),_0x36f5d6(0x1a2),_0x36f5d6(0x1b3),_0xe118b0(0x7a),_0x36f5d6(0x1a6),_0x36f5d6(0x199),_0x36f5d6(0x1d2),_0x36f5d6(0x1c6),_0x36f5d6(0x1bc)];return a168_0x3310=function(){return _0x3091c4;},a168_0x3310();}function a168_0x1a57(_0x560483,_0x5a7527){const _0xcf64d3=a168_0xcf64();return a168_0x1a57=function(_0x1a570a,_0x43c673){_0x1a570a=_0x1a570a-0x75;let _0x279d3c=_0xcf64d3[_0x1a570a];return _0x279d3c;},a168_0x1a57(_0x560483,_0x5a7527);}(function(_0x4268a3,_0x4335df){const _0x33cda9=a168_0x59ef,_0x47f059=a168_0xf54b,_0x25a2cd=_0x4268a3();while(!![]){try{const _0x2d2697=parseInt(_0x47f059(0x159))/0x1+parseInt(_0x47f059(0x179))/0x2+-parseInt(_0x47f059(0x1af))/0x3*(-parseInt(_0x47f059(0x1a8))/0x4)+parseInt(_0x47f059(0x17f))/0x5+parseInt(_0x47f059(0x19d))/0x6+parseInt(_0x47f059(0x19b))/0x7*(parseInt(_0x47f059(0x1b5))/0x8)+-parseInt(_0x47f059(0x169))/0x9*(parseInt(_0x47f059(0x16e))/0xa);if(_0x2d2697===_0x4335df)break;else _0x25a2cd[_0x33cda9(0x1d0)](_0x25a2cd[_0x33cda9(0x216)]());}catch(_0x255c2b){_0x25a2cd[_0x33cda9(0x1d0)](_0x25a2cd[_0x33cda9(0x216)]());}}}(a168_0x4dde,0x64f71));function a168_0xcf64(){const _0x23a3c4=['accounts','841614tFCKJk','axios','success','status','671596tLopmu','loginOffline','3Dunbrx','uuid','classList','querySelector','.Password','394040guEHZq','username_or_password_incorrect','database','1234168eXkRhq','!</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22news-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bbWrapper\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p','cracked','10271512TjPyty','.cancel-mojang','49mLhsUv','.preload-content','md5','data','GetLang','La\x20account_connect\x20es:','error','loading-text','innerHTML','Iniciando\x20panel\x20de\x20Microsoft...','getElementById','value','refresh_token','access_token','threecharacters_username','welcome_again_to_battly','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','settings','27716yoOzTH','104174XyWebP','config','.login-btn','capes','init','electron','click','4vuRQwc','skins','732080duCGtD','123eskimb','application/json','.Mail','none','crypto','4957940JVinvw','prepend','2606210TolklY','display','hex','.login-card','push','2067289wXnGhZ','4857954pSWrMS','https://battlylauncher.com/register','login','OpenWeb','disabled','.cancel-login','opacity-1','5303799MuEqHr','news_shown_v1.7','3523644phfiAy','message','a_microsoft_panel_opened','we_hope_you_enjoy','2111474mldFAx','2926302CBLLcG','false','1435598EBAyYp','log','news-block','battly_btn','lang','_blank','stringify','register_open_btn','toString','length','5ROlDHo','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22news-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22header-text\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22title_\x22>¡','getOffline','user_properties','2394777qkefgM','add','1ekvDwO','block','threecharacters_password','Battly','news','then','Iniciando\x20panel\x20de\x20offline...','name','createHash','.microsoft','33QmZNLI','createElement','706631oqbfuM','798360MPRwYo','.login-card-offline','5585725sIsXOS','logging_in','home','2385105uXgBFo','loginMicrosoft','set_your_password','10wboqfR','shift','499296ZPGhWK','addEventListener','661290ldXePn'];a168_0xcf64=function(){return _0x23a3c4;};return a168_0xcf64();}import{database,changePanel,addAccount,accountSelect}from'../utils.js';function a168_0xf54b(_0x36c87f,_0x46c5a9){const _0x2b4aa3=a168_0x4dde();return a168_0xf54b=function(_0x42952c,_0x5ab98e){_0x42952c=_0x42952c-0x157;let _0x1217e4=_0x2b4aa3[_0x42952c];return _0x1217e4;},a168_0xf54b(_0x36c87f,_0x46c5a9);}function a168_0x359a(){const _0x23d051=a168_0x1a57,_0xceb6b5=[_0x23d051(0x96),_0x23d051(0xad),_0x23d051(0xe1),_0x23d051(0xd4),_0x23d051(0xb6),_0x23d051(0xdd),_0x23d051(0xe2),'style',_0x23d051(0xcd),'288670hCUqyl',_0x23d051(0xa7),'https://battlylauncher.com/api/battly/launcher/login',_0x23d051(0x95),_0x23d051(0xdf),'catch',_0x23d051(0xd1),_0x23d051(0xaa),_0x23d051(0xe0),'client_id','27GDUgXy',_0x23d051(0x7f),_0x23d051(0xb3),_0x23d051(0x8e),_0x23d051(0x7b),_0x23d051(0x87),_0x23d051(0x83),_0x23d051(0xc5),_0x23d051(0xa1),_0x23d051(0x8a),_0x23d051(0xd0),_0x23d051(0x97),_0x23d051(0xb7),_0x23d051(0x9a),_0x23d051(0xb2),_0x23d051(0x80),_0x23d051(0xae),'.news-list',_0x23d051(0x81),_0x23d051(0xea),'136XXBypj',_0x23d051(0xd7),_0x23d051(0x9f),_0x23d051(0xa4),_0x23d051(0x90),_0x23d051(0xe6),'profile',_0x23d051(0xe4),_0x23d051(0x7e),'1234',_0x23d051(0x84),_0x23d051(0x86),'10561617XdXmdg',_0x23d051(0x78),_0x23d051(0xb5),_0x23d051(0xac),_0x23d051(0xcf),_0x23d051(0xde),'post',_0x23d051(0x9c),_0x23d051(0xaf),'.info-login','1wSbyUf','accounts-selected',_0x23d051(0xbc),_0x23d051(0xbb),'div','12WqoOiD',_0x23d051(0xb0),_0x23d051(0x8c),_0x23d051(0x8b),_0x23d051(0x9e),_0x23d051(0xd8),_0x23d051(0x98),_0x23d051(0xe9),'push',_0x23d051(0xa9),_0x23d051(0xbd),_0x23d051(0x7d),'&nbsp;',_0x23d051(0xc7),_0x23d051(0x82),'error_logging_in','querySelector',_0x23d051(0xd9),_0x23d051(0xc1),_0x23d051(0xcb),'loading-text',_0x23d051(0xeb),_0x23d051(0x77),_0x23d051(0xa6),_0x23d051(0xd5),_0x23d051(0xb4),_0x23d051(0xa2),_0x23d051(0xe7),_0x23d051(0x85),_0x23d051(0xec),_0x23d051(0xdc),_0x23d051(0x89),_0x23d051(0x79),_0x23d051(0xc4),_0x23d051(0x8f),_0x23d051(0xc0),'update',_0x23d051(0xc8),'open',_0x23d051(0xbe),_0x23d051(0x94),'client_token',_0x23d051(0xce),'getOnline','.preload-content',_0x23d051(0xa3),'getItem','length',_0x23d051(0xe8)];return a168_0x359a=function(){return _0xceb6b5;},a168_0x359a();}const {ipcRenderer}=require(a168_0x4e8d24(0x1a4));function a168_0x59ef(_0x59e378,_0x4a0bf1){const _0x17d03e=a168_0x3310();return a168_0x59ef=function(_0x5e7b2a,_0x1c513e){_0x5e7b2a=_0x5e7b2a-0x1b4;let _0x2420c7=_0x17d03e[_0x5e7b2a];return _0x2420c7;},a168_0x59ef(_0x59e378,_0x4a0bf1);}function a168_0x4dde(){const _0x53e353=a168_0x1a57,_0x6401c5=a168_0x1264,_0xdf86e0=a168_0x59ef,_0x3b1600=[_0xdf86e0(0x212),_0xdf86e0(0x21e),_0xdf86e0(0x1dc),_0x6401c5(0x1cd),_0xdf86e0(0x1fa),_0x6401c5(0x172),_0xdf86e0(0x220),_0xdf86e0(0x1c2),_0xdf86e0(0x206),_0xdf86e0(0x211),_0xdf86e0(0x1e0),_0x6401c5(0x1a3),_0xdf86e0(0x1ee),_0xdf86e0(0x218),_0xdf86e0(0x1e2),_0xdf86e0(0x1f6),_0xdf86e0(0x219),_0xdf86e0(0x20e),_0xdf86e0(0x1c6),_0xdf86e0(0x1bc),_0xdf86e0(0x1e3),_0xdf86e0(0x1ce),_0xdf86e0(0x1ed),_0x6401c5(0x16f),_0xdf86e0(0x1fc),_0xdf86e0(0x1ca),_0xdf86e0(0x1d7),_0xdf86e0(0x210),_0xdf86e0(0x1c1),_0xdf86e0(0x1c7),_0x53e353(0x88),_0x53e353(0x9b),_0xdf86e0(0x1e7),_0x53e353(0xd3),_0xdf86e0(0x1fd),_0xdf86e0(0x1be),_0xdf86e0(0x1cb),_0xdf86e0(0x1c8),_0x6401c5(0x1d4),_0xdf86e0(0x1db),_0xdf86e0(0x201),_0x6401c5(0x18e),_0xdf86e0(0x1cc),_0xdf86e0(0x1f3),_0xdf86e0(0x1b9),_0xdf86e0(0x1de),_0xdf86e0(0x1b6),_0xdf86e0(0x1f1),_0xdf86e0(0x1cf),_0xdf86e0(0x1fb),_0x53e353(0x92),_0xdf86e0(0x21c),_0xdf86e0(0x221),_0xdf86e0(0x20f),_0x53e353(0xdb),_0xdf86e0(0x205),_0xdf86e0(0x1da),_0x53e353(0x7c),_0x6401c5(0x1d7),_0xdf86e0(0x1d4),_0xdf86e0(0x1bb),_0x6401c5(0x1c8),_0xdf86e0(0x1d3),_0xdf86e0(0x1df),_0xdf86e0(0x224),_0xdf86e0(0x1ba),_0xdf86e0(0x1f4),_0xdf86e0(0x1c4),_0xdf86e0(0x214),_0xdf86e0(0x1d6),_0xdf86e0(0x1ff),_0xdf86e0(0x1e5),_0x53e353(0xca),_0xdf86e0(0x1e4),_0xdf86e0(0x1e6),_0xdf86e0(0x21f),_0xdf86e0(0x1c9),_0xdf86e0(0x1f8),_0xdf86e0(0x1e9),_0xdf86e0(0x21a),_0xdf86e0(0x215),_0xdf86e0(0x1bd),_0xdf86e0(0x1d9),_0x6401c5(0x1ac),_0xdf86e0(0x1f5),'meta',_0xdf86e0(0x1f7),_0xdf86e0(0x203),_0x6401c5(0x170),_0xdf86e0(0x207),_0xdf86e0(0x1fe),'Microsoft-window',_0xdf86e0(0x213),_0xdf86e0(0x1cd),_0xdf86e0(0x1dd),_0xdf86e0(0x20d),_0x6401c5(0x181),_0xdf86e0(0x1d8),_0x53e353(0x93),_0x6401c5(0x17c),_0xdf86e0(0x1f0),_0xdf86e0(0x222),_0xdf86e0(0x1c5),_0xdf86e0(0x1d5)];return a168_0x4dde=function(){return _0x3b1600;},a168_0x4dde();}import{Lang}from'../utils/lang.js';class Login{static ['id']=a168_0x4e8d24(0x15e);async[a168_0x4e8d24(0x160)](_0x8a17b1){const _0x494245=a168_0x1a57,_0x3b60b6=a168_0x4e8d24;this[_0x3b60b6(0x17c)]=_0x8a17b1,this[_0x494245(0xe7)]=await new database()[_0x3b60b6(0x160)](),this[_0x3b60b6(0x18a)]=await new Lang()[_0x3b60b6(0x1b7)](),this[_0x3b60b6(0x15a)](),this[_0x3b60b6(0x194)](),this[_0x3b60b6(0x183)]();}async[a168_0x4e8d24(0x183)](){const _0x1b841a=a168_0x4e8d24;let _0x27480c=document[_0x1b841a(0x184)](_0x1b841a(0x1ac));_0x27480c[_0x1b841a(0x16f)](_0x1b841a(0x164),()=>{const _0x5325b2=a168_0x1264,_0x280df7=_0x1b841a;window[_0x280df7(0x196)](_0x280df7(0x187),_0x5325b2(0x1d0));});}[a168_0x443c58(0x1b7)](){const _0x35c2a5=a168_0x1264,_0x2ceb94=a168_0x4e8d24;console[_0x35c2a5(0x1b8)](_0x2ceb94(0x16c)),this[_0x2ceb94(0x173)](),document[_0x2ceb94(0x163)](_0x2ceb94(0x161))[_0x2ceb94(0x16f)](_0x2ceb94(0x164),()=>{const _0xbce677=_0x35c2a5,_0x212755=a168_0x59ef,_0x1af8c1=_0x2ceb94;document[_0xbce677(0x1c7)](_0x1af8c1(0x161))[_0x212755(0x209)][_0x1af8c1(0x190)]=_0x212755(0x202),changePanel(_0x1af8c1(0x167));});}[a168_0x4e8d24(0x15a)](){const _0x188a4b=a168_0x1264,_0xa6a18a=a168_0x443c58,_0x469497=a168_0x4e8d24;console[_0xa6a18a(0x1cc)](_0xa6a18a(0x1bf)),this[_0x469497(0x165)](),document[_0x469497(0x163)](_0x469497(0x161))[_0x469497(0x16f)](_0x188a4b(0x18b),()=>{const _0x2d8beb=_0x188a4b,_0x1e03b7=_0xa6a18a,_0x2a4a62=_0x469497;document[_0x2a4a62(0x163)](_0x2a4a62(0x161))[_0x1e03b7(0x209)][_0x2d8beb(0x195)]=_0x2a4a62(0x175),changePanel(_0x2a4a62(0x167));});}[a168_0x4e8d24(0x173)](){const _0x559896=a168_0x443c58,_0xf3b849=a168_0x4e8d24;let _0x4334c4=document[_0xf3b849(0x163)](_0xf3b849(0x166)),_0x4e338c=document[_0x559896(0x1e9)](_0xf3b849(0x1be)),_0x51f535=document[_0xf3b849(0x163)](_0x559896(0x1c9));_0x4334c4[_0x559896(0x1fe)](_0xf3b849(0x164),()=>{const _0x1a69fd=_0x559896,_0x266c9a=_0xf3b849;document['querySelector'](_0x266c9a(0x16d))[_0x266c9a(0x178)][_0x266c9a(0x190)]='',document[_0x266c9a(0x184)](_0x266c9a(0x1b6))[_0x266c9a(0x1ad)]=this[_0x266c9a(0x18a)][_0x266c9a(0x197)],_0x4334c4[_0x266c9a(0x195)]=!![],_0x4e338c[_0x266c9a(0x195)]=!![],_0x51f535[_0x1a69fd(0x1fc)]=!![],ipcRenderer[_0x266c9a(0x1bc)](_0x266c9a(0x170),this[_0x266c9a(0x17c)][_0x266c9a(0x181)])[_0x266c9a(0x172)](_0x3b3d04=>{const _0x35c728=a168_0x1a57,_0x50fd3b=a168_0x1264,_0x44573f=_0x1a69fd,_0xa0d61d=_0x266c9a;document[_0xa0d61d(0x163)](_0xa0d61d(0x16d))[_0xa0d61d(0x178)][_0xa0d61d(0x190)]='',document[_0x35c728(0x7f)](_0xa0d61d(0x1b6))[_0xa0d61d(0x1ad)]=this[_0xa0d61d(0x18a)][_0xa0d61d(0x168)],console[_0x44573f(0x1cc)](_0xa0d61d(0x1b2)),console[_0xa0d61d(0x1a7)](_0x3b3d04);if(!_0x3b3d04){_0x4334c4[_0xa0d61d(0x195)]=![],_0x4e338c[_0xa0d61d(0x195)]=![],_0x51f535[_0xa0d61d(0x195)]=![];return;}let _0xaae5c={'access_token':_0x3b3d04[_0x44573f(0x20c)],'client_token':_0x3b3d04[_0xa0d61d(0x1a1)],'uuid':_0x3b3d04[_0xa0d61d(0x15b)],'name':_0x3b3d04[_0xa0d61d(0x1ae)],'refresh_token':_0x3b3d04[_0xa0d61d(0x18d)],'user_properties':_0x3b3d04[_0xa0d61d(0x192)],'meta':_0x3b3d04[_0xa0d61d(0x16a)]},_0x39e0b3={'uuid':_0x3b3d04[_0xa0d61d(0x15b)],'skins':_0x3b3d04[_0xa0d61d(0x174)][_0xa0d61d(0x162)]||[],'capes':_0x3b3d04[_0xa0d61d(0x174)][_0x50fd3b(0x1ba)]||[]};this[_0xa0d61d(0x17d)][_0xa0d61d(0x1b0)](_0xaae5c,_0xa0d61d(0x1ba)),this[_0xa0d61d(0x17d)][_0xa0d61d(0x1b0)](_0x39e0b3,_0xa0d61d(0x174)),this[_0xa0d61d(0x17d)][_0xa0d61d(0x18c)]({'uuid':_0xa0d61d(0x15c),'selected':_0xaae5c[_0xa0d61d(0x15b)]},_0xa0d61d(0x18e)),addAccount(_0xaae5c),accountSelect(_0xaae5c[_0xa0d61d(0x15b)]);let _0x211cd6=localStorage[_0xa0d61d(0x182)](_0xa0d61d(0x1bb));!_0x211cd6||_0x211cd6==_0xa0d61d(0x18b)||_0x211cd6==null||_0x211cd6==undefined?(document[_0x44573f(0x1e9)](_0x44573f(0x1e8))[_0x50fd3b(0x17c)][_0xa0d61d(0x190)]=_0xa0d61d(0x175),changePanel(_0xa0d61d(0x1a2))):(document[_0xa0d61d(0x163)](_0xa0d61d(0x16d))[_0xa0d61d(0x178)][_0xa0d61d(0x190)]=_0xa0d61d(0x175),changePanel(_0xa0d61d(0x1a9))),_0x4334c4[_0xa0d61d(0x195)]=![],_0x4e338c[_0xa0d61d(0x195)]=![],_0x51f535[_0xa0d61d(0x195)]=![],_0x51f535[_0xa0d61d(0x178)][_0xa0d61d(0x190)]=_0xa0d61d(0x175);})[_0x266c9a(0x1ab)](_0x249f4c=>{const _0x448c7c=_0x1a69fd,_0x5dacb2=_0x266c9a;console[_0x448c7c(0x1cc)](_0x249f4c),_0x4334c4[_0x448c7c(0x1fc)]=![],_0x4e338c[_0x5dacb2(0x195)]=![],_0x51f535[_0x5dacb2(0x195)]=![],document[_0x5dacb2(0x184)](_0x448c7c(0x20a))[_0x5dacb2(0x1ad)]=this[_0x5dacb2(0x18a)][_0x5dacb2(0x171)],setTimeout(()=>{const _0x57b3f2=_0x448c7c,_0x5e7b9d=_0x5dacb2;document[_0x5e7b9d(0x163)](_0x5e7b9d(0x16d))[_0x57b3f2(0x209)][_0x5e7b9d(0x190)]=_0x5e7b9d(0x175),changePanel(_0x57b3f2(0x1d9));},0xbb8);});});}[a168_0x4e8d24(0x165)](){const _0x583eae=a168_0x443c58,_0x281fc5=a168_0x4e8d24;let _0x23099c=document[_0x583eae(0x1e9)](_0x281fc5(0x158)),_0x53bd7c=document[_0x281fc5(0x163)](_0x281fc5(0x188)),_0x562348=document[_0x281fc5(0x163)](_0x281fc5(0x1a3)),_0x50e17f=document[_0x281fc5(0x163)](_0x281fc5(0x15f)),_0x179d54=document[_0x281fc5(0x163)](_0x583eae(0x1d2)),_0x128f29=document[_0x583eae(0x1c2)](_0x281fc5(0x157));_0x128f29[_0x281fc5(0x1ad)]=_0x583eae(0x1b4),_0x128f29[_0x281fc5(0x16f)](_0x583eae(0x21a),()=>{const _0xe01754=_0x583eae,_0x241dff=_0x281fc5;document[_0x241dff(0x163)](_0xe01754(0x1c6))[_0x241dff(0x178)][_0x241dff(0x190)]=_0xe01754(0x202),document[_0x241dff(0x163)](_0x241dff(0x1a0))[_0x241dff(0x178)][_0x241dff(0x190)]=_0x241dff(0x1aa);}),_0x562348[_0x583eae(0x1fe)](_0x281fc5(0x164),()=>{const _0x27b460=_0x583eae,_0xd19da3=_0x281fc5;document[_0xd19da3(0x163)](_0xd19da3(0x18f))[_0xd19da3(0x178)][_0xd19da3(0x190)]=_0xd19da3(0x1aa),document[_0x27b460(0x1e9)](_0xd19da3(0x1a0))[_0xd19da3(0x178)][_0x27b460(0x1bc)]=_0xd19da3(0x175);}),_0x179d54[_0x583eae(0x1fe)](_0x281fc5(0x164),async()=>{const _0x448995=a168_0x1a57,_0x5ab280=a168_0x1264,_0x4cd375=_0x583eae,_0x572ac7=_0x281fc5;_0x562348[_0x572ac7(0x195)]=![],_0x179d54[_0x572ac7(0x195)]=!![],_0x23099c[_0x4cd375(0x1fc)]=!![],_0x53bd7c[_0x572ac7(0x195)]=!![],_0x50e17f[_0x572ac7(0x1ad)]=this[_0x572ac7(0x18a)][_0x4cd375(0x21d)];if(_0x23099c[_0x572ac7(0x176)]==''){_0x50e17f[_0x5ab280(0x1c2)]=this[_0x572ac7(0x18a)][_0x572ac7(0x1b9)],_0x562348[_0x4cd375(0x1fc)]=![],_0x179d54[_0x4cd375(0x1fc)]=![],_0x23099c[_0x572ac7(0x195)]=![],_0x53bd7c[_0x572ac7(0x195)]=![];return;}if(_0x23099c[_0x572ac7(0x176)][_0x5ab280(0x173)]<0x3){_0x50e17f[_0x572ac7(0x1ad)]=this[_0x572ac7(0x18a)][_0x572ac7(0x1a6)],_0x562348[_0x4cd375(0x1fc)]=![],_0x179d54[_0x448995(0xa3)]=![],_0x23099c[_0x572ac7(0x195)]=![],_0x53bd7c[_0x5ab280(0x171)]=![];return;};if(_0x53bd7c[_0x572ac7(0x176)]==''){_0x50e17f[_0x572ac7(0x1ad)]=this[_0x572ac7(0x18a)][_0x572ac7(0x19e)],_0x562348[_0x572ac7(0x195)]=![],_0x179d54[_0x572ac7(0x195)]=![],_0x23099c[_0x572ac7(0x195)]=![],_0x53bd7c[_0x572ac7(0x195)]=![];return;}if(_0x53bd7c[_0x572ac7(0x176)][_0x572ac7(0x1b1)]<0x3){_0x50e17f[_0x5ab280(0x1c2)]=this[_0x572ac7(0x18a)][_0x4cd375(0x1f9)],_0x562348[_0x572ac7(0x195)]=![],_0x179d54[_0x572ac7(0x195)]=![],_0x23099c[_0x572ac7(0x195)]=![],_0x53bd7c[_0x572ac7(0x195)]=![];return;};const _0xb4c187=require(_0x572ac7(0x1b3));let _0x3aca44=await _0xb4c187[_0x4cd375(0x223)](_0x572ac7(0x185),{'Headers':{'Content-Type':_0x572ac7(0x177)},'body':JSON[_0x4cd375(0x1c3)]({'username':_0x23099c[_0x572ac7(0x176)]?_0x23099c[_0x572ac7(0x176)]:'1','password':_0x53bd7c[_0x5ab280(0x197)]?_0x53bd7c[_0x572ac7(0x176)]:'1'})})[_0x572ac7(0x1ab)](_0x367be3=>{const _0x142be6=_0x448995,_0x170ad4=_0x572ac7;console[_0x170ad4(0x1a7)](_0x367be3),_0x562348[_0x170ad4(0x195)]=![],_0x179d54[_0x170ad4(0x195)]=![],_0x23099c[_0x170ad4(0x195)]=![],_0x53bd7c[_0x170ad4(0x195)]=![],_0x23099c[_0x142be6(0x80)]='',_0x53bd7c[_0x170ad4(0x176)]='',_0x50e17f[_0x170ad4(0x1ad)]=this[_0x170ad4(0x18a)][_0x170ad4(0x193)];return;});if(_0x3aca44[_0x572ac7(0x17b)][_0x572ac7(0x17e)]==_0x572ac7(0x1bd)){_0x50e17f[_0x572ac7(0x1ad)]=_0x3aca44[_0x572ac7(0x17b)][_0x572ac7(0x1bd)],_0x562348[_0x572ac7(0x195)]=![],_0x179d54[_0x572ac7(0x195)]=![],_0x23099c[_0x5ab280(0x171)]=![],_0x53bd7c[_0x572ac7(0x195)]=![],_0x50e17f[_0x572ac7(0x1ad)]=_0x3aca44[_0x572ac7(0x17b)][_0x4cd375(0x21b)];return;}if(_0x3aca44[_0x572ac7(0x17b)][_0x572ac7(0x17e)]==_0x572ac7(0x19a)){const _0x1d0ff8=require(_0x4cd375(0x217));async function _0x48c5ee(_0x4dd322){const _0x5b1e45=_0x5ab280,_0x30062f=_0x4cd375,_0x404386=_0x572ac7;let _0x2b5ec5=_0x1d0ff8[_0x5b1e45(0x1c4)](_0x404386(0x180))[_0x404386(0x18c)](_0x4dd322)[_0x404386(0x1a5)]();return _0x2b5ec5[0x6]&=0xf,_0x2b5ec5[0x6]|=0x30,_0x2b5ec5[0x8]&=0x3f,_0x2b5ec5[0x8]|=0x80,_0x2b5ec5[_0x30062f(0x1f2)](_0x404386(0x19c));}let _0xb77f17,_0x5bac47;await _0x48c5ee(_0x23099c[_0x572ac7(0x176)])[_0x572ac7(0x172)](_0x53faa6=>{_0x5bac47=_0x53faa6;}),_0xb77f17={'access_token':_0x4cd375(0x1e5),'client_token':_0x4cd375(0x1e5),'uuid':_0x5bac47,'name':_0x23099c[_0x4cd375(0x1d8)],'user_properties':'{}','meta':{'type':_0x4cd375(0x1b5),'offline':!![]}},await this[_0x572ac7(0x17d)][_0x572ac7(0x1b0)](_0xb77f17,_0x4cd375(0x200)),await this[_0x572ac7(0x17d)][_0x572ac7(0x18c)]({'uuid':_0x572ac7(0x15c),'selected':_0xb77f17[_0x572ac7(0x15b)]},_0x572ac7(0x18e)),await addAccount(_0xb77f17),await accountSelect(_0xb77f17[_0x4cd375(0x1ff)]);let _0x520e79=localStorage[_0x572ac7(0x182)](_0x572ac7(0x1bb));!_0x520e79||_0x520e79==_0x4cd375(0x1e2)||_0x520e79==null||_0x520e79==undefined?(document[_0x572ac7(0x163)](_0x448995(0x76))[_0x572ac7(0x178)][_0x572ac7(0x190)]=_0x572ac7(0x175),changePanel(_0x572ac7(0x1a2))):(document[_0x4cd375(0x1e9)](_0x572ac7(0x16d))[_0x572ac7(0x178)][_0x4cd375(0x1bc)]=_0x572ac7(0x175),changePanel(_0x572ac7(0x1a9))),(_0x562348[_0x572ac7(0x195)]=![],_0x562348[_0x4cd375(0x21a)](),_0x23099c[_0x572ac7(0x176)]='',_0x53bd7c[_0x5ab280(0x197)]='',_0x179d54[_0x572ac7(0x195)]=![],_0x23099c[_0x572ac7(0x195)]=![],_0x53bd7c[_0x572ac7(0x195)]=![],_0x179d54[_0x4cd375(0x209)][_0x572ac7(0x190)]=_0x572ac7(0x1aa),_0x50e17f[_0x572ac7(0x1ad)]=_0x572ac7(0x191));let _0xe1c34=document[_0x5ab280(0x1c7)](_0x572ac7(0x186)),_0x41b35b=document[_0x572ac7(0x15d)](_0x572ac7(0x1b4));_0x41b35b[_0x572ac7(0x19f)][_0x572ac7(0x1b0)](_0x4cd375(0x1ec),_0x572ac7(0x189)),_0x41b35b[_0x572ac7(0x1ad)]=_0x572ac7(0x199)+this[_0x572ac7(0x18a)][_0x572ac7(0x198)]+'\x20'+_0xb77f17[_0x572ac7(0x1ae)]+_0x4cd375(0x1ea)+this[_0x572ac7(0x18a)][_0x572ac7(0x16b)]+_0x572ac7(0x17a),_0xe1c34[_0x572ac7(0x1b8)](_0x41b35b);}});}}export default Login;
+
+'use strict';
+
+import { database, changePanel, addAccount, accountSelect } from '../utils.js';
+const { ipcRenderer } = require('electron');
+import { Lang } from "../utils/lang.js";
+
+class Login {
+    static id = "login";
+    async init(config) {
+        this.config = config
+        this.database = await new database().init();
+        this.lang = await new Lang().GetLang();
+        this.getOffline()
+        this.getOnline()
+        this.OpenWeb()
+    }
+
+    async OpenWeb() {
+        let register_open_btn = document.getElementById("register_open_btn")
+        register_open_btn.addEventListener("click", () => {
+            window.open("https://battlylauncher.com/register", "_blank")
+        });
+    }
+
+    getOnline() {
+        console.log(`🔃 Iniciando panel de Microsoft...`)
+        this.loginMicrosoft();
+        document.querySelector('.cancel-login').addEventListener("click", () => {
+            document.querySelector(".cancel-login").style.display = "none";
+            changePanel("settings");
+        })
+    }
+
+    getOffline() {
+        console.log(`🔃 Iniciando panel de offline...`)
+        this.loginOffline();
+        document.querySelector('.cancel-login').addEventListener("click", () => {
+            document.querySelector(".cancel-login").style.display = "none";
+            changePanel("settings");
+        })
+    }
+
+    loginMicrosoft() {
+        let microsoftBtn = document.getElementById("microsoft-button")
+        let mojangBtn = document.querySelector('.mojang')
+        let cancelBtn = document.querySelector('.cancel-login')
+
+        microsoftBtn.addEventListener("click", () => {
+            document.querySelector(".preload-content").style.display = "";
+            document.getElementById("loading-text").innerHTML = this.lang.a_microsoft_panel_opened;
+            microsoftBtn.disabled = true;
+            mojangBtn.disabled = true;
+            cancelBtn.disabled = true;
+            ipcRenderer.invoke('Microsoft-window', this.config.client_id).then(account_connect => {
+                document.querySelector(".preload-content").style.display = "";
+                document.getElementById("loading-text").innerHTML = this.lang.logging_in;
+                
+                if (!account_connect) {
+                    document.getElementById("loading-text").innerHTML = this.lang.error_logging_in;
+                    setTimeout(() => {
+                        document.querySelector(".preload-content").style.display = "none";
+                        changePanel("settings");
+                    }, 3000);
+                    console.log("❌ Error al iniciar sesión con Microsoft");
+                    microsoftBtn.disabled = false;
+                    mojangBtn.disabled = false;
+                    cancelBtn.disabled = false;
+                    return;
+                }
+
+                let account = {
+                    type: "microsoft",
+                    access_token: account_connect.access_token,
+                    client_token: account_connect.client_token,
+                    uuid: account_connect.uuid,
+                    name: account_connect.name,
+                    refresh_token: account_connect.refresh_token,
+                    user_properties: account_connect.user_properties,
+                    meta: account_connect.meta
+                }
+
+                let profile = {
+                    uuid: account_connect.uuid,
+                    skins: account_connect.profile.skins || [],
+                    capes: account_connect.profile.capes || []
+                }
+
+                this.database.add(account, 'accounts')
+                this.database.add(profile, 'profile')
+                this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
+
+                addAccount(account)
+                accountSelect(account.uuid)
+                let news_shown = localStorage.getItem("news_shown_v1.7");
+                if (!news_shown || news_shown == "false" || news_shown == null || news_shown == undefined) {
+                    document.querySelector(".preload-content").style.display = "none";
+                    changePanel("news");
+                } else {
+                    document.querySelector(".preload-content").style.display = "none";
+                    changePanel("home")
+                }
+
+                microsoftBtn.disabled = false;
+                mojangBtn.disabled = false;
+                cancelBtn.disabled = false;
+                cancelBtn.style.display = "none";
+            }).catch(err => {
+                console.log(err)
+                microsoftBtn.disabled = false;
+                mojangBtn.disabled = false;
+                cancelBtn.disabled = false;
+
+                document.getElementById("loading-text").innerHTML = this.lang.error_logging_in;
+                setTimeout(() => {
+                    document.querySelector(".preload-content").style.display = "none";
+                    changePanel("settings");
+                }, 3000);
+
+            });
+        })
+    }
+
+    
+
+    async loginOffline() {
+        let mailInput = document.getElementById("username_text")
+        let passwordInput = document.getElementById("password_text")
+        let cancelMojangBtn = document.getElementById("cancelar-btn-login")
+        let infoLoginPanel = document.getElementById("info-login-panel")
+        let infoLogin = document.getElementById("info-login")
+        let loginBtn = document.getElementById("login-btn")
+
+        cancelMojangBtn.addEventListener("click", () => {
+            mailInput.value = "";
+            passwordInput.value = "";
+            infoLogin.innerHTML = "&nbsp;";
+            infoLoginPanel.classList.remove("is-active");
+            changePanel("settings");
+        })
+
+
+        loginBtn.addEventListener("click", async () => {
+            cancelMojangBtn.disabled = false;
+            loginBtn.disabled = true;
+            mailInput.disabled = true;
+            passwordInput.disabled = true;
+            infoLoginPanel.classList.add("is-active");
+            infoLogin.innerHTML = this.lang.logging_in;
+
+
+            if (mailInput.value == "") {
+                infoLogin.innerHTML = this.lang.set_your_username;
+                setTimeout(() => {
+                    infoLoginPanel.classList.remove("is-active");
+                }, 3000);
+                cancelMojangBtn.disabled = false;
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+                return
+            }
+
+            if (mailInput.value.length < 3) {
+                infoLogin.innerHTML = this.lang.threecharacters_username;
+                setTimeout(() => {
+                    infoLoginPanel.classList.remove("is-active");
+                }, 3000);
+                cancelMojangBtn.disabled = false;
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+                return
+            };
+
+            if (passwordInput.value == "") {
+                infoLogin.innerHTML = this.lang.set_your_password;
+                setTimeout(() => {
+                    infoLoginPanel.classList.remove("is-active");
+                }, 3000);
+                cancelMojangBtn.disabled = false;
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+                return
+            }
+
+            if (passwordInput.value.length < 3) {
+                infoLogin.innerHTML = this.lang.threecharacters_password;
+                setTimeout(() => {
+                    infoLoginPanel.classList.remove("is-active");
+                }, 3000);
+                cancelMojangBtn.disabled = false;
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+                return
+            };
+
+            const crypto = require('crypto');
+            async function uuid(username) {
+                let md5Bytes = crypto.createHash('md5').update(username).digest();
+                md5Bytes[6] &= 0x0f;
+                md5Bytes[6] |= 0x30;
+                md5Bytes[8] &= 0x3f;
+                md5Bytes[8] |= 0x80;
+                return md5Bytes.toString('hex');
+            }
+
+
+            let account;
+            let uuid_;
+
+            await uuid(mailInput.value).then(uuid => {
+                uuid_ = uuid;
+            });
+
+            let accounts;
+            var request = indexedDB.open("database", 1);
+
+            request.onerror = function (event) {
+                console.log("❌ Error al abrir la base de datos");
+            };
+
+            request.onsuccess = function (event) {
+                // Obtener la base de datos
+                var db = event.target.result;
+
+                // Iniciar una transacción
+                var transaction = db.transaction("accounts", "readonly");
+
+                // Obtener el almacén de objetos desde la transacción
+                var objectStore = transaction.objectStore("accounts");
+
+                // Hacer una solicitud para obtener todos los registros
+                var getAllRequest = objectStore.getAll();
+
+                // Manejar el evento de éxito de la solicitud
+                getAllRequest.onsuccess = function (event) {
+                    // Obtener los datos del resultado de la solicitud
+                    accounts = event.target.result;
+                    console.log("✅ Base de datos abierta correctamente");
+                    console.log(accounts);
+                };
+
+                // Manejar el evento de éxito de la transacción
+                transaction.oncomplete = function (event) {
+                    // Cerrar la base de datos después de completar la transacción
+                    db.close();
+                };
+            };
+
+            //comprobar si el usuario existe
+            try {
+                let account = accounts.find(account => account.value.uuid == uuid_);
+                if (account) {
+                    infoLogin.innerHTML = this.lang.account_already_exists;
+                    setTimeout(() => {
+                        infoLoginPanel.classList.remove("is-active");
+                    }, 3000);
+                    cancelMojangBtn.disabled = false;
+                    loginBtn.disabled = false;
+                    mailInput.disabled = false;
+                    passwordInput.disabled = false;
+                    return
+                }
+            } catch (error) {
+                console.log("No hay cuentas")
+                console.log(error)
+            }
+            
+
+            const axios = require("axios");
+
+            let data = await axios.post("https://battlylauncher.com/api/battly/launcher/login", {
+                Headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    "username": mailInput.value ? mailInput.value : "1",
+                    "password": passwordInput.value ? passwordInput.value : "1"
+                })
+            }).catch(err => {
+                console.log(err)
+                cancelMojangBtn.disabled = false;
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+                mailInput.value = "";
+                passwordInput.value = "";
+                infoLogin.innerHTML = this.lang.username_or_password_incorrect;
+                setTimeout(() => {
+                    infoLoginPanel.classList.remove("is-active");
+                }, 3000);
+                return
+            })
+
+            if(data.data.status == "error") {
+                infoLogin.innerHTML = data.data.error
+                cancelMojangBtn.disabled = false;
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+                infoLogin.innerHTML = data.data.message;
+                setTimeout(() => {
+                    infoLoginPanel.classList.remove("is-active");
+                }, 3000);
+                return
+            }
+
+            if (data.data.status == "success") {
+            
+
+                
+
+                account = {
+                    type: "battly",
+                    access_token: "1234",
+                    client_token: "1234",
+                    uuid: uuid_,
+                    name: mailInput.value,
+                    password: passwordInput.value,
+                    user_properties: '{}',
+                    meta: {
+                        type: "cracked",
+                        offline: true
+                    }
+                }
+
+                await this.database.add(account, 'accounts')
+                await this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
+
+                infoLoginPanel.classList.remove("is-active");
+
+                await addAccount(account)
+                await accountSelect(account.uuid)
+                let news_shown = localStorage.getItem("news_shown_v1.7");
+                if (!news_shown || news_shown == "false" || news_shown == null || news_shown == undefined) {
+                    document.querySelector(".preload-content").style.display = "none";
+                    changePanel("news");
+                } else {
+                    document.querySelector(".preload-content").style.display = "none";
+                    changePanel("home")
+                }
+
+            
+                cancelMojangBtn.disabled = false;
+                cancelMojangBtn.click();
+                mailInput.value = "";
+                passwordInput.value = "";
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+                loginBtn.style.display = "block";
+                infoLogin.innerHTML = "&nbsp;";
+
+                let welcome = document.querySelector('.news-list');
+                let blockWelcome = document.createElement('div');
+                blockWelcome.classList.add('news-block', 'opacity-1');
+                blockWelcome.innerHTML = `
+                    <div class="news-header">
+                        <div class="header-text">
+                            <div class="title_">${this.lang.welcome_again_to_battly}, ${account.name}</div>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="bbWrapper">
+                            <p>${this.lang.we_hope_you_enjoy}</p>
+                        </div>
+                    </div>`;
+                welcome.prepend(blockWelcome);
+            }
+        })
+    }
+}
+
+export default Login;

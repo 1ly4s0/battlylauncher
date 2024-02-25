@@ -1,1 +1,660 @@
-'use strict';function a3_0x3751(){const _0x59f689=['1083102JRNBQE','reject','echo_cancellation','output','evt','UPDATE_LOBBY_MEMBER','bind','instance','end','threshold','UNSUBSCRIBE','44SzntBp','20273187tJxLVZ','silenceWarning','428XZxkQv','automaticGainControl','1233DmgfVz','STOP','endTimestamp','GET_RELATIONSHIPS','5359465gfrXfR','CAPTURE_SHORTCUT_CHANGE','5kqRfkj','3tBYanP','2850PCCquI','setUserVoiceSettings','46300hTupRO','SET_VOICE_SETTINGS','selectTextChannel','noiseSuppression','141181oqWUIU','qos','SEND_ACTIVITY_JOIN_INVITE','285224ZDCxTo','exports','setVoiceSettings','SELECT_VOICE_CHANNEL','DISCONNECT_FROM_LOBBY','connected','type','map','2YdlgsL','delete','message','application','_onRpcMessage','SEND_TO_LOBBY','accessToken','endpoint','28cAVNMs','send','uuid','partyId','start','set','SELECT_TEXT_CHANNEL','getChannel','silence_warning','updateLobbyMember','details','shift','mute','timestamps.start\x20must\x20fit\x20into\x20a\x20unix\x20timestamp','DISPATCH','CREATE_LOBBY','authorization_code','483880ZNwXkH','catch','cmd','262262QlCpaB','request','Bearer\x20','unref','volume','timers','DELETE_LOBBY','7171290bDjqlb','round','data','destroy','getRelationships','vendor','authenticate','push','GET_GUILDS','START','nonce','UPDATE_LOBBY','4237638cEhygE','1525482lrUHfd','code','GET_CHANNEL','then','autoThreshold','3531aylGnq','CLOSE_ACTIVITY_JOIN_REQUEST','184taTpLA','GET_CHANNELS','relationships','spectateSecret','login','READY','body','size','4427154QZQTve','4460024IGHEDF','clearActivity','auto_threshold','mode','sendJoinRequest','SET_ACTIVITY','once','SET_USER_VOICE_SETTINGS','device_id','updateLobby','9cWGfNp','rpc_token','user','closeJoinRequest','device','90bWRHUj','disconnectFromLobby','captureShortcut','https://discord.com/api','1424835InvYfh','11dHtkVP','60641SIOhxQ','emit','795492iqVdMo','3750477lGEhnY','pan','_expecting','CONNECT_TO_LOBBY','ERROR','hardwareMute','model','status','access_token','58420KlEzFx','955881uROtyu','available_devices','connection\x20closed','fetch','related','connectToLobby','15pXZUYe','6axkxiW','matchSecret','_connectPromise','getChannels','_subscriptions','joinSecret','timestamps.end\x20must\x20fit\x20into\x20a\x20unix\x20timestamp','2RkPXYp','shortcut','deaf','getGuilds','AUTHORIZE','startTimestamp','partySize','943280LJjnAM','146323LQDsXA','2232796ktuWxh','./transports','has','stringify','AUTHENTICATE','authorize','sendJoinInvite','node-fetch','RPC_INVALID_TRANSPORT','buttons','close','/oauth2/token/rpc','selectVoiceChannel','1976762syVrBr','getTime','forEach','largeImageKey','POST','subscribe'];a3_0x3751=function(){return _0x59f689;};return a3_0x3751();}(function(_0x3f5982,_0x462695){const _0x37c95f=a3_0x20e0,_0x182f06=_0x3f5982();while(!![]){try{const _0x3918b9=-parseInt(_0x37c95f(0x185))/0x1*(-parseInt(_0x37c95f(0x1c2))/0x2)+-parseInt(_0x37c95f(0x1b0))/0x3*(-parseInt(_0x37c95f(0x186))/0x4)+parseInt(_0x37c95f(0x175))/0x5*(parseInt(_0x37c95f(0x199))/0x6)+-parseInt(_0x37c95f(0x13d))/0x7+-parseInt(_0x37c95f(0x14d))/0x8+-parseInt(_0x37c95f(0x164))/0x9+-parseInt(_0x37c95f(0x184))/0xa;if(_0x3918b9===_0x462695)break;else _0x182f06['push'](_0x182f06['shift']());}catch(_0x596c97){_0x182f06['push'](_0x182f06['shift']());}}}(a3_0x3751,0x464b8));const a3_0x170e25=a3_0x4cc4;(function(_0x20b396,_0x201f84){const _0x283015=a3_0x20e0,_0x4c77a4=a3_0x4cc4,_0x2ce41d=_0x20b396();while(!![]){try{const _0x391223=-parseInt(_0x4c77a4(0x17c))/0x1*(-parseInt(_0x4c77a4(0x14b))/0x2)+parseInt(_0x4c77a4(0x137))/0x3+-parseInt(_0x4c77a4(0x119))/0x4*(parseInt(_0x4c77a4(0x101))/0x5)+-parseInt(_0x4c77a4(0x11e))/0x6+parseInt(_0x4c77a4(0x14a))/0x7+parseInt(_0x4c77a4(0x13d))/0x8*(parseInt(_0x4c77a4(0x121))/0x9)+parseInt(_0x4c77a4(0x153))/0xa*(-parseInt(_0x4c77a4(0x17e))/0xb);if(_0x391223===_0x201f84)break;else _0x2ce41d[_0x283015(0x137)](_0x2ce41d[_0x283015(0x120)]());}catch(_0x1a0e9a){_0x2ce41d['push'](_0x2ce41d[_0x283015(0x120)]());}}}(a3_0x4bbd,0xe477c));const a3_0x4c3784=a3_0x476c;function a3_0x20e0(_0x105169,_0x267c74){const _0x375179=a3_0x3751();return a3_0x20e0=function(_0x20e000,_0x32ff2c){_0x20e000=_0x20e000-0x10f;let _0x4baf22=_0x375179[_0x20e000];return _0x4baf22;},a3_0x20e0(_0x105169,_0x267c74);}(function(_0x2b6fe5,_0x19767a){const _0xc7c456=a3_0x20e0,_0x56deab=a3_0x4cc4,_0x484a22=a3_0x476c,_0x3039db=_0x2b6fe5();while(!![]){try{const _0x36999e=parseInt(_0x484a22(0x119))/0x1*(parseInt(_0x484a22(0xe9))/0x2)+parseInt(_0x484a22(0x133))/0x3+-parseInt(_0x484a22(0xee))/0x4*(-parseInt(_0x484a22(0x11b))/0x5)+parseInt(_0x484a22(0x101))/0x6+-parseInt(_0x484a22(0x12a))/0x7*(-parseInt(_0x484a22(0x121))/0x8)+-parseInt(_0x484a22(0xe2))/0x9+parseInt(_0x484a22(0x145))/0xa*(-parseInt(_0x484a22(0x14a))/0xb);if(_0x36999e===_0x19767a)break;else _0x3039db[_0x56deab(0x186)](_0x3039db[_0x56deab(0x14f)]());}catch(_0x6e9b28){_0x3039db[_0xc7c456(0x137)](_0x3039db[_0x56deab(0x14f)]());}}}(a3_0x7e3b,0x81517));function a3_0x4bbd(){const _0x30273a=a3_0x20e0,_0x523000=['createLobby',_0x30273a(0x191),_0x30273a(0x152),_0x30273a(0x1b7),_0x30273a(0x147),_0x30273a(0x187),_0x30273a(0x113),'/oauth2/token',_0x30273a(0x18b),_0x30273a(0x131),_0x30273a(0x141),_0x30273a(0x11e),_0x30273a(0x1a2),_0x30273a(0x197),_0x30273a(0x1bb),'./constants',_0x30273a(0x182),'clientId','sendToLobby','SEND_ACTIVITY_JOIN_REQUEST',_0x30273a(0x168),_0x30273a(0x165),_0x30273a(0x133),_0x30273a(0x180),_0x30273a(0x144),_0x30273a(0x119),_0x30273a(0x1c1),'704936ccitdw',_0x30273a(0x115),_0x30273a(0x11c),_0x30273a(0x18d),_0x30273a(0x15e),'emit',_0x30273a(0x11b),_0x30273a(0x1b8),_0x30273a(0x1a9),_0x30273a(0x1ab),_0x30273a(0x18e),_0x30273a(0x13b),_0x30273a(0x193),_0x30273a(0x130),'24194AxSrwn',_0x30273a(0x132),_0x30273a(0x183),_0x30273a(0x15a),_0x30273a(0x120),_0x30273a(0x111),_0x30273a(0x158),_0x30273a(0x134),'5580590KJnvtt',_0x30273a(0x15f),_0x30273a(0x16f),_0x30273a(0x174),'input',_0x30273a(0x127),_0x30273a(0x10f),_0x30273a(0x181),'SUBSCRIBE',_0x30273a(0x1be),'GET_VOICE_SETTINGS',_0x30273a(0x188),_0x30273a(0x1a5),_0x30273a(0x155),_0x30273a(0x190),_0x30273a(0x149),_0x30273a(0x14a),_0x30273a(0x1bd),_0x30273a(0x14f),_0x30273a(0x12b),_0x30273a(0x12e),_0x30273a(0x17e),_0x30273a(0x116),_0x30273a(0x142),_0x30273a(0x19b),'get','getVoiceSettings','./util','request','SET_CERTIFIED_DEVICES',_0x30273a(0x138),_0x30273a(0x178),_0x30273a(0x16c),_0x30273a(0x14c),_0x30273a(0x140),_0x30273a(0x12d),_0x30273a(0x12c),_0x30273a(0x13e),_0x30273a(0x117),_0x30273a(0x196),_0x30273a(0x11f),_0x30273a(0x157),_0x30273a(0x16e),_0x30273a(0x161),_0x30273a(0x17d),_0x30273a(0x1c0),_0x30273a(0x1b3),'CAPTURE_SHORTCUT',_0x30273a(0x154),_0x30273a(0x1a8),_0x30273a(0x19e),_0x30273a(0x137),_0x30273a(0x124),_0x30273a(0x11a),'options',_0x30273a(0x195),_0x30273a(0x19f),_0x30273a(0x110),_0x30273a(0x192),'scopes',_0x30273a(0x1bc),_0x30273a(0x12f),_0x30273a(0x198),_0x30273a(0x19c),_0x30273a(0x1b5),_0x30273a(0x17c),_0x30273a(0x194),_0x30273a(0x121),_0x30273a(0x1ac),'delay','smallImageKey','fetch','setCertifiedDevices',_0x30273a(0x1b6),_0x30273a(0x160),_0x30273a(0x126),_0x30273a(0x143),_0x30273a(0x1a1),'GET_GUILD',_0x30273a(0x13f),'keys',_0x30273a(0x150),_0x30273a(0x14b),_0x30273a(0x1a3),_0x30273a(0x136),_0x30273a(0x112),_0x30273a(0x151),_0x30273a(0x114),_0x30273a(0x18a),_0x30273a(0x1a0),'3335812NMKHwW',_0x30273a(0x177),_0x30273a(0x176),'automatic_gain_control',_0x30273a(0x171),_0x30273a(0x118),'RPC_CONNECTION_TIMEOUT',_0x30273a(0x18f),'ready',_0x30273a(0x1a4),_0x30273a(0x16b),'setActivity',_0x30273a(0x179),_0x30273a(0x125),_0x30273a(0x13c),_0x30273a(0x16d),'getGuild',_0x30273a(0x15c)];return a3_0x4bbd=function(){return _0x523000;},a3_0x4bbd();}const a3_0xfb214a=a3_0x374e;function a3_0x4cc4(_0x16fa25,_0x5059bc){const _0x574a62=a3_0x4bbd();return a3_0x4cc4=function(_0x185d6,_0x4a6e95){_0x185d6=_0x185d6-0xf5;let _0x4a9a58=_0x574a62[_0x185d6];return _0x4a9a58;},a3_0x4cc4(_0x16fa25,_0x5059bc);}function a3_0x7e3b(){const _0x255fea=a3_0x20e0,_0x17b4cb=a3_0x4cc4,_0x2713a1=[_0x17b4cb(0x131),_0x17b4cb(0x103),_0x17b4cb(0x16b),_0x255fea(0x14e),_0x255fea(0x182),_0x17b4cb(0x123),_0x17b4cb(0x117),'largeImageText',_0x255fea(0x13a),_0x17b4cb(0x181),_0x17b4cb(0x163),'code',_0x17b4cb(0x173),_0x17b4cb(0x13a),_0x17b4cb(0x16a),_0x17b4cb(0x13b),_0x17b4cb(0x17d),_0x17b4cb(0x10b),_0x17b4cb(0xff),_0x17b4cb(0x120),_0x17b4cb(0xfc),_0x17b4cb(0x145),_0x17b4cb(0x162),_0x17b4cb(0x112),_0x17b4cb(0x13c),_0x17b4cb(0x129),_0x255fea(0x128),_0x17b4cb(0xf6),_0x255fea(0x1b4),_0x17b4cb(0x14e),'disconnected',_0x17b4cb(0x189),_0x17b4cb(0xfe),'deleteLobby','state',_0x17b4cb(0x124),_0x17b4cb(0x16d),_0x17b4cb(0x10e),_0x255fea(0x17f),_0x17b4cb(0x171),_0x17b4cb(0x164),_0x17b4cb(0x141),_0x17b4cb(0x179),_0x17b4cb(0x159),_0x17b4cb(0x15f),_0x17b4cb(0x177),_0x17b4cb(0x14c),_0x17b4cb(0x127),'smallImageText',_0x17b4cb(0xfb),_0x17b4cb(0x187),_0x17b4cb(0x183),'echoCancellation',_0x17b4cb(0x10a),'transport',_0x17b4cb(0x184),_0x17b4cb(0x154),_0x17b4cb(0x148),_0x255fea(0x19c),_0x17b4cb(0xfa),_0x17b4cb(0x15d),_0x255fea(0x1bf),_0x17b4cb(0x144),_0x255fea(0x11d),_0x17b4cb(0x11b),_0x17b4cb(0x118),_0x255fea(0x170),_0x17b4cb(0x160),_0x17b4cb(0x15b),_0x17b4cb(0x11d),_0x17b4cb(0x18a),'noise_suppression',_0x255fea(0x15b),_0x17b4cb(0x12d),_0x17b4cb(0x100),_0x17b4cb(0x115),_0x17b4cb(0x13f),_0x17b4cb(0x180),_0x17b4cb(0xf8),_0x255fea(0x162),_0x255fea(0x148),_0x17b4cb(0x17f),_0x17b4cb(0x146),_0x17b4cb(0x18e),_0x17b4cb(0x157),_0x17b4cb(0x17a),_0x17b4cb(0x110),_0x255fea(0x167),_0x17b4cb(0x15c),_0x17b4cb(0x113),_0x255fea(0x1a6),_0x17b4cb(0x190),_0x17b4cb(0x111),_0x17b4cb(0x18f),_0x17b4cb(0x14d),_0x255fea(0x17a),_0x17b4cb(0x16e),_0x255fea(0x1aa),_0x17b4cb(0x11c),_0x17b4cb(0x134),_0x17b4cb(0x18d),_0x17b4cb(0x166),_0x17b4cb(0x14f),_0x17b4cb(0xf9),_0x17b4cb(0x139),_0x17b4cb(0x174),_0x17b4cb(0x138),_0x17b4cb(0xf7),_0x255fea(0x123),_0x255fea(0x15d),_0x17b4cb(0x186),_0x255fea(0x166),_0x17b4cb(0x116),'partyMax',_0x17b4cb(0x12e),_0x17b4cb(0x18b),_0x255fea(0x135),_0x255fea(0x1c3),_0x17b4cb(0x17b),_0x255fea(0x145),'json',_0x17b4cb(0x102),_0x17b4cb(0x104),_0x17b4cb(0x10d),_0x17b4cb(0x15e),_0x17b4cb(0x165),_0x255fea(0x1ad),_0x255fea(0x1b9),_0x255fea(0x173),_0x17b4cb(0x125),_0x17b4cb(0x188),_0x255fea(0x1af),_0x17b4cb(0x191),_0x17b4cb(0x106),_0x255fea(0x146),_0x17b4cb(0x168),_0x255fea(0x172),_0x255fea(0x1ba),_0x255fea(0x159),_0x17b4cb(0x107),_0x17b4cb(0x15a),_0x17b4cb(0x182),_0x17b4cb(0x133),_0x17b4cb(0x151),_0x17b4cb(0x109),_0x17b4cb(0x12c),_0x17b4cb(0x13e),_0x17b4cb(0x140),_0x255fea(0x163),_0x17b4cb(0x128),_0x255fea(0x153),_0x255fea(0x12a),_0x17b4cb(0x185),_0x17b4cb(0x158),_0x255fea(0x156),_0x17b4cb(0x155),_0x17b4cb(0x16c),_0x17b4cb(0x12b),_0x17b4cb(0x108),_0x255fea(0x17b),_0x255fea(0x18c),_0x17b4cb(0x150),_0x17b4cb(0x11a),_0x17b4cb(0x10c)];return a3_0x7e3b=function(){return _0x2713a1;},a3_0x7e3b();}function a3_0x374e(_0x2d3c11,_0x2128df){const _0x31f70f=a3_0x3e0c();return a3_0x374e=function(_0x2ffda6,_0x590a25){_0x2ffda6=_0x2ffda6-0x157;let _0x23a6c5=_0x31f70f[_0x2ffda6];return _0x23a6c5;},a3_0x374e(_0x2d3c11,_0x2128df);}(function(_0xb5d3d6,_0x4b6f60){const _0x2de86d=a3_0x476c,_0x147849=a3_0x374e,_0x45ece0=_0xb5d3d6();while(!![]){try{const _0x49191c=parseInt(_0x147849(0x1ea))/0x1+-parseInt(_0x147849(0x1e5))/0x2+-parseInt(_0x147849(0x185))/0x3*(parseInt(_0x147849(0x172))/0x4)+parseInt(_0x147849(0x1c2))/0x5*(-parseInt(_0x147849(0x15c))/0x6)+-parseInt(_0x147849(0x15e))/0x7*(parseInt(_0x147849(0x18a))/0x8)+-parseInt(_0x147849(0x1d6))/0x9*(-parseInt(_0x147849(0x1cb))/0xa)+parseInt(_0x147849(0x1e6))/0xb;if(_0x49191c===_0x4b6f60)break;else _0x45ece0[_0x2de86d(0x106)](_0x45ece0[_0x2de86d(0xfe)]());}catch(_0x5a5d86){_0x45ece0[_0x2de86d(0x106)](_0x45ece0[_0x2de86d(0xfe)]());}}}(a3_0x3e0c,0x84ecc));const EventEmitter=require(a3_0xfb214a(0x1d5)),{setTimeout,clearTimeout}=require(a3_0xfb214a(0x1e8)),fetch=require(a3_0xfb214a(0x174)),transports=require(a3_0x4c3784(0xc7)),{RPCCommands,RPCEvents,RelationshipTypes}=require(a3_0x4c3784(0x13c)),{pid:getPid,uuid}=require(a3_0xfb214a(0x1a0));function a3_0x476c(_0x2614d4,_0xab9d22){const _0x59b42f=a3_0x7e3b();return a3_0x476c=function(_0x1b5818,_0x49e9e3){_0x1b5818=_0x1b5818-0xac;let _0x579e98=_0x59b42f[_0x1b5818];return _0x579e98;},a3_0x476c(_0x2614d4,_0xab9d22);}function a3_0x3e0c(){const _0xb04bf1=a3_0x20e0,_0x61709a=a3_0x4cc4,_0x38acb4=a3_0x4c3784,_0x332f07=[_0x38acb4(0xe4),_0x38acb4(0x14b),_0x38acb4(0xae),_0x38acb4(0xda),_0x38acb4(0x10e),_0x38acb4(0xf8),'request',_0x38acb4(0xc2),_0x38acb4(0x131),_0x38acb4(0x109),_0x38acb4(0xbe),'connect',_0x61709a(0x172),_0x38acb4(0xd3),_0x61709a(0x135),_0x61709a(0x136),_0x61709a(0x143),_0x38acb4(0xe0),_0x38acb4(0x139),_0x61709a(0x12a),_0x38acb4(0xdf),_0x38acb4(0x100),_0x38acb4(0x111),_0x38acb4(0xec),_0x38acb4(0x128),_0x38acb4(0x117),_0x38acb4(0xcf),_0x38acb4(0x125),_0x38acb4(0xce),_0x61709a(0x18c),_0x38acb4(0x130),_0x38acb4(0xd0),_0x38acb4(0x13f),_0x38acb4(0xba),_0x61709a(0x152),_0x38acb4(0xe8),_0x38acb4(0xfd),_0x38acb4(0x10c),_0x38acb4(0xdd),_0x38acb4(0x116),_0xb04bf1(0x1b2),_0x38acb4(0x10d),_0x38acb4(0xac),_0x38acb4(0x108),_0x38acb4(0xc3),_0x38acb4(0xf3),_0x38acb4(0xbc),_0x38acb4(0x148),_0x38acb4(0x14c),_0x38acb4(0x124),_0x38acb4(0x136),_0x38acb4(0x105),_0x38acb4(0x110),_0x38acb4(0xc8),'largeImageText',_0x38acb4(0x140),_0x38acb4(0xb7),_0x61709a(0x107),'events',_0x38acb4(0xad),_0x38acb4(0xb0),_0x38acb4(0xcc),_0x38acb4(0x11f),_0x38acb4(0xfc),_0x38acb4(0x127),_0x61709a(0x111),_0xb04bf1(0x16a),_0x38acb4(0x12c),_0x38acb4(0xb4),_0x61709a(0x130),_0x38acb4(0x14e),_0x38acb4(0x142),_0x38acb4(0x12d),_0x61709a(0x105),_0x61709a(0x149),_0x38acb4(0xc4),_0x38acb4(0xd7),_0x61709a(0x167),_0x38acb4(0x11c),_0xb04bf1(0x129),_0x38acb4(0xd8),_0x61709a(0x175),_0x38acb4(0x137),_0x38acb4(0x12e),_0x61709a(0xfd),_0x38acb4(0x118),_0x38acb4(0xbd),_0x38acb4(0x134),_0x38acb4(0xcd),_0x38acb4(0xb9),_0x38acb4(0x11d),_0x38acb4(0x138),_0x38acb4(0xb2),_0x38acb4(0xfb),_0x38acb4(0xd1),_0x38acb4(0xaf),_0x61709a(0x10f),_0x38acb4(0xe7),_0x38acb4(0x13e),_0x38acb4(0xc0),_0xb04bf1(0x19d),_0x38acb4(0x14f),_0x38acb4(0xe6),_0x38acb4(0xff),_0x38acb4(0xb1),_0x61709a(0x147),_0xb04bf1(0x19a),_0x61709a(0xf5),_0x38acb4(0xf6),_0x38acb4(0x135),_0xb04bf1(0x1ae),_0x38acb4(0x114),_0x38acb4(0xc9),_0x38acb4(0x10a),_0x61709a(0x176),_0xb04bf1(0x1c0),_0x38acb4(0xde),_0xb04bf1(0x1a7),_0x38acb4(0x122),_0x38acb4(0x12b),_0x38acb4(0xf1),_0xb04bf1(0x169),_0x38acb4(0xef),_0x38acb4(0xe3),_0x38acb4(0x11e),_0x38acb4(0xc1),_0x38acb4(0xb8),_0x38acb4(0x115),'close',_0x38acb4(0xbf),_0x38acb4(0xbb),_0x38acb4(0x107),_0x38acb4(0x144),_0x38acb4(0xd9),_0xb04bf1(0x189),_0x38acb4(0xfa),_0xb04bf1(0x1b1),_0x38acb4(0xf7),_0x61709a(0x170),_0x61709a(0x103),_0x38acb4(0xd5),_0x38acb4(0x149),_0x38acb4(0x103),_0x38acb4(0x10b),_0x38acb4(0xf9),_0x38acb4(0xc6),_0x38acb4(0xdb),_0x61709a(0x114),_0x38acb4(0x126),_0x38acb4(0xcb),_0x38acb4(0xeb),_0x38acb4(0xd6),_0x38acb4(0xf2),_0x61709a(0x126),_0x38acb4(0xf5),_0x38acb4(0xc5),_0x38acb4(0xca),_0x38acb4(0x129)];return a3_0x3e0c=function(){return _0x332f07;},a3_0x3e0c();}function subKey(_0x360329,_0xefef01){const _0x52acdb=a3_0xfb214a;return''+_0x360329+JSON[_0x52acdb(0x183)](_0xefef01);}class RPCClient extends EventEmitter{constructor(_0x17e6e8={}){const _0x2154ef=a3_0x4cc4,_0x2b8d30=a3_0x4c3784,_0xe4f467=a3_0xfb214a;super(),this[_0xe4f467(0x1d3)]=_0x17e6e8,this[_0x2b8d30(0x12d)]=null,this[_0xe4f467(0x191)]=null,this[_0x2154ef(0x18c)]=null,this[_0xe4f467(0x173)]=null;const _0x42353e=transports[_0x17e6e8[_0xe4f467(0x1b7)]];if(!_0x42353e)throw new TypeError(_0xe4f467(0x166),_0x17e6e8[_0xe4f467(0x1b7)]);this[_0xe4f467(0x1ef)]=(_0x12f9a3,_0x27c6a1,{data:_0x735dfa,query:_0x9888b3}={})=>fetch(''+this[_0x2b8d30(0x120)][_0x2b8d30(0x113)]+_0x27c6a1+(_0x9888b3?new URLSearchParams(_0x9888b3):''),{'method':_0x12f9a3,'body':_0x735dfa,'headers':{'Authorization':_0xe4f467(0x1bf)+this[_0xe4f467(0x1e3)]}})[_0xe4f467(0x1ec)](async _0x3e4643=>{const _0x27beb7=_0x2b8d30,_0x32b10c=_0xe4f467,_0xa2dc5d=await _0x3e4643[_0x32b10c(0x1cf)]();if(!_0x3e4643['ok']){const _0x110b6a=new Error(_0x3e4643[_0x32b10c(0x1ca)]);_0x110b6a[_0x27beb7(0x146)]=_0xa2dc5d;throw _0x110b6a;}return _0xa2dc5d;}),this[_0xe4f467(0x1ef)][_0x2154ef(0x10d)]=_0xe4f467(0x1ba),this[_0xe4f467(0x1b7)]=new _0x42353e(this),this[_0xe4f467(0x1b7)]['on'](_0xe4f467(0x1c7),this[_0xe4f467(0x1ad)][_0xe4f467(0x18c)](this)),this[_0xe4f467(0x177)]=new Map(),this[_0xe4f467(0x1a7)]=undefined;}[a3_0xfb214a(0x1a6)](_0x46283b){const _0x22971d=a3_0x4cc4,_0x42e1f6=a3_0xfb214a;if(this[_0x42e1f6(0x1a7)])return this[_0x42e1f6(0x1a7)];return this[_0x42e1f6(0x1a7)]=new Promise((_0x509f23,_0x3cfd9c)=>{const _0x444a2e=a3_0x4cc4,_0x31e09c=_0x42e1f6;this[_0x31e09c(0x191)]=_0x46283b;const _0x1bb10e=setTimeout(()=>_0x3cfd9c(new Error(_0x31e09c(0x1c6))),0x2710);_0x1bb10e[_0x31e09c(0x198)](),this[_0x31e09c(0x1ee)](_0x31e09c(0x189),()=>{clearTimeout(_0x1bb10e),_0x509f23(this);}),this[_0x31e09c(0x1b7)][_0x31e09c(0x1ee)](_0x444a2e(0x161),()=>{const _0x1377ff=_0x444a2e,_0x24c5a9=a3_0x476c,_0x64621b=_0x31e09c;this[_0x24c5a9(0xef)][_0x64621b(0x171)](_0x32b90e=>{const _0xb4c347=_0x64621b;_0x32b90e[_0xb4c347(0x167)](new Error(_0xb4c347(0x190)));}),this[_0x1377ff(0x142)](_0x24c5a9(0xb6)),_0x3cfd9c(new Error(_0x64621b(0x190)));}),this[_0x31e09c(0x1b7)][_0x31e09c(0x1a6)]()[_0x31e09c(0x1a3)](_0x3cfd9c);}),this[_0x22971d(0x172)];}async[a3_0xfb214a(0x1be)](_0x159013={}){const _0x1348f9=a3_0x4cc4,_0x547cdc=a3_0xfb214a;let {clientId:_0x72e986,accessToken:_0x2898ac}=_0x159013;await this[_0x547cdc(0x1a6)](_0x72e986);if(!_0x159013[_0x547cdc(0x193)])return this[_0x547cdc(0x1de)](_0x547cdc(0x182)),this;return!_0x2898ac&&(_0x2898ac=await this[_0x547cdc(0x1ae)](_0x159013)),this[_0x1348f9(0x10a)](_0x2898ac);}[a3_0xfb214a(0x1a1)](_0x16bb95,_0x2e6546,_0x2d59a2){return new Promise((_0x4bab3d,_0x300a9f)=>{const _0x4ffadc=a3_0x4cc4,_0x2daed9=a3_0x476c,_0x3fdde8=uuid();this[_0x2daed9(0xce)][_0x4ffadc(0x169)]({'cmd':_0x16bb95,'args':_0x2e6546,'evt':_0x2d59a2,'nonce':_0x3fdde8}),this[_0x2daed9(0xef)][_0x2daed9(0x11a)](_0x3fdde8,{'resolve':_0x4bab3d,'reject':_0x300a9f});});}[a3_0xfb214a(0x1ad)](_0x26eedb){const _0x231ba6=a3_0x20e0,_0x1fe12b=a3_0x4cc4,_0x1a0e32=a3_0x4c3784,_0x142961=a3_0xfb214a;if(_0x26eedb[_0x142961(0x159)]===RPCCommands[_0x1a0e32(0x104)]&&_0x26eedb[_0x142961(0x161)]===RPCEvents[_0x142961(0x19d)])_0x26eedb[_0x231ba6(0x132)][_0x142961(0x173)]&&(this[_0x142961(0x173)]=_0x26eedb[_0x142961(0x18e)][_0x142961(0x173)]),this[_0x142961(0x1de)](_0x142961(0x189));else{if(this[_0x142961(0x177)][_0x142961(0x16c)](_0x26eedb[_0x142961(0x181)])){const {resolve:_0x25fd27,reject:_0x2673b2}=this[_0x142961(0x177)][_0x142961(0x1f2)](_0x26eedb[_0x142961(0x181)]);if(_0x26eedb[_0x142961(0x161)]===_0x142961(0x176)){const _0x6dd427=new Error(_0x26eedb[_0x142961(0x18e)][_0x142961(0x1c7)]);_0x6dd427[_0x1fe12b(0x178)]=_0x26eedb[_0x1a0e32(0xc6)][_0x1a0e32(0x147)],_0x6dd427[_0x142961(0x18e)]=_0x26eedb[_0x142961(0x18e)],_0x2673b2(_0x6dd427);}else _0x25fd27(_0x26eedb[_0x142961(0x18e)]);this[_0x142961(0x177)][_0x142961(0x1c4)](_0x26eedb[_0x142961(0x181)]);}else this[_0x1a0e32(0x12c)](_0x26eedb[_0x142961(0x161)],_0x26eedb[_0x142961(0x18e)]);}}async[a3_0xfb214a(0x1ae)]({scopes:_0x4829ed,clientSecret:_0x291246,rpcToken:_0x43f217,redirectUri:_0x430758,prompt:_0x5417ef}={}){const _0x5ce485=a3_0x20e0,_0xb07ce5=a3_0x4cc4,_0x197fa0=a3_0x4c3784,_0x4c6890=a3_0xfb214a;if(_0x291246&&_0x43f217===!![]){const _0x47e302=await this[_0x4c6890(0x1ef)](_0x5ce485(0x197),_0x197fa0(0x141),{'data':new URLSearchParams({'client_id':this[_0x4c6890(0x191)],'client_secret':_0x291246})});_0x43f217=_0x47e302[_0x4c6890(0x1db)];}const {code:_0x168c8d}=await this[_0x4c6890(0x1a1)](_0x4c6890(0x1cc),{'scopes':_0x4829ed,'client_id':this[_0x4c6890(0x191)],'prompt':_0x5417ef,'rpc_token':_0x43f217}),_0x3cdf0f=await this[_0x197fa0(0x120)](_0xb07ce5(0x12f),_0x4c6890(0x165),{'data':new URLSearchParams({'client_id':this[_0x197fa0(0x126)],'client_secret':_0x291246,'code':_0x168c8d,'grant_type':_0x4c6890(0x1c1),'redirect_uri':_0x430758})});return _0x3cdf0f[_0xb07ce5(0x11f)];}[a3_0xfb214a(0x1f3)](_0x31f921){const _0x4f913e=a3_0xfb214a;return this[_0x4f913e(0x1a1)](_0x4f913e(0x1f1),{'access_token':_0x31f921})[_0x4f913e(0x1ec)](({application:_0x329028,user:_0x10925b})=>{const _0x2147a6=a3_0x4cc4,_0x1ab11b=_0x4f913e;return this[_0x2147a6(0x128)]=_0x31f921,this[_0x1ab11b(0x1b8)]=_0x329028,this[_0x1ab11b(0x173)]=_0x10925b,this[_0x1ab11b(0x1de)](_0x1ab11b(0x182)),this;});}[a3_0xfb214a(0x162)](_0x791cce,_0x28497b){const _0x177fb7=a3_0x4c3784,_0x5abc00=a3_0xfb214a;return this[_0x5abc00(0x1a1)](RPCCommands[_0x177fb7(0x112)],{'guild_id':_0x791cce,'timeout':_0x28497b});}[a3_0xfb214a(0x1b0)](_0x140f7c){const _0x2d11e3=a3_0xfb214a;return this[_0x2d11e3(0x1a1)](RPCCommands[_0x2d11e3(0x17e)],{'timeout':_0x140f7c});}[a3_0xfb214a(0x19b)](_0x17df01,_0x1078f7){const _0x5e2606=a3_0xfb214a;return this[_0x5e2606(0x1a1)](RPCCommands[_0x5e2606(0x1e4)],{'channel_id':_0x17df01,'timeout':_0x1078f7});}async[a3_0xfb214a(0x184)](_0x1be9ce,_0x4672a1){const _0x4c16e9=a3_0x4c3784,{channels:_0x151759}=await this[_0x4c16e9(0x12f)](RPCCommands[_0x4c16e9(0x10f)],{'timeout':_0x4672a1,'guild_id':_0x1be9ce});return _0x151759;}[a3_0xfb214a(0x17b)](_0x1996dc){const _0x2aa993=a3_0x4c3784,_0x5bb4af=a3_0xfb214a;return this[_0x5bb4af(0x1a1)](RPCCommands[_0x5bb4af(0x187)],{'devices':_0x1996dc[_0x5bb4af(0x1d7)](_0x65acc7=>({'type':_0x65acc7[_0x5bb4af(0x170)],'id':_0x65acc7[_0x5bb4af(0x1a2)],'vendor':_0x65acc7[_0x5bb4af(0x1c0)],'model':_0x65acc7[_0x2aa993(0x13a)],'related':_0x65acc7[_0x5bb4af(0x1f0)],'echo_cancellation':_0x65acc7[_0x5bb4af(0x1d8)],'noise_suppression':_0x65acc7[_0x5bb4af(0x1e1)],'automatic_gain_control':_0x65acc7[_0x5bb4af(0x1b5)],'hardware_mute':_0x65acc7[_0x5bb4af(0x1dd)]}))});}[a3_0xfb214a(0x1c3)](_0x498821,_0x56f44b){const _0x5a361a=a3_0x4c3784,_0x4c2f76=a3_0xfb214a;return this[_0x4c2f76(0x1a1)](RPCCommands[_0x4c2f76(0x192)],{'user_id':_0x498821,'pan':_0x56f44b[_0x4c2f76(0x180)],'mute':_0x56f44b[_0x5a361a(0xff)],'volume':_0x56f44b[_0x4c2f76(0x16f)]});}[a3_0xfb214a(0x1da)](_0x9a963c,{timeout:_0x1b6563,force:force=![]}={}){const _0x4910f3=a3_0x4c3784,_0x2b85d6=a3_0xfb214a;return this[_0x4910f3(0x12f)](RPCCommands[_0x2b85d6(0x160)],{'channel_id':_0x9a963c,'timeout':_0x1b6563,'force':force});}[a3_0x4c3784(0xb3)](_0x151c2d,{timeout:_0x1016ca}={}){const _0x17c44d=a3_0x20e0,_0x40ba79=a3_0xfb214a;return this[_0x17c44d(0x12a)](RPCCommands[_0x40ba79(0x1ab)],{'channel_id':_0x151c2d,'timeout':_0x1016ca});}[a3_0xfb214a(0x1c9)](){const _0x11b809=a3_0x4c3784,_0x37e912=a3_0xfb214a;return this[_0x37e912(0x1a1)](RPCCommands[_0x11b809(0xd4)])[_0x37e912(0x1ec)](_0xced156=>({'automaticGainControl':_0xced156[_0x37e912(0x175)],'echoCancellation':_0xced156[_0x37e912(0x15f)],'noiseSuppression':_0xced156[_0x37e912(0x1af)],'qos':_0xced156[_0x37e912(0x194)],'silenceWarning':_0xced156[_0x37e912(0x1e7)],'deaf':_0xced156[_0x37e912(0x1a5)],'mute':_0xced156[_0x37e912(0x164)],'input':{'availableDevices':_0xced156[_0x37e912(0x1b2)][_0x37e912(0x19e)],'device':_0xced156[_0x37e912(0x1b2)][_0x37e912(0x18f)],'volume':_0xced156[_0x37e912(0x1b2)][_0x37e912(0x16f)]},'output':{'availableDevices':_0xced156[_0x37e912(0x168)][_0x11b809(0xda)],'device':_0xced156[_0x37e912(0x168)][_0x37e912(0x18f)],'volume':_0xced156[_0x11b809(0xd2)][_0x37e912(0x16f)]},'mode':{'type':_0xced156[_0x37e912(0x1d4)][_0x37e912(0x170)],'autoThreshold':_0xced156[_0x37e912(0x1d4)][_0x37e912(0x17c)],'threshold':_0xced156[_0x37e912(0x1d4)][_0x37e912(0x16e)],'shortcut':_0xced156[_0x11b809(0x123)][_0x37e912(0x1d9)],'delay':_0xced156[_0x11b809(0x123)][_0x37e912(0x16d)]}}));}[a3_0xfb214a(0x197)](_0x4d9f51){const _0x5aad70=a3_0x4cc4,_0x4c7207=a3_0x4c3784,_0x58450f=a3_0xfb214a;return this[_0x58450f(0x1a1)](RPCCommands[_0x58450f(0x1df)],{'automatic_gain_control':_0x4d9f51[_0x58450f(0x1b5)],'echo_cancellation':_0x4d9f51[_0x58450f(0x1d8)],'noise_suppression':_0x4d9f51[_0x58450f(0x1e1)],'qos':_0x4d9f51[_0x58450f(0x194)],'silence_warning':_0x4d9f51[_0x58450f(0x195)],'deaf':_0x4d9f51[_0x4c7207(0xbe)],'mute':_0x4d9f51[_0x58450f(0x164)],'input':_0x4d9f51[_0x58450f(0x1b2)]?{'device_id':_0x4d9f51[_0x58450f(0x1b2)][_0x58450f(0x1ac)],'volume':_0x4d9f51[_0x4c7207(0xec)][_0x5aad70(0x176)]}:undefined,'output':_0x4d9f51[_0x4c7207(0xd2)]?{'device_id':_0x4d9f51[_0x58450f(0x168)][_0x58450f(0x1ac)],'volume':_0x4d9f51[_0x58450f(0x168)][_0x58450f(0x16f)]}:undefined,'mode':_0x4d9f51[_0x58450f(0x1d4)]?{'type':_0x4d9f51[_0x58450f(0x1d4)][_0x4c7207(0xe5)],'auto_threshold':_0x4d9f51[_0x58450f(0x1d4)][_0x58450f(0x19a)],'threshold':_0x4d9f51[_0x58450f(0x1d4)][_0x58450f(0x16e)],'shortcut':_0x4d9f51[_0x58450f(0x1d4)][_0x58450f(0x1d9)],'delay':_0x4d9f51[_0x58450f(0x1d4)][_0x58450f(0x16d)]}:undefined});}[a3_0xfb214a(0x17a)](_0x50900b){const _0x3c9a9b=a3_0x20e0,_0x216df9=a3_0x4c3784,_0x9514a=a3_0xfb214a,_0x1725c8=subKey(RPCEvents[_0x9514a(0x16b)]),_0x5b09cd=()=>{const _0x7b5a62=_0x9514a;return this[_0x7b5a62(0x186)][_0x7b5a62(0x1c4)](_0x1725c8),this[_0x7b5a62(0x1a1)](RPCCommands[_0x7b5a62(0x1b6)],{'action':_0x7b5a62(0x18d)});};return this[_0x9514a(0x186)][_0x216df9(0x11a)](_0x1725c8,({shortcut:_0x4ccb61})=>{_0x50900b(_0x4ccb61,_0x5b09cd);}),this[_0x9514a(0x1a1)](RPCCommands[_0x9514a(0x1b6)],{'action':_0x3c9a9b(0x139)})[_0x9514a(0x1ec)](()=>_0x5b09cd);}[a3_0xfb214a(0x1eb)](_0x34b23b={},_0x1d6c31=getPid()){const _0x260749=a3_0x20e0,_0x15ae6e=a3_0x4cc4,_0x29f7c1=a3_0x4c3784,_0x31e57f=a3_0xfb214a;let _0x324490,_0x1bbffc,_0x549c5e,_0x3fa87b;if(_0x34b23b[_0x15ae6e(0x132)]||_0x34b23b[_0x15ae6e(0x146)]){_0x324490={'start':_0x34b23b[_0x31e57f(0x1d2)],'end':_0x34b23b[_0x29f7c1(0xea)]},_0x324490[_0x31e57f(0x19c)]instanceof Date&&(_0x324490[_0x31e57f(0x19c)]=Math[_0x29f7c1(0x135)](_0x324490[_0x29f7c1(0x14b)][_0x29f7c1(0xe6)]())),_0x324490[_0x29f7c1(0x13d)]instanceof Date&&(_0x324490[_0x31e57f(0x188)]=Math[_0x31e57f(0x16a)](_0x324490[_0x29f7c1(0x13d)][_0x31e57f(0x163)]()));if(_0x324490[_0x29f7c1(0x14b)]>0x1f3fffffc18)throw new RangeError(_0x260749(0x122));if(_0x324490[_0x31e57f(0x188)]>0x1f3fffffc18)throw new RangeError(_0x31e57f(0x18b));}return(_0x34b23b[_0x15ae6e(0x17a)]||_0x34b23b[_0x31e57f(0x1d1)]||_0x34b23b[_0x31e57f(0x1c5)]||_0x34b23b[_0x31e57f(0x1d0)])&&(_0x1bbffc={'large_image':_0x34b23b[_0x29f7c1(0xed)],'large_text':_0x34b23b[_0x29f7c1(0x143)],'small_image':_0x34b23b[_0x31e57f(0x1c5)],'small_text':_0x34b23b[_0x31e57f(0x1d0)]}),(_0x34b23b[_0x29f7c1(0xf6)]||_0x34b23b[_0x31e57f(0x178)]||_0x34b23b[_0x31e57f(0x1a4)])&&(_0x549c5e={'id':_0x34b23b[_0x31e57f(0x178)]},(_0x34b23b[_0x31e57f(0x169)]||_0x34b23b[_0x31e57f(0x1a4)])&&(_0x549c5e[_0x31e57f(0x1cd)]=[_0x34b23b[_0x15ae6e(0x14d)],_0x34b23b[_0x29f7c1(0x109)]])),(_0x34b23b[_0x29f7c1(0xf4)]||_0x34b23b[_0x31e57f(0x1ed)]||_0x34b23b[_0x31e57f(0x196)])&&(_0x3fa87b={'match':_0x34b23b[_0x31e57f(0x1dc)],'join':_0x34b23b[_0x31e57f(0x1ed)],'spectate':_0x34b23b[_0x31e57f(0x196)]}),this[_0x29f7c1(0x12f)](RPCCommands[_0x31e57f(0x17f)],{'pid':_0x1d6c31,'activity':{'state':_0x34b23b[_0x31e57f(0x1bc)],'details':_0x34b23b[_0x31e57f(0x19f)],'timestamps':_0x324490,'assets':_0x1bbffc,'party':_0x549c5e,'secrets':_0x3fa87b,'buttons':_0x34b23b[_0x31e57f(0x1e2)],'instance':!!_0x34b23b[_0x31e57f(0x15d)]}});}[a3_0xfb214a(0x1bb)](_0x21aa18=getPid()){const _0x1f3317=a3_0xfb214a;return this[_0x1f3317(0x1a1)](RPCCommands[_0x1f3317(0x17f)],{'pid':_0x21aa18});}[a3_0xfb214a(0x158)](_0x4f0565){const _0x2fc8d5=a3_0xfb214a;return this[_0x2fc8d5(0x1a1)](RPCCommands[_0x2fc8d5(0x1b4)],{'user_id':_0x4f0565['id']||_0x4f0565});}[a3_0x4c3784(0x13b)](_0x2bdfdd){const _0x38ea57=a3_0xfb214a;return this[_0x38ea57(0x1a1)](RPCCommands[_0x38ea57(0x1a9)],{'user_id':_0x2bdfdd['id']||_0x2bdfdd});}[a3_0x4c3784(0xb5)](_0x3514a0){const _0x104e7f=a3_0xfb214a;return this[_0x104e7f(0x1a1)](RPCCommands[_0x104e7f(0x1b1)],{'user_id':_0x3514a0['id']||_0x3514a0});}[a3_0x170e25(0x122)](_0xacb706,_0x597fac,_0x4e2a2a){const _0x1b1018=a3_0xfb214a;return this[_0x1b1018(0x1a1)](RPCCommands[_0x1b1018(0x199)],{'type':_0xacb706,'capacity':_0x597fac,'metadata':_0x4e2a2a});}[a3_0x4c3784(0x132)](_0x1430e7,{type:_0x4e42b6,owner:_0x37d56e,capacity:_0xce493,metadata:_0x4af5df}={}){const _0x22b935=a3_0xfb214a;return this[_0x22b935(0x1a1)](RPCCommands[_0x22b935(0x15b)],{'id':_0x1430e7['id']||_0x1430e7,'type':_0x4e42b6,'owner_id':_0x37d56e&&_0x37d56e['id']||_0x37d56e,'capacity':_0xce493,'metadata':_0x4af5df});}[a3_0xfb214a(0x1f4)](_0x30c879){const _0x2371d7=a3_0x170e25,_0x267e22=a3_0xfb214a;return this[_0x2371d7(0x16f)](RPCCommands[_0x267e22(0x1c8)],{'id':_0x30c879['id']||_0x30c879});}[a3_0x170e25(0x156)](_0x2994a1,_0x10af5d){const _0x16435c=a3_0xfb214a;return this[_0x16435c(0x1a1)](RPCCommands[_0x16435c(0x1aa)],{'id':_0x2994a1,'secret':_0x10af5d});}[a3_0xfb214a(0x15a)](_0x255a43,_0x3171d6){const _0x17d56d=a3_0x4c3784,_0x3294e0=a3_0xfb214a;return this[_0x3294e0(0x1a1)](RPCCommands[_0x17d56d(0x14d)],{'id':_0x255a43['id']||_0x255a43,'data':_0x3171d6});}[a3_0xfb214a(0x1ce)](_0x1b951d){const _0x48954f=a3_0x4c3784,_0x1b76ac=a3_0xfb214a;return this[_0x1b76ac(0x1a1)](RPCCommands[_0x48954f(0xf0)],{'id':_0x1b951d['id']||_0x1b951d});}[a3_0x4c3784(0xe1)](_0x343ba8,_0x565ebc,_0xa76a0b){const _0x12a77a=a3_0xfb214a;return this[_0x12a77a(0x1a1)](RPCCommands[_0x12a77a(0x1b9)],{'lobby_id':_0x343ba8['id']||_0x343ba8,'user_id':_0x565ebc['id']||_0x565ebc,'metadata':_0xa76a0b});}[a3_0xfb214a(0x1bd)](){const _0x3b34ac=a3_0x170e25,_0x2d132a=a3_0xfb214a,_0x3dc1ad=Object[_0x2d132a(0x157)](RelationshipTypes);return this[_0x2d132a(0x1a1)](RPCCommands[_0x2d132a(0x1a8)])[_0x2d132a(0x1ec)](_0x1cc114=>_0x1cc114[_0x2d132a(0x179)][_0x3b34ac(0x13c)](_0x9468e0=>({..._0x9468e0,'type':_0x3dc1ad[_0x9468e0[_0x2d132a(0x170)]]})));}async[a3_0xfb214a(0x1e9)](_0x3244ae,_0x21f1cb){const _0x3efbd5=a3_0x4c3784,_0x20bb1d=a3_0xfb214a;return await this[_0x20bb1d(0x1a1)](RPCCommands[_0x3efbd5(0xdc)],_0x21f1cb,_0x3244ae),{'unsubscribe':()=>this[_0x20bb1d(0x1a1)](RPCCommands[_0x20bb1d(0x1b3)],_0x21f1cb,_0x3244ae)};}async[a3_0x4c3784(0x102)](){const _0x3a280b=a3_0xfb214a;await this[_0x3a280b(0x1b7)][_0x3a280b(0x17d)]();}}module[a3_0xfb214a(0x1e0)]=RPCClient;
+'use strict';
+
+const EventEmitter = require('events');
+const { setTimeout, clearTimeout } = require('timers');
+const fetch = require('node-fetch');
+const transports = require('./transports');
+const { RPCCommands, RPCEvents, RelationshipTypes } = require('./constants');
+const { pid: getPid, uuid } = require('./util');
+
+function subKey(event, args) {
+  return `${event}${JSON.stringify(args)}`;
+}
+
+/**
+ * @typedef {RPCClientOptions}
+ * @extends {ClientOptions}
+ * @prop {string} transport RPC transport. one of `ipc` or `websocket`
+ */
+
+/**
+ * The main hub for interacting with Discord RPC
+ * @extends {BaseClient}
+ */
+class RPCClient extends EventEmitter {
+  /**
+   * @param {RPCClientOptions} [options] Options for the client.
+   * You must provide a transport
+   */
+  constructor(options = {}) {
+    super();
+
+    this.options = options;
+
+    this.accessToken = null;
+    this.clientId = null;
+
+    /**
+     * Application used in this client
+     * @type {?ClientApplication}
+     */
+    this.application = null;
+
+    /**
+     * User used in this application
+     * @type {?User}
+     */
+    this.user = null;
+
+    const Transport = transports[options.transport];
+    if (!Transport) {
+      throw new TypeError('RPC_INVALID_TRANSPORT', options.transport);
+    }
+
+    this.fetch = (method, path, { data, query } = {}) =>
+      fetch(`${this.fetch.endpoint}${path}${query ? new URLSearchParams(query) : ''}`, {
+        method,
+        body: data,
+        headers: {
+          Authorization: `Bearer ${this.accessToken}`,
+        },
+      }).then(async (r) => {
+        const body = await r.json();
+        if (!r.ok) {
+          const e = new Error(r.status);
+          e.body = body;
+          throw e;
+        }
+        return body;
+      });
+
+    this.fetch.endpoint = 'https://discord.com/api';
+
+    /**
+     * Raw transport userd
+     * @type {RPCTransport}
+     * @private
+     */
+    this.transport = new Transport(this);
+    this.transport.on('message', this._onRpcMessage.bind(this));
+
+    /**
+     * Map of nonces being expected from the transport
+     * @type {Map}
+     * @private
+     */
+    this._expecting = new Map();
+
+    this._connectPromise = undefined;
+  }
+
+  /**
+   * Search and connect to RPC
+   */
+  connect(clientId) {
+    if (this._connectPromise) {
+      return this._connectPromise;
+    }
+    this._connectPromise = new Promise((resolve, reject) => {
+      this.clientId = clientId;
+      const timeout = setTimeout(() => reject(new Error('RPC_CONNECTION_TIMEOUT')), 10e3);
+      timeout.unref();
+      this.once('connected', () => {
+        clearTimeout(timeout);
+        resolve(this);
+      });
+      this.transport.once('close', () => {
+        this._expecting.forEach((e) => {
+          e.reject(new Error('connection closed'));
+        });
+        this.emit('disconnected');
+        reject(new Error('connection closed'));
+      });
+      this.transport.connect().catch(reject);
+    });
+    return this._connectPromise;
+  }
+
+  /**
+   * @typedef {RPCLoginOptions}
+   * @param {string} clientId Client ID
+   * @param {string} [clientSecret] Client secret
+   * @param {string} [accessToken] Access token
+   * @param {string} [rpcToken] RPC token
+   * @param {string} [tokenEndpoint] Token endpoint
+   * @param {string[]} [scopes] Scopes to authorize with
+   */
+
+  /**
+   * Performs authentication flow. Automatically calls Client#connect if needed.
+   * @param {RPCLoginOptions} options Options for authentication.
+   * At least one property must be provided to perform login.
+   * @example client.login({ clientId: '1234567', clientSecret: 'abcdef123' });
+   * @returns {Promise<RPCClient>}
+   */
+  async login(options = {}) {
+    let { clientId, accessToken } = options;
+    await this.connect(clientId);
+    if (!options.scopes) {
+      this.emit('ready');
+      return this;
+    }
+    if (!accessToken) {
+      accessToken = await this.authorize(options);
+    }
+    return this.authenticate(accessToken);
+  }
+
+  /**
+   * Request
+   * @param {string} cmd Command
+   * @param {Object} [args={}] Arguments
+   * @param {string} [evt] Event
+   * @returns {Promise}
+   * @private
+   */
+  request(cmd, args, evt) {
+    return new Promise((resolve, reject) => {
+      const nonce = uuid();
+      this.transport.send({ cmd, args, evt, nonce });
+      this._expecting.set(nonce, { resolve, reject });
+    });
+  }
+
+  /**
+   * Message handler
+   * @param {Object} message message
+   * @private
+   */
+  _onRpcMessage(message) {
+    if (message.cmd === RPCCommands.DISPATCH && message.evt === RPCEvents.READY) {
+      if (message.data.user) {
+        this.user = message.data.user;
+      }
+      this.emit('connected');
+    } else if (this._expecting.has(message.nonce)) {
+      const { resolve, reject } = this._expecting.get(message.nonce);
+      if (message.evt === 'ERROR') {
+        const e = new Error(message.data.message);
+        e.code = message.data.code;
+        e.data = message.data;
+        reject(e);
+      } else {
+        resolve(message.data);
+      }
+      this._expecting.delete(message.nonce);
+    } else {
+      this.emit(message.evt, message.data);
+    }
+  }
+
+  /**
+   * Authorize
+   * @param {Object} options options
+   * @returns {Promise}
+   * @private
+   */
+  async authorize({ scopes, clientSecret, rpcToken, redirectUri, prompt } = {}) {
+    if (clientSecret && rpcToken === true) {
+      const body = await this.fetch('POST', '/oauth2/token/rpc', {
+        data: new URLSearchParams({
+          client_id: this.clientId,
+          client_secret: clientSecret,
+        }),
+      });
+      rpcToken = body.rpc_token;
+    }
+
+    const { code } = await this.request('AUTHORIZE', {
+      scopes,
+      client_id: this.clientId,
+      prompt,
+      rpc_token: rpcToken,
+    });
+
+    const response = await this.fetch('POST', '/oauth2/token', {
+      data: new URLSearchParams({
+        client_id: this.clientId,
+        client_secret: clientSecret,
+        code,
+        grant_type: 'authorization_code',
+        redirect_uri: redirectUri,
+      }),
+    });
+
+    return response.access_token;
+  }
+
+  /**
+   * Authenticate
+   * @param {string} accessToken access token
+   * @returns {Promise}
+   * @private
+   */
+  authenticate(accessToken) {
+    return this.request('AUTHENTICATE', { access_token: accessToken })
+      .then(({ application, user }) => {
+        this.accessToken = accessToken;
+        this.application = application;
+        this.user = user;
+        this.emit('ready');
+        return this;
+      });
+  }
+
+
+  /**
+   * Fetch a guild
+   * @param {Snowflake} id Guild ID
+   * @param {number} [timeout] Timeout request
+   * @returns {Promise<Guild>}
+   */
+  getGuild(id, timeout) {
+    return this.request(RPCCommands.GET_GUILD, { guild_id: id, timeout });
+  }
+
+  /**
+   * Fetch all guilds
+   * @param {number} [timeout] Timeout request
+   * @returns {Promise<Collection<Snowflake, Guild>>}
+   */
+  getGuilds(timeout) {
+    return this.request(RPCCommands.GET_GUILDS, { timeout });
+  }
+
+  /**
+   * Get a channel
+   * @param {Snowflake} id Channel ID
+   * @param {number} [timeout] Timeout request
+   * @returns {Promise<Channel>}
+   */
+  getChannel(id, timeout) {
+    return this.request(RPCCommands.GET_CHANNEL, { channel_id: id, timeout });
+  }
+
+  /**
+   * Get all channels
+   * @param {Snowflake} [id] Guild ID
+   * @param {number} [timeout] Timeout request
+   * @returns {Promise<Collection<Snowflake, Channel>>}
+   */
+  async getChannels(id, timeout) {
+    const { channels } = await this.request(RPCCommands.GET_CHANNELS, {
+      timeout,
+      guild_id: id,
+    });
+    return channels;
+  }
+
+  /**
+   * @typedef {CertifiedDevice}
+   * @prop {string} type One of `AUDIO_INPUT`, `AUDIO_OUTPUT`, `VIDEO_INPUT`
+   * @prop {string} uuid This device's Windows UUID
+   * @prop {object} vendor Vendor information
+   * @prop {string} vendor.name Vendor's name
+   * @prop {string} vendor.url Vendor's url
+   * @prop {object} model Model information
+   * @prop {string} model.name Model's name
+   * @prop {string} model.url Model's url
+   * @prop {string[]} related Array of related product's Windows UUIDs
+   * @prop {boolean} echoCancellation If the device has echo cancellation
+   * @prop {boolean} noiseSuppression If the device has noise suppression
+   * @prop {boolean} automaticGainControl If the device has automatic gain control
+   * @prop {boolean} hardwareMute If the device has a hardware mute
+   */
+
+  /**
+   * Tell discord which devices are certified
+   * @param {CertifiedDevice[]} devices Certified devices to send to discord
+   * @returns {Promise}
+   */
+  setCertifiedDevices(devices) {
+    return this.request(RPCCommands.SET_CERTIFIED_DEVICES, {
+      devices: devices.map((d) => ({
+        type: d.type,
+        id: d.uuid,
+        vendor: d.vendor,
+        model: d.model,
+        related: d.related,
+        echo_cancellation: d.echoCancellation,
+        noise_suppression: d.noiseSuppression,
+        automatic_gain_control: d.automaticGainControl,
+        hardware_mute: d.hardwareMute,
+      })),
+    });
+  }
+
+  /**
+   * @typedef {UserVoiceSettings}
+   * @prop {Snowflake} id ID of the user these settings apply to
+   * @prop {?Object} [pan] Pan settings, an object with `left` and `right` set between
+   * 0.0 and 1.0, inclusive
+   * @prop {?number} [volume=100] The volume
+   * @prop {bool} [mute] If the user is muted
+   */
+
+  /**
+   * Set the voice settings for a user, by id
+   * @param {Snowflake} id ID of the user to set
+   * @param {UserVoiceSettings} settings Settings
+   * @returns {Promise}
+   */
+  setUserVoiceSettings(id, settings) {
+    return this.request(RPCCommands.SET_USER_VOICE_SETTINGS, {
+      user_id: id,
+      pan: settings.pan,
+      mute: settings.mute,
+      volume: settings.volume,
+    });
+  }
+
+  /**
+   * Move the user to a voice channel
+   * @param {Snowflake} id ID of the voice channel
+   * @param {Object} [options] Options
+   * @param {number} [options.timeout] Timeout for the command
+   * @param {boolean} [options.force] Force this move. This should only be done if you
+   * have explicit permission from the user.
+   * @returns {Promise}
+   */
+  selectVoiceChannel(id, { timeout, force = false } = {}) {
+    return this.request(RPCCommands.SELECT_VOICE_CHANNEL, { channel_id: id, timeout, force });
+  }
+
+  /**
+   * Move the user to a text channel
+   * @param {Snowflake} id ID of the voice channel
+   * @param {Object} [options] Options
+   * @param {number} [options.timeout] Timeout for the command
+   * have explicit permission from the user.
+   * @returns {Promise}
+   */
+  selectTextChannel(id, { timeout } = {}) {
+    return this.request(RPCCommands.SELECT_TEXT_CHANNEL, { channel_id: id, timeout });
+  }
+
+  /**
+   * Get current voice settings
+   * @returns {Promise}
+   */
+  getVoiceSettings() {
+    return this.request(RPCCommands.GET_VOICE_SETTINGS)
+      .then((s) => ({
+        automaticGainControl: s.automatic_gain_control,
+        echoCancellation: s.echo_cancellation,
+        noiseSuppression: s.noise_suppression,
+        qos: s.qos,
+        silenceWarning: s.silence_warning,
+        deaf: s.deaf,
+        mute: s.mute,
+        input: {
+          availableDevices: s.input.available_devices,
+          device: s.input.device_id,
+          volume: s.input.volume,
+        },
+        output: {
+          availableDevices: s.output.available_devices,
+          device: s.output.device_id,
+          volume: s.output.volume,
+        },
+        mode: {
+          type: s.mode.type,
+          autoThreshold: s.mode.auto_threshold,
+          threshold: s.mode.threshold,
+          shortcut: s.mode.shortcut,
+          delay: s.mode.delay,
+        },
+      }));
+  }
+
+  /**
+   * Set current voice settings, overriding the current settings until this session disconnects.
+   * This also locks the settings for any other rpc sessions which may be connected.
+   * @param {Object} args Settings
+   * @returns {Promise}
+   */
+  setVoiceSettings(args) {
+    return this.request(RPCCommands.SET_VOICE_SETTINGS, {
+      automatic_gain_control: args.automaticGainControl,
+      echo_cancellation: args.echoCancellation,
+      noise_suppression: args.noiseSuppression,
+      qos: args.qos,
+      silence_warning: args.silenceWarning,
+      deaf: args.deaf,
+      mute: args.mute,
+      input: args.input ? {
+        device_id: args.input.device,
+        volume: args.input.volume,
+      } : undefined,
+      output: args.output ? {
+        device_id: args.output.device,
+        volume: args.output.volume,
+      } : undefined,
+      mode: args.mode ? {
+        type: args.mode.type,
+        auto_threshold: args.mode.autoThreshold,
+        threshold: args.mode.threshold,
+        shortcut: args.mode.shortcut,
+        delay: args.mode.delay,
+      } : undefined,
+    });
+  }
+
+  /**
+   * Capture a shortcut using the client
+   * The callback takes (key, stop) where `stop` is a function that will stop capturing.
+   * This `stop` function must be called before disconnecting or else the user will have
+   * to restart their client.
+   * @param {Function} callback Callback handling keys
+   * @returns {Promise<Function>}
+   */
+  captureShortcut(callback) {
+    const subid = subKey(RPCEvents.CAPTURE_SHORTCUT_CHANGE);
+    const stop = () => {
+      this._subscriptions.delete(subid);
+      return this.request(RPCCommands.CAPTURE_SHORTCUT, { action: 'STOP' });
+    };
+    this._subscriptions.set(subid, ({ shortcut }) => {
+      callback(shortcut, stop);
+    });
+    return this.request(RPCCommands.CAPTURE_SHORTCUT, { action: 'START' })
+      .then(() => stop);
+  }
+
+  /**
+   * Sets the presence for the logged in user.
+   * @param {object} args The rich presence to pass.
+   * @param {number} [pid] The application's process ID. Defaults to the executing process' PID.
+   * @returns {Promise}
+   */
+  setActivity(args = {}, pid = getPid()) {
+    let timestamps;
+    let assets;
+    let party;
+    let secrets;
+    if (args.startTimestamp || args.endTimestamp) {
+      timestamps = {
+        start: args.startTimestamp,
+        end: args.endTimestamp,
+      };
+      if (timestamps.start instanceof Date) {
+        timestamps.start = Math.round(timestamps.start.getTime());
+      }
+      if (timestamps.end instanceof Date) {
+        timestamps.end = Math.round(timestamps.end.getTime());
+      }
+      if (timestamps.start > 2147483647000) {
+        throw new RangeError('timestamps.start must fit into a unix timestamp');
+      }
+      if (timestamps.end > 2147483647000) {
+        throw new RangeError('timestamps.end must fit into a unix timestamp');
+      }
+    }
+    if (
+      args.largeImageKey || args.largeImageText
+      || args.smallImageKey || args.smallImageText
+    ) {
+      assets = {
+        large_image: args.largeImageKey,
+        large_text: args.largeImageText,
+        small_image: args.smallImageKey,
+        small_text: args.smallImageText,
+      };
+    }
+    if (args.partySize || args.partyId || args.partyMax) {
+      party = { id: args.partyId };
+      if (args.partySize || args.partyMax) {
+        party.size = [args.partySize, args.partyMax];
+      }
+    }
+    if (args.matchSecret || args.joinSecret || args.spectateSecret) {
+      secrets = {
+        match: args.matchSecret,
+        join: args.joinSecret,
+        spectate: args.spectateSecret,
+      };
+    }
+
+    return this.request(RPCCommands.SET_ACTIVITY, {
+      pid,
+      activity: {
+        state: args.state,
+        details: args.details,
+        timestamps,
+        assets,
+        party,
+        secrets,
+        buttons: args.buttons,
+        instance: !!args.instance,
+      },
+    });
+  }
+
+  /**
+   * Clears the currently set presence, if any. This will hide the "Playing X" message
+   * displayed below the user's name.
+   * @param {number} [pid] The application's process ID. Defaults to the executing process' PID.
+   * @returns {Promise}
+   */
+  clearActivity(pid = getPid()) {
+    return this.request(RPCCommands.SET_ACTIVITY, {
+      pid,
+    });
+  }
+
+  /**
+   * Invite a user to join the game the RPC user is currently playing
+   * @param {User} user The user to invite
+   * @returns {Promise}
+   */
+  sendJoinInvite(user) {
+    return this.request(RPCCommands.SEND_ACTIVITY_JOIN_INVITE, {
+      user_id: user.id || user,
+    });
+  }
+
+  /**
+   * Request to join the game the user is playing
+   * @param {User} user The user whose game you want to request to join
+   * @returns {Promise}
+   */
+  sendJoinRequest(user) {
+    return this.request(RPCCommands.SEND_ACTIVITY_JOIN_REQUEST, {
+      user_id: user.id || user,
+    });
+  }
+
+  /**
+   * Reject a join request from a user
+   * @param {User} user The user whose request you wish to reject
+   * @returns {Promise}
+   */
+  closeJoinRequest(user) {
+    return this.request(RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST, {
+      user_id: user.id || user,
+    });
+  }
+
+  createLobby(type, capacity, metadata) {
+    return this.request(RPCCommands.CREATE_LOBBY, {
+      type,
+      capacity,
+      metadata,
+    });
+  }
+
+  updateLobby(lobby, { type, owner, capacity, metadata } = {}) {
+    return this.request(RPCCommands.UPDATE_LOBBY, {
+      id: lobby.id || lobby,
+      type,
+      owner_id: (owner && owner.id) || owner,
+      capacity,
+      metadata,
+    });
+  }
+
+  deleteLobby(lobby) {
+    return this.request(RPCCommands.DELETE_LOBBY, {
+      id: lobby.id || lobby,
+    });
+  }
+
+  connectToLobby(id, secret) {
+    return this.request(RPCCommands.CONNECT_TO_LOBBY, {
+      id,
+      secret,
+    });
+  }
+
+  sendToLobby(lobby, data) {
+    return this.request(RPCCommands.SEND_TO_LOBBY, {
+      id: lobby.id || lobby,
+      data,
+    });
+  }
+
+  disconnectFromLobby(lobby) {
+    return this.request(RPCCommands.DISCONNECT_FROM_LOBBY, {
+      id: lobby.id || lobby,
+    });
+  }
+
+  updateLobbyMember(lobby, user, metadata) {
+    return this.request(RPCCommands.UPDATE_LOBBY_MEMBER, {
+      lobby_id: lobby.id || lobby,
+      user_id: user.id || user,
+      metadata,
+    });
+  }
+
+  getRelationships() {
+    const types = Object.keys(RelationshipTypes);
+    return this.request(RPCCommands.GET_RELATIONSHIPS)
+      .then((o) => o.relationships.map((r) => ({
+        ...r,
+        type: types[r.type],
+      })));
+  }
+
+  /**
+   * Subscribe to an event
+   * @param {string} event Name of event e.g. `MESSAGE_CREATE`
+   * @param {Object} [args] Args for event e.g. `{ channel_id: '1234' }`
+   * @returns {Promise<Object>}
+   */
+  async subscribe(event, args) {
+    await this.request(RPCCommands.SUBSCRIBE, args, event);
+    return {
+      unsubscribe: () => this.request(RPCCommands.UNSUBSCRIBE, args, event),
+    };
+  }
+
+  /**
+   * Destroy the client
+   */
+  async destroy() {
+    await this.transport.close();
+  }
+}
+
+module.exports = RPCClient;

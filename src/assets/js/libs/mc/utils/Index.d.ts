@@ -1,6 +1,6 @@
 /**
  * @author TECNO BROS
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
+ 
  */
 declare function getPathLibraries(main: any, nativeString?: any, forceExt?: any): {
     path: string;

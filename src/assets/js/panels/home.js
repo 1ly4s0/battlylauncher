@@ -1,5 +1,7592 @@
 /**
  * @author TECNO BROS
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
+ 
  */
-'use strict';(function(_0x48963b,_0x3d94c3){const _0x386c8a=a167_0x1c41,_0x28c489=_0x48963b();while(!![]){try{const _0x381b57=parseInt(_0x386c8a(0x369))/0x1+-parseInt(_0x386c8a(0x234))/0x2+parseInt(_0x386c8a(0x2fa))/0x3+parseInt(_0x386c8a(0x244))/0x4*(parseInt(_0x386c8a(0x20f))/0x5)+parseInt(_0x386c8a(0x388))/0x6+-parseInt(_0x386c8a(0x22c))/0x7+-parseInt(_0x386c8a(0x225))/0x8;if(_0x381b57===_0x3d94c3)break;else _0x28c489['push'](_0x28c489['shift']());}catch(_0x3f685b){_0x28c489['push'](_0x28c489['shift']());}}}(a167_0x1705,0x2f14f));const a167_0x241423=a167_0x2364;(function(_0x79385e,_0x3f2e74){const _0x2ff5e1=a167_0x1c41,_0x3947c0=a167_0x2364,_0x1b24e5=_0x79385e();while(!![]){try{const _0x1a48a2=-parseInt(_0x3947c0(0x19c))/0x1*(parseInt(_0x3947c0(0x1cc))/0x2)+parseInt(_0x3947c0(0x256))/0x3*(parseInt(_0x3947c0(0x452))/0x4)+parseInt(_0x3947c0(0x123))/0x5*(parseInt(_0x3947c0(0x40e))/0x6)+parseInt(_0x3947c0(0x40a))/0x7*(-parseInt(_0x3947c0(0x328))/0x8)+-parseInt(_0x3947c0(0x48c))/0x9+-parseInt(_0x3947c0(0x2b6))/0xa*(parseInt(_0x3947c0(0x15f))/0xb)+-parseInt(_0x3947c0(0x15d))/0xc*(-parseInt(_0x3947c0(0x2fc))/0xd);if(_0x1a48a2===_0x3f2e74)break;else _0x1b24e5[_0x2ff5e1(0x22e)](_0x1b24e5[_0x2ff5e1(0x172)]());}catch(_0x1b0fb3){_0x1b24e5['push'](_0x1b24e5[_0x2ff5e1(0x172)]());}}}(a167_0xd8e9,0xca25d));const a167_0x1541f3=a167_0x3167;(function(_0x204107,_0x5311f8){const _0x32b175=a167_0x1c41,_0x34590c=a167_0x2364,_0xc04289=a167_0x3167,_0x27873e=_0x204107();while(!![]){try{const _0x102d7f=parseInt(_0xc04289(0x3b0))/0x1*(-parseInt(_0xc04289(0x483))/0x2)+parseInt(_0xc04289(0x3ef))/0x3*(parseInt(_0xc04289(0x3b2))/0x4)+parseInt(_0xc04289(0x449))/0x5*(parseInt(_0xc04289(0x447))/0x6)+-parseInt(_0xc04289(0x1b9))/0x7*(-parseInt(_0xc04289(0x27a))/0x8)+parseInt(_0xc04289(0x2d9))/0x9+parseInt(_0xc04289(0x28f))/0xa*(parseInt(_0xc04289(0x29d))/0xb)+-parseInt(_0xc04289(0x370))/0xc*(parseInt(_0xc04289(0x305))/0xd);if(_0x102d7f===_0x5311f8)break;else _0x27873e[_0x34590c(0x338)](_0x27873e[_0x32b175(0x172)]());}catch(_0x3dcd8f){_0x27873e[_0x32b175(0x22e)](_0x27873e[_0x34590c(0x21f)]());}}}(a167_0x159b,0x220b6));const a167_0x1abf9b=a167_0x2ff2;(function(_0x2d53e0,_0x201ee6){const _0x48da01=a167_0x2364,_0x303c6f=a167_0x3167,_0x201b65=a167_0x2ff2,_0x27760f=_0x2d53e0();while(!![]){try{const _0x6dd9f0=parseInt(_0x201b65(0x45f))/0x1*(-parseInt(_0x201b65(0x47f))/0x2)+-parseInt(_0x201b65(0x475))/0x3*(-parseInt(_0x201b65(0x2e6))/0x4)+-parseInt(_0x201b65(0x268))/0x5*(parseInt(_0x201b65(0x1f1))/0x6)+parseInt(_0x201b65(0x1ee))/0x7*(-parseInt(_0x201b65(0x1eb))/0x8)+parseInt(_0x201b65(0x22c))/0x9*(-parseInt(_0x201b65(0x2cb))/0xa)+parseInt(_0x201b65(0x390))/0xb+parseInt(_0x201b65(0x374))/0xc*(parseInt(_0x201b65(0x4ed))/0xd);if(_0x6dd9f0===_0x201ee6)break;else _0x27760f[_0x48da01(0x338)](_0x27760f[_0x303c6f(0x33e)]());}catch(_0x411aa0){_0x27760f[_0x303c6f(0x1c5)](_0x27760f[_0x303c6f(0x33e)]());}}}(a167_0x2131,0x27a8a));import{logger,database,changePanel}from'../utils.js';function a167_0xd8e9(){const _0x1969d7=a167_0x1c41,_0x3f1d58=[_0x1969d7(0x21b),'15px','opcionSnapshot',_0x1969d7(0xbd),_0x1969d7(0x11b),_0x1969d7(0x32b),_0x1969d7(0x197),'ram-text-info','1.10',_0x1969d7(0x118),'cancel_login_two',_0x1969d7(0x36d),_0x1969d7(0x2cb),'1.16.4',_0x1969d7(0x1d3),_0x1969d7(0x2ba),_0x1969d7(0x24f),_0x1969d7(0x1bc),_0x1969d7(0x1ff),_0x1969d7(0x393),_0x1969d7(0x1bf),_0x1969d7(0x3df),_0x1969d7(0x17c),_0x1969d7(0x199),_0x1969d7(0x1d0),_0x1969d7(0x158),_0x1969d7(0x1a4),_0x1969d7(0x382),_0x1969d7(0x2e1),_0x1969d7(0x280),_0x1969d7(0x212),_0x1969d7(0x2a6),_0x1969d7(0x1fd),_0x1969d7(0x23d),_0x1969d7(0x2ef),'error_downloading_version',_0x1969d7(0x182),'2YnQPAN','downloading_java',_0x1969d7(0x163),'./assets/images/icons/quilt.png','Downloaded\x20and\x20extracted\x20natives',_0x1969d7(0x3ee),_0x1969d7(0x1aa),_0x1969d7(0x267),'downloading_loader',_0x1969d7(0x27f),_0x1969d7(0x379),_0x1969d7(0x30d),_0x1969d7(0x295),_0x1969d7(0x31e),_0x1969d7(0x129),_0x1969d7(0x2bd),'is-info',_0x1969d7(0x35a),_0x1969d7(0x108),_0x1969d7(0x2cc),_0x1969d7(0x28e),_0x1969d7(0x2ed),_0x1969d7(0x36a),_0x1969d7(0x143),_0x1969d7(0x141),'find','Connecting\x20to\x20',_0x1969d7(0x318),_0x1969d7(0x354),_0x1969d7(0x2e4),_0x1969d7(0x36e),'pointer',_0x1969d7(0x1f2),_0x1969d7(0x209),_0x1969d7(0x110),_0x1969d7(0x8e),_0x1969d7(0x258),_0x1969d7(0x276),_0x1969d7(0x3d3),_0x1969d7(0x321),_0x1969d7(0x153),_0x1969d7(0x326),_0x1969d7(0x366),_0x1969d7(0x117),_0x1969d7(0x3a8),_0x1969d7(0xc4),_0x1969d7(0x313),'downloading_version',_0x1969d7(0x249),_0x1969d7(0x12c),_0x1969d7(0x3d6),'/.battly/instances',_0x1969d7(0x2b8),_0x1969d7(0x2f0),_0x1969d7(0x377),_0x1969d7(0x390),_0x1969d7(0x334),_0x1969d7(0x344),_0x1969d7(0xa2),_0x1969d7(0x1f4),_0x1969d7(0x3a5),_0x1969d7(0x39a),_0x1969d7(0x24b),_0x1969d7(0x2e6),'id_copied_correctly',_0x1969d7(0x37c),_0x1969d7(0x2f6),_0x1969d7(0x3ea),_0x1969d7(0xe7),_0x1969d7(0x9c),_0x1969d7(0x2f7),'#fff',_0x1969d7(0x367),_0x1969d7(0x3f6),'100',_0x1969d7(0x2a7),_0x1969d7(0x178),_0x1969d7(0x2ea),_0x1969d7(0x185),_0x1969d7(0x397),_0x1969d7(0xe2),_0x1969d7(0x27d),_0x1969d7(0x8d),_0x1969d7(0x155),_0x1969d7(0xf4),_0x1969d7(0x303),_0x1969d7(0x2e3),_0x1969d7(0x13b),'Progress',_0x1969d7(0x13c),_0x1969d7(0x2df),_0x1969d7(0x1b7),_0x1969d7(0xc0),'\x20creada.\x0a',_0x1969d7(0x1f0),_0x1969d7(0x1ee),_0x1969d7(0x28b),_0x1969d7(0x1bb),_0x1969d7(0x22b),'openExternal',_0x1969d7(0x188),_0x1969d7(0x15b),_0x1969d7(0x29e),'cmpack','1.15.1',_0x1969d7(0x3b3),'Guardar\x20logs',_0x1969d7(0x3e9),_0x1969d7(0x211),_0x1969d7(0x25a),_0x1969d7(0x160),_0x1969d7(0x190),_0x1969d7(0x3f3),_0x1969d7(0x385),_0x1969d7(0x1d9),_0x1969d7(0x2dd),_0x1969d7(0x39d),_0x1969d7(0x3cf),'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20version:\x20',_0x1969d7(0x1af),'...\x20[',_0x1969d7(0xb9),_0x1969d7(0x3e6),_0x1969d7(0x2b9),'.zip',_0x1969d7(0x347),'new_version_message','https://api.mojang.com/',_0x1969d7(0x10a),_0x1969d7(0x2be),_0x1969d7(0xa0),_0x1969d7(0x3be),_0x1969d7(0xe0),_0x1969d7(0x9a),_0x1969d7(0x364),'beta','open',_0x1969d7(0x3ae),_0x1969d7(0x14d),_0x1969d7(0x306),_0x1969d7(0x1fb),_0x1969d7(0x309),_0x1969d7(0x2bb),_0x1969d7(0x142),_0x1969d7(0x384),_0x1969d7(0xd3),_0x1969d7(0x3a9),'/.battly/battly/mods-internos/skins-forge.jar',_0x1969d7(0x292),'playing_in',_0x1969d7(0x38c),'textarea\x20is-info',_0x1969d7(0x327),_0x1969d7(0x36c),_0x1969d7(0x2b5),_0x1969d7(0x18f),'1208208uXmNWa',_0x1969d7(0x37a),_0x1969d7(0x232),_0x1969d7(0x277),_0x1969d7(0x30c),'getDate',_0x1969d7(0x3c6),_0x1969d7(0x293),_0x1969d7(0x247),_0x1969d7(0x1f7),_0x1969d7(0x16c),'java_text_info',_0x1969d7(0xba),_0x1969d7(0x3c0),_0x1969d7(0x2a2),_0x1969d7(0x11a),_0x1969d7(0x3aa),'174ywDWXM','Cuenta\x20encontrada\x20',_0x1969d7(0x325),_0x1969d7(0x361),_0x1969d7(0xe5),'create_instance',_0x1969d7(0x345),_0x1969d7(0x205),_0x1969d7(0x1b4),_0x1969d7(0xf9),_0x1969d7(0xdc),_0x1969d7(0x3c4),_0x1969d7(0x19a),_0x1969d7(0x175),_0x1969d7(0x3f0),'http://api.battlylauncher.com/api/capa/{USERNAME}.png',_0x1969d7(0x2e9),_0x1969d7(0x104),_0x1969d7(0x168),_0x1969d7(0x10e),_0x1969d7(0x14b),'january','1.14.1',_0x1969d7(0x98),'1.16',_0x1969d7(0x12b),_0x1969d7(0x396),_0x1969d7(0x14e),'/.battly/libraries/optifine/launchwrapper-of',_0x1969d7(0x2c9),'/mods/multijugador-forge.jar',_0x1969d7(0x111),'108643ahRelH',_0x1969d7(0x336),_0x1969d7(0x342),_0x1969d7(0x159),_0x1969d7(0x2db),_0x1969d7(0x140),_0x1969d7(0x20d),_0x1969d7(0x25c),_0x1969d7(0xf1),_0x1969d7(0x1ce),_0x1969d7(0xc3),_0x1969d7(0x32e),_0x1969d7(0x126),_0x1969d7(0x374),_0x1969d7(0xd9),_0x1969d7(0x27b),_0x1969d7(0x291),_0x1969d7(0x1fa),_0x1969d7(0x1e4),_0x1969d7(0x1da),'Data','reason',_0x1969d7(0xb4),_0x1969d7(0xed),_0x1969d7(0x9b),_0x1969d7(0x314),_0x1969d7(0x194),_0x1969d7(0x3d5),_0x1969d7(0x2ca),_0x1969d7(0x132),'text_access_logs_two','pipe',_0x1969d7(0x94),_0x1969d7(0x149),_0x1969d7(0x376),_0x1969d7(0x1ea),'opacity',_0x1969d7(0x157),_0x1969d7(0x398),'writeFileSync',_0x1969d7(0x349),_0x1969d7(0x2c0),_0x1969d7(0x2fc),'launcher',_0x1969d7(0x2b2),_0x1969d7(0x1e7),_0x1969d7(0x3bf),_0x1969d7(0x1c8),_0x1969d7(0x23c),_0x1969d7(0x36f),_0x1969d7(0x2de),_0x1969d7(0x383),_0x1969d7(0x2c8),_0x1969d7(0x115),_0x1969d7(0x24a),'download_version',_0x1969d7(0x3dd),'data',_0x1969d7(0x146),_0x1969d7(0x270),_0x1969d7(0x33e),_0x1969d7(0x346),_0x1969d7(0x287),_0x1969d7(0x14a),_0x1969d7(0xcf),'InitTheme',_0x1969d7(0xaa),_0x1969d7(0x3e5),_0x1969d7(0x1ed),_0x1969d7(0xf5),'news',_0x1969d7(0x2f3),_0x1969d7(0x17b),_0x1969d7(0xc5),_0x1969d7(0x39f),'https',_0x1969d7(0x138),_0x1969d7(0x10f),_0x1969d7(0x237),_0x1969d7(0x2ee),_0x1969d7(0x1b9),_0x1969d7(0x12e),_0x1969d7(0x2c1),_0x1969d7(0x14c),_0x1969d7(0x12d),'http://api.battlylauncher.com/api/skin/{USERNAME}.png',_0x1969d7(0xad),_0x1969d7(0x246),_0x1969d7(0x113),_0x1969d7(0xbe),_0x1969d7(0xdb),_0x1969d7(0x2eb),_0x1969d7(0xf8),_0x1969d7(0x2b0),_0x1969d7(0x256),'error_http','updateStatus',_0x1969d7(0x1b5),'/.battly/battly/launcher/forge',_0x1969d7(0x215),_0x1969d7(0xff),_0x1969d7(0x275),_0x1969d7(0x348),_0x1969d7(0x1c3),_0x1969d7(0x3c7),_0x1969d7(0x392),_0x1969d7(0x3ce),_0x1969d7(0x35c),_0x1969d7(0x37f),_0x1969d7(0x2a5),_0x1969d7(0x122),_0x1969d7(0x31a),_0x1969d7(0x231),'THIS\x20IS\x20NOT\x20A\x20ERROR',_0x1969d7(0x1f8),_0x1969d7(0xd0),'marginLeft',_0x1969d7(0x1dd),'accept',_0x1969d7(0xef),_0x1969d7(0x289),'play-btn','/.battly/battly',_0x1969d7(0x28c),_0x1969d7(0x39c),_0x1969d7(0x15e),_0x1969d7(0x2f5),_0x1969d7(0x391),_0x1969d7(0x216),_0x1969d7(0x114),'ausente','[MC]\x20',_0x1969d7(0x165),_0x1969d7(0x224),_0x1969d7(0x365),_0x1969d7(0x204),_0x1969d7(0x302),_0x1969d7(0x8f),_0x1969d7(0x30a),_0x1969d7(0x221),'button',_0x1969d7(0xb8),_0x1969d7(0x119),_0x1969d7(0x150),_0x1969d7(0x3d2),_0x1969d7(0x1e6),_0x1969d7(0x2e8),'/.battly/temp','style',_0x1969d7(0x24c),'mojang_copyright',_0x1969d7(0x3b4),_0x1969d7(0x1ca),'news_battly','listaDeVersiones',_0x1969d7(0x16b),_0x1969d7(0x311),_0x1969d7(0x2c3),'✅\x20Carpeta\x202.2\x20creada.\x0a',_0x1969d7(0x121),_0x1969d7(0x12a),_0x1969d7(0x107),'[ERROR]\x20',_0x1969d7(0x39e),_0x1969d7(0xfe),'./assets/images/icons/fabric.png',_0x1969d7(0x298),_0x1969d7(0xb6),_0x1969d7(0xa9),'1.8.7','instancias-btn',_0x1969d7(0x19c),'<span><i\x20class=\x22fa-solid\x20fa-folder-minus\x22></i>\x20',_0x1969d7(0xbc),'access_logs_denied',_0x1969d7(0x262),'replace','card-content',_0x1969d7(0x1de),_0x1969d7(0xcc),_0x1969d7(0xd4),_0x1969d7(0x3d0),'rmdirSync',_0x1969d7(0x3eb),'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20versionType:\x20','selectBeta','file-cta',_0x1969d7(0xe1),_0x1969d7(0x1c1),_0x1969d7(0x242),'UpdateStatus',_0x1969d7(0x315),_0x1969d7(0x2ce),_0x1969d7(0x38e),_0x1969d7(0x26b),_0x1969d7(0x227),_0x1969d7(0x34f),'task','1.16.5',_0x1969d7(0xd2),_0x1969d7(0x2a4),'new-notification',_0x1969d7(0xcd),_0x1969d7(0x2f9),_0x1969d7(0x1a2),_0x1969d7(0x191),_0x1969d7(0x23b),'main-window-progress-reset',_0x1969d7(0xd5),_0x1969d7(0x181),'/battly/launcher/forge',_0x1969d7(0x350),'fa-solid\x20fa-spinner\x20fa-spin-pulse\x20fa-sm','.\x0a🔄\x20','getEntries',_0x1969d7(0x3bc),'remaining',_0x1969d7(0x254),'.errores',_0x1969d7(0x208),_0x1969d7(0x2ff),'random',_0x1969d7(0x1b0),_0x1969d7(0x167),_0x1969d7(0x35f),_0x1969d7(0x10c),'Fabric',_0x1969d7(0x37d),_0x1969d7(0x19b),_0x1969d7(0x3a2),_0x1969d7(0x378),_0x1969d7(0x27e),_0x1969d7(0x3b9),_0x1969d7(0x207),_0x1969d7(0xde),_0x1969d7(0x30b),_0x1969d7(0x3b7),'⏩\x20La\x20carpeta\x202.1\x20ya\x20existe.\x20Saltando...\x0a','client',_0x1969d7(0x9d),_0x1969d7(0x1e3),_0x1969d7(0x156),_0x1969d7(0x279),_0x1969d7(0x90),_0x1969d7(0x381),_0x1969d7(0x1a1),_0x1969d7(0x2d1),_0x1969d7(0x112),_0x1969d7(0x335),'you-have-a-total',_0x1969d7(0x8a),'more\x20options',_0x1969d7(0x2ae),'\x20CMPack',_0x1969d7(0x20a),_0x1969d7(0x3d1),_0x1969d7(0xbb),'installing_minecraft_files',_0x1969d7(0x2a8),'closeStartVersion',_0x1969d7(0x1be),'promisify',_0x1969d7(0x371),'java_settings',_0x1969d7(0x134),'/.battly/libraries/optifine/launchwrapper-of/2.3/launchwrapper-of-2.3.jar','🔄\x20Creando\x20carpeta\x202.2...\x0a',_0x1969d7(0x15c),_0x1969d7(0x3b1),_0x1969d7(0xee),'\x0a\x20----------',_0x1969d7(0x196),'resize-background','opcionNormal',_0x1969d7(0x2b4),_0x1969d7(0x97),'save-playlist',_0x1969d7(0x220),'/.battly/runtime/jre-17.0.8-win32/bin/java.exe','radioQuilt',_0x1969d7(0x3e4),_0x1969d7(0x360),_0x1969d7(0x3db),_0x1969d7(0x3de),_0x1969d7(0x2e0),_0x1969d7(0x139),_0x1969d7(0xe3),_0x1969d7(0x239),_0x1969d7(0x264),_0x1969d7(0x2f8),_0x1969d7(0xa7),'playing_now',_0x1969d7(0x210),_0x1969d7(0x9e),'subtitle',_0x1969d7(0x203),_0x1969d7(0x19f),'<span>',_0x1969d7(0x18d),'background-image-text',_0x1969d7(0x105),_0x1969d7(0x39b),'parse',_0x1969d7(0x10b),_0x1969d7(0x3bb),_0x1969d7(0x356),_0x1969d7(0x32d),_0x1969d7(0x180),_0x1969d7(0x263),_0x1969d7(0x300),_0x1969d7(0x2bc),'/versions','3920028TWDqWw',_0x1969d7(0xb3),_0x1969d7(0x174),'versionesQuilt',_0x1969d7(0x116),_0x1969d7(0x3cb),_0x1969d7(0x184),'resize-image-text',_0x1969d7(0x3ad),_0x1969d7(0x192),'42465WupdYM',_0x1969d7(0x253),_0x1969d7(0x1b1),_0x1969d7(0x17a),_0x1969d7(0x2aa),_0x1969d7(0x1fc),_0x1969d7(0x186),'Minecraft\x20has\x20crashed!',_0x1969d7(0xfd),_0x1969d7(0x31f),'offlineMode',_0x1969d7(0x222),_0x1969d7(0x332),_0x1969d7(0x148),_0x1969d7(0x29c),'button\x20is-info',_0x1969d7(0x2c7),_0x1969d7(0x316),_0x1969d7(0x35b),'copy','downloading_natives',_0x1969d7(0x1e2),_0x1969d7(0x1ec),'No\x20es\x20forge\x20ni\x20fabric',_0x1969d7(0x130),_0x1969d7(0x255),_0x1969d7(0x3e2),_0x1969d7(0x323),_0x1969d7(0x3c9),_0x1969d7(0x34c),_0x1969d7(0x1a5),'customize-background','minecraft-launcher-core',_0x1969d7(0xb5),_0x1969d7(0x169),'/icon.png',_0x1969d7(0x172),_0x1969d7(0x1cf),_0x1969d7(0x229),_0x1969d7(0x337),'./assets/images/icons/forge.png',_0x1969d7(0x2d4),_0x1969d7(0x310),_0x1969d7(0xda),_0x1969d7(0x324),'/.battly/battly/launcher/config-launcher','⏩\x20La\x20carpeta\x20OptiFine\x20ya\x20existe.\x20Saltando...\x0a','label',_0x1969d7(0x1ac),'friends-volver-btn',_0x1969d7(0x198),'author',_0x1969d7(0x16f),_0x1969d7(0x233),'change',_0x1969d7(0x265),'september',_0x1969d7(0x26d),_0x1969d7(0x241),_0x1969d7(0x21c),_0x1969d7(0x320),_0x1969d7(0xcb),_0x1969d7(0x317),_0x1969d7(0x1a7),'-forge',_0x1969d7(0x28f),_0x1969d7(0x1d8),_0x1969d7(0x10d),_0x1969d7(0x2d8),_0x1969d7(0x100),_0x1969d7(0x2ab),'search_song',_0x1969d7(0x29f),_0x1969d7(0x1f3),'username',_0x1969d7(0x1b2),_0x1969d7(0x31c),_0x1969d7(0x21f),_0x1969d7(0x2d6),_0x1969d7(0x3f1),_0x1969d7(0x133),'game_url',_0x1969d7(0x352),_0x1969d7(0x2af),'october','customize_background',_0x1969d7(0x2a3),_0x1969d7(0x297),_0x1969d7(0x20c),_0x1969d7(0x230),_0x1969d7(0x395),_0x1969d7(0x2bf),'Launch',_0x1969d7(0x257),'error_detected_three',_0x1969d7(0xfa),_0x1969d7(0x23f),_0x1969d7(0xd6),'obtener-socketid',_0x1969d7(0x250),_0x1969d7(0x271),_0x1969d7(0x3a3),'https://raw.githubusercontent.com/1ly4s0/battlylauncher-optifine/main/libraries/optifine/launchwrapper-of/2.3/launchwrapper-of-2.3.jar',_0x1969d7(0x25e),_0x1969d7(0x353),'length',_0x1969d7(0x27a),_0x1969d7(0x286),_0x1969d7(0x29d),_0x1969d7(0x1f5),'1.16.2','install_modpack',_0x1969d7(0x223),_0x1969d7(0x24d),_0x1969d7(0x30e),_0x1969d7(0x2c6),_0x1969d7(0x162),_0x1969d7(0xb7),_0x1969d7(0x3a0),_0x1969d7(0x351),_0x1969d7(0x3c1),'224JtKXJJ',_0x1969d7(0x2f1),_0x1969d7(0x2ac),'119708egxXij',_0x1969d7(0x147),_0x1969d7(0x2cf),_0x1969d7(0x217),'showskin_userinfo_btn','<span><i\x20class=\x22fab\x20fa-discord\x22></i>\x20Discord</span>',_0x1969d7(0x9f),_0x1969d7(0x301),_0x1969d7(0x251),'estimated_time_not_available',_0x1969d7(0x18c),_0x1969d7(0x89),'progressBar1_',_0x1969d7(0x1b3),_0x1969d7(0x16a),'openPath',_0x1969d7(0x3e1),_0x1969d7(0x296),_0x1969d7(0x2e7),'Patch',_0x1969d7(0x1e9),_0x1969d7(0x1e0),_0x1969d7(0x11e),_0x1969d7(0x3cc),'download-btn','minecraft_started_correctly_body','keep_battly_opened',_0x1969d7(0x123),_0x1969d7(0x339),_0x1969d7(0x38d),_0x1969d7(0x1d5),_0x1969d7(0x218),_0x1969d7(0x13f),_0x1969d7(0x226),_0x1969d7(0x206),_0x1969d7(0x2ad),_0x1969d7(0x13d),_0x1969d7(0x245),_0x1969d7(0x1ba),_0x1969d7(0x34d),'Instalando\x20skins-forge.jar','versionImg',_0x1969d7(0x2e2),'/.battly/mods/skins.jar','placeholder','download-status',_0x1969d7(0x1c7),_0x1969d7(0xdd),_0x1969d7(0x21d),_0x1969d7(0x2b3),'Error\x20encontrado',_0x1969d7(0x363),_0x1969d7(0x238),_0x1969d7(0x12f),'error_detected_two',_0x1969d7(0x308),_0x1969d7(0x3ef),_0x1969d7(0x29a),_0x1969d7(0x1a9),_0x1969d7(0x38a),'middle',_0x1969d7(0x200),_0x1969d7(0x380),'20hEsWMN',_0x1969d7(0xea),'friends',_0x1969d7(0x322),_0x1969d7(0x3a7),_0x1969d7(0x8b),'icon',_0x1969d7(0x25d),_0x1969d7(0xbf),_0x1969d7(0x25f),_0x1969d7(0x19e),_0x1969d7(0x3a1),_0x1969d7(0x214),'launcher_profiles.json',_0x1969d7(0x2f4),_0x1969d7(0x154),'Launcher','/.battly/battly/launcher/mc-assets',_0x1969d7(0x2d2),_0x1969d7(0x17f),_0x1969d7(0x26c),_0x1969d7(0x1f1),_0x1969d7(0xaf),_0x1969d7(0x387),'status-battly',_0x1969d7(0x3f4),_0x1969d7(0x341),'1970-01-02T00:00:00.000Z','Launching\x20with\x20arguments',_0x1969d7(0x235),_0x1969d7(0x26e),_0x1969d7(0x33d),_0x1969d7(0x1dc),'java.lang.ClassCastException','dataDirectory',_0x1969d7(0xf6),'deleting_temp_files','/.battly/runtime/jre-17.0.1.12.1-win32/bin/java.exe','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22news-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22header-text\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22title_\x22>No\x20hay\x20noticias\x20disponibles\x20actualmente.</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22news-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bbWrapper\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>Puedes\x20seguir\x20todas\x20las\x20noticias\x20relacionadas\x20con\x20el\x20servidor\x20aquí.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>',_0x1969d7(0x1c6),_0x1969d7(0x96),'max',_0x1969d7(0x394),_0x1969d7(0x101),_0x1969d7(0x3c2),_0x1969d7(0x127),_0x1969d7(0x152),'floor',_0x1969d7(0x37b),_0x1969d7(0x3ed),'main-window-progress_','Progreso',_0x1969d7(0x2c4),'Close',_0x1969d7(0x343),'add-friends','<span><i\x20class=\x22fa-solid\x20fa-square-up-right\x22></i>\x20',_0x1969d7(0x312),_0x1969d7(0xa8),_0x1969d7(0xeb),_0x1969d7(0x1ab),_0x1969d7(0x2dc),_0x1969d7(0x3b5),_0x1969d7(0xd8),_0x1969d7(0x2d9),_0x1969d7(0x3ba),_0x1969d7(0x31d),_0x1969d7(0x368),'buttons_color',_0x1969d7(0x284),_0x1969d7(0x3af),'VersionsMojang','friends_list_text',_0x1969d7(0x1ef),_0x1969d7(0x34a),'database',_0x1969d7(0x29b),_0x1969d7(0x2e5),'color',_0x1969d7(0x3cd),_0x1969d7(0x33b),_0x1969d7(0x2a1),_0x1969d7(0xca),_0x1969d7(0x285),_0x1969d7(0x1a0),_0x1969d7(0x1d7),'#ff3860',_0x1969d7(0xa6),'\x20ya\x20existe.\x20Saltando...\x0a',_0x1969d7(0x2da),_0x1969d7(0x170),_0x1969d7(0x2d7),_0x1969d7(0x3c3),_0x1969d7(0x136),'selectSnapshot',_0x1969d7(0x386),_0x1969d7(0x1bd),_0x1969d7(0x1d6),'fontWeight',_0x1969d7(0x2cd),_0x1969d7(0x14f),_0x1969d7(0x177),_0x1969d7(0x22a),'temp_files_deleted_successfully',_0x1969d7(0x8c),_0x1969d7(0xce),_0x1969d7(0x1cd),'new_version',_0x1969d7(0x28d),_0x1969d7(0x330),'Extrayendo\x20ModPack...\x20','copyFileSync',_0x1969d7(0x11f),_0x1969d7(0x16e),'8fwqYJL',_0x1969d7(0xec),_0x1969d7(0x328),_0x1969d7(0x2fe),_0x1969d7(0x18a),_0x1969d7(0x13a),_0x1969d7(0x32c),_0x1969d7(0x144),'july','battly_settings_information',_0x1969d7(0x166),_0x1969d7(0x3e7),'https://files.minecraftforge.net/net/minecraftforge/forge/maven-metadata.json',_0x1969d7(0x11c),_0x1969d7(0x23e),_0x1969d7(0xc7),_0x1969d7(0x22e),_0x1969d7(0x305),_0x1969d7(0x272),'battly_theme',_0x1969d7(0x34e),_0x1969d7(0x26a),_0x1969d7(0x282),_0x1969d7(0x36b),'you_need_select_version','split','battly-settings-information','Lo\x20detecta\x20como\x20fabric',_0x1969d7(0x2c2),'day',_0x1969d7(0x179),_0x1969d7(0xd1),_0x1969d7(0xa4),_0x1969d7(0x3a6),_0x1969d7(0x91),_0x1969d7(0x18b),'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22news-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22header-text\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22title_\x22>'];return a167_0xd8e9=function(){return _0x3f1d58;},a167_0xd8e9();}const {Client,Status}=require(a167_0x241423(0x21b)),{Launch,Mojang}=require(a167_0x1abf9b(0x426)),{ipcRenderer,ipcMain,shell}=require(a167_0x1541f3(0x402)),pkg=require(a167_0x1abf9b(0x402)),Swal=require(a167_0x1abf9b(0x417)),Toast=Swal[a167_0x1541f3(0x2b2)]({'toast':!![],'position':a167_0x1abf9b(0x142),'showConfirmButton':![],'timer':0x1388,'timerProgressBar':!![],'didOpen':_0x7b8055=>{const _0x40d4b5=a167_0x1abf9b;_0x7b8055[_0x40d4b5(0x1c6)](_0x40d4b5(0x2b6),Swal[_0x40d4b5(0x3da)]),_0x7b8055[_0x40d4b5(0x1c6)](_0x40d4b5(0x436),Swal[_0x40d4b5(0x4b6)]);}});function ShowPanelError(_0x324d93){const _0x20c57c=a167_0x241423,_0x5718c2=a167_0x1541f3,_0x2aa381=a167_0x1abf9b;let _0x79ee02=new Audio(_0x2aa381(0x2f9));_0x79ee02[_0x2aa381(0x4bb)](),ipcRenderer[_0x20c57c(0x2f7)](_0x2aa381(0x4c5),{'title':_0x5718c2(0x39e),'body':_0x2aa381(0x31a)});const _0x41111d=document[_0x2aa381(0x134)](_0x2aa381(0x291));_0x41111d[_0x2aa381(0x1f6)]=_0x2aa381(0x3a5),_0x41111d[_0x5718c2(0x313)][_0x2aa381(0x22d)]='4';const _0x16c966=document[_0x5718c2(0x3c5)](_0x2aa381(0x291));_0x16c966[_0x2aa381(0x1f6)]=_0x2aa381(0x218),_0x41111d[_0x2aa381(0x30d)](_0x16c966);const _0x39844e=document[_0x2aa381(0x134)](_0x2aa381(0x291));_0x39844e[_0x5718c2(0x407)]=_0x2aa381(0x17d),_0x39844e[_0x2aa381(0x20b)][_0x2aa381(0x267)]=_0x2aa381(0x169),_0x41111d[_0x5718c2(0x21c)](_0x39844e);const _0x5c8485=document[_0x2aa381(0x134)](_0x2aa381(0x392));_0x5c8485[_0x5718c2(0x407)]=_0x5718c2(0x558),_0x5c8485[_0x2aa381(0x20b)][_0x2aa381(0x267)]=_0x2aa381(0x169),_0x39844e[_0x2aa381(0x30d)](_0x5c8485);const _0x57f8b4=document[_0x2aa381(0x134)]('p');_0x57f8b4[_0x2aa381(0x1f6)]=_0x2aa381(0x37b),_0x57f8b4[_0x2aa381(0x20b)][_0x2aa381(0x4d4)]=_0x2aa381(0x361),_0x57f8b4[_0x5718c2(0x484)]=_0x2aa381(0x3e3),_0x5c8485[_0x2aa381(0x30d)](_0x57f8b4);const _0x4f777f=document[_0x2aa381(0x134)](_0x2aa381(0x318));_0x4f777f[_0x2aa381(0x1f6)]=_0x5718c2(0x286),_0x4f777f[_0x2aa381(0x20b)][_0x2aa381(0x267)]=_0x2aa381(0x169),_0x4f777f[_0x2aa381(0x20b)][_0x2aa381(0x4d4)]=_0x2aa381(0x361),_0x39844e[_0x5718c2(0x21c)](_0x4f777f);const _0x155edd=document[_0x2aa381(0x134)]('p');_0x155edd[_0x2aa381(0x187)]=_0x2aa381(0x29c),_0x4f777f[_0x2aa381(0x30d)](_0x155edd);const _0x4196cd=document[_0x2aa381(0x134)](_0x2aa381(0x291));_0x4196cd[_0x2aa381(0x1f6)]=_0x2aa381(0x339),_0x4f777f[_0x2aa381(0x30d)](_0x4196cd);const _0x2477a4=document[_0x2aa381(0x134)](_0x2aa381(0x392));_0x2477a4[_0x2aa381(0x1f6)]=_0x2aa381(0x480),_0x4196cd[_0x2aa381(0x30d)](_0x2477a4);const _0x5fcc24=document[_0x2aa381(0x134)]('p');_0x5fcc24[_0x5718c2(0x407)]=_0x2aa381(0x425),_0x5fcc24[_0x2aa381(0x187)]=_0x2aa381(0x38a),_0x2477a4[_0x2aa381(0x30d)](_0x5fcc24);const _0x1b6317=document[_0x2aa381(0x134)](_0x2aa381(0x291));_0x1b6317[_0x2aa381(0x1f6)]=_0x2aa381(0x1d0),_0x1b6317['id']=_0x2aa381(0x4e1),_0x4196cd[_0x2aa381(0x30d)](_0x1b6317);const _0xc6142f=document[_0x20c57c(0x201)](_0x2aa381(0x472));_0xc6142f[_0x2aa381(0x1f6)]=_0x2aa381(0x14e),_0xc6142f[_0x2aa381(0x23a)]=!![],_0xc6142f[_0x2aa381(0x421)]='10',_0xc6142f[_0x20c57c(0x23c)]='50',_0xc6142f[_0x2aa381(0x187)]=_0x324d93,_0x1b6317[_0x20c57c(0x3ab)](_0xc6142f);const _0x3be1da=document[_0x2aa381(0x134)](_0x2aa381(0x440));_0x3be1da[_0x2aa381(0x1f6)]=_0x5718c2(0x2d8),_0x3be1da[_0x2aa381(0x20b)][_0x2aa381(0x267)]=_0x2aa381(0x169),_0x39844e[_0x20c57c(0x3ab)](_0x3be1da);const _0x166b41=document[_0x2aa381(0x134)](_0x2aa381(0x17e));_0x166b41[_0x2aa381(0x1f6)]=_0x5718c2(0x1cd),_0x166b41[_0x2aa381(0x187)]=_0x2aa381(0x26d),_0x166b41[_0x2aa381(0x1c6)](_0x2aa381(0x3e6),()=>{const _0x3bfc0a=_0x5718c2;_0x41111d[_0x3bfc0a(0x2af)]();});const _0x25133d=document[_0x2aa381(0x134)](_0x2aa381(0x17e));_0x25133d[_0x2aa381(0x1f6)]=_0x2aa381(0x2d5),_0x25133d[_0x2aa381(0x187)]=_0x2aa381(0x230),_0x25133d[_0x5718c2(0x480)](_0x5718c2(0x1c9),()=>{const _0x2c71f8=_0x20c57c,_0x35c50e=_0x5718c2,_0x1c7af6=_0x2aa381;let _0x523ab3=document[_0x1c7af6(0x2e1)](_0x1c7af6(0x35c))[_0x1c7af6(0x284)],_0x483c05=path[_0x1c7af6(0x42e)](__dirname,_0x1c7af6(0x243));fs[_0x35c50e(0x4db)](_0x483c05,_0x523ab3),shell[_0x2c71f8(0x286)](_0x483c05);});const _0xc417b7=document[_0x2aa381(0x134)](_0x2aa381(0x17e));_0xc417b7[_0x2aa381(0x1f6)]=_0x2aa381(0x2d5),_0xc417b7[_0x5718c2(0x480)](_0x20c57c(0x2bd),()=>{const _0x56c799=_0x2aa381;shell[_0x56c799(0x173)](_0x56c799(0x4c0));}),_0xc417b7[_0x2aa381(0x487)]=_0x2aa381(0x166),_0x3be1da[_0x2aa381(0x30d)](_0x166b41),_0x3be1da[_0x2aa381(0x30d)](_0x25133d),_0x3be1da[_0x2aa381(0x30d)](_0xc417b7),_0x41111d[_0x2aa381(0x30d)](document[_0x5718c2(0x3c5)]('br')),document[_0x20c57c(0x34d)][_0x2aa381(0x30d)](_0x41111d);}import{LoadAPI}from'../utils/loadAPI.js';const fetch=require(a167_0x1abf9b(0x2b7));let offlineMode=![];function a167_0x1705(){const _0x50acd4=['La\x20versión\x20seleccionada\x20es\x20','selectOptiFine','innerHTML','Es\x201.8','Nuevos\x20servidores\x20desde\x20la\x20configuración\x20de\x20Battly:','/.battly/libraries/optifine/OptiFine/','WaitData','<span><i\x20class=\x22fa-solid\x20fa-folder-open\x22></i>\x20','cloneNode','promoted_servers','La\x20selected\x20version\x20es\x20','Legacy','\x20ya\x20existe\x20en\x20servers.dat.\x20Ignorando\x20el\x20servidor.','#00d1b2','${this.lang.playing_in}\x20','vanilla','.bottom_bar_settings','enviarSocketID','is-active','1.11.2','starting_download_client_can_take','files_extracted_successfully','yes_delete','Error\x20durante\x20la\x20descarga:','type','online\x20off','versionesOptiFine','/.battly/libraries/optifine/launchwrapper-of/2.3','Es\x201.8,\x20el\x20asset\x20es:','Forge\x20patcher\x20exited\x20with\x20code\x201','\x22\x20img=\x22','radioFabric','\x20MB/s)','1.15','setItem','418008apFNmI','textarea\x20errores\x20is-info\x20is-family-code','status_battly','mkdir','setAttribute','loader','info','/battly/mods-internos/skins-forge.jar','play','new-status-discord-jugando','mostrarskin-userinfo-btn','Downloaded\x20Minecraft\x20version\x20jar','/.battly/mods/skins-forge.jar','show_requests','version','#444444','reset_background','utf-8','1.8.5','/battly/launcher/config-launcher','mouseenter','nombre-de-cancion','getLogsAnterior','🔄\x20Creando\x20carpeta\x20launchwrapper-of...\x0a','Downloading','✅\x20Carpeta\x20OptiFine\x20creada.\x0a','options','1.9.1','title','reiniciar-versiones','downloading','opcion','bottom_bar_text','Quilt','includes','version_java_error','old_alpha','3pgwPme','/CustomSkinLoader/CustomSkinLoader.json','content','zIndex','checking_instance','/instance.json','Archivo\x20JSON\x20descargado:\x20','Clientes','6387661tClbMD','username_text','Poppins','build','overflow','finish','music-btn','aria-label','theme_btn','extractEntryTo','is-48x48','instance_created_correctly','src','500','Es\x20labymod,\x20el\x20asset\x20es:','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22select\x20is-link\x22\x20id=\x22fabric\x22\x20style=\x22width:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22selectFabric\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22versionesForge\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>','path','battly_theme_text','#36b030','getItem','settings','Jugando\x20a\x20','1.8.1','Connecting\x20to','fill_all_fields','select_the_version_that_you_want','return-btn','disabled','</span></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','appendChild','is-danger','/.battly','title_access_logs','Error\x20al\x20iniciar\x20Minecraft','ruta-java-input','init','save_logs','.bottom_bar','Cerrar','result','loaderVersion','account-information','querySelector','264836NOERey','none','Java\x20no\x20encontrado.\x20Haz\x20click\x20aquí\x20para\x20buscarlo.','change','initStatusServer','Verificando\x20archivos...','🔄\x20Creando\x20carpeta\x20','Miembros_Online','[EXTRACT]\x20','Aceptar','./assets/js/libs/mc/Index','1.14','Es\x20forge','launcher-btn','.select-selected\x20span','25px','Battly_API_Estado','✅\x20Archivo\x20JAR\x20de\x20launchwrapper-of-2.2\x20descargado:\x20','BotonUnirseServidorDiscord','main-window-progress-loading','error_detected_four','./assets/js/libs/sweetalert/sweetalert2.all.min','./assets/images/icons/optifine.png','336927ynKtsG','latest','There\x20is\x20insufficient\x20memory\x20for\x20the\x20Java\x20Runtime\x20Environment\x20to\x20continue.','darwin','modal-card-foot','No\x20se\x20ha\x20podido\x20leer\x20el\x20archivo\x20instance.json','https://google.com','ram-btn','starting_music','-OptiFine','reproducir-btn','extract','img','\x20-\x20','-fabric','fa-angle-down','5px','Es\x20extra\x20+\x20','6979505fIdmSt','.news-list','57ZjRQYI','getdate','Java','-quilt','1.16.1','choose_fabric_version','🔄\x20Descargando\x20archivos...','february','<span\x20class=\x22red\x22>','selectFabric','1.13','2164338JFsqHc','false','🔄\x20Descargando\x20archivos\x20de\x20Minecraft...','main-window-progress','borderRadius','/mods/multijugador-fabric.jar','ByLastPlayed','<i\x20class=\x22fas\x20fa-download\x22></i>\x201.20.1','bottom_bar_opacity','downlaodUrl','display','playing_now_body','selectAlpha','Error\x20al\x20iniciar\x20Minecraft.\x20Error\x20desconocido.\x20Vuelve\x20a\x20iniciar\x20Minecraft.\x20[ERROR:\x207]\x20\x0aError:\x20','delete-and-new-status-discord','radioForge','/battly/mods-internos/multijugador-fabric.jar','getFullYear','cargarSolicitudAmistad','/.battly/mods/multijugador-forge.jar','classList','scrollTop','name','card-footer','show-playlists','1.10.2','className','buttons-color','instance_description','La\x20versión\x20real\x20es:\x20','type_of_version','checked','win32','choose_quilt_version','/battly/mods-internos/skins.jar','🔄\x20Creando\x20carpeta\x20OptiFine...\x0a','Error\x20al\x20procesar\x20el\x20archivo\x20NBT:','Los\x20nuevos\x20servidores\x20son:\x20','textInfoStatus','66416519ibEqGF','Conectando\x20a\x20','extracting_loader','Launching\x20wrapped\x20minecraft','welcome','getElementById','content-length','/.battly/versions','my_accounts','versions','auto','send','java-btn','1.14.2','style','\x20y\x20el\x20archivo\x20es\x20','/battly/mods-internos/skins-forge-new.jar','🔄\x20Descargando\x20archivo\x20JAR\x20de\x20OptiFine...\x0a','version_list_updated','select','<span><i\x20class=\x22fa-solid\x20fa-cloud-arrow-down\x22></i>\x20','Error\x20al\x20abrir\x20Minecraft','instance_name','playlists','La\x20versión\x20no\x20está\x20en\x20la\x20lista.','1.13.2','🔄\x20Descargando\x20archivo\x20launchwrapper\x202.2...\x0a','readFileSync','installing_java','unlinkSync','addEventListener','5ZxQjqJ','#3e8ed0','your_unique_id_is','platform','14.15','input_buscar_mods','allow','of_ram_disponible','1.8.4','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ESTO\x20ES\x20IMPORTANTE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20version:\x20','mouseleave','100','ausente','friends-btn','minecraft_started_correctly','extra','</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22versionesQuilt\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>','background-img','accounts-selected','are_you_sure_text','substring','createWriteStream','✅\x20Carpeta\x202.1\x20creada.\x0a','Failed\x20to\x20start\x20du<e\x20to\x20TypeError','add-account-text','cursor','add_account_text','java-path','/.battly/CustomSkinLoader/CustomSkinLoader.json','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22news-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bbWrapper\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>','theme-color','/.battly/mods/multijugador-fabric.jar','select_a_version','open_instance','now','extracting','/battlylauncher/usuarios_online','installing_loader','162raVgvL','...\x20','keep-battly-opened','alt','card-header','/.battly/versions/','.jar','carga-de-versiones','theme-btn','close','block','error_detected_one','media','is-32x32','1.12.2','section','some','lang','52714CJggJg','get','stringify','/.battly/battly/mods-internos/skins-forge-new.jar','release','existsSync','/battly/launcher/mc-assets','Descargando...\x20','screen','accounts_btn','inheritsFrom','querySelectorAll','icon','config','dataDirectory','El\x20archivo\x20servers.dat\x20ha\x20sido\x20actualizado\x20con\x20éxito.','959084fvqyJl','Error:','patch','quilt','downloading_client','✅\x20Archivo\x20JAR\x20de\x20launchwrapper-of-2.3\x20descargado:\x20','.btn','\x0a<label\x20class=\x22radio\x22>\x0a\x20\x20<input\x20type=\x22radio\x22\x20name=\x22option\x22\x20value=\x22vanilla\x22>\x0a\x20\x20Vanilla\x0a</label>\x0a<label\x20class=\x22radio\x22>\x0a\x20\x20<input\x20type=\x22radio\x22\x20name=\x22option\x22\x20value=\x22fabric\x22>\x0a\x20\x20Fabric\x0a</label>\x0a<label\x20class=\x22radio\x22>\x0a\x20\x20<input\x20type=\x22radio\x22\x20name=\x22option\x22\x20value=\x22forge\x22>\x0a\x20\x20Forge\x0a</label>\x0a<label\x20class=\x22radio\x22>\x0a\x20\x20<input\x20type=\x22radio\x22\x20name=\x22option\x22\x20value=\x22quilt\x22>\x0a\x20\x20Quilt\x0a</label>\x0a<label\x20class=\x22radio\x22>\x0a\x20\x20<input\x20type=\x22radio\x22\x20name=\x22option\x22\x20value=\x22optifine\x22>\x0a\x20\x20OptiFine\x0a</label>\x0a\x0a<label\x20class=\x22radio\x22>\x0a\x20\x20<input\x20type=\x22radio\x22\x20name=\x22option\x22\x20value=\x22clientes\x22>\x0a\x20\x20Clients\x0a</label>\x0a<br>\x0a<br>\x0a<div\x20id=\x22tipoDeVersiones\x22>\x0a<div\x20id=\x22divNormal\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22radio\x22\x20id=\x22opcionNormal\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22radio\x22\x20name=\x22opcion\x22\x20value=\x22normal\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Normal\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22select\x20is-link\x22\x20id=\x22normal\x22\x20style=\x22width:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22selectNormal\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22divSnapshot\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22radio\x22\x20id=\x22opcionSnapshot\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22radio\x22\x20name=\x22opcion\x22\x20value=\x22snapshot\x22>\x20Snapshot\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22select\x20is-link\x22\x20id=\x22snapshot\x22\x20style=\x22width:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22selectSnapshot\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22divBeta\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22radio\x22\x20id=\x22opcionBeta\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22radio\x22\x20name=\x22opcion\x22\x20value=\x22beta\x22>\x20Beta\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22select\x20is-link\x22\x20id=\x22beta\x22\x20style=\x22width:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22selectBeta\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22divAlpha\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22radio\x22\x20id=\x22opcionAlpha\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22radio\x22\x20name=\x22opcion\x22\x20value=\x22alpha\x22>\x20Alpha\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22select\x20is-link\x22\x20id=\x22alpha\x22\x20style=\x22width:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22selectAlpha\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22versionesFabric\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>','modal-card-title','old_beta','main-window-show','input\x20is-info','✅\x20Archivos\x20extraídos\x20correctamente','fas','Forge','...\x20(','in_the_menu','Instancias','start_minecraft_text','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ESTO\x20ES\x20IMPORTANTE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20versionNumber:\x20','/.battly/battly/mods-internos','backgroundImage','/.battly/battly/mods-internos/skins.jar','axios','ram_btn','rows','1.14.1','concat','set_background_text','Mojang','1.9.3','restablecer-fondo','.save-tabs-btn','🔄\x20Descargando\x20archivo\x20launchwrapper\x202.1...\x0a','cerrar-userinfo-btn','Si\x20hay\x20java\x20path','🔄\x20Creando\x20carpeta\x202.3...\x0a','Es\x20vanilla\x20+\x20','obtenerLogs','battly_settings','downloading_instance','Solicitudes','No\x20es\x20extra,\x20el\x20asset\x20es:','footer','Instalando\x20skins-forge-new.jar','node-fetch','🔄\x20Descargando\x20archivo\x20launchwrapper\x202.3...\x0a','imgUrl','UpdateStatus','fas\x20fa-cloud-upload-alt','Es\x20fabric','password','razon','search_mods','preparing_instance','/versions/','❌\x20Error\x20en\x20la\x20solicitud\x20HTTP:\x20','files','march','1.9.2','opacity-1','VersionsMojang','Extract','/.battly/libraries/optifine','operative','createTextNode','toString','Ads','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22date\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22day\x22>','</option>','GetConfig','initLaunch','Es\x20fabric\x20+\x20','La\x20versión\x20es','1.8.3','card-header-title','https://dl.labymod.net/capes/{STANDARD_UUID}','alpha','height','description','about','1.16.3','modal-card-head','users_online','modal-card-body','1.13.1','true','12jjZuHt','/.battly/CustomSkinLoader','libraries','tipo-de-versiones','1.16.5','https','env','initNews','fontFamily','<span><i\x20class=\x22fa-solid\x20fa-folder\x22></i>\x20','/.battly/Registro.log','No\x20se\x20ha\x20mostrado\x20la\x20noticia','ram-settings','selectNormal','forEach','Archivo\x20JAR\x20descargado:\x20','change_theme_text','14039136qDFWUi','LabyMod','Unable\x20to\x20launch','resize_image_text','🔄\x20','add_friend','https://sessionserver.mojang.com/','Error\x20en\x20la\x20solicitud\x20HTTP:\x20','titleVersions','<br>','1841XwmiNj','730lJORHX','16203SszTia','instance.json','🔄\x20Creando\x20carpeta\x20libraries...\x0a','BattlyConfig','cancelStartVersion','media-content','deleteaccount_userinfo_btn','of-ram','.select-version','replace','GenerarLogsSocket','\x20<i\x20class=\x22fa-solid\x20fa-circle-play\x22></i></span>','delete_instance','downloaded_successfully','ramMax','MojangAPI','7nfLiyj','hidden','.bottom_bar_mods','13PTdbiE','\x22\x20download=\x22','flex','La\x20configuración\x20del\x20Launcher.','delete','1.14.4','\x20LabyMod','requester','sessionID','image','modal\x20is-active','bottom-bar-text','GetVersionsMojang','battly-settings','/.battly/servers.dat','tipoDeVersiones','<span\x20class=\x22green\x22>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22select\x20is-link\x22\x20id=\x22quilt\x22\x20style=\x22width:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22selectQuilt\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22versionesOptiFine\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>','is-6','error_detected_five','snapshot','Es\x20extra,\x20el\x20asset\x20es:','theme-opacity-bottom-bar','ads','background_btn','Es\x20quilt','----------\x20[MC]\x20Código\x20de\x20salida:\x20','Exception\x20in\x20thread\x20\x22main\x22\x20','/.battly/libraries/optifine/launchwrapper-of/2.1/launchwrapper-of-2.1.jar','subtitleVersions','java_text_info2','scrollHeight','Check','top-end','\x20/\x20','/.battly/runtime/jre-17.0.1.12.1-win32','of-ram-disponible','target','mkdirSync','new_version_news','playing-now','backgroundColor','Grass','remove','Archivo\x20zip\x20descargado:\x20','1.9','toFixed','Registros','/battly/mods-internos/multijugador-forge.jar','game_url','button_instalar_modpack','✅\x20Carpeta\x20launchwrapper-of\x20creada.\x0a','Servidores\x20existentes\x20en\x20servers.dat:','6PXaetw','file-label','#1f1f1f','fire','welcome_instances','/CustomSkinLoader','Minecraft\x20Crash\x20Report','status','19680ZQNing','9kPIHOf','new-notification','speed','endsWith','\x20OptiFine\x20','startStartVersion','shift','Es\x20compatible\x20con\x20Forge?\x20','remaining_two','La\x20prueba\x20de\x20la\x20lista\x20de\x20versiones','modal-card','then','div','add','.tab-btn','1234','fabric','avisoObtenerLogs','https://raw.githubusercontent.com/1ly4s0/battlylauncher-optifine/main/','realVersion','Battly_API_Desc','join','bottom-bar-opacity','button','fa-plus','isConfirmed','createElement','logs.txt','Setting\x20user:\x20','volver','/battly','<i\x20class=\x22fa-solid\x20fa-folder\x22></i>\x20','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22month\x22>','writeText','headers','width','launch','ads-text','clipboard','12px','/battly/mods-internos','instance_image','mc_id_text','new-status-discord','[Error]','Es\x20optifine,\x20el\x20asset\x20es:','url','SetStatus','file-icon','modal-background','header','save_playlist','select-a-background','#d33','log','image\x20is-64x64','1.8.9','clientes','cancel-btn-login','Consulta\x20el\x20error\x20abriendo\x20Battly.','create_instance','selectQuilt','🔄\x20Descargando\x20archivos...\x20','\x20MB/s)\x20-\x20','change-theme-text','1.9.4','https://raw.githubusercontent.com/1ly4s0/battlylauncher-optifine/main/libraries/optifine/OptiFine/','Es\x20Forge,\x20Fabric\x20o\x20Quilt.\x20El\x20asset\x20es:','mixin','/battly/launcher','login-button','november','resumeTimer','Error\x20al\x20descargar\x20la\x20versión.','is-4','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','news_shown_v1.7','latest-release','655830EmIVsM','file\x20is-info\x20is-boxed','no_connected','media-left','set_skin','message','CambiarRutaJava','fontSize','⏩\x20La\x20carpeta\x202.2\x20ya\x20existe.\x20Saltando...\x0a','new_version_html','mc-id-text','./assets/audios/error.mp3','battly_log','Esto\x20es\x20un\x20mensaje\x20de\x20error\x20al\x20iniciar\x20Minecraft.\x20Esto\x20no\x20es\x20por\x20culpa\x20de\x20Battly,\x20no\x20reportar\x20este\x20problema.','btnShowNews','error_detected_three','of_ram','✅\x20Carpeta\x20optifine\x20creada.\x0a','checking_assets','downloading_libraries','modalStartVersion','463868EuSLUS','choose_a_client','/.battly/libraries','/OptiFine-','✅\x20Descarga\x20de\x20archivos\x20completada.\x20Instalando\x20dependencias...','file-input','[DESCARGANDO]\x20','1.14.3','_blank','1.12','versionesForge','32008LYiURY','<option\x20value=\x22','textContent','Versions','establecer-fondo','GetVersions','marginRight','.\x20Estado:\x20','error','accounts','/mods/skins-forge.jar','success','IniciarEstadoDiscord','may','1.15.2','playing-now-body','welcome_battly_social','ram-text-info','accounts-btn','download','is-link','verticalAlign','Could\x20not\x20reserve\x20enough\x20space\x20for\x20object\x20heap','</span>','/.battly/mods/skins-forge-new.jar','main-window-hide','.button','round','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22news-author\x22><span><i\x20class=\x22fa-solid\x20fa-hammer\x22></i>\x20','read','java-settings','Downloaded\x20and\x20extracted\x20natives','password_text','button\x20is-info\x20is-responsive','normal','getMonth','/assets/images/icons/minecraft.png','boton_abrir_mods','La\x20IP\x20','background_image_text','Es\x20quilt\x20+\x20','usuarios','initConfig','Failed\x20to\x20start\x20due\x20to\x20TypeError','1.10.1','resume','getElementsByName','.preload-content','text_access_logs','✅\x20Archivo\x20JAR\x20de\x20OptiFine\x20descargado:\x20','input','✅\x20Carpeta\x20libraries\x20creada.\x0a','\x22\x20folderName=\x22','403960oiQawi','optifine','[INSTALANDO\x20LOADER]\x20','recommended','login_text_panel_login','Error\x20al\x20crear\x20el\x20nuevo\x20archivo\x20NBT:','statusCode','textInfo','/Library/Application\x20Support','establecer-skin','/.battly/libraries/optifine/launchwrapper-of/2.2/launchwrapper-of-2.2.jar','starting-music','body','forge','Setting\x20user','Es\x20extra','select_a_background','/.battly/battly/mods-internos/multijugador-fabric.jar','background-btn','/.battly/battly/launcher','choose_optifine_version','card-footer-item','3500448cJPcTE','/mods/skins-forge-new.jar','🔄\x20Creando\x20carpeta\x20optifine...\x0a','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22select\x20is-link\x22\x20id=\x22optifine\x22\x20style=\x22width:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22selectOptiFine\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22versionesClientes\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>','instance_version','.input','file','321181BbUdja','_minecraftVersion','push','readdirSync','fa-angle-up','/.battly/runtime/jre-17.0.8-win32','battly-theme','#7289da','644568KzuNrP','fileName','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22news-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22header-text\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22title\x22>Error.</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22news-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bbWrapper\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>No\x20se\x20puede\x20contactar\x20con\x20el\x20servidor\x20de\x20noticias.</br>Por\x20favor,\x20compruebe\x20su\x20configuración.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','span','✅\x20Carpeta\x202.3\x20creada.\x0a','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22select\x20is-link\x22\x20id=\x22clientes\x22\x20style=\x22width:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22selectClientes\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a</div>\x0a\x0a','my-accounts','delete_version_text','✅\x20Archivo\x20JAR\x20de\x20launchwrapper-of-2.1\x20descargado:\x20','...','1.8.2','versionesFabric','calculating_time','card-header-icon','⏩\x20La\x20carpeta\x20libraries\x20ya\x20existe.\x20Saltando...\x0a','adm-zip','8iSZSVe','value','eliminarcuenta-userinfo-btn','/.battly/versions/1.20.1','delete_version','electron','no_cancel','<i\x20class=\x22fas\x20fa-download\x22></i>\x20','/.battly/libraries/optifine/launchwrapper-of/2.1','servers','1.11.1','recover_it_here','theme-color-bottom-bar','50632xhMCQW','figure','⏩\x20La\x20carpeta\x20optifine\x20ya\x20existe.\x20Saltando...\x0a','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20versionInfo:\x20','APPDATA','Failed\x20to\x20start\x20the\x20minecraft\x20server','modal','removeAttribute','<auto>','1.8','estimated','Attempting\x20to\x20download\x20Minecraft\x20version\x20jar','click','guardar-logs-inicio','Instalando\x20skins.jar','error_detected_two','battly-theme-text','Assets','CargarMods','[INSTAL.\x20LOADER]\x20','/files','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20version_real:\x20','you_have_a_total','Minecraft','#fff','⏩\x20La\x20carpeta\x20launchwrapper-of\x20ya\x20existe.\x20Saltando...\x0a','java','/.battly/battly/mods-internos/multijugador-forge.jar','</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22latest\x22>','user','lost_your_account','solicitudes','<br><br>','</br>','progress','-forge','checking_java','onload','./assets/images/icons/minecraft.png','cancel','Agent','folderName','catch','.json','button\x20is-danger','close-launcher','1.12.1','ram_text_info','util','getAll','selectedIndex','selected','Error\x20al\x20descargar\x20','starting_minecraft','initBtn','java_btn','[INSTALANDO\x20MC]\x20','register_open_btn','progress\x20is-info','...\x0a','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22select\x20is-link\x22\x20id=\x22forge\x22\x20style=\x22width:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22selectForge\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22select\x20is-link\x22\x20id=\x22forgebuild\x22\x20style=\x22width:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22selectForgeBuild\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22recommended\x22>','assets','cols','get_socketid','write','/.battly/temp/','card','https://battlylauncher.com','10px','innerText','Error','2835580LkvKqJ','is-warning','Placeholder\x20image','🔄\x20Abriendo\x20OptiFine...','check','url(','🔄\x20Creando\x20carpeta\x202.1...\x0a','1.8.6','instances','HOME','\x20\x0aError:\x0a','input[name=\x22option\x22]:checked','Selecciona\x20la\x20versión\x20que\x20quieres\x20abrir','selectForgeBuild','use_account_battly_or_microsoft','save_btn','client_files_downloaded_successfully','song_name','selectForge','readAsDataURL','settings-btn','footermodaliniciarversion','✅\x20Carpeta\x20','GetLogsSocket','aria-hidden','launcher_btn','Es\x20forge\x20+\x20','are_you_sure','month','home','select\x20is-info','select-version','Es\x20forge\x20o\x20fabric','OptiFine','BattlyAPI','downloading_files','minimalize_battly','starting_version_can_take','-extra','3jumhtx','online','/.battly/instances/','downloading_assets','ram_settings','Attempting\x20to\x20download\x20assets','textarea','publish_date','/.battly/libraries/optifine/launchwrapper-of/2.2','ramMin','option','uuid','save-btn','ShowNews','java-text-info','total','cerrar-preview-btn','choose_forge_version','june','700','logTextArea1_','1qkdQCS','august','version_deleted_correctly'];a167_0x1705=function(){return _0x50acd4;};return a167_0x1705();}fetch(a167_0x1541f3(0x1f4))[a167_0x1abf9b(0x4d7)](async()=>{offlineMode=![];})[a167_0x241423(0x44e)](async()=>{offlineMode=!![];});const fs=require('fs'),path=require(a167_0x1abf9b(0x2d2)),dataDirectory=process[a167_0x1541f3(0x3a9)][a167_0x1abf9b(0x3ca)]||(process[a167_0x1541f3(0x212)]==a167_0x1541f3(0x401)?process[a167_0x1abf9b(0x3a2)][a167_0x1541f3(0x54b)]+a167_0x1abf9b(0x2e8):process[a167_0x1abf9b(0x3a2)][a167_0x1abf9b(0x393)]);let logFilePath=dataDirectory+a167_0x1541f3(0x215);function a167_0x2ff2(_0x22bc4e,_0x41fefb){const _0x3c63b6=a167_0x2131();return a167_0x2ff2=function(_0x4eb5ee,_0x4ada35){_0x4eb5ee=_0x4eb5ee-0x12e;let _0x538480=_0x3c63b6[_0x4eb5ee];return _0x538480;},a167_0x2ff2(_0x22bc4e,_0x41fefb);}function a167_0x2131(){const _0x5571f3=a167_0x1c41,_0x31ef2b=a167_0x241423,_0x64025=a167_0x1541f3,_0x59b724=[_0x64025(0x4b9),_0x64025(0x379),_0x64025(0x53f),_0x64025(0x43a),_0x64025(0x4c5),_0x64025(0x42e),_0x31ef2b(0x421),_0x64025(0x1e1),_0x31ef2b(0x3e5),_0x64025(0x232),_0x64025(0x2b8),_0x64025(0x1de),_0x64025(0x43e),_0x5571f3(0x106),_0x64025(0x418),_0x64025(0x234),_0x31ef2b(0x1b3),_0x31ef2b(0x37e),_0x64025(0x29f),_0x64025(0x1e5),_0x64025(0x33a),_0x64025(0x1c2),_0x64025(0x380),_0x31ef2b(0x425),_0x64025(0x53d),_0x5571f3(0xf7),_0x64025(0x30c),_0x64025(0x318),_0x64025(0x33c),_0x31ef2b(0x282),_0x31ef2b(0x350),_0x5571f3(0x1db),_0x64025(0x3c4),_0x64025(0x394),_0x64025(0x1f7),_0x64025(0x39b),_0x64025(0x365),_0x64025(0x40a),_0x64025(0x3c2),_0x64025(0x455),_0x64025(0x31e),_0x31ef2b(0x2ce),_0x64025(0x4b6),_0x64025(0x1be),_0x64025(0x2c3),_0x64025(0x4f1),_0x64025(0x3f1),'1.8.8',_0x31ef2b(0x117),'1.8.4',_0x64025(0x468),_0x64025(0x49c),_0x64025(0x20e),_0x64025(0x2de),_0x64025(0x446),_0x31ef2b(0x20c),_0x64025(0x389),_0x31ef2b(0x3b5),_0x64025(0x51f),_0x64025(0x273),_0x31ef2b(0x28b),_0x64025(0x1e9),_0x31ef2b(0x2ab),_0x5571f3(0x1c6),_0x31ef2b(0x13d),_0x64025(0x4a2),_0x64025(0x534),_0x64025(0x237),_0x64025(0x47d),_0x64025(0x2fb),_0x64025(0x311),_0x64025(0x3d7),_0x31ef2b(0x19b),_0x31ef2b(0x23d),_0x64025(0x467),_0x64025(0x4e2),_0x64025(0x397),_0x64025(0x3fd),_0x64025(0x428),_0x5571f3(0x32a),_0x64025(0x4f9),_0x64025(0x3b9),_0x64025(0x48e),_0x64025(0x4b4),_0x64025(0x2bf),_0x64025(0x2a2),_0x64025(0x3e3),_0x64025(0x34e),_0x64025(0x2e1),_0x64025(0x281),_0x64025(0x1f3),_0x31ef2b(0x498),_0x64025(0x206),'https://discord.gg/tecno-bros-885235460178342009',_0x64025(0x2cc),_0x64025(0x294),_0x64025(0x489),_0x5571f3(0x2b0),_0x31ef2b(0x182),_0x64025(0x357),_0x31ef2b(0x301),_0x31ef2b(0x48d),_0x64025(0x203),_0x64025(0x492),_0x64025(0x290),_0x64025(0x29b),_0x31ef2b(0x3ad),_0x64025(0x40c),_0x64025(0x358),_0x64025(0x441),_0x64025(0x244),_0x64025(0x333),_0x64025(0x257),_0x31ef2b(0x304),_0x64025(0x212),_0x64025(0x284),_0x64025(0x351),_0x64025(0x450),_0x31ef2b(0x12a),_0x31ef2b(0x270),_0x64025(0x4e3),_0x64025(0x456),_0x31ef2b(0x422),_0x64025(0x3b6),_0x64025(0x2f4),_0x31ef2b(0x2d5),_0x64025(0x552),_0x64025(0x24f),_0x64025(0x316),_0x64025(0x4d7),_0x31ef2b(0x1a3),_0x64025(0x306),_0x31ef2b(0x403),_0x31ef2b(0x460),_0x64025(0x3d6),_0x64025(0x54a),_0x64025(0x2bc),_0x64025(0x559),_0x64025(0x404),_0x64025(0x1c3),_0x5571f3(0x1eb),_0x64025(0x558),_0x64025(0x231),_0x31ef2b(0x1e5),_0x64025(0x369),_0x64025(0x1ec),_0x64025(0x1ed),_0x64025(0x2a8),_0x64025(0x28e),_0x64025(0x378),_0x31ef2b(0x38c),_0x64025(0x4dc),_0x64025(0x2d1),_0x5571f3(0x33c),_0x64025(0x2a9),_0x64025(0x338),_0x64025(0x3ab),_0x64025(0x297),_0x64025(0x300),_0x64025(0x239),_0x64025(0x3c5),_0x64025(0x2c7),_0x31ef2b(0x276),_0x5571f3(0x307),_0x64025(0x1eb),_0x64025(0x38a),_0x64025(0x260),_0x64025(0x226),_0x64025(0x287),_0x64025(0x25c),_0x64025(0x3d9),_0x64025(0x208),_0x64025(0x210),_0x64025(0x542),_0x64025(0x51b),_0x64025(0x26f),_0x31ef2b(0x341),_0x64025(0x499),_0x64025(0x31a),_0x64025(0x488),_0x31ef2b(0x169),_0x64025(0x23a),_0x64025(0x3ff),_0x64025(0x3df),_0x31ef2b(0x477),_0x64025(0x211),_0x64025(0x295),_0x64025(0x1b4),_0x64025(0x41d),_0x64025(0x31d),_0x64025(0x4d9),_0x64025(0x50e),_0x64025(0x1bd),_0x64025(0x2c1),_0x64025(0x262),'Battly_WEB_Estado',_0x31ef2b(0x462),_0x64025(0x269),_0x64025(0x458),_0x64025(0x3d5),_0x64025(0x511),_0x31ef2b(0x19d),_0x64025(0x471),_0x31ef2b(0x38e),'versionesClientes',_0x31ef2b(0x1d2),_0x31ef2b(0x1c0),_0x64025(0x386),_0x31ef2b(0x1c2),_0x64025(0x532),_0x64025(0x23d),_0x64025(0x2eb),_0x64025(0x431),_0x64025(0x32b),_0x64025(0x22f),_0x64025(0x367),_0x64025(0x38d),_0x31ef2b(0x20f),_0x64025(0x533),_0x64025(0x2ad),_0x64025(0x52d),_0x64025(0x544),_0x64025(0x3c1),_0x64025(0x40e),_0x64025(0x22a),_0x64025(0x2fc),_0x64025(0x550),_0x64025(0x381),_0x31ef2b(0x33f),_0x64025(0x536),_0x64025(0x392),_0x31ef2b(0x458),_0x64025(0x3f9),_0x64025(0x219),_0x64025(0x28a),_0x64025(0x4d3),_0x64025(0x4d0),_0x64025(0x283),_0x64025(0x346),_0x64025(0x3a6),_0x64025(0x3af),_0x64025(0x2e4),_0x64025(0x519),_0x31ef2b(0x2d6),_0x31ef2b(0x436),_0x64025(0x3dd),_0x64025(0x24c),_0x31ef2b(0x417),_0x64025(0x528),_0x31ef2b(0x1c4),_0x31ef2b(0x459),_0x64025(0x4c6),_0x64025(0x242),_0x31ef2b(0x358),_0x64025(0x4e8),_0x31ef2b(0x163),_0x31ef2b(0x32c),_0x64025(0x525),_0x64025(0x267),_0x64025(0x2ba),_0x64025(0x2fa),_0x31ef2b(0x18b),_0x64025(0x2ae),_0x64025(0x275),_0x64025(0x374),_0x31ef2b(0x2e0),_0x64025(0x42a),_0x64025(0x3e1),_0x64025(0x44e),_0x31ef2b(0x2f1),_0x31ef2b(0x349),_0x64025(0x526),_0x64025(0x387),_0x64025(0x274),_0x31ef2b(0x11a),_0x64025(0x28d),_0x31ef2b(0x317),_0x64025(0x524),_0x64025(0x4ca),_0x64025(0x448),_0x64025(0x201),_0x64025(0x30b),_0x64025(0x3cc),_0x31ef2b(0x262),_0x31ef2b(0x2ba),_0x31ef2b(0x2c2),_0x64025(0x286),_0x64025(0x398),_0x64025(0x422),_0x64025(0x54c),_0x31ef2b(0x3d2),_0x64025(0x49b),_0x64025(0x291),_0x64025(0x337),_0x64025(0x3ca),_0x64025(0x278),_0x64025(0x2e5),_0x64025(0x556),_0x64025(0x4c3),_0x64025(0x40f),_0x31ef2b(0x47d),_0x64025(0x356),_0x64025(0x264),_0x64025(0x3bf),_0x64025(0x22b),_0x64025(0x2f8),_0x64025(0x480),_0x64025(0x4bf),_0x64025(0x353),_0x31ef2b(0x373),_0x64025(0x3ac),_0x64025(0x3d1),_0x64025(0x266),_0x64025(0x45d),_0x64025(0x2b3),_0x64025(0x493),_0x31ef2b(0x16a),_0x64025(0x36b),_0x64025(0x334),_0x64025(0x549),_0x64025(0x35e),_0x64025(0x4a1),_0x64025(0x461),_0x64025(0x4a3),_0x31ef2b(0x1b1),_0x64025(0x522),_0x64025(0x28c),_0x64025(0x3f4),_0x64025(0x3e8),_0x64025(0x24b),_0x64025(0x47b),_0x64025(0x551),_0x64025(0x354),_0x64025(0x2dd),_0x31ef2b(0x2c1),_0x64025(0x50d),_0x31ef2b(0x297),'select_a_file',_0x31ef2b(0x15e),_0x64025(0x220),_0x64025(0x401),_0x64025(0x289),_0x64025(0x47c),_0x31ef2b(0x27f),_0x31ef2b(0x28f),_0x31ef2b(0x238),_0x31ef2b(0x438),_0x64025(0x26c),_0x64025(0x3b1),_0x64025(0x46d),_0x31ef2b(0x17c),_0x64025(0x51e),'dont_share_it',_0x64025(0x25b),_0x64025(0x407),_0x64025(0x317),_0x64025(0x2ee),_0x64025(0x36d),_0x64025(0x3b8),_0x64025(0x35b),_0x64025(0x403),_0x31ef2b(0x401),_0x31ef2b(0x338),_0x64025(0x33b),_0x64025(0x4f8),_0x64025(0x31b),_0x64025(0x537),_0x64025(0x249),_0x64025(0x245),_0x31ef2b(0x39d),_0x64025(0x498),_0x31ef2b(0x379),_0x64025(0x4ce),_0x64025(0x34d),_0x31ef2b(0x22e),_0x64025(0x313),_0x64025(0x256),_0x64025(0x4c8),_0x31ef2b(0x1d8),_0x5571f3(0x1b8),_0x64025(0x44a),_0x64025(0x27b),_0x31ef2b(0x419),_0x64025(0x4c9),_0x64025(0x38b),_0x31ef2b(0x245),_0x64025(0x1b2),_0x31ef2b(0x156),_0x64025(0x1e0),_0x31ef2b(0x42f),_0x5571f3(0xe9),_0x64025(0x47a),_0x64025(0x47e),_0x64025(0x225),_0x64025(0x3a7),_0x31ef2b(0x248),_0x31ef2b(0x475),_0x64025(0x54d),_0x64025(0x1d0),_0x64025(0x2be),_0x64025(0x25e),_0x31ef2b(0x173),_0x64025(0x521),_0x64025(0x366),_0x64025(0x32e),_0x5571f3(0xac),_0x64025(0x520),_0x64025(0x54e),_0x64025(0x2e3),_0x31ef2b(0x2b9),_0x64025(0x314),_0x31ef2b(0x3a8),_0x64025(0x4c2),_0x31ef2b(0x41e),_0x64025(0x205),_0x64025(0x340),_0x31ef2b(0x20b),_0x31ef2b(0x34c),_0x64025(0x48d),_0x64025(0x240),_0x64025(0x319),_0x64025(0x1b8),_0x31ef2b(0x441),_0x64025(0x3f2),'input[name=\x22opcion\x22]:checked',_0x64025(0x427),_0x64025(0x2c9),_0x64025(0x325),_0x5571f3(0x340),_0x64025(0x543),_0x64025(0x326),_0x64025(0x45e),_0x64025(0x1d2),_0x64025(0x222),_0x5571f3(0x3d4),_0x64025(0x329),_0x64025(0x4cb),_0x64025(0x4a4),_0x64025(0x444),_0x31ef2b(0x3f6),_0x64025(0x2f1),_0x31ef2b(0x3ae),_0x64025(0x20a),_0x64025(0x1fe),_0x5571f3(0x17e),_0x64025(0x1f8),_0x31ef2b(0x286),_0x64025(0x1ff),_0x64025(0x23f),_0x31ef2b(0x3ec),_0x64025(0x49d),_0x64025(0x30d),_0x64025(0x555),_0x64025(0x27e),_0x31ef2b(0x40d),_0x64025(0x2cd),_0x64025(0x4be),_0x31ef2b(0x3b2),_0x5571f3(0x3a4),_0x64025(0x1d8),_0x31ef2b(0x463),_0x64025(0x47f),_0x31ef2b(0x1b4),_0x64025(0x218),_0x64025(0x409),_0x64025(0x1b5),_0x64025(0x49a),_0x64025(0x3e2),_0x31ef2b(0x1fb),_0x31ef2b(0x1af),_0x31ef2b(0x35c),_0x64025(0x1f5),_0x64025(0x3a5),_0x31ef2b(0x29e),_0x64025(0x1d5),_0x64025(0x3fa),_0x64025(0x34a),_0x64025(0x3ed),_0x64025(0x2fd),_0x64025(0x546),_0x64025(0x3b3),_0x64025(0x540),_0x31ef2b(0x186),_0x64025(0x38e),_0x64025(0x1f1),_0x31ef2b(0x1ba),_0x31ef2b(0x259),_0x64025(0x432),_0x64025(0x310),_0x64025(0x1ce),_0x64025(0x423),_0x64025(0x417),_0x64025(0x3fb),_0x31ef2b(0x2be),_0x64025(0x1c7),_0x64025(0x438),_0x64025(0x364),_0x31ef2b(0x378),_0x64025(0x426),_0x64025(0x3e9),_0x31ef2b(0x1f6),_0x64025(0x2ef),_0x64025(0x557),_0x64025(0x465),_0x64025(0x478),_0x64025(0x4ac),_0x64025(0x1f2),_0x64025(0x3c9),_0x31ef2b(0x1ee),_0x64025(0x433),_0x64025(0x270),_0x31ef2b(0x118),_0x31ef2b(0x3e6),_0x5571f3(0xe3),_0x64025(0x343),_0x64025(0x359),_0x64025(0x1fb),_0x31ef2b(0x39c),_0x64025(0x280),_0x64025(0x202),_0x64025(0x3da),_0x64025(0x2b9),_0x64025(0x4c4),_0x64025(0x487),_0x64025(0x2ce),_0x5571f3(0x3ab),_0x64025(0x491),_0x64025(0x3d2),_0x64025(0x530),_0x64025(0x355),_0x64025(0x41f),_0x64025(0x2d5),_0x64025(0x204),_0x31ef2b(0x47e),_0x64025(0x49f),_0x64025(0x29c),_0x31ef2b(0x3f4),_0x64025(0x39d),_0x64025(0x46a),_0x64025(0x453),_0x64025(0x45c),_0x31ef2b(0x36b),_0x64025(0x3a1),_0x64025(0x331),_0x31ef2b(0x1e6),_0x64025(0x3bb),_0x31ef2b(0x26d),_0x64025(0x4d5),_0x64025(0x43c),_0x31ef2b(0x3bb),_0x64025(0x507),_0x64025(0x437),_0x64025(0x539),_0x64025(0x2b0),_0x64025(0x3cd),_0x31ef2b(0x392),_0x5571f3(0xab),_0x31ef2b(0x203),_0x64025(0x293),_0x64025(0x439),_0x64025(0x554),_0x64025(0x3d3),_0x64025(0x547),_0x64025(0x4bc),_0x5571f3(0xae),_0x64025(0x476),_0x31ef2b(0x266),_0x64025(0x460),_0x64025(0x3ad),_0x64025(0x496),_0x64025(0x1cc),_0x64025(0x4ae),_0x31ef2b(0x1c7),_0x64025(0x1e6),_0x64025(0x1da),_0x64025(0x53c),_0x64025(0x243),_0x64025(0x548),_0x64025(0x229),_0x64025(0x48f),_0x64025(0x52a),'/.battly/libraries/optifine/OptiFine',_0x64025(0x31c),_0x64025(0x501),_0x64025(0x1ca),_0x64025(0x259),_0x5571f3(0xb1),_0x64025(0x376),_0x64025(0x4ec),_0x64025(0x336),_0x64025(0x4de),_0x5571f3(0x23d),_0x64025(0x4a0),_0x64025(0x32d),_0x64025(0x400),_0x31ef2b(0x3eb),_0x64025(0x371),_0x64025(0x414),_0x5571f3(0x1ae),_0x64025(0x362),_0x64025(0x497),_0x64025(0x3f7),_0x64025(0x2d2),_0x5571f3(0x281),_0x31ef2b(0x29f),_0x64025(0x2f3),_0x64025(0x36c),_0x64025(0x251),_0x31ef2b(0x447),_0x64025(0x459),_0x64025(0x213),_0x64025(0x1b3),_0x64025(0x4fa),_0x64025(0x44c),_0x64025(0x495),_0x5571f3(0x188),_0x64025(0x52c),_0x5571f3(0x3c5),_0x31ef2b(0x35a),_0x64025(0x214),_0x31ef2b(0x319),_0x64025(0x3e7),_0x31ef2b(0x22f),_0x64025(0x272),_0x64025(0x3b5),_0x64025(0x1ea),_0x31ef2b(0x1bb),_0x64025(0x285),_0x64025(0x209),_0x64025(0x45f),_0x64025(0x3f5),_0x5571f3(0x21a),_0x64025(0x41c),_0x31ef2b(0x3ab),_0x5571f3(0x1fe),_0x64025(0x28b),_0x64025(0x391),_0x31ef2b(0x306),_0x64025(0x261),_0x64025(0x2f2),'./assets/images/icons/clients.png',_0x64025(0x527),_0x64025(0x477),_0x31ef2b(0x380),_0x64025(0x200),_0x31ef2b(0x3ed),_0x64025(0x415),_0x64025(0x4f5),_0x64025(0x44d),_0x64025(0x514),_0x31ef2b(0x347),_0x64025(0x2f0),_0x64025(0x462),'https://raw.githubusercontent.com/1ly4s0/battlylauncher-optifine/main/libraries/optifine/launchwrapper-of/2.1/launchwrapper-of-2.1.jar',_0x64025(0x1c4),_0x64025(0x434),_0x64025(0x39a),_0x64025(0x2c0),_0x31ef2b(0x3f2),_0x64025(0x350),_0x64025(0x1fd),_0x64025(0x2af),_0x31ef2b(0x226),_0x64025(0x1ef),_0x31ef2b(0x158),_0x64025(0x4d6),_0x64025(0x29e),_0x64025(0x473),_0x64025(0x3e0),_0x31ef2b(0x26e),_0x64025(0x2e0),_0x5571f3(0x2df),_0x64025(0x1db),_0x64025(0x2e7),_0x64025(0x2cb),_0x64025(0x312),_0x64025(0x1ee),_0x64025(0x53b),_0x64025(0x24d),_0x31ef2b(0x13a),_0x64025(0x21e),_0x64025(0x321),_0x31ef2b(0x3da),_0x64025(0x1df),_0x64025(0x4e7),_0x64025(0x3ce),_0x64025(0x4ba),_0x64025(0x26a),_0x64025(0x45a),_0x64025(0x457),_0x64025(0x1c0),_0x64025(0x474),_0x64025(0x40d),_0x64025(0x2a0),_0x5571f3(0x35e),_0x64025(0x3c7),_0x64025(0x385),_0x64025(0x45b),_0x64025(0x4b1),_0x64025(0x3e4),_0x64025(0x3f0),_0x64025(0x51c),_0x64025(0x3de),_0x31ef2b(0x434),_0x64025(0x4f0),_0x64025(0x265),_0x64025(0x1c8),_0x64025(0x4fb),_0x64025(0x4fc),_0x64025(0x254),_0x64025(0x425),_0x64025(0x246),_0x64025(0x2f5),_0x64025(0x288),_0x31ef2b(0x3d7),_0x64025(0x50c),_0x5571f3(0x1ad),_0x31ef2b(0x3b9),_0x64025(0x1e3),_0x31ef2b(0x14c),_0x64025(0x4ab),_0x64025(0x230),_0x64025(0x299),_0x31ef2b(0x3a7),_0x64025(0x1e7),_0x64025(0x26e),_0x64025(0x435),_0x64025(0x342),_0x64025(0x382),_0x64025(0x4b8),_0x5571f3(0x8c),_0x64025(0x38c),_0x64025(0x30f),_0x64025(0x3fc),_0x64025(0x21d),_0x64025(0x360),'12qXZzuk',_0x64025(0x307),'tipo-de-versiones',_0x31ef2b(0x3fd),_0x64025(0x4ee),_0x64025(0x51a),_0x64025(0x27c),_0x64025(0x3f6),_0x64025(0x3ae),_0x5571f3(0xa3),_0x31ef2b(0x2c9),_0x64025(0x309),'fas\x20fa-angle-down',_0x31ef2b(0x1e9),_0x64025(0x429),_0x64025(0x1d6),_0x64025(0x2b5),_0x64025(0x3c0),_0x5571f3(0xd9),_0x64025(0x248),_0x64025(0x4ff),_0x64025(0x236),_0x64025(0x383),_0x64025(0x3d8),_0x64025(0x4d1),_0x5571f3(0x1a3),_0x64025(0x52e),_0x64025(0x436),_0x64025(0x46f),_0x64025(0x25f),_0x64025(0x37e),_0x64025(0x54b),_0x64025(0x341),_0x64025(0x4df),_0x64025(0x368),_0x64025(0x4f2),_0x64025(0x29a),_0x64025(0x53a),_0x64025(0x247),_0x64025(0x408),_0x5571f3(0x2d0),_0x31ef2b(0x46a),_0x64025(0x3aa),_0x5571f3(0x3b0),_0x64025(0x451),_0x64025(0x1d3),_0x31ef2b(0x430),_0x64025(0x4c7),_0x64025(0x4eb),_0x64025(0x22c),_0x5571f3(0x173),_0x31ef2b(0x2c8),_0x64025(0x485),_0x5571f3(0x278),_0x64025(0x1cb),'java-text-info2',_0x64025(0x46e),_0x64025(0x500),_0x64025(0x3a2),_0x64025(0x479),_0x64025(0x4b2),_0x64025(0x3cf),_0x64025(0x32c),_0x64025(0x324),_0x31ef2b(0x375),_0x64025(0x34f),_0x64025(0x21f),_0x64025(0x553),'access_logs_denied_text',_0x64025(0x2a5),_0x64025(0x2ac),_0x64025(0x228),_0x64025(0x36a),_0x64025(0x35d),_0x31ef2b(0x423),_0x64025(0x37d),_0x5571f3(0x290),_0x64025(0x1d7),_0x64025(0x322),_0x64025(0x330),_0x64025(0x42d),_0x64025(0x33d),_0x64025(0x26d),_0x31ef2b(0x26b),_0x64025(0x37a),_0x64025(0x34b),_0x64025(0x4aa),_0x64025(0x421),_0x64025(0x217),_0x64025(0x503),_0x64025(0x469),_0x5571f3(0x19a),_0x64025(0x443),_0x64025(0x508),_0x64025(0x2b6),_0x64025(0x490),_0x64025(0x25d),_0x64025(0x335),_0x64025(0x277),'Battly_WEB_Desc',_0x31ef2b(0x335),_0x31ef2b(0x2ee),_0x64025(0x454),_0x64025(0x315),_0x64025(0x302),_0x64025(0x2c8),_0x64025(0x223),_0x64025(0x2b7),_0x64025(0x207),_0x64025(0x20f),_0x64025(0x440),_0x64025(0x39e),_0x64025(0x296),_0x64025(0x502),_0x31ef2b(0x2bd),_0x64025(0x2ec),_0x64025(0x44b),_0x31ef2b(0x402),_0x64025(0x1e8),_0x64025(0x35a),_0x64025(0x3e6),_0x64025(0x304),_0x64025(0x349),_0x64025(0x1dc),'Forge',_0x64025(0x388),_0x64025(0x373),_0x64025(0x3ea),_0x64025(0x24e),_0x64025(0x34c),_0x31ef2b(0x466),_0x64025(0x2d6),_0x64025(0x466),_0x31ef2b(0x2d4),_0x31ef2b(0x472),_0x5571f3(0x3b6),_0x64025(0x2c6),_0x64025(0x413),_0x64025(0x470),_0x64025(0x4ea),_0x64025(0x41a),_0x64025(0x416),_0x64025(0x361),_0x64025(0x538),_0x64025(0x43b),_0x31ef2b(0x481),_0x64025(0x481),_0x64025(0x1ba),_0x64025(0x2a6),_0x64025(0x48b),_0x31ef2b(0x30f),_0x64025(0x420),_0x64025(0x1f6),_0x64025(0x475),_0x64025(0x399),_0x64025(0x2d3),_0x31ef2b(0x367),_0x5571f3(0x22d),_0x64025(0x384),_0x31ef2b(0x38d),_0x64025(0x40b),'resize_background',_0x64025(0x3b7),_0x64025(0x4e4),_0x64025(0x464),_0x64025(0x4fd),_0x5571f3(0xc2),_0x5571f3(0x93),_0x64025(0x3c8),_0x64025(0x241),_0x64025(0x3ba),_0x64025(0x23e),_0x31ef2b(0x37b),_0x31ef2b(0x3ce),_0x64025(0x424),_0x5571f3(0x113),_0x64025(0x406),_0x64025(0x4e5),_0x64025(0x4e1),_0x64025(0x472),_0x64025(0x482),_0x64025(0x1bf),_0x64025(0x4b5),_0x64025(0x2f9),_0x64025(0x3be),_0x64025(0x2db),_0x64025(0x4e9),_0x64025(0x4d2),_0x31ef2b(0x1a9),_0x64025(0x345),_0x31ef2b(0x45a),_0x31ef2b(0x32e),_0x31ef2b(0x303),_0x64025(0x445),_0x5571f3(0x3d8),_0x64025(0x405),_0x64025(0x2a1),_0x64025(0x39f),_0x64025(0x1b6),_0x64025(0x2da),_0x64025(0x4ef),_0x64025(0x4cd),_0x64025(0x4fe),_0x64025(0x52f),_0x64025(0x221),_0x31ef2b(0x13b),_0x64025(0x20d),_0x64025(0x4a5),_0x64025(0x2d0),_0x64025(0x3db),_0x64025(0x250),_0x64025(0x3eb),_0x31ef2b(0x14a),_0x64025(0x517),_0x64025(0x4c0),_0x64025(0x3a4),_0x64025(0x2f6),_0x64025(0x276),_0x31ef2b(0x2e3),_0x31ef2b(0x1b0),_0x31ef2b(0x362),_0x64025(0x486),_0x64025(0x25a),_0x64025(0x268),_0x64025(0x419),_0x64025(0x1d4),_0x31ef2b(0x35d),_0x5571f3(0x3e3),_0x64025(0x4d8),_0x31ef2b(0x171),_0x31ef2b(0x125),_0x64025(0x3ec),_0x64025(0x30e),_0x5571f3(0x274),_0x64025(0x21a),_0x64025(0x42b),_0x64025(0x2ab),_0x31ef2b(0x311),_0x64025(0x3dc)];return a167_0x2131=function(){return _0x59b724;},a167_0x2131();}import{consoleOutput}from'../utils/logger.js';let consoleOutput_;import{Lang}from'../utils/lang.js';import*as a167_0x12ea22 from'../../../../node_modules/nbtify/dist/index.js';class Home{static ['id']=a167_0x1abf9b(0x1b7);async[a167_0x1abf9b(0x175)](_0x3aeed6,_0x4c0ad6){const _0x253822=a167_0x241423,_0x30c645=a167_0x1541f3,_0x221313=a167_0x1abf9b;this[_0x30c645(0x332)](),this[_0x30c645(0x39f)]=_0x3aeed6,this[_0x221313(0x26b)]=await _0x4c0ad6,this[_0x253822(0x205)]=offlineMode,this[_0x221313(0x40d)](),this[_0x221313(0x1d9)]=await new LoadAPI()[_0x30c645(0x2e9)](),this[_0x30c645(0x1ba)]=await new LoadAPI()[_0x221313(0x320)](),this[_0x253822(0x2fd)]=await new LoadAPI()[_0x221313(0x17c)](),this[_0x221313(0x4c7)]=await new database()[_0x221313(0x175)](),this[_0x221313(0x2ba)]=await new Lang()[_0x221313(0x443)](),this[_0x221313(0x4f2)](),this[_0x221313(0x3c2)](),this[_0x221313(0x388)](),this[_0x221313(0x1c0)](),this[_0x221313(0x15b)](),this[_0x221313(0x448)](),this[_0x221313(0x2df)](),this[_0x221313(0x452)](),this[_0x30c645(0x3f8)](),this[_0x221313(0x3cb)](),this[_0x221313(0x1a9)](),this[_0x221313(0x489)](),this[_0x221313(0x189)](),this[_0x30c645(0x235)](),this[_0x221313(0x42c)](),this[_0x221313(0x2ba)]=await new Lang()[_0x221313(0x443)](),this[_0x221313(0x152)]();}async[a167_0x1abf9b(0x152)](){const _0x5c02a4=a167_0x1c41,_0x4f14cf=a167_0x241423,_0xd16bcc=a167_0x1541f3,_0x1b9492=a167_0x1abf9b;let _0x5efdad=document[_0x1b9492(0x2c5)](_0x5c02a4(0x145));_0x5efdad[_0x1b9492(0x20b)][_0x4f14cf(0x166)]=_0x1b9492(0x213)+this[_0x1b9492(0x1d9)][_0xd16bcc(0x4a8)]+')';}async[a167_0x1abf9b(0x42c)](){const _0x5a189f=a167_0x241423,_0x10626d=a167_0x1541f3,_0x536de8=a167_0x1abf9b;ipcRenderer['on'](_0x10626d(0x2df),async(_0x434886,_0x3a34a0)=>{const _0x55efbd=_0x10626d,_0x1db523=a167_0x2ff2;console[_0x1db523(0x203)](_0x3a34a0),changePanel(_0x55efbd(0x4b7));}),document[_0x536de8(0x2c5)](_0x536de8(0x1de))[_0x536de8(0x1c6)](_0x5a189f(0x2bd),()=>{const _0x130d3a=_0x10626d;changePanel(_0x130d3a(0x4b7));}),document[_0x536de8(0x2c5)](_0x536de8(0x31c))[_0x536de8(0x1c6)](_0x536de8(0x3e6),()=>{const _0x3353d1=_0x5a189f,_0x3276d4=_0x10626d,_0xcedf9f=_0x536de8;document[_0xcedf9f(0x2e1)](_0x3353d1(0x393))[_0xcedf9f(0x20b)][_0xcedf9f(0x1ef)]=_0x3276d4(0x389),changePanel(_0xcedf9f(0x1b7));});}async[a167_0x1abf9b(0x15d)](){const _0x545290=a167_0x1c41,_0x214c6c=a167_0x241423,_0x527973=a167_0x1541f3,_0x3816fa=a167_0x1abf9b;let _0x543c6d=(await this[_0x214c6c(0x301)][_0x527973(0x49e)](_0x527973(0x435),_0x3816fa(0x3c1)))[_0x527973(0x364)],_0x33f202=await this[_0x3816fa(0x4c7)][_0x545290(0x282)](_0x3816fa(0x430));console['log'](_0x33f202),_0x33f202[_0x3816fa(0x1bc)](_0x5af396=>{const _0x461e32=_0x214c6c,_0x565d5b=_0x527973,_0x232db2=_0x3816fa;console[_0x232db2(0x203)](_0x5af396[_0x232db2(0x284)][_0x232db2(0x368)]),console[_0x232db2(0x203)](_0x543c6d[_0x232db2(0x368)]),_0x5af396[_0x232db2(0x284)][_0x232db2(0x368)]===_0x543c6d[_0x232db2(0x4d1)]&&(console[_0x232db2(0x203)](_0x461e32(0x420)+_0x5af396[_0x232db2(0x284)][_0x232db2(0x25f)]),console[_0x461e32(0x185)](_0x543c6d),ipcRenderer[_0x461e32(0x2f7)](_0x232db2(0x2e0),{'status':_0x232db2(0x4ae),'details':this[_0x461e32(0x2de)][_0x565d5b(0x2e2)],'username':_0x5af396[_0x232db2(0x284)][_0x232db2(0x25f)]}));});}async[a167_0x1abf9b(0x4b9)](_0x2c3d62,_0x49e33c,_0x1941db){const _0x3842c4=a167_0x241423,_0x205f35=a167_0x1541f3,_0x51a836=a167_0x1abf9b;console[_0x3842c4(0x185)](_0x2c3d62+_0x51a836(0x3a1)+_0x49e33c+_0x205f35(0x1d3)+_0x1941db),ipcRenderer[_0x51a836(0x3ae)](_0x51a836(0x2e0),{'status':_0x49e33c,'details':_0x1941db,'username':_0x2c3d62});}async[a167_0x1abf9b(0x489)](){const _0x1dc4d5=a167_0x241423,_0x45cb47=a167_0x1541f3,_0x3c9add=a167_0x1abf9b;let _0x25807d=document[_0x3c9add(0x2c5)](_0x1dc4d5(0x163));_0x25807d[_0x45cb47(0x480)](_0x3c9add(0x3e6),async()=>{const _0x141861=a167_0x1c41,_0x3a24a9=_0x1dc4d5,_0x1801eb=_0x45cb47,_0x238595=_0x3c9add,_0x4d4254=document[_0x238595(0x134)](_0x238595(0x291));_0x4d4254[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x214),_0x238595(0x219)),_0x4d4254[_0x238595(0x20b)][_0x238595(0x22d)]='2';const _0x3f4142=document[_0x238595(0x134)](_0x238595(0x291));_0x3f4142[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x218));const _0x259c50=document[_0x238595(0x134)](_0x238595(0x291));_0x259c50[_0x238595(0x1c5)][_0x238595(0x179)](_0x1801eb(0x219)),_0x259c50[_0x238595(0x20b)][_0x238595(0x267)]=_0x1801eb(0x32b);const _0x556210=document[_0x238595(0x134)](_0x238595(0x392));_0x556210[_0x238595(0x1c5)][_0x3a24a9(0x346)](_0x238595(0x4f0)),_0x556210[_0x238595(0x20b)][_0x238595(0x267)]=_0x238595(0x169);const _0x20ef06=document[_0x238595(0x134)]('p');_0x20ef06[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x37b)),_0x20ef06[_0x1801eb(0x313)][_0x238595(0x4d4)]=_0x238595(0x361),_0x20ef06[_0x238595(0x487)]=_0x238595(0x28d)+this[_0x238595(0x2ba)][_0x141861(0x2a0)];const _0x240f38=document[_0x238595(0x134)](_0x238595(0x17e));_0x240f38[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x26c)),_0x240f38[_0x238595(0x35f)](_0x238595(0x4ee),_0x238595(0x1ea)),_0x556210[_0x238595(0x30d)](_0x20ef06),_0x556210[_0x238595(0x30d)](_0x240f38);const _0x512d7f=document[_0x1801eb(0x3c5)](_0x238595(0x318));_0x512d7f[_0x238595(0x1c5)][_0x3a24a9(0x346)](_0x238595(0x1b2)),_0x512d7f[_0x238595(0x20b)][_0x238595(0x267)]=_0x238595(0x169),_0x512d7f[_0x238595(0x20b)][_0x238595(0x4d4)]=_0x238595(0x361);const _0x47a239=document[_0x238595(0x134)]('p');_0x47a239[_0x238595(0x487)]=this[_0x141861(0x96)][_0x1801eb(0x2a4)];const _0x8ecc7=document[_0x238595(0x134)]('br'),_0x565a97=document[_0x238595(0x134)]('br');_0x512d7f[_0x238595(0x30d)](_0x47a239),_0x512d7f[_0x1801eb(0x21c)](_0x8ecc7);let _0x45c620;!fs[_0x1801eb(0x4b1)](dataDirectory+_0x238595(0x15c))?(fs[_0x1801eb(0x245)](dataDirectory+_0x238595(0x15c)),_0x45c620=fs[_0x1801eb(0x284)](dataDirectory+_0x238595(0x15c))):_0x45c620=fs[_0x238595(0x4d6)](dataDirectory+_0x238595(0x15c));let _0x312a03=[];if(_0x45c620[_0x238595(0x232)]>0x0)for(let _0x50b950=0x0;_0x50b950<_0x45c620[_0x3a24a9(0x264)];_0x50b950++){try{let _0x9fdaab=fs[_0x238595(0x4c9)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x238595(0x257)),_0x4d9391=JSON[_0x238595(0x29f)](_0x9fdaab);_0x312a03[_0x238595(0x1fe)](_0x4d9391);const _0x2b42c1=document[_0x1801eb(0x3c5)](_0x238595(0x291));_0x2b42c1[_0x238595(0x1c5)][_0x238595(0x179)](_0x1801eb(0x53b));const _0x41ca1a=document[_0x238595(0x134)](_0x238595(0x392));_0x41ca1a[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x480)),_0x41ca1a[_0x238595(0x20b)][_0x238595(0x14f)]=_0x238595(0x304);const _0x140fde=document[_0x238595(0x134)]('p');_0x140fde[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x425)),_0x140fde[_0x238595(0x187)]=_0x4d9391[_0x1801eb(0x1d8)];const _0x539af1=document[_0x238595(0x134)](_0x1801eb(0x28a));_0x539af1[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x256)),_0x539af1[_0x238595(0x35f)](_0x3a24a9(0x44a),_0x238595(0x262));const _0x14e93=document[_0x238595(0x134)](_0x238595(0x4c8));_0x14e93[_0x1801eb(0x2f8)][_0x1801eb(0x536)](_0x238595(0x37d));const _0x3da651=document[_0x238595(0x134)]('i');_0x3da651[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x349),_0x238595(0x468)),_0x14e93[_0x238595(0x30d)](_0x3da651),_0x539af1[_0x238595(0x30d)](_0x14e93);const _0x50ff84=document[_0x3a24a9(0x201)](_0x1801eb(0x433));_0x50ff84[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x1d0)),_0x50ff84[_0x1801eb(0x50c)]('id',_0x238595(0x4e1)),_0x50ff84[_0x238595(0x20b)][_0x238595(0x1ef)]=_0x238595(0x49b);const _0x3a0453=document[_0x238595(0x134)](_0x238595(0x19b));_0x3a0453[_0x238595(0x1c5)][_0x1801eb(0x536)](_0x1801eb(0x290),_0x238595(0x2f7));const _0x3a4e40=document[_0x1801eb(0x3c5)](_0x1801eb(0x3eb));_0x3a4e40[_0x238595(0x35f)](_0x238595(0x496),_0x4d9391[_0x238595(0x4cb)]),_0x3a4e40[_0x238595(0x20b)][_0x1801eb(0x2ce)]=_0x238595(0x2cf);const _0x29fbff=document[_0x238595(0x134)](_0x238595(0x291));_0x29fbff[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x4e1)),_0x29fbff[_0x1801eb(0x313)][_0x238595(0x47d)]=_0x238595(0x474),_0x29fbff[_0x1801eb(0x484)]=_0x4d9391[_0x238595(0x263)],_0x29fbff[_0x1801eb(0x313)][_0x238595(0x470)]=_0x238595(0x2c2),_0x29fbff[_0x238595(0x20b)][_0x238595(0x13f)]=_0x238595(0x3a7);const _0x137ce4=document[_0x1801eb(0x3c5)]('footer');_0x137ce4[_0x1801eb(0x2f8)][_0x238595(0x179)](_0x238595(0x3d2)),_0x137ce4[_0x1801eb(0x50c)]('id',_0x1801eb(0x221)),_0x137ce4[_0x1801eb(0x313)][_0x1801eb(0x26c)]=_0x238595(0x49b);const _0x4ae62e=document[_0x1801eb(0x3c5)](_0x238595(0x17e));_0x4ae62e[_0x1801eb(0x2f8)][_0x238595(0x179)](_0x238595(0x2c7),_0x238595(0x17e),_0x238595(0x1dc)),_0x4ae62e[_0x238595(0x487)]=_0x238595(0x3d9)+this[_0x3a24a9(0x2de)][_0x238595(0x3ba)]+_0x238595(0x48e);const _0x493152=document[_0x238595(0x134)](_0x238595(0x17e));_0x493152[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x2c7),_0x1801eb(0x28a),_0x238595(0x13c)),_0x493152[_0x238595(0x487)]=_0x1801eb(0x32f)+this[_0x238595(0x2ba)][_0x238595(0x416)]+_0x238595(0x48e);const _0x37745c=document[_0x238595(0x134)](_0x238595(0x17e));_0x37745c[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x2c7),_0x238595(0x17e),_0x238595(0x47a)),_0x37745c[_0x1801eb(0x365)]=_0x238595(0x4bf)+this[_0x238595(0x2ba)][_0x238595(0x44e)]+_0x238595(0x48e),_0x2b42c1[_0x238595(0x30d)](_0x41ca1a),_0x41ca1a[_0x238595(0x30d)](_0x140fde),_0x41ca1a[_0x238595(0x30d)](_0x539af1),_0x2b42c1[_0x238595(0x30d)](_0x50ff84),_0x50ff84[_0x238595(0x30d)](_0x3a0453),_0x3a0453[_0x238595(0x30d)](_0x3a4e40),_0x50ff84[_0x1801eb(0x21c)](_0x29fbff),_0x2b42c1[_0x238595(0x30d)](_0x137ce4),_0x137ce4[_0x1801eb(0x21c)](_0x4ae62e),_0x137ce4[_0x238595(0x30d)](_0x493152),_0x137ce4[_0x1801eb(0x21c)](_0x37745c),_0x137ce4[_0x238595(0x30d)](_0x565a97),_0x512d7f[_0x238595(0x30d)](_0x2b42c1);const _0x4bcf25=document[_0x238595(0x134)]('br');_0x512d7f[_0x1801eb(0x21c)](_0x4bcf25),_0x41ca1a[_0x238595(0x1c6)](_0x238595(0x3e6),()=>{const _0x45ae9f=_0x3a24a9,_0x1a0c22=_0x1801eb,_0x435d09=_0x238595;_0x50ff84[_0x435d09(0x20b)][_0x45ae9f(0x122)]===_0x435d09(0x49b)?(_0x50ff84[_0x435d09(0x20b)][_0x435d09(0x1ef)]=_0x435d09(0x364),_0x137ce4[_0x435d09(0x20b)][_0x1a0c22(0x26c)]=_0x435d09(0x364),_0x3da651[_0x435d09(0x1c5)][_0x435d09(0x329)](_0x435d09(0x468)),_0x3da651[_0x435d09(0x1c5)][_0x435d09(0x179)](_0x45ae9f(0x254))):(_0x50ff84[_0x435d09(0x20b)][_0x435d09(0x1ef)]=_0x435d09(0x49b),_0x137ce4[_0x45ae9f(0x14d)][_0x435d09(0x1ef)]=_0x435d09(0x49b),_0x3da651[_0x1a0c22(0x2f8)][_0x1a0c22(0x2af)](_0x435d09(0x1d4)),_0x3da651[_0x1a0c22(0x2f8)][_0x435d09(0x179)](_0x435d09(0x468)));}),_0x493152[_0x238595(0x1c6)](_0x238595(0x3e6),()=>{const _0x443dc2=_0x238595;let _0x50aa42=dataDirectory+_0x443dc2(0x1b5)+_0x45c620[_0x50b950];shell[_0x443dc2(0x252)](_0x50aa42[_0x443dc2(0x148)](/\//g,'\x5c'));}),_0x37745c['addEventListener'](_0x238595(0x3e6),()=>{const _0x42ff79=_0x3a24a9,_0x3c9ceb=_0x1801eb,_0x2a753e=_0x238595;Swal[_0x42ff79(0x332)]({'title':this[_0x2a753e(0x2ba)][_0x3c9ceb(0x2da)],'text':this[_0x3c9ceb(0x507)][_0x2a753e(0x3db)],'showCancelButton':!![],'confirmButtonColor':_0x2a753e(0x499),'cancelButtonColor':_0x2a753e(0x3ec),'confirmButtonText':this[_0x2a753e(0x2ba)][_0x2a753e(0x31b)],'cancelButtonText':this[_0x42ff79(0x2de)][_0x2a753e(0x220)]})[_0x2a753e(0x4d7)](_0x462259=>{const _0x156026=_0x3c9ceb,_0x12f001=_0x2a753e;_0x462259[_0x156026(0x503)]&&(_0x2b42c1[_0x12f001(0x329)](),_0x4bcf25[_0x156026(0x2af)](),fs[_0x12f001(0x3b0)](dataDirectory+_0x12f001(0x1b5)+_0x45c620[_0x50b950],{'recursive':!![]}),Toast[_0x12f001(0x147)]({'icon':_0x12f001(0x2d8),'title':this[_0x12f001(0x2ba)][_0x12f001(0x313)]}));});});let _0x442ead;if(_0x4d9391[_0x238595(0x323)][_0x1801eb(0x505)](_0x238595(0x45d)))_0x442ead=_0x238595(0x36c);else{if(_0x4d9391[_0x238595(0x323)][_0x1801eb(0x505)](_0x238595(0x22f)))_0x442ead=_0x238595(0x4a8);else _0x4d9391[_0x238595(0x323)][_0x1801eb(0x505)](_0x238595(0x3c4))&&(_0x442ead=_0x238595(0x405));}console[_0x238595(0x203)](_0x4d9391);let _0x4ecdb8,_0xfeec50=null;if(_0x4d9391[_0x238595(0x2b2)])_0xfeec50=_0x4d9391[_0x238595(0x2b2)];let _0x1713a9=null;if(_0xfeec50)_0x1713a9=_0xfeec50[_0x238595(0x185)];_0x4d9391[_0x238595(0x323)][_0x238595(0x302)](_0x238595(0x45d))||_0x4d9391[_0x238595(0x323)][_0x1801eb(0x505)](_0x238595(0x22f))||_0x4d9391[_0x238595(0x323)][_0x238595(0x302)](_0x238595(0x3c4))?_0x4ecdb8=_0x4d9391[_0x238595(0x323)][_0x238595(0x148)](_0x238595(0x45d),'')[_0x238595(0x148)](_0x238595(0x22f),'')[_0x238595(0x148)](_0x1801eb(0x42d),''):_0x4ecdb8=_0x4d9391[_0x238595(0x323)],!fs[_0x238595(0x34e)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x238595(0x194))&&fs[_0x3a24a9(0x2c5)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x238595(0x194)),!fs[_0x238595(0x34e)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x1801eb(0x512))&&fs[_0x1801eb(0x245)](dataDirectory+_0x3a24a9(0x491)+_0x45c620[_0x50b950]+_0x238595(0x18e)),!fs[_0x238595(0x34e)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x238595(0x1d7))&&fs[_0x238595(0x204)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x238595(0x1d7)),!fs[_0x238595(0x34e)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x238595(0x32f))&&fs[_0x1801eb(0x245)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x238595(0x32f)),!fs[_0x238595(0x34e)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x238595(0x199))&&fs[_0x238595(0x204)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x238595(0x199)),!fs[_0x238595(0x34e)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x238595(0x46a))&&fs[_0x238595(0x204)](dataDirectory+_0x238595(0x1b5)+_0x45c620[_0x50b950]+_0x1801eb(0x1e1));let _0x1d5cc7=pkg[_0x238595(0x3f9)]?pkg[_0x238595(0x3cf)]+'/'+pkg[_0x238595(0x3f9)]:pkg[_0x238595(0x3cf)],_0x10ab27=(await this[_0x238595(0x4c7)][_0x1801eb(0x49e)](_0x238595(0x36a),_0x238595(0x3c1)))[_0x238595(0x284)],_0x51bb85=(await this[_0x1801eb(0x4a6)][_0x238595(0x188)](_0x10ab27[_0x238595(0x4d1)],_0x3a24a9(0x1a9)))[_0x238595(0x284)],_0x35397a=(await this[_0x238595(0x4c7)][_0x238595(0x188)](_0x238595(0x36a),_0x238595(0x1c2)))[_0x238595(0x284)],_0x345c32=(await this[_0x238595(0x4c7)][_0x238595(0x188)](_0x238595(0x36a),_0x1801eb(0x525)))[_0x238595(0x284)],_0x246294=(await this[_0x1801eb(0x4a6)][_0x238595(0x188)](_0x238595(0x36a),_0x238595(0x39d)))[_0x238595(0x284)];_0x4ae62e[_0x238595(0x1c6)](_0x238595(0x3e6),()=>{const _0x11aa21=_0x141861,_0x331377=_0x3a24a9,_0x36d153=_0x1801eb,_0x543677=_0x238595;let _0x3cd3d7=new Launch(),_0x340655={'url':this[_0x331377(0x348)][_0x543677(0x266)]===''||this[_0x543677(0x439)][_0x543677(0x266)]===undefined?_0x1d5cc7+_0x543677(0x442):this[_0x543677(0x439)][_0x543677(0x266)],'authenticator':_0x51bb85,'detached':!![],'timeout':0x2710,'path':dataDirectory+_0x543677(0x1b5)+_0x45c620[_0x50b950],'downloadFileMultiple':0x14,'version':_0x4ecdb8,'loader':{'type':_0xfeec50?_0xfeec50:_0x442ead,'build':_0x1713a9?_0x1713a9:this[_0x543677(0x1d9)][_0x543677(0x2b2)][_0x543677(0x4b2)],'enable':!![]},'verify':![],'ignored':[_0x543677(0x2b2)],'java':![],'memory':{'min':_0x35397a[_0x543677(0x445)]*0x400+'M','max':_0x35397a[_0x36d153(0x442)]*0x400+'M'}};_0x3cd3d7[_0x543677(0x366)](_0x340655);const _0x2ba30b=document[_0x543677(0x134)](_0x543677(0x291));_0x2ba30b[_0x543677(0x1f6)]=_0x543677(0x3a5),_0x2ba30b[_0x543677(0x20b)][_0x543677(0x22d)]='4';const _0x34eec2=document[_0x543677(0x134)](_0x543677(0x291));_0x34eec2[_0x543677(0x1f6)]=_0x36d153(0x1e0);const _0x3e520f=document[_0x543677(0x134)](_0x543677(0x291));_0x3e520f[_0x331377(0x19e)]=_0x543677(0x17d),_0x3e520f[_0x543677(0x20b)][_0x543677(0x267)]=_0x543677(0x169);const _0x3052fe=document[_0x543677(0x134)](_0x543677(0x392));_0x3052fe[_0x543677(0x1f6)]=_0x543677(0x4f0),_0x3052fe[_0x543677(0x20b)][_0x36d153(0x3e2)]=_0x36d153(0x32b);const _0x4db8be=document[_0x543677(0x134)]('p');_0x4db8be[_0x543677(0x1f6)]=_0x543677(0x37b),_0x4db8be[_0x543677(0x20b)][_0x36d153(0x523)]=_0x36d153(0x1fc);const _0x97a46d=document[_0x543677(0x134)]('i');_0x97a46d[_0x36d153(0x407)]=_0x543677(0x197),_0x97a46d[_0x543677(0x20b)][_0x543677(0x4d4)]=_0x543677(0x361),_0x97a46d[_0x543677(0x20b)][_0x543677(0x335)]=_0x36d153(0x4ae),_0x97a46d[_0x543677(0x20b)][_0x36d153(0x452)]=_0x543677(0x145);const _0x703a70=document[_0x36d153(0x20e)](this['lang'][_0x36d153(0x4e8)]);_0x4db8be[_0x543677(0x30d)](_0x703a70),_0x3052fe[_0x543677(0x30d)](_0x4db8be);const _0x3d2036=document[_0x331377(0x201)](_0x543677(0x318));_0x3d2036[_0x543677(0x1f6)]=_0x543677(0x1b2),_0x3d2036[_0x543677(0x20b)][_0x36d153(0x3e2)]=_0x543677(0x169),_0x3d2036[_0x543677(0x20b)][_0x543677(0x4d4)]=_0x543677(0x361);const _0x2a7885=document[_0x36d153(0x3c5)]('p');let _0x4344c2=document[_0x543677(0x497)](this[_0x543677(0x2ba)][_0x543677(0x192)]);_0x2a7885[_0x36d153(0x21c)](_0x4344c2),_0x2a7885[_0x543677(0x30d)](document[_0x543677(0x134)]('br'));const _0x2a5e16=document[_0x543677(0x134)](_0x543677(0x4b8));_0x2a5e16[_0x543677(0x1f6)]=_0x543677(0x1b6),_0x2a5e16[_0x543677(0x35f)](_0x36d153(0x474),_0x11aa21(0x3d9)),_0x3d2036[_0x543677(0x30d)](_0x2a7885),_0x3d2036[_0x543677(0x30d)](_0x2a5e16);const _0x5719cd=document[_0x331377(0x201)](_0x543677(0x291));_0x5719cd[_0x36d153(0x407)]=_0x543677(0x339);const _0xefd418=document[_0x36d153(0x3c5)](_0x543677(0x392));_0xefd418[_0x331377(0x19e)]=_0x36d153(0x303);const _0x23dddf=document[_0x543677(0x134)]('p');_0x23dddf[_0x543677(0x1f6)]=_0x543677(0x425),_0x23dddf[_0x543677(0x30d)](document[_0x36d153(0x20e)](this[_0x543677(0x2ba)][_0x36d153(0x3d1)]));const _0x8c819e=document[_0x543677(0x134)](_0x11aa21(0x183));_0x8c819e[_0x543677(0x1f6)]=_0x543677(0x256),_0x8c819e[_0x543677(0x35f)](_0x543677(0x4ee),_0x543677(0x262));const _0x1aca99=document[_0x543677(0x134)](_0x543677(0x4c8));_0x1aca99[_0x36d153(0x407)]=_0x543677(0x37d);const _0x41e0ca=document[_0x36d153(0x3c5)]('i');_0x41e0ca[_0x36d153(0x407)]=_0x543677(0x380),_0x41e0ca[_0x543677(0x35f)](_0x543677(0x4c4),_0x36d153(0x48c)),_0x1aca99[_0x543677(0x30d)](_0x41e0ca),_0x8c819e[_0x543677(0x30d)](_0x1aca99),_0xefd418[_0x543677(0x30d)](_0x23dddf),_0xefd418[_0x543677(0x30d)](_0x8c819e);const _0x2b27a0=document[_0x543677(0x134)](_0x543677(0x291));_0x2b27a0[_0x543677(0x1f6)]=_0x543677(0x1d0),_0x2b27a0['id']=_0x36d153(0x552),_0x2b27a0[_0x543677(0x20b)][_0x543677(0x1ef)]=_0x543677(0x49b);const _0x1f4bf0=document[_0x543677(0x134)](_0x36d153(0x433));_0x1f4bf0[_0x543677(0x1f6)]=_0x36d153(0x552),_0x1f4bf0[_0x543677(0x30d)](document[_0x36d153(0x20e)](_0x543677(0x423)+this[_0x36d153(0x507)][_0x543677(0x1cb)])),_0x1f4bf0[_0x543677(0x20b)][_0x36d153(0x4af)]=_0x36d153(0x293),_0x1f4bf0[_0x543677(0x20b)][_0x543677(0x13f)]=_0x543677(0x3a7),_0x2b27a0[_0x543677(0x30d)](_0x1f4bf0),_0x5719cd[_0x543677(0x30d)](_0xefd418),_0x5719cd[_0x543677(0x30d)](_0x2b27a0),_0x3d2036[_0x543677(0x30d)](_0x5719cd),_0x3d2036[_0x543677(0x30d)](document[_0x543677(0x134)]('br'));const _0x18d7d0=document[_0x543677(0x134)](_0x543677(0x291));_0x18d7d0[_0x543677(0x1f6)]=_0x36d153(0x53b);const _0x298e9c=document[_0x36d153(0x3c5)](_0x543677(0x392));_0x298e9c[_0x36d153(0x407)]=_0x36d153(0x303);const _0x13f942=document[_0x543677(0x134)]('p');_0x13f942[_0x543677(0x1f6)]=_0x543677(0x425),_0x13f942[_0x543677(0x30d)](document[_0x543677(0x497)](this[_0x543677(0x2ba)][_0x543677(0x337)]));const _0x47b01f=document[_0x543677(0x134)](_0x543677(0x17e));_0x47b01f[_0x543677(0x1f6)]=_0x543677(0x256),_0x47b01f[_0x543677(0x35f)](_0x543677(0x4ee),_0x543677(0x262));const _0x28528d=document[_0x543677(0x134)](_0x543677(0x4c8));_0x28528d[_0x543677(0x1f6)]=_0x543677(0x37d);const _0x3fdab8=document[_0x543677(0x134)]('i');_0x3fdab8[_0x543677(0x1f6)]=_0x543677(0x380),_0x3fdab8[_0x543677(0x35f)](_0x36d153(0x328),_0x36d153(0x48c)),_0x28528d[_0x543677(0x30d)](_0x3fdab8),_0x47b01f[_0x36d153(0x21c)](_0x28528d),_0x298e9c[_0x36d153(0x21c)](_0x13f942),_0x298e9c[_0x543677(0x30d)](_0x47b01f);const _0x58105b=document[_0x543677(0x134)](_0x36d153(0x433));_0x58105b[_0x36d153(0x407)]=_0x543677(0x1d0),_0x58105b['id']=_0x543677(0x4e1),_0x58105b[_0x36d153(0x313)][_0x543677(0x1ef)]=_0x543677(0x49b);const _0x19bbf9=document[_0x543677(0x134)](_0x543677(0x291));_0x19bbf9[_0x36d153(0x407)]=_0x543677(0x4e1),_0x19bbf9[_0x543677(0x30d)](document[_0x543677(0x497)](_0x543677(0x423)+this[_0x543677(0x2ba)][_0x36d153(0x46e)])),_0x19bbf9[_0x543677(0x20b)][_0x543677(0x470)]=_0x543677(0x2c2),_0x19bbf9[_0x543677(0x20b)][_0x36d153(0x208)]=_0x543677(0x3a7),_0x58105b[_0x543677(0x30d)](_0x19bbf9),_0x18d7d0[_0x36d153(0x21c)](_0x298e9c),_0x18d7d0[_0x543677(0x30d)](_0x58105b);const _0x4c822e=document[_0x543677(0x134)](_0x543677(0x291));_0x4c822e[_0x543677(0x1f6)]=_0x36d153(0x53b);const _0x42c2fb=document[_0x36d153(0x3c5)](_0x36d153(0x37e));_0x42c2fb[_0x543677(0x1f6)]=_0x543677(0x480);const _0x4460fe=document[_0x543677(0x134)]('p');_0x4460fe[_0x36d153(0x407)]=_0x543677(0x425),_0x4460fe[_0x36d153(0x21c)](document[_0x543677(0x497)](this[_0x36d153(0x507)][_0x543677(0x1c9)]));const _0x4997bb=document[_0x543677(0x134)](_0x543677(0x17e));_0x4997bb[_0x543677(0x1f6)]=_0x36d153(0x49d),_0x4997bb[_0x543677(0x35f)](_0x36d153(0x1c3),_0x543677(0x262));const _0x2f3241=document[_0x543677(0x134)](_0x543677(0x4c8));_0x2f3241[_0x543677(0x1f6)]=_0x543677(0x37d);const _0x3376cf=document[_0x543677(0x134)]('i');_0x3376cf[_0x543677(0x1f6)]=_0x543677(0x380),_0x3376cf[_0x543677(0x35f)](_0x543677(0x4c4),_0x543677(0x2c1)),_0x2f3241[_0x36d153(0x21c)](_0x3376cf),_0x4997bb[_0x36d153(0x21c)](_0x2f3241),_0x42c2fb[_0x543677(0x30d)](_0x4460fe),_0x42c2fb[_0x543677(0x30d)](_0x4997bb);const _0x5bb0b4=document[_0x543677(0x134)](_0x543677(0x291));_0x5bb0b4[_0x543677(0x1f6)]=_0x543677(0x1d0),_0x5bb0b4['id']=_0x543677(0x4e1),_0x5bb0b4[_0x543677(0x20b)][_0x543677(0x1ef)]=_0x543677(0x49b);const _0x975efb=document[_0x543677(0x134)](_0x543677(0x291));_0x975efb[_0x331377(0x19e)]=_0x543677(0x4e1),_0x975efb[_0x543677(0x30d)](document[_0x543677(0x497)](_0x543677(0x423)+this[_0x543677(0x2ba)][_0x543677(0x288)])),_0x975efb[_0x543677(0x20b)][_0x543677(0x470)]=_0x36d153(0x293),_0x975efb[_0x543677(0x20b)][_0x543677(0x13f)]=_0x543677(0x3a7),_0x5bb0b4[_0x543677(0x30d)](_0x975efb),_0x4c822e[_0x543677(0x30d)](_0x42c2fb),_0x4c822e[_0x543677(0x30d)](_0x5bb0b4),_0x3d2036[_0x36d153(0x21c)](_0x4c822e),_0x3d2036[_0x543677(0x30d)](document[_0x36d153(0x3c5)]('br')),_0x3d2036[_0x543677(0x30d)](_0x18d7d0);const _0x3a4220=document[_0x543677(0x134)](_0x543677(0x440));_0x3a4220[_0x36d153(0x407)]=_0x36d153(0x2d8),_0x3a4220[_0x543677(0x20b)][_0x543677(0x267)]=_0x543677(0x169),_0x3e520f[_0x543677(0x30d)](_0x3052fe),_0x3e520f[_0x543677(0x30d)](_0x3d2036),_0x3e520f[_0x543677(0x30d)](_0x3a4220),_0x2ba30b[_0x543677(0x30d)](_0x34eec2),_0x2ba30b[_0x543677(0x30d)](_0x3e520f),document[_0x36d153(0x3b9)][_0x331377(0x3ab)](_0x2ba30b),_0x4d4254[_0x543677(0x329)](),_0x3cd3d7['on'](_0x543677(0x17f),_0x55d8c2=>{const _0x33a6ed=_0x36d153,_0x1f4e0c=_0x543677;new logger(_0x1f4e0c(0x3be),_0x33a6ed(0x549));});let _0x4f6399=![],_0xdcd837=![],_0x2ace5d=![],_0x5bc1d4;_0x5bc1d4=document[_0x543677(0x497)](_0x11aa21(0x113)+this[_0x543677(0x2ba)][_0x543677(0x383)]);let _0x5d9d6a;_0x5d9d6a=document[_0x543677(0x497)](_0x543677(0x423)+this[_0x543677(0x2ba)][_0x543677(0x3f3)]);let _0x1338c3;_0x1338c3=document[_0x36d153(0x20e)](_0x36d153(0x2f7)+this[_0x543677(0x2ba)][_0x36d153(0x257)]+'\x20'+(_0xfeec50?_0xfeec50:_0x442ead)+_0x331377(0x36e)),_0x3cd3d7['on'](_0x543677(0x4b8),(_0x3af70a,_0x5737bd,_0x168dcb)=>{const _0x22b4a9=_0x331377,_0x5c8497=_0x36d153,_0xf4c7f2=_0x543677;new logger(_0xf4c7f2(0x289),_0xf4c7f2(0x1d3));if(_0x168dcb===_0xf4c7f2(0x373))!_0x4f6399&&(_0x1f4bf0[_0xf4c7f2(0x30d)](document[_0xf4c7f2(0x134)]('br')),_0x1f4bf0[_0x22b4a9(0x3ab)](_0x5bc1d4),_0x2b27a0[_0xf4c7f2(0x20b)][_0xf4c7f2(0x1ef)]=_0xf4c7f2(0x4ca),_0x58105b[_0xf4c7f2(0x20b)][_0xf4c7f2(0x1ef)]=_0xf4c7f2(0x49b),_0x5bb0b4[_0x5c8497(0x313)][_0xf4c7f2(0x1ef)]=_0x22b4a9(0x263),_0x4f6399=!![]),_0x5bc1d4[_0xf4c7f2(0x187)]=_0xf4c7f2(0x423)+this[_0xf4c7f2(0x2ba)][_0xf4c7f2(0x40c)]+_0xf4c7f2(0x1b4)+Math[_0xf4c7f2(0x3e7)](_0x3af70a/_0x5737bd*0x64)+'%)';else{if(_0x168dcb===_0xf4c7f2(0x45a))!_0xdcd837&&(_0x975efb[_0xf4c7f2(0x30d)](document[_0xf4c7f2(0x134)]('br')),_0x975efb[_0xf4c7f2(0x30d)](_0x5d9d6a),_0x2b27a0[_0x5c8497(0x313)][_0xf4c7f2(0x1ef)]=_0xf4c7f2(0x49b),_0x58105b[_0xf4c7f2(0x20b)][_0xf4c7f2(0x1ef)]=_0xf4c7f2(0x49b),_0x5bb0b4[_0xf4c7f2(0x20b)][_0x5c8497(0x26c)]=_0x5c8497(0x492),_0xdcd837=!![]),_0x5d9d6a[_0xf4c7f2(0x187)]=_0xf4c7f2(0x423)+this[_0x5c8497(0x507)][_0xf4c7f2(0x1c9)]+_0xf4c7f2(0x1b4)+Math[_0xf4c7f2(0x3e7)](_0x3af70a/_0x5737bd*0x64)+'%)';else _0x168dcb===_0xf4c7f2(0x141)&&(!_0x2ace5d&&(_0x19bbf9[_0xf4c7f2(0x30d)](document[_0xf4c7f2(0x134)]('br')),_0x19bbf9[_0xf4c7f2(0x30d)](_0x1338c3),_0x2b27a0[_0xf4c7f2(0x20b)][_0xf4c7f2(0x1ef)]=_0x5c8497(0x389),_0x58105b[_0xf4c7f2(0x20b)][_0xf4c7f2(0x1ef)]=_0x22b4a9(0x142),_0x5bb0b4[_0xf4c7f2(0x20b)][_0xf4c7f2(0x1ef)]=_0xf4c7f2(0x49b),_0x2ace5d=!![]),_0x1338c3[_0xf4c7f2(0x187)]=_0xf4c7f2(0x423)+this[_0x5c8497(0x507)][_0xf4c7f2(0x413)]+'\x20'+(_0xfeec50?_0xfeec50:_0x442ead)+_0x5c8497(0x422)+Math[_0xf4c7f2(0x3e7)](_0x3af70a/_0x5737bd*0x64)+'%)');}});let _0x38b749=![],_0x5ace3b=![],_0x1b90bf=![];_0x3cd3d7['on'](_0x331377(0x209),(_0x370cd9,_0x364af3,_0x483371)=>{const _0x332015=_0x11aa21,_0x187f63=_0x331377,_0x295b98=_0x36d153,_0x4e52b6=_0x543677;new logger(_0x4e52b6(0x4ba),_0x4e52b6(0x1d3));if(_0x483371===_0x4e52b6(0x375))!_0x38b749&&(_0x1f4bf0[_0x4e52b6(0x30d)](document[_0x295b98(0x3c5)]('br')),_0x1f4bf0[_0x4e52b6(0x30d)](_0x5bc1d4),_0x2b27a0[_0x4e52b6(0x20b)][_0x332015(0x392)]=_0x295b98(0x492),_0x58105b[_0x295b98(0x313)][_0x187f63(0x122)]=_0x187f63(0x263),_0x5bb0b4[_0x4e52b6(0x20b)][_0x4e52b6(0x1ef)]=_0x295b98(0x389),_0x38b749=!![]),_0x5bc1d4[_0x4e52b6(0x187)]=_0x295b98(0x2f7)+this[_0x4e52b6(0x2ba)][_0x295b98(0x1d6)]+_0x187f63(0x160)+Math[_0x4e52b6(0x3e7)](_0x370cd9/_0x364af3*0x64)+'%)';else{if(_0x483371===_0x187f63(0x17b))!_0x5ace3b&&(_0x975efb[_0x4e52b6(0x30d)](document[_0x295b98(0x3c5)]('br')),_0x975efb[_0x4e52b6(0x30d)](_0x5d9d6a),_0x2b27a0[_0x4e52b6(0x20b)][_0x295b98(0x26c)]=_0x295b98(0x389),_0x58105b['style']['display']=_0x4e52b6(0x49b),_0x5bb0b4[_0x4e52b6(0x20b)][_0x295b98(0x26c)]=_0x4e52b6(0x4ca),_0x5ace3b=!![]),_0x5d9d6a[_0x4e52b6(0x187)]=_0x4e52b6(0x423)+this[_0x4e52b6(0x2ba)][_0x187f63(0x11e)]+_0x295b98(0x422)+Math[_0x4e52b6(0x3e7)](_0x370cd9/_0x364af3*0x64)+'%)';else _0x483371===_0x4e52b6(0x141)&&(!_0x1b90bf&&(_0x19bbf9[_0x4e52b6(0x30d)](document[_0x4e52b6(0x134)]('br')),_0x19bbf9[_0x4e52b6(0x30d)](_0x1338c3),_0x2b27a0[_0x4e52b6(0x20b)][_0x295b98(0x26c)]=_0x187f63(0x263),_0x58105b[_0x295b98(0x313)][_0x4e52b6(0x1ef)]=_0x4e52b6(0x4ca),_0x5bb0b4[_0x4e52b6(0x20b)][_0x4e52b6(0x1ef)]=_0x295b98(0x389),_0x1b90bf=!![]),_0x1338c3[_0x4e52b6(0x187)]=_0x4e52b6(0x423)+this[_0x295b98(0x507)][_0x4e52b6(0x4d3)]+'\x20'+(_0xfeec50?_0xfeec50:_0x442ead)+_0x295b98(0x422)+Math[_0x4e52b6(0x3e7)](_0x370cd9/_0x364af3*0x64)+'%)');}}),_0x3cd3d7['on'](_0x543677(0x3ed),_0x222cad=>{const _0x31081c=_0x36d153,_0x2b49a0=_0x543677;_0x4344c2[_0x2b49a0(0x187)]=this[_0x2b49a0(0x2ba)][_0x2b49a0(0x26f)]+'\x20('+(_0x222cad/0x104800)[_0x2b49a0(0x18d)](0x2)+_0x31081c(0x227);}),_0x3cd3d7['on'](_0x543677(0x43c),_0x310e6c=>{const _0x47b50e=_0x36d153,_0x388423=_0x543677;new logger(_0x47b50e(0x1e2),_0x388423(0x1d3));});let _0x435339=![];_0x3cd3d7['on'](_0x543677(0x31d),_0x5901fe=>{const _0x36b109=_0x11aa21,_0x5bbe4b=_0x331377,_0x4264a0=_0x36d153,_0x2e66cc=_0x543677;new logger(_0x4264a0(0x41e),_0x4264a0(0x549)),console[_0x5bbe4b(0x185)](_0x5901fe);if(!_0x435339){if(_0x5901fe[_0x4264a0(0x3c7)](_0x2e66cc(0x2fb)+_0x51bb85[_0x4264a0(0x1d8)])||_0x5901fe[_0x2e66cc(0x34b)](_0x2e66cc(0x33c))){console[_0x36b109(0x1a2)](_0x442ead);let _0x9883d8;if(_0x442ead===_0x2e66cc(0x36c))_0x9883d8=_0x2e66cc(0x3f0);else{if(_0x442ead===_0x2e66cc(0x4a8))_0x9883d8=_0x2e66cc(0x4ab);else _0x442ead===_0x2e66cc(0x405)?_0x9883d8=_0x4264a0(0x508):_0x9883d8='';}ipcRenderer[_0x4264a0(0x3a2)](_0x2e66cc(0x463),this[_0x2e66cc(0x2ba)][_0x2e66cc(0x259)]+'\x20'+_0x4ecdb8+'\x20'+_0x9883d8),this[_0x4264a0(0x3e3)](_0x51bb85[_0x2e66cc(0x25f)],_0x2e66cc(0x441),this['lang'][_0x2e66cc(0x259)]+'\x20'+_0x4ecdb8+'\x20'+_0x9883d8);}ipcRenderer[_0x2e66cc(0x3ae)](_0x4264a0(0x23c),{'title':this[_0x2e66cc(0x2ba)][_0x2e66cc(0x4e3)],'body':this[_0x2e66cc(0x2ba)][_0x2e66cc(0x264)]}),ipcRenderer[_0x2e66cc(0x3ae)](_0x4264a0(0x420)),_0x2ba30b[_0x2e66cc(0x329)](),_0x435339=!![];if(_0x246294[_0x2e66cc(0x39d)][_0x2e66cc(0x1ea)]===_0x2e66cc(0x1d1))ipcRenderer[_0x2e66cc(0x3ae)](_0x4264a0(0x4df));let _0x5d6cdb=this[_0x2e66cc(0x407)];const _0x15090e=dataDirectory+_0x2e66cc(0x1b5)+_0x45c620[_0x50b950]+_0x2e66cc(0x132),_0x21aac7=dataDirectory+_0x2e66cc(0x1b5)+_0x45c620[_0x50b950]+_0x4264a0(0x506),_0x22063f=dataDirectory+_0x5bbe4b(0x491)+_0x45c620[_0x50b950]+_0x2e66cc(0x454);let _0x569956=dataDirectory+_0x4264a0(0x54c)+_0x45c620[_0x50b950]+_0x2e66cc(0x231),_0x2968ab=dataDirectory+_0x2e66cc(0x1b5)+_0x45c620[_0x50b950]+_0x4264a0(0x33a),_0x53d469=dataDirectory+_0x2e66cc(0x1b5)+_0x45c620[_0x50b950]+_0x5bbe4b(0x46d),_0x421bba=dataDirectory+_0x2e66cc(0x1b5)+_0x45c620[_0x50b950]+_0x2e66cc(0x138),_0x35d938=dataDirectory+_0x2e66cc(0x1b5)+_0x45c620[_0x50b950]+_0x2e66cc(0x2f2),_0x3c9db6=dataDirectory+_0x4264a0(0x54c)+_0x45c620[_0x50b950]+_0x4264a0(0x346),_0xa4c666=dataDirectory+_0x4264a0(0x54c)+_0x45c620[_0x50b950]+_0x2e66cc(0x4e6);fs[_0x2e66cc(0x34e)](_0xa4c666)&&fs[_0x2e66cc(0x21b)](_0xa4c666),fs[_0x4264a0(0x4b1)](_0x3c9db6)&&fs[_0x2e66cc(0x21b)](_0x3c9db6),(fs[_0x4264a0(0x47a)](_0x21aac7),fs[_0x2e66cc(0x21b)](_0x22063f));const _0x2ded6e=_0x4ecdb8;console[_0x2e66cc(0x203)](_0x2e66cc(0x461)+_0x2ded6e);let _0x33e6d1;_0x2ded6e[_0x2e66cc(0x34b)]('-')?(_0x33e6d1=_0x2ded6e[_0x4264a0(0x396)](/-[^.]+/,''),console[_0x2e66cc(0x203)](_0x33e6d1)):console[_0x4264a0(0x249)](_0x2ded6e),console[_0x4264a0(0x249)](_0x5d6cdb[_0x4264a0(0x343)]);const _0x443e5f=_0x5d6cdb[_0x4264a0(0x343)][_0x2e66cc(0x303)](_0x4ce40b=>_0x4ce40b['id']===_0x33e6d1);console[_0x2e66cc(0x203)](_0x5bbe4b(0x311)+_0x33e6d1),console[_0x4264a0(0x249)](_0x443e5f);if(_0x443e5f){function _0x57c0b7(_0x17fd92){const _0x51bd4f=_0x4264a0,_0x117b5f=parseFloat(_0x17fd92);if(!isNaN(_0x117b5f)){const _0x527ec6=_0x117b5f[_0x51bd4f(0x2aa)]();return _0x527ec6;}return _0x17fd92;}const _0x3f0da9=_0x57c0b7(_0x443e5f[_0x4264a0(0x434)]);let _0x4930bd=[_0x2e66cc(0x1fa),_0x4264a0(0x3c6),_0x2e66cc(0x274),_0x4264a0(0x28e),_0x5bbe4b(0x1ad),_0x4264a0(0x1f1),_0x2e66cc(0x35a),_0x4264a0(0x233),_0x2e66cc(0x1f7),_0x2e66cc(0x3ce),_0x5bbe4b(0x317),_0x2e66cc(0x27e),_0x2e66cc(0x1f3),_0x2e66cc(0x253),_0x2e66cc(0x3c3),_0x4264a0(0x2c6),_0x2e66cc(0x1f0),_0x2e66cc(0x41b),_0x2e66cc(0x420),_0x2e66cc(0x4ac),_0x2e66cc(0x400),_0x2e66cc(0x29d),_0x4264a0(0x30b),_0x4264a0(0x1dd),_0x2e66cc(0x45e),_0x2e66cc(0x2ff),_0x2e66cc(0x360),_0x2e66cc(0x3f7),_0x2e66cc(0x4f1),_0x2e66cc(0x2a7),_0x5bbe4b(0x3d7),_0x2e66cc(0x410),_0x2e66cc(0x492),_0x5bbe4b(0x162),_0x2e66cc(0x34d),_0x2e66cc(0x3e8),_0x2e66cc(0x494),_0x4264a0(0x4f7),_0x2e66cc(0x315),_0x4264a0(0x2cf),_0x2e66cc(0x3cc)];console[_0x2e66cc(0x203)](_0x2e66cc(0x3a6)+_0x4930bd[_0x2e66cc(0x34b)](_0x4ecdb8));const _0x4dca85=[1.16,1.15,1.14,1.13,1.12,1.11,1.1,1.9,1.8,1.7,1.6,1.5,1.4,1.3],_0x453f1f=[1.17,1.18,1.19,1.2,1.21],_0x61484b=[_0x2e66cc(0x2fe),_0x4264a0(0x3b8)];console[_0x2e66cc(0x203)](_0x3f0da9),console[_0x2e66cc(0x203)](_0x453f1f[_0x2e66cc(0x34b)](_0x3f0da9)),console[_0x2e66cc(0x203)](!_0x4dca85[_0x2e66cc(0x34b)](_0x3f0da9));if(_0x61484b[_0x4264a0(0x3c7)](_0x4ecdb8)&&_0x442ead===_0x4264a0(0x382))fs[_0x2e66cc(0x414)](_0x421bba,dataDirectory+_0x2e66cc(0x1b5)+_0x45c620[_0x50b950]+_0x2e66cc(0x182));else _0x61484b[_0x2e66cc(0x34b)](_0x4ecdb8)&&_0x442ead===_0x2e66cc(0x4a8)&&fs[_0x2e66cc(0x414)](_0x35d938,dataDirectory+_0x2e66cc(0x1b5)+_0x45c620[_0x50b950]+_0x2e66cc(0x4e6));if(_0x453f1f[_0x2e66cc(0x34b)](parseFloat(_0x4ecdb8))&&!_0x4dca85[_0x2e66cc(0x34b)](parseFloat(_0x4ecdb8))&&_0x442ead===_0x2e66cc(0x36c))console[_0x2e66cc(0x203)](_0x4264a0(0x2bd)),fs[_0x2e66cc(0x414)](_0x53d469,_0x22063f),fs[_0x2e66cc(0x34e)](_0x15090e)&&fs[_0x2e66cc(0x21b)](_0x15090e),fs[_0x2e66cc(0x34e)](_0x21aac7)&&fs[_0x36b109(0x3cc)](_0x21aac7);else{if(_0x4930bd[_0x2e66cc(0x34b)](_0x4ecdb8)&&_0x442ead===_0x5bbe4b(0x236))console[_0x2e66cc(0x203)](_0x4264a0(0x412)),fs[_0x2e66cc(0x414)](_0x2968ab,_0x21aac7),fs[_0x2e66cc(0x34e)](_0x15090e)&&fs[_0x4264a0(0x47a)](_0x15090e),fs[_0x2e66cc(0x34e)](_0x22063f)&&fs[_0x2e66cc(0x21b)](_0x22063f);else(_0x442ead==_0x2e66cc(0x4a8)||_0x442ead==_0x2e66cc(0x405))&&(console[_0x2e66cc(0x203)](_0x2e66cc(0x2da)),fs[_0x2e66cc(0x414)](_0x569956,_0x15090e),fs[_0x4264a0(0x4b1)](_0x21aac7)&&fs[_0x2e66cc(0x21b)](_0x21aac7),fs[_0x2e66cc(0x34e)](_0x22063f)&&fs[_0x2e66cc(0x21b)](_0x22063f));}}else console[_0x2e66cc(0x203)](_0x5bbe4b(0x121));let _0x254182=dataDirectory+_0x2e66cc(0x1b5)+_0x45c620[_0x50b950]+_0x5bbe4b(0x237),_0xfb9822={'version':_0x2e66cc(0x41d),'buildNumber':0x8,'loadlist':[{'name':_0x2e66cc(0x26a),'type':_0x5bbe4b(0x2a1),'checkPNG':![],'skin':_0x2e66cc(0x4f5),'model':_0x2e66cc(0x159),'cape':_0x2e66cc(0x3bd)},{'name':_0x36b109(0xc4),'type':_0x2e66cc(0x370),'apiRoot':_0x2e66cc(0x292),'sessionRoot':_0x2e66cc(0x1c3)},{'name':_0x4264a0(0x263),'type':_0x2e66cc(0x49e),'checkPNG':![],'model':_0x2e66cc(0x159),'cape':_0x4264a0(0x37d)},{'name':_0x2e66cc(0x351),'type':_0x2e66cc(0x49e),'checkPNG':![],'model':_0x2e66cc(0x159),'cape':_0x2e66cc(0x2ab)}],'enableDynamicSkull':!![],'enableTransparentSkin':!![],'forceIgnoreHttpsCertificate':!![],'forceLoadAllTextures':!![],'enableCape':!![],'threadPoolSize':0x8,'enableLogStdOut':![],'cacheExpiry':0x1e,'forceUpdateSkull':!![],'enableLocalProfileCache':![],'enableCacheAutoClean':!![],'forceDisableCache':!![]};fs[_0x4264a0(0x4b1)](path[_0x5bbe4b(0x18a)](_0x254182))?fs[_0x2e66cc(0x3f6)](_0x254182,JSON[_0x2e66cc(0x4eb)](_0xfb9822)):(fs[_0x2e66cc(0x204)](dataDirectory+_0x2e66cc(0x1b5)+_0x45c620[_0x50b950]+_0x2e66cc(0x412),{'recursive':!![]}),fs[_0x2e66cc(0x3f6)](_0x254182,JSON[_0x2e66cc(0x4eb)](_0xfb9822)));}}),_0x3cd3d7['on'](_0x36d153(0x47c),_0x556acb=>{const _0x268b63=_0x36d153,_0x5a2f71=_0x543677;console[_0x5a2f71(0x203)](_0x556acb);if(_0x246294[_0x268b63(0x238)][_0x5a2f71(0x1ea)]===_0x5a2f71(0x1d1))ipcRenderer[_0x5a2f71(0x3ae)](_0x5a2f71(0x2de));ipcRenderer[_0x5a2f71(0x3ae)](_0x5a2f71(0x2e0),{'status':_0x5a2f71(0x4ae),'details':this[_0x5a2f71(0x2ba)][_0x5a2f71(0x4da)],'username':_0x51bb85[_0x5a2f71(0x25f)]});}),_0x3cd3d7['on'](_0x543677(0x3fd),_0x3cf4e9=>{const _0x387c41=_0x543677;new logger(_0x387c41(0x44b),_0x387c41(0x1a7)),console[_0x387c41(0x203)](_0x3cf4e9);});});}catch{console[_0x238595(0x203)](_0x1801eb(0x4cc));}}const _0x922b13=document[_0x1801eb(0x3c5)](_0x238595(0x291));_0x922b13[_0x238595(0x1c5)][_0x238595(0x179)](_0x1801eb(0x53b)),_0x922b13[_0x238595(0x20b)][_0x238595(0x14f)]=_0x238595(0x304);const _0x5be0fc=document[_0x1801eb(0x3c5)](_0x238595(0x392));_0x5be0fc[_0x238595(0x1c5)][_0x238595(0x179)](_0x1801eb(0x303));const _0x56cfb6=document[_0x1801eb(0x3c5)]('p');_0x56cfb6[_0x1801eb(0x2f8)][_0x141861(0x179)](_0x238595(0x425)),_0x56cfb6[_0x3a24a9(0x2d6)]=this[_0x1801eb(0x507)][_0x1801eb(0x2c9)];const _0x5abcac=document[_0x238595(0x134)](_0x3a24a9(0x145));_0x5abcac[_0x238595(0x1c5)][_0x238595(0x179)](_0x238595(0x256)),_0x5abcac[_0x238595(0x35f)](_0x238595(0x4ee),_0x238595(0x262));const _0x59a370=document[_0x238595(0x134)](_0x238595(0x4c8));_0x59a370[_0x238595(0x1c5)][_0x238595(0x179)](_0x3a24a9(0x2bc));const _0x106874=document[_0x238595(0x134)]('i');_0x106874[_0x238595(0x1c5)][_0x141861(0x179)](_0x1801eb(0x2a0),_0x238595(0x15e)),_0x59a370[_0x238595(0x30d)](_0x106874),_0x5abcac[_0x238595(0x30d)](_0x59a370),document[_0x1801eb(0x3b9)][_0x238595(0x30d)](_0x4d4254),_0x4d4254[_0x1801eb(0x21c)](_0x3f4142),_0x4d4254[_0x238595(0x30d)](_0x259c50),_0x259c50[_0x238595(0x30d)](_0x556210),_0x259c50[_0x238595(0x30d)](_0x512d7f),_0x512d7f[_0x3a24a9(0x3ab)](_0x565a97),_0x512d7f[_0x238595(0x30d)](_0x922b13),_0x922b13[_0x238595(0x30d)](_0x5be0fc),_0x5be0fc[_0x238595(0x30d)](_0x56cfb6),_0x5be0fc[_0x238595(0x30d)](_0x5abcac),_0x240f38['addEventListener'](_0x238595(0x3e6),()=>{const _0x2a2611=_0x1801eb;_0x4d4254[_0x2a2611(0x2af)]();}),_0x922b13[_0x238595(0x1c6)](_0x1801eb(0x1c9),()=>{const _0x2663fd=_0x141861,_0x19b503=_0x3a24a9,_0x22caeb=_0x1801eb,_0x35ff8a=_0x238595,_0x18d346=document[_0x35ff8a(0x134)](_0x35ff8a(0x291));_0x18d346[_0x35ff8a(0x1f6)]=_0x35ff8a(0x3a5),_0x18d346[_0x35ff8a(0x20b)][_0x22caeb(0x4d4)]='3';const _0x767217=document[_0x35ff8a(0x134)](_0x35ff8a(0x291));_0x767217[_0x35ff8a(0x1f6)]=_0x35ff8a(0x218);const _0x2a87f1=document[_0x22caeb(0x3c5)](_0x35ff8a(0x291));_0x2a87f1[_0x35ff8a(0x1f6)]=_0x22caeb(0x219),_0x2a87f1[_0x35ff8a(0x20b)][_0x35ff8a(0x267)]=_0x35ff8a(0x169);const _0x5d3ce4=document[_0x35ff8a(0x134)](_0x35ff8a(0x392));_0x5d3ce4[_0x22caeb(0x407)]=_0x35ff8a(0x4f0),_0x5d3ce4[_0x35ff8a(0x20b)][_0x35ff8a(0x267)]=_0x35ff8a(0x169);const _0x4824ef=document[_0x35ff8a(0x134)]('p');_0x4824ef[_0x22caeb(0x407)]=_0x35ff8a(0x37b),_0x4824ef[_0x35ff8a(0x20b)][_0x35ff8a(0x44a)]=_0x35ff8a(0x4dd),_0x4824ef[_0x22caeb(0x313)][_0x22caeb(0x4af)]=_0x35ff8a(0x2c2),_0x4824ef[_0x22caeb(0x313)][_0x35ff8a(0x4d4)]=_0x35ff8a(0x361),_0x4824ef[_0x35ff8a(0x3f5)]=this[_0x35ff8a(0x2ba)][_0x35ff8a(0x23e)];const _0x48b050=document[_0x22caeb(0x3c5)]('button');_0x48b050[_0x19b503(0x19e)]=_0x35ff8a(0x26c),_0x48b050[_0x35ff8a(0x35f)](_0x35ff8a(0x4ee),_0x35ff8a(0x1ea)),_0x5d3ce4[_0x35ff8a(0x30d)](_0x4824ef),_0x5d3ce4[_0x35ff8a(0x30d)](_0x48b050);const _0xde597a=document[_0x35ff8a(0x134)](_0x35ff8a(0x318));_0xde597a[_0x35ff8a(0x1f6)]=_0x35ff8a(0x1b2),_0xde597a[_0x35ff8a(0x20b)][_0x22caeb(0x3e2)]=_0x35ff8a(0x169);const _0x45b826=document[_0x35ff8a(0x134)]('p');_0x45b826[_0x35ff8a(0x20b)][_0x35ff8a(0x4d4)]=_0x2663fd(0x269),_0x45b826[_0x22caeb(0x34c)]=this[_0x35ff8a(0x2ba)][_0x35ff8a(0x2fd)];const _0x369443=document[_0x35ff8a(0x134)](_0x35ff8a(0x4af));_0x369443[_0x35ff8a(0x1f6)]=_0x35ff8a(0x409),_0x369443[_0x35ff8a(0x223)]=_0x35ff8a(0x4df),_0x369443[_0x35ff8a(0x20b)][_0x22caeb(0x4af)]=_0x35ff8a(0x2c2),_0x369443[_0x35ff8a(0x20b)][_0x35ff8a(0x13f)]=_0x35ff8a(0x316),_0x369443[_0x19b503(0x14d)][_0x22caeb(0x4c0)]=_0x35ff8a(0x2ec),_0x369443[_0x35ff8a(0x35f)](_0x19b503(0x2a3),this[_0x35ff8a(0x2ba)][_0x35ff8a(0x25f)]);const _0x4717c7=document[_0x35ff8a(0x134)]('p');_0x4717c7[_0x19b503(0x14d)][_0x35ff8a(0x4d4)]=_0x35ff8a(0x361),_0x4717c7[_0x22caeb(0x34c)]=this[_0x35ff8a(0x2ba)][_0x35ff8a(0x25e)];const _0x5ef770=document[_0x35ff8a(0x134)](_0x2663fd(0x2c5));_0x5ef770[_0x35ff8a(0x1f6)]=_0x35ff8a(0x2cd),_0x5ef770[_0x35ff8a(0x20b)][_0x35ff8a(0x470)]=_0x35ff8a(0x2c2),_0x5ef770[_0x35ff8a(0x20b)][_0x22caeb(0x34b)]=_0x22caeb(0x2f6),_0x5ef770[_0x35ff8a(0x20b)][_0x22caeb(0x208)]=_0x22caeb(0x477),_0x5ef770[_0x35ff8a(0x20b)][_0x19b503(0x175)]=_0x35ff8a(0x2ec),_0x5ef770[_0x35ff8a(0x35f)](_0x35ff8a(0x25f),_0x35ff8a(0x47c)),_0x5ef770[_0x35ff8a(0x35f)](_0x35ff8a(0x332),this[_0x35ff8a(0x2ba)][_0x22caeb(0x218)]);const _0x3418e4=document[_0x35ff8a(0x134)]('p');_0x3418e4[_0x35ff8a(0x20b)][_0x22caeb(0x523)]=_0x35ff8a(0x361),_0x3418e4[_0x35ff8a(0x3f5)]=this[_0x35ff8a(0x2ba)][_0x35ff8a(0x431)];const _0x1c0f53=document[_0x35ff8a(0x134)](_0x35ff8a(0x291));_0x1c0f53[_0x35ff8a(0x20b)][_0x35ff8a(0x1ef)]=_0x22caeb(0x4ab);const _0x1bb3d4=document[_0x35ff8a(0x134)](_0x35ff8a(0x19b));_0x1bb3d4[_0x35ff8a(0x1f6)]=_0x35ff8a(0x38d),_0x1bb3d4[_0x22caeb(0x313)][_0x35ff8a(0x335)]=_0x35ff8a(0x474);const _0x87ec7=document[_0x35ff8a(0x134)](_0x35ff8a(0x447));_0x87ec7[_0x22caeb(0x49c)]=_0x35ff8a(0x4a6),_0x87ec7[_0x19b503(0x14d)][_0x35ff8a(0x2a0)]=_0x35ff8a(0x2cf);const _0x51cd3c=document[_0x35ff8a(0x134)](_0x35ff8a(0x291));_0x51cd3c[_0x35ff8a(0x1f6)]=_0x35ff8a(0x2d4),_0x51cd3c[_0x35ff8a(0x20b)][_0x22caeb(0x34b)]=_0x35ff8a(0x307);const _0x3ba6ed=document[_0x35ff8a(0x134)](_0x35ff8a(0x4e9));_0x3ba6ed[_0x35ff8a(0x1f6)]=_0x35ff8a(0x2f5);const _0x5b7d54=document[_0x35ff8a(0x134)](_0x35ff8a(0x4af));_0x5b7d54[_0x22caeb(0x407)]=_0x35ff8a(0x26e),_0x5b7d54[_0x35ff8a(0x223)]=_0x35ff8a(0x43e),_0x5b7d54[_0x35ff8a(0x35f)](_0x35ff8a(0x25f),_0x22caeb(0x3a0));const _0x4fe756=document[_0x35ff8a(0x134)](_0x35ff8a(0x4c8));_0x4fe756[_0x35ff8a(0x1f6)]=_0x35ff8a(0x225);const _0x25ac6d=document[_0x35ff8a(0x134)](_0x35ff8a(0x4c8));_0x25ac6d[_0x35ff8a(0x1f6)]=_0x22caeb(0x43f);const _0x1517e4=document[_0x22caeb(0x3c5)]('i');_0x1517e4[_0x35ff8a(0x1f6)]=_0x35ff8a(0x2fa);const _0x557e0f=document[_0x19b503(0x201)](_0x35ff8a(0x4c8));_0x557e0f[_0x35ff8a(0x20b)][_0x35ff8a(0x44a)]=_0x35ff8a(0x474),_0x557e0f[_0x35ff8a(0x3f5)]=this[_0x2663fd(0x96)][_0x35ff8a(0x1e5)],_0x25ac6d[_0x22caeb(0x21c)](_0x1517e4),_0x4fe756[_0x22caeb(0x21c)](_0x25ac6d),_0x4fe756[_0x35ff8a(0x30d)](_0x557e0f),_0x3ba6ed[_0x22caeb(0x21c)](_0x5b7d54),_0x3ba6ed[_0x22caeb(0x21c)](_0x4fe756),_0x51cd3c[_0x35ff8a(0x30d)](_0x3ba6ed),_0x1bb3d4[_0x22caeb(0x21c)](_0x87ec7),_0x1c0f53['appendChild'](_0x1bb3d4),_0x1c0f53[_0x35ff8a(0x30d)](_0x51cd3c);const _0x11936f=document[_0x22caeb(0x3c5)]('p');_0x11936f[_0x35ff8a(0x20b)][_0x35ff8a(0x4d4)]=_0x35ff8a(0x361),_0x11936f[_0x35ff8a(0x3f5)]=this[_0x35ff8a(0x2ba)][_0x35ff8a(0x38c)];const _0x6a0712=document[_0x35ff8a(0x134)](_0x35ff8a(0x291));_0x6a0712[_0x35ff8a(0x1f6)]=_0x35ff8a(0x340);const _0xfff128=document[_0x35ff8a(0x134)](_0x35ff8a(0x1a0));_0x6a0712[_0x19b503(0x3ab)](_0xfff128),_0xde597a[_0x22caeb(0x21c)](_0x45b826),_0xde597a[_0x35ff8a(0x30d)](_0x369443),_0xde597a[_0x35ff8a(0x30d)](document[_0x35ff8a(0x134)]('br')),_0xde597a[_0x35ff8a(0x30d)](document[_0x35ff8a(0x134)]('br')),_0xde597a[_0x22caeb(0x21c)](_0x4717c7),_0xde597a[_0x35ff8a(0x30d)](_0x5ef770),_0xde597a[_0x35ff8a(0x30d)](document[_0x22caeb(0x3c5)]('br')),_0xde597a[_0x22caeb(0x21c)](_0x3418e4),_0xde597a[_0x22caeb(0x21c)](_0x1c0f53),_0xde597a[_0x35ff8a(0x30d)](document[_0x35ff8a(0x134)]('br')),_0xde597a[_0x35ff8a(0x30d)](_0x11936f),_0xde597a[_0x22caeb(0x21c)](_0x6a0712);const _0x536b87=document[_0x35ff8a(0x134)](_0x35ff8a(0x440));_0x536b87[_0x35ff8a(0x1f6)]=_0x35ff8a(0x191),_0x536b87[_0x35ff8a(0x20b)][_0x35ff8a(0x267)]=_0x22caeb(0x32b);const _0x37b1c0=document[_0x35ff8a(0x134)](_0x22caeb(0x28a));_0x37b1c0[_0x35ff8a(0x1f6)]=_0x22caeb(0x3a8),_0x37b1c0[_0x22caeb(0x313)][_0x35ff8a(0x44a)]=_0x35ff8a(0x2ec),_0x37b1c0[_0x35ff8a(0x20b)][_0x35ff8a(0x470)]=_0x22caeb(0x293),_0x37b1c0[_0x22caeb(0x313)][_0x35ff8a(0x4d4)]=_0x22caeb(0x1fc),_0x37b1c0[_0x35ff8a(0x3f5)]=this[_0x35ff8a(0x2ba)][_0x19b503(0x424)],_0x536b87[_0x35ff8a(0x30d)](_0x37b1c0),_0x2a87f1[_0x35ff8a(0x30d)](_0x5d3ce4),_0x2a87f1[_0x35ff8a(0x30d)](_0xde597a),_0x2a87f1[_0x22caeb(0x21c)](_0x536b87),_0x18d346[_0x35ff8a(0x30d)](_0x767217),_0x18d346[_0x22caeb(0x21c)](_0x2a87f1),document[_0x35ff8a(0x4b4)][_0x35ff8a(0x30d)](_0x18d346);let _0x56f345=this[_0x35ff8a(0x407)];for(let _0x5da72b=0x0;_0x5da72b<_0x56f345[_0x35ff8a(0x296)][_0x35ff8a(0x232)];_0x5da72b++){if(_0x56f345[_0x22caeb(0x343)][_0x5da72b][_0x35ff8a(0x323)][_0x35ff8a(0x302)](_0x35ff8a(0x45d))||_0x56f345[_0x35ff8a(0x296)][_0x5da72b][_0x35ff8a(0x323)][_0x35ff8a(0x302)](_0x35ff8a(0x22f))||_0x56f345[_0x35ff8a(0x296)][_0x5da72b][_0x35ff8a(0x323)][_0x35ff8a(0x302)](_0x35ff8a(0x3c4))){let _0x1f4fbb=_0x56f345[_0x35ff8a(0x296)][_0x5da72b],_0x1115cf=document[_0x35ff8a(0x134)](_0x35ff8a(0x1e0));_0x1115cf[_0x19b503(0x29c)]=_0x1f4fbb[_0x35ff8a(0x323)],_0x1115cf[_0x35ff8a(0x487)]=_0x1f4fbb[_0x35ff8a(0x25f)],_0xfff128[_0x35ff8a(0x30d)](_0x1115cf);}}_0x48b050[_0x22caeb(0x480)](_0x22caeb(0x1c9),()=>{const _0x4cb3a8=_0x22caeb;_0x18d346[_0x4cb3a8(0x2af)]();}),_0x5b7d54[_0x35ff8a(0x1c6)](_0x19b503(0x231),()=>{const _0x10afae=_0x22caeb,_0x3ca394=_0x35ff8a;let _0x51bf61=_0x5b7d54[_0x10afae(0x4bb)]?_0x5b7d54[_0x3ca394(0x24b)]:null;if(_0x51bf61[_0x3ca394(0x232)]>0x0){let _0xc2c049=new FileReader();_0xc2c049[_0x10afae(0x2e6)]=function(_0x3fd908){const _0x8c8a7f=_0x3ca394;_0x87ec7[_0x8c8a7f(0x496)]=_0x3fd908[_0x8c8a7f(0x3d5)][_0x8c8a7f(0x2e4)];},_0xc2c049[_0x10afae(0x308)](_0x51bf61[0x0]);}}),_0x37b1c0[_0x35ff8a(0x1c6)](_0x22caeb(0x1c9),()=>{const _0x21abdd=_0x2663fd,_0x4e392b=_0x19b503,_0x544e39=_0x22caeb,_0x520d40=_0x35ff8a;let _0x56259a=_0x369443[_0x544e39(0x364)],_0x380d3a=_0x5ef770[_0x520d40(0x284)],_0x23427d=_0xfff128[_0x520d40(0x284)];if(_0x56259a&&_0x380d3a&&_0x23427d){let _0xc5f735=Math[_0x520d40(0x275)]()[_0x520d40(0x21a)](0x24)[_0x520d40(0x2b3)](0x2,0x8);!fs[_0x520d40(0x34e)](dataDirectory+_0x520d40(0x15c))&&fs[_0x520d40(0x204)](dataDirectory+_0x544e39(0x511)),!fs[_0x520d40(0x34e)](dataDirectory+_0x520d40(0x1b5)+_0xc5f735)?fs[_0x520d40(0x204)](dataDirectory+_0x520d40(0x1b5)+_0xc5f735):(_0xc5f735=Math[_0x520d40(0x275)]()[_0x520d40(0x21a)](0x24)[_0x544e39(0x331)](0x2,0x8),fs[_0x520d40(0x204)](dataDirectory+_0x520d40(0x1b5)+_0xc5f735));let _0x4ad398=_0x5b7d54[_0x544e39(0x4bb)]?_0x5b7d54[_0x520d40(0x24b)]:null;console[_0x520d40(0x203)](_0x4ad398);if(_0x4ad398[_0x520d40(0x232)]>0x0)fs[_0x520d40(0x414)](_0x4ad398[0x0][_0x520d40(0x2d2)],dataDirectory+_0x520d40(0x1b5)+_0xc5f735+_0x520d40(0x396));else{_0x4ad398=_0x520d40(0x30e);let _0x42a1a1=fs[_0x520d40(0x4c9)](__dirname+_0x4ad398);fs[_0x520d40(0x3f6)](dataDirectory+_0x21abdd(0x2c1)+_0xc5f735+_0x520d40(0x396),_0x42a1a1);}let _0x3eb811={'name':_0x56259a,'description':_0x380d3a,'version':_0x23427d,'image':dataDirectory+_0x520d40(0x1b5)+_0xc5f735+_0x544e39(0x368),'id':_0xc5f735},_0x2896fd=JSON[_0x520d40(0x4eb)](_0x3eb811);fs[_0x544e39(0x4db)](path[_0x520d40(0x42e)](dataDirectory+_0x520d40(0x1b5)+_0xc5f735,_0x520d40(0x3d8)),_0x2896fd),_0x18d346[_0x544e39(0x2af)](),Toast[_0x520d40(0x147)]({'icon':_0x544e39(0x52a),'title':this[_0x520d40(0x2ba)][_0x4e392b(0x207)]});}else Toast[_0x520d40(0x147)]({'icon':_0x520d40(0x3fd),'title':this[_0x520d40(0x2ba)][_0x21abdd(0x33f)]});});});});}async[a167_0x1541f3(0x524)](){const _0x559a96=a167_0x241423,_0x4bb8c5=a167_0x1541f3,_0x197e87=a167_0x1abf9b;let _0x28a70b=document[_0x559a96(0x150)](_0x197e87(0x251)),_0x7d4242=localStorage[_0x197e87(0x270)](_0x197e87(0x36d));console[_0x197e87(0x203)](_0x7d4242);if(_0x7d4242)_0x28a70b[_0x197e87(0x284)]=_0x7d4242;else{if(process[_0x197e87(0x4d5)]===_0x4bb8c5(0x395)){if(fs[_0x197e87(0x34e)](dataDirectory+_0x197e87(0x419)))_0x28a70b[_0x4bb8c5(0x364)]=dataDirectory+_0x197e87(0x45b),localStorage[_0x197e87(0x1ff)](_0x197e87(0x36d),dataDirectory+_0x197e87(0x45b));else fs[_0x197e87(0x34e)](dataDirectory+_0x197e87(0x1dd))?(_0x28a70b[_0x197e87(0x284)]=dataDirectory+_0x197e87(0x4cc),localStorage[_0x197e87(0x1ff)](_0x197e87(0x36d),dataDirectory+_0x197e87(0x4cc))):_0x28a70b[_0x197e87(0x284)]=_0x197e87(0x15f);}else _0x28a70b[_0x197e87(0x284)]=_0x197e87(0x15f);}}async[a167_0x1abf9b(0x189)](){const _0x12c111=a167_0x1541f3;ipcRenderer['on'](_0x12c111(0x320),async()=>{const _0x2a993a=a167_0x2ff2;let _0x26cb18=consoleOutput+'\x0a'+consoleOutput_;await fs[_0x2a993a(0x3f6)](logFilePath,_0x26cb18);});}async[a167_0x1abf9b(0x3cb)](){const _0x3de71a=a167_0x1541f3,_0x1a9edd=a167_0x1abf9b;ipcRenderer['on'](_0x1a9edd(0x428),async(_0x1db51e,_0x56d663)=>{const _0x587e90=a167_0x3167,_0x74578f=_0x1a9edd;Swal[_0x74578f(0x147)]({'title':this[_0x587e90(0x507)][_0x74578f(0x1cc)],'text':this[_0x74578f(0x2ba)][_0x74578f(0x146)],'html':this[_0x74578f(0x2ba)][_0x74578f(0x1c7)]+'\x20'+_0x56d663[_0x74578f(0x3f9)]+_0x74578f(0x4f6)+this[_0x587e90(0x507)][_0x74578f(0x180)]+':\x20'+_0x56d663[_0x587e90(0x35f)]+_0x74578f(0x372)+this[_0x74578f(0x2ba)][_0x74578f(0x4dc)],'showCancelButton':!![],'confirmButtonText':this[_0x74578f(0x2ba)][_0x74578f(0x246)],'cancelButtonText':this[_0x587e90(0x507)]['deny']})[_0x74578f(0x4d7)](async _0x21225a=>{const _0x488ac4=_0x587e90,_0x62f081=_0x74578f;if(_0x21225a[_0x62f081(0x3cd)]){if(!fs[_0x62f081(0x34e)](logFilePath)){let _0x1f16b1=consoleOutput+'\x0a'+consoleOutput_;await fs[_0x62f081(0x3f6)](logFilePath,_0x1f16b1),ipcRenderer[_0x62f081(0x3ae)](_0x62f081(0x3b3));}else{await fs[_0x488ac4(0x47a)](logFilePath);let _0x3ff1cb=consoleOutput+'\x0a'+consoleOutput_;await fs[_0x62f081(0x3f6)](logFilePath,_0x3ff1cb),ipcRenderer[_0x62f081(0x3ae)](_0x62f081(0x3b3));}}else Toast[_0x62f081(0x147)]({'icon':_0x62f081(0x3fd),'title':this[_0x62f081(0x2ba)][_0x62f081(0x1e9)],'text':this[_0x62f081(0x2ba)][_0x62f081(0x3b8)]});});}),ipcRenderer['on'](_0x3de71a(0x22d),async(_0x4c174e,_0x18214b)=>{const _0x3e301e=_0x3de71a,_0x17470f=_0x1a9edd;Swal[_0x17470f(0x147)]({'title':this[_0x17470f(0x2ba)][_0x17470f(0x1cc)],'text':this[_0x3e301e(0x507)][_0x3e301e(0x22e)]+'\x20'+_0x18214b[_0x3e301e(0x24a)]+'\x20'+this[_0x3e301e(0x507)][_0x17470f(0x1f4)],'confirmButtonText':this[_0x17470f(0x2ba)][_0x17470f(0x3b6)]})[_0x17470f(0x4d7)](async _0x31fd15=>{const _0x4395ef=_0x3e301e,_0x40fe2d=_0x17470f;_0x31fd15[_0x40fe2d(0x3cd)]&&(navigator[_0x40fe2d(0x2d6)][_0x40fe2d(0x1be)](_0x18214b[_0x4395ef(0x24a)]),Toast[_0x40fe2d(0x147)]({'icon':_0x4395ef(0x52a),'title':this[_0x4395ef(0x507)][_0x40fe2d(0x25d)]}));});});}async[a167_0x1abf9b(0x46b)](){const _0xec5035=a167_0x241423,_0x5d66ac=a167_0x1541f3,_0x6c05db=a167_0x1abf9b;!fs[_0xec5035(0x3b7)](dataDirectory+_0x6c05db(0x4ea))&&fs[_0x6c05db(0x204)](dataDirectory+_0x6c05db(0x4ea)),!fs[_0x6c05db(0x34e)](dataDirectory+_0x6c05db(0x15c))&&fs[_0x6c05db(0x204)](dataDirectory+_0x6c05db(0x15c)),!fs[_0x5d66ac(0x4b1)](dataDirectory+_0x6c05db(0x495))&&fs[_0x5d66ac(0x245)](dataDirectory+_0xec5035(0x133)),!fs[_0x6c05db(0x34e)](dataDirectory+_0x6c05db(0x2e5))&&fs[_0x6c05db(0x204)](dataDirectory+_0xec5035(0x1b9)),!fs[_0x6c05db(0x34e)](dataDirectory+_0x6c05db(0x324))&&fs[_0x6c05db(0x204)](dataDirectory+_0x6c05db(0x324)),!fs[_0x6c05db(0x34e)](dataDirectory+_0x6c05db(0x30f))&&fs[_0x6c05db(0x204)](dataDirectory+_0x6c05db(0x30f)),!fs[_0x6c05db(0x34e)](dataDirectory+_0x6c05db(0x4c6))&&fs[_0x6c05db(0x204)](dataDirectory+_0x6c05db(0x4c6)),!fs[_0x6c05db(0x34e)](dataDirectory+_0x6c05db(0x46e))&&fs[_0x6c05db(0x204)](dataDirectory+_0xec5035(0x2c7));}async[a167_0x241423(0x385)](){const _0x553b3f=a167_0x1c41,_0x4998d0=a167_0x1abf9b;let _0x422dd4=document[_0x4998d0(0x2c5)](_0x4998d0(0x2db));_0x422dd4[_0x4998d0(0x1c6)](_0x4998d0(0x3e6),async()=>{const _0x4454f9=_0x4998d0;changePanel(_0x4454f9(0x26b));});let _0x52a04c=localStorage[_0x4998d0(0x270)](_0x4998d0(0x20f));console[_0x4998d0(0x203)](_0x52a04c),(!_0x52a04c||_0x52a04c==_0x553b3f(0x389)||_0x52a04c==null||_0x52a04c==undefined)&&(console[_0x4998d0(0x203)](_0x4998d0(0x1c4)),setTimeout(function(){const _0x58d3b0=_0x4998d0;changePanel(_0x58d3b0(0x26b));},0xbb8));}async[a167_0x1541f3(0x3f8)](){const _0x893318=a167_0x1c41,_0x29cd84=a167_0x241423,_0x4a6556=a167_0x1541f3,_0x5f21dd=a167_0x1abf9b,_0x4cea88=document[_0x5f21dd(0x2c5)](_0x5f21dd(0x174));_0x4cea88[_0x4a6556(0x480)](_0x5f21dd(0x3e6),()=>{const _0x501af8=_0x5f21dd;changePanel(_0x501af8(0x16f));});let _0x4fb180=localStorage[_0x4a6556(0x34a)](_0x893318(0x3ec));if(!_0x4fb180)_0x4fb180=_0x5f21dd(0x499);let _0x157a52=localStorage[_0x5f21dd(0x270)](_0x5f21dd(0x13d)),_0x3f4f51=localStorage[_0x5f21dd(0x270)](_0x5f21dd(0x327)),_0x4cd010=localStorage[_0x5f21dd(0x270)](_0x5f21dd(0x450)),_0xed239c=document[_0x4a6556(0x414)](_0x5f21dd(0x4cd)),_0x22f496=document[_0x4a6556(0x414)](_0x4a6556(0x2b4)),_0x2aabc8=document[_0x5f21dd(0x2e9)](_0x4a6556(0x363)),_0x570b0a=document[_0x5f21dd(0x2e9)](_0x5f21dd(0x384)),_0x4f83fc=document[_0x5f21dd(0x2e9)](_0x5f21dd(0x47e)),_0x14e053=document[_0x5f21dd(0x2e9)](_0x29cd84(0x292)),_0x7fd7b3=document[_0x5f21dd(0x2e9)](_0x5f21dd(0x280)),_0x183c8e=document[_0x5f21dd(0x2e9)](_0x5f21dd(0x161)),_0x477471=document[_0x5f21dd(0x2e1)](_0x5f21dd(0x385)),_0x4829eb=document[_0x5f21dd(0x2e1)](_0x4a6556(0x494)),_0xa3a259=document[_0x5f21dd(0x2e1)](_0x5f21dd(0x19f));if(_0x157a52){}else _0x157a52[_0x4a6556(0x364)]=_0x5f21dd(0x4a3),localStorage[_0x5f21dd(0x1ff)](_0x4a6556(0x25c),_0x5f21dd(0x4a3));_0x477471[_0x5f21dd(0x20b)][_0x5f21dd(0x267)]=_0x157a52,_0x4829eb[_0x5f21dd(0x20b)][_0x4a6556(0x3e2)]=_0x157a52,_0xa3a259[_0x5f21dd(0x20b)][_0x5f21dd(0x267)]=_0x157a52,_0xed239c[_0x5f21dd(0x1bc)](_0x3815f5=>{const _0x1a5a71=_0x5f21dd;_0x3815f5[_0x1a5a71(0x20b)][_0x1a5a71(0x267)]=_0x4fb180;}),_0x3f4f51?(_0x477471[_0x5f21dd(0x20b)][_0x5f21dd(0x260)]=_0x3f4f51,_0x4829eb[_0x5f21dd(0x20b)][_0x5f21dd(0x260)]=_0x3f4f51,_0xa3a259[_0x5f21dd(0x20b)][_0x4a6556(0x53e)]=_0x3f4f51):(_0x477471[_0x5f21dd(0x20b)][_0x5f21dd(0x260)]='1',_0x4829eb[_0x5f21dd(0x20b)][_0x5f21dd(0x260)]='1',_0xa3a259[_0x5f21dd(0x20b)][_0x5f21dd(0x260)]='1'),(document[_0x5f21dd(0x2e1)](_0x5f21dd(0x30c))[_0x5f21dd(0x20b)][_0x4a6556(0x3e2)]=_0x4fb180,_0x22f496[_0x5f21dd(0x1bc)](_0x2c2e0d=>{const _0x5212b3=_0x4a6556,_0x32e37b=_0x5f21dd;_0x2c2e0d[_0x32e37b(0x20b)][_0x5212b3(0x3e2)]=_0x4fb180;}),_0x2aabc8[_0x5f21dd(0x1bc)](_0x31a31f=>{const _0x26cf34=_0x4a6556,_0x954b54=_0x5f21dd;_0x31a31f[_0x954b54(0x20b)][_0x26cf34(0x3e2)]=_0x4fb180;}),_0x570b0a[_0x5f21dd(0x1bc)](_0x5ae3ff=>{const _0x1ec93c=_0x5f21dd;_0x5ae3ff[_0x1ec93c(0x20b)][_0x1ec93c(0x267)]=_0x4fb180;}),_0x4f83fc[_0x5f21dd(0x1bc)](_0x10f4f2=>{const _0x3ecced=_0x5f21dd;_0x10f4f2[_0x3ecced(0x20b)][_0x3ecced(0x267)]=_0x4fb180;}),_0x14e053[_0x5f21dd(0x1bc)](_0xa7773a=>{const _0x1a458f=_0x5f21dd;_0xa7773a[_0x1a458f(0x20b)][_0x1a458f(0x267)]=_0x4fb180;}),_0x7fd7b3[_0x5f21dd(0x1bc)](_0x20deb9=>{const _0x395f88=_0x4a6556,_0x1510fa=_0x5f21dd;_0x20deb9[_0x395f88(0x313)][_0x1510fa(0x267)]=_0x4fb180;}),_0x183c8e[_0x5f21dd(0x1bc)](_0x1994a4=>{const _0x59240e=_0x5f21dd;_0x1994a4[_0x59240e(0x20b)][_0x59240e(0x267)]=_0x4fb180;}));if(_0x4cd010)document[_0x5f21dd(0x4b4)][_0x4a6556(0x313)][_0x4a6556(0x348)]=_0x5f21dd(0x213)+_0x4cd010+')';else{}}async[a167_0x1abf9b(0x448)](){const _0x280335=a167_0x1abf9b;ipcRenderer[_0x280335(0x3ae)](_0x280335(0x249));}async[a167_0x1abf9b(0x2df)](){const _0x30234f=a167_0x1c41,_0x30d618=a167_0x241423,_0x58a8a1=a167_0x1541f3,_0x2021a5=a167_0x1abf9b;let _0x37c340=document[_0x2021a5(0x2c5)](_0x2021a5(0x3a3)),_0x14f1e9=document[_0x2021a5(0x2c5)](_0x2021a5(0x42d));_0x14f1e9[_0x2021a5(0x1c6)](_0x58a8a1(0x1c9),()=>{const _0x348fb9=_0x58a8a1,_0x5582cc=_0x2021a5;_0x37c340[_0x348fb9(0x365)]='',this[_0x5582cc(0x2df)](),Toast[_0x5582cc(0x147)]({'icon':_0x5582cc(0x2d8),'title':this[_0x5582cc(0x2ba)][_0x5582cc(0x2f6)]});});try{let _0x3c142f=fs[_0x2021a5(0x4d6)](dataDirectory+_0x2021a5(0x3fb)),_0x301f89=[];for(let _0x5b81a0=0x0;_0x5b81a0<_0x3c142f['length'];_0x5b81a0++){let _0x268378=this[_0x2021a5(0x2aa)];for(let _0x5b6f37=0x0;_0x5b6f37<_0x268378[_0x2021a5(0x296)][_0x2021a5(0x232)];_0x5b6f37++){let _0x5a32a0=_0x268378[_0x2021a5(0x296)][_0x5b6f37]['id'];_0x301f89[_0x2021a5(0x1fe)](_0x5a32a0);}let _0x5fd7f2=_0x3c142f[_0x5b81a0];if(!_0x301f89[_0x2021a5(0x34b)](_0x5fd7f2)){let _0x2c7a4b=document[_0x2021a5(0x134)](_0x2021a5(0x1e0));if(_0x5fd7f2[_0x2021a5(0x34b)](_0x58a8a1(0x2e8))){let _0x4f54c7=_0x5fd7f2[_0x2021a5(0x148)](/OptiFine.*$/,_0x30d618(0x3ed));_0x2c7a4b[_0x2021a5(0x284)]=_0x5fd7f2+_0x2021a5(0x4ec),_0x2c7a4b[_0x2021a5(0x487)]=_0x4f54c7,_0x37c340[_0x2021a5(0x30d)](_0x2c7a4b);}else _0x2c7a4b[_0x58a8a1(0x364)]=_0x5fd7f2+_0x2021a5(0x4ec),_0x2c7a4b[_0x58a8a1(0x365)]=_0x5fd7f2,_0x37c340[_0x58a8a1(0x21c)](_0x2c7a4b);}else{let _0x516f6d=document[_0x58a8a1(0x3c5)](_0x30234f(0x2c9));_0x516f6d[_0x2021a5(0x284)]=_0x5fd7f2+'',_0x516f6d[_0x2021a5(0x487)]=_0x5fd7f2+'',_0x37c340[_0x58a8a1(0x21c)](_0x516f6d);}}}catch{}}async[a167_0x1abf9b(0x15b)](){const _0x46fab5=a167_0x241423,_0x417cbf=a167_0x1541f3,_0xe74cec=a167_0x1abf9b;let _0x110ced=document[_0x417cbf(0x3d3)](_0xe74cec(0x462));_0x110ced[_0x46fab5(0x305)](_0x46fab5(0x2bd),function(){const _0x705cd6=_0xe74cec;window[_0x705cd6(0x429)](_0x705cd6(0x4c0),_0x705cd6(0x48d));});}async[a167_0x1abf9b(0x452)](){const _0x2fe3a3=a167_0x1c41,_0x41b3a2=a167_0x241423,_0x5d680d=a167_0x1541f3,_0x428cc7=a167_0x1abf9b;let _0x3948f5=this[_0x428cc7(0x1d9)],_0x3e0da1=JSON[_0x428cc7(0x4eb)](_0x3948f5);fs[_0x428cc7(0x204)](dataDirectory+'/'+(process[_0x428cc7(0x4d5)]==_0x428cc7(0x1e8)?this[_0x428cc7(0x439)][_0x428cc7(0x20c)]:'.'+this[_0x428cc7(0x439)][_0x428cc7(0x20c)]),{'recursive':!![]}),fs[_0x41b3a2(0x2c5)](dataDirectory+'/'+(process[_0x428cc7(0x4d5)]==_0x428cc7(0x1e8)?this[_0x5d680d(0x39f)][_0x428cc7(0x20c)]:'.'+this[_0x428cc7(0x439)][_0x428cc7(0x20c)])+_0x428cc7(0x3eb),{'recursive':!![]});let _0x5c5134=this[_0x428cc7(0x407)],_0x18951c=JSON[_0x5d680d(0x2bc)](_0x5c5134);fs[_0x41b3a2(0x2c5)](dataDirectory+'/'+(process[_0x41b3a2(0x1b8)]==_0x428cc7(0x1e8)?this[_0x428cc7(0x439)][_0x428cc7(0x20c)]:'.'+this[_0x428cc7(0x439)][_0x5d680d(0x256)]),{'recursive':!![]}),document[_0x428cc7(0x2c5)](_0x428cc7(0x193))[_0x428cc7(0x487)]=_0x428cc7(0x4ce)+this[_0x5d680d(0x507)][_0x5d680d(0x411)]+_0x41b3a2(0x2cb),document[_0x428cc7(0x2c5)](_0x428cc7(0x1ec))[_0x5d680d(0x365)]=_0x428cc7(0x3f4)+this[_0x428cc7(0x2ba)][_0x5d680d(0x441)]+_0x41b3a2(0x2cb),document[_0x428cc7(0x2c5)](_0x428cc7(0x3e0))[_0x428cc7(0x487)]=_0x5d680d(0x3a3)+this[_0x428cc7(0x2ba)][_0x428cc7(0x4bb)]+_0x428cc7(0x345),document[_0x428cc7(0x2c5)](_0x428cc7(0x41e))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x5d680d(0x255)],document[_0x428cc7(0x2c5)](_0x428cc7(0x48c))[_0x41b3a2(0x2f6)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x131)],document[_0x5d680d(0x3d3)](_0x428cc7(0x455))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x201)],document[_0x428cc7(0x2c5)](_0x428cc7(0x49f))[_0x5d680d(0x365)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x41c)],document[_0x428cc7(0x2c5)](_0x428cc7(0x276))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x4a5)],document[_0x41b3a2(0x150)](_0x428cc7(0x4c1))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x2ac)],document[_0x5d680d(0x3d3)](_0x428cc7(0x381))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x5d680d(0x21b)],document[_0x428cc7(0x2c5)](_0x5d680d(0x3b4))[_0x428cc7(0x487)]=''+this[_0x5d680d(0x507)][_0x428cc7(0x281)],document[_0x428cc7(0x2c5)](_0x428cc7(0x3c6))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x27c)],document[_0x428cc7(0x2c5)](_0x428cc7(0x21c))[_0x5d680d(0x365)]=''+this[_0x428cc7(0x2ba)][_0x2fe3a3(0x32f)],document[_0x428cc7(0x2c5)](_0x428cc7(0x20d))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x45c)],document[_0x5d680d(0x3d3)](_0x428cc7(0x247))[_0x428cc7(0x487)]=''+this[_0x5d680d(0x507)][_0x428cc7(0x12f)],document[_0x428cc7(0x2c5)](_0x428cc7(0x149))[_0x428cc7(0x487)]=''+this[_0x5d680d(0x507)][_0x428cc7(0x196)],document[_0x5d680d(0x3d3)](_0x428cc7(0x3e2))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x38e)],document[_0x428cc7(0x2c5)](_0x5d680d(0x216))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x24e)],document[_0x428cc7(0x2c5)](_0x5d680d(0x39c))[_0x5d680d(0x365)]=''+this[_0x41b3a2(0x2de)][_0x428cc7(0x32c)],document[_0x428cc7(0x2c5)](_0x428cc7(0x1b8))[_0x5d680d(0x365)]=''+this[_0x41b3a2(0x2de)][_0x5d680d(0x518)],document[_0x428cc7(0x2c5)](_0x428cc7(0x22e))[_0x428cc7(0x487)]=''+this[_0x5d680d(0x507)][_0x5d680d(0x47c)],document[_0x428cc7(0x2c5)](_0x2fe3a3(0x23a))[_0x428cc7(0x487)]=''+this[_0x5d680d(0x507)][_0x428cc7(0x2b8)],document[_0x428cc7(0x2c5)](_0x428cc7(0x255))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x1d6)],document[_0x428cc7(0x2c5)](_0x428cc7(0x1d2))[_0x5d680d(0x365)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x162)],document[_0x5d680d(0x3d3)](_0x428cc7(0x300))[_0x2fe3a3(0x2d9)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x212)],document[_0x428cc7(0x2c5)](_0x428cc7(0x3ab))[_0x5d680d(0x365)]=''+this[_0x428cc7(0x2ba)][_0x41b3a2(0x492)],document[_0x428cc7(0x2c5)](_0x428cc7(0x326))[_0x428cc7(0x487)]=''+this[_0x5d680d(0x507)][_0x428cc7(0x217)],document[_0x428cc7(0x2c5)](_0x428cc7(0x4ef))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x29b)],document[_0x428cc7(0x2c5)](_0x428cc7(0x4b0))[_0x5d680d(0x365)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x286)],document[_0x428cc7(0x2c5)](_0x428cc7(0x3e5))[_0x5d680d(0x365)]=''+this[_0x41b3a2(0x2de)][_0x428cc7(0x432)],document[_0x428cc7(0x2c5)](_0x428cc7(0x4f4))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x207)],document[_0x428cc7(0x2c5)](_0x5d680d(0x4dd))[_0x428cc7(0x487)]=''+this[_0x41b3a2(0x2de)][_0x428cc7(0x29b)],document[_0x428cc7(0x2c5)](_0x428cc7(0x48b))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x41b3a2(0x31f)],document[_0x5d680d(0x3d3)](_0x5d680d(0x23b))[_0x5d680d(0x365)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x458)],document[_0x428cc7(0x2c5)](_0x428cc7(0x3d3))[_0x41b3a2(0x2f6)]=''+this[_0x5d680d(0x507)][_0x428cc7(0x1d5)],document[_0x5d680d(0x3d3)](_0x428cc7(0x2b9))[_0x428cc7(0x487)]=''+this[_0x5d680d(0x507)][_0x428cc7(0x36b)],document[_0x428cc7(0x2c5)](_0x428cc7(0x346))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x3c0)],document[_0x428cc7(0x2c5)](_0x428cc7(0x422))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x18c)],document[_0x5d680d(0x3d3)](_0x428cc7(0x46c))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x41b3a2(0x3db)],document[_0x428cc7(0x2c5)](_0x428cc7(0x14a))[_0x41b3a2(0x2f6)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x348)],document[_0x428cc7(0x2c5)](_0x5d680d(0x37f))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x41b3a2(0x432)],document[_0x2fe3a3(0x3b4)](_0x428cc7(0x238))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x5d680d(0x2dc)],document[_0x428cc7(0x2c5)](_0x5d680d(0x4f3))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x13a)],document[_0x2fe3a3(0x3b4)](_0x428cc7(0x198))[_0x5d680d(0x365)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x4fb)],document[_0x428cc7(0x2c5)](_0x428cc7(0x30b))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x5d680d(0x36e)],document[_0x428cc7(0x2c5)](_0x5d680d(0x52b))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x44f)],document[_0x428cc7(0x2c5)](_0x5d680d(0x4c1))[_0x5d680d(0x365)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x399)],document[_0x428cc7(0x2c5)](_0x428cc7(0x490))[_0x5d680d(0x365)]=''+this[_0x5d680d(0x507)][_0x428cc7(0x3a9)],document[_0x5d680d(0x3d3)](_0x5d680d(0x3bd))[_0x428cc7(0x487)]=''+this[_0x41b3a2(0x2de)][_0x5d680d(0x26b)],document[_0x428cc7(0x2c5)](_0x5d680d(0x253))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x415)],document[_0x428cc7(0x2c5)](_0x5d680d(0x31f))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x312)],document[_0x428cc7(0x2c5)](_0x428cc7(0x3ff))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x4b1)],document[_0x428cc7(0x2c5)](_0x5d680d(0x1cf))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x21f)],document[_0x428cc7(0x2c5)](_0x5d680d(0x372))[_0x41b3a2(0x2f6)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x16b)],document[_0x428cc7(0x2c5)](_0x428cc7(0x4cf))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x5d680d(0x4d2)],document[_0x428cc7(0x2c5)](_0x428cc7(0x254))[_0x41b3a2(0x2a3)]=''+this[_0x428cc7(0x2ba)][_0x5d680d(0x41b)],document[_0x428cc7(0x2c5)](_0x5d680d(0x282))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x33b)],document[_0x41b3a2(0x150)](_0x5d680d(0x2c2))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x137)],document[_0x5d680d(0x3d3)](_0x428cc7(0x31c))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x42f)],document[_0x5d680d(0x3d3)](_0x5d680d(0x20b))[_0x428cc7(0x487)]=''+this[_0x41b3a2(0x2de)][_0x428cc7(0x158)],document[_0x428cc7(0x2c5)](_0x428cc7(0x1ce))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x1ce)],document[_0x428cc7(0x2c5)](_0x428cc7(0x2e7))[_0x428cc7(0x487)]=''+this[_0x5d680d(0x507)][_0x428cc7(0x2e7)],document[_0x428cc7(0x2c5)](_0x5d680d(0x4cf))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x240)],document[_0x428cc7(0x2c5)](_0x428cc7(0x4d2))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x41b3a2(0x377)],document[_0x5d680d(0x3d3)](_0x41b3a2(0x271))[_0x5d680d(0x365)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x1cd)],document[_0x428cc7(0x2c5)](_0x428cc7(0x36f))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x42f)],document[_0x5d680d(0x3d3)](_0x5d680d(0x393))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x1ca)],document[_0x428cc7(0x2c5)](_0x428cc7(0x4a4))[_0x428cc7(0x332)]=''+this[_0x428cc7(0x2ba)][_0x5d680d(0x298)],document[_0x428cc7(0x2c5)](_0x428cc7(0x362))[_0x428cc7(0x487)]=''+this[_0x5d680d(0x507)][_0x5d680d(0x4b0)],document[_0x428cc7(0x2c5)](_0x428cc7(0x22b))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x4c2)],document[_0x428cc7(0x2c5)](_0x428cc7(0x163))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x163)],document[_0x428cc7(0x2c5)](_0x428cc7(0x4aa))[_0x428cc7(0x487)]=''+this[_0x5d680d(0x507)][_0x428cc7(0x3a9)],document[_0x428cc7(0x2c5)](_0x428cc7(0x171))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x3a9)],document[_0x5d680d(0x3d3)](_0x5d680d(0x2c3))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x48f)],document[_0x5d680d(0x3d3)](_0x428cc7(0x456))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x456)],document[_0x428cc7(0x2c5)](_0x428cc7(0x28b))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x215)],document[_0x428cc7(0x2c5)](_0x428cc7(0x485))[_0x5d680d(0x365)]=''+this[_0x5d680d(0x507)][_0x428cc7(0x32a)],document[_0x428cc7(0x2c5)](_0x428cc7(0x227))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x227)],document[_0x428cc7(0x2c5)](_0x5d680d(0x42c))[_0x428cc7(0x487)]=''+this[_0x428cc7(0x2ba)][_0x428cc7(0x245)];}async[a167_0x1abf9b(0x4f2)](){const _0x44050d=a167_0x241423,_0x5157ca=a167_0x1541f3,_0x27b37a=a167_0x1abf9b;let _0x566767=document[_0x27b37a(0x2e1)](_0x27b37a(0x19e));if(this[_0x27b37a(0x26b)]){if(!this[_0x27b37a(0x26b)][_0x27b37a(0x232)]){let _0x5b5a1d=document[_0x27b37a(0x134)](_0x27b37a(0x291));_0x5b5a1d[_0x27b37a(0x1c5)][_0x27b37a(0x179)](_0x5157ca(0x311),_0x27b37a(0x295)),_0x5b5a1d[_0x27b37a(0x487)]=_0x27b37a(0x3ea),_0x566767[_0x27b37a(0x30d)](_0x5b5a1d);}else for(let _0x3675c3 of this[_0x27b37a(0x26b)]){let _0x518f2f=await this[_0x27b37a(0x338)](_0x3675c3[_0x27b37a(0x331)]),_0x44b3f3=document[_0x27b37a(0x134)](_0x27b37a(0x291));_0x44b3f3[_0x27b37a(0x1c5)][_0x5157ca(0x536)](_0x27b37a(0x4a9)),_0x44b3f3[_0x27b37a(0x487)]=_0x27b37a(0x235)+_0x3675c3[_0x44050d(0x20c)]+_0x27b37a(0x1a1)+_0x518f2f[_0x44050d(0x345)]+_0x44050d(0x281)+_0x518f2f[_0x27b37a(0x133)]+_0x27b37a(0x155)+_0x3675c3[_0x27b37a(0x4e1)][_0x27b37a(0x148)](/\n/g,_0x27b37a(0x3f2))+_0x27b37a(0x435)+_0x3675c3[_0x27b37a(0x20a)]+_0x27b37a(0x365),_0x566767[_0x27b37a(0x30d)](_0x44b3f3);}}else{let _0x4f6c83=document[_0x27b37a(0x134)](_0x27b37a(0x291));_0x4f6c83[_0x27b37a(0x1c5)][_0x44050d(0x346)](_0x27b37a(0x4a9),_0x5157ca(0x463)),_0x4f6c83[_0x27b37a(0x487)]=_0x27b37a(0x48a);}}async[a167_0x1541f3(0x322)](){const _0x5405ed=a167_0x1c41,_0x57ea03=a167_0x241423,_0x9d9f02=a167_0x1541f3,_0x1cfa80=a167_0x1abf9b;let _0x4420b1,_0x5bb5f1=await this[_0x1cfa80(0x4c7)][_0x1cfa80(0x209)](_0x1cfa80(0x430)),_0x13433d=await this[_0x1cfa80(0x4c7)][_0x1cfa80(0x188)](_0x1cfa80(0x36a),_0x1cfa80(0x3c1)),_0x200527={},_0x49ec6b=[];for(let _0x317625 of _0x5bb5f1){_0x49ec6b[_0x5405ed(0x22e)](_0x317625);}for(let _0x5d24fe=0x0;_0x5d24fe<_0x49ec6b[_0x1cfa80(0x232)];_0x5d24fe++){let _0x27cae9=_0x49ec6b[_0x5d24fe][_0x1cfa80(0x284)][_0x1cfa80(0x25f)];_0x200527[_0x49ec6b[_0x5d24fe][_0x1cfa80(0x284)][_0x1cfa80(0x368)]]={'created':Date[_0x9d9f02(0x3ee)](),'icon':_0x1cfa80(0x1a5),'lastUsed':_0x9d9f02(0x3bc),'lastVersionId':_0x1cfa80(0x170),'name':'','type':_0x9d9f02(0x52d)};}_0x4420b1={'profiles':_0x200527,'settings':{'crashAssistance':!![],'enableAdvanced':![],'enableAnalytics':!![],'enableHistorical':![],'enableReleases':!![],'enableSnapshots':![],'keepLauncherOpen':![],'profileSorting':_0x9d9f02(0x529),'showGameLog':![],'showMenu':![],'soundOn':![]},'version':0x3};let _0x8a546f=JSON[_0x1cfa80(0x4eb)](_0x4420b1);fs[_0x1cfa80(0x204)](dataDirectory+'/'+(process[_0x1cfa80(0x4d5)]==_0x9d9f02(0x401)?this[_0x1cfa80(0x439)][_0x5405ed(0xa5)]:'.'+this[_0x9d9f02(0x39f)][_0x1cfa80(0x20c)]),{'recursive':!![]}),fs[_0x1cfa80(0x3f6)](path[_0x1cfa80(0x42e)](dataDirectory+'/'+(process[_0x1cfa80(0x4d5)]==_0x1cfa80(0x1e8)?this[_0x1cfa80(0x439)][_0x9d9f02(0x256)]:'.'+this[_0x1cfa80(0x439)][_0x1cfa80(0x20c)]),_0x9d9f02(0x516)),_0x8a546f);let _0x317d19=this[_0x57ea03(0x28d)],_0x21eed3=_0x317d19[_0x1cfa80(0x464)],_0x1cf1e7=_0x317d19[_0x1cfa80(0x27b)],_0x1faa44=_0x317d19[_0x9d9f02(0x4bd)],_0x5658d1=_0x317d19[_0x1cfa80(0x211)];if(_0x21eed3==!![]){const _0x35f217=require(_0x9d9f02(0x4e4));_0x35f217[_0x1cfa80(0x147)]({'title':_0x1cf1e7,'html':_0x5658d1,'confirmButtonText':this[_0x1cfa80(0x2ba)][_0x1cfa80(0x424)]});}let _0x537b93;document[_0x9d9f02(0x3d3)](_0x1cfa80(0x3e0))[_0x1cfa80(0x1c6)](_0x1cfa80(0x3e6),async()=>{const _0x59b50a=_0x1cfa80;let _0x42c488=document[_0x59b50a(0x2c5)](_0x59b50a(0x453));_0x42c488[_0x59b50a(0x1c5)][_0x59b50a(0x179)](_0x59b50a(0x219));}),document[_0x57ea03(0x150)](_0x1cfa80(0x206))[_0x9d9f02(0x480)](_0x1cfa80(0x3e6),async()=>{const _0x4e312e=_0x9d9f02,_0x32416a=_0x1cfa80;let _0x7c7cce=document[_0x32416a(0x2c5)](_0x4e312e(0x268));_0x7c7cce[_0x32416a(0x1c5)][_0x32416a(0x329)](_0x32416a(0x219));}),document[_0x1cfa80(0x2c5)](_0x1cfa80(0x43f))[_0x1cfa80(0x1c6)](_0x1cfa80(0x3e6),async()=>{const _0x40397b=_0x9d9f02,_0x387207=_0x1cfa80;let _0x15991b=document[_0x40397b(0x3d3)](_0x387207(0x453));_0x15991b[_0x387207(0x1c5)][_0x40397b(0x2af)](_0x40397b(0x224));});let _0x3a4699=this[_0x1cfa80(0x407)],_0x388ac5=this[_0x57ea03(0x2fd)];document[_0x1cfa80(0x2c5)](_0x9d9f02(0x4c7))[_0x9d9f02(0x480)](_0x1cfa80(0x2eb),async()=>{const _0x3b245f=_0x5405ed,_0x328137=_0x57ea03,_0x42b9f0=_0x9d9f02,_0x4482a8=_0x1cfa80;let _0x2ac10e=document[_0x4482a8(0x2c5)](_0x42b9f0(0x4c7))[_0x4482a8(0x284)],_0x78cfe7=_0x3a4699[_0x4482a8(0x296)],_0x51113a=document[_0x4482a8(0x2c5)](_0x4482a8(0x261)),_0x187ddd=document[_0x4482a8(0x2c5)](_0x4482a8(0x1b9)),_0x203a18=document[_0x4482a8(0x2c5)](_0x4482a8(0x12e)),_0x448553=document[_0x42b9f0(0x3d3)](_0x4482a8(0x2c6)),_0x361304=[],_0x5e5474=[],_0x4e5a29=[],_0x19a56c=[];for(let _0x28530d=0x0;_0x28530d<_0x78cfe7[_0x4482a8(0x232)];_0x28530d++){let _0x1cae6b=_0x78cfe7[_0x28530d][_0x42b9f0(0x434)];if(_0x1cae6b[_0x328137(0x22f)](_0x4482a8(0x45d)))_0x5e5474[_0x4482a8(0x1fe)](_0x78cfe7[_0x28530d][_0x328137(0x2c9)]);else{if(_0x1cae6b[_0x4482a8(0x302)](_0x42b9f0(0x36f)))_0x4e5a29[_0x4482a8(0x1fe)](_0x78cfe7[_0x28530d][_0x4482a8(0x37e)]);else _0x1cae6b[_0x4482a8(0x302)](_0x4482a8(0x3c4))&&_0x19a56c[_0x4482a8(0x1fe)](_0x78cfe7[_0x28530d][_0x42b9f0(0x1e4)]);}}for(let _0x31e72a=0x0;_0x31e72a<_0x388ac5[_0x4482a8(0x296)][_0x4482a8(0x232)];_0x31e72a++){let _0x6484ad=_0x388ac5[_0x42b9f0(0x343)][_0x31e72a]['id'];_0x361304[_0x4482a8(0x1fe)](_0x6484ad);}if(_0x5e5474[_0x42b9f0(0x3c7)](_0x2ac10e)&&_0x4e5a29[_0x42b9f0(0x3c7)](_0x2ac10e)&&_0x19a56c[_0x4482a8(0x34b)](_0x2ac10e)){document[_0x4482a8(0x2c5)](_0x4482a8(0x376))[_0x4482a8(0x20b)][_0x42b9f0(0x26c)]='',_0x51113a[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='',_0x187ddd[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='',_0x203a18[_0x42b9f0(0x313)][_0x4482a8(0x1ef)]='',_0x448553[_0x42b9f0(0x313)][_0x4482a8(0x1ef)]='';let _0x5256f1=document[_0x42b9f0(0x3d3)](_0x4482a8(0x342));_0x5256f1[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b);}else{if(_0x5e5474[_0x4482a8(0x34b)](_0x2ac10e)&&_0x4e5a29[_0x4482a8(0x34b)](_0x2ac10e)){document[_0x4482a8(0x2c5)](_0x4482a8(0x376))[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='',_0x51113a[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='',_0x187ddd[_0x4482a8(0x20b)][_0x42b9f0(0x26c)]='',_0x203a18[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='',_0x448553[_0x4482a8(0x20b)][_0x42b9f0(0x26c)]=_0x42b9f0(0x389);let _0x382595=document[_0x4482a8(0x2c5)](_0x42b9f0(0x4ba));_0x382595[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b);}else{if(_0x5e5474[_0x328137(0x247)](_0x2ac10e)&&_0x19a56c[_0x4482a8(0x34b)](_0x2ac10e)){document[_0x4482a8(0x2c5)](_0x4482a8(0x376))[_0x42b9f0(0x313)][_0x4482a8(0x1ef)]='',_0x51113a[_0x42b9f0(0x313)][_0x4482a8(0x1ef)]='',_0x187ddd[_0x42b9f0(0x313)][_0x4482a8(0x1ef)]='',_0x203a18[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b),_0x448553[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='';let _0x5e7ac5=document[_0x4482a8(0x2c5)](_0x328137(0x29a));_0x5e7ac5[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b);}else{if(_0x4e5a29[_0x4482a8(0x34b)](_0x2ac10e)&&_0x19a56c[_0x4482a8(0x34b)](_0x2ac10e)){document[_0x4482a8(0x2c5)](_0x4482a8(0x376))[_0x328137(0x14d)][_0x4482a8(0x1ef)]='',_0x51113a[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='',_0x187ddd[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x42b9f0(0x389),_0x203a18[_0x42b9f0(0x313)][_0x42b9f0(0x26c)]='',_0x448553[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='';let _0x390978=document[_0x4482a8(0x2c5)](_0x4482a8(0x342));_0x390978[_0x42b9f0(0x313)][_0x328137(0x122)]=_0x4482a8(0x49b);}else{if(_0x5e5474[_0x4482a8(0x34b)](_0x2ac10e)){document[_0x4482a8(0x2c5)](_0x4482a8(0x376))['style'][_0x4482a8(0x1ef)]='',_0x51113a[_0x42b9f0(0x313)][_0x42b9f0(0x26c)]='',_0x187ddd[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='',_0x203a18[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b),_0x448553[_0x42b9f0(0x313)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b);let _0x3ea34d=document[_0x42b9f0(0x3d3)](_0x4482a8(0x342));_0x3ea34d[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b);}else{if(_0x4e5a29[_0x4482a8(0x34b)](_0x2ac10e)){document[_0x4482a8(0x2c5)](_0x4482a8(0x376))[_0x42b9f0(0x313)][_0x42b9f0(0x26c)]='',_0x51113a[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='',_0x187ddd[_0x4482a8(0x20b)][_0x42b9f0(0x26c)]=_0x4482a8(0x49b),_0x203a18[_0x4482a8(0x20b)][_0x42b9f0(0x26c)]='',_0x448553[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b);let _0x53d0bd=document[_0x42b9f0(0x3d3)](_0x4482a8(0x342));_0x53d0bd[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b);}else{if(_0x19a56c[_0x42b9f0(0x3c7)](_0x2ac10e)){document[_0x42b9f0(0x3d3)](_0x42b9f0(0x4b3))[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='',_0x51113a[_0x42b9f0(0x313)][_0x4482a8(0x1ef)]='',_0x187ddd[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b),_0x203a18[_0x42b9f0(0x313)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b),_0x448553[_0x42b9f0(0x313)][_0x4482a8(0x1ef)]='';let _0x571c5c=document[_0x4482a8(0x2c5)](_0x42b9f0(0x4ba));_0x571c5c[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x42b9f0(0x389);}else{if(_0x361304[_0x4482a8(0x34b)](_0x2ac10e)){document[_0x42b9f0(0x3d3)](_0x4482a8(0x376))[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='',_0x51113a[_0x42b9f0(0x313)][_0x4482a8(0x1ef)]='',_0x187ddd[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x42b9f0(0x389),_0x203a18[_0x4482a8(0x20b)][_0x328137(0x122)]=_0x4482a8(0x49b),_0x448553[_0x42b9f0(0x313)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b);let _0x537aec=document[_0x4482a8(0x2c5)](_0x42b9f0(0x4ba));_0x537aec[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b);}else{if(_0x2ac10e==='dx'){document[_0x4482a8(0x2c5)](_0x4482a8(0x376))[_0x4482a8(0x1ef)]=_0x4482a8(0x49b),_0x51113a[_0x4482a8(0x20b)][_0x42b9f0(0x26c)]=_0x4482a8(0x49b),_0x187ddd[_0x328137(0x14d)][_0x4482a8(0x1ef)]=_0x42b9f0(0x389),_0x203a18[_0x3b245f(0x3bd)][_0x4482a8(0x1ef)]=_0x328137(0x263),_0x448553[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b);let _0xf2f81d=document[_0x4482a8(0x2c5)](_0x4482a8(0x342));_0xf2f81d[_0x4482a8(0x20b)][_0x42b9f0(0x26c)]=_0x4482a8(0x49b);}else{document[_0x4482a8(0x2c5)](_0x328137(0x2e1))[_0x4482a8(0x1ef)]=_0x42b9f0(0x389),_0x51113a['style'][_0x328137(0x122)]=_0x42b9f0(0x389),_0x187ddd[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]=_0x4482a8(0x49b),_0x203a18[_0x42b9f0(0x313)][_0x328137(0x122)]=_0x4482a8(0x49b),_0x448553[_0x3b245f(0x3bd)][_0x42b9f0(0x26c)]=_0x42b9f0(0x389);let _0x74451f=document[_0x4482a8(0x2c5)](_0x4482a8(0x342));_0x74451f[_0x4482a8(0x20b)][_0x4482a8(0x1ef)]='';}}}}}}}}}});let _0x5d6c15=document[_0x1cfa80(0x37a)](_0x9d9f02(0x3a1));_0x5d6c15[_0x1cfa80(0x1bc)](_0x467854=>{const _0x35c17e=_0x1cfa80;_0x467854[_0x35c17e(0x1c6)](_0x35c17e(0x3e6),async()=>{const _0x34af4a=_0x35c17e;let _0x53876c=document[_0x34af4a(0x2c5)](_0x34af4a(0x342));_0x53876c[_0x34af4a(0x20b)][_0x34af4a(0x1ef)]='';});}),document[_0x1cfa80(0x2c5)](_0x1cfa80(0x172))[_0x1cfa80(0x1c6)](_0x9d9f02(0x1c9),async()=>{const _0x39b232=_0x5405ed,_0x41217a=_0x57ea03,_0x45fb7b=_0x9d9f02,_0x191adc=_0x1cfa80;let _0x3eb513=document[_0x191adc(0x2c5)](_0x191adc(0x3a3))[_0x191adc(0x284)],_0x202d56,_0x31de1a=document[_0x41217a(0x150)](_0x191adc(0x4a0)),_0x12dd56=document[_0x191adc(0x2c5)](_0x191adc(0x453)),_0x29cc09=pkg[_0x191adc(0x3f9)]?pkg[_0x191adc(0x3cf)]+'/'+pkg[_0x191adc(0x3f9)]:pkg[_0x191adc(0x3cf)],_0x1033a2=(await this[_0x191adc(0x4c7)][_0x191adc(0x188)](_0x191adc(0x36a),_0x191adc(0x3c1)))[_0x45fb7b(0x364)],_0x2ebd71=(await this[_0x191adc(0x4c7)][_0x191adc(0x188)](_0x1033a2[_0x191adc(0x4d1)],_0x45fb7b(0x48a)))[_0x191adc(0x284)],_0x4823ad=(await this[_0x45fb7b(0x4a6)][_0x191adc(0x188)](_0x191adc(0x36a),_0x191adc(0x1c2)))[_0x191adc(0x284)],_0x283b3d=(await this[_0x191adc(0x4c7)][_0x191adc(0x188)](_0x191adc(0x36a),_0x191adc(0x195)))[_0x45fb7b(0x364)],_0x287f6e=(await this[_0x191adc(0x4c7)][_0x191adc(0x188)](_0x45fb7b(0x435),_0x191adc(0x39d)))[_0x45fb7b(0x364)],_0x1ac682=![],_0x3bd05f=![],_0x436106=![],_0x12a636=document[_0x45fb7b(0x3d3)](_0x191adc(0x136)),_0x4c239d=document[_0x191adc(0x2c5)](_0x45fb7b(0x4f0)),_0x11dda5=document[_0x45fb7b(0x3d3)](_0x191adc(0x2ce)),_0x45699b=document[_0x41217a(0x150)](_0x191adc(0x462)),_0x122a4f=document[_0x191adc(0x2c5)](_0x45fb7b(0x4ba));_0x122a4f[_0x45fb7b(0x313)][_0x41217a(0x122)]=_0x191adc(0x49b);let _0x3790a0=document[_0x191adc(0x2c5)](_0x45fb7b(0x4cf));_0x3790a0[_0x191adc(0x487)]=this[_0x191adc(0x2ba)][_0x191adc(0x369)];let _0x36b36b=document[_0x191adc(0x37a)](_0x191adc(0x2b2));_0x36b36b[_0x191adc(0x1bc)](_0x539a05=>{const _0x4278dc=a167_0x1c41,_0x159b03=_0x45fb7b,_0x4ef3ff=_0x191adc;_0x539a05[_0x4ef3ff(0x1b0)]&&(console[_0x159b03(0x249)](_0x539a05[_0x4ef3ff(0x284)]),console[_0x159b03(0x249)](_0x159b03(0x2c5)+_0x3eb513),_0x3eb513[_0x159b03(0x505)](_0x159b03(0x559))?_0x202d56=_0x4ef3ff(0x14c):_0x202d56=_0x539a05[_0x4278dc(0x245)]);});if(_0x202d56===_0x45fb7b(0x2f3))console[_0x45fb7b(0x249)](_0x45fb7b(0x546)+_0x202d56+''),console[_0x191adc(0x203)](_0x45fb7b(0x546)+_0x3eb513+''),_0x3eb513=_0x3eb513;else{if(_0x202d56===_0x191adc(0x4a8))_0x3eb513+=_0x191adc(0x22f),console[_0x191adc(0x203)](_0x191adc(0x183)+_0x3eb513+'');else{if(_0x202d56===_0x191adc(0x36c))_0x3eb513+=_0x45fb7b(0x1d9),console[_0x191adc(0x203)](_0x191adc(0x387)+_0x3eb513+'');else _0x202d56===_0x191adc(0x405)?(_0x3eb513+=_0x191adc(0x3c4),console[_0x191adc(0x203)](_0x191adc(0x471)+_0x3eb513+'')):console[_0x41217a(0x185)](_0x45fb7b(0x4f4)+_0x3eb513+'');}}let _0x41600d;if(_0x3eb513[_0x45fb7b(0x505)](_0x191adc(0x45d)))_0x41600d=_0x3eb513[_0x45fb7b(0x396)](_0x191adc(0x45d),'');else{if(_0x3eb513['endsWith'](_0x191adc(0x22f)))_0x41600d=_0x3eb513[_0x191adc(0x148)](_0x191adc(0x22f),'');else{if(_0x3eb513[_0x191adc(0x302)](_0x191adc(0x3c4)))_0x41600d=_0x3eb513[_0x191adc(0x148)](_0x45fb7b(0x42d),'');else _0x3eb513[_0x45fb7b(0x505)](_0x191adc(0x4ec))?_0x41600d=_0x3eb513[_0x191adc(0x148)](_0x191adc(0x4ec),''):_0x41600d=_0x3eb513;}}if(_0x3eb513[_0x191adc(0x302)](_0x191adc(0x45d)))_0x3eb513=_0x3eb513[_0x191adc(0x148)](_0x41217a(0x23b),''),_0x1ac682=!![],_0x3bd05f=![],_0x436106=![],console[_0x45fb7b(0x249)](_0x191adc(0x34a));else{if(_0x3eb513[_0x191adc(0x302)](_0x191adc(0x22f)))_0x3eb513=_0x3eb513[_0x191adc(0x148)](_0x191adc(0x22f),''),_0x3bd05f=!![],_0x1ac682=![],_0x436106=![],console[_0x41217a(0x185)](_0x45fb7b(0x4da));else _0x3eb513[_0x191adc(0x302)](_0x45fb7b(0x42d))&&(_0x3eb513=_0x3eb513[_0x191adc(0x148)](_0x191adc(0x3c4),''),_0x436106=!![],_0x1ac682=![],_0x3bd05f=![],console[_0x41217a(0x185)](_0x191adc(0x2c9)));}let _0x854e51;if(_0x1ac682==!![])_0x854e51=_0x191adc(0x36c),_0x537b93=_0x191adc(0x36c);else{if(_0x3bd05f==!![])console[_0x191adc(0x203)](_0x191adc(0x39e)),_0x854e51=_0x191adc(0x4a8),_0x537b93=_0x191adc(0x4a8);else _0x436106==!![]&&(_0x854e51=_0x45fb7b(0x377),_0x537b93=_0x191adc(0x405));}let _0x49c9f5,_0x438b72;console[_0x191adc(0x203)](_0x3eb513);if(_0x41600d===_0x41217a(0x3df))_0x49c9f5=_0x45fb7b(0x217),console[_0x191adc(0x203)](_0x45fb7b(0x535)),console[_0x191adc(0x203)](_0x49c9f5),_0x438b72={'number':_0x49c9f5,'custom':_0x41600d,'type':_0x191adc(0x32d)};else{if(_0x3eb513[_0x191adc(0x302)](_0x45fb7b(0x559))&&!_0x3eb513[_0x191adc(0x34b)](_0x191adc(0x319))&&!_0x41600d[_0x191adc(0x34b)](_0x191adc(0x351)))_0x49c9f5=JSON[_0x191adc(0x29f)](fs[_0x191adc(0x4c9)](dataDirectory+'/'+(process[_0x191adc(0x4d5)]==_0x191adc(0x1e8)?this[_0x191adc(0x439)][_0x191adc(0x20c)]:'.'+this[_0x45fb7b(0x39f)]['dataDirectory'])+_0x191adc(0x4e5)+_0x41600d+'/'+_0x41600d+_0x191adc(0x13e)))[_0x191adc(0x375)],console[_0x191adc(0x203)](_0x191adc(0x2b5)),console[_0x191adc(0x203)](_0x49c9f5),_0x438b72={'number':_0x49c9f5,'custom':_0x41600d,'type':'release'};else{if(_0x3eb513[_0x191adc(0x34b)](_0x191adc(0x319))&&_0x3eb513[_0x191adc(0x302)](_0x45fb7b(0x559)))_0x49c9f5=JSON[_0x45fb7b(0x487)](fs[_0x191adc(0x4c9)](dataDirectory+'/'+(process[_0x191adc(0x4d5)]==_0x45fb7b(0x401)?this[_0x191adc(0x439)][_0x41217a(0x2d8)]:'.'+this[_0x191adc(0x439)][_0x45fb7b(0x256)])+_0x191adc(0x4e5)+_0x41600d+'/'+_0x41600d+_0x191adc(0x13e)))[_0x191adc(0x139)],console[_0x191adc(0x203)](_0x191adc(0x39a)),console[_0x191adc(0x203)](_0x49c9f5),_0x438b72={'number':_0x49c9f5,'custom':_0x41600d,'type':_0x191adc(0x32d)};else{if(_0x3eb513[_0x191adc(0x34b)](_0x45fb7b(0x51c))&&_0x3eb513[_0x191adc(0x302)](_0x191adc(0x4ec)))_0x49c9f5=JSON['parse'](fs[_0x191adc(0x4c9)](dataDirectory+'/'+(process[_0x41217a(0x1b8)]==_0x45fb7b(0x401)?this[_0x191adc(0x439)][_0x191adc(0x20c)]:'.'+this[_0x191adc(0x439)][_0x191adc(0x20c)])+_0x191adc(0x4e5)+_0x41600d+'/'+_0x41600d+_0x191adc(0x13e)))[_0x191adc(0x411)],console[_0x191adc(0x203)](_0x191adc(0x1d8)),console[_0x191adc(0x203)](_0x49c9f5),_0x438b72={'number':_0x41600d,'type':_0x45fb7b(0x4d6)};else _0x41600d[_0x45fb7b(0x505)](_0x191adc(0x45d))||_0x41600d[_0x191adc(0x302)](_0x191adc(0x22f))||_0x41600d[_0x41217a(0x22f)](_0x191adc(0x3c4))?(console[_0x45fb7b(0x249)](_0x41217a(0x3e9)),_0x438b72=_0x3eb513,console[_0x191adc(0x203)](_0x438b72)):(console[_0x191adc(0x203)](_0x45fb7b(0x2bb)),_0x438b72=_0x41600d);}}}let _0x25c028=document[_0x191adc(0x2c5)](_0x191adc(0x1ec)),_0x353346=document[_0x191adc(0x2c5)](_0x45fb7b(0x50a)),_0x324092=document[_0x191adc(0x2c5)](_0x191adc(0x25b));_0x283b3d[_0x45fb7b(0x525)][_0x45fb7b(0x46c)]==_0x191adc(0x202)?screen=![]:screen={'width':_0x283b3d[_0x45fb7b(0x525)][_0x191adc(0x25a)],'height':_0x283b3d[_0x191adc(0x195)][_0x45fb7b(0x34b)]};let _0x234d58,_0x3a93a3=localStorage[_0x191adc(0x270)](_0x191adc(0x36d));!_0x3a93a3||_0x3a93a3==null||_0x3a93a3==undefined?_0x234d58={'url':this[_0x191adc(0x439)][_0x191adc(0x266)]===''||this[_0x191adc(0x439)][_0x191adc(0x266)]===undefined?_0x29cc09+_0x45fb7b(0x20d):this[_0x191adc(0x439)][_0x191adc(0x266)],'authorization':_0x2ebd71,'authenticator':_0x2ebd71,'detached':![],'timeout':0x2710,'root':dataDirectory+_0x191adc(0x4ea),'path':dataDirectory+_0x191adc(0x4ea),'overrides':{'detached':![],'screen':screen},'downloadFileMultiple':0x14,'version':_0x438b72,'loader':{'type':_0x854e51,'build':this[_0x191adc(0x1d9)][_0x45fb7b(0x3a1)][_0x191adc(0x4b2)],'enable':_0x1ac682?!![]:_0x3bd05f?!![]:_0x436106?!![]:![]},'verify':![],'ignored':[_0x45fb7b(0x3a1)],'java':![],'memory':{'min':_0x4823ad[_0x45fb7b(0x3db)]*0x400+'M','max':_0x4823ad[_0x191adc(0x317)]*0x400+'M'}}:_0x3eb513[_0x191adc(0x302)](_0x45fb7b(0x559))?_0x234d58={'url':this[_0x191adc(0x439)][_0x191adc(0x266)]===''||this[_0x191adc(0x439)][_0x191adc(0x266)]===undefined?_0x29cc09+_0x191adc(0x442):this[_0x191adc(0x439)][_0x41217a(0x24c)],'authorization':_0x2ebd71,'authenticator':_0x2ebd71,'detached':![],'timeout':0x2710,'root':dataDirectory+_0x191adc(0x4ea),'path':dataDirectory+_0x191adc(0x4ea),'overrides':{'detached':![],'screen':screen},'downloadFileMultiple':0x14,'javaPath':_0x3a93a3,'version':_0x438b72,'loader':{'type':_0x854e51,'build':this[_0x45fb7b(0x522)][_0x45fb7b(0x3a1)][_0x191adc(0x4b2)],'enable':_0x1ac682?!![]:_0x3bd05f?!![]:_0x436106?!![]:![]},'verify':![],'ignored':[_0x191adc(0x2b2)],'java':![],'memory':{'min':_0x4823ad[_0x191adc(0x445)]*0x400+'M','max':_0x4823ad[_0x191adc(0x317)]*0x400+'M'}}:_0x234d58={'url':this[_0x191adc(0x439)][_0x191adc(0x266)]===''||this[_0x191adc(0x439)][_0x191adc(0x266)]===undefined?_0x29cc09+_0x191adc(0x442):this[_0x45fb7b(0x39f)][_0x45fb7b(0x49a)],'authorization':_0x2ebd71,'authenticator':_0x2ebd71,'detached':![],'timeout':0x2710,'root':dataDirectory+_0x191adc(0x4ea),'path':dataDirectory+_0x191adc(0x4ea),'overrides':{'detached':![],'screen':screen},'downloadFileMultiple':0x14,'version':_0x438b72,'loader':{'type':_0x854e51,'build':this['BattlyConfig'][_0x191adc(0x2b2)][_0x191adc(0x4b2)],'enable':_0x1ac682?!![]:_0x3bd05f?!![]:_0x436106?!![]:![]},'verify':![],'ignored':[_0x191adc(0x2b2)],'java':![],'memory':{'min':_0x4823ad[_0x191adc(0x445)]*0x400+'M','max':_0x4823ad[_0x45fb7b(0x442)]*0x400+'M'}},console[_0x191adc(0x203)](_0x234d58);const _0xde164b=new Client(),_0x4d9bf7=new Launch();try{if(_0x3eb513===_0x191adc(0x3cc))console[_0x191adc(0x203)](_0x191adc(0x40a)),await _0xde164b[_0x191adc(0x1f8)](_0x234d58),document[_0x45fb7b(0x3d3)](_0x191adc(0x36e))[_0x45fb7b(0x313)][_0x191adc(0x1ef)]='';else{if(_0x41600d[_0x191adc(0x302)](_0x41217a(0x23b))||_0x41600d[_0x41217a(0x22f)](_0x45fb7b(0x36f))||_0x41600d[_0x45fb7b(0x505)](_0x39b232(0x380)))console[_0x45fb7b(0x249)](_0x191adc(0x3de)),await _0x4d9bf7[_0x45fb7b(0x299)](_0x234d58),document[_0x191adc(0x2c5)](_0x191adc(0x36e))[_0x191adc(0x20b)][_0x45fb7b(0x26c)]='';else _0x3eb513[_0x191adc(0x302)](_0x191adc(0x4ec))?(console[_0x45fb7b(0x249)](_0x191adc(0x498)),_0xde164b[_0x191adc(0x1f8)](_0x234d58),document[_0x191adc(0x2c5)](_0x191adc(0x36e))[_0x191adc(0x20b)][_0x45fb7b(0x26c)]=''):(console[_0x191adc(0x203)](_0x45fb7b(0x4ce)),await _0x4d9bf7[_0x191adc(0x366)](_0x234d58),document[_0x191adc(0x2c5)](_0x191adc(0x36e))[_0x191adc(0x20b)][_0x191adc(0x1ef)]='');}}catch(_0x216441){setTimeout(()=>{const _0x3f75b5=_0x41217a,_0x393ed2=_0x191adc;_0x25c028[_0x393ed2(0x20b)][_0x393ed2(0x1ef)]='',_0x353346[_0x393ed2(0x20b)][_0x393ed2(0x1ef)]=_0x393ed2(0x49b),_0x31de1a[_0x3f75b5(0x14d)][_0x393ed2(0x1ef)]=_0x393ed2(0x49b);},0xbb8),console[_0x191adc(0x203)](_0x216441);}_0xde164b['on'](_0x191adc(0x17f),_0x489e2f=>{const _0x34b4c6=_0x191adc;consoleOutput_+=_0x34b4c6(0x33d)+_0x489e2f+'\x0a';let _0x462973=![];if(_0x462973){}else _0x462973=!![];}),_0xde164b['on'](_0x191adc(0x378),_0x1194da=>{const _0x459447=_0x39b232,_0x17ac82=_0x41217a,_0x5da3c6=_0x45fb7b,_0x3a851d=_0x191adc;console[_0x3a851d(0x203)](_0x1194da),consoleOutput_+=_0x3a851d(0x1e3)+JSON[_0x459447(0x99)](_0x1194da,null,0x2)+'\x0a';if(_0x1194da[_0x3a851d(0x34b)](_0x3a851d(0x3b2)))return ShowPanelError(this[_0x3a851d(0x2ba)][_0x3a851d(0x33f)]+_0x3a851d(0x1ae)+_0x1194da);_0x1194da[_0x3a851d(0x34b)](_0x3a851d(0x2af))&&(_0x31de1a[_0x3a851d(0x20b)][_0x5da3c6(0x26c)]='',_0x31de1a[_0x5da3c6(0x474)]=0x64,_0x31de1a[_0x5da3c6(0x364)]=0x0,_0x353346[_0x3a851d(0x487)]=this[_0x3a851d(0x2ba)][_0x3a851d(0x3b9)]),_0x1194da[_0x3a851d(0x34b)](_0x17ac82(0x446))&&(_0x353346[_0x3a851d(0x487)]=this[_0x5da3c6(0x507)][_0x3a851d(0x1cb)]),_0x1194da[_0x3a851d(0x34b)](_0x3a851d(0x43a))&&(_0x353346[_0x3a851d(0x487)]=this[_0x3a851d(0x2ba)][_0x3a851d(0x40c)]),_0x1194da[_0x3a851d(0x34b)](_0x3a851d(0x3fe))&&(_0x353346[_0x5da3c6(0x365)]=this[_0x3a851d(0x2ba)][_0x3a851d(0x14d)]),_0x1194da[_0x3a851d(0x34b)](_0x3a851d(0x2af))&&(_0x353346[_0x3a851d(0x487)]=this[_0x3a851d(0x2ba)][_0x5da3c6(0x27d)]);if(_0x1194da[_0x3a851d(0x34b)](_0x3a851d(0x493)))return ShowPanelError(this[_0x3a851d(0x2ba)][_0x3a851d(0x33f)]+_0x3a851d(0x1ae)+_0x1194da);if(_0x1194da[_0x3a851d(0x34b)](_0x3a851d(0x4e8)))return ShowPanelError(this[_0x3a851d(0x2ba)][_0x3a851d(0x177)]+_0x3a851d(0x1ae)+_0x1194da);if(_0x1194da[_0x3a851d(0x34b)](_0x3a851d(0x178)))return ShowPanelError(this[_0x3a851d(0x2ba)][_0x3a851d(0x27a)]+_0x3a851d(0x1ae)+_0x1194da);if(_0x1194da[_0x3a851d(0x34b)](_0x3a851d(0x135)))return ShowPanelError(this[_0x17ac82(0x2de)][_0x3a851d(0x27a)]+_0x5da3c6(0x3cc)+_0x1194da);_0x1194da[_0x5da3c6(0x3c7)](_0x17ac82(0x2c4))&&(ShowPanelError(this[_0x3a851d(0x2ba)][_0x5da3c6(0x339)]+_0x3a851d(0x1ae)+_0x1194da),_0x31de1a[_0x3a851d(0x20b)][_0x5da3c6(0x26c)]=_0x3a851d(0x49b),_0x353346[_0x5da3c6(0x313)][_0x3a851d(0x1ef)]=_0x3a851d(0x49b),_0x25c028[_0x3a851d(0x20b)][_0x3a851d(0x1ef)]='');if(_0x1194da[_0x5da3c6(0x3c7)](_0x3a851d(0x1aa)))return ShowPanelError(this[_0x3a851d(0x2ba)][_0x459447(0x141)]+_0x5da3c6(0x3cc)+_0x1194da);if(_0x1194da[_0x3a851d(0x34b)](_0x3a851d(0x1bb))&&!_0x1194da[_0x3a851d(0x34b)](_0x5da3c6(0x515)))return ShowPanelError(this[_0x3a851d(0x2ba)][_0x3a851d(0x33f)]+_0x17ac82(0x41c)+_0x1194da);if(_0x1194da[_0x5da3c6(0x3c7)](_0x3a851d(0x271)))return ShowPanelError(this[_0x3a851d(0x2ba)][_0x3a851d(0x130)]+_0x3a851d(0x1ae)+_0x1194da);if(_0x1194da[_0x3a851d(0x34b)](_0x17ac82(0x202)))return ShowPanelError(this[_0x3a851d(0x2ba)][_0x17ac82(0x38a)]+_0x3a851d(0x1ae)+_0x1194da);}),_0xde164b['on'](_0x191adc(0x31d),_0x4ae697=>{const _0xd7fc19=_0x41217a,_0x44b9d3=_0x45fb7b,_0x440afe=_0x191adc;console[_0x440afe(0x203)](_0x4ae697),consoleOutput_+=_0x440afe(0x1e3)+JSON[_0x44b9d3(0x2bc)](_0x4ae697,null,0x2)+'\x0a',_0x4ae697[_0x440afe(0x34b)](_0x440afe(0x1f5))&&(console[_0x440afe(0x203)](_0x440afe(0x1c1)),Toast[_0x440afe(0x147)]({'icon':_0x440afe(0x3fd),'title':_0x440afe(0x1c1)}),_0x31de1a[_0x440afe(0x20b)][_0x440afe(0x1ef)]=_0x440afe(0x49b),_0x31de1a[_0x440afe(0x347)]=0x64,_0x31de1a[_0x440afe(0x284)]=0x0,_0x25c028[_0x440afe(0x20b)][_0xd7fc19(0x122)]='',_0x353346[_0x440afe(0x20b)][_0x44b9d3(0x26c)]=_0x440afe(0x49b),_0x12925d=!![]);}),_0xde164b['on'](_0x191adc(0x4b8),function(_0x5e831a){const _0xc29ed=_0x41217a,_0xd97d16=_0x45fb7b,_0x43c474=_0x191adc;console[_0x43c474(0x203)](_0x5e831a);let _0x3b766b=_0x5e831a[_0xc29ed(0x179)],_0x4ce161=_0x5e831a[_0x43c474(0x4db)],_0x28ff37=(_0x4ce161/_0x3b766b*0x64)[_0x43c474(0x18d)](0x0),_0x2c934b=0x64;ipcRenderer[_0xd97d16(0x3a2)](_0x43c474(0x483),{'total_':_0x2c934b,'progress':_0x28ff37}),_0x31de1a[_0xc29ed(0x14d)][_0x43c474(0x1ef)]='',_0x31de1a[_0x43c474(0x347)]=_0x3b766b,_0x31de1a[_0xd97d16(0x364)]=_0x4ce161;});let _0x12925d=![];_0xde164b['on'](_0x191adc(0x3f8),_0x2b9d4f=>{const _0x99be8a=_0x191adc;ipcRenderer[_0x99be8a(0x3ae)](_0x99be8a(0x40b));});let _0x4950cb;_0xde164b['on'](_0x191adc(0x3ed),_0x4dd95f=>{}),_0xde164b['on'](_0x191adc(0x43c),_0x97c891=>{const _0x5ee125=_0x41217a,_0x29b8e3=_0x45fb7b,_0x5b329b=_0x191adc;consoleOutput_+=_0x5b329b(0x301)+_0x97c891+'\x0a';let _0x1c43cb=![];if(_0x1c43cb){}else _0x324092[_0x5b329b(0x487)]=this[_0x29b8e3(0x507)][_0x5b329b(0x3ac)]+_0x5b329b(0x2e3),_0x1c43cb=!![];_0x353346[_0x5b329b(0x487)]=this[_0x29b8e3(0x507)][_0x5ee125(0x3e2)]+_0x5b329b(0x2e3);});let _0x2bf96c=![],_0xf14efd=![];_0xde164b['on'](_0x45fb7b(0x514),async _0x9147b9=>{const _0x5ba140=_0x39b232,_0x2ed508=_0x41217a,_0x1791a8=_0x45fb7b,_0x3a9710=_0x191adc;new logger(_0x3a9710(0x15a),_0x3a9710(0x226)),consoleOutput_+=_0x1791a8(0x288)+_0x9147b9+'\x0a';if(_0x287f6e[_0x3a9710(0x39d)][_0x3a9710(0x1ea)]===_0x3a9710(0x1d1))ipcRenderer[_0x3a9710(0x3ae)](_0x1791a8(0x4df));if(_0x9147b9[_0x1791a8(0x3c7)](_0x3a9710(0x1a3)))_0x353346[_0x3a9710(0x487)]=this[_0x3a9710(0x2ba)][_0x3a9710(0x2ca)]+_0x3a9710(0x2e3);;console[_0x3a9710(0x203)](_0x9147b9);if(_0x9147b9[_0x3a9710(0x34b)](_0x3a9710(0x493)))return ShowPanelError(this[_0x3a9710(0x2ba)][_0x1791a8(0x1df)]+_0x3a9710(0x1ae)+_0x9147b9);if(_0x9147b9[_0x3a9710(0x34b)](_0x3a9710(0x4e8)))return ShowPanelError(this[_0x3a9710(0x2ba)][_0x3a9710(0x177)]+_0x3a9710(0x1ae)+_0x9147b9);if(_0x9147b9[_0x3a9710(0x34b)](_0x1791a8(0x2ff)))return ShowPanelError(this[_0x3a9710(0x2ba)][_0x5ba140(0x1c9)]+_0x3a9710(0x1ae)+_0x9147b9);if(_0x9147b9[_0x1791a8(0x3c7)](_0x3a9710(0x135)))return ShowPanelError(this[_0x3a9710(0x2ba)][_0x3a9710(0x27a)]+_0x3a9710(0x1ae)+_0x9147b9);_0x9147b9[_0x1791a8(0x3c7)](_0x3a9710(0x403))&&(ShowPanelError(this[_0x3a9710(0x2ba)][_0x3a9710(0x299)]+_0x3a9710(0x1ae)+_0x9147b9),_0x31de1a[_0x3a9710(0x20b)][_0x1791a8(0x26c)]=_0x3a9710(0x49b),_0x353346[_0x3a9710(0x20b)][_0x1791a8(0x26c)]=_0x3a9710(0x49b),_0x25c028[_0x3a9710(0x20b)][_0x3a9710(0x1ef)]='');if(_0x9147b9[_0x3a9710(0x34b)](_0x1791a8(0x4ca)))return ShowPanelError(this[_0x3a9710(0x2ba)][_0x1791a8(0x3ab)]+_0x3a9710(0x1ae)+_0x9147b9);if(_0x9147b9[_0x3a9710(0x34b)](_0x3a9710(0x1bb))&&!_0x9147b9[_0x3a9710(0x34b)](_0x3a9710(0x4d9)))return ShowPanelError(this[_0x3a9710(0x2ba)][_0x3a9710(0x33f)]+_0x3a9710(0x1ae)+_0x9147b9);if(_0x9147b9[_0x3a9710(0x34b)](_0x3a9710(0x271)))return ShowPanelError(this[_0x3a9710(0x2ba)][_0x3a9710(0x130)]+_0x3a9710(0x1ae)+_0x9147b9);if(_0x9147b9[_0x3a9710(0x34b)](_0x3a9710(0x24c)))return ShowPanelError(this[_0x3a9710(0x2ba)][_0x2ed508(0x38a)]+_0x3a9710(0x1ae)+_0x9147b9);if(_0x9147b9[_0x1791a8(0x3c7)](_0x3a9710(0x2fb)+_0x2ebd71[_0x3a9710(0x25f)])||_0x9147b9[_0x3a9710(0x34b)](_0x3a9710(0x33c))){if(_0x2bf96c==![]){let _0x325bf2;if(_0x41600d[_0x3a9710(0x302)](_0x3a9710(0x45d)))_0x325bf2=_0x3a9710(0x3f0);else{if(_0x41600d[_0x1791a8(0x505)](_0x3a9710(0x22f)))_0x325bf2=_0x3a9710(0x4ab);else _0x41600d[_0x3a9710(0x302)](_0x3a9710(0x3c4))?_0x325bf2=_0x3a9710(0x3d1):_0x325bf2='';}console[_0x1791a8(0x249)](_0x3a9710(0x4fc)+_0x41600d);if(_0x41600d[_0x1791a8(0x3c7)](_0x1791a8(0x263))){let _0x55189b=_0x41600d[_0x1791a8(0x331)](0x0,0x6);_0x55189b=_0x55189b[_0x3a9710(0x148)]('-',''),ipcRenderer[_0x3a9710(0x3ae)](_0x3a9710(0x463),this[_0x3a9710(0x2ba)][_0x2ed508(0x407)]+_0x3a9710(0x2a6)+_0x55189b),this[_0x5ba140(0xd7)](_0x2ebd71[_0x3a9710(0x25f)],_0x3a9710(0x441),this['lang'][_0x3a9710(0x259)]+_0x2ed508(0x310)+_0x55189b);}else{if(_0x41600d[_0x3a9710(0x34b)](_0x3a9710(0x351)))ipcRenderer[_0x3a9710(0x3ae)](_0x3a9710(0x463),this[_0x3a9710(0x2ba)][_0x3a9710(0x259)]+_0x3a9710(0x176)),this[_0x1791a8(0x3e3)](_0x2ebd71[_0x3a9710(0x25f)],_0x3a9710(0x441),this[_0x3a9710(0x2ba)][_0x3a9710(0x259)]+_0x3a9710(0x176));else _0x41600d[_0x3a9710(0x34b)](_0x3a9710(0x2bc))?(ipcRenderer[_0x3a9710(0x3ae)](_0x3a9710(0x463),this['lang'][_0x3a9710(0x259)]+_0x1791a8(0x2ed)),this[_0x3a9710(0x4b9)](_0x2ebd71[_0x3a9710(0x25f)],_0x3a9710(0x441),this[_0x3a9710(0x2ba)][_0x3a9710(0x259)]+_0x1791a8(0x2ed))):(ipcRenderer[_0x3a9710(0x3ae)](_0x3a9710(0x463),this[_0x1791a8(0x507)][_0x1791a8(0x27e)]+'\x20'+_0x41600d[_0x3a9710(0x148)](_0x1791a8(0x1d9),'')[_0x3a9710(0x148)](_0x3a9710(0x22f),'')[_0x3a9710(0x148)](_0x3a9710(0x3c4),'')+'\x20'+_0x325bf2),console[_0x3a9710(0x203)](_0x3a9710(0x434)+_0x41600d),this[_0x1791a8(0x3e3)](_0x2ebd71[_0x3a9710(0x25f)],_0x1791a8(0x4e6),this[_0x2ed508(0x2de)][_0x3a9710(0x259)]+'\x20'+_0x41600d[_0x1791a8(0x396)](_0x3a9710(0x45d),'')[_0x3a9710(0x148)](_0x3a9710(0x22f),'')[_0x1791a8(0x396)](_0x3a9710(0x3c4),'')+'\x20'+_0x325bf2));}_0x12dd56[_0x3a9710(0x1c5)][_0x1791a8(0x2af)](_0x3a9710(0x219)),_0x2bf96c=!![],_0x353346[_0x3a9710(0x487)]=this[_0x3a9710(0x2ba)][_0x1791a8(0x316)]+'.',_0x324092[_0x1791a8(0x365)]='',_0x3790a0[_0x3a9710(0x487)]=_0x3a9710(0x406),ipcRenderer[_0x3a9710(0x3ae)](_0x5ba140(0x16d),{'title':this[_0x2ed508(0x2de)]['minecraft_started_correctly'],'body':this[_0x1791a8(0x507)][_0x3a9710(0x264)]}),ipcRenderer[_0x3a9710(0x3ae)](_0x3a9710(0x40b));}}if(_0x9147b9[_0x1791a8(0x3c7)](_0x3a9710(0x39b))){let _0x3588ec=_0x9147b9[_0x3a9710(0x144)](_0x3a9710(0x4f9))[0x1][_0x3a9710(0x144)](_0x3a9710(0x2e3))[0x0];_0x353346[_0x3a9710(0x487)]=_0x3a9710(0x39f)+_0x3588ec;}}),_0xde164b['on'](_0x191adc(0x1ea),_0x3cddf4=>{const _0x219eb0=_0x39b232,_0x25091e=_0x41217a,_0x343794=_0x45fb7b,_0x259497=_0x191adc;consoleOutput_+=_0x25091e(0x208)+_0x3cddf4+_0x343794(0x1d1);if(_0x287f6e[_0x259497(0x39d)][_0x259497(0x1ea)]===_0x259497(0x1d1))ipcRenderer[_0x259497(0x3ae)](_0x259497(0x2de));ipcRenderer[_0x259497(0x3ae)](_0x259497(0x2e0),{'status':_0x259497(0x4ae),'details':this[_0x259497(0x2ba)][_0x259497(0x4da)],'username':_0x2ebd71[_0x343794(0x1d8)]}),_0x353346[_0x259497(0x20b)][_0x259497(0x1ef)]=_0x259497(0x49b),_0x25c028[_0x259497(0x20b)][_0x259497(0x1ef)]='',_0x353346[_0x259497(0x487)]=_0x259497(0x3ad),_0x122a4f[_0x25091e(0x14d)][_0x25091e(0x122)]='',_0x3790a0[_0x343794(0x365)]=_0x259497(0x406),new logger(_0x259497(0x265),_0x259497(0x34c)),console[_0x259497(0x203)](_0x259497(0x28c)),document[_0x259497(0x2c5)](_0x343794(0x4f6))[_0x343794(0x313)][_0x343794(0x26c)]=_0x259497(0x49b),_0x31de1a[_0x259497(0x20b)][_0x259497(0x1ef)]=_0x259497(0x49b),_0x3eb513=null,_0x202d56=null,_0x438b72=null,_0x41600d=null,_0x49c9f5=null,_0x854e51=null,_0x1ac682=![],_0x3bd05f=![],_0x436106=![],document[_0x259497(0x2c5)](_0x343794(0x47f))[_0x259497(0x1f9)](_0x259497(0x1b0)),document[_0x259497(0x2c5)](_0x259497(0x1b9))[_0x219eb0(0x258)](_0x343794(0x504)),document[_0x343794(0x3d3)](_0x259497(0x12e))[_0x259497(0x1f9)](_0x259497(0x1b0)),document[_0x259497(0x2c5)](_0x343794(0x547))[_0x259497(0x1f9)](_0x343794(0x504)),ipcRenderer[_0x259497(0x3ae)](_0x259497(0x4e4));}),_0xde164b['on'](_0x191adc(0x3fd),_0x521598=>{const _0x468dcd=_0x41217a,_0x33fe45=_0x45fb7b,_0x50597e=_0x191adc;return consoleOutput_+=_0x33fe45(0x50d)+JSON[_0x33fe45(0x2bc)](_0x521598,null,0x2)+'\x0a',_0x31de1a[_0x33fe45(0x313)][_0x50597e(0x1ef)]=_0x50597e(0x49b),_0x353346[_0x50597e(0x20b)][_0x50597e(0x1ef)]=_0x50597e(0x49b),_0x25c028[_0x50597e(0x20b)][_0x50597e(0x1ef)]='',Toast[_0x50597e(0x147)]({'title':_0x33fe45(0x4e0),'text':_0x50597e(0x334)+_0x521598[_0x50597e(0x3fd)],'icon':_0x50597e(0x3fd),'button':_0x468dcd(0x20d)});});let _0x2ae1a6=![],_0x189f0e=![];_0x4d9bf7['on'](_0x45fb7b(0x4d3),_0x21d346=>{const _0x261427=_0x41217a,_0x4e3a86=_0x191adc;consoleOutput_+=_0x261427(0x383)+_0x21d346+'\x0a';if(_0x2ae1a6){}else _0x324092[_0x4e3a86(0x487)]=this[_0x4e3a86(0x2ba)][_0x4e3a86(0x389)]+'.',_0x2ae1a6=!![];}),_0x4d9bf7['on'](_0x191adc(0x378),_0x568ee5=>{const _0x4f012b=_0x39b232,_0x2d2df5=_0x41217a,_0x245e18=_0x45fb7b,_0x44616d=_0x191adc;console[_0x4f012b(0x1a2)](_0x568ee5),consoleOutput_+=_0x44616d(0x1e3)+JSON[_0x44616d(0x4eb)](_0x568ee5,null,0x2)+'\x0a',_0x568ee5[_0x44616d(0x34b)](_0x44616d(0x3b2))&&(console[_0x44616d(0x203)](_0x2d2df5(0x11f)),Toast[_0x44616d(0x147)]({'icon':_0x44616d(0x3fd),'title':_0x245e18(0x356)}),_0x31de1a[_0x44616d(0x20b)][_0x44616d(0x1ef)]=_0x44616d(0x49b),_0x31de1a[_0x44616d(0x347)]=0x64,_0x31de1a[_0x44616d(0x284)]=0x0,_0x25c028[_0x245e18(0x313)][_0x44616d(0x1ef)]='',_0x353346[_0x44616d(0x20b)][_0x245e18(0x26c)]=_0x44616d(0x49b),_0x12925d=!![]),_0x568ee5[_0x44616d(0x34b)](_0x44616d(0x2af))&&(_0x31de1a[_0x2d2df5(0x14d)][_0x44616d(0x1ef)]='',_0x31de1a[_0x44616d(0x347)]=0x64,_0x31de1a[_0x44616d(0x284)]=0x0,_0x353346[_0x44616d(0x487)]=this[_0x44616d(0x2ba)][_0x44616d(0x3b9)]),_0x568ee5[_0x245e18(0x3c7)](_0x44616d(0x216))&&(_0x353346[_0x44616d(0x487)]=this[_0x44616d(0x2ba)]['downloading_version']),_0x568ee5[_0x245e18(0x3c7)](_0x2d2df5(0x2ea))&&(_0x353346[_0x44616d(0x487)]=this[_0x44616d(0x2ba)][_0x44616d(0x40c)]),_0x568ee5[_0x44616d(0x34b)](_0x44616d(0x3fe))&&(_0x353346[_0x44616d(0x487)]=this[_0x44616d(0x2ba)][_0x44616d(0x14d)]),_0x568ee5[_0x44616d(0x34b)](_0x4f012b(0x1f9))&&(_0x353346[_0x44616d(0x487)]=this[_0x44616d(0x2ba)][_0x44616d(0x16d)]);if(_0x568ee5[_0x44616d(0x34b)](_0x44616d(0x493)))return ShowPanelError(this[_0x44616d(0x2ba)][_0x44616d(0x33f)]+_0x44616d(0x1ae)+_0x568ee5);if(_0x568ee5[_0x44616d(0x34b)](_0x245e18(0x33f)))return ShowPanelError(this[_0x44616d(0x2ba)][_0x44616d(0x177)]+_0x44616d(0x1ae)+_0x568ee5);if(_0x568ee5[_0x44616d(0x34b)](_0x44616d(0x178)))return ShowPanelError(this[_0x44616d(0x2ba)][_0x44616d(0x27a)]+_0x44616d(0x1ae)+_0x568ee5);if(_0x568ee5[_0x245e18(0x3c7)](_0x44616d(0x135)))return ShowPanelError(this[_0x44616d(0x2ba)][_0x44616d(0x27a)]+_0x245e18(0x3cc)+_0x568ee5);_0x568ee5[_0x44616d(0x34b)](_0x44616d(0x403))&&(ShowPanelError(this[_0x44616d(0x2ba)][_0x44616d(0x299)]+_0x44616d(0x1ae)+_0x568ee5),_0x31de1a[_0x245e18(0x313)][_0x44616d(0x1ef)]=_0x245e18(0x389),_0x353346[_0x245e18(0x313)][_0x44616d(0x1ef)]=_0x44616d(0x49b),_0x25c028[_0x245e18(0x313)][_0x44616d(0x1ef)]='');if(_0x568ee5[_0x44616d(0x34b)](_0x44616d(0x1aa)))return ShowPanelError(this[_0x44616d(0x2ba)][_0x44616d(0x130)]+_0x245e18(0x3cc)+_0x568ee5);if(_0x568ee5[_0x44616d(0x34b)](_0x44616d(0x1bb))&&!_0x568ee5[_0x44616d(0x34b)](_0x44616d(0x4d9)))return ShowPanelError(this[_0x44616d(0x2ba)][_0x44616d(0x33f)]+_0x44616d(0x1ae)+_0x568ee5);if(_0x568ee5[_0x245e18(0x3c7)](_0x2d2df5(0x2d7)))return ShowPanelError(this[_0x44616d(0x2ba)][_0x44616d(0x130)]+_0x44616d(0x1ae)+_0x568ee5);if(_0x568ee5[_0x4f012b(0x31c)](_0x44616d(0x24c)))return ShowPanelError(this[_0x44616d(0x2ba)][_0x44616d(0x130)]+_0x2d2df5(0x41c)+_0x568ee5);}),_0x4d9bf7['on'](_0x191adc(0x31d),async _0xfc87cb=>{const _0x1a689c=_0x39b232,_0x34af9e=_0x41217a,_0x3ec995=_0x45fb7b,_0x5f5667=_0x191adc;new logger(_0x3ec995(0x458),_0x3ec995(0x521)),consoleOutput_+=_0x5f5667(0x35d)+_0xfc87cb+'\x0a';if(_0x287f6e['launcher'][_0x5f5667(0x1ea)]===_0x34af9e(0x1a0))ipcRenderer[_0x5f5667(0x3ae)](_0x5f5667(0x395));_0x31de1a[_0x3ec995(0x313)][_0x5f5667(0x1ef)]=_0x3ec995(0x389);if(_0xfc87cb[_0x1a689c(0x31c)]('Launching\x20with\x20arguments'))_0x353346[_0x5f5667(0x487)]=this[_0x3ec995(0x507)][_0x5f5667(0x2ca)]+_0x34af9e(0x36e);;if(_0xf14efd==![]){_0xf14efd=!![];let _0x59e1f5=dataDirectory+_0x5f5667(0x1ac);if(fs[_0x3ec995(0x4b1)](_0x59e1f5))try{const _0x1ae8c8=fs[_0x5f5667(0x4c9)](_0x59e1f5),_0x32bafe=await a167_0x12ea22[_0x5f5667(0x18b)](_0x1ae8c8);console[_0x5f5667(0x203)](_0x5f5667(0x18f)),console[_0x34af9e(0x185)](_0x32bafe[_0x5f5667(0x31d)][_0x5f5667(0x40f)]);let _0x4bfd37=this[_0x3ec995(0x522)][_0x5f5667(0x258)];console[_0x5f5667(0x203)](_0x5f5667(0x1cf)),console[_0x5f5667(0x203)](_0x4bfd37);let _0x29277b=[];for(let _0x516bb3=0x0;_0x516bb3<_0x4bfd37[_0x5f5667(0x232)];_0x516bb3++){const _0xb61fd7={'name':_0x4bfd37[_0x516bb3][_0x5f5667(0x25f)],'ip':_0x4bfd37[_0x516bb3]['ip'],'icon':_0x4bfd37[_0x516bb3][_0x5f5667(0x37d)]},_0x5c529c=_0x32bafe[_0x5f5667(0x31d)][_0x3ec995(0x2d3)][_0x5f5667(0x437)](_0x5f2a53=>_0x5f2a53['ip']===_0xb61fd7['ip']);!_0x5c529c?_0x29277b[_0x5f5667(0x1fe)](_0xb61fd7):console[_0x5f5667(0x203)](_0x3ec995(0x427)+_0xb61fd7['ip']+_0x3ec995(0x485));}console[_0x5f5667(0x203)](_0x5f5667(0x3c8)),console[_0x5f5667(0x203)](_0x29277b),_0x32bafe[_0x5f5667(0x31d)][_0x5f5667(0x40f)]=_0x29277b[_0x5f5667(0x41a)](_0x32bafe[_0x5f5667(0x31d)][_0x5f5667(0x40f)]);const _0xde47df=await a167_0x12ea22[_0x5f5667(0x37c)](_0x32bafe);fs[_0x3ec995(0x4db)](_0x59e1f5,_0xde47df),console[_0x5f5667(0x203)](_0x5f5667(0x4b7));}catch(_0x227d26){console[_0x5f5667(0x3fd)](_0x5f5667(0x22a),_0x227d26);}else try{let _0x446497=this[_0x3ec995(0x522)][_0x5f5667(0x258)];console[_0x5f5667(0x203)]('Nuevos\x20servidores\x20desde\x20la\x20configuración\x20de\x20Battly:'),console[_0x5f5667(0x203)](_0x446497);let _0x26540d=[];for(let _0x40c7a7=0x0;_0x40c7a7<_0x446497[_0x5f5667(0x232)];_0x40c7a7++){const _0xc83651={'name':_0x446497[_0x40c7a7][_0x5f5667(0x25f)],'ip':_0x446497[_0x40c7a7]['ip'],'icon':_0x446497[_0x40c7a7][_0x5f5667(0x37d)]};_0x26540d[_0x5f5667(0x1fe)](_0xc83651);}console[_0x5f5667(0x203)](_0x5f5667(0x3c8)),console[_0x5f5667(0x203)](_0x26540d);const _0x1a29b9={'servers':_0x26540d},_0x47b0b4=await a167_0x12ea22[_0x5f5667(0x37c)](_0x1a29b9);fs[_0x5f5667(0x3f6)](_0x59e1f5,_0x47b0b4),console[_0x3ec995(0x249)](_0x3ec995(0x281));}catch(_0x38b7e3){console[_0x5f5667(0x3fd)](_0x5f5667(0x1b1),_0x38b7e3);}let _0x4b0282=this[_0x5f5667(0x407)];const _0xf0ead1=dataDirectory+_0x34af9e(0x2a2),_0x2da219=dataDirectory+_0x5f5667(0x377),_0x3c3bae=dataDirectory+_0x5f5667(0x2bf);let _0x11f207=dataDirectory+_0x5f5667(0x481),_0x1041f0=dataDirectory+_0x5f5667(0x42a),_0x48def7=dataDirectory+_0x5f5667(0x476),_0x4b8be4=dataDirectory+_0x3ec995(0x2b0),_0x37d2a0=dataDirectory+_0x5f5667(0x32e),_0x3cbb9c=dataDirectory+_0x5f5667(0x2b4),_0x399fdc=dataDirectory+_0x3ec995(0x429);fs[_0x5f5667(0x34e)](_0x399fdc)&&fs[_0x5f5667(0x21b)](_0x399fdc),fs[_0x5f5667(0x34e)](_0x3cbb9c)&&fs[_0x5f5667(0x21b)](_0x3cbb9c),(fs[_0x5f5667(0x21b)](_0x2da219),fs[_0x5f5667(0x21b)](_0x3c3bae));const _0x1be9ea=_0x3eb513;console[_0x5f5667(0x203)](_0x34af9e(0x369)+_0x1be9ea);let _0x14d7b8;_0x1be9ea[_0x5f5667(0x34b)]('-')?(_0x14d7b8=_0x1be9ea[_0x5f5667(0x148)](/-[^.]+/,''),console[_0x5f5667(0x203)](_0x14d7b8)):console[_0x3ec995(0x249)](_0x1be9ea);const _0x4a9718=_0x4b0282[_0x5f5667(0x296)][_0x34af9e(0x38b)](_0x1da027=>_0x1da027['id']===_0x14d7b8);console[_0x5f5667(0x203)](_0x5f5667(0x24f)+_0x3eb513+_0x5f5667(0x32b)+_0x41600d+_0x5f5667(0x466)+_0x4a9718+_0x3ec995(0x2d4)+_0x202d56+_0x5f5667(0x49d));if(_0x4a9718){function _0x530bad(_0x46bc1f){const _0x41f61b=_0x3ec995,_0x3858a9=parseFloat(_0x46bc1f);if(!isNaN(_0x3858a9)){const _0x22ba0e=_0x3858a9[_0x41f61b(0x2aa)]();return _0x22ba0e;}return _0x46bc1f;}const _0x2a66e3=_0x530bad(_0x4a9718[_0x5f5667(0x323)]);let _0x169e47=[_0x5f5667(0x1fa),_0x34af9e(0x35a),_0x5f5667(0x274),_0x5f5667(0x4f7),_0x5f5667(0x210),_0x5f5667(0x278),_0x5f5667(0x35a),_0x5f5667(0x33e),_0x5f5667(0x1f7),_0x5f5667(0x3ce),_0x3ec995(0x1c6),_0x5f5667(0x27e),_0x5f5667(0x1f3),_0x3ec995(0x1ff),_0x5f5667(0x3c3),_0x5f5667(0x3fc),_0x5f5667(0x1f0),_0x5f5667(0x41b),_0x5f5667(0x420),_0x5f5667(0x4ac),_0x5f5667(0x400),_0x5f5667(0x29d),_0x5f5667(0x1ad),_0x5f5667(0x1e2),_0x5f5667(0x45e),_0x5f5667(0x2ff),_0x5f5667(0x360),_0x5f5667(0x3f7),_0x5f5667(0x4f1),_0x5f5667(0x2a7),_0x5f5667(0x35e),_0x5f5667(0x410),_0x5f5667(0x492),_0x5f5667(0x25c),_0x3ec995(0x45b),_0x5f5667(0x3e8),_0x3ec995(0x3d0),_0x3ec995(0x4f7),_0x5f5667(0x315),_0x5f5667(0x4e0),_0x5f5667(0x3cc)];console[_0x5f5667(0x203)](_0x2a66e3),console[_0x5f5667(0x203)](_0x2a66e3>1.16),console[_0x5f5667(0x203)]('dx'),console[_0x5f5667(0x203)](_0x3eb513),console[_0x5f5667(0x203)](_0x2a66e3<=1.9[_0x5f5667(0x21a)]());const _0x543408=[1.16,1.15,1.14,1.13,1.12,1.11,1.1,1.9,1.8,1.7,1.6,1.5,1.4,1.3],_0x33af87=[1.17,1.18,1.19,1.2,1.21],_0x47d526=[_0x3ec995(0x3c6),_0x34af9e(0x17f)];console[_0x5f5667(0x203)](_0x2a66e3),console[_0x5f5667(0x203)](_0x33af87[_0x3ec995(0x3c7)](_0x2a66e3)),console[_0x3ec995(0x249)](!_0x543408[_0x5f5667(0x34b)](_0x2a66e3));if(_0x47d526[_0x5f5667(0x34b)](_0x3eb513)&&_0x202d56===_0x5f5667(0x36c))fs[_0x5f5667(0x414)](_0x4b8be4,dataDirectory+_0x5f5667(0x2b4));else _0x47d526[_0x5f5667(0x34b)](_0x3eb513)&&_0x202d56===_0x5f5667(0x4a8)&&fs[_0x3ec995(0x40b)](_0x37d2a0,dataDirectory+_0x5f5667(0x382));if(_0x33af87[_0x5f5667(0x34b)](parseFloat(_0x41600d))&&!_0x543408[_0x3ec995(0x3c7)](parseFloat(_0x41600d))&&_0x202d56==_0x5f5667(0x36c))console[_0x5f5667(0x203)](_0x3ec995(0x2bd)),fs[_0x5f5667(0x414)](_0x48def7,_0x3c3bae),fs[_0x3ec995(0x4b1)](_0xf0ead1)&&fs[_0x1a689c(0x3cc)](_0xf0ead1),fs[_0x5f5667(0x34e)](_0x2da219)&&fs[_0x5f5667(0x21b)](_0x2da219);else{if(_0x169e47[_0x3ec995(0x3c7)](_0x41600d)&&_0x202d56==_0x5f5667(0x36c))console[_0x5f5667(0x203)](_0x3ec995(0x412)),fs[_0x5f5667(0x414)](_0x1041f0,_0x2da219),fs[_0x5f5667(0x34e)](_0xf0ead1)&&fs['unlinkSync'](_0xf0ead1),fs[_0x5f5667(0x34e)](_0x3c3bae)&&fs[_0x5f5667(0x21b)](_0x3c3bae);else(_0x202d56==_0x5f5667(0x4a8)||_0x202d56==_0x5f5667(0x405))&&(console[_0x5f5667(0x203)](_0x5f5667(0x2da)),fs[_0x3ec995(0x40b)](_0x11f207,_0xf0ead1),fs[_0x5f5667(0x34e)](_0x2da219)&&fs[_0x5f5667(0x21b)](_0x2da219),fs[_0x5f5667(0x34e)](_0x3c3bae)&&fs[_0x5f5667(0x21b)](_0x3c3bae));}}else console[_0x34af9e(0x185)](_0x3ec995(0x467));let _0x280063=dataDirectory+_0x5f5667(0x49c),_0x20483b={'version':_0x5f5667(0x41d),'buildNumber':0x8,'loadlist':[{'name':_0x5f5667(0x26a),'type':_0x5f5667(0x49e),'checkPNG':![],'skin':_0x34af9e(0x494),'model':_0x5f5667(0x159),'cape':_0x3ec995(0x35d)},{'name':_0x5f5667(0x418),'type':_0x5f5667(0x370),'apiRoot':_0x3ec995(0x270),'sessionRoot':_0x3ec995(0x3bf)},{'name':_0x5f5667(0x319),'type':_0x5f5667(0x49e),'checkPNG':![],'model':_0x3ec995(0x269),'cape':_0x5f5667(0x3bf)},{'name':_0x5f5667(0x351),'type':_0x5f5667(0x49e),'checkPNG':![],'model':_0x5f5667(0x159),'cape':_0x5f5667(0x2ab)}],'enableDynamicSkull':!![],'enableTransparentSkin':!![],'forceIgnoreHttpsCertificate':!![],'forceLoadAllTextures':!![],'enableCape':!![],'threadPoolSize':0x8,'enableLogStdOut':![],'cacheExpiry':0x1e,'forceUpdateSkull':!![],'enableLocalProfileCache':![],'enableCacheAutoClean':!![],'forceDisableCache':!![]};fs[_0x5f5667(0x34e)](path[_0x3ec995(0x4e9)](_0x280063))?fs[_0x5f5667(0x3f6)](_0x280063,JSON[_0x3ec995(0x2bc)](_0x20483b)):(fs[_0x3ec995(0x245)](dataDirectory+'/'+(process[_0x5f5667(0x4d5)]==_0x5f5667(0x1e8)?this[_0x5f5667(0x439)][_0x5f5667(0x20c)]:'.'+this[_0x3ec995(0x39f)][_0x5f5667(0x20c)])+_0x5f5667(0x412)),fs[_0x5f5667(0x3f6)](_0x280063,JSON[_0x5f5667(0x4eb)](_0x20483b)));}console[_0x5f5667(0x203)](_0xfc87cb);if(_0xfc87cb[_0x5f5667(0x34b)](_0x5f5667(0x493)))return ShowPanelError(this[_0x5f5667(0x2ba)][_0x5f5667(0x33f)]+_0x1a689c(0x2a2)+_0xfc87cb);if(_0xfc87cb[_0x5f5667(0x34b)](_0x5f5667(0x4e8)))return ShowPanelError(this[_0x5f5667(0x2ba)][_0x5f5667(0x177)]+_0x5f5667(0x1ae)+_0xfc87cb);if(_0xfc87cb[_0x1a689c(0x31c)](_0x5f5667(0x178)))return ShowPanelError(this[_0x5f5667(0x2ba)][_0x5f5667(0x27a)]+_0x3ec995(0x3cc)+_0xfc87cb);if(_0xfc87cb[_0x5f5667(0x34b)](_0x5f5667(0x135)))return ShowPanelError(this[_0x5f5667(0x2ba)][_0x3ec995(0x375)]+_0x3ec995(0x3cc)+_0xfc87cb);_0xfc87cb[_0x5f5667(0x34b)](_0x5f5667(0x403))&&(ShowPanelError(this[_0x5f5667(0x2ba)][_0x5f5667(0x299)]+_0x5f5667(0x1ae)+_0xfc87cb),_0x31de1a[_0x3ec995(0x313)][_0x5f5667(0x1ef)]=_0x5f5667(0x49b),_0x353346[_0x5f5667(0x20b)][_0x5f5667(0x1ef)]=_0x5f5667(0x49b),_0x25c028['style'][_0x5f5667(0x1ef)]='');if(_0xfc87cb[_0x5f5667(0x34b)](_0x5f5667(0x1aa)))return ShowPanelError(this[_0x5f5667(0x2ba)][_0x3ec995(0x3ab)]+_0x5f5667(0x1ae)+_0xfc87cb);if(_0xfc87cb[_0x5f5667(0x34b)](_0x5f5667(0x1bb))&&!_0xfc87cb[_0x5f5667(0x34b)](_0x5f5667(0x4d9)))return ShowPanelError(this[_0x5f5667(0x2ba)][_0x3ec995(0x1df)]+_0x5f5667(0x1ae)+_0xfc87cb);if(_0xfc87cb[_0x5f5667(0x34b)](_0x5f5667(0x271)))return ShowPanelError(this[_0x5f5667(0x2ba)]['error_detected_five']+_0x3ec995(0x3cc)+_0xfc87cb);if(_0xfc87cb[_0x5f5667(0x34b)](_0x5f5667(0x24c)))return ShowPanelError(this[_0x5f5667(0x2ba)][_0x3ec995(0x3ab)]+_0x5f5667(0x1ae)+_0xfc87cb);if(_0xfc87cb[_0x5f5667(0x34b)](_0x3ec995(0x46b)+_0x2ebd71[_0x5f5667(0x25f)])||_0xfc87cb['includes'](_0x5f5667(0x33c))){if(_0x2bf96c==![]){let _0x427d4c;if(_0x41600d[_0x3ec995(0x505)](_0x5f5667(0x45d)))_0x427d4c=_0x3ec995(0x38f);else{if(_0x41600d[_0x3ec995(0x505)](_0x5f5667(0x22f)))_0x427d4c=_0x5f5667(0x4ab);else _0x41600d[_0x5f5667(0x302)](_0x5f5667(0x3c4))?_0x427d4c=_0x5f5667(0x3d1):_0x427d4c='';}if(_0x41600d[_0x5f5667(0x34b)](_0x3ec995(0x263))){let _0x119cd7=_0x41600d[_0x3ec995(0x331)](0x0,0x6);_0x119cd7=_0x119cd7[_0x5f5667(0x148)]('-',''),ipcRenderer[_0x5f5667(0x3ae)](_0x5f5667(0x463),this[_0x5f5667(0x2ba)][_0x5f5667(0x259)]+_0x5f5667(0x2a6)+_0x119cd7),this[_0x5f5667(0x4b9)](_0x2ebd71[_0x3ec995(0x1d8)],_0x3ec995(0x4e6),this[_0x5f5667(0x2ba)][_0x5f5667(0x259)]+_0x5f5667(0x2a6)+_0x119cd7);}else{if(_0x41600d[_0x5f5667(0x34b)](_0x3ec995(0x51c)))ipcRenderer[_0x5f5667(0x3ae)](_0x5f5667(0x463),this[_0x5f5667(0x2ba)][_0x5f5667(0x259)]+_0x5f5667(0x176)),this[_0x5f5667(0x4b9)](_0x2ebd71[_0x3ec995(0x1d8)],_0x3ec995(0x4e6),this[_0x3ec995(0x507)][_0x5f5667(0x259)]+_0x5f5667(0x176));else _0x41600d[_0x5f5667(0x34b)](_0x5f5667(0x2bc))?(ipcRenderer[_0x5f5667(0x3ae)](_0x3ec995(0x4b9),this[_0x5f5667(0x2ba)][_0x5f5667(0x259)]+_0x34af9e(0x1b6)),this[_0x5f5667(0x4b9)](_0x2ebd71[_0x5f5667(0x25f)],_0x5f5667(0x441),this[_0x34af9e(0x2de)][_0x5f5667(0x259)]+_0x34af9e(0x1b6))):(ipcRenderer[_0x5f5667(0x3ae)](_0x5f5667(0x463),this[_0x5f5667(0x2ba)][_0x5f5667(0x259)]+'\x20'+_0x41600d[_0x3ec995(0x396)](_0x5f5667(0x45d),'')[_0x3ec995(0x396)](_0x3ec995(0x36f),'')[_0x5f5667(0x148)](_0x3ec995(0x42d),'')+'\x20'+_0x427d4c),console[_0x3ec995(0x249)](_0x5f5667(0x4fc)+_0x41600d),this[_0x5f5667(0x4b9)](_0x2ebd71[_0x3ec995(0x1d8)],_0x5f5667(0x441),this[_0x5f5667(0x2ba)][_0x34af9e(0x407)]+'\x20'+_0x41600d[_0x5f5667(0x148)](_0x5f5667(0x45d),'')[_0x5f5667(0x148)](_0x34af9e(0x3a8),'')[_0x5f5667(0x148)](_0x3ec995(0x42d),'')+'\x20'+_0x427d4c));}_0x12dd56[_0x5f5667(0x1c5)][_0x34af9e(0x442)](_0x5f5667(0x219)),_0x2bf96c=!![],_0x353346[_0x5f5667(0x487)]=this[_0x3ec995(0x507)][_0x5f5667(0x4e3)]+'.',_0x324092[_0x34af9e(0x2f6)]='',_0x3790a0[_0x5f5667(0x487)]=_0x5f5667(0x406),ipcRenderer[_0x5f5667(0x3ae)](_0x5f5667(0x4c5),{'title':this[_0x3ec995(0x507)][_0x5f5667(0x4e3)],'body':this[_0x3ec995(0x507)][_0x3ec995(0x409)]}),ipcRenderer[_0x5f5667(0x3ae)](_0x3ec995(0x420));}}if(_0xfc87cb[_0x5f5667(0x34b)](_0x5f5667(0x39b))){let _0x4f2c71=_0xfc87cb[_0x3ec995(0x3fe)](_0x5f5667(0x4f9))[0x1][_0x5f5667(0x144)](_0x5f5667(0x2e3))[0x0];_0x353346[_0x5f5667(0x487)]=_0x5f5667(0x39f)+_0x4f2c71;}}),_0x4d9bf7['on'](_0x191adc(0x4b8),(_0x347271,_0xc5ff7c)=>{const _0x588277=_0x45fb7b,_0x53698c=_0x191adc;consoleOutput_+=_0x53698c(0x150)+_0x347271+_0x53698c(0x3d4)+_0xc5ff7c+'\x0a';if(_0x189f0e){}else _0x189f0e=!![];let _0x32a959=(_0x347271/_0xc5ff7c*0x64)[_0x53698c(0x18d)](0x0);_0x32a959>0x64&&(_0x32a959=0x64),_0x31de1a[_0x53698c(0x20b)][_0x53698c(0x1ef)]=_0x53698c(0x4ca),_0x353346[_0x53698c(0x487)]=_0x53698c(0x2ee)+_0x32a959+'%',ipcRenderer[_0x588277(0x3a2)](_0x53698c(0x241),{'progress':_0x347271,'size':_0xc5ff7c}),_0x31de1a[_0x53698c(0x284)]=_0x347271,_0x31de1a[_0x588277(0x474)]=_0xc5ff7c;}),_0x4d9bf7['on'](_0x191adc(0x28a),(_0x4147ca,_0x168443)=>{const _0x3d0ed2=_0x45fb7b,_0xb39c52=_0x191adc;consoleOutput_+=_0xb39c52(0x228)+_0x4147ca+_0xb39c52(0x3d4)+_0x168443+'\x0a';let _0x4be8fb=![];if(_0x4be8fb){}else _0x324092[_0xb39c52(0x487)]=this[_0xb39c52(0x2ba)][_0xb39c52(0x389)]+'.',_0x4be8fb=!![];_0x31de1a[_0xb39c52(0x20b)][_0xb39c52(0x1ef)]='';let _0xbb0d90=0x64,_0x1b4a23=(_0x4147ca/_0x168443*0x64)[_0xb39c52(0x18d)](0x0);ipcRenderer[_0xb39c52(0x3ae)](_0xb39c52(0x241),{'progress_actual':_0x1b4a23,'size_actual':_0xbb0d90}),_0x353346[_0x3d0ed2(0x365)]=_0xb39c52(0x16e)+_0x1b4a23+'%',_0x31de1a[_0xb39c52(0x284)]=_0x4147ca,_0x31de1a[_0x3d0ed2(0x474)]=_0x168443;}),_0x4d9bf7['on'](_0x191adc(0x3f8),_0x2445f6=>{const _0x424628=_0x45fb7b,_0x3c1f99=_0x191adc;ipcRenderer[_0x424628(0x3a2)](_0x3c1f99(0x40b));}),_0x4d9bf7['on'](_0x45fb7b(0x304),_0x68a275=>{});let _0x3712ef=![];_0x4d9bf7['on'](_0x41217a(0x161),_0x4087d0=>{const _0x23514c=_0x191adc;consoleOutput_+=_0x23514c(0x301)+_0x4087d0+'\x0a';if(_0x3712ef){}else _0x324092[_0x23514c(0x487)]=this[_0x23514c(0x2ba)][_0x23514c(0x389)]+'.',_0x3712ef=!![];}),_0x4d9bf7['on'](_0x191adc(0x31d),async _0x3cc5b4=>{const _0x451dc1=_0x39b232,_0x1483a0=_0x41217a,_0x3b9f5d=_0x45fb7b,_0x14ef24=_0x191adc;new logger(_0x3b9f5d(0x458),_0x14ef24(0x226)),consoleOutput_+=_0x3b9f5d(0x288)+_0x3cc5b4+'\x0a';if(_0x287f6e[_0x3b9f5d(0x238)][_0x14ef24(0x1ea)]===_0x14ef24(0x1d1))ipcRenderer[_0x14ef24(0x3ae)](_0x14ef24(0x395));_0x31de1a[_0x14ef24(0x20b)][_0x3b9f5d(0x26c)]=_0x14ef24(0x49b);if(_0x3cc5b4[_0x3b9f5d(0x3c7)](_0x3b9f5d(0x526)))_0x353346[_0x14ef24(0x487)]=this[_0x14ef24(0x2ba)][_0x14ef24(0x2ca)]+_0x14ef24(0x2e3);;if(_0xf14efd==![]){_0xf14efd=!![];let _0x4de470=dataDirectory+_0x14ef24(0x1ac);if(fs['existsSync'](_0x4de470))try{const _0x3620c1=fs[_0x14ef24(0x4c9)](_0x4de470),_0x349622=await a167_0x12ea22[_0x14ef24(0x18b)](_0x3620c1);console[_0x14ef24(0x203)](_0x14ef24(0x18f)),console[_0x14ef24(0x203)](_0x349622[_0x14ef24(0x31d)][_0x14ef24(0x40f)]);let _0x27ead7=this[_0x14ef24(0x1d9)][_0x14ef24(0x258)];console[_0x3b9f5d(0x249)](_0x14ef24(0x1cf)),console[_0x14ef24(0x203)](_0x27ead7);let _0x237ff5=[];for(let _0x59f461=0x0;_0x59f461<_0x27ead7[_0x14ef24(0x232)];_0x59f461++){const _0x1b179b={'name':_0x27ead7[_0x59f461][_0x3b9f5d(0x1d8)],'ip':_0x27ead7[_0x59f461]['ip'],'icon':_0x27ead7[_0x59f461][_0x14ef24(0x37d)]},_0x424e63=_0x349622[_0x14ef24(0x31d)][_0x14ef24(0x40f)][_0x14ef24(0x437)](_0x50923c=>_0x50923c['ip']===_0x1b179b['ip']);!_0x424e63?_0x237ff5[_0x14ef24(0x1fe)](_0x1b179b):console[_0x14ef24(0x203)](_0x14ef24(0x23d)+_0x1b179b['ip']+_0x14ef24(0x3a8));}console[_0x1483a0(0x185)](_0x14ef24(0x3c8)),console[_0x3b9f5d(0x249)](_0x237ff5),_0x349622[_0x14ef24(0x31d)][_0x14ef24(0x40f)]=_0x237ff5[_0x3b9f5d(0x271)](_0x349622[_0x14ef24(0x31d)][_0x14ef24(0x40f)]);const _0x119e1b=await a167_0x12ea22[_0x3b9f5d(0x3ae)](_0x349622);fs[_0x14ef24(0x3f6)](_0x4de470,_0x119e1b),console[_0x3b9f5d(0x249)](_0x14ef24(0x4b7));}catch(_0x31f162){console[_0x14ef24(0x3fd)](_0x14ef24(0x22a),_0x31f162);}else try{let _0x305312=this[_0x14ef24(0x1d9)][_0x1483a0(0x1d5)];console[_0x3b9f5d(0x249)](_0x14ef24(0x1cf)),console[_0x14ef24(0x203)](_0x305312);let _0x400f4f=[];for(let _0x553437=0x0;_0x553437<_0x305312[_0x14ef24(0x232)];_0x553437++){const _0x5c95c6={'name':_0x305312[_0x553437][_0x3b9f5d(0x1d8)],'ip':_0x305312[_0x553437]['ip'],'icon':_0x305312[_0x553437][_0x14ef24(0x37d)]};_0x400f4f[_0x14ef24(0x1fe)](_0x5c95c6);}console[_0x3b9f5d(0x249)](_0x3b9f5d(0x37a)),console[_0x14ef24(0x203)](_0x400f4f);const _0x43e4be={'servers':_0x400f4f},_0x3f7a52=await a167_0x12ea22[_0x14ef24(0x37c)](_0x43e4be);fs[_0x14ef24(0x3f6)](_0x4de470,_0x3f7a52),console[_0x14ef24(0x203)](_0x3b9f5d(0x281));}catch(_0x3b1a5b){console[_0x1483a0(0x210)](_0x3b9f5d(0x279),_0x3b1a5b);}let _0x32d782=this[_0x14ef24(0x407)];const _0x613cc4=dataDirectory+_0x14ef24(0x4bd),_0x10d3cb=dataDirectory+_0x14ef24(0x377),_0x23bb92=dataDirectory+_0x14ef24(0x2bf);let _0xe59d41=dataDirectory+_0x14ef24(0x481),_0x2a2c5a=dataDirectory+_0x3b9f5d(0x4b5),_0x5afd5e=dataDirectory+_0x1483a0(0x3f7),_0x480b6b=dataDirectory+_0x14ef24(0x2bd),_0x3bfba5=dataDirectory+_0x14ef24(0x32e),_0xfcb9ad=dataDirectory+_0x14ef24(0x2b4),_0x19ef12=dataDirectory+_0x14ef24(0x382);fs[_0x14ef24(0x34e)](_0x19ef12)&&fs[_0x14ef24(0x21b)](_0x19ef12),fs[_0x14ef24(0x34e)](_0xfcb9ad)&&fs[_0x14ef24(0x21b)](_0xfcb9ad),(fs[_0x14ef24(0x21b)](_0x613cc4),fs[_0x3b9f5d(0x47a)](_0x10d3cb),fs[_0x14ef24(0x21b)](_0x23bb92));const _0x3e5b7b=_0x3eb513;let _0x3426e9;_0x3e5b7b[_0x14ef24(0x34b)]('-')?(_0x3426e9=_0x3e5b7b[_0x14ef24(0x148)](/-[^.]+/,''),console[_0x14ef24(0x203)](_0x3426e9)):console[_0x3b9f5d(0x249)](_0x3e5b7b);const _0x271253=_0x32d782[_0x14ef24(0x296)][_0x14ef24(0x303)](_0x12eeb5=>_0x12eeb5['id']===_0x3426e9);if(_0x271253){function _0x339799(_0x5bcb96){const _0x47cede=_0x14ef24,_0x151dc4=parseFloat(_0x5bcb96);if(!isNaN(_0x151dc4)){const _0x181d8a=_0x151dc4[_0x47cede(0x21a)]();return _0x181d8a;}return _0x5bcb96;}const _0x52d766=_0x339799(_0x271253[_0x14ef24(0x323)]);let _0x4d04b4=[_0x14ef24(0x1fa),_0x14ef24(0x2fe),_0x14ef24(0x274),_0x3b9f5d(0x28e),_0x3b9f5d(0x44a),_0x14ef24(0x278),_0x3b9f5d(0x425),_0x14ef24(0x33e),_0x14ef24(0x1f7),_0x3b9f5d(0x469),_0x14ef24(0x1a8),_0x3b9f5d(0x423),_0x14ef24(0x1f3),_0x3b9f5d(0x1ff),_0x14ef24(0x3c3),_0x14ef24(0x3fc),_0x3b9f5d(0x3b1),_0x14ef24(0x41b),_0x14ef24(0x420),_0x14ef24(0x4ac),_0x14ef24(0x400),_0x14ef24(0x29d),_0x14ef24(0x1ad),_0x3b9f5d(0x1dd),_0x14ef24(0x45e),_0x14ef24(0x2ff),_0x14ef24(0x360),_0x14ef24(0x3f7),_0x3b9f5d(0x231),_0x14ef24(0x2a7),_0x14ef24(0x35e),_0x14ef24(0x410),_0x14ef24(0x492),_0x1483a0(0x162),_0x14ef24(0x34d),_0x14ef24(0x3e8),_0x14ef24(0x494),_0x14ef24(0x2f4),_0x14ef24(0x315),_0x14ef24(0x4e0),_0x3b9f5d(0x217)];console[_0x14ef24(0x203)](_0x52d766),console[_0x3b9f5d(0x249)](_0x52d766>1.16),console[_0x14ef24(0x203)]('dx'),console[_0x3b9f5d(0x249)](_0x3eb513),console[_0x14ef24(0x203)](_0x52d766<=1.9[_0x14ef24(0x21a)]());const _0xb431db=[1.16,1.15,1.14,1.13,1.12,1.11,1.1,1.9,1.8,1.7,1.6,1.5,1.4,1.3],_0x25896a=[1.17,1.18,1.19,1.2,1.21],_0x121737=[_0x14ef24(0x2fe),_0x3b9f5d(0x3b8)];console[_0x14ef24(0x203)](_0x52d766),console[_0x14ef24(0x203)](_0x25896a[_0x3b9f5d(0x3c7)](_0x52d766)),console[_0x14ef24(0x203)](!_0xb431db[_0x14ef24(0x34b)](_0x52d766));if(_0x121737[_0x14ef24(0x34b)](_0x3eb513)&&_0x202d56===_0x14ef24(0x36c))fs[_0x14ef24(0x414)](_0x480b6b,dataDirectory+_0x14ef24(0x2b4));else _0x121737[_0x14ef24(0x34b)](_0x3eb513)&&_0x202d56===_0x451dc1(0x17c)&&fs[_0x3b9f5d(0x40b)](_0x3bfba5,dataDirectory+_0x14ef24(0x382));if(_0x25896a[_0x14ef24(0x34b)](parseFloat(_0x41600d))&&!_0xb431db[_0x14ef24(0x34b)](parseFloat(_0x41600d))&&_0x202d56==_0x14ef24(0x36c))console[_0x14ef24(0x203)](_0x14ef24(0x4e7)),fs[_0x14ef24(0x414)](_0x5afd5e,_0x23bb92),fs[_0x3b9f5d(0x4b1)](_0x613cc4)&&fs[_0x14ef24(0x21b)](_0x613cc4),fs[_0x14ef24(0x34e)](_0x10d3cb)&&fs[_0x14ef24(0x21b)](_0x10d3cb);else{if(_0x4d04b4[_0x14ef24(0x34b)](_0x41600d)&&_0x202d56==_0x14ef24(0x36c))console[_0x3b9f5d(0x249)](_0x14ef24(0x2f0)),fs[_0x3b9f5d(0x40b)](_0x2a2c5a,_0x10d3cb),fs[_0x3b9f5d(0x4b1)](_0x613cc4)&&fs[_0x14ef24(0x21b)](_0x613cc4),fs[_0x14ef24(0x34e)](_0x23bb92)&&fs[_0x14ef24(0x21b)](_0x23bb92);else(_0x202d56==_0x1483a0(0x363)||_0x202d56==_0x14ef24(0x405))&&(console[_0x1483a0(0x185)](_0x14ef24(0x2da)),fs[_0x14ef24(0x414)](_0xe59d41,_0x613cc4),fs[_0x14ef24(0x34e)](_0x10d3cb)&&fs[_0x3b9f5d(0x47a)](_0x10d3cb),fs[_0x14ef24(0x34e)](_0x23bb92)&&fs[_0x14ef24(0x21b)](_0x23bb92));}}else console[_0x14ef24(0x203)](_0x14ef24(0x4ad));let _0x3af1fb=dataDirectory+_0x14ef24(0x49c),_0x37c7b5={'version':_0x14ef24(0x41d),'buildNumber':0x8,'loadlist':[{'name':_0x14ef24(0x26a),'type':_0x14ef24(0x49e),'checkPNG':![],'skin':_0x14ef24(0x4f5),'model':_0x3b9f5d(0x269),'cape':_0x14ef24(0x3bd)},{'name':_0x14ef24(0x418),'type':_0x3b9f5d(0x30f),'apiRoot':_0x14ef24(0x292),'sessionRoot':_0x14ef24(0x1c3)},{'name':_0x3b9f5d(0x263),'type':_0x14ef24(0x49e),'checkPNG':![],'model':_0x14ef24(0x159),'cape':'https://optifine.net/capes/{USERNAME}.png'},{'name':_0x14ef24(0x351),'type':_0x14ef24(0x49e),'checkPNG':![],'model':_0x14ef24(0x159),'cape':_0x3b9f5d(0x29c)}],'enableDynamicSkull':!![],'enableTransparentSkin':!![],'forceIgnoreHttpsCertificate':!![],'forceLoadAllTextures':!![],'enableCape':!![],'threadPoolSize':0x8,'enableLogStdOut':![],'cacheExpiry':0x1e,'forceUpdateSkull':!![],'enableLocalProfileCache':![],'enableCacheAutoClean':!![],'forceDisableCache':!![]};fs[_0x14ef24(0x34e)](path[_0x14ef24(0x42e)](_0x3af1fb))?fs[_0x14ef24(0x3f6)](_0x3af1fb,JSON[_0x14ef24(0x4eb)](_0x37c7b5)):(fs[_0x14ef24(0x204)](dataDirectory+'/'+(process[_0x14ef24(0x4d5)]==_0x14ef24(0x1e8)?this[_0x14ef24(0x439)][_0x14ef24(0x20c)]:'.'+this[_0x14ef24(0x439)][_0x14ef24(0x20c)])+_0x14ef24(0x412)),fs[_0x3b9f5d(0x4db)](_0x3af1fb,JSON[_0x14ef24(0x4eb)](_0x37c7b5)));}console[_0x14ef24(0x203)](_0x3cc5b4);if(_0x3cc5b4[_0x3b9f5d(0x3c7)](_0x3b9f5d(0x1bb)))return ShowPanelError(this[_0x3b9f5d(0x507)][_0x1483a0(0x1ac)]+_0x14ef24(0x1ae)+_0x3cc5b4);if(_0x3cc5b4[_0x14ef24(0x34b)](_0x14ef24(0x4e8)))return ShowPanelError(this[_0x14ef24(0x2ba)][_0x14ef24(0x177)]+_0x14ef24(0x1ae)+_0x3cc5b4);if(_0x3cc5b4[_0x14ef24(0x34b)](_0x3b9f5d(0x2ff)))return ShowPanelError(this[_0x14ef24(0x2ba)][_0x1483a0(0x259)]+_0x3b9f5d(0x3cc)+_0x3cc5b4);if(_0x3cc5b4[_0x3b9f5d(0x3c7)](_0x14ef24(0x135)))return ShowPanelError(this[_0x14ef24(0x2ba)][_0x14ef24(0x27a)]+_0x1483a0(0x41c)+_0x3cc5b4);_0x3cc5b4[_0x3b9f5d(0x3c7)]('Forge\x20patcher\x20exited\x20with\x20code\x201')&&(ShowPanelError(this[_0x14ef24(0x2ba)][_0x3b9f5d(0x339)]+_0x14ef24(0x1ae)+_0x3cc5b4),_0x31de1a[_0x14ef24(0x20b)][_0x14ef24(0x1ef)]=_0x14ef24(0x49b),_0x353346[_0x14ef24(0x20b)][_0x14ef24(0x1ef)]=_0x14ef24(0x49b),_0x25c028[_0x14ef24(0x20b)][_0x3b9f5d(0x26c)]='');if(_0x3cc5b4[_0x14ef24(0x34b)](_0x14ef24(0x1aa)))return ShowPanelError(this[_0x14ef24(0x2ba)][_0x3b9f5d(0x3ab)]+_0x14ef24(0x1ae)+_0x3cc5b4);if(_0x3cc5b4[_0x14ef24(0x34b)](_0x14ef24(0x1bb))&&!_0x3cc5b4[_0x14ef24(0x34b)](_0x14ef24(0x4d9)))return ShowPanelError(this[_0x14ef24(0x2ba)][_0x3b9f5d(0x1df)]+_0x14ef24(0x1ae)+_0x3cc5b4);if(_0x3cc5b4[_0x14ef24(0x34b)](_0x14ef24(0x271)))return ShowPanelError(this[_0x3b9f5d(0x507)][_0x14ef24(0x130)]+_0x14ef24(0x1ae)+_0x3cc5b4);if(_0x3cc5b4[_0x14ef24(0x34b)](_0x14ef24(0x24c)))return ShowPanelError(this[_0x14ef24(0x2ba)][_0x14ef24(0x130)]+_0x14ef24(0x1ae)+_0x3cc5b4);if(_0x3cc5b4[_0x14ef24(0x34b)](_0x14ef24(0x2fb)+_0x2ebd71[_0x14ef24(0x25f)])||_0x3cc5b4[_0x14ef24(0x34b)](_0x3b9f5d(0x21e))){if(_0x2bf96c==![]){let _0x54cef4;if(_0x41600d[_0x14ef24(0x302)](_0x14ef24(0x45d)))_0x54cef4=_0x14ef24(0x3f0);else{if(_0x41600d[_0x14ef24(0x302)](_0x14ef24(0x22f)))_0x54cef4=_0x14ef24(0x4ab);else _0x41600d[_0x14ef24(0x302)](_0x14ef24(0x3c4))?_0x54cef4=_0x14ef24(0x3d1):_0x54cef4='';}ipcRenderer[_0x14ef24(0x3ae)](_0x3b9f5d(0x4b9),this[_0x451dc1(0x96)][_0x3b9f5d(0x27e)]+'\x20'+_0x41600d[_0x3b9f5d(0x396)](_0x3b9f5d(0x1d9),'')[_0x14ef24(0x148)](_0x14ef24(0x22f),'')[_0x3b9f5d(0x396)](_0x1483a0(0x2b5),'')+'\x20'+_0x54cef4),console[_0x14ef24(0x203)](_0x14ef24(0x4fc)+_0x41600d),this[_0x14ef24(0x4b9)](_0x2ebd71[_0x14ef24(0x25f)],_0x3b9f5d(0x4e6),this[_0x14ef24(0x2ba)][_0x14ef24(0x259)]+'\x20'+_0x41600d[_0x14ef24(0x148)](_0x3b9f5d(0x1d9),'')[_0x1483a0(0x169)](_0x14ef24(0x22f),'')[_0x3b9f5d(0x396)](_0x14ef24(0x3c4),'')+'\x20'+_0x54cef4),_0x12dd56[_0x1483a0(0x135)][_0x14ef24(0x329)](_0x3b9f5d(0x224)),_0x2bf96c=!![],_0x353346[_0x14ef24(0x487)]=this[_0x14ef24(0x2ba)][_0x14ef24(0x4e3)]+'.',_0x324092[_0x14ef24(0x487)]='',_0x3790a0[_0x14ef24(0x487)]=_0x14ef24(0x406),ipcRenderer[_0x1483a0(0x2f7)](_0x14ef24(0x4c5),{'title':this[_0x14ef24(0x2ba)][_0x14ef24(0x4e3)],'body':this[_0x14ef24(0x2ba)][_0x14ef24(0x264)]}),ipcRenderer[_0x14ef24(0x3ae)](_0x14ef24(0x40b));}}}),_0x4d9bf7['on'](_0x191adc(0x1ea),_0x2e7b58=>{const _0x57b8d9=_0x39b232,_0x234699=_0x45fb7b,_0x47adce=_0x191adc;consoleOutput_+=_0x234699(0x378)+_0x2e7b58+_0x47adce(0x2d0),_0x12dd56[_0x47adce(0x1c5)][_0x47adce(0x329)](_0x47adce(0x219));if(_0x287f6e[_0x234699(0x238)][_0x47adce(0x1ea)]===_0x234699(0x36b))ipcRenderer[_0x47adce(0x3ae)](_0x47adce(0x2de));ipcRenderer[_0x47adce(0x3ae)](_0x234699(0x4ec),{'status':_0x57b8d9(0x2c0),'details':this[_0x234699(0x507)][_0x47adce(0x4da)],'username':_0x2ebd71[_0x47adce(0x25f)]}),_0x31de1a[_0x47adce(0x20b)][_0x47adce(0x1ef)]=_0x47adce(0x49b),_0x353346[_0x47adce(0x20b)][_0x47adce(0x1ef)]=_0x47adce(0x49b),_0x25c028[_0x47adce(0x20b)][_0x234699(0x26c)]='',_0x353346[_0x47adce(0x487)]=_0x47adce(0x3ad),_0x122a4f[_0x47adce(0x20b)][_0x47adce(0x1ef)]='',_0x3790a0[_0x47adce(0x487)]=_0x47adce(0x406),new logger(_0x47adce(0x265),_0x47adce(0x34c)),console[_0x57b8d9(0x1a2)](_0x234699(0x478)),_0x31de1a[_0x47adce(0x20b)][_0x47adce(0x1ef)]=_0x47adce(0x49b),_0x3eb513=null,_0x202d56=null,_0x438b72=null,_0x41600d=null,_0x49c9f5=null,_0x854e51=null,_0x1ac682=![],_0x3bd05f=![],_0x436106=![],document[_0x47adce(0x2c5)](_0x47adce(0x261))[_0x47adce(0x1f9)](_0x47adce(0x1b0)),document[_0x47adce(0x2c5)](_0x47adce(0x1b9))[_0x47adce(0x1f9)](_0x47adce(0x1b0)),document[_0x47adce(0x2c5)](_0x47adce(0x12e))[_0x47adce(0x1f9)](_0x234699(0x504)),document[_0x47adce(0x2c5)](_0x47adce(0x2c6))[_0x47adce(0x1f9)](_0x234699(0x504)),ipcRenderer[_0x47adce(0x3ae)](_0x47adce(0x4e4));}),_0x4d9bf7['on'](_0x191adc(0x3fd),_0x5e55d5=>{const _0x2bd12e=_0x191adc;consoleOutput_+=_0x2bd12e(0x1e3)+JSON[_0x2bd12e(0x4eb)](_0x5e55d5,null,0x2)+'\x0a';});}),document[_0x1cfa80(0x2c5)](_0x1cfa80(0x1ec))[_0x1cfa80(0x1c6)](_0x9d9f02(0x1c9),async()=>{const _0x8b4167=_0x5405ed,_0x491177=_0x57ea03,_0x2e53fc=_0x9d9f02,_0x33aa06=_0x1cfa80;let _0x4e5036=this[_0x33aa06(0x2aa)];_0x4e5036=_0x4e5036[_0x33aa06(0x296)];let _0x7fc40=[],_0x4c4146=[],_0xd8f6c=[],_0x23d04a=[];for(let _0x4bbd45=0x0;_0x4bbd45<_0x4e5036[_0x33aa06(0x232)];_0x4bbd45++){if(_0x4e5036[_0x4bbd45][_0x33aa06(0x223)]==_0x2e53fc(0x4d6))_0x4c4146[_0x33aa06(0x1fe)](_0x4e5036[_0x4bbd45]);else _0x4e5036[_0x4bbd45][_0x2e53fc(0x2be)]==_0x33aa06(0x1fd)&&_0x7fc40[_0x2e53fc(0x1c5)](_0x4e5036[_0x4bbd45]);}let _0x3c593d=this[_0x33aa06(0x407)];_0x3c593d=_0x3c593d[_0x33aa06(0x296)];let _0x110dd7=[],_0x56e1f8=[],_0xc695a3=[],_0x3fa2b5=[];for(let _0xb46dee=0x0;_0xb46dee<_0x3c593d[_0x33aa06(0x232)];_0xb46dee++){if(_0x3c593d[_0xb46dee][_0x33aa06(0x323)][_0x33aa06(0x302)](_0x33aa06(0x45d)))_0x110dd7[_0x33aa06(0x1fe)](_0x3c593d[_0xb46dee]);else{if(_0x3c593d[_0xb46dee][_0x33aa06(0x323)][_0x33aa06(0x302)](_0x33aa06(0x22f)))_0x56e1f8[_0x2e53fc(0x1c5)](_0x3c593d[_0xb46dee]);else{if(_0x3c593d[_0xb46dee][_0x33aa06(0x323)][_0x33aa06(0x302)](_0x33aa06(0x3c4)))_0xc695a3[_0x33aa06(0x1fe)](_0x3c593d[_0xb46dee]);else _0x3c593d[_0xb46dee][_0x33aa06(0x323)][_0x33aa06(0x302)](_0x33aa06(0x19c))&&_0x3fa2b5[_0x33aa06(0x1fe)](_0x3c593d[_0xb46dee]);}}}for(let _0x3308f3=0x0;_0x3308f3<_0x4e5036[_0x33aa06(0x232)];_0x3308f3++){_0x4e5036[_0x3308f3][_0x33aa06(0x223)]==_0x33aa06(0x239)&&_0xd8f6c[_0x491177(0x338)](_0x4e5036[_0x3308f3]);}for(let _0x1b43d7=0x0;_0x1b43d7<_0x4e5036[_0x33aa06(0x232)];_0x1b43d7++){_0x4e5036[_0x1b43d7][_0x33aa06(0x223)]==_0x2e53fc(0x4ed)&&_0x23d04a[_0x33aa06(0x1fe)](_0x4e5036[_0x1b43d7]);}let _0x1713ae=document[_0x33aa06(0x134)](_0x33aa06(0x291));_0x1713ae[_0x2e53fc(0x2f8)][_0x33aa06(0x179)](_0x33aa06(0x214)),_0x1713ae[_0x33aa06(0x1c5)][_0x2e53fc(0x536)](_0x33aa06(0x219));let _0x461396=document[_0x33aa06(0x134)](_0x491177(0x3be));_0x461396[_0x33aa06(0x1c5)][_0x2e53fc(0x536)](_0x33aa06(0x218));let _0x2cd61b=document[_0x33aa06(0x134)](_0x33aa06(0x291));_0x2cd61b[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x2e53fc(0x219));let _0x3993e7=document[_0x33aa06(0x134)](_0x33aa06(0x392));_0x3993e7[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x2e53fc(0x558));let _0x579fdc=document[_0x33aa06(0x134)]('p');_0x579fdc[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x491177(0x2cc)),_0x579fdc[_0x33aa06(0x3f5)]=this['lang'][_0x33aa06(0x2c3)];let _0x296d96=document[_0x2e53fc(0x3c5)](_0x33aa06(0x17e));_0x296d96[_0x33aa06(0x1c5)][_0x2e53fc(0x536)](_0x2e53fc(0x3a5)),_0x296d96[_0x2e53fc(0x50c)](_0x2e53fc(0x1c3),_0x33aa06(0x1ea)),_0x3993e7[_0x33aa06(0x30d)](_0x579fdc),_0x3993e7[_0x2e53fc(0x21c)](_0x296d96);let _0x399a93=document[_0x33aa06(0x134)](_0x33aa06(0x318));_0x399a93[_0x33aa06(0x1c5)][_0x491177(0x346)](_0x33aa06(0x1b2));let _0x424983=document[_0x33aa06(0x134)](_0x33aa06(0x291));_0x424983[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x2e53fc(0x53b));let _0x199b3d=document[_0x33aa06(0x134)](_0x2e53fc(0x433));_0x199b3d[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x2e53fc(0x323));let _0x5b57cf=document[_0x33aa06(0x134)](_0x491177(0x3be));_0x5b57cf[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x33aa06(0x153));let _0x5ace03=document[_0x2e53fc(0x3c5)](_0x33aa06(0x291));_0x5ace03[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x33aa06(0x19a));let _0x361240=document[_0x33aa06(0x134)](_0x33aa06(0x19b));_0x361240[_0x2e53fc(0x2f8)][_0x33aa06(0x179)](_0x33aa06(0x4cb)),_0x361240[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x33aa06(0x488));let _0x59a2b1=document[_0x2e53fc(0x3c5)](_0x33aa06(0x447));_0x59a2b1[_0x33aa06(0x496)]=_0x33aa06(0x4a6),_0x59a2b1[_0x33aa06(0x33a)]=_0x33aa06(0x1c8),_0x59a2b1['id']=_0x33aa06(0x2dc),_0x361240[_0x33aa06(0x30d)](_0x59a2b1),_0x5ace03[_0x33aa06(0x30d)](_0x361240),_0x5b57cf[_0x2e53fc(0x21c)](_0x5ace03);let _0x3fbd89=document[_0x2e53fc(0x3c5)](_0x2e53fc(0x433));_0x3fbd89[_0x2e53fc(0x2f8)][_0x33aa06(0x179)](_0x33aa06(0x21d));let _0x1c7247=document[_0x33aa06(0x134)]('p');_0x1c7247[_0x2e53fc(0x2f8)][_0x33aa06(0x179)](_0x33aa06(0x49a)),_0x1c7247[_0x33aa06(0x1c5)][_0x491177(0x346)](_0x33aa06(0x151)),_0x1c7247['id']=_0x33aa06(0x205),_0x1c7247[_0x33aa06(0x3f5)]=_0x33aa06(0x45a);let _0x531fcb=document[_0x33aa06(0x134)]('p');_0x531fcb[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x2e53fc(0x509)),_0x531fcb[_0x2e53fc(0x2f8)][_0x33aa06(0x179)](_0x491177(0x444)),_0x531fcb['id']=_0x33aa06(0x236),_0x531fcb[_0x33aa06(0x487)]=_0x33aa06(0x224),_0x3fbd89[_0x33aa06(0x30d)](_0x1c7247),_0x3fbd89[_0x33aa06(0x30d)](_0x531fcb),_0x5b57cf[_0x8b4167(0x344)](_0x3fbd89),_0x199b3d[_0x33aa06(0x30d)](_0x5b57cf);let _0x4dcec9=document[_0x2e53fc(0x3c5)](_0x33aa06(0x291));_0x4dcec9[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x33aa06(0x4e1));const _0x50001c=document[_0x33aa06(0x134)]('hr'),_0x2ade00=document[_0x33aa06(0x134)](_0x33aa06(0x4c8));_0x2ade00[_0x33aa06(0x20b)][_0x2e53fc(0x4c0)]=_0x33aa06(0x44c),_0x2ade00[_0x33aa06(0x3f5)]=this[_0x33aa06(0x2ba)][_0x33aa06(0x1a2)],_0x4dcec9[_0x33aa06(0x30d)](_0x50001c),_0x4dcec9[_0x33aa06(0x30d)](_0x2ade00);const _0x29e942=document[_0x33aa06(0x134)]('br');_0x4dcec9[_0x33aa06(0x30d)](_0x29e942),_0x4dcec9[_0x33aa06(0x487)]+=_0x33aa06(0x2c8)+this[_0x33aa06(0x2ba)][_0x33aa06(0x42b)]+_0x33aa06(0x16c)+this[_0x2e53fc(0x507)][_0x33aa06(0x39c)]+_0x33aa06(0x3e4)+this[_0x33aa06(0x2ba)][_0x33aa06(0x2b1)]+_0x33aa06(0x16a)+this[_0x2e53fc(0x507)][_0x33aa06(0x2a8)]+_0x491177(0x1d4)+this[_0x491177(0x2de)][_0x2e53fc(0x430)]+_0x33aa06(0x1e4)+this[_0x33aa06(0x2ba)][_0x33aa06(0x3c7)]+_0x33aa06(0x30a)+this[_0x2e53fc(0x507)][_0x491177(0x365)]+_0x33aa06(0x20e),_0x199b3d[_0x33aa06(0x30d)](_0x4dcec9),_0x424983[_0x33aa06(0x30d)](_0x199b3d);let _0x387e25=document[_0x33aa06(0x134)](_0x2e53fc(0x433));_0x387e25[_0x33aa06(0x1c5)][_0x33aa06(0x179)]('card-footer');let _0x295395=document[_0x33aa06(0x134)](_0x33aa06(0x291));_0x295395[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x491177(0x13e));let _0x1cdc17=document[_0x33aa06(0x134)]('p');_0x1cdc17[_0x8b4167(0x3bd)][_0x33aa06(0x44a)]=_0x33aa06(0x474),_0x1cdc17[_0x33aa06(0x487)]=this[_0x2e53fc(0x507)][_0x33aa06(0x401)],_0x295395[_0x33aa06(0x30d)](_0x1cdc17),_0x387e25[_0x33aa06(0x30d)](_0x295395),_0x424983[_0x33aa06(0x30d)](_0x387e25),_0x399a93[_0x2e53fc(0x21c)](_0x424983);let _0x4e013a=document[_0x33aa06(0x134)](_0x33aa06(0x440));_0x4e013a[_0x2e53fc(0x2f8)][_0x491177(0x346)](_0x2e53fc(0x2d8));let _0x38cfb2=document[_0x33aa06(0x134)](_0x33aa06(0x17e));_0x38cfb2[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x33aa06(0x17e)),_0x38cfb2[_0x2e53fc(0x2f8)][_0x33aa06(0x179)](_0x33aa06(0x1dc)),_0x38cfb2[_0x33aa06(0x3f5)]=this[_0x33aa06(0x2ba)][_0x33aa06(0x2c3)];let _0x1e43e0=document[_0x33aa06(0x134)](_0x33aa06(0x17e));_0x1e43e0[_0x33aa06(0x1c5)][_0x2e53fc(0x536)](_0x33aa06(0x17e)),_0x1e43e0[_0x33aa06(0x1c5)][_0x33aa06(0x179)](_0x33aa06(0x47a)),_0x1e43e0[_0x33aa06(0x3f5)]=this[_0x33aa06(0x2ba)][_0x33aa06(0x38b)],_0x4e013a[_0x33aa06(0x30d)](_0x38cfb2),_0x4e013a[_0x33aa06(0x30d)](_0x1e43e0),_0x2cd61b[_0x2e53fc(0x21c)](_0x3993e7),_0x2cd61b[_0x33aa06(0x30d)](_0x399a93),_0x2cd61b[_0x2e53fc(0x21c)](_0x4e013a),_0x1713ae[_0x33aa06(0x30d)](_0x461396),_0x1713ae[_0x33aa06(0x30d)](_0x2cd61b),document[_0x33aa06(0x4b4)][_0x2e53fc(0x21c)](_0x1713ae),_0x296d96[_0x33aa06(0x1c6)](_0x33aa06(0x3e6),function(){const _0x58aa54=_0x33aa06;_0x1713ae[_0x58aa54(0x329)]();});const _0x368f7a=document[_0x33aa06(0x2c5)](_0x33aa06(0x242)),_0x517ed2=document[_0x33aa06(0x2c5)](_0x33aa06(0x3bb)),_0x484240=document[_0x33aa06(0x2c5)](_0x33aa06(0x1fd)),_0x5b7338=document[_0x33aa06(0x2c5)](_0x33aa06(0x222)),_0x5ae474=document[_0x33aa06(0x2c5)](_0x33aa06(0x2b0)),_0x2a4621=document[_0x33aa06(0x2c5)](_0x33aa06(0x29e)),_0x1c2327=document[_0x33aa06(0x2c5)](_0x8b4167(0xf4)),_0x42aeef=document[_0x2e53fc(0x3d3)](_0x33aa06(0x19d)),_0x52f745=document[_0x2e53fc(0x3d3)](_0x33aa06(0x19d)),_0x4dee09=document[_0x2e53fc(0x3d3)](_0x33aa06(0x3d6));let _0x1bd718=document[_0x2e53fc(0x3d3)](_0x33aa06(0x31f)),_0x438033=document[_0x33aa06(0x2c5)](_0x33aa06(0x17a)),_0x56850c=document[_0x33aa06(0x2c5)](_0x33aa06(0x28f));_0x368f7a[_0x33aa06(0x20b)][_0x33aa06(0x1ef)]=_0x33aa06(0x49b),_0x484240[_0x2e53fc(0x313)][_0x33aa06(0x1ef)]=_0x33aa06(0x49b),_0x5b7338[_0x33aa06(0x20b)][_0x2e53fc(0x26c)]=_0x33aa06(0x49b),_0x1c2327[_0x2e53fc(0x313)][_0x33aa06(0x1ef)]=_0x33aa06(0x49b);const _0x579588=document[_0x33aa06(0x37a)](_0x33aa06(0x309));_0x579588[_0x33aa06(0x1bc)](_0x4d4431=>{const _0xb273f6=_0x33aa06;_0x4d4431[_0xb273f6(0x1c6)](_0xb273f6(0x3e6),()=>{const _0x422ee1=a167_0x2364,_0x256c4e=a167_0x3167,_0x5b30b4=_0xb273f6;if(_0x4d4431[_0x5b30b4(0x284)]==_0x5b30b4(0x242))_0x368f7a[_0x5b30b4(0x20b)][_0x5b30b4(0x1ef)]='',_0x484240[_0x5b30b4(0x20b)][_0x5b30b4(0x1ef)]=_0x5b30b4(0x49b),_0x5b7338[_0x5b30b4(0x20b)][_0x256c4e(0x26c)]=_0x256c4e(0x389),_0x1c2327[_0x5b30b4(0x20b)][_0x256c4e(0x26c)]=_0x5b30b4(0x49b);else{if(_0x4d4431[_0x5b30b4(0x284)]==_0x5b30b4(0x1fd))_0x368f7a[_0x422ee1(0x14d)][_0x5b30b4(0x1ef)]=_0x256c4e(0x389),_0x484240[_0x5b30b4(0x20b)][_0x256c4e(0x26c)]='',_0x5b7338[_0x5b30b4(0x20b)][_0x256c4e(0x26c)]=_0x256c4e(0x389),_0x1c2327[_0x5b30b4(0x20b)][_0x5b30b4(0x1ef)]=_0x5b30b4(0x49b);else{if(_0x4d4431[_0x5b30b4(0x284)]==_0x5b30b4(0x222))_0x368f7a[_0x5b30b4(0x20b)][_0x5b30b4(0x1ef)]=_0x5b30b4(0x49b),_0x484240[_0x5b30b4(0x20b)][_0x5b30b4(0x1ef)]=_0x5b30b4(0x49b),_0x5b7338[_0x5b30b4(0x20b)][_0x5b30b4(0x1ef)]='',_0x1c2327[_0x422ee1(0x14d)][_0x5b30b4(0x1ef)]=_0x5b30b4(0x49b);else _0x4d4431[_0x5b30b4(0x284)]==_0x5b30b4(0x3ee)&&(_0x368f7a[_0x256c4e(0x313)][_0x5b30b4(0x1ef)]=_0x5b30b4(0x49b),_0x484240[_0x5b30b4(0x20b)][_0x422ee1(0x122)]=_0x256c4e(0x389),_0x5b7338[_0x5b30b4(0x20b)][_0x256c4e(0x26c)]=_0x5b30b4(0x49b),_0x1c2327[_0x5b30b4(0x20b)][_0x256c4e(0x26c)]='');}}});});const _0x103b6e=document[_0x33aa06(0x37a)](_0x33aa06(0x1e0)),_0x5d819d=document[_0x33aa06(0x2c5)](_0x2e53fc(0x292)),_0x41979a=document[_0x8b4167(0x3b4)](_0x33aa06(0x28e)),_0x4d1132=document[_0x2e53fc(0x3d3)](_0x33aa06(0x4d8)),_0x566762=document[_0x2e53fc(0x3d3)](_0x33aa06(0x3aa)),_0x536627=document[_0x2e53fc(0x3d3)](_0x2e53fc(0x327)),_0x16beb9=document[_0x2e53fc(0x3d3)](_0x33aa06(0x287)),_0x30d9d4=document[_0x33aa06(0x2c5)](_0x2e53fc(0x4ad)),_0x837fea=document[_0x33aa06(0x2c5)](_0x33aa06(0x24a)),_0x2c15e6=document[_0x33aa06(0x2c5)](_0x33aa06(0x160)),_0x5f0d3b=document[_0x33aa06(0x2c5)](_0x33aa06(0x479));let _0x1053c3=document[_0x33aa06(0x2c5)](_0x33aa06(0x205)),_0x555af4=document[_0x33aa06(0x2c5)](_0x2e53fc(0x48d)),_0x16c152=document[_0x33aa06(0x2c5)](_0x33aa06(0x2dc));_0x1e43e0[_0x33aa06(0x20b)][_0x33aa06(0x1ef)]=_0x33aa06(0x49b),_0x56850c[_0x33aa06(0x20b)][_0x33aa06(0x1ef)]=_0x33aa06(0x49b),_0x5d819d[_0x33aa06(0x20b)][_0x2e53fc(0x26c)]=_0x33aa06(0x49b),_0x4d1132[_0x33aa06(0x20b)][_0x33aa06(0x1ef)]=_0x33aa06(0x49b),_0x536627[_0x33aa06(0x20b)][_0x33aa06(0x1ef)]=_0x491177(0x263),_0x30d9d4[_0x2e53fc(0x313)][_0x2e53fc(0x26c)]=_0x2e53fc(0x389),_0x2c15e6[_0x2e53fc(0x313)][_0x33aa06(0x1ef)]=_0x33aa06(0x49b);for(let _0x86ff2b=0x0;_0x86ff2b<_0x3c593d[_0x491177(0x264)];_0x86ff2b++){_0x3c593d[_0x86ff2b][_0x33aa06(0x223)]===_0x33aa06(0x277)&&(_0x5f0d3b[_0x2e53fc(0x365)]+=_0x33aa06(0x482)+_0x3c593d[_0x86ff2b][_0x33aa06(0x323)]+_0x2e53fc(0x3e5)+_0x3c593d[_0x86ff2b][_0x33aa06(0x35b)]+_0x2e53fc(0x37b)+_0x3c593d[_0x86ff2b][_0x2e53fc(0x301)]+_0x2e53fc(0x3cb)+_0x3c593d[_0x86ff2b][_0x33aa06(0x397)]+'\x22>'+_0x3c593d[_0x86ff2b][_0x33aa06(0x25f)]+_0x33aa06(0x404));}_0x103b6e[_0x491177(0x19a)](_0x5a4444=>{const _0x14b73e=_0x2e53fc,_0x440262=_0x33aa06;_0x5a4444[_0x440262(0x1c6)](_0x14b73e(0x1c9),()=>{const _0x5df51b=a167_0x2364,_0x99f790=_0x14b73e,_0x5e3792=_0x440262;if(_0x5a4444[_0x5e3792(0x284)]==_0x99f790(0x2f3))_0x16c152[_0x99f790(0x49c)]=_0x5e3792(0x4a6),_0x56850c[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]='',_0x1bd718[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]='',_0x438033[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]='',_0x5d819d[_0x5e3792(0x20b)][_0x99f790(0x26c)]=_0x99f790(0x389),_0x4d1132[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x536627[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x30d9d4[_0x5e3792(0x20b)][_0x99f790(0x26c)]=_0x5e3792(0x49b),_0x2c15e6[_0x99f790(0x313)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x1053c3[_0x5df51b(0x2f6)]=_0x5e3792(0x45a),_0x555af4[_0x5e3792(0x487)]=_0x99f790(0x443)+_0x517ed2[_0x5e3792(0x284)];else{if(_0x5a4444[_0x5e3792(0x284)]==_0x5df51b(0x363))_0x16c152[_0x5e3792(0x496)]=_0x5e3792(0x1e6),_0x56850c[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x5d819d[_0x5e3792(0x20b)][_0x99f790(0x26c)]='',_0x4d1132[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x536627[_0x99f790(0x313)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x30d9d4[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x99f790(0x389),_0x2c15e6[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x1053c3[_0x5e3792(0x487)]=_0x5e3792(0x4ab),_0x555af4[_0x5e3792(0x487)]=_0x5df51b(0x3b0)+_0x41979a[_0x5e3792(0x284)][_0x99f790(0x396)](_0x5e3792(0x22f),'');else{if(_0x5a4444[_0x99f790(0x364)]==_0x5e3792(0x36c))_0x16c152['src']=_0x5e3792(0x446),_0x56850c[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x5d819d[_0x99f790(0x313)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x4d1132[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]='',_0x536627[_0x5e3792(0x20b)][_0x99f790(0x26c)]=_0x5e3792(0x49b),_0x30d9d4[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x2c15e6[_0x5df51b(0x14d)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x1053c3[_0x5e3792(0x487)]=_0x5e3792(0x3f0),_0x555af4[_0x5e3792(0x487)]=_0x5e3792(0x3d0)+_0x566762[_0x99f790(0x364)][_0x5e3792(0x148)](_0x5e3792(0x45d),'');else{if(_0x5a4444[_0x5e3792(0x284)]==_0x5e3792(0x405))_0x16c152[_0x99f790(0x49c)]=_0x5e3792(0x3b4),_0x56850c[_0x99f790(0x313)][_0x5df51b(0x122)]=_0x5e3792(0x49b),_0x5d819d[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x99f790(0x389),_0x4d1132[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]='none',_0x536627[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]='',_0x30d9d4[_0x5e3792(0x20b)][_0x99f790(0x26c)]=_0x5e3792(0x49b),_0x2c15e6[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x1053c3[_0x5e3792(0x487)]=_0x5e3792(0x3d1),_0x555af4[_0x5e3792(0x487)]=_0x99f790(0x443)+_0x16beb9[_0x5e3792(0x284)][_0x5e3792(0x148)](_0x99f790(0x42d),'');else{if(_0x5a4444[_0x99f790(0x364)]==_0x5e3792(0x23b))_0x16c152[_0x5e3792(0x496)]=_0x5e3792(0x272),_0x56850c[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x5d819d[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x4d1132[_0x99f790(0x313)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x536627[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x30d9d4[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]='',_0x2c15e6[_0x5e3792(0x20b)][_0x99f790(0x26c)]=_0x99f790(0x389),_0x1053c3[_0x5e3792(0x487)]=_0x99f790(0x263),_0x555af4[_0x99f790(0x365)]=_0x5e3792(0x3d0)+_0x837fea[_0x5e3792(0x284)][_0x5e3792(0x148)](_0x5e3792(0x19c),'');else _0x5a4444[_0x5e3792(0x284)]==_0x5e3792(0x237)&&(_0x16c152[_0x5e3792(0x496)]=_0x5e3792(0x314),_0x56850c[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x5d819d[_0x5e3792(0x20b)][_0x99f790(0x26c)]=_0x5e3792(0x49b),_0x4d1132[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x536627[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x30d9d4[_0x99f790(0x313)][_0x5e3792(0x1ef)]=_0x5e3792(0x49b),_0x2c15e6[_0x5e3792(0x20b)][_0x5e3792(0x1ef)]='',_0x1053c3[_0x5e3792(0x487)]=_0x99f790(0x20c),_0x555af4[_0x5e3792(0x487)]=_0x99f790(0x443)+_0x5f0d3b[_0x5e3792(0x25f)]);}}}}});}),_0x517ed2[_0x33aa06(0x1c6)](_0x33aa06(0x2eb),()=>{const _0x4d8e53=_0x33aa06;_0x555af4[_0x4d8e53(0x487)]=_0x4d8e53(0x3d0)+_0x517ed2[_0x4d8e53(0x284)],fs[_0x4d8e53(0x34e)](dataDirectory+_0x4d8e53(0x473)+_0x517ed2[_0x4d8e53(0x284)])?_0x1e43e0[_0x4d8e53(0x20b)][_0x4d8e53(0x1ef)]='':_0x1e43e0[_0x4d8e53(0x20b)][_0x4d8e53(0x1ef)]=_0x4d8e53(0x49b);}),_0x5ae474[_0x33aa06(0x1c6)]('change',()=>{const _0x4a913b=_0x33aa06;_0x555af4[_0x4a913b(0x487)]=_0x4a913b(0x3d0)+_0x5ae474[_0x4a913b(0x284)],fs[_0x4a913b(0x34e)](dataDirectory+_0x4a913b(0x473)+_0x5ae474[_0x4a913b(0x284)])?_0x1e43e0[_0x4a913b(0x20b)][_0x4a913b(0x1ef)]='':_0x1e43e0[_0x4a913b(0x20b)][_0x4a913b(0x1ef)]=_0x4a913b(0x49b);}),_0x2a4621[_0x33aa06(0x1c6)](_0x33aa06(0x2eb),()=>{const _0x369ab2=_0x33aa06;_0x555af4[_0x369ab2(0x487)]=_0x369ab2(0x3d0)+_0x2a4621[_0x369ab2(0x284)],fs[_0x369ab2(0x34e)](dataDirectory+_0x369ab2(0x473)+_0x2a4621[_0x369ab2(0x284)])?_0x1e43e0[_0x369ab2(0x20b)][_0x369ab2(0x1ef)]='':_0x1e43e0[_0x369ab2(0x20b)][_0x369ab2(0x1ef)]=_0x369ab2(0x49b);}),_0x42aeef[_0x33aa06(0x1c6)](_0x33aa06(0x2eb),()=>{const _0x2e47ef=_0x2e53fc,_0x328232=_0x33aa06;_0x555af4[_0x2e47ef(0x365)]=_0x328232(0x3d0)+_0x42aeef[_0x328232(0x284)],fs[_0x2e47ef(0x4b1)](dataDirectory+_0x328232(0x473)+_0x42aeef[_0x328232(0x284)])?_0x1e43e0[_0x2e47ef(0x313)][_0x328232(0x1ef)]='':_0x1e43e0[_0x328232(0x20b)][_0x328232(0x1ef)]=_0x2e47ef(0x389);}),_0x41979a[_0x33aa06(0x1c6)](_0x33aa06(0x2eb),()=>{const _0x520f00=_0x2e53fc,_0xf57478=_0x33aa06;_0x555af4[_0xf57478(0x487)]=_0x520f00(0x443)+_0x41979a[_0xf57478(0x284)][_0xf57478(0x148)](_0xf57478(0x22f),'');}),_0x566762[_0x33aa06(0x1c6)](_0x2e53fc(0x362),async()=>{const _0x3d1f4b=_0x491177,_0x4ca8bc=_0x2e53fc,_0x539201=_0x33aa06;_0x555af4[_0x539201(0x487)]=_0x4ca8bc(0x443)+_0x566762[_0x539201(0x284)][_0x4ca8bc(0x396)](_0x539201(0x45d),'');const _0x50f6ce=require(_0x539201(0x4be));await _0x50f6ce[_0x539201(0x188)](_0x539201(0x357))[_0x3d1f4b(0x31b)](_0x48e748=>{const _0x1ed801=_0x3d1f4b,_0xfb18f0=_0x4ca8bc,_0x199f38=_0x539201;let _0xf87fe7=_0x48e748[_0x199f38(0x31d)],_0x52222e=document[_0xfb18f0(0x3c5)](_0x199f38(0x1e0));_0x52222e[_0x199f38(0x284)]=_0xfb18f0(0x204),_0x52222e[_0x199f38(0x487)]=this[_0x199f38(0x2ba)][_0x199f38(0x2a8)],_0x4dee09[_0x199f38(0x30d)](_0x52222e);let _0x4e7150=document[_0xfb18f0(0x3c5)](_0x199f38(0x1e0));_0x4e7150[_0x199f38(0x284)]=_0x199f38(0x2b1),_0x4e7150[_0x199f38(0x487)]=this[_0x199f38(0x2ba)][_0x199f38(0x2b1)],_0x4dee09[_0x199f38(0x30d)](_0x4e7150);for(let _0x5c2a44 in _0xf87fe7){if(_0x5c2a44===_0x566762[_0x199f38(0x284)][_0x199f38(0x148)](_0x199f38(0x45d),'')){let _0x5d221b=_0xf87fe7[_0x5c2a44];_0x4dee09[_0x199f38(0x487)]='',_0x4dee09[_0x199f38(0x30d)](_0x52222e[_0x199f38(0x333)](!![])),_0x4dee09[_0x199f38(0x30d)](_0x4e7150[_0x1ed801(0x3cc)](!![]));for(let _0x4b3f87=0x0;_0x4b3f87<_0x5d221b[_0x199f38(0x232)];_0x4b3f87++){let _0x408cb3=document[_0x199f38(0x134)](_0x199f38(0x1e0));_0x408cb3[_0xfb18f0(0x364)]=_0x5d221b[_0x4b3f87],_0x408cb3[_0x199f38(0x487)]=_0x5d221b[_0x4b3f87],_0x4dee09[_0x199f38(0x30d)](_0x408cb3);}}}});}),_0x16beb9[_0x33aa06(0x1c6)](_0x33aa06(0x2eb),()=>{const _0x37f09e=_0x2e53fc,_0x3088f5=_0x33aa06;_0x555af4[_0x37f09e(0x365)]=_0x3088f5(0x3d0)+_0x16beb9[_0x3088f5(0x284)][_0x3088f5(0x148)](_0x3088f5(0x3c4),'');}),_0x837fea[_0x2e53fc(0x480)](_0x2e53fc(0x362),()=>{const _0x58639b=_0x491177,_0x1a3c43=_0x2e53fc,_0x11eb9c=_0x33aa06;_0x555af4[_0x58639b(0x2f6)]=_0x11eb9c(0x3d0)+_0x837fea[_0x1a3c43(0x364)][_0x1a3c43(0x396)](_0x11eb9c(0x19c),'');}),_0x5f0d3b[_0x2e53fc(0x480)](_0x33aa06(0x2eb),()=>{const _0x38bfb3=_0x491177,_0x3e3459=_0x33aa06;let _0x2bfd85=_0x5f0d3b[_0x3e3459(0x394)];_0x555af4[_0x3e3459(0x487)]=_0x38bfb3(0x3b0)+_0x5f0d3b[_0x3e3459(0x17b)][_0x2bfd85][_0x3e3459(0x4df)];let _0x20931f=_0x5f0d3b[_0x3e3459(0x17b)][_0x2bfd85][_0x3e3459(0x379)](_0x3e3459(0x447));_0x16c152[_0x3e3459(0x496)]=_0x20931f;});let _0x5144e7=document[_0x33aa06(0x2c5)](_0x33aa06(0x3bb)),_0x419218=document[_0x8b4167(0x3b4)](_0x33aa06(0x2b0)),_0x436357=document[_0x33aa06(0x2c5)](_0x33aa06(0x29e));for(let _0x6fdc4c=0x0;_0x6fdc4c<_0x4c4146[_0x33aa06(0x232)];_0x6fdc4c++){let _0x5ab281=document[_0x33aa06(0x134)](_0x33aa06(0x1e0));_0x5ab281[_0x2e53fc(0x364)]=_0x4c4146[_0x6fdc4c]['id'],_0x5ab281[_0x33aa06(0x487)]=_0x4c4146[_0x6fdc4c]['id'],_0x5144e7[_0x2e53fc(0x21c)](_0x5ab281);}for(let _0x2bd1e4=0x0;_0x2bd1e4<_0x7fc40[_0x33aa06(0x232)];_0x2bd1e4++){let _0x1dfb6d=document[_0x33aa06(0x134)](_0x33aa06(0x1e0));_0x1dfb6d[_0x33aa06(0x284)]=_0x7fc40[_0x2bd1e4]['id'],_0x1dfb6d[_0x33aa06(0x487)]=_0x7fc40[_0x2bd1e4]['id'],_0x419218[_0x491177(0x3ab)](_0x1dfb6d);}for(let _0x3b4bac=0x0;_0x3b4bac<_0xd8f6c[_0x2e53fc(0x205)];_0x3b4bac++){let _0x3a2780=document[_0x2e53fc(0x3c5)](_0x33aa06(0x1e0));_0x3a2780[_0x33aa06(0x284)]=_0xd8f6c[_0x3b4bac]['id'],_0x3a2780[_0x33aa06(0x487)]=_0xd8f6c[_0x3b4bac]['id'],_0x436357[_0x33aa06(0x30d)](_0x3a2780);}for(let _0xc001ef=0x0;_0xc001ef<_0x23d04a[_0x33aa06(0x232)];_0xc001ef++){let _0xd25771=document[_0x33aa06(0x134)](_0x33aa06(0x1e0));_0xd25771[_0x33aa06(0x284)]=_0x23d04a[_0xc001ef]['id'],_0xd25771[_0x2e53fc(0x365)]=_0x23d04a[_0xc001ef]['id'],_0x52f745[_0x33aa06(0x30d)](_0xd25771);}let _0x16eabe=document[_0x33aa06(0x2c5)](_0x33aa06(0x28e)),_0x2f40cc=document[_0x2e53fc(0x3d3)](_0x2e53fc(0x1cb)),_0x5c691b=document[_0x33aa06(0x2c5)](_0x2e53fc(0x3e9)),_0x5e4c78=document[_0x33aa06(0x2c5)](_0x2e53fc(0x444));for(let _0x59906e=0x0;_0x59906e<_0x56e1f8[_0x33aa06(0x232)];_0x59906e++){let _0x3f16b8=document[_0x33aa06(0x134)](_0x33aa06(0x1e0));_0x3f16b8[_0x33aa06(0x284)]=_0x56e1f8[_0x59906e][_0x2e53fc(0x434)],_0x3f16b8[_0x2e53fc(0x365)]=_0x56e1f8[_0x59906e][_0x33aa06(0x323)][_0x33aa06(0x148)](_0x33aa06(0x22f),''),_0x16eabe[_0x33aa06(0x30d)](_0x3f16b8);}for(let _0x1c1da4=0x0;_0x1c1da4<_0x110dd7[_0x33aa06(0x232)];_0x1c1da4++){let _0x520cb6=document[_0x33aa06(0x134)](_0x33aa06(0x1e0));_0x520cb6[_0x33aa06(0x284)]=_0x110dd7[_0x1c1da4][_0x33aa06(0x323)],_0x520cb6[_0x33aa06(0x487)]=_0x110dd7[_0x1c1da4][_0x2e53fc(0x434)][_0x33aa06(0x148)](_0x33aa06(0x45d),''),_0x2f40cc[_0x33aa06(0x30d)](_0x520cb6);}for(let _0x594ad7=0x0;_0x594ad7<_0xc695a3[_0x33aa06(0x232)];_0x594ad7++){let _0x55c54e=document[_0x33aa06(0x134)](_0x2e53fc(0x354));_0x55c54e[_0x33aa06(0x284)]=_0xc695a3[_0x594ad7][_0x491177(0x2ae)],_0x55c54e[_0x33aa06(0x487)]=_0xc695a3[_0x594ad7][_0x33aa06(0x323)][_0x33aa06(0x148)](_0x33aa06(0x3c4),''),_0x5c691b[_0x33aa06(0x30d)](_0x55c54e);}for(let _0x3fea51=0x0;_0x3fea51<_0x3fa2b5[_0x33aa06(0x232)];_0x3fea51++){let _0x456b94=document[_0x33aa06(0x134)](_0x491177(0x43c));_0x456b94[_0x33aa06(0x284)]=_0x3fa2b5[_0x3fea51][_0x33aa06(0x323)],_0x456b94[_0x33aa06(0x487)]=_0x3fa2b5[_0x3fea51][_0x33aa06(0x323)][_0x33aa06(0x148)](_0x2e53fc(0x374),''),_0x5e4c78[_0x33aa06(0x30d)](_0x456b94);}_0x1e43e0[_0x33aa06(0x1c6)](_0x33aa06(0x3e6),()=>{const _0x1d52b8=_0x491177,_0x5c5872=_0x2e53fc,_0x399cfb=_0x33aa06;Swal[_0x399cfb(0x147)]({'title':this[_0x399cfb(0x2ba)][_0x399cfb(0x43b)],'text':this[_0x399cfb(0x2ba)][_0x5c5872(0x30a)],'showCancelButton':!![],'confirmButtonColor':_0x1d52b8(0x38f),'cancelButtonColor':_0x399cfb(0x1a7),'confirmButtonText':this[_0x399cfb(0x2ba)][_0x399cfb(0x31b)],'cancelButtonText':this[_0x399cfb(0x2ba)][_0x399cfb(0x220)]})[_0x399cfb(0x4d7)](_0x4ed2ad=>{const _0x2534a0=_0x5c5872,_0x359537=_0x399cfb;_0x4ed2ad[_0x359537(0x3cd)]&&(fs[_0x359537(0x3b0)](dataDirectory+_0x359537(0x473)+_0x517ed2[_0x359537(0x284)],{'recursive':!![]}),_0x1e43e0[_0x2534a0(0x313)][_0x359537(0x1ef)]=_0x359537(0x49b),Toast[_0x359537(0x147)]({'icon':_0x359537(0x2d8),'title':this[_0x359537(0x2ba)][_0x359537(0x449)]}));});});let _0x3c0dba,_0x58fb45;_0x38cfb2[_0x33aa06(0x1c6)](_0x2e53fc(0x1c9),async()=>{const _0x228a08=_0x8b4167,_0x54536d=_0x491177,_0x123fcd=_0x2e53fc,_0x5c81fa=_0x33aa06;if(document[_0x5c81fa(0x2e1)](_0x5c81fa(0x3a4))==null)return Toast[_0x5c81fa(0x147)]({'icon':_0x5c81fa(0x3fd),'title':this[_0x54536d(0x2de)][_0x123fcd(0x1b7)]});if(document[_0x54536d(0x272)](_0x5c81fa(0x3a4))[_0x5c81fa(0x284)]==_0x5c81fa(0x2f1)&&document[_0x5c81fa(0x2e1)](_0x5c81fa(0x23c))==null)return Toast[_0x5c81fa(0x147)]({'icon':_0x5c81fa(0x3fd),'title':this[_0x228a08(0x96)][_0x123fcd(0x1b7)]});let _0xe2e51d=pkg[_0x5c81fa(0x3f9)]?pkg[_0x5c81fa(0x3cf)]+'/'+pkg[_0x5c81fa(0x3f9)]:pkg[_0x54536d(0x42b)],_0x477468=(await this[_0x5c81fa(0x4c7)][_0x123fcd(0x49e)](_0x5c81fa(0x36a),_0x5c81fa(0x3c1)))[_0x5c81fa(0x284)],_0x14dcc3=(await this[_0x5c81fa(0x4c7)][_0x5c81fa(0x188)](_0x477468[_0x5c81fa(0x4d1)],_0x5c81fa(0x430)))[_0x5c81fa(0x284)],_0x24e20f=(await this[_0x5c81fa(0x4c7)][_0x5c81fa(0x188)](_0x5c81fa(0x36a),_0x5c81fa(0x1c2)))[_0x5c81fa(0x284)],_0x2e2647=(await this[_0x5c81fa(0x4c7)][_0x123fcd(0x49e)](_0x5c81fa(0x36a),_0x5c81fa(0x195)))[_0x5c81fa(0x284)],_0x417110=(await this[_0x5c81fa(0x4c7)][_0x5c81fa(0x188)](_0x5c81fa(0x36a),_0x5c81fa(0x39d)))[_0x123fcd(0x364)];ipcRenderer[_0x5c81fa(0x3ae)](_0x5c81fa(0x4de));let _0x2d4468=document[_0x5c81fa(0x37a)](_0x5c81fa(0x1e0)),_0xa40262=document[_0x123fcd(0x27c)](_0x123fcd(0x45f));_0x2d4468[_0x5c81fa(0x1bc)](_0x40d97f=>{const _0x1d788c=_0x5c81fa;_0x40d97f[_0x1d788c(0x1b0)]&&(_0x3c0dba=_0x40d97f[_0x1d788c(0x284)]);}),_0xa40262[_0x54536d(0x19a)](_0x8ec7b=>{const _0x389a5f=_0x5c81fa;_0x8ec7b[_0x389a5f(0x1b0)]&&(_0x58fb45=_0x8ec7b[_0x389a5f(0x284)]);});let _0x40ebc3=_0x3c0dba;if(_0x3c0dba==_0x5c81fa(0x2f1)){console[_0x123fcd(0x249)](_0x5c81fa(0x273)+_0x58fb45+'');if(_0x58fb45==_0x5c81fa(0x242))_0x3c0dba=_0x5144e7[_0x5c81fa(0x284)];else{if(_0x58fb45==_0x5c81fa(0x1fd))_0x3c0dba=_0x419218[_0x5c81fa(0x284)];else{if(_0x58fb45==_0x54536d(0x3f9))_0x3c0dba=_0x436357[_0x5c81fa(0x284)];else _0x58fb45==_0x5c81fa(0x3ee)&&(_0x3c0dba=_0x52f745[_0x5c81fa(0x284)]);}}}else{if(_0x3c0dba==_0x5c81fa(0x4a8))_0x3c0dba=_0x16eabe[_0x123fcd(0x364)],console[_0x5c81fa(0x203)](_0x54536d(0x130)+_0x3c0dba+''),_0x58fb45=_0x123fcd(0x2fb);else{if(_0x3c0dba==_0x5c81fa(0x36c))_0x3c0dba=_0x2f40cc[_0x123fcd(0x364)],console[_0x5c81fa(0x203)](_0x5c81fa(0x387)+_0x3c0dba+''),_0x58fb45=_0x5c81fa(0x36c);else{if(_0x3c0dba==_0x5c81fa(0x405))_0x3c0dba=_0x5c691b[_0x54536d(0x29c)],console[_0x5c81fa(0x203)](_0x123fcd(0x418)+_0x3c0dba+''),_0x58fb45=_0x5c81fa(0x405);else{if(_0x3c0dba==_0x5c81fa(0x23b)){await _0x4ebdf7(_0x14dcc3,_0x24e20f,_0x2e2647,_0x417110);return;}else{if(_0x3c0dba==_0x5c81fa(0x237)){await _0x2f87ac(_0x14dcc3,_0x24e20f,_0x2e2647,_0x417110);return;}}}}}}async function _0x2f87ac(_0x511aec,_0x2d8f6b,_0x300f76,_0x54e6a0){const _0x2b1017=_0x228a08,_0x43b09a=_0x54536d,_0x3e3a07=_0x123fcd,_0xb39531=_0x5c81fa,_0x317695=require(_0x43b09a(0x48a));let _0x7727eb=_0x5f0d3b[_0xb39531(0x284)];_0x1713ae[_0xb39531(0x329)]();let _0xd7320b=document[_0xb39531(0x134)](_0x3e3a07(0x433));_0xd7320b[_0xb39531(0x1c5)][_0xb39531(0x179)](_0xb39531(0x214)),_0xd7320b[_0xb39531(0x1c5)][_0xb39531(0x179)](_0xb39531(0x219));let _0x1d201d=document[_0x43b09a(0x201)](_0xb39531(0x291));_0x1d201d[_0xb39531(0x1c5)][_0xb39531(0x179)](_0xb39531(0x218));let _0x2cd1a3=document[_0xb39531(0x134)](_0xb39531(0x291));_0x2cd1a3[_0xb39531(0x1c5)][_0xb39531(0x179)](_0x3e3a07(0x219));let _0x4d591f=document[_0xb39531(0x134)](_0x3e3a07(0x37e));_0x4d591f[_0xb39531(0x1c5)][_0xb39531(0x179)](_0xb39531(0x4f0));let _0x51359b=document[_0x3e3a07(0x3c5)]('p');_0x51359b[_0xb39531(0x1c5)][_0xb39531(0x179)](_0x3e3a07(0x3f6)),_0x51359b[_0xb39531(0x3f5)]=this[_0xb39531(0x2ba)][_0xb39531(0x2c0)]+_0xb39531(0x2e3),_0x4d591f[_0xb39531(0x30d)](_0x51359b);let _0xc0b6a8=document[_0xb39531(0x134)](_0xb39531(0x318));_0xc0b6a8[_0xb39531(0x1c5)][_0xb39531(0x179)](_0xb39531(0x1b2));let _0x1f13a6=document[_0xb39531(0x134)](_0x3e3a07(0x433));_0x1f13a6[_0x2b1017(0x39c)][_0xb39531(0x179)](_0x3e3a07(0x53b));let _0x541deb=document[_0xb39531(0x134)](_0x3e3a07(0x433));_0x541deb[_0xb39531(0x1c5)][_0xb39531(0x179)](_0xb39531(0x1d0));let _0x4ab25d=document[_0xb39531(0x134)](_0xb39531(0x291));_0x4ab25d[_0xb39531(0x1c5)][_0xb39531(0x179)](_0xb39531(0x4e1));let _0x58c759=document[_0xb39531(0x134)](_0x43b09a(0x48d));_0x58c759[_0x3e3a07(0x313)][_0xb39531(0x44a)]=_0x3e3a07(0x251),_0x58c759[_0x3e3a07(0x34c)]=this[_0x3e3a07(0x507)][_0xb39531(0x2bb)];const _0x50f571=document[_0xb39531(0x134)](_0x3e3a07(0x2a2));_0x50f571[_0xb39531(0x1f6)]=_0xb39531(0x1b6),_0x50f571[_0xb39531(0x35f)](_0x3e3a07(0x474),_0xb39531(0x248)),_0x50f571[_0x3e3a07(0x313)][_0xb39531(0x2a0)]=_0x3e3a07(0x4ae);let _0x248908=document[_0x3e3a07(0x3c5)](_0xb39531(0x4c8));_0x248908[_0x3e3a07(0x313)][_0xb39531(0x44a)]=_0x3e3a07(0x251),_0x248908[_0xb39531(0x3f5)]=this[_0xb39531(0x2ba)][_0x3e3a07(0x249)];let _0x1b4f1b=document[_0xb39531(0x134)](_0xb39531(0x472));_0x1b4f1b[_0xb39531(0x1c5)][_0xb39531(0x179)](_0xb39531(0x472)),_0x1b4f1b[_0xb39531(0x1c5)][_0xb39531(0x179)](_0xb39531(0x2a4)),_0x1b4f1b[_0xb39531(0x332)]=this[_0xb39531(0x2ba)][_0xb39531(0x4a2)],_0x1b4f1b[_0xb39531(0x23a)]=!![],_0x1b4f1b[_0xb39531(0x20b)][_0xb39531(0x2fc)]=_0xb39531(0x3af),_0x4ab25d[_0xb39531(0x30d)](_0x58c759),_0x4ab25d[_0xb39531(0x30d)](document[_0xb39531(0x134)]('br')),_0x4ab25d[_0x43b09a(0x3ab)](_0x50f571),_0x4ab25d[_0xb39531(0x30d)](document[_0xb39531(0x134)]('br')),_0x4ab25d[_0xb39531(0x30d)](_0x248908),_0x4ab25d[_0xb39531(0x30d)](_0x1b4f1b),_0x541deb[_0xb39531(0x30d)](_0x4ab25d);let _0x141311=document[_0x43b09a(0x201)](_0xb39531(0x291));_0x141311[_0xb39531(0x1c5)][_0x43b09a(0x346)](_0xb39531(0x3d2));let _0x4ed3b7=document[_0xb39531(0x134)](_0x3e3a07(0x433));_0x4ed3b7[_0xb39531(0x1c5)][_0xb39531(0x179)](_0xb39531(0x2c7));let _0x59573e=document[_0xb39531(0x134)]('p');_0x59573e[_0x3e3a07(0x313)][_0xb39531(0x44a)]=_0x3e3a07(0x531),_0x59573e[_0x3e3a07(0x365)]=this[_0x43b09a(0x2de)][_0xb39531(0x401)],_0x4ed3b7[_0x3e3a07(0x21c)](_0x59573e),_0x141311[_0xb39531(0x30d)](_0x4ed3b7),_0x541deb[_0xb39531(0x30d)](_0x4ab25d),_0x1f13a6[_0xb39531(0x30d)](_0x541deb),_0xc0b6a8[_0x3e3a07(0x21c)](_0x1f13a6);let _0x5e84d8=document[_0xb39531(0x134)](_0xb39531(0x440));_0x5e84d8[_0x3e3a07(0x2f8)][_0xb39531(0x179)](_0x3e3a07(0x2d8));let _0x39c797=document[_0xb39531(0x134)](_0xb39531(0x17e));_0x39c797[_0xb39531(0x1c5)][_0xb39531(0x179)](_0xb39531(0x17e)),_0x39c797[_0x3e3a07(0x2f8)][_0xb39531(0x179)](_0x3e3a07(0x3e8)),_0x39c797['id']=_0xb39531(0x1af),_0x39c797[_0x3e3a07(0x34c)]=this[_0xb39531(0x2ba)][_0xb39531(0x2cc)],_0x5e84d8[_0xb39531(0x30d)](_0x39c797),_0x2cd1a3[_0x3e3a07(0x21c)](_0x4d591f),_0x2cd1a3[_0xb39531(0x30d)](_0xc0b6a8),_0x2cd1a3[_0xb39531(0x30d)](_0x5e84d8),_0xd7320b[_0x3e3a07(0x21c)](_0x1d201d),_0xd7320b[_0xb39531(0x30d)](_0x2cd1a3),document[_0xb39531(0x4b4)][_0xb39531(0x30d)](_0xd7320b),ipcRenderer[_0x43b09a(0x2f7)](_0xb39531(0x4de));const _0x472e7d=_0x5f0d3b[_0xb39531(0x17b)][_0x5f0d3b[_0xb39531(0x394)]][_0xb39531(0x379)](_0xb39531(0x4d0)),_0x2a52b6=_0x5f0d3b[_0x43b09a(0x458)][_0x5f0d3b[_0xb39531(0x394)]][_0xb39531(0x379)](_0xb39531(0x397));async function _0x1443d4(){const _0x11ee27=_0x43b09a,_0x418166=_0x3e3a07,_0xff8e99=_0xb39531;try{console[_0xff8e99(0x203)](_0x472e7d),await fs[_0xff8e99(0x204)](dataDirectory+_0xff8e99(0x363),{'recursive':!![]});const _0x3111a4=dataDirectory+_0xff8e99(0x1bf)+_0x7727eb+_0xff8e99(0x1fc),_0x50adcc=await fs[_0xff8e99(0x457)](_0x3111a4),_0x147b80=await _0x4b6a4c(_0x472e7d,_0x50adcc);console[_0x11ee27(0x185)](_0x418166(0x1fa)+_0x147b80[_0xff8e99(0x491)]);}catch(_0x199f18){console[_0xff8e99(0x3fd)](_0xff8e99(0x1bd),_0x199f18);}}async function _0x4b6a4c(_0x22110e,_0x5b17b6){const _0x268035=_0xb39531;return console[_0x268035(0x203)](_0x268035(0x44d)+_0x22110e+_0x268035(0x168)+_0x5b17b6),new Promise((_0x469f13,_0x4c7b9a)=>{const _0x2bcc37=a167_0x3167,_0x37329f=_0x268035;_0x317695[_0x37329f(0x188)](_0x22110e,_0x4ea2be=>{const _0x37584e=a167_0x3167,_0x3053e4=_0x37329f;let _0x53477c=_0x4ea2be[_0x37584e(0x54f)][_0x3053e4(0x1ab)],_0x363abe=0x0,_0xdb97c=0x0;_0x4ea2be[_0x3053e4(0x491)]===0xc8?(_0x1b4f1b[_0x3053e4(0x284)]+=_0x3053e4(0x423)+this[_0x3053e4(0x2ba)][_0x3053e4(0x413)]+'\x20'+_0x2a52b6+_0x3053e4(0x310),_0x56e009(),_0x4ea2be[_0x3053e4(0x2d1)](_0x5b17b6),_0x4ea2be['on'](_0x3053e4(0x31d),_0x2df77d=>{const _0x313bb9=_0x37584e,_0x538d0f=_0x3053e4;_0x363abe+=_0x2df77d[_0x538d0f(0x232)],_0xdb97c=parseInt((_0x363abe/_0x53477c*0x64)[_0x313bb9(0x347)](0x0)),_0x50f571[_0x313bb9(0x364)]=_0xdb97c;}),_0x5b17b6['on'](_0x37584e(0x513),()=>{const _0xee56ad=_0x37584e,_0x49eba6=_0x3053e4;_0x5b17b6[_0xee56ad(0x47c)](),_0x1b4f1b[_0x49eba6(0x284)]+='✅\x20'+_0x2a52b6+'\x20'+this[_0x49eba6(0x2ba)][_0x49eba6(0x2dd)]+'.\x0a',_0x56e009(),_0x469f13(_0x4ea2be);})):(_0x1b4f1b[_0x3053e4(0x284)]+='❌\x20'+this[_0x3053e4(0x2ba)][_0x3053e4(0x37f)]+'\x20'+_0x22110e+'.\x20'+this[_0x37584e(0x507)][_0x3053e4(0x2ad)]+':\x20'+_0x4ea2be[_0x3053e4(0x491)]+'\x0a',_0x4c7b9a(_0x3053e4(0x408)+_0x22110e+_0x3053e4(0x27d)+_0x4ea2be[_0x3053e4(0x491)]));})['on'](_0x2bcc37(0x413),_0x400461=>{const _0x59057a=_0x37329f;_0x1b4f1b[_0x59057a(0x284)]+='❌\x20'+this[_0x59057a(0x2ba)][_0x59057a(0x293)]+':\x20'+_0x400461[_0x59057a(0x3ef)]+'\x0a',_0x4c7b9a(_0x59057a(0x438)+_0x400461[_0x59057a(0x3ef)]);});});}const _0x4b3a5d=require(_0xb39531(0x167));async function _0x29e5e4(){const _0x2da609=_0x43b09a,_0x2a684a=_0x3e3a07,_0x53da93=_0xb39531,_0x381adb=dataDirectory+_0x53da93(0x1bf)+_0x7727eb+_0x2da609(0x3ee),_0x4b93f9=dataDirectory+_0x53da93(0x4ea),_0x32fd97=new _0x4b3a5d(_0x381adb),_0x273bb1=_0x32fd97[_0x2a684a(0x2a7)]();_0x50f571[_0x53da93(0x347)]=_0x273bb1[_0x2a684a(0x205)];for(let _0x4ee363=0x0;_0x4ee363<_0x273bb1[_0x53da93(0x232)];_0x4ee363++){const _0x539020=_0x273bb1[_0x4ee363];let _0x586159=parseInt((_0x4ee363+0x1)/_0x273bb1[_0x53da93(0x232)]*0x64)[_0x2a684a(0x347)](0x0);_0x1b4f1b[_0x53da93(0x284)]+=_0x53da93(0x423)+this[_0x2a684a(0x507)][_0x2a684a(0x44f)]+'\x20'+_0x539020[_0x53da93(0x25f)]+_0x53da93(0x46f)+this[_0x53da93(0x2ba)][_0x53da93(0x4b8)]+':\x20'+_0x586159+'%\x0a',_0x50f571[_0x53da93(0x284)]=_0x4ee363+0x1,_0x32fd97[_0x2a684a(0x410)](_0x539020,_0x4b93f9,!![],!![]),_0x56e009();}_0x1b4f1b[_0x53da93(0x284)]+='✅\x20'+this[_0x53da93(0x2ba)][_0x53da93(0x1e1)]+'\x0a',_0x56e009(),console[_0x53da93(0x203)](_0x53da93(0x282)),_0x50f571[_0x53da93(0x347)]=0x64;}async function _0x556b39(){const _0x2d7061=_0x3e3a07,_0x5b3550=_0xb39531;_0x1b4f1b[_0x5b3550(0x284)]+=_0x5b3550(0x423)+this[_0x5b3550(0x2ba)][_0x5b3550(0x2d7)]+_0x5b3550(0x310),_0x56e009(),await fs[_0x5b3550(0x3b0)](dataDirectory+_0x5b3550(0x363),{'recursive':!![]}),_0x1b4f1b[_0x2d7061(0x364)]+='✅\x20'+this[_0x5b3550(0x2ba)][_0x5b3550(0x325)]+'\x0a',_0x56e009();}function _0x56e009(){const _0x1d4c68=_0xb39531;_0x1b4f1b[_0x1d4c68(0x294)]=_0x1b4f1b[_0x1d4c68(0x444)];}async function _0x5f02a2(){const _0x5948de=_0x2b1017,_0xb7ceb4=_0x3e3a07,_0x108e7e=_0xb39531;if(!fs[_0x108e7e(0x34e)](dataDirectory+_0x108e7e(0x330))){_0xd7320b[_0x108e7e(0x329)]();let _0xe0b2d4=Swal[_0xb7ceb4(0x2b2)]({'toast':!![],'position':_0x5948de(0x14f),'showConfirmButton':![],'timer':0x2710,'timerProgressBar':!![],'didOpen':_0x4d7a40=>{const _0x52cc8a=_0x108e7e;_0x4d7a40[_0x52cc8a(0x1c6)](_0x52cc8a(0x2b6),Swal[_0x52cc8a(0x3da)]),_0x4d7a40[_0x52cc8a(0x1c6)](_0x52cc8a(0x436),Swal[_0x52cc8a(0x4b6)]);}});_0xe0b2d4[_0x108e7e(0x147)]({'icon':_0x108e7e(0x3fd),'title':this[_0xb7ceb4(0x507)][_0x108e7e(0x460)],'text':this[_0xb7ceb4(0x507)][_0x108e7e(0x29a)]});return;}}const _0x42baed=new Client();try{_0x58c759[_0xb39531(0x487)]=_0xb39531(0x423)+this[_0x43b09a(0x2de)][_0xb39531(0x3b9)]+_0x3e3a07(0x1f0),_0x248908[_0xb39531(0x487)]=_0xb39531(0x423)+this[_0xb39531(0x2ba)][_0xb39531(0x3b9)]+_0x3e3a07(0x1f0),_0x56e009(),await _0x5f02a2(),await _0x1443d4(),await _0x29e5e4(),await _0x556b39();let _0x599755=await fs[_0x3e3a07(0x203)](dataDirectory+_0x43b09a(0x1b3)+_0x2a52b6+'/'+_0x2a52b6+_0xb39531(0x13e),_0xb39531(0x352));_0x599755=JSON[_0xb39531(0x29f)](_0x599755)[_0xb39531(0x375)],_0x248908[_0xb39531(0x487)]=_0xb39531(0x423)+this[_0xb39531(0x2ba)][_0x43b09a(0x1ba)]+_0x3e3a07(0x1f0),_0x1b4f1b[_0xb39531(0x487)]+='✅\x20'+this[_0xb39531(0x2ba)][_0xb39531(0x306)]+_0xb39531(0x165)+this[_0x3e3a07(0x507)][_0xb39531(0x279)]+_0x3e3a07(0x391),_0x56e009(),_0x50f571['value']=0x64;let _0x1619ef=localStorage[_0xb39531(0x270)](_0xb39531(0x36d));!_0x1619ef||_0x1619ef==null||_0x1619ef==undefined?_0x42baed[_0xb39531(0x1f8)]({'authorization':_0x511aec,'detached':![],'timeout':0x2710,'root':dataDirectory+_0x43b09a(0x47c),'path':dataDirectory+_0xb39531(0x4ea),'overrides':{'detached':![],'screen':screen},'downloadFileMultiple':0x14,'version':{'custom':_0x2a52b6,'number':_0x599755,'type':_0x3e3a07(0x4d6)},'verify':![],'ignored':[_0xb39531(0x2b2)],'memory':{'min':_0x2d8f6b[_0x3e3a07(0x3db)]*0x400+'M','max':_0x2d8f6b[_0x3e3a07(0x442)]*0x400+'M'}}):(console[_0xb39531(0x203)](_0xb39531(0x143)),_0x42baed[_0xb39531(0x1f8)]({'authorization':_0x511aec,'detached':![],'timeout':0x2710,'root':dataDirectory+_0x43b09a(0x47c),'path':dataDirectory+_0xb39531(0x4ea),'overrides':{'detached':![],'screen':screen},'downloadFileMultiple':0x14,'version':{'custom':_0x2a52b6,'number':_0x599755,'type':_0xb39531(0x32d)},'java':!![],'javaPath':_0x1619ef,'verify':![],'ignored':[_0xb39531(0x2b2)],'memory':{'min':_0x2d8f6b[_0xb39531(0x445)]*0x400+'M','max':_0x2d8f6b[_0xb39531(0x317)]*0x400+'M'}})),_0x42baed['on'](_0xb39531(0x378),_0x574250=>{const _0x4c753d=_0x2b1017,_0x265c65=_0x43b09a,_0x2d104a=_0x3e3a07,_0x4faf8c=_0xb39531;console[_0x4faf8c(0x203)](_0x574250),_0x574250[_0x2d104a(0x3c7)](_0x4faf8c(0x43a))&&(_0x58c759[_0x4faf8c(0x487)]=_0x4faf8c(0x423)+this[_0x265c65(0x2de)][_0x2d104a(0x1f6)]+_0x2d104a(0x1f0),_0x248908[_0x4faf8c(0x487)]=_0x4faf8c(0x423)+this[_0x4faf8c(0x2ba)][_0x2d104a(0x1f6)]+_0x2d104a(0x1f0),_0x50f571[_0x4faf8c(0x284)]=0x0);if(_0x574250[_0x4faf8c(0x34b)](_0x4faf8c(0x493)))return ShowPanelError(this[_0x4faf8c(0x2ba)][_0x4faf8c(0x33f)]+_0x4faf8c(0x1ae)+_0x574250);if(_0x574250[_0x4faf8c(0x34b)](_0x4faf8c(0x4e8)))return ShowPanelError(this[_0x2d104a(0x507)][_0x2d104a(0x381)]+_0x4faf8c(0x1ae)+_0x574250);if(_0x574250[_0x2d104a(0x3c7)](_0x4faf8c(0x178)))return ShowPanelError(this[_0x2d104a(0x507)][_0x4faf8c(0x27a)]+_0x2d104a(0x3cc)+_0x574250);if(_0x574250[_0x4faf8c(0x34b)](_0x4faf8c(0x135)))return ShowPanelError(this[_0x2d104a(0x507)][_0x4faf8c(0x27a)]+_0x265c65(0x41c)+_0x574250);_0x574250[_0x4faf8c(0x34b)](_0x2d104a(0x538))&&(ShowPanelError(this[_0x4faf8c(0x2ba)][_0x4faf8c(0x299)]+_0x4faf8c(0x1ae)+_0x574250),_0x50f571[_0x4faf8c(0x20b)][_0x4faf8c(0x1ef)]=_0x2d104a(0x389),_0x3e5db0[_0x4faf8c(0x20b)][_0x4faf8c(0x1ef)]=_0x2d104a(0x389),_0x2d68eb[_0x4faf8c(0x20b)][_0x4faf8c(0x1ef)]='');if(_0x574250[_0x4faf8c(0x34b)](_0x2d104a(0x4ca)))return ShowPanelError(this[_0x4faf8c(0x2ba)][_0x4faf8c(0x130)]+_0x4faf8c(0x1ae)+_0x574250);if(_0x574250[_0x2d104a(0x3c7)](_0x4faf8c(0x1bb))&&!_0x574250[_0x265c65(0x247)](_0x4faf8c(0x4d9)))return ShowPanelError(this[_0x4faf8c(0x2ba)][_0x2d104a(0x1df)]+_0x2d104a(0x3cc)+_0x574250);if(_0x574250[_0x4faf8c(0x34b)](_0x4faf8c(0x271)))return ShowPanelError(this[_0x4faf8c(0x2ba)][_0x4faf8c(0x130)]+_0x4faf8c(0x1ae)+_0x574250);if(_0x574250[_0x4c753d(0x31c)](_0x4faf8c(0x24c)))return ShowPanelError(this[_0x4faf8c(0x2ba)][_0x2d104a(0x3ab)]+_0x2d104a(0x3cc)+_0x574250);});let _0x2b6f9c=![];_0x42baed['on'](_0x43b09a(0x478),_0x4da80e=>{const _0x13d93a=_0x2b1017,_0x599e13=_0x43b09a,_0x31a373=_0x3e3a07,_0x588f35=_0xb39531;if(!_0x2b6f9c){new logger(_0x588f35(0x15a),_0x588f35(0x226));if(_0x4da80e[_0x588f35(0x34b)](_0x588f35(0x344))||_0x4da80e[_0x588f35(0x34b)](_0x588f35(0x33c))){_0xd7320b[_0x588f35(0x329)](),ipcRenderer[_0x588f35(0x3ae)](_0x588f35(0x4c5),{'title':this[_0x588f35(0x2ba)][_0x588f35(0x4e3)],'body':this[_0x588f35(0x2ba)][_0x31a373(0x409)]});if(_0x54e6a0[_0x588f35(0x39d)][_0x588f35(0x1ea)]===_0x588f35(0x1d1))ipcRenderer[_0x31a373(0x3a2)](_0x588f35(0x395));ipcRenderer[_0x588f35(0x3ae)](_0x588f35(0x40b)),_0x2b6f9c=!![];}}console[_0x588f35(0x203)](_0x4da80e);if(_0x4da80e[_0x31a373(0x3c7)](_0x31a373(0x1bb)))return ShowPanelError(this[_0x588f35(0x2ba)][_0x13d93a(0x90)]+_0x31a373(0x3cc)+_0x4da80e);if(_0x4da80e[_0x588f35(0x34b)](_0x13d93a(0x149)))return ShowPanelError(this[_0x31a373(0x507)][_0x599e13(0x2ad)]+_0x588f35(0x1ae)+_0x4da80e);if(_0x4da80e[_0x588f35(0x34b)](_0x588f35(0x178)))return ShowPanelError(this[_0x31a373(0x507)][_0x588f35(0x27a)]+_0x588f35(0x1ae)+_0x4da80e);if(_0x4da80e[_0x588f35(0x34b)](_0x588f35(0x135)))return ShowPanelError(this[_0x31a373(0x507)][_0x588f35(0x27a)]+_0x588f35(0x1ae)+_0x4da80e);_0x4da80e[_0x588f35(0x34b)](_0x588f35(0x403))&&(ShowPanelError(this[_0x31a373(0x507)][_0x31a373(0x339)]+_0x588f35(0x1ae)+_0x4da80e),_0x50f571[_0x588f35(0x20b)][_0x31a373(0x26c)]=_0x588f35(0x49b),_0x3e5db0[_0x588f35(0x20b)][_0x588f35(0x1ef)]=_0x588f35(0x49b),_0x2d68eb[_0x588f35(0x20b)][_0x588f35(0x1ef)]='');if(_0x4da80e[_0x588f35(0x34b)](_0x588f35(0x1aa)))return ShowPanelError(this[_0x599e13(0x2de)][_0x588f35(0x130)]+_0x588f35(0x1ae)+_0x4da80e);if(_0x4da80e[_0x31a373(0x3c7)](_0x588f35(0x1bb))&&!_0x4da80e[_0x588f35(0x34b)](_0x31a373(0x515)))return ShowPanelError(this[_0x588f35(0x2ba)][_0x588f35(0x33f)]+_0x588f35(0x1ae)+_0x4da80e);if(_0x4da80e[_0x588f35(0x34b)](_0x588f35(0x271)))return ShowPanelError(this[_0x588f35(0x2ba)][_0x588f35(0x130)]+_0x588f35(0x1ae)+_0x4da80e);if(_0x4da80e[_0x588f35(0x34b)](_0x588f35(0x24c)))return ShowPanelError(this[_0x31a373(0x507)][_0x588f35(0x130)]+_0x31a373(0x3cc)+_0x4da80e);});let _0x1bc720=![];_0x42baed['on'](_0xb39531(0x4b8),_0x19173a=>{const _0x471d17=_0x43b09a,_0x1ac154=_0x3e3a07,_0xe787c3=_0xb39531;!_0x1bc720&&(_0x1b4f1b[_0xe787c3(0x284)]+=_0xe787c3(0x3a0),_0x1bc720=!![]),(console[_0xe787c3(0x203)](_0xe787c3(0x4e2)),console[_0xe787c3(0x203)](_0x19173a));let _0x43db45=(_0x19173a[_0xe787c3(0x4db)]/_0x19173a[_0x471d17(0x179)]*0x64)[_0x1ac154(0x347)](0x2);_0x58c759[_0xe787c3(0x487)]=_0xe787c3(0x285)+_0x43db45+'%',_0x50f571[_0x1ac154(0x364)]=_0x43db45;}),_0x42baed['on'](_0xb39531(0x1ea),_0x1782d7=>{const _0x28c301=_0x2b1017,_0x2bbd10=_0x3e3a07,_0x370927=_0xb39531;_0xd7320b[_0x2bbd10(0x2af)]();if(_0x54e6a0[_0x2bbd10(0x238)][_0x370927(0x1ea)]===_0x370927(0x1d1))ipcRenderer[_0x370927(0x3ae)](_0x370927(0x2de));ipcRenderer[_0x370927(0x3ae)](_0x370927(0x2e0),{'status':_0x370927(0x4ae),'details':this[_0x370927(0x2ba)][_0x2bbd10(0x2e2)],'username':_0x511aec[_0x28c301(0x39e)]});}),_0x42baed['on'](_0xb39531(0x3bc),_0x3261bb=>{const _0x5898dd=_0x3e3a07,_0x22f027=_0xb39531;console[_0x22f027(0x203)](_0x3261bb),_0x3261bb[_0x22f027(0x223)]==_0x22f027(0x4db)&&(_0x3261bb[_0x22f027(0x4db)]==_0x5898dd(0x2b1)&&(_0x58c759[_0x22f027(0x487)]=_0x22f027(0x285)+_0x3261bb[_0x22f027(0x4b8)]+'%',_0x50f571[_0x22f027(0x284)]=_0x3261bb[_0x22f027(0x4b8)]));});}catch(_0x677e02){console[_0xb39531(0x3fd)](_0xb39531(0x200)),console[_0xb39531(0x3fd)](_0x677e02);}}async function _0x4ebdf7(_0x3dad88,_0x172a0e,_0x13af89,_0x3af99a){const _0x13cf16=_0x228a08,_0x50f4f4=_0x54536d,_0x1bc837=_0x123fcd,_0x572f57=_0x5c81fa,_0x174f03=require(_0x572f57(0x1df)),_0x3671cf=require('fs'),_0xfaf0d0=require(_0x572f57(0x2ef)),_0xadd8e9=_0xfaf0d0[_0x50f4f4(0x1be)](_0x3671cf[_0x572f57(0x2a3)]);let _0x4990af=_0x5e4c78[_0x572f57(0x284)];_0x4990af=_0x4990af[_0x50f4f4(0x169)](_0x572f57(0x19c),'');let _0x24f44b='',_0xe43805='';for(let _0x5f3b25=0x0;_0x5f3b25<_0x3fa2b5[_0x572f57(0x232)];_0x5f3b25++){_0x3fa2b5[_0x5f3b25][_0x572f57(0x37e)]==_0x4990af&&(_0x24f44b=_0x3fa2b5[_0x5f3b25][_0x572f57(0x283)],_0xe43805=_0x3fa2b5[_0x5f3b25][_0x572f57(0x37e)]);}_0x1713ae[_0x572f57(0x329)]();let _0x1ad934=document[_0x572f57(0x134)](_0x50f4f4(0x3be));_0x1ad934[_0x572f57(0x1c5)][_0x572f57(0x179)](_0x572f57(0x214)),_0x1ad934[_0x572f57(0x1c5)][_0x572f57(0x179)](_0x572f57(0x219));let _0x480869=document[_0x572f57(0x134)](_0x572f57(0x291));_0x480869[_0x572f57(0x1c5)][_0x1bc837(0x536)](_0x572f57(0x218));let _0x4373c7=document[_0x572f57(0x134)](_0x572f57(0x291));_0x4373c7[_0x572f57(0x1c5)][_0x572f57(0x179)](_0x572f57(0x17d));let _0x4837f2=document[_0x572f57(0x134)](_0x572f57(0x392));_0x4837f2[_0x572f57(0x1c5)][_0x572f57(0x179)](_0x572f57(0x4f0));let _0x4ebea2=document[_0x572f57(0x134)]('p');_0x4ebea2[_0x1bc837(0x2f8)][_0x572f57(0x179)](_0x1bc837(0x3f6)),_0x4ebea2[_0x572f57(0x3f5)]=this[_0x572f57(0x2ba)][_0x572f57(0x1cb)]+_0x572f57(0x2e3),_0x4837f2[_0x572f57(0x30d)](_0x4ebea2);let _0x3f069a=document[_0x13cf16(0x186)](_0x572f57(0x318));_0x3f069a[_0x572f57(0x1c5)][_0x1bc837(0x536)](_0x572f57(0x1b2));let _0x5ce9ac=document[_0x572f57(0x134)](_0x572f57(0x291));_0x5ce9ac[_0x572f57(0x1c5)][_0x572f57(0x179)](_0x572f57(0x339));let _0x38ef4a=document[_0x50f4f4(0x201)](_0x572f57(0x291));_0x38ef4a[_0x572f57(0x1c5)][_0x572f57(0x179)](_0x572f57(0x1d0));let _0x7dd33f=document[_0x1bc837(0x3c5)](_0x572f57(0x291));_0x7dd33f[_0x572f57(0x1c5)][_0x572f57(0x179)](_0x572f57(0x4e1));let _0x5828fe=document[_0x572f57(0x134)](_0x572f57(0x4c8));_0x5828fe[_0x572f57(0x20b)][_0x572f57(0x44a)]=_0x572f57(0x2f3),_0x5828fe[_0x572f57(0x3f5)]=this[_0x1bc837(0x507)][_0x572f57(0x356)];const _0x16992c=document[_0x572f57(0x134)](_0x572f57(0x4b8));_0x16992c[_0x572f57(0x1f6)]=_0x572f57(0x1b6),_0x16992c[_0x572f57(0x35f)](_0x572f57(0x347),_0x572f57(0x248)),_0x16992c[_0x50f4f4(0x14d)][_0x572f57(0x2a0)]=_0x572f57(0x2cf);let _0x435765=document[_0x572f57(0x134)](_0x572f57(0x4c8));_0x435765[_0x572f57(0x20b)][_0x572f57(0x44a)]=_0x1bc837(0x251),_0x435765[_0x1bc837(0x34c)]=this[_0x572f57(0x2ba)][_0x50f4f4(0x185)];let _0x4914c1=document[_0x572f57(0x134)](_0x572f57(0x472));_0x4914c1[_0x1bc837(0x2f8)][_0x1bc837(0x536)](_0x572f57(0x472)),_0x4914c1[_0x50f4f4(0x135)][_0x572f57(0x179)](_0x1bc837(0x530)),_0x4914c1[_0x1bc837(0x2e0)]=this[_0x572f57(0x2ba)][_0x572f57(0x4a2)],_0x4914c1[_0x572f57(0x23a)]=!![],_0x4914c1[_0x572f57(0x20b)][_0x572f57(0x2fc)]=_0x572f57(0x3af),_0x7dd33f[_0x572f57(0x30d)](_0x5828fe),_0x7dd33f[_0x572f57(0x30d)](document['createElement']('br')),_0x7dd33f[_0x1bc837(0x21c)](_0x16992c),_0x7dd33f[_0x572f57(0x30d)](document[_0x572f57(0x134)]('br')),_0x7dd33f[_0x572f57(0x30d)](_0x435765),_0x7dd33f[_0x572f57(0x30d)](_0x4914c1),_0x38ef4a[_0x572f57(0x30d)](_0x7dd33f);let _0xaad7b0=document[_0x572f57(0x134)](_0x572f57(0x291));_0xaad7b0[_0x13cf16(0x39c)][_0x50f4f4(0x346)](_0x572f57(0x3d2));let _0xfc0c7=document[_0x572f57(0x134)](_0x1bc837(0x433));_0xfc0c7[_0x572f57(0x1c5)][_0x1bc837(0x536)](_0x572f57(0x2c7));let _0x28a198=document[_0x572f57(0x134)]('p');_0x28a198[_0x1bc837(0x313)][_0x572f57(0x44a)]=_0x572f57(0x474),_0x28a198[_0x1bc837(0x365)]=this[_0x1bc837(0x507)][_0x572f57(0x401)],_0xfc0c7[_0x572f57(0x30d)](_0x28a198),_0xaad7b0[_0x572f57(0x30d)](_0xfc0c7),_0x38ef4a[_0x572f57(0x30d)](_0x7dd33f),_0x5ce9ac[_0x572f57(0x30d)](_0x38ef4a),_0x3f069a[_0x572f57(0x30d)](_0x5ce9ac);let _0x5f16b2=document[_0x572f57(0x134)](_0x572f57(0x440));_0x5f16b2[_0x572f57(0x1c5)][_0x50f4f4(0x346)](_0x572f57(0x191));let _0x5716b6=document[_0x572f57(0x134)](_0x572f57(0x17e));_0x5716b6[_0x572f57(0x1c5)][_0x572f57(0x179)](_0x572f57(0x17e)),_0x5716b6[_0x572f57(0x1c5)][_0x572f57(0x179)](_0x572f57(0x1dc)),_0x5716b6['id']=_0x572f57(0x1af),_0x5716b6[_0x572f57(0x3f5)]=this[_0x572f57(0x2ba)][_0x572f57(0x2cc)],_0x5f16b2[_0x50f4f4(0x3ab)](_0x5716b6),_0x4373c7[_0x572f57(0x30d)](_0x4837f2),_0x4373c7[_0x572f57(0x30d)](_0x3f069a),_0x4373c7[_0x572f57(0x30d)](_0x5f16b2),_0x1ad934[_0x572f57(0x30d)](_0x480869),_0x1ad934[_0x572f57(0x30d)](_0x4373c7),document[_0x572f57(0x4b4)][_0x572f57(0x30d)](_0x1ad934),ipcRenderer[_0x1bc837(0x3a2)](_0x50f4f4(0x13f));const _0x53588b=_0x572f57(0x250)+_0x24f44b+'/'+_0x24f44b+_0x572f57(0x358),_0x355132=_0x572f57(0x250)+_0x24f44b+'/'+_0x24f44b+_0x572f57(0x13e);async function _0x584b69(){const _0x4b0dd4=_0x50f4f4,_0x251ffd=_0x1bc837,_0xb82387=_0x572f57;try{await _0xadd8e9(dataDirectory+_0xb82387(0x473)+_0x24f44b,{'recursive':!![]});const _0x1ffc42=dataDirectory+_0xb82387(0x473)+_0x24f44b+'/'+_0x24f44b+_0xb82387(0x358),_0x3bfe6d=_0x3671cf[_0xb82387(0x457)](_0x1ffc42),_0x453c79=await _0x2a712b(_0x53588b,_0x3bfe6d);console[_0xb82387(0x203)](_0x4b0dd4(0x23e)+_0x453c79[_0xb82387(0x491)]);const _0x4dbb1f=dataDirectory+_0xb82387(0x473)+_0x24f44b+'/'+_0x24f44b+_0x251ffd(0x3d9),_0x48ddac=_0x3671cf[_0xb82387(0x457)](_0x4dbb1f),_0x51343b=await _0x2a712b(_0x355132,_0x48ddac);console[_0x251ffd(0x249)](_0xb82387(0x469)+_0x51343b[_0x251ffd(0x3f1)]);}catch(_0x3f555c){console[_0xb82387(0x3fd)](_0xb82387(0x1bd),_0x3f555c);}}function _0x2a712b(_0xe343a9,_0x4e19ed){return new Promise((_0x18e66e,_0x101d83)=>{const _0x5c9c01=a167_0x2ff2;_0x174f03[_0x5c9c01(0x188)](_0xe343a9,_0x43b6da=>{const _0x10ab60=_0x5c9c01;_0x43b6da[_0x10ab60(0x491)]===0xc8?(_0x43b6da[_0x10ab60(0x2d1)](_0x4e19ed),_0x4e19ed['on'](_0x10ab60(0x433),()=>{const _0x416e06=_0x10ab60;_0x4e19ed[_0x416e06(0x1ea)](),_0x18e66e(_0x43b6da);})):(_0x4914c1[_0x10ab60(0x284)]+=_0x10ab60(0x181)+_0xe343a9+_0x10ab60(0x27d)+_0x43b6da[_0x10ab60(0x491)]+'\x0a',_0x101d83(_0x10ab60(0x408)+_0xe343a9+_0x10ab60(0x27d)+_0x43b6da[_0x10ab60(0x491)]));})['on'](_0x5c9c01(0x3fd),_0xd9e862=>{const _0x444101=a167_0x3167,_0x4719d8=_0x5c9c01;_0x4914c1[_0x4719d8(0x284)]+=_0x444101(0x50f)+_0xd9e862[_0x4719d8(0x3ef)]+'\x0a',_0x101d83(_0x4719d8(0x438)+_0xd9e862[_0x4719d8(0x3ef)]);});});}function _0x1b53c3(){const _0x53e470=_0x1bc837,_0x139473=_0x572f57;_0x4914c1[_0x139473(0x294)]=_0x4914c1[_0x53e470(0x2d0)];}async function _0x46f4ae(){const _0x5efcac=_0x13cf16,_0x523161=_0x50f4f4,_0x35a9c8=_0x1bc837,_0x13d4f5=_0x572f57;!_0x3671cf[_0x13d4f5(0x34e)](dataDirectory+_0x13d4f5(0x2a5))?(_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x305),_0x1b53c3(),_0x3671cf[_0x13d4f5(0x204)](dataDirectory+_0x35a9c8(0x355),{'recursive':!![]}),_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x34f),_0x16992c[_0x35a9c8(0x364)]=0xa,_0x1b53c3()):(_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x1fb),_0x16992c[_0x35a9c8(0x364)]=0xa,_0x1b53c3()),!_0x3671cf[_0x35a9c8(0x4b1)](dataDirectory+_0x13d4f5(0x156))?(_0x4914c1[_0x523161(0x29c)]+=_0x13d4f5(0x1f2),_0x1b53c3(),_0x3671cf[_0x13d4f5(0x204)](dataDirectory+_0x13d4f5(0x156),{'recursive':!![]}),_0x4914c1[_0x523161(0x29c)]+=_0x35a9c8(0x37c),_0x16992c[_0x35a9c8(0x364)]=0x14,_0x1b53c3()):(_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x371),_0x16992c[_0x13d4f5(0x284)]=0x14,_0x1b53c3()),!_0x3671cf[_0x523161(0x3b7)](dataDirectory+_0x35a9c8(0x2d7))?(_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x2a1),_0x1b53c3(),_0x3671cf[_0x13d4f5(0x204)](dataDirectory+_0x13d4f5(0x2d9),{'recursive':!![]}),_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x2ae),_0x16992c[_0x523161(0x29c)]=0x1e,_0x1b53c3()):(_0x4914c1[_0x523161(0x29c)]+=_0x13d4f5(0x190),_0x16992c[_0x13d4f5(0x284)]=0x1e,_0x1b53c3()),!_0x3671cf[_0x13d4f5(0x34e)](dataDirectory+_0x35a9c8(0x35c))?(_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x4f3),_0x1b53c3(),_0x3671cf[_0x35a9c8(0x245)](dataDirectory+_0x35a9c8(0x35c),{'recursive':!![]}),_0x4914c1[_0x35a9c8(0x364)]+=_0x13d4f5(0x4a7),_0x16992c[_0x13d4f5(0x284)]=0x28,_0x1b53c3()):(_0x4914c1[_0x13d4f5(0x284)]+=_0x35a9c8(0x4a9),_0x16992c[_0x13d4f5(0x284)]=0x28,_0x1b53c3()),!_0x3671cf[_0x13d4f5(0x34e)](dataDirectory+_0x13d4f5(0x14b))?(_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x3b1),_0x1b53c3(),_0x3671cf[_0x35a9c8(0x245)](dataDirectory+_0x13d4f5(0x14b),{'recursive':!![]}),_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x4b5),_0x16992c[_0x13d4f5(0x284)]=0x32,_0x1b53c3()):(_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x465),_0x16992c[_0x13d4f5(0x284)]=0x32,_0x1b53c3()),!_0x3671cf[_0x13d4f5(0x34e)](dataDirectory+_0x13d4f5(0x234))?(_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x427),_0x1b53c3(),_0x3671cf[_0x35a9c8(0x245)](dataDirectory+_0x13d4f5(0x234),{'recursive':!![]}),_0x4914c1[_0x35a9c8(0x364)]+=_0x35a9c8(0x352),_0x16992c[_0x35a9c8(0x364)]=0x3c,_0x1b53c3()):(_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x140),_0x16992c[_0x35a9c8(0x364)]=0x3c,_0x1b53c3()),!_0x3671cf[_0x13d4f5(0x34e)](dataDirectory+_0x13d4f5(0x3b7))?(_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x1ed),_0x1b53c3(),_0x3671cf[_0x13d4f5(0x204)](dataDirectory+_0x13d4f5(0x3b7),{'recursive':!![]}),_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x4a1),_0x16992c[_0x13d4f5(0x284)]=0x46,_0x1b53c3()):(_0x4914c1[_0x5efcac(0x245)]+=_0x35a9c8(0x545),_0x16992c[_0x523161(0x29c)]=0x46,_0x1b53c3()),!_0x3671cf[_0x13d4f5(0x34e)](dataDirectory+_0x13d4f5(0x27f)+_0x24f44b[_0x523161(0x169)](_0x13d4f5(0x343),''))?(_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x467)+_0x24f44b[_0x13d4f5(0x148)](_0x13d4f5(0x343),'')+_0x13d4f5(0x310),_0x1b53c3(),_0x3671cf[_0x13d4f5(0x204)](dataDirectory+_0x13d4f5(0x27f)+_0x24f44b[_0x13d4f5(0x148)](_0x13d4f5(0x343),''),{'recursive':!![]}),_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x2d3)+_0x24f44b[_0x13d4f5(0x148)](_0x13d4f5(0x343),'')+_0x35a9c8(0x3d4),_0x16992c[_0x35a9c8(0x364)]=0x50,_0x1b53c3()):(_0x4914c1[_0x13d4f5(0x284)]+=_0x35a9c8(0x27f)+_0x24f44b[_0x35a9c8(0x396)](_0x13d4f5(0x343),'')+_0x13d4f5(0x21e),_0x16992c[_0x35a9c8(0x364)]=0x50,_0x1b53c3());const _0x304560=_0x13d4f5(0x2ea)+_0x24f44b[_0x13d4f5(0x148)](_0x13d4f5(0x343),'')+_0x13d4f5(0x4b3)+_0x24f44b['replace'](_0x13d4f5(0x343),'')+_0x35a9c8(0x4fc);console[_0x35a9c8(0x249)](_0x304560),_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x4fa),_0x1b53c3();const _0x337ffc=_0x3671cf[_0x13d4f5(0x457)](dataDirectory+_0x13d4f5(0x27f)+_0x24f44b[_0x13d4f5(0x148)](_0x13d4f5(0x343),'')+_0x35a9c8(0x4f9)+_0x24f44b[_0x13d4f5(0x148)](_0x13d4f5(0x343),'')+_0x35a9c8(0x4fc)),_0x3a98e1=await _0x2a712b(_0x304560,_0x337ffc);_0x4914c1[_0x35a9c8(0x364)]+=_0x13d4f5(0x398)+_0x3a98e1[_0x13d4f5(0x491)]+'\x0a',_0x1b53c3(),console[_0x13d4f5(0x203)](_0x13d4f5(0x398)+_0x3a98e1[_0x35a9c8(0x3f1)]);const _0x39973a=_0x13d4f5(0x321),_0x5e6b58=_0x13d4f5(0x2e2),_0x362be8=_0x13d4f5(0x47b),_0x9455aa=_0x3671cf[_0x13d4f5(0x457)](dataDirectory+_0x13d4f5(0x2a9));_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x297),_0x1b53c3();const _0x7965cd=_0x3671cf[_0x13d4f5(0x457)](dataDirectory+_0x13d4f5(0x486));_0x4914c1[_0x523161(0x29c)]+=_0x13d4f5(0x484),_0x1b53c3();const _0x4d4572=_0x3671cf[_0x13d4f5(0x457)](dataDirectory+_0x13d4f5(0x164));_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x13b),_0x1b53c3();const _0x5bb706=await _0x2a712b(_0x39973a,_0x9455aa);_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x1b3)+_0x5bb706[_0x35a9c8(0x3f1)]+'\x0a',_0x16992c[_0x13d4f5(0x284)]=0x55,_0x1b53c3();const _0x5935fa=await _0x2a712b(_0x5e6b58,_0x7965cd);_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x1e7)+_0x5935fa[_0x13d4f5(0x491)]+'\x0a',_0x16992c[_0x35a9c8(0x364)]=0x5a,_0x1b53c3();const _0x225f71=await _0x2a712b(_0x362be8,_0x4d4572);_0x4914c1[_0x13d4f5(0x284)]+=_0x13d4f5(0x229)+_0x225f71[_0x35a9c8(0x3f1)]+'\x0a',_0x16992c[_0x35a9c8(0x364)]=0x5f,_0x1b53c3(),console[_0x13d4f5(0x203)](_0x523161(0x46f)+_0x5bb706[_0x13d4f5(0x491)]),console[_0x13d4f5(0x203)](_0x35a9c8(0x220)+_0x5935fa[_0x523161(0x11c)]),console[_0x13d4f5(0x203)](_0x5efcac(0xac)+_0x225f71[_0x13d4f5(0x491)]);}async function _0x233c0b(){const _0x5b6ed5=_0x1bc837,_0x1ce58a=_0x572f57;if(!_0x3671cf[_0x1ce58a(0x34e)](dataDirectory+_0x1ce58a(0x330))){_0x1ad934[_0x1ce58a(0x329)]();let _0x176dff=Swal[_0x5b6ed5(0x2b2)]({'toast':!![],'position':_0x5b6ed5(0x51b),'showConfirmButton':![],'timer':0x2710,'timerProgressBar':!![],'didOpen':_0x392a25=>{const _0x40eb12=a167_0x2364,_0x9391f6=_0x5b6ed5,_0xc20cad=_0x1ce58a;_0x392a25[_0xc20cad(0x1c6)](_0x40eb12(0x26d),Swal[_0x9391f6(0x454)]),_0x392a25[_0xc20cad(0x1c6)](_0xc20cad(0x436),Swal[_0x9391f6(0x4b4)]);}});_0x176dff[_0x1ce58a(0x147)]({'icon':_0x5b6ed5(0x413),'title':_0x1ce58a(0x1a6),'text':_0x1ce58a(0x3df)});return;}}const _0x5a3e2a=new Client();try{_0x5828fe[_0x1bc837(0x365)]=_0x572f57(0x3fa),_0x435765[_0x572f57(0x487)]=_0x572f57(0x3fa),await _0x233c0b(),await _0x584b69(),await _0x46f4ae(),_0x5828fe[_0x572f57(0x487)]=_0x1bc837(0x252),_0x435765[_0x572f57(0x487)]=_0x572f57(0x23f),_0x4914c1[_0x572f57(0x487)]+=_0x572f57(0x1db),_0x16992c[_0x572f57(0x284)]=0x64;let _0x47b6d1=localStorage[_0x572f57(0x270)](_0x572f57(0x36d));!_0x47b6d1||_0x47b6d1==null||_0x47b6d1==undefined?_0x5a3e2a[_0x572f57(0x1f8)]({'authorization':_0x3dad88,'detached':![],'timeout':0x2710,'root':dataDirectory+_0x572f57(0x4ea),'path':dataDirectory+_0x572f57(0x4ea),'overrides':{'detached':![],'screen':screen},'downloadFileMultiple':0x14,'version':{'custom':_0x24f44b,'number':_0xe43805,'type':_0x1bc837(0x4d6)},'verify':![],'ignored':[_0x572f57(0x2b2)],'memory':{'min':_0x172a0e[_0x1bc837(0x3db)]*0x400+'M','max':_0x172a0e[_0x572f57(0x317)]*0x400+'M'}}):(console[_0x50f4f4(0x185)](_0x572f57(0x143)),_0x5a3e2a[_0x572f57(0x1f8)]({'authorization':_0x3dad88,'detached':![],'timeout':0x2710,'root':dataDirectory+_0x572f57(0x4ea),'path':dataDirectory+_0x572f57(0x4ea),'overrides':{'detached':![],'screen':screen},'downloadFileMultiple':0x14,'version':{'custom':_0x24f44b,'number':_0xe43805,'type':_0x572f57(0x32d)},'java':!![],'javaPath':_0x47b6d1,'verify':![],'ignored':[_0x572f57(0x2b2)],'memory':{'min':_0x172a0e[_0x572f57(0x445)]*0x400+'M','max':_0x172a0e[_0x572f57(0x317)]*0x400+'M'}})),_0x5a3e2a['on'](_0x572f57(0x378),_0x47147c=>{const _0x5a6a40=_0x13cf16,_0x309315=_0x50f4f4,_0x1266ad=_0x1bc837,_0x2a47d8=_0x572f57;console[_0x2a47d8(0x203)](_0x47147c),_0x47147c[_0x2a47d8(0x34b)](_0x2a47d8(0x43a))&&(_0x5828fe[_0x309315(0x2f6)]=_0x1266ad(0x4a7),_0x435765[_0x2a47d8(0x487)]=_0x2a47d8(0x3fa),_0x16992c[_0x2a47d8(0x284)]=0x0);if(_0x47147c[_0x2a47d8(0x34b)](_0x2a47d8(0x493)))return ShowPanelError(this[_0x1266ad(0x507)][_0x2a47d8(0x33f)]+_0x2a47d8(0x1ae)+_0x47147c);if(_0x47147c[_0x2a47d8(0x34b)](_0x2a47d8(0x4e8)))return ShowPanelError(this[_0x2a47d8(0x2ba)]['error_detected_two']+_0x2a47d8(0x1ae)+_0x47147c);if(_0x47147c[_0x2a47d8(0x34b)](_0x2a47d8(0x178)))return ShowPanelError(this[_0x309315(0x2de)][_0x2a47d8(0x27a)]+_0x2a47d8(0x1ae)+_0x47147c);if(_0x47147c[_0x2a47d8(0x34b)](_0x2a47d8(0x135)))return ShowPanelError(this[_0x2a47d8(0x2ba)][_0x2a47d8(0x27a)]+_0x1266ad(0x3cc)+_0x47147c);_0x47147c[_0x2a47d8(0x34b)](_0x2a47d8(0x403))&&(ShowPanelError(this[_0x2a47d8(0x2ba)][_0x5a6a40(0x366)]+_0x309315(0x41c)+_0x47147c),_0x16992c[_0x1266ad(0x313)][_0x2a47d8(0x1ef)]=_0x2a47d8(0x49b),_0x3e5db0[_0x2a47d8(0x20b)][_0x1266ad(0x26c)]=_0x2a47d8(0x49b),_0x2d68eb[_0x2a47d8(0x20b)][_0x2a47d8(0x1ef)]='');if(_0x47147c[_0x2a47d8(0x34b)](_0x2a47d8(0x1aa)))return ShowPanelError(this[_0x2a47d8(0x2ba)][_0x2a47d8(0x130)]+_0x2a47d8(0x1ae)+_0x47147c);if(_0x47147c[_0x2a47d8(0x34b)](_0x2a47d8(0x1bb))&&!_0x47147c[_0x2a47d8(0x34b)](_0x1266ad(0x515)))return ShowPanelError(this[_0x2a47d8(0x2ba)][_0x2a47d8(0x33f)]+_0x2a47d8(0x1ae)+_0x47147c);if(_0x47147c[_0x2a47d8(0x34b)](_0x2a47d8(0x271)))return ShowPanelError(this[_0x2a47d8(0x2ba)][_0x2a47d8(0x130)]+_0x1266ad(0x3cc)+_0x47147c);if(_0x47147c[_0x2a47d8(0x34b)](_0x2a47d8(0x24c)))return ShowPanelError(this[_0x2a47d8(0x2ba)][_0x2a47d8(0x130)]+_0x1266ad(0x3cc)+_0x47147c);});let _0x5f36fa=![];_0x5a3e2a['on'](_0x572f57(0x31d),_0xe85e55=>{const _0x13c0ed=_0x50f4f4,_0x31c79f=_0x1bc837,_0x5a22a4=_0x572f57;if(!_0x5f36fa){new logger(_0x5a22a4(0x15a),_0x13c0ed(0x293));if(_0xe85e55[_0x5a22a4(0x34b)](_0x31c79f(0x45a))||_0xe85e55[_0x5a22a4(0x34b)](_0x5a22a4(0x33c))){_0x1ad934[_0x13c0ed(0x442)](),ipcRenderer[_0x5a22a4(0x3ae)](_0x5a22a4(0x4c5),{'title':this[_0x5a22a4(0x2ba)][_0x31c79f(0x316)],'body':this[_0x5a22a4(0x2ba)][_0x13c0ed(0x290)]});if(_0x3af99a[_0x5a22a4(0x39d)][_0x5a22a4(0x1ea)]===_0x5a22a4(0x1d1))ipcRenderer[_0x5a22a4(0x3ae)](_0x5a22a4(0x395));ipcRenderer[_0x13c0ed(0x2f7)](_0x5a22a4(0x40b)),_0x5f36fa=!![];}}console[_0x5a22a4(0x203)](_0xe85e55);if(_0xe85e55[_0x5a22a4(0x34b)](_0x5a22a4(0x493)))return ShowPanelError(this[_0x5a22a4(0x2ba)][_0x5a22a4(0x33f)]+_0x5a22a4(0x1ae)+_0xe85e55);if(_0xe85e55[_0x5a22a4(0x34b)](_0x5a22a4(0x4e8)))return ShowPanelError(this[_0x5a22a4(0x2ba)][_0x5a22a4(0x177)]+_0x5a22a4(0x1ae)+_0xe85e55);if(_0xe85e55[_0x31c79f(0x3c7)](_0x5a22a4(0x178)))return ShowPanelError(this[_0x5a22a4(0x2ba)][_0x5a22a4(0x27a)]+_0x5a22a4(0x1ae)+_0xe85e55);if(_0xe85e55[_0x5a22a4(0x34b)](_0x31c79f(0x2c7)))return ShowPanelError(this[_0x5a22a4(0x2ba)][_0x5a22a4(0x27a)]+_0x5a22a4(0x1ae)+_0xe85e55);_0xe85e55[_0x5a22a4(0x34b)](_0x31c79f(0x538))&&(ShowPanelError(this[_0x5a22a4(0x2ba)][_0x5a22a4(0x299)]+_0x5a22a4(0x1ae)+_0xe85e55),_0x16992c[_0x5a22a4(0x20b)][_0x5a22a4(0x1ef)]=_0x5a22a4(0x49b),_0x3e5db0[_0x5a22a4(0x20b)][_0x5a22a4(0x1ef)]=_0x5a22a4(0x49b),_0x2d68eb[_0x5a22a4(0x20b)][_0x5a22a4(0x1ef)]='');if(_0xe85e55[_0x5a22a4(0x34b)](_0x31c79f(0x4ca)))return ShowPanelError(this[_0x5a22a4(0x2ba)][_0x5a22a4(0x130)]+_0x31c79f(0x3cc)+_0xe85e55);if(_0xe85e55[_0x5a22a4(0x34b)](_0x31c79f(0x278))&&!_0xe85e55[_0x5a22a4(0x34b)](_0x5a22a4(0x4d9)))return ShowPanelError(this[_0x5a22a4(0x2ba)][_0x5a22a4(0x33f)]+_0x5a22a4(0x1ae)+_0xe85e55);if(_0xe85e55[_0x5a22a4(0x34b)](_0x13c0ed(0x2d7)))return ShowPanelError(this[_0x5a22a4(0x2ba)][_0x31c79f(0x3ab)]+_0x5a22a4(0x1ae)+_0xe85e55);if(_0xe85e55[_0x5a22a4(0x34b)](_0x5a22a4(0x24c)))return ShowPanelError(this[_0x5a22a4(0x2ba)][_0x31c79f(0x3ab)]+_0x5a22a4(0x1ae)+_0xe85e55);});let _0x3e198c=![];_0x5a3e2a['on'](_0x572f57(0x4b8),_0x29372f=>{const _0x1d652c=_0x50f4f4,_0xce9536=_0x1bc837,_0x198afc=_0x572f57;!_0x3e198c&&(_0x4914c1[_0x198afc(0x284)]+=_0x1d652c(0x2b2),_0x3e198c=!![]),(console[_0x198afc(0x203)](_0x198afc(0x4e2)),console[_0x198afc(0x203)](_0x29372f));let _0x49fb3e=(_0x29372f[_0xce9536(0x4e3)]/_0x29372f[_0x198afc(0x322)]*0x64)[_0x198afc(0x18d)](0x2);_0x5828fe[_0xce9536(0x365)]=_0x198afc(0x285)+_0x49fb3e+'%',_0x16992c[_0x198afc(0x284)]=_0x49fb3e;}),_0x5a3e2a['on'](_0x572f57(0x1ea),_0x3f84d4=>{const _0x32d5ad=_0x50f4f4,_0x211661=_0x1bc837,_0x2b5bc5=_0x572f57;_0x1ad934[_0x2b5bc5(0x329)]();if(_0x3af99a[_0x2b5bc5(0x39d)][_0x2b5bc5(0x1ea)]===_0x211661(0x36b))ipcRenderer[_0x2b5bc5(0x3ae)](_0x2b5bc5(0x2de));ipcRenderer[_0x2b5bc5(0x3ae)](_0x2b5bc5(0x2e0),{'status':_0x2b5bc5(0x4ae),'details':this[_0x32d5ad(0x2de)][_0x2b5bc5(0x4da)],'username':_0x3dad88[_0x2b5bc5(0x25f)]});}),_0x5a3e2a['on'](_0x572f57(0x3bc),_0x206d92=>{const _0x390ffa=_0x50f4f4,_0x8b4d60=_0x1bc837,_0x2424d5=_0x572f57;console[_0x2424d5(0x203)](_0x206d92),_0x206d92[_0x2424d5(0x223)]==_0x2424d5(0x4db)&&(_0x206d92[_0x2424d5(0x4db)]==_0x390ffa(0x2ef)&&(_0x5828fe[_0x8b4d60(0x365)]=_0x2424d5(0x285)+_0x206d92[_0x2424d5(0x4b8)]+'%',_0x16992c[_0x2424d5(0x284)]=_0x206d92[_0x2424d5(0x4b8)]));});}catch(_0x343d6a){console[_0x1bc837(0x413)](_0x50f4f4(0x48e)),console[_0x572f57(0x3fd)](_0x343d6a);}}console[_0x123fcd(0x249)](_0x3c0dba),console[_0x5c81fa(0x203)](_0x58fb45),_0x1713ae[_0x5c81fa(0x329)]();let _0x54222e=document[_0x5c81fa(0x134)](_0x5c81fa(0x291));_0x54222e[_0x123fcd(0x2f8)][_0x5c81fa(0x179)](_0x54536d(0x258)),_0x54222e[_0x5c81fa(0x1c5)][_0x123fcd(0x536)](_0x5c81fa(0x219));let _0x24294e=document[_0x123fcd(0x3c5)](_0x5c81fa(0x291));_0x24294e[_0x123fcd(0x2f8)][_0x5c81fa(0x179)](_0x5c81fa(0x218));let _0x3d3e51=document[_0x5c81fa(0x134)](_0x5c81fa(0x291));_0x3d3e51[_0x123fcd(0x2f8)][_0x123fcd(0x536)](_0x5c81fa(0x17d));let _0xc656d8=document[_0x5c81fa(0x134)](_0x5c81fa(0x392));_0xc656d8[_0x5c81fa(0x1c5)][_0x5c81fa(0x179)](_0x5c81fa(0x4f0));let _0x2e58e5=document[_0x5c81fa(0x134)]('p');_0x2e58e5[_0x5c81fa(0x1c5)][_0x5c81fa(0x179)](_0x5c81fa(0x37b)),_0x2e58e5[_0x123fcd(0x34c)]=this[_0x5c81fa(0x2ba)][_0x5c81fa(0x1cb)]+_0x5c81fa(0x2e3),_0xc656d8[_0x123fcd(0x21c)](_0x2e58e5);let _0x5de418=document[_0x5c81fa(0x134)](_0x5c81fa(0x318));_0x5de418[_0x5c81fa(0x1c5)][_0x5c81fa(0x179)](_0x5c81fa(0x1b2));let _0x5b59f9=document[_0x5c81fa(0x134)](_0x5c81fa(0x291));_0x5b59f9[_0x5c81fa(0x1c5)][_0x5c81fa(0x179)](_0x5c81fa(0x339));let _0x1b3bcf=document[_0x5c81fa(0x134)](_0x5c81fa(0x291));_0x1b3bcf[_0x5c81fa(0x1c5)][_0x123fcd(0x536)](_0x5c81fa(0x1d0));let _0x5b3f2f=document[_0x5c81fa(0x134)](_0x5c81fa(0x291));_0x5b3f2f[_0x5c81fa(0x1c5)][_0x5c81fa(0x179)](_0x5c81fa(0x4e1));let _0x1e8ca7=document[_0x123fcd(0x3c5)](_0x5c81fa(0x4c8));_0x1e8ca7[_0x5c81fa(0x20b)][_0x123fcd(0x4c0)]=_0x123fcd(0x251),_0x1e8ca7[_0x5c81fa(0x3f5)]=this[_0x5c81fa(0x2ba)][_0x5c81fa(0x356)];const _0x87599c=document[_0x5c81fa(0x134)](_0x5c81fa(0x4b8));_0x87599c[_0x5c81fa(0x1f6)]=_0x5c81fa(0x1b6),_0x87599c[_0x5c81fa(0x35f)](_0x5c81fa(0x347),_0x5c81fa(0x248)),_0x87599c[_0x123fcd(0x313)][_0x5c81fa(0x2a0)]=_0x5c81fa(0x2cf);let _0x190c67=document[_0x5c81fa(0x134)](_0x123fcd(0x51d));_0x190c67[_0x5c81fa(0x20b)][_0x5c81fa(0x44a)]=_0x123fcd(0x251),_0x190c67[_0x5c81fa(0x3f5)]=this[_0x5c81fa(0x2ba)][_0x123fcd(0x249)];let _0x524041=document[_0x123fcd(0x3c5)](_0x5c81fa(0x472));_0x524041[_0x5c81fa(0x1c5)][_0x123fcd(0x536)](_0x5c81fa(0x472)),_0x524041[_0x123fcd(0x2f8)][_0x5c81fa(0x179)](_0x5c81fa(0x2a4)),_0x524041[_0x5c81fa(0x332)]=this[_0x5c81fa(0x2ba)][_0x123fcd(0x2ea)],_0x524041[_0x123fcd(0x2a3)]=!![],_0x524041[_0x5c81fa(0x20b)][_0x5c81fa(0x2fc)]=_0x123fcd(0x479),_0x5b3f2f[_0x5c81fa(0x30d)](_0x1e8ca7),_0x5b3f2f[_0x5c81fa(0x30d)](document[_0x5c81fa(0x134)]('br')),_0x5b3f2f[_0x5c81fa(0x30d)](_0x87599c),_0x5b3f2f[_0x5c81fa(0x30d)](document[_0x5c81fa(0x134)]('br')),_0x5b3f2f[_0x5c81fa(0x30d)](_0x190c67),_0x5b3f2f[_0x5c81fa(0x30d)](_0x524041),_0x1b3bcf[_0x5c81fa(0x30d)](_0x5b3f2f);let _0xf441af=document[_0x5c81fa(0x134)](_0x228a08(0x178));_0xf441af[_0x5c81fa(0x1c5)][_0x5c81fa(0x179)](_0x123fcd(0x2b6));let _0x1a198c=document[_0x5c81fa(0x134)](_0x5c81fa(0x291));_0x1a198c[_0x5c81fa(0x1c5)][_0x5c81fa(0x179)](_0x123fcd(0x4bc));let _0x155b2d=document[_0x5c81fa(0x134)]('p');_0x155b2d[_0x5c81fa(0x20b)][_0x5c81fa(0x44a)]=_0x5c81fa(0x474),_0x155b2d[_0x5c81fa(0x487)]=this[_0x5c81fa(0x2ba)][_0x123fcd(0x416)],_0x1a198c[_0x228a08(0x344)](_0x155b2d),_0xf441af[_0x5c81fa(0x30d)](_0x1a198c),_0x1b3bcf[_0x5c81fa(0x30d)](_0x5b3f2f),_0x5b59f9[_0x5c81fa(0x30d)](_0x1b3bcf),_0x5de418[_0x5c81fa(0x30d)](_0x5b59f9);let _0x5a3218=document[_0x54536d(0x201)](_0x123fcd(0x221));_0x5a3218[_0x123fcd(0x2f8)][_0x5c81fa(0x179)](_0x5c81fa(0x191));let _0x24d61f=document[_0x5c81fa(0x134)](_0x5c81fa(0x17e));_0x24d61f[_0x5c81fa(0x1c5)][_0x5c81fa(0x179)](_0x5c81fa(0x17e)),_0x24d61f[_0x5c81fa(0x1c5)][_0x5c81fa(0x179)](_0x5c81fa(0x1dc)),_0x24d61f['id']=_0x5c81fa(0x1af),_0x24d61f[_0x5c81fa(0x3f5)]=this[_0x123fcd(0x507)][_0x5c81fa(0x2cc)],_0x5a3218[_0x123fcd(0x21c)](_0x24d61f),_0x3d3e51[_0x5c81fa(0x30d)](_0xc656d8),_0x3d3e51[_0x5c81fa(0x30d)](_0x5de418),_0x3d3e51[_0x5c81fa(0x30d)](_0x5a3218),_0x54222e[_0x5c81fa(0x30d)](_0x24294e),_0x54222e[_0x5c81fa(0x30d)](_0x3d3e51),document[_0x123fcd(0x3b9)][_0x5c81fa(0x30d)](_0x54222e);function _0x278877(){const _0x4e8c82=_0x5c81fa;_0x524041[_0x4e8c82(0x294)]=_0x524041[_0x4e8c82(0x444)];}_0x24d61f[_0x5c81fa(0x1c6)](_0x5c81fa(0x3e6),()=>{const _0xf44596=_0x5c81fa;this[_0xf44596(0x1a4)]();});let _0xc115fc=![],_0xdc7b23=![],_0x8de3f5=![],_0xf727c7=document[_0x123fcd(0x3d3)](_0x5c81fa(0x136)),_0x44c6a6=document[_0x5c81fa(0x2c5)](_0x5c81fa(0x354)),_0xf6820e=document[_0x5c81fa(0x2c5)](_0x5c81fa(0x2ce)),_0x50dd61=document[_0x5c81fa(0x2c5)](_0x5c81fa(0x462)),_0x2f332e=_0x3c0dba[_0x5c81fa(0x148)](_0x5c81fa(0x4ec),'')[_0x5c81fa(0x148)](_0x228a08(0x274),'')[_0x5c81fa(0x148)](_0x54536d(0x3a8),'')[_0x228a08(0x124)](_0x5c81fa(0x3c4),'');console[_0x5c81fa(0x203)](_0x5c81fa(0x24d)+_0x2f332e),console[_0x5c81fa(0x203)](_0x2f332e);if(_0x58fb45===_0x5c81fa(0x36c))_0x3c0dba=_0x3c0dba[_0x5c81fa(0x148)](_0x5c81fa(0x45d),''),_0xc115fc=!![],_0xdc7b23=![],_0x8de3f5=![],console[_0x5c81fa(0x203)](_0x5c81fa(0x34a));else{if(_0x58fb45===_0x5c81fa(0x4a8))_0x3c0dba=_0x3c0dba[_0x5c81fa(0x148)](_0x228a08(0x377),''),_0xdc7b23=!![],_0xc115fc=![],_0x8de3f5=![],console[_0x5c81fa(0x203)](_0x5c81fa(0x386));else _0x58fb45===_0x123fcd(0x377)&&(_0x3c0dba=_0x3c0dba[_0x5c81fa(0x148)](_0x5c81fa(0x3c4),''),_0x8de3f5=!![],_0xc115fc=![],_0xdc7b23=![],console[_0x5c81fa(0x203)](_0x54536d(0x278)));}let _0x245db6;if(_0xc115fc==!![])_0x245db6=_0x5c81fa(0x36c),_0x537b93=_0x5c81fa(0x36c);else{if(_0xdc7b23==!![])console[_0x5c81fa(0x203)](_0x5c81fa(0x39e)),_0x245db6=_0x5c81fa(0x4a8),_0x537b93=_0x123fcd(0x2fb);else _0x8de3f5==!![]?(_0x245db6=_0x5c81fa(0x405),_0x537b93=_0x5c81fa(0x405)):(_0x245db6=_0x123fcd(0x2f3),_0x537b93=_0x5c81fa(0x2f1));}let _0x1ba3ce,_0x3c896d;console[_0x123fcd(0x249)](_0x3c0dba);if(_0x2f332e===_0x5c81fa(0x3cc))_0x1ba3ce=_0x5c81fa(0x3cc),console[_0x5c81fa(0x203)](_0x123fcd(0x535)),console[_0x5c81fa(0x203)](_0x1ba3ce),_0x3c896d={'number':_0x1ba3ce,'custom':_0x2f332e,'type':_0x123fcd(0x4d6)};else{if(_0x3c0dba[_0x5c81fa(0x302)](_0x5c81fa(0x4ec))&&!_0x3c0dba[_0x5c81fa(0x34b)](_0x5c81fa(0x319))&&!_0x3c0dba[_0x5c81fa(0x34b)](_0x5c81fa(0x351)))_0x1ba3ce=JSON[_0x5c81fa(0x29f)](fs[_0x5c81fa(0x4c9)](dataDirectory+'/'+(process[_0x5c81fa(0x4d5)]==_0x123fcd(0x401)?this[_0x5c81fa(0x439)][_0x5c81fa(0x20c)]:'.'+this[_0x5c81fa(0x439)][_0x5c81fa(0x20c)])+_0x5c81fa(0x4e5)+_0x2f332e+'/'+_0x2f332e+_0x5c81fa(0x13e)))[_0x5c81fa(0x375)],console['log'](_0x123fcd(0x3bb)),console[_0x5c81fa(0x203)](_0x1ba3ce),_0x3c896d={'number':_0x1ba3ce,'custom':_0x2f332e,'type':_0x5c81fa(0x32d)};else{if(_0x3c0dba[_0x54536d(0x247)](_0x123fcd(0x263))&&_0x3c0dba[_0x123fcd(0x505)](_0x5c81fa(0x4ec)))_0x1ba3ce=JSON[_0x54536d(0x1e7)](fs[_0x123fcd(0x203)](dataDirectory+'/'+(process[_0x5c81fa(0x4d5)]==_0x5c81fa(0x1e8)?this[_0x123fcd(0x39f)][_0x5c81fa(0x20c)]:'.'+this[_0x5c81fa(0x439)][_0x5c81fa(0x20c)])+_0x123fcd(0x50b)+_0x2f332e+'/'+_0x2f332e+_0x5c81fa(0x13e)))[_0x5c81fa(0x139)],console[_0x228a08(0x1a2)](_0x5c81fa(0x39a)),console[_0x123fcd(0x249)](_0x1ba3ce),_0x3c896d={'number':_0x1ba3ce,'custom':_0x2f332e,'type':_0x5c81fa(0x32d)};else{if(_0x3c0dba[_0x5c81fa(0x34b)](_0x5c81fa(0x351))&&_0x3c0dba[_0x5c81fa(0x302)](_0x5c81fa(0x4ec)))_0x1ba3ce=JSON[_0x5c81fa(0x29f)](fs[_0x5c81fa(0x4c9)](dataDirectory+'/'+(process[_0x228a08(0x3d1)]==_0x5c81fa(0x1e8)?this[_0x5c81fa(0x439)][_0x5c81fa(0x20c)]:'.'+this[_0x5c81fa(0x439)][_0x5c81fa(0x20c)])+_0x123fcd(0x50b)+_0x2f332e+'/'+_0x2f332e+_0x5c81fa(0x13e)))[_0x5c81fa(0x411)],console[_0x5c81fa(0x203)](_0x5c81fa(0x1d8)),console[_0x5c81fa(0x203)](_0x1ba3ce),_0x3c896d={'number':_0x2f332e,'type':_0x123fcd(0x4d6)};else _0x58fb45===_0x123fcd(0x382)||_0x58fb45===_0x123fcd(0x2fb)||_0x58fb45===_0x123fcd(0x377)?(console[_0x123fcd(0x249)](_0x123fcd(0x1f9)),_0x3c896d=_0x3c0dba,console[_0x5c81fa(0x203)](_0x3c896d)):(console[_0x5c81fa(0x203)](_0x5c81fa(0x31e)),_0x3c896d=_0x2f332e);}}}let _0x2d68eb=document[_0x5c81fa(0x2c5)](_0x5c81fa(0x1ec)),_0x3e5db0=_0x1e8ca7;_0x2e2647[_0x5c81fa(0x195)][_0x123fcd(0x46c)]==_0x5c81fa(0x202)?screen=![]:screen={'width':_0x2e2647[_0x5c81fa(0x195)][_0x5c81fa(0x25a)],'height':_0x2e2647[_0x5c81fa(0x195)][_0x5c81fa(0x3c9)]},(console[_0x5c81fa(0x203)](_0x5c81fa(0x341)),console[_0x123fcd(0x249)](this[_0x5c81fa(0x1d9)]));let _0x322bc2;_0xc115fc==!![]?_0x322bc2={'url':this[_0x5c81fa(0x439)][_0x123fcd(0x49a)]===''||this[_0x5c81fa(0x439)][_0x123fcd(0x49a)]===undefined?_0xe2e51d+_0x5c81fa(0x442):this[_0x123fcd(0x39f)][_0x123fcd(0x49a)],'authorization':_0x14dcc3,'authenticator':_0x14dcc3,'detached':![],'timeout':0x2710,'root':dataDirectory+_0x5c81fa(0x4ea),'path':dataDirectory+_0x5c81fa(0x4ea),'overrides':{'detached':![],'screen':screen},'downloadFileMultiple':0x14,'version':_0x3c896d,'loader':{'type':_0x245db6,'build':_0x4dee09[_0x5c81fa(0x284)],'enable':_0xc115fc?!![]:_0xdc7b23?!![]:_0x8de3f5?!![]:![]},'verify':![],'ignored':[_0x5c81fa(0x2b2),...this[_0x5c81fa(0x439)][_0x5c81fa(0x3dc)]],'java':![],'memory':{'min':_0x24e20f[_0x5c81fa(0x445)]*0x400+'M','max':_0x24e20f[_0x123fcd(0x442)]*0x400+'M'}}:_0x322bc2={'url':this[_0x5c81fa(0x439)][_0x5c81fa(0x266)]===''||this[_0x123fcd(0x39f)][_0x5c81fa(0x266)]===undefined?_0xe2e51d+_0x54536d(0x232):this[_0x5c81fa(0x439)][_0x5c81fa(0x266)],'authorization':_0x14dcc3,'authenticator':_0x14dcc3,'detached':![],'timeout':0x2710,'root':dataDirectory+_0x5c81fa(0x4ea),'path':dataDirectory+_0x5c81fa(0x4ea),'overrides':{'detached':![],'screen':screen},'downloadFileMultiple':0x14,'version':_0x3c896d,'loader':{'type':_0x245db6,'build':this[_0x5c81fa(0x1d9)][_0x5c81fa(0x2b2)][_0x5c81fa(0x4b2)],'enable':_0xc115fc?!![]:_0xdc7b23?!![]:_0x8de3f5?!![]:![]},'verify':![],'ignored':[_0x123fcd(0x3a1),...this[_0x5c81fa(0x439)][_0x5c81fa(0x3dc)]],'java':![],'memory':{'min':_0x24e20f[_0x5c81fa(0x445)]*0x400+'M','max':_0x24e20f[_0x123fcd(0x442)]*0x400+'M'}},console[_0x123fcd(0x249)](_0x322bc2);const _0x2b6070=new Client(),_0x4b95e9=new Launch();try{if(_0x3c0dba===_0x5c81fa(0x3cc))console[_0x5c81fa(0x203)](_0x5c81fa(0x40a)),await _0x2b6070[_0x5c81fa(0x1f8)](_0x322bc2),document[_0x5c81fa(0x2c5)](_0x228a08(0x8c))[_0x5c81fa(0x20b)][_0x123fcd(0x26c)]='';else{if(_0x3c0dba[_0x5c81fa(0x302)](_0x5c81fa(0x45d))||_0x3c0dba[_0x5c81fa(0x302)](_0x5c81fa(0x22f))||_0x3c0dba[_0x5c81fa(0x302)](_0x123fcd(0x42d)))console[_0x5c81fa(0x203)](_0x5c81fa(0x3de)),await _0x4b95e9[_0x123fcd(0x299)](_0x322bc2),document[_0x5c81fa(0x2c5)](_0x5c81fa(0x36e))[_0x5c81fa(0x20b)][_0x123fcd(0x26c)]='';else _0x3c0dba[_0x5c81fa(0x302)](_0x228a08(0x2be))?(console[_0x5c81fa(0x203)](_0x5c81fa(0x498)),_0x2b6070[_0x5c81fa(0x1f8)](_0x322bc2),document[_0x5c81fa(0x2c5)](_0x5c81fa(0x36e))[_0x54536d(0x14d)][_0x5c81fa(0x1ef)]=''):(console[_0x5c81fa(0x203)](_0x5c81fa(0x208)),await _0x4b95e9[_0x123fcd(0x299)](_0x322bc2),document[_0x5c81fa(0x2c5)](_0x5c81fa(0x36e))[_0x5c81fa(0x20b)][_0x5c81fa(0x1ef)]='');}}catch(_0x3189b0){setTimeout(()=>{const _0xb28294=_0x228a08,_0x5c2da2=_0x54536d,_0x1a1388=_0x123fcd,_0x4758c4=_0x5c81fa;_0x2d68eb[_0x4758c4(0x20b)][_0x4758c4(0x1ef)]='',_0x3e5db0[_0x4758c4(0x20b)][_0x5c2da2(0x122)]=_0x1a1388(0x389),_0x87599c[_0x4758c4(0x20b)][_0x4758c4(0x1ef)]=_0xb28294(0x353);},0xbb8),console[_0x54536d(0x185)](_0x3189b0);}_0x2b6070['on'](_0x123fcd(0x4d3),_0x4e8d7a=>{const _0x5039c7=_0x5c81fa;consoleOutput_+=_0x5039c7(0x33d)+_0x4e8d7a+'\x0a';let _0x2f4daa=![];if(_0x2f4daa){}else _0x524041[_0x5039c7(0x487)]=this[_0x5039c7(0x2ba)][_0x5039c7(0x389)]+'.',_0x278877(),_0x2f4daa=!![];}),_0x2b6070['on'](_0x5c81fa(0x378),_0x350dba=>{const _0x1371f1=_0x54536d,_0x32e98b=_0x123fcd,_0x294989=_0x5c81fa;console[_0x294989(0x203)](_0x350dba),consoleOutput_+=_0x294989(0x1e3)+JSON[_0x32e98b(0x2bc)](_0x350dba,null,0x2)+'\x0a',_0x350dba[_0x294989(0x34b)](_0x294989(0x3b2))&&(console[_0x294989(0x203)](_0x32e98b(0x356)),Toast[_0x294989(0x147)]({'icon':_0x294989(0x3fd),'title':_0x32e98b(0x356)}),_0x87599c[_0x32e98b(0x313)][_0x32e98b(0x26c)]=_0x294989(0x49b),_0x87599c[_0x294989(0x347)]=0x64,_0x87599c[_0x294989(0x284)]=0x0,_0x2d68eb[_0x1371f1(0x14d)][_0x294989(0x1ef)]='',_0x3e5db0[_0x294989(0x20b)][_0x294989(0x1ef)]=_0x294989(0x49b),_0x542ec5=!![]),_0x350dba[_0x294989(0x34b)](_0x294989(0x2af))&&(_0x87599c[_0x294989(0x20b)][_0x1371f1(0x122)]='',_0x87599c[_0x294989(0x347)]=0x64,_0x87599c[_0x294989(0x284)]=0x0,_0x3e5db0[_0x294989(0x487)]=this[_0x294989(0x2ba)][_0x294989(0x3b9)]),_0x350dba[_0x294989(0x34b)](_0x294989(0x216))&&(_0x3e5db0[_0x294989(0x487)]=this[_0x294989(0x2ba)][_0x294989(0x1cb)]),_0x350dba[_0x32e98b(0x3c7)](_0x294989(0x43a))&&(_0x3e5db0[_0x294989(0x487)]=this[_0x294989(0x2ba)][_0x294989(0x40c)]),_0x350dba[_0x294989(0x34b)](_0x294989(0x3fe))&&(_0x3e5db0[_0x294989(0x487)]=this[_0x294989(0x2ba)][_0x294989(0x14d)]),_0x350dba[_0x32e98b(0x3c7)](_0x294989(0x2af))&&(_0x3e5db0[_0x294989(0x487)]=this[_0x294989(0x2ba)][_0x294989(0x16d)]);if(_0x350dba[_0x294989(0x34b)](_0x294989(0x493)))return ShowPanelError(this[_0x32e98b(0x507)][_0x294989(0x33f)]+_0x294989(0x1ae)+_0x350dba);if(_0x350dba[_0x294989(0x34b)](_0x1371f1(0x460)))return ShowPanelError(this[_0x32e98b(0x507)][_0x294989(0x177)]+_0x294989(0x1ae)+_0x350dba);if(_0x350dba[_0x32e98b(0x3c7)](_0x294989(0x178)))return ShowPanelError(this[_0x294989(0x2ba)][_0x294989(0x27a)]+_0x294989(0x1ae)+_0x350dba);if(_0x350dba[_0x294989(0x34b)](_0x294989(0x135)))return ShowPanelError(this[_0x32e98b(0x507)][_0x294989(0x27a)]+_0x294989(0x1ae)+_0x350dba);_0x350dba[_0x294989(0x34b)](_0x294989(0x403))&&(ShowPanelError(this[_0x294989(0x2ba)][_0x294989(0x299)]+_0x294989(0x1ae)+_0x350dba),_0x87599c[_0x294989(0x20b)][_0x1371f1(0x122)]=_0x294989(0x49b),_0x3e5db0[_0x294989(0x20b)][_0x294989(0x1ef)]=_0x294989(0x49b),_0x2d68eb[_0x294989(0x20b)][_0x294989(0x1ef)]='');if(_0x350dba[_0x294989(0x34b)](_0x294989(0x1aa)))return ShowPanelError(this[_0x294989(0x2ba)][_0x294989(0x130)]+_0x294989(0x1ae)+_0x350dba);if(_0x350dba[_0x32e98b(0x3c7)](_0x1371f1(0x21d))&&!_0x350dba[_0x294989(0x34b)](_0x294989(0x4d9)))return ShowPanelError(this[_0x294989(0x2ba)][_0x294989(0x33f)]+_0x294989(0x1ae)+_0x350dba);if(_0x350dba[_0x294989(0x34b)](_0x294989(0x271)))return ShowPanelError(this[_0x294989(0x2ba)][_0x294989(0x130)]+_0x294989(0x1ae)+_0x350dba);if(_0x350dba[_0x1371f1(0x247)](_0x294989(0x24c)))return ShowPanelError(this[_0x32e98b(0x507)][_0x294989(0x130)]+_0x32e98b(0x3cc)+_0x350dba);}),_0x2b6070['on'](_0x5c81fa(0x4b8),function(_0x2a8f5c){const _0x1061a3=_0x123fcd,_0x3c34c1=_0x5c81fa;console[_0x3c34c1(0x203)](_0x2a8f5c);let _0x33025a=_0x2a8f5c[_0x3c34c1(0x322)],_0x378e4f=_0x2a8f5c[_0x1061a3(0x4e3)],_0x271878=(_0x378e4f/_0x33025a*0x64)[_0x3c34c1(0x18d)](0x0),_0x3e4724=0x64;ipcRenderer[_0x3c34c1(0x3ae)](_0x3c34c1(0x483),{'total_':_0x3e4724,'progress':_0x271878}),_0x87599c[_0x3c34c1(0x20b)][_0x3c34c1(0x1ef)]='',_0x87599c[_0x1061a3(0x474)]=_0x33025a,_0x87599c[_0x3c34c1(0x284)]=_0x378e4f;});let _0x542ec5=![];_0x2b6070['on'](_0x5c81fa(0x3f8),_0xff698c=>{const _0xcc8605=_0x123fcd,_0x4dbe65=_0x5c81fa;ipcRenderer[_0x4dbe65(0x3ae)](_0xcc8605(0x420));});let _0x458ef4;_0x2b6070['on'](_0x5c81fa(0x3ed),_0x515900=>{}),_0x2b6070['on'](_0x123fcd(0x4ef),_0x2ac4e3=>{const _0x3a48ad=_0x123fcd,_0x391610=_0x5c81fa;consoleOutput_+=_0x3a48ad(0x3e7)+_0x2ac4e3+'\x0a';let _0x37160e=![];if(_0x37160e){}else _0x524041[_0x391610(0x487)]=this[_0x391610(0x2ba)][_0x391610(0x3ac)]+_0x391610(0x310),_0x37160e=!![];_0x3e5db0[_0x3a48ad(0x365)]=this[_0x391610(0x2ba)][_0x3a48ad(0x46e)]+_0x391610(0x2e3);});let _0x49b0f5=![],_0x54a033=![];_0x2b6070['on'](_0x5c81fa(0x31d),async _0x21eb33=>{const _0x18a755=_0x228a08,_0xc52bcd=_0x54536d,_0x52a709=_0x123fcd,_0x442167=_0x5c81fa;new logger(_0x442167(0x15a),_0x442167(0x226)),consoleOutput_+=_0xc52bcd(0x13c)+_0x21eb33+'\x0a';if(_0x417110[_0x52a709(0x238)][_0x442167(0x1ea)]===_0x442167(0x1d1))ipcRenderer[_0x442167(0x3ae)](_0x442167(0x395));if(_0x21eb33[_0x52a709(0x3c7)](_0x442167(0x1a3)))_0x3e5db0[_0x442167(0x487)]=this[_0x442167(0x2ba)][_0x442167(0x2ca)]+_0x442167(0x2e3);;_0x54a033==![]&&(Toast[_0x442167(0x147)]({'icon':_0x52a709(0x2fe),'title':this[_0x442167(0x2ba)][_0x442167(0x2ca)]+_0x52a709(0x1f0)}),_0x54a033=!![]);let _0x5f43e5=dataDirectory+_0x442167(0x1ac);if(fs[_0x52a709(0x4b1)](_0x5f43e5))try{const _0x1313a4=fs[_0x442167(0x4c9)](_0x5f43e5),_0x2c4160=await a167_0x12ea22[_0x52a709(0x43d)](_0x1313a4);console[_0x442167(0x203)](_0xc52bcd(0x26f)),console[_0x442167(0x203)](_0x2c4160[_0x442167(0x31d)][_0x442167(0x40f)]);let _0x4ab4d7=this[_0x442167(0x1d9)][_0x442167(0x258)];console[_0x442167(0x203)](_0x52a709(0x493)),console[_0x52a709(0x249)](_0x4ab4d7);let _0x26bd07=[];for(let _0x18184d=0x0;_0x18184d<_0x4ab4d7[_0x52a709(0x205)];_0x18184d++){const _0x1ad80d={'name':_0x4ab4d7[_0x18184d][_0x442167(0x25f)],'ip':_0x4ab4d7[_0x18184d]['ip'],'icon':_0x4ab4d7[_0x18184d][_0x442167(0x37d)]},_0x33e0ac=_0x2c4160[_0x442167(0x31d)][_0x442167(0x40f)][_0x442167(0x437)](_0x464ce4=>_0x464ce4['ip']===_0x1ad80d['ip']);!_0x33e0ac?_0x26bd07[_0xc52bcd(0x338)](_0x1ad80d):console[_0x52a709(0x249)](_0x442167(0x23d)+_0x1ad80d['ip']+_0x442167(0x3a8));}console[_0x442167(0x203)](_0x442167(0x3c8)),console[_0x442167(0x203)](_0x26bd07),_0x2c4160[_0x442167(0x31d)][_0x442167(0x40f)]=_0x26bd07[_0x442167(0x41a)](_0x2c4160[_0x442167(0x31d)][_0x52a709(0x2d3)]);const _0x4755fb=await a167_0x12ea22[_0xc52bcd(0x44f)](_0x2c4160);fs[_0x442167(0x3f6)](_0x5f43e5,_0x4755fb),console[_0x442167(0x203)](_0x442167(0x4b7));}catch(_0x3bae2a){console[_0x442167(0x3fd)](_0x442167(0x22a),_0x3bae2a);}else try{let _0x9e3da3=this[_0x442167(0x1d9)][_0x52a709(0x555)];console[_0x442167(0x203)](_0x442167(0x1cf)),console[_0x442167(0x203)](_0x9e3da3);let _0x229d2c=[];for(let _0x1cdd66=0x0;_0x1cdd66<_0x9e3da3[_0x442167(0x232)];_0x1cdd66++){const _0x3a6ed9={'name':_0x9e3da3[_0x1cdd66][_0x442167(0x25f)],'ip':_0x9e3da3[_0x1cdd66]['ip'],'icon':_0x9e3da3[_0x1cdd66][_0x442167(0x37d)]};_0x229d2c[_0x442167(0x1fe)](_0x3a6ed9);}console[_0x442167(0x203)](_0x52a709(0x37a)),console[_0x442167(0x203)](_0x229d2c);const _0x4d5bc6={'servers':_0x229d2c},_0x504ee2=await a167_0x12ea22[_0x442167(0x37c)](_0x4d5bc6);fs[_0x442167(0x3f6)](_0x5f43e5,_0x504ee2),console[_0x442167(0x203)](_0x52a709(0x281));}catch(_0x27e8dd){console[_0x442167(0x3fd)](_0x442167(0x1b1),_0x27e8dd);}console[_0x442167(0x203)](_0x21eb33);if(_0x21eb33[_0x52a709(0x3c7)](_0x442167(0x493)))return ShowPanelError(this[_0x442167(0x2ba)][_0x442167(0x33f)]+_0x442167(0x1ae)+_0x21eb33);if(_0x21eb33[_0x442167(0x34b)](_0x442167(0x4e8)))return ShowPanelError(this[_0x52a709(0x507)][_0x442167(0x177)]+_0x52a709(0x3cc)+_0x21eb33);if(_0x21eb33[_0x442167(0x34b)](_0x52a709(0x2ff)))return ShowPanelError(this[_0xc52bcd(0x2de)][_0x442167(0x27a)]+_0x52a709(0x3cc)+_0x21eb33);if(_0x21eb33[_0x52a709(0x3c7)](_0x442167(0x135)))return ShowPanelError(this[_0x442167(0x2ba)][_0x442167(0x27a)]+_0x52a709(0x3cc)+_0x21eb33);_0x21eb33[_0x442167(0x34b)](_0x442167(0x403))&&(ShowPanelError(this[_0x52a709(0x507)][_0x442167(0x299)]+_0x442167(0x1ae)+_0x21eb33),_0x87599c[_0x442167(0x20b)][_0x442167(0x1ef)]=_0x442167(0x49b),_0x3e5db0[_0x442167(0x20b)][_0x442167(0x1ef)]=_0x442167(0x49b),_0x2d68eb[_0x442167(0x20b)][_0x442167(0x1ef)]='');if(_0x21eb33[_0x442167(0x34b)](_0x442167(0x1aa)))return ShowPanelError(this[_0x442167(0x2ba)][_0x442167(0x130)]+_0x442167(0x1ae)+_0x21eb33);if(_0x21eb33[_0x442167(0x34b)](_0x442167(0x1bb))&&!_0x21eb33[_0x442167(0x34b)](_0x442167(0x4d9)))return ShowPanelError(this[_0x442167(0x2ba)][_0xc52bcd(0x1ac)]+_0xc52bcd(0x41c)+_0x21eb33);if(_0x21eb33[_0x442167(0x34b)](_0x442167(0x271)))return ShowPanelError(this[_0x442167(0x2ba)][_0x442167(0x130)]+_0x442167(0x1ae)+_0x21eb33);if(_0x21eb33[_0x442167(0x34b)](_0xc52bcd(0x202)))return ShowPanelError(this[_0x442167(0x2ba)][_0x442167(0x130)]+_0x442167(0x1ae)+_0x21eb33);if(_0x21eb33[_0x442167(0x34b)](_0x442167(0x2fb)+_0x14dcc3[_0x442167(0x25f)])||_0x21eb33[_0x442167(0x34b)](_0x442167(0x33c))){if(_0x49b0f5==![]){let _0x940b7b;if(_0x3c0dba[_0x52a709(0x505)](_0xc52bcd(0x23b)))_0x940b7b=_0x442167(0x3f0);else{if(_0x2f332e[_0x52a709(0x505)](_0x442167(0x22f)))_0x940b7b=_0x442167(0x4ab);else _0x2f332e[_0x442167(0x302)](_0x442167(0x3c4))?_0x940b7b=_0x18a755(0x31b):_0x940b7b='';}ipcRenderer[_0x442167(0x3ae)](_0x442167(0x463),this[_0x442167(0x2ba)][_0x442167(0x259)]+'\x20'+_0x3c0dba[_0x442167(0x148)](_0x52a709(0x1d9),'')[_0x442167(0x148)](_0x442167(0x22f),'')[_0x442167(0x148)](_0x52a709(0x42d),'')+'\x20'+_0x940b7b),console[_0x52a709(0x249)](_0x442167(0x434)+_0x3c0dba),this[_0x442167(0x4b9)](_0x14dcc3[_0x52a709(0x1d8)],_0x52a709(0x4e6),this[_0x442167(0x2ba)][_0x442167(0x259)]+'\x20'+_0x2f332e[_0x442167(0x148)](_0x52a709(0x1d9),'')[_0x442167(0x148)](_0x442167(0x22f),'')[_0x442167(0x148)](_0x52a709(0x42d),'')+'\x20'+_0x940b7b),_0x54222e[_0x442167(0x329)](),_0x49b0f5=!![],_0x3e5db0[_0x52a709(0x365)]=this[_0x442167(0x2ba)][_0x442167(0x4e3)]+'.',ipcRenderer[_0x442167(0x3ae)](_0x52a709(0x23c),{'title':this[_0x442167(0x2ba)][_0x442167(0x4e3)],'body':this[_0x52a709(0x507)][_0x442167(0x264)]}),ipcRenderer[_0x442167(0x3ae)](_0x442167(0x40b));}}if(_0x21eb33[_0x442167(0x34b)](_0x442167(0x39b))){let _0x3fb50d=_0x21eb33[_0x442167(0x144)](_0x52a709(0x258))[0x1][_0x442167(0x144)](_0x52a709(0x1f0))[0x0];_0x3e5db0[_0x442167(0x487)]=_0x442167(0x39f)+_0x3fb50d;}}),_0x2b6070['on'](_0x5c81fa(0x1ea),_0x4d6f0c=>{const _0x2714e8=_0x228a08,_0x2c3882=_0x54536d,_0x55357e=_0x123fcd,_0x4d972d=_0x5c81fa;consoleOutput_+=_0x4d972d(0x4f8)+_0x4d6f0c+_0x4d972d(0x2d0);if(_0x417110[_0x55357e(0x238)][_0x4d972d(0x1ea)]===_0x4d972d(0x1d1))ipcRenderer[_0x4d972d(0x3ae)](_0x4d972d(0x2de));ipcRenderer[_0x4d972d(0x3ae)](_0x55357e(0x4ec),{'status':_0x4d972d(0x4ae),'details':this[_0x4d972d(0x2ba)][_0x55357e(0x2e2)],'username':_0x14dcc3[_0x2c3882(0x15c)]}),_0x3e5db0[_0x55357e(0x313)][_0x4d972d(0x1ef)]=_0x55357e(0x389),_0x2d68eb[_0x55357e(0x313)][_0x55357e(0x26c)]='',_0x3e5db0[_0x4d972d(0x487)]=_0x4d972d(0x3ad),new logger(_0x4d972d(0x265),_0x4d972d(0x34c)),_0x87599c[_0x4d972d(0x20b)][_0x55357e(0x26c)]=_0x4d972d(0x49b),console[_0x4d972d(0x203)](_0x4d972d(0x28c)),ipcRenderer[_0x55357e(0x3a2)](_0x4d972d(0x4e4)),_0x3c0dba=null,_0x58fb45=null,_0x3c896d=null,_0x2f332e=null,_0x1ba3ce=null,_0x245db6=null,_0xc115fc=![],_0xdc7b23=![],_0x8de3f5=![],document[_0x4d972d(0x2c5)](_0x4d972d(0x261))['removeAttribute'](_0x4d972d(0x1b0)),document[_0x4d972d(0x2c5)](_0x4d972d(0x1b9))[_0x4d972d(0x1f9)](_0x55357e(0x504)),document[_0x2714e8(0x3b4)](_0x4d972d(0x12e))[_0x55357e(0x36d)](_0x55357e(0x504)),document[_0x4d972d(0x2c5)](_0x55357e(0x547))[_0x55357e(0x36d)](_0x4d972d(0x1b0));});let _0x15d4a3=![],_0x28faa7=![];_0x4b95e9['on'](_0x5c81fa(0x17f),_0x2b1a13=>{const _0x5481a2=_0x5c81fa;consoleOutput_+=_0x5481a2(0x33d)+_0x2b1a13+'\x0a';if(_0x15d4a3){}else _0x524041[_0x5481a2(0x487)]=this[_0x5481a2(0x2ba)][_0x5481a2(0x389)]+'.',_0x278877(),_0x15d4a3=!![];}),_0x4b95e9['on'](_0x5c81fa(0x378),_0xf3f668=>{const _0x54ab60=_0x54536d,_0x417998=_0x123fcd,_0x2c4178=_0x5c81fa;console[_0x2c4178(0x203)](_0xf3f668),consoleOutput_+=_0x2c4178(0x1e3)+JSON[_0x2c4178(0x4eb)](_0xf3f668,null,0x2)+'\x0a',_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x3b2))&&(console[_0x2c4178(0x203)](_0x2c4178(0x1c1)),_0x87599c[_0x2c4178(0x20b)][_0x417998(0x26c)]=_0x2c4178(0x49b),_0x87599c[_0x2c4178(0x347)]=0x64,_0x87599c[_0x2c4178(0x284)]=0x0,_0x2d68eb[_0x2c4178(0x20b)][_0x2c4178(0x1ef)]='',_0x3e5db0[_0x2c4178(0x20b)][_0x2c4178(0x1ef)]=_0x2c4178(0x49b),_0x542ec5=!![]),_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x2af))&&(_0x87599c[_0x2c4178(0x20b)][_0x417998(0x26c)]='',_0x87599c[_0x2c4178(0x347)]=0x64,_0x87599c[_0x417998(0x364)]=0x0,_0x3e5db0[_0x2c4178(0x487)]=this[_0x54ab60(0x2de)][_0x2c4178(0x3b9)]),_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x216))&&(_0x3e5db0[_0x2c4178(0x487)]=this[_0x2c4178(0x2ba)][_0x2c4178(0x1cb)]),_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x43a))&&(_0x3e5db0[_0x2c4178(0x487)]=this[_0x2c4178(0x2ba)][_0x2c4178(0x40c)]),_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x3fe))&&(_0x3e5db0[_0x2c4178(0x487)]=this[_0x2c4178(0x2ba)][_0x2c4178(0x14d)]),_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x2af))&&(_0x3e5db0[_0x2c4178(0x487)]=this[_0x2c4178(0x2ba)][_0x2c4178(0x16d)]);if(_0xf3f668[_0x417998(0x3c7)](_0x2c4178(0x493)))return ShowPanelError(this[_0x417998(0x507)][_0x2c4178(0x33f)]+_0x54ab60(0x41c)+_0xf3f668);if(_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x4e8)))return ShowPanelError(this[_0x2c4178(0x2ba)][_0x2c4178(0x177)]+_0x2c4178(0x1ae)+_0xf3f668);if(_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x178)))return ShowPanelError(this[_0x2c4178(0x2ba)][_0x2c4178(0x27a)]+_0x2c4178(0x1ae)+_0xf3f668);if(_0xf3f668[_0x417998(0x3c7)](_0x2c4178(0x135)))return ShowPanelError(this[_0x2c4178(0x2ba)][_0x2c4178(0x27a)]+_0x2c4178(0x1ae)+_0xf3f668);_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x403))&&(ShowPanelError(this[_0x417998(0x507)][_0x417998(0x339)]+_0x2c4178(0x1ae)+_0xf3f668),_0x87599c[_0x2c4178(0x20b)][_0x2c4178(0x1ef)]=_0x2c4178(0x49b),_0x3e5db0[_0x2c4178(0x20b)][_0x2c4178(0x1ef)]=_0x2c4178(0x49b),_0x2d68eb[_0x2c4178(0x20b)][_0x417998(0x26c)]='');if(_0xf3f668[_0x54ab60(0x247)](_0x2c4178(0x1aa)))return ShowPanelError(this[_0x2c4178(0x2ba)][_0x2c4178(0x130)]+_0x2c4178(0x1ae)+_0xf3f668);if(_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x1bb))&&!_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x4d9)))return ShowPanelError(this[_0x2c4178(0x2ba)][_0x2c4178(0x33f)]+_0x54ab60(0x41c)+_0xf3f668);if(_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x271)))return ShowPanelError(this[_0x2c4178(0x2ba)][_0x2c4178(0x130)]+_0x2c4178(0x1ae)+_0xf3f668);if(_0xf3f668[_0x2c4178(0x34b)](_0x2c4178(0x24c)))return ShowPanelError(this[_0x2c4178(0x2ba)][_0x2c4178(0x130)]+_0x2c4178(0x1ae)+_0xf3f668);}),_0x4b95e9['on'](_0x123fcd(0x514),async _0x13a845=>{const _0x2a7b3e=_0x228a08,_0x19d070=_0x54536d,_0x49d161=_0x123fcd,_0x2ce702=_0x5c81fa;new logger(_0x2ce702(0x15a),_0x2ce702(0x226)),consoleOutput_+=_0x2ce702(0x35d)+_0x13a845+'\x0a';if(_0x417110[_0x2ce702(0x39d)][_0x2ce702(0x1ea)]===_0x2ce702(0x1d1))ipcRenderer[_0x2ce702(0x3ae)](_0x49d161(0x4df));_0x87599c[_0x2ce702(0x20b)][_0x2ce702(0x1ef)]=_0x2ce702(0x49b);if(_0x13a845[_0x2ce702(0x34b)](_0x2ce702(0x1a3)))_0x3e5db0[_0x2ce702(0x487)]=this[_0x2ce702(0x2ba)][_0x2ce702(0x2ca)]+_0x2ce702(0x2e3);;if(_0x54a033==![]){_0x54a033=!![];let _0x327b7b=dataDirectory+_0x19d070(0x3cb);if(fs[_0x2ce702(0x34e)](_0x327b7b))try{const _0x55856a=fs[_0x2ce702(0x4c9)](_0x327b7b),_0x400633=await a167_0x12ea22[_0x19d070(0x417)](_0x55856a);console[_0x49d161(0x249)](_0x49d161(0x4c6)),console[_0x49d161(0x249)](_0x400633[_0x2ce702(0x31d)][_0x2ce702(0x40f)]);let _0x566a81=this[_0x2ce702(0x1d9)][_0x49d161(0x555)];console[_0x2ce702(0x203)](_0x2ce702(0x1cf)),console[_0x49d161(0x249)](_0x566a81);let _0x6596b6=[];for(let _0x417752=0x0;_0x417752<_0x566a81[_0x49d161(0x205)];_0x417752++){const _0x2af968={'name':_0x566a81[_0x417752][_0x2ce702(0x25f)],'ip':_0x566a81[_0x417752]['ip'],'icon':_0x566a81[_0x417752][_0x2ce702(0x37d)]},_0x15cf11=_0x400633[_0x2ce702(0x31d)][_0x2ce702(0x40f)][_0x2ce702(0x437)](_0x116b4d=>_0x116b4d['ip']===_0x2af968['ip']);!_0x15cf11?_0x6596b6[_0x2ce702(0x1fe)](_0x2af968):console[_0x2ce702(0x203)](_0x2ce702(0x23d)+_0x2af968['ip']+_0x2ce702(0x3a8));}console[_0x2ce702(0x203)](_0x49d161(0x37a)),console[_0x2ce702(0x203)](_0x6596b6),_0x400633[_0x49d161(0x514)][_0x49d161(0x2d3)]=_0x6596b6[_0x2ce702(0x41a)](_0x400633[_0x2ce702(0x31d)][_0x2ce702(0x40f)]);const _0x473931=await a167_0x12ea22[_0x2ce702(0x37c)](_0x400633);fs[_0x49d161(0x4db)](_0x327b7b,_0x473931),console[_0x2ce702(0x203)](_0x2ce702(0x4b7));}catch(_0xfb0f1e){console[_0x2ce702(0x3fd)](_0x2ce702(0x22a),_0xfb0f1e);}else try{let _0x37b0d0=this[_0x2ce702(0x1d9)][_0x2ce702(0x258)];console[_0x2ce702(0x203)](_0x19d070(0x443)),console[_0x2ce702(0x203)](_0x37b0d0);let _0x3b5c5a=[];for(let _0x4bb53b=0x0;_0x4bb53b<_0x37b0d0[_0x2ce702(0x232)];_0x4bb53b++){const _0x80abeb={'name':_0x37b0d0[_0x4bb53b][_0x2ce702(0x25f)],'ip':_0x37b0d0[_0x4bb53b]['ip'],'icon':_0x37b0d0[_0x4bb53b][_0x2ce702(0x37d)]};_0x3b5c5a[_0x2ce702(0x1fe)](_0x80abeb);}console[_0x2ce702(0x203)](_0x2ce702(0x3c8)),console[_0x19d070(0x185)](_0x3b5c5a);const _0x4f0244={'servers':_0x3b5c5a},_0x3ea93b=await a167_0x12ea22[_0x2ce702(0x37c)](_0x4f0244);fs[_0x2ce702(0x3f6)](_0x327b7b,_0x3ea93b),console[_0x2ce702(0x203)](_0x49d161(0x281));}catch(_0x41fe1e){console[_0x49d161(0x413)](_0x2ce702(0x1b1),_0x41fe1e);}let _0x5be3dd=this[_0x2ce702(0x407)];const _0x26dff2=dataDirectory+'/'+(process[_0x2ce702(0x4d5)]==_0x2ce702(0x1e8)?this[_0x49d161(0x39f)][_0x2ce702(0x20c)]:'.'+this[_0x2ce702(0x439)][_0x2ce702(0x20c)])+_0x2ce702(0x132),_0x11207e=dataDirectory+'/'+(process[_0x49d161(0x212)]==_0x2ce702(0x1e8)?this[_0x2ce702(0x439)][_0x2ce702(0x20c)]:'.'+this[_0x2ce702(0x439)][_0x2ce702(0x20c)])+_0x49d161(0x506),_0xc1aa1=dataDirectory+'/'+(process[_0x2ce702(0x4d5)]==_0x49d161(0x401)?this[_0x2ce702(0x439)][_0x2ce702(0x20c)]:'.'+this[_0x49d161(0x39f)][_0x2ce702(0x20c)])+_0x49d161(0x419);let _0x1b44ae=dataDirectory+'/'+(process[_0x2ce702(0x4d5)]==_0x49d161(0x401)?this[_0x2ce702(0x439)][_0x2ce702(0x20c)]:'.'+this[_0x2ce702(0x439)][_0x2ce702(0x20c)])+_0x2ce702(0x231),_0x49ade8=dataDirectory+'/'+(process[_0x2ce702(0x4d5)]==_0x2ce702(0x1e8)?this[_0x2ce702(0x439)][_0x2ce702(0x20c)]:'.'+this[_0x19d070(0x348)][_0x2ce702(0x20c)])+_0x2ce702(0x477),_0x528c44=dataDirectory+'/'+(process[_0x2ce702(0x4d5)]==_0x2ce702(0x1e8)?this[_0x2ce702(0x439)][_0x2ce702(0x20c)]:'.'+this[_0x2ce702(0x439)][_0x2ce702(0x20c)])+_0x2ce702(0x18a),_0x38025d=dataDirectory+'/'+(process[_0x2ce702(0x4d5)]==_0x49d161(0x401)?this[_0x2ce702(0x439)][_0x2ce702(0x20c)]:'.'+this[_0x2ce702(0x439)][_0x49d161(0x256)])+_0x2ce702(0x138),_0x3898f=dataDirectory+'/'+(process[_0x2ce702(0x4d5)]==_0x2ce702(0x1e8)?this[_0x49d161(0x39f)][_0x2ce702(0x20c)]:'.'+this[_0x2ce702(0x439)][_0x49d161(0x256)])+_0x2ce702(0x2f2),_0x2608b0=dataDirectory+'/'+(process[_0x2a7b3e(0x3d1)]==_0x2ce702(0x1e8)?this[_0x2ce702(0x439)][_0x2ce702(0x20c)]:'.'+this[_0x2ce702(0x439)][_0x2ce702(0x20c)])+_0x2ce702(0x182),_0x495e76=dataDirectory+'/'+(process[_0x2ce702(0x4d5)]==_0x2ce702(0x1e8)?this[_0x49d161(0x39f)][_0x2ce702(0x20c)]:'.'+this[_0x49d161(0x39f)][_0x49d161(0x256)])+_0x2ce702(0x4e6);fs[_0x2ce702(0x34e)](_0x495e76)&&fs[_0x2ce702(0x21b)](_0x495e76),fs[_0x2ce702(0x34e)](_0x2608b0)&&fs[_0x2ce702(0x21b)](_0x2608b0),(fs[_0x2ce702(0x21b)](_0x26dff2),fs[_0x49d161(0x47a)](_0x11207e),fs[_0x2ce702(0x21b)](_0xc1aa1));const _0xf68266=_0x3c0dba;let _0x642845;_0xf68266[_0x2ce702(0x34b)]('-')?(_0x642845=_0xf68266[_0x2ce702(0x148)](/-[^.]+/,''),console[_0x2ce702(0x203)](_0x642845)):console[_0x19d070(0x185)](_0xf68266);const _0x208de8=_0x5be3dd[_0x2ce702(0x296)][_0x2ce702(0x303)](_0x378de5=>_0x378de5['id']===_0x642845);console[_0x2ce702(0x203)](_0x49d161(0x1fe)+_0x3c0dba+_0x49d161(0x1ef)+_0x2f332e+_0x2ce702(0x466)+_0x208de8+_0x2ce702(0x459)+_0x58fb45+_0x2ce702(0x49d));if(_0x208de8){function _0x37a6fe(_0x113193){const _0x4fa858=_0x2ce702,_0x214da8=parseFloat(_0x113193);if(!isNaN(_0x214da8)){const _0x3ba664=_0x214da8[_0x4fa858(0x21a)]();return _0x3ba664;}return _0x113193;}const _0x5ee35c=_0x37a6fe(_0x208de8[_0x2ce702(0x323)]);let _0x5baa06=[_0x2ce702(0x1fa),_0x2ce702(0x2fe),_0x2ce702(0x274),_0x2ce702(0x4f7),_0x2ce702(0x210),_0x2ce702(0x278),_0x49d161(0x425),_0x2ce702(0x33e),_0x2ce702(0x1f7),_0x2ce702(0x3ce),_0x2ce702(0x1a8),_0x2ce702(0x27e),_0x2a7b3e(0xc1),_0x2ce702(0x253),_0x2ce702(0x3c3),_0x2ce702(0x3fc),_0x2ce702(0x1f0),_0x2ce702(0x41b),_0x49d161(0x32a),_0x2ce702(0x4ac),_0x2ce702(0x400),_0x49d161(0x2b9),_0x2ce702(0x1ad),_0x49d161(0x1dd),_0x2ce702(0x45e),_0x2ce702(0x2ff),_0x2ce702(0x360),_0x2ce702(0x3f7),_0x2ce702(0x4f1),_0x2ce702(0x2a7),_0x2ce702(0x35e),_0x49d161(0x3f3),_0x2ce702(0x492),_0x2ce702(0x25c),_0x2ce702(0x34d),_0x19d070(0x412),_0x2ce702(0x494),_0x2ce702(0x2f4),_0x2a7b3e(0x23e),_0x2ce702(0x4e0),_0x2ce702(0x3cc)];console[_0x2ce702(0x203)](_0x5ee35c),console[_0x2ce702(0x203)](_0x5ee35c>1.16),console[_0x2ce702(0x203)]('dx'),console[_0x2ce702(0x203)](_0x3c0dba),console[_0x2ce702(0x203)](_0x5ee35c<=1.9[_0x2ce702(0x21a)]());const _0x32b8a5=[1.16,1.15,1.14,1.13,1.12,1.11,1.1,1.9,1.8,1.7,1.6,1.5,1.4,1.3],_0x146402=[1.17,1.18,1.19,1.2,1.21],_0x53a94d=[_0x2ce702(0x2fe),_0x2ce702(0x1fa)];console[_0x49d161(0x249)](_0x5ee35c),console[_0x2ce702(0x203)](_0x146402[_0x49d161(0x3c7)](_0x5ee35c)),console[_0x49d161(0x249)](!_0x32b8a5[_0x19d070(0x247)](_0x5ee35c));if(_0x53a94d[_0x2ce702(0x34b)](_0x3c0dba)&&_0x58fb45===_0x2ce702(0x36c))fs[_0x2ce702(0x414)](_0x38025d,dataDirectory+'/'+(process[_0x2ce702(0x4d5)]==_0x49d161(0x401)?this[_0x2ce702(0x439)][_0x49d161(0x256)]:'.'+this[_0x2ce702(0x439)][_0x49d161(0x256)])+_0x2ce702(0x182));else _0x53a94d[_0x2ce702(0x34b)](_0x3c0dba)&&_0x58fb45===_0x2ce702(0x4a8)&&fs[_0x2ce702(0x414)](_0x3898f,dataDirectory+'/'+(process[_0x2ce702(0x4d5)]==_0x2ce702(0x1e8)?this[_0x2ce702(0x439)][_0x2ce702(0x20c)]:'.'+this[_0x2ce702(0x439)][_0x2ce702(0x20c)])+_0x2ce702(0x4e6));if(_0x146402[_0x49d161(0x3c7)](parseFloat(_0x2f332e))&&!_0x32b8a5[_0x2ce702(0x34b)](parseFloat(_0x2f332e))&&_0x58fb45==_0x2ce702(0x36c))console[_0x19d070(0x185)](_0x2ce702(0x4e7)),fs[_0x2ce702(0x414)](_0x528c44,_0xc1aa1),fs[_0x2ce702(0x34e)](_0x26dff2)&&fs[_0x2ce702(0x21b)](_0x26dff2),fs[_0x2ce702(0x34e)](_0x11207e)&&fs[_0x2ce702(0x21b)](_0x11207e);else{if(_0x5baa06[_0x2ce702(0x34b)](_0x2f332e)&&_0x58fb45==_0x2ce702(0x36c))console[_0x2ce702(0x203)](_0x19d070(0x29f)),fs[_0x49d161(0x40b)](_0x49ade8,_0x11207e),fs[_0x2ce702(0x34e)](_0x26dff2)&&fs[_0x2ce702(0x21b)](_0x26dff2),fs[_0x2ce702(0x34e)](_0xc1aa1)&&fs[_0x2ce702(0x21b)](_0xc1aa1);else(_0x58fb45==_0x2ce702(0x4a8)||_0x58fb45==_0x2ce702(0x405))&&(console[_0x2ce702(0x203)](_0x2ce702(0x2da)),fs[_0x2ce702(0x414)](_0x1b44ae,_0x26dff2),fs[_0x49d161(0x4b1)](_0x11207e)&&fs[_0x2ce702(0x21b)](_0x11207e),fs[_0x19d070(0x3b7)](_0xc1aa1)&&fs[_0x2ce702(0x21b)](_0xc1aa1));}}else console[_0x49d161(0x249)](_0x49d161(0x467));let _0x3c815d=dataDirectory+'/'+(process[_0x2ce702(0x4d5)]==_0x2ce702(0x1e8)?this[_0x2ce702(0x439)][_0x49d161(0x256)]:'.'+this[_0x49d161(0x39f)][_0x49d161(0x256)])+_0x2ce702(0x3b5),_0x3c32bf={'version':_0x2ce702(0x41d),'buildNumber':0x8,'loadlist':[{'name':_0x2ce702(0x26a),'type':_0x2ce702(0x49e),'checkPNG':![],'skin':_0x19d070(0x494),'model':_0x49d161(0x269),'cape':_0x2ce702(0x3bd)},{'name':_0x2ce702(0x418),'type':_0x2ce702(0x370),'apiRoot':_0x19d070(0x3f1),'sessionRoot':_0x2ce702(0x1c3)},{'name':_0x2ce702(0x319),'type':_0x2ce702(0x49e),'checkPNG':![],'model':_0x2ce702(0x159),'cape':_0x2ce702(0x3bf)},{'name':_0x2ce702(0x351),'type':_0x2ce702(0x49e),'checkPNG':![],'model':_0x2ce702(0x159),'cape':_0x2ce702(0x2ab)}],'enableDynamicSkull':!![],'enableTransparentSkin':!![],'forceIgnoreHttpsCertificate':!![],'forceLoadAllTextures':!![],'enableCape':!![],'threadPoolSize':0x8,'enableLogStdOut':![],'cacheExpiry':0x1e,'forceUpdateSkull':!![],'enableLocalProfileCache':![],'enableCacheAutoClean':!![],'forceDisableCache':!![]};fs[_0x49d161(0x4b1)](path[_0x2ce702(0x42e)](_0x3c815d))?fs[_0x2ce702(0x3f6)](_0x3c815d,JSON[_0x49d161(0x2bc)](_0x3c32bf)):(fs[_0x2ce702(0x204)](dataDirectory+_0x19d070(0x11d)),fs[_0x2ce702(0x3f6)](_0x3c815d,JSON[_0x49d161(0x2bc)](_0x3c32bf)));}if(_0x13a845[_0x2ce702(0x34b)](_0x2ce702(0x493)))return ShowPanelError(this[_0x2ce702(0x2ba)][_0x2ce702(0x33f)]+_0x2ce702(0x1ae)+_0x13a845);if(_0x13a845[_0x2ce702(0x34b)](_0x2ce702(0x4e8)))return ShowPanelError(this[_0x2ce702(0x2ba)][_0x49d161(0x381)]+_0x49d161(0x3cc)+_0x13a845);if(_0x13a845[_0x49d161(0x3c7)](_0x2ce702(0x178)))return ShowPanelError(this[_0x2ce702(0x2ba)][_0x2ce702(0x27a)]+_0x2ce702(0x1ae)+_0x13a845);if(_0x13a845[_0x2ce702(0x34b)](_0x2ce702(0x135)))return ShowPanelError(this[_0x2ce702(0x2ba)][_0x2ce702(0x27a)]+_0x2ce702(0x1ae)+_0x13a845);_0x13a845[_0x2ce702(0x34b)](_0x49d161(0x538))&&(ShowPanelError(this[_0x2ce702(0x2ba)][_0x2ce702(0x299)]+_0x2ce702(0x1ae)+_0x13a845),_0x87599c[_0x2ce702(0x20b)][_0x2ce702(0x1ef)]=_0x49d161(0x389),_0x3e5db0[_0x2ce702(0x20b)][_0x2ce702(0x1ef)]=_0x2ce702(0x49b),_0x2d68eb[_0x2ce702(0x20b)][_0x2ce702(0x1ef)]='');if(_0x13a845[_0x2ce702(0x34b)](_0x49d161(0x4ca)))return ShowPanelError(this[_0x2ce702(0x2ba)][_0x2ce702(0x130)]+_0x2ce702(0x1ae)+_0x13a845);if(_0x13a845[_0x2ce702(0x34b)](_0x2a7b3e(0x169))&&!_0x13a845[_0x49d161(0x3c7)](_0x2ce702(0x4d9)))return ShowPanelError(this[_0x2ce702(0x2ba)][_0x2ce702(0x33f)]+_0x49d161(0x3cc)+_0x13a845);if(_0x13a845[_0x2ce702(0x34b)](_0x2ce702(0x271)))return ShowPanelError(this[_0x49d161(0x507)][_0x2ce702(0x130)]+_0x2ce702(0x1ae)+_0x13a845);if(_0x13a845[_0x2ce702(0x34b)](_0x49d161(0x2f1)))return ShowPanelError(this[_0x2ce702(0x2ba)][_0x2a7b3e(0x141)]+_0x2ce702(0x1ae)+_0x13a845);if(_0x13a845[_0x49d161(0x3c7)](_0x2ce702(0x2fb)+_0x14dcc3[_0x49d161(0x1d8)])||_0x13a845[_0x2ce702(0x34b)](_0x49d161(0x21e))){if(_0x49b0f5==![]){let _0x2a974e;if(_0x2f332e[_0x2ce702(0x302)](_0x2ce702(0x45d)))_0x2a974e=_0x2ce702(0x3f0);else{if(_0x2f332e[_0x2ce702(0x302)](_0x2ce702(0x22f)))_0x2a974e=_0x2ce702(0x4ab);else _0x2f332e[_0x49d161(0x505)](_0x2ce702(0x3c4))?_0x2a974e=_0x2ce702(0x3d1):_0x2a974e='';}ipcRenderer[_0x2ce702(0x3ae)](_0x2ce702(0x463),this[_0x49d161(0x507)][_0x2ce702(0x259)]+'\x20'+_0x2f332e[_0x49d161(0x396)](_0x2ce702(0x45d),'')[_0x2ce702(0x148)](_0x2ce702(0x22f),'')[_0x2ce702(0x148)](_0x2ce702(0x3c4),'')+'\x20'+_0x2a974e),console[_0x2ce702(0x203)](_0x2ce702(0x434)+_0x2f332e),this[_0x2ce702(0x4b9)](_0x14dcc3[_0x2ce702(0x25f)],_0x2ce702(0x441),this[_0x49d161(0x507)][_0x2ce702(0x259)]+'\x20'+_0x2f332e[_0x49d161(0x396)](_0x2ce702(0x45d),'')[_0x2ce702(0x148)](_0x49d161(0x36f),'')[_0x49d161(0x396)](_0x2ce702(0x3c4),'')+'\x20'+_0x2a974e),_0x54222e[_0x49d161(0x2af)](),_0x49b0f5=!![],_0x3e5db0[_0x49d161(0x365)]=this[_0x49d161(0x507)][_0x2ce702(0x4e3)]+'.',ipcRenderer[_0x2ce702(0x3ae)](_0x2ce702(0x4c5),{'title':this[_0x2a7b3e(0x96)][_0x2ce702(0x4e3)],'body':this[_0x2ce702(0x2ba)][_0x2ce702(0x264)]}),ipcRenderer[_0x2ce702(0x3ae)](_0x19d070(0x188));}}});let _0x56ad0f=-0x1;_0x4b95e9['on'](_0x123fcd(0x2a2),(_0x12474e,_0x3f7e72)=>{const _0x5c2e08=_0x123fcd,_0x427d86=_0x5c81fa;let _0x5e6881=(_0x12474e/_0x3f7e72*0x64)[_0x5c2e08(0x347)](0x0);_0x5e6881>0x64&&(_0x5e6881=0x64);if(_0x5e6881!=_0x56ad0f)_0x524041[_0x427d86(0x487)]+='\x0a'+this[_0x427d86(0x2ba)][_0x427d86(0x1cb)]+_0x427d86(0x308)+_0x5e6881+'%',_0x56ad0f=_0x5e6881;else{}consoleOutput_+=_0x427d86(0x150)+_0x12474e+_0x427d86(0x3d4)+_0x3f7e72+'\x0a',_0x278877(),ipcRenderer[_0x427d86(0x3ae)](_0x427d86(0x241),{'progress':_0x12474e,'size':_0x3f7e72}),!isNaN(_0x12474e)&&(_0x87599c[_0x427d86(0x284)]=_0x12474e),!isNaN(_0x3f7e72)&&(_0x87599c[_0x427d86(0x347)]=_0x3f7e72);}),_0x4b95e9['on'](_0x5c81fa(0x28a),(_0x2a91b3,_0x3707a9)=>{const _0xd3e4bb=_0x54536d,_0x4fdf61=_0x123fcd,_0xf6f597=_0x5c81fa;let _0x454709=(_0x2a91b3/_0x3707a9*0x64)[_0xf6f597(0x18d)](0x0);_0x454709>0x64&&(_0x454709=0x64);if(_0x454709!=_0x56ad0f)_0x524041[_0xf6f597(0x487)]+='\x0a'+this[_0xd3e4bb(0x2de)][_0xf6f597(0x413)]+_0xf6f597(0x308)+_0x454709+'%',_0x56ad0f=_0x454709,_0x278877();else{}consoleOutput_+=_0xf6f597(0x228)+_0x2a91b3+_0xf6f597(0x3d4)+_0x3707a9+'\x0a';let _0x4e0ec5=![];if(_0x4e0ec5){}else _0x4e0ec5=!![];_0x87599c[_0xf6f597(0x20b)][_0x4fdf61(0x26c)]='';let _0x100ae7=0x64,_0x3c1b03=(_0x2a91b3/_0x3707a9*0x64)[_0xf6f597(0x18d)](0x0);ipcRenderer[_0xf6f597(0x3ae)](_0xf6f597(0x241),{'progress_actual':_0x3c1b03,'size_actual':_0x100ae7}),_0x87599c[_0xf6f597(0x284)]=_0x2a91b3,_0x87599c[_0x4fdf61(0x474)]=_0x3707a9;});let _0x7606f='-\x20'+this[_0x54536d(0x2de)][_0x5c81fa(0x186)]+_0x5c81fa(0x2e3);_0x4b95e9['on'](_0x5c81fa(0x3f8),_0x3dc84b=>{const _0x60a78c=_0x54536d,_0x3ef3a4=_0x123fcd,_0x3ccd81=_0x5c81fa;ipcRenderer[_0x3ef3a4(0x3a2)](_0x3ef3a4(0x420));if(isNaN(_0x3dc84b)||!isFinite(_0x3dc84b))_0x7606f='-\x20'+this[_0x3ccd81(0x2ba)][_0x3ccd81(0x3e1)];else{let _0x38c4c3=Math[_0x3ccd81(0x451)](_0x3dc84b/0xe10),_0x231916=Math[_0x3ccd81(0x451)]((_0x3dc84b-_0x38c4c3*0xe10)/0x3c),_0x6a6ab=Math[_0x3ccd81(0x451)](_0x3dc84b-_0x38c4c3*0xe10-_0x231916*0x3c);if(_0x38c4c3>0x0)_0x7606f=_0x38c4c3>0x1?'-\x20'+this[_0x3ef3a4(0x507)][_0x3ccd81(0x328)]+'\x20'+_0x38c4c3+'h':'-\x20'+this[_0x3ef3a4(0x507)][_0x60a78c(0x1f3)]+'\x20'+_0x38c4c3+'h';else _0x231916>0x0?_0x7606f=_0x231916>0x1?'-\x20'+this[_0x3ef3a4(0x507)][_0x3ccd81(0x328)]+'\x20'+_0x231916+'m':'-\x20'+this[_0x3ccd81(0x2ba)][_0x3ccd81(0x355)]+'\x20'+_0x231916+'m':_0x7606f=_0x6a6ab>0x1?'-\x20'+this[_0x3ccd81(0x2ba)][_0x3ccd81(0x328)]+'\x20'+_0x6a6ab+'s':'-\x20'+this[_0x3ccd81(0x2ba)][_0x3ccd81(0x355)]+'\x20'+_0x6a6ab+'s';}console[_0x60a78c(0x185)](_0x7606f);}),_0x4b95e9['on'](_0x5c81fa(0x3ed),_0x2c0d22=>{const _0x29642e=_0x123fcd,_0x56a9b9=_0x5c81fa;let _0x2939f5=_0x2c0d22/0x104800;_0x3e5db0[_0x29642e(0x365)]=this[_0x56a9b9(0x2ba)][_0x29642e(0x1bc)]+_0x29642e(0x422)+_0x2939f5[_0x56a9b9(0x18d)](0x2)+_0x29642e(0x344)+_0x7606f;}),_0x4b95e9['on'](_0x54536d(0x161),_0x149ebe=>{const _0x55c4d7=_0x123fcd,_0x18e8d5=_0x5c81fa;_0x524041[_0x18e8d5(0x487)]+='\x0a'+this[_0x55c4d7(0x507)][_0x18e8d5(0x389)]+_0x18e8d5(0x46d)+_0x149ebe+']',_0x278877(),consoleOutput_+=_0x18e8d5(0x298)+_0x149ebe+'\x0a';}),_0x4b95e9['on'](_0x5c81fa(0x31d),async _0x2dcca7=>{const _0x1da1d0=_0x228a08,_0x30a1d7=_0x54536d,_0x327a3d=_0x123fcd,_0x212a07=_0x5c81fa;new logger(_0x212a07(0x15a),_0x212a07(0x226)),consoleOutput_+=_0x327a3d(0x288)+_0x2dcca7+'\x0a';if(_0x417110[_0x212a07(0x39d)][_0x327a3d(0x47c)]===_0x327a3d(0x36b))ipcRenderer[_0x212a07(0x3ae)](_0x212a07(0x395));_0x87599c[_0x327a3d(0x313)][_0x212a07(0x1ef)]=_0x212a07(0x49b);if(_0x2dcca7[_0x327a3d(0x3c7)](_0x212a07(0x1a3)))_0x3e5db0[_0x212a07(0x487)]=this[_0x30a1d7(0x2de)][_0x212a07(0x2ca)]+_0x212a07(0x2e3);;if(_0x54a033==![]){Toast[_0x212a07(0x147)]({'icon':_0x212a07(0x290),'title':this[_0x212a07(0x2ba)][_0x212a07(0x2ca)]+_0x212a07(0x2e3)}),_0x54a033=!![];let _0x12a398=dataDirectory+_0x212a07(0x1ac);if(fs[_0x212a07(0x34e)](_0x12a398))try{const _0x4bc544=fs[_0x327a3d(0x203)](_0x12a398),_0x3b55b2=await a167_0x12ea22[_0x212a07(0x18b)](_0x4bc544);console[_0x327a3d(0x249)](_0x212a07(0x18f)),console[_0x212a07(0x203)](_0x3b55b2[_0x212a07(0x31d)][_0x212a07(0x40f)]);let _0x16e611=this[_0x212a07(0x1d9)][_0x327a3d(0x555)];console[_0x212a07(0x203)](_0x212a07(0x1cf)),console[_0x212a07(0x203)](_0x16e611);let _0x45b23a=[];for(let _0x2c1527=0x0;_0x2c1527<_0x16e611[_0x212a07(0x232)];_0x2c1527++){const _0x1a0f4c={'name':_0x16e611[_0x2c1527][_0x327a3d(0x1d8)],'ip':_0x16e611[_0x2c1527]['ip'],'icon':_0x16e611[_0x2c1527][_0x30a1d7(0x2bc)]},_0x265ecd=_0x3b55b2[_0x212a07(0x31d)][_0x212a07(0x40f)][_0x212a07(0x437)](_0x5e6e91=>_0x5e6e91['ip']===_0x1a0f4c['ip']);!_0x265ecd?_0x45b23a[_0x327a3d(0x1c5)](_0x1a0f4c):console[_0x212a07(0x203)](_0x212a07(0x23d)+_0x1a0f4c['ip']+_0x212a07(0x3a8));}console[_0x212a07(0x203)](_0x212a07(0x3c8)),console[_0x212a07(0x203)](_0x45b23a),_0x3b55b2[_0x212a07(0x31d)][_0x327a3d(0x2d3)]=_0x45b23a[_0x212a07(0x41a)](_0x3b55b2[_0x212a07(0x31d)][_0x327a3d(0x2d3)]);const _0x28028a=await a167_0x12ea22[_0x212a07(0x37c)](_0x3b55b2);fs[_0x212a07(0x3f6)](_0x12a398,_0x28028a),console[_0x212a07(0x203)](_0x212a07(0x4b7));}catch(_0x437303){console[_0x327a3d(0x413)](_0x212a07(0x22a),_0x437303);}else try{let _0x1ccce2=this[_0x327a3d(0x522)][_0x212a07(0x258)];console[_0x327a3d(0x249)](_0x212a07(0x1cf)),console[_0x212a07(0x203)](_0x1ccce2);let _0x49eaf8=[];for(let _0x16968=0x0;_0x16968<_0x1ccce2[_0x212a07(0x232)];_0x16968++){const _0x2d28fa={'name':_0x1ccce2[_0x16968][_0x327a3d(0x1d8)],'ip':_0x1ccce2[_0x16968]['ip'],'icon':_0x1ccce2[_0x16968][_0x212a07(0x37d)]};_0x49eaf8[_0x212a07(0x1fe)](_0x2d28fa);}console[_0x212a07(0x203)](_0x212a07(0x3c8)),console[_0x327a3d(0x249)](_0x49eaf8);const _0x3fdbfa={'servers':_0x49eaf8},_0x151b85=await a167_0x12ea22[_0x30a1d7(0x44f)](_0x3fdbfa);fs[_0x212a07(0x3f6)](_0x12a398,_0x151b85),console[_0x212a07(0x203)](_0x212a07(0x4bc));}catch(_0xa93de4){console[_0x327a3d(0x413)](_0x212a07(0x1b1),_0xa93de4);}let _0x5d86e8=this[_0x327a3d(0x1ba)];console[_0x212a07(0x203)](_0x212a07(0x3f1)),console[_0x212a07(0x203)](_0x5d86e8);const _0x33b132=dataDirectory+'/'+(process[_0x212a07(0x4d5)]==_0x327a3d(0x401)?this[_0x212a07(0x439)][_0x212a07(0x20c)]:'.'+this[_0x212a07(0x439)][_0x327a3d(0x256)])+_0x212a07(0x132),_0x29237b=dataDirectory+'/'+(process[_0x327a3d(0x212)]==_0x212a07(0x1e8)?this[_0x212a07(0x439)][_0x212a07(0x20c)]:'.'+this[_0x212a07(0x439)][_0x212a07(0x20c)])+_0x327a3d(0x506),_0x3be5e3=dataDirectory+'/'+(process[_0x212a07(0x4d5)]==_0x212a07(0x1e8)?this[_0x212a07(0x439)][_0x212a07(0x20c)]:'.'+this[_0x327a3d(0x39f)][_0x212a07(0x20c)])+_0x30a1d7(0x298);let _0x13616b=dataDirectory+'/'+(process[_0x212a07(0x4d5)]==_0x212a07(0x1e8)?this[_0x212a07(0x439)][_0x212a07(0x20c)]:'.'+this[_0x30a1d7(0x348)][_0x327a3d(0x256)])+_0x212a07(0x231),_0x151453=dataDirectory+'/'+(process[_0x30a1d7(0x1b8)]==_0x212a07(0x1e8)?this[_0x212a07(0x439)][_0x212a07(0x20c)]:'.'+this[_0x212a07(0x439)][_0x212a07(0x20c)])+_0x212a07(0x477),_0x4357b8=dataDirectory+'/'+(process[_0x212a07(0x4d5)]==_0x327a3d(0x401)?this[_0x212a07(0x439)][_0x212a07(0x20c)]:'.'+this[_0x212a07(0x439)][_0x212a07(0x20c)])+_0x327a3d(0x24c),_0x2b4685=dataDirectory+'/'+(process[_0x212a07(0x4d5)]==_0x212a07(0x1e8)?this[_0x212a07(0x439)][_0x212a07(0x20c)]:'.'+this[_0x212a07(0x439)][_0x212a07(0x20c)])+_0x30a1d7(0x136),_0x3082a=dataDirectory+'/'+(process[_0x212a07(0x4d5)]==_0x212a07(0x1e8)?this[_0x327a3d(0x39f)][_0x212a07(0x20c)]:'.'+this[_0x327a3d(0x39f)][_0x212a07(0x20c)])+_0x212a07(0x2f2),_0x13c741=dataDirectory+'/'+(process[_0x212a07(0x4d5)]==_0x212a07(0x1e8)?this[_0x327a3d(0x39f)][_0x212a07(0x20c)]:'.'+this[_0x212a07(0x439)][_0x212a07(0x20c)])+_0x212a07(0x182),_0x32a68f=dataDirectory+'/'+(process[_0x30a1d7(0x1b8)]==_0x212a07(0x1e8)?this[_0x212a07(0x439)][_0x212a07(0x20c)]:'.'+this[_0x327a3d(0x39f)][_0x212a07(0x20c)])+_0x212a07(0x4e6);fs[_0x30a1d7(0x3b7)](_0x32a68f)&&fs[_0x212a07(0x21b)](_0x32a68f),fs[_0x212a07(0x34e)](_0x13c741)&&fs[_0x327a3d(0x47a)](_0x13c741),(fs[_0x212a07(0x21b)](_0x33b132),fs[_0x30a1d7(0x28e)](_0x29237b),fs[_0x212a07(0x21b)](_0x3be5e3));const _0x233ff8=_0x3c0dba;let _0x39ce19;_0x233ff8[_0x327a3d(0x3c7)]('-')?(_0x39ce19=_0x233ff8[_0x327a3d(0x396)](/-[^.]+/,''),console[_0x212a07(0x203)](_0x39ce19)):console[_0x30a1d7(0x185)](_0x233ff8);const _0x1b7e66=_0x5d86e8[_0x212a07(0x296)][_0x327a3d(0x272)](_0x15c457=>_0x15c457['id']===_0x39ce19);if(_0x1b7e66){function _0x509d86(_0x439d66){const _0x21aed8=_0x212a07,_0x5380a1=parseFloat(_0x439d66);if(!isNaN(_0x5380a1)){const _0x53e9bc=_0x5380a1[_0x21aed8(0x21a)]();return _0x53e9bc;}return _0x439d66;}const _0x12518e=_0x509d86(_0x1b7e66[_0x212a07(0x323)]);console[_0x212a07(0x203)](_0x212a07(0x350)+_0x12518e+_0x327a3d(0x390)+_0x3c0dba+_0x212a07(0x32b)+_0x2f332e+_0x327a3d(0x43a)+_0x1b7e66+_0x212a07(0x459)+_0x58fb45+_0x212a07(0x49d));let _0x5eae36=[_0x212a07(0x1fa),_0x212a07(0x2fe),_0x212a07(0x274),_0x212a07(0x4f7),_0x212a07(0x210),_0x212a07(0x278),_0x212a07(0x35a),_0x212a07(0x33e),_0x212a07(0x1f7),_0x327a3d(0x469),_0x327a3d(0x1c6),_0x327a3d(0x423),_0x327a3d(0x51e),_0x212a07(0x253),_0x212a07(0x3c3),_0x212a07(0x3fc),_0x327a3d(0x3b1),_0x212a07(0x41b),_0x212a07(0x420),_0x212a07(0x4ac),_0x327a3d(0x41a),_0x212a07(0x29d),_0x212a07(0x1ad),_0x212a07(0x1e2),_0x212a07(0x45e),_0x212a07(0x2ff),_0x212a07(0x360),_0x327a3d(0x2d6),_0x212a07(0x4f1),_0x212a07(0x2a7),_0x212a07(0x35e),_0x212a07(0x410),_0x212a07(0x492),_0x212a07(0x25c),_0x212a07(0x34d),_0x30a1d7(0x412),_0x212a07(0x494),_0x327a3d(0x4f7),_0x327a3d(0x527),_0x212a07(0x4e0),_0x212a07(0x3cc)];console[_0x212a07(0x203)](_0x12518e),console[_0x212a07(0x203)](_0x12518e>1.16),console[_0x327a3d(0x249)]('dx'),console[_0x212a07(0x203)](_0x3c0dba),console[_0x212a07(0x203)](_0x12518e<=1.9[_0x212a07(0x21a)]());const _0x148986=[1.16,1.15,1.14,1.13,1.12,1.11,1.1,1.9,1.8,1.7,1.6,1.5,1.4,1.3],_0x42f5ac=[1.17,1.18,1.19,1.2,1.21],_0xc6a9a8=[_0x212a07(0x2fe),_0x1da1d0(0x102)];console[_0x212a07(0x203)](_0x12518e),console[_0x212a07(0x203)](_0x42f5ac[_0x212a07(0x34b)](_0x12518e)),console[_0x327a3d(0x249)](!_0x148986[_0x212a07(0x34b)](_0x12518e));if(_0xc6a9a8[_0x212a07(0x34b)](_0x3c0dba)&&_0x58fb45===_0x212a07(0x36c))fs[_0x30a1d7(0x325)](_0x2b4685,dataDirectory+'/'+(process[_0x212a07(0x4d5)]==_0x212a07(0x1e8)?this[_0x212a07(0x439)][_0x212a07(0x20c)]:'.'+this[_0x212a07(0x439)][_0x212a07(0x20c)])+_0x212a07(0x182));else _0xc6a9a8[_0x212a07(0x34b)](_0x3c0dba)&&_0x58fb45===_0x212a07(0x4a8)&&fs[_0x212a07(0x414)](_0x3082a,dataDirectory+'/'+(process[_0x327a3d(0x212)]==_0x327a3d(0x401)?this[_0x212a07(0x439)][_0x212a07(0x20c)]:'.'+this[_0x327a3d(0x39f)][_0x212a07(0x20c)])+_0x212a07(0x4e6));if(_0x42f5ac[_0x212a07(0x34b)](parseFloat(_0x2f332e))&&!_0x148986[_0x30a1d7(0x247)](parseFloat(_0x2f332e))&&_0x58fb45==_0x212a07(0x36c))console[_0x212a07(0x203)](_0x30a1d7(0x403)),fs[_0x212a07(0x414)](_0x4357b8,_0x3be5e3),fs[_0x212a07(0x34e)](_0x33b132)&&fs[_0x212a07(0x21b)](_0x33b132),fs[_0x212a07(0x34e)](_0x29237b)&&fs[_0x212a07(0x21b)](_0x29237b);else{if(_0x5eae36[_0x212a07(0x34b)](_0x2f332e)&&_0x58fb45==_0x212a07(0x36c))console[_0x327a3d(0x249)](_0x327a3d(0x412)),fs[_0x212a07(0x414)](_0x151453,_0x29237b),fs[_0x212a07(0x34e)](_0x33b132)&&fs[_0x212a07(0x21b)](_0x33b132),fs[_0x212a07(0x34e)](_0x3be5e3)&&fs[_0x212a07(0x21b)](_0x3be5e3);else(_0x58fb45==_0x212a07(0x4a8)||_0x58fb45==_0x212a07(0x405))&&(console[_0x212a07(0x203)](_0x212a07(0x2da)),fs[_0x212a07(0x414)](_0x13616b,_0x33b132),fs[_0x327a3d(0x4b1)](_0x29237b)&&fs[_0x212a07(0x21b)](_0x29237b),fs[_0x212a07(0x34e)](_0x3be5e3)&&fs[_0x212a07(0x21b)](_0x3be5e3));}}else console[_0x30a1d7(0x185)](_0x212a07(0x4ad));let _0x46e947=dataDirectory+'/'+(process[_0x212a07(0x4d5)]==_0x212a07(0x1e8)?this[_0x212a07(0x439)][_0x327a3d(0x256)]:'.'+this[_0x212a07(0x439)][_0x327a3d(0x256)])+_0x30a1d7(0x237),_0x4373bb={'version':_0x327a3d(0x241),'buildNumber':0x8,'loadlist':[{'name':_0x327a3d(0x3c3),'type':_0x212a07(0x49e),'checkPNG':![],'skin':_0x212a07(0x4f5),'model':_0x212a07(0x159),'cape':_0x212a07(0x3bd)},{'name':_0x212a07(0x418),'type':_0x327a3d(0x30f),'apiRoot':_0x212a07(0x292),'sessionRoot':_0x212a07(0x1c3)},{'name':_0x212a07(0x319),'type':_0x212a07(0x49e),'checkPNG':![],'model':_0x212a07(0x159),'cape':_0x212a07(0x3bf)},{'name':_0x212a07(0x351),'type':_0x30a1d7(0x2a1),'checkPNG':![],'model':_0x327a3d(0x269),'cape':_0x212a07(0x2ab)}],'enableDynamicSkull':!![],'enableTransparentSkin':!![],'forceIgnoreHttpsCertificate':!![],'forceLoadAllTextures':!![],'enableCape':!![],'threadPoolSize':0x8,'enableLogStdOut':![],'cacheExpiry':0x1e,'forceUpdateSkull':!![],'enableLocalProfileCache':![],'enableCacheAutoClean':!![],'forceDisableCache':!![]};fs[_0x212a07(0x34e)](path[_0x327a3d(0x4e9)](_0x46e947))?fs[_0x212a07(0x3f6)](_0x46e947,JSON[_0x212a07(0x4eb)](_0x4373bb)):(fs[_0x212a07(0x204)](dataDirectory+_0x212a07(0x2be)),fs[_0x212a07(0x3f6)](_0x46e947,JSON[_0x327a3d(0x2bc)](_0x4373bb)));}console[_0x327a3d(0x249)](_0x2dcca7);if(_0x2dcca7[_0x212a07(0x34b)](_0x327a3d(0x1bb)))return ShowPanelError(this[_0x212a07(0x2ba)][_0x212a07(0x33f)]+_0x212a07(0x1ae)+_0x2dcca7);if(_0x2dcca7[_0x212a07(0x34b)](_0x212a07(0x4e8)))return ShowPanelError(this[_0x212a07(0x2ba)][_0x212a07(0x177)]+_0x212a07(0x1ae)+_0x2dcca7);if(_0x2dcca7[_0x212a07(0x34b)](_0x212a07(0x178)))return ShowPanelError(this[_0x212a07(0x2ba)][_0x212a07(0x27a)]+_0x212a07(0x1ae)+_0x2dcca7);if(_0x2dcca7[_0x212a07(0x34b)](_0x212a07(0x135)))return ShowPanelError(this[_0x212a07(0x2ba)][_0x327a3d(0x375)]+_0x212a07(0x1ae)+_0x2dcca7);_0x2dcca7[_0x212a07(0x34b)](_0x212a07(0x403))&&(ShowPanelError(this[_0x212a07(0x2ba)][_0x212a07(0x299)]+_0x212a07(0x1ae)+_0x2dcca7),_0x87599c[_0x212a07(0x20b)][_0x327a3d(0x26c)]=_0x212a07(0x49b),_0x3e5db0[_0x327a3d(0x313)][_0x212a07(0x1ef)]=_0x212a07(0x49b),_0x2d68eb[_0x212a07(0x20b)][_0x327a3d(0x26c)]='');if(_0x2dcca7[_0x212a07(0x34b)](_0x212a07(0x1aa)))return ShowPanelError(this[_0x30a1d7(0x2de)][_0x212a07(0x130)]+_0x327a3d(0x3cc)+_0x2dcca7);if(_0x2dcca7[_0x212a07(0x34b)](_0x212a07(0x1bb))&&!_0x2dcca7[_0x212a07(0x34b)](_0x327a3d(0x515)))return ShowPanelError(this[_0x327a3d(0x507)][_0x327a3d(0x1df)]+_0x212a07(0x1ae)+_0x2dcca7);if(_0x2dcca7[_0x212a07(0x34b)](_0x327a3d(0x3ed)))return ShowPanelError(this[_0x327a3d(0x507)][_0x327a3d(0x3ab)]+_0x212a07(0x1ae)+_0x2dcca7);if(_0x2dcca7[_0x212a07(0x34b)](_0x212a07(0x24c)))return ShowPanelError(this[_0x212a07(0x2ba)][_0x212a07(0x130)]+_0x327a3d(0x3cc)+_0x2dcca7);if(_0x2dcca7[_0x212a07(0x34b)](_0x212a07(0x2fb)+_0x14dcc3[_0x212a07(0x25f)])||_0x2dcca7[_0x212a07(0x34b)](_0x212a07(0x33c))){if(_0x49b0f5==![]){let _0x1ef28f;if(_0x3c0dba[_0x212a07(0x302)](_0x212a07(0x45d)))_0x1ef28f=_0x212a07(0x3f0);else{if(_0x3c0dba[_0x212a07(0x302)](_0x327a3d(0x36f)))_0x1ef28f=_0x327a3d(0x2ca);else _0x3c0dba[_0x327a3d(0x505)](_0x212a07(0x3c4))?_0x1ef28f=_0x327a3d(0x508):_0x1ef28f='';}ipcRenderer[_0x212a07(0x3ae)](_0x327a3d(0x4b9),this[_0x212a07(0x2ba)][_0x327a3d(0x27e)]+'\x20'+_0x3c0dba[_0x212a07(0x148)](_0x212a07(0x45d),'')[_0x212a07(0x148)](_0x30a1d7(0x3a8),'')[_0x212a07(0x148)](_0x212a07(0x3c4),'')+'\x20'+_0x1ef28f),console[_0x327a3d(0x249)](_0x212a07(0x434)+_0x3c0dba),this[_0x327a3d(0x3e3)](_0x14dcc3[_0x212a07(0x25f)],_0x212a07(0x441),this[_0x212a07(0x2ba)][_0x327a3d(0x27e)]+'\x20'+_0x2f332e[_0x30a1d7(0x169)](_0x212a07(0x45d),'')[_0x212a07(0x148)](_0x212a07(0x22f),'')[_0x212a07(0x148)](_0x212a07(0x3c4),'')+'\x20'+_0x1ef28f),_0x54222e[_0x212a07(0x329)](),_0x49b0f5=!![],_0x3e5db0[_0x212a07(0x487)]=this[_0x212a07(0x2ba)][_0x212a07(0x4e3)]+'.',ipcRenderer[_0x212a07(0x3ae)](_0x212a07(0x4c5),{'title':this[_0x212a07(0x2ba)][_0x327a3d(0x316)],'body':this[_0x30a1d7(0x2de)][_0x212a07(0x264)]}),ipcRenderer[_0x212a07(0x3ae)](_0x212a07(0x40b));}}if(_0x2dcca7[_0x212a07(0x34b)](_0x327a3d(0x408))){let _0xe89edd=_0x2dcca7[_0x212a07(0x144)](_0x30a1d7(0x38c))[0x1][_0x327a3d(0x3fe)](_0x212a07(0x2e3))[0x0];_0x3e5db0[_0x30a1d7(0x2f6)]=_0x212a07(0x39f)+_0xe89edd;}}),_0x4b95e9['on'](_0x5c81fa(0x1ea),_0x1c4aa1=>{const _0x4e9d1f=_0x228a08,_0x56b5a2=_0x54536d,_0x10115f=_0x123fcd,_0x4f7a2c=_0x5c81fa;consoleOutput_+=_0x4f7a2c(0x4f8)+_0x1c4aa1+_0x10115f(0x1d1),_0x54222e[_0x4f7a2c(0x329)]();if(_0x417110[_0x4f7a2c(0x39d)][_0x4f7a2c(0x1ea)]===_0x10115f(0x36b))ipcRenderer[_0x4f7a2c(0x3ae)](_0x4f7a2c(0x2de));ipcRenderer[_0x4f7a2c(0x3ae)](_0x10115f(0x4ec),{'status':_0x4f7a2c(0x4ae),'details':this[_0x4f7a2c(0x2ba)][_0x4f7a2c(0x4da)],'username':_0x14dcc3[_0x56b5a2(0x15c)]}),_0x87599c[_0x4f7a2c(0x20b)][_0x4f7a2c(0x1ef)]=_0x56b5a2(0x263),_0x3e5db0[_0x4f7a2c(0x20b)][_0x4f7a2c(0x1ef)]=_0x4f7a2c(0x49b),_0x2d68eb[_0x4f7a2c(0x20b)][_0x4f7a2c(0x1ef)]='',_0x3e5db0[_0x4f7a2c(0x487)]=_0x4f7a2c(0x3ad),new logger(_0x4f7a2c(0x265),_0x4f7a2c(0x34c)),console[_0x4f7a2c(0x203)](_0x4f7a2c(0x28c)),_0x87599c[_0x10115f(0x313)][_0x4f7a2c(0x1ef)]=_0x4f7a2c(0x49b),ipcRenderer[_0x4f7a2c(0x3ae)](_0x4e9d1f(0x396)),_0x3c0dba=null,_0x58fb45=null,_0x3c896d=null,_0x2f332e=null,_0x1ba3ce=null,_0x245db6=null,_0xc115fc=![],_0xdc7b23=![],_0x8de3f5=![],document[_0x4f7a2c(0x2c5)](_0x4f7a2c(0x261))[_0x4f7a2c(0x1f9)](_0x4f7a2c(0x1b0)),document[_0x10115f(0x3d3)](_0x4f7a2c(0x1b9))[_0x4f7a2c(0x1f9)](_0x4f7a2c(0x1b0)),document[_0x4f7a2c(0x2c5)](_0x10115f(0x2a9))['removeAttribute'](_0x4f7a2c(0x1b0)),document[_0x4f7a2c(0x2c5)](_0x4f7a2c(0x2c6))[_0x4f7a2c(0x1f9)](_0x4f7a2c(0x1b0));}),_0x4b95e9['on'](_0x5c81fa(0x3fd),_0x1cdeb0=>{const _0x29abee=_0x123fcd,_0x4afce9=_0x5c81fa;consoleOutput_+=_0x4afce9(0x1e3)+JSON[_0x29abee(0x2bc)](_0x1cdeb0,null,0x2)+'\x0a';});});});}async[a167_0x1abf9b(0x388)](){const _0x434e96=a167_0x1c41,_0x11d86e=a167_0x241423,_0x2e1a9d=a167_0x1541f3,_0x2c4680=a167_0x1abf9b;let _0x35c805=document[_0x2c4680(0x2c5)](_0x2c4680(0x40e)),_0x3c0d51=document[_0x2c4680(0x2c5)](_0x2c4680(0x3d7)),_0x39b555=document[_0x2c4680(0x2c5)](_0x2c4680(0x391)),_0x3e82ea=document[_0x2c4680(0x2c5)](_0x2c4680(0x157)),_0x22177f=document[_0x2e1a9d(0x3d3)](_0x2c4680(0x244)),_0x40a6ac=_0x2c4680(0x336),_0x21fa1c=_0x2c4680(0x233),_0x52a08d=_0x40a6ac+_0x2c4680(0x1da);const _0x540f6e=require(_0x434e96(0x103)),_0x4ccd97=new _0x540f6e[(_0x2c4680(0x2c4))]({'rejectUnauthorized':![]}),_0x1d9855=require(_0x2e1a9d(0x1c1));await _0x1d9855[_0x2c4680(0x188)](_0x40a6ac,{'httpsAgent':_0x4ccd97})[_0x2c4680(0x4d7)](_0x3d1dfa=>{const _0x521103=_0x2e1a9d,_0x23c4ba=_0x2c4680;_0x3d1dfa[_0x23c4ba(0x2ad)]===0xc8?(_0x35c805[_0x521103(0x365)]=_0x23c4ba(0x2f8)+this[_0x23c4ba(0x2ba)][_0x23c4ba(0x184)]+_0x23c4ba(0x48e),_0x39b555[_0x521103(0x407)]=_0x23c4ba(0x4ae)):(_0x35c805[_0x23c4ba(0x487)]=_0x23c4ba(0x154)+this[_0x521103(0x507)][_0x521103(0x23e)]+_0x23c4ba(0x48e),_0x39b555[_0x23c4ba(0x1f6)]=_0x521103(0x510));})[_0x2c4680(0x2a2)](_0x4aa0a7=>{const _0x2fba40=_0x2e1a9d,_0x3e6af5=_0x2c4680;_0x35c805[_0x2fba40(0x365)]=_0x3e6af5(0x154)+this[_0x3e6af5(0x2ba)][_0x3e6af5(0x41f)]+_0x2fba40(0x1be),_0x39b555[_0x3e6af5(0x1f6)]=_0x3e6af5(0x367);}),await _0x1d9855[_0x11d86e(0x436)](_0x21fa1c,{'httpsAgent':_0x4ccd97})[_0x2e1a9d(0x351)](_0x194b67=>{const _0x36f256=_0x2e1a9d,_0x20ed3b=_0x2c4680;_0x194b67[_0x20ed3b(0x2ad)]===0xc8?(_0x3c0d51[_0x20ed3b(0x487)]=_0x20ed3b(0x2f8)+this[_0x20ed3b(0x2ba)][_0x20ed3b(0x184)]+_0x20ed3b(0x48e),_0x3e82ea[_0x20ed3b(0x1f6)]=_0x20ed3b(0x4ae)):(_0x3c0d51[_0x36f256(0x365)]=_0x20ed3b(0x154)+this[_0x20ed3b(0x2ba)][_0x20ed3b(0x41f)]+_0x20ed3b(0x48e),_0x3e82ea[_0x20ed3b(0x1f6)]=_0x36f256(0x510));})[_0x11d86e(0x44e)](_0x2c1364=>{const _0x217594=_0x2e1a9d,_0x201a45=_0x2c4680;_0x3c0d51[_0x201a45(0x487)]=_0x201a45(0x154)+this[_0x217594(0x507)][_0x217594(0x23e)]+_0x201a45(0x48e),_0x3e82ea[_0x201a45(0x1f6)]=_0x201a45(0x367);}),await _0x1d9855[_0x11d86e(0x436)](_0x52a08d,{'httpsAgent':_0x4ccd97})[_0x2c4680(0x4d7)](_0x10032d=>{const _0x399ca7=_0x2c4680;_0x10032d[_0x399ca7(0x2ad)]===0xc8&&(_0x22177f[_0x399ca7(0x487)]=_0x10032d[_0x399ca7(0x31d)][_0x399ca7(0x38f)]+'\x20'+this[_0x399ca7(0x2ba)][_0x399ca7(0x1ba)]);})[_0x2c4680(0x2a2)](_0x3f477a=>{const _0x35d70e=_0x2c4680;_0x22177f[_0x35d70e(0x487)]='0';});}[a167_0x1541f3(0x541)](){const _0x230503=a167_0x1abf9b;document[_0x230503(0x2c5)](_0x230503(0x136))[_0x230503(0x1c6)](_0x230503(0x3e6),()=>{const _0x4b7d87=_0x230503;changePanel(_0x4b7d87(0x311));});}async[a167_0x1abf9b(0x338)](_0x17cba8){const _0x2d7ca2=a167_0x1c41,_0x2574e9=a167_0x241423,_0x4e5ca5=a167_0x1541f3,_0xa567cf=a167_0x1abf9b;let _0x21c18e=new Date(_0x17cba8),_0x45b540=_0x21c18e[_0xa567cf(0x221)](),_0x2ed696=_0x21c18e[_0xa567cf(0x43d)]()+0x1,_0x5ee08a=_0x21c18e[_0xa567cf(0x4c3)](),_0x3bdabe=[this[_0xa567cf(0x2ba)][_0xa567cf(0x353)],this[_0xa567cf(0x2ba)][_0xa567cf(0x3e9)],this[_0xa567cf(0x2ba)][_0x4e5ca5(0x42f)],this[_0xa567cf(0x2ba)][_0xa567cf(0x3c5)],this[_0xa567cf(0x2ba)][_0xa567cf(0x2ed)],this[_0xa567cf(0x2ba)][_0xa567cf(0x269)],this[_0xa567cf(0x2ba)][_0xa567cf(0x3dd)],this[_0xa567cf(0x2ba)][_0x2d7ca2(0x2d5)],this[_0xa567cf(0x2ba)][_0x2574e9(0x233)],this[_0xa567cf(0x2ba)][_0xa567cf(0x478)],this[_0xa567cf(0x2ba)][_0xa567cf(0x359)],this[_0xa567cf(0x2ba)][_0x4e5ca5(0x2c4)]];return{'year':_0x45b540,'month':_0x3bdabe[_0x2ed696-0x1],'day':_0x5ee08a};}}function a167_0x2364(_0x59f722,_0x12ab91){const _0x953143=a167_0xd8e9();return a167_0x2364=function(_0x6de71f,_0x3790a8){_0x6de71f=_0x6de71f-0x115;let _0x4ced35=_0x953143[_0x6de71f];return _0x4ced35;},a167_0x2364(_0x59f722,_0x12ab91);}function a167_0x3167(_0x56e916,_0x44268c){const _0x47dabe=a167_0x159b();return a167_0x3167=function(_0x3d07e5,_0x41432e){_0x3d07e5=_0x3d07e5-0x1b2;let _0x2902d5=_0x47dabe[_0x3d07e5];return _0x2902d5;},a167_0x3167(_0x56e916,_0x44268c);}export default Home;function a167_0x1c41(_0x3fe321,_0x5d02ab){const _0x1705ec=a167_0x1705();return a167_0x1c41=function(_0x1c4174,_0x4780d7){_0x1c4174=_0x1c4174-0x89;let _0x321f7f=_0x1705ec[_0x1c4174];return _0x321f7f;},a167_0x1c41(_0x3fe321,_0x5d02ab);}function a167_0x159b(){const _0x3f644f=a167_0x1c41,_0x4cdffd=a167_0x241423,_0x2a3e74=[_0x4cdffd(0x3b6),_0x4cdffd(0x224),_0x4cdffd(0x2cd),_0x4cdffd(0x220),_0x4cdffd(0x115),_0x3f644f(0x370),_0x4cdffd(0x391),_0x4cdffd(0x13f),'open_instance_folder',_0x4cdffd(0x17f),_0x4cdffd(0x34d),'news-battly',_0x4cdffd(0x389),_0x4cdffd(0x2d1),_0x4cdffd(0x21a),_0x4cdffd(0x12c),_0x4cdffd(0x474),_0x4cdffd(0x218),_0x3f644f(0x171),_0x4cdffd(0x146),'BattlyAPI',_0x4cdffd(0x2e8),_0x4cdffd(0x201),_0x4cdffd(0x35a),_0x4cdffd(0x247),_0x4cdffd(0x360),_0x4cdffd(0x29b),_0x4cdffd(0x25a),_0x3f644f(0x20e),_0x4cdffd(0x41c),_0x4cdffd(0x11d),_0x3f644f(0x131),_0x4cdffd(0x3d8),_0x4cdffd(0x3a4),_0x4cdffd(0x3a1),_0x3f644f(0x2fd),_0x4cdffd(0x150),_0x4cdffd(0x3cf),_0x4cdffd(0x1ed),_0x4cdffd(0x22a),_0x3f644f(0x1a6),_0x3f644f(0x248),_0x3f644f(0x27c),_0x4cdffd(0x2a5),_0x4cdffd(0x473),_0x4cdffd(0x3f8),_0x3f644f(0x125),_0x4cdffd(0x1a4),_0x4cdffd(0x14e),_0x4cdffd(0x416),_0x4cdffd(0x493),_0x4cdffd(0x464),_0x4cdffd(0x177),_0x4cdffd(0x445),_0x4cdffd(0x137),_0x4cdffd(0x1ae),_0x4cdffd(0x3de),_0x4cdffd(0x382),_0x4cdffd(0x2b1),_0x4cdffd(0x11e),_0x3f644f(0x375),_0x4cdffd(0x1cf),_0x4cdffd(0x2d7),_0x4cdffd(0x42d),_0x4cdffd(0x374),_0x4cdffd(0x41a),_0x4cdffd(0x11c),_0x4cdffd(0x1dd),_0x3f644f(0x1a4),_0x4cdffd(0x35b),_0x3f644f(0x228),_0x4cdffd(0x2cc),_0x4cdffd(0x46c),_0x4cdffd(0x480),_0x4cdffd(0x32d),_0x4cdffd(0x47f),'.select-selected',_0x4cdffd(0x1fc),_0x4cdffd(0x127),_0x4cdffd(0x341),_0x3f644f(0x261),_0x4cdffd(0x1db),_0x4cdffd(0x40b),_0x4cdffd(0x3a2),'.zip',_0x4cdffd(0x2e6),_0x3f644f(0x95),_0x4cdffd(0x12f),_0x4cdffd(0x19e),_0x4cdffd(0x47b),_0x4cdffd(0x290),_0x3f644f(0x331),_0x4cdffd(0x325),_0x4cdffd(0x15a),_0x3f644f(0x338),_0x4cdffd(0x3d5),_0x4cdffd(0x406),_0x4cdffd(0x323),'instances',_0x4cdffd(0x29f),_0x4cdffd(0x210),_0x4cdffd(0x3ac),_0x4cdffd(0x23a),_0x4cdffd(0x14f),_0x4cdffd(0x2f3),_0x3f644f(0x202),_0x4cdffd(0x298),_0x4cdffd(0x3bf),_0x4cdffd(0x429),_0x4cdffd(0x337),_0x4cdffd(0x295),_0x4cdffd(0x453),_0x4cdffd(0x310),_0x4cdffd(0x188),_0x4cdffd(0x24e),_0x3f644f(0xb6),_0x4cdffd(0x190),_0x4cdffd(0x410),_0x3f644f(0x1e8),_0x4cdffd(0x151),_0x4cdffd(0x2b4),_0x4cdffd(0x143),_0x4cdffd(0x2e7),_0x4cdffd(0x3b3),_0x4cdffd(0x43f),_0x4cdffd(0x246),_0x4cdffd(0x2b5),_0x4cdffd(0x19f),_0x4cdffd(0x174),_0x4cdffd(0x404),_0x4cdffd(0x3f5),_0x4cdffd(0x3f0),_0x3f644f(0x178),_0x3f644f(0x308),_0x4cdffd(0x487),_0x4cdffd(0x1e0),_0x4cdffd(0x49a),_0x4cdffd(0x2d3),_0x4cdffd(0x476),_0x4cdffd(0x192),_0x4cdffd(0x329),_0x4cdffd(0x1a5),_0x4cdffd(0x417),_0x4cdffd(0x461),_0x4cdffd(0x164),_0x3f644f(0x1c4),_0x4cdffd(0x483),_0x4cdffd(0x380),_0x4cdffd(0x3b0),_0x4cdffd(0x23f),_0x3f644f(0x1f6),_0x4cdffd(0x3e7),_0x4cdffd(0x2cf),_0x4cdffd(0x2f4),_0x4cdffd(0x154),_0x4cdffd(0x1ad),'1.8.5',_0x3f644f(0x1c5),_0x4cdffd(0x22c),_0x4cdffd(0x2e2),_0x4cdffd(0x24a),_0x4cdffd(0x3e4),_0x4cdffd(0x2b2),_0x4cdffd(0x2ff),_0x4cdffd(0x376),'stopTimer',_0x3f644f(0x236),_0x4cdffd(0x45d),_0x4cdffd(0x44b),_0x3f644f(0x268),_0x3f644f(0x164),_0x4cdffd(0x2a7),_0x4cdffd(0x243),_0x4cdffd(0x314),_0x4cdffd(0x414),_0x3f644f(0x187),_0x3f644f(0x319),'2770210OJEWKx',_0x3f644f(0x3e8),_0x3f644f(0x1df),_0x4cdffd(0x1d7),_0x4cdffd(0x39f),_0x4cdffd(0x32a),_0x3f644f(0x25b),_0x4cdffd(0x121),_0x4cdffd(0x133),_0x4cdffd(0x24b),_0x4cdffd(0x3a0),_0x4cdffd(0x3d6),_0x4cdffd(0x40d),_0x4cdffd(0x41f),_0x4cdffd(0x3e2),_0x4cdffd(0x24d),_0x4cdffd(0x339),_0x4cdffd(0x1f7),_0x4cdffd(0x1c3),_0x4cdffd(0x37d),_0x4cdffd(0x2df),_0x4cdffd(0x385),'Es\x20quilt',_0x4cdffd(0x3aa),_0x4cdffd(0x2eb),_0x4cdffd(0x3a3),_0x3f644f(0x3cc),_0x4cdffd(0x1d3),_0x4cdffd(0x395),_0x3f644f(0x161),_0x4cdffd(0x3c4),'radioVanilla',_0x3f644f(0x3cd),_0x4cdffd(0x181),_0x3f644f(0x17d),_0x4cdffd(0x277),_0x4cdffd(0x2d6),_0x4cdffd(0x3c8),_0x4cdffd(0x2e5),_0x4cdffd(0x1e7),_0x4cdffd(0x332),_0x4cdffd(0x413),_0x4cdffd(0x1a9),_0x3f644f(0xb2),_0x4cdffd(0x203),_0x4cdffd(0x433),_0x4cdffd(0x1d1),_0x4cdffd(0x2da),'minimalize-battly',_0x4cdffd(0x44e),'block','Nuevos\x20servidores\x20desde\x20la\x20configuración\x20de\x20Battly:',_0x4cdffd(0x289),_0x4cdffd(0x2f5),_0x4cdffd(0x409),_0x3f644f(0x193),_0x4cdffd(0x1bc),_0x4cdffd(0x2b3),_0x3f644f(0x15f),_0x4cdffd(0x40c),_0x3f644f(0x333),_0x4cdffd(0x235),'get',_0x3f644f(0xe4),_0x4cdffd(0x33c),_0x4cdffd(0x1ef),_0x3f644f(0x30f),_0x4cdffd(0x1fd),_0x4cdffd(0x353),'GetLang',_0x4cdffd(0x301),_0x4cdffd(0x472),_0x3f644f(0x145),_0x4cdffd(0x33d),_0x4cdffd(0x214),_0x4cdffd(0x213),_0x4cdffd(0x34b),_0x4cdffd(0x275),_0x4cdffd(0x37c),'fontFamily',_0x4cdffd(0x242),_0x4cdffd(0x3b7),_0x4cdffd(0x16f),_0x4cdffd(0x2e1),_0x4cdffd(0x427),_0x4cdffd(0x405),_0x4cdffd(0x30b),_0x4cdffd(0x2b8),_0x4cdffd(0x3dd),_0x4cdffd(0x3c7),_0x3f644f(0x2ad),_0x3f644f(0xe0),_0x4cdffd(0x13e),_0x4cdffd(0x3c5),_0x4cdffd(0x162),_0x3f644f(0x135),_0x4cdffd(0x175),_0x4cdffd(0x16b),_0x4cdffd(0x3dc),_0x4cdffd(0x1e3),_0x4cdffd(0x172),_0x3f644f(0x358),_0x4cdffd(0x26f),_0x4cdffd(0x153),_0x4cdffd(0x144),_0x4cdffd(0x267),_0x4cdffd(0x43e),_0x4cdffd(0x3bc),_0x4cdffd(0x390),_0x4cdffd(0x36d),_0x4cdffd(0x212),_0x4cdffd(0x139),_0x4cdffd(0x454),_0x4cdffd(0x221),'return',_0x4cdffd(0x44c),_0x4cdffd(0x2b9),_0x4cdffd(0x16d),_0x4cdffd(0x457),_0x4cdffd(0x439),_0x4cdffd(0x331),_0x4cdffd(0x2b7),_0x4cdffd(0x44d),_0x4cdffd(0x466),_0x4cdffd(0x41b),_0x4cdffd(0x354),'https://raw.githubusercontent.com/1ly4s0/battlylauncher-optifine/main/libraries/optifine/launchwrapper-of/2.2/launchwrapper-of-2.2.jar',_0x4cdffd(0x244),_0x4cdffd(0x252),_0x4cdffd(0x124),_0x4cdffd(0x468),_0x4cdffd(0x17e),_0x4cdffd(0x3ba),_0x3f644f(0xf2),_0x3f644f(0x3da),_0x3f644f(0x2b6),_0x4cdffd(0x2a6),_0x3f644f(0x181),_0x3f644f(0xc6),_0x4cdffd(0x251),_0x4cdffd(0x119),_0x4cdffd(0x37f),'debug',_0x4cdffd(0x161),_0x3f644f(0x2b7),_0x4cdffd(0x279),_0x4cdffd(0x265),_0x4cdffd(0x1d6),_0x4cdffd(0x40f),_0x4cdffd(0x387),_0x4cdffd(0x31e),_0x4cdffd(0x447),_0x4cdffd(0x48e),_0x3f644f(0x1d2),_0x3f644f(0x13e),_0x4cdffd(0x334),_0x4cdffd(0x2bb),_0x4cdffd(0x129),_0x4cdffd(0x3d4),_0x4cdffd(0x1ea),_0x3f644f(0x357),_0x4cdffd(0x46e),_0x4cdffd(0x2e4),_0x4cdffd(0x3c0),_0x3f644f(0x3a7),_0x4cdffd(0x22f),_0x4cdffd(0x451),_0x3f644f(0x96),_0x3f644f(0x31b),_0x4cdffd(0x1df),_0x4cdffd(0x3fb),_0x3f644f(0xde),_0x4cdffd(0x32b),_0x4cdffd(0x15b),_0x4cdffd(0x34a),_0x3f644f(0xdf),_0x4cdffd(0x3a7),_0x4cdffd(0x3a5),_0x4cdffd(0x459),_0x3f644f(0x32c),_0x4cdffd(0x478),_0x4cdffd(0x12a),_0x4cdffd(0x2c3),_0x4cdffd(0x249),_0x4cdffd(0x1bd),_0x3f644f(0x240),'getAttribute',_0x4cdffd(0x31a),_0x4cdffd(0x394),_0x4cdffd(0x48d),_0x4cdffd(0x435),_0x4cdffd(0x3cd),_0x3f644f(0x3ac),_0x4cdffd(0x293),_0x3f644f(0x11e),_0x4cdffd(0x304),_0x3f644f(0x1c0),_0x4cdffd(0x27d),_0x4cdffd(0x2d2),_0x4cdffd(0x336),_0x4cdffd(0x33b),_0x4cdffd(0x17a),_0x3f644f(0x1e5),_0x4cdffd(0x1f8),_0x4cdffd(0x352),_0x4cdffd(0x48f),_0x4cdffd(0x1c8),_0x4cdffd(0x326),_0x4cdffd(0x3d1),'10px',_0x4cdffd(0x18e),_0x4cdffd(0x324),'ads_text',_0x4cdffd(0x486),_0x3f644f(0x179),_0x3f644f(0x259),_0x4cdffd(0x2c4),_0x4cdffd(0x3d9),_0x4cdffd(0x449),_0x4cdffd(0x415),_0x4cdffd(0x1b5),_0x4cdffd(0x261),_0x4cdffd(0x463),_0x4cdffd(0x1a6),_0x4cdffd(0x196),_0x4cdffd(0x47d),_0x4cdffd(0x240),_0x3f644f(0x38b),_0x4cdffd(0x357),'⏩\x20La\x20carpeta\x202.3\x20ya\x20existe.\x20Saltando...\x0a',_0x4cdffd(0x16c),_0x4cdffd(0x1d0),_0x4cdffd(0x20a),_0x4cdffd(0x38f),_0x4cdffd(0x47c),_0x4cdffd(0x307),_0x3f644f(0x2c1),_0x3f644f(0x399),_0x4cdffd(0x1cd),_0x3f644f(0x18e),_0x4cdffd(0x1c1),_0x4cdffd(0x48a),_0x4cdffd(0x399),_0x3f644f(0x2f2),_0x4cdffd(0x1ab),_0x4cdffd(0x1d5),_0x4cdffd(0x2f0),_0x4cdffd(0x209),_0x4cdffd(0x428),_0x4cdffd(0x3f3),_0x3f644f(0x25c),_0x3f644f(0x92),_0x4cdffd(0x333),_0x4cdffd(0x2c6),_0x4cdffd(0x2ea),_0x4cdffd(0x340),_0x3f644f(0xb0),_0x4cdffd(0x147),_0x4cdffd(0x12e),_0x4cdffd(0x117),_0x4cdffd(0x38d),_0x4cdffd(0x3e3),_0x3f644f(0x1f1),_0x4cdffd(0x3fa),_0x4cdffd(0x25d),_0x4cdffd(0x498),_0x4cdffd(0x24f),_0x4cdffd(0x44a),_0x4cdffd(0x179),_0x4cdffd(0x338),_0x4cdffd(0x317),_0x4cdffd(0x1f2),'starting_download_can_take',_0x4cdffd(0x2bd),_0x4cdffd(0x2a0),_0x4cdffd(0x1ff),_0x4cdffd(0x35f),_0x4cdffd(0x3c3),_0x3f644f(0x1e1),_0x4cdffd(0x30a),_0x4cdffd(0x3f9),_0x4cdffd(0x1c7),_0x3f644f(0x359),'\x20>\x20','playing-now-text',_0x3f644f(0x1d4),_0x3f644f(0x1cc),_0x3f644f(0x3e0),_0x4cdffd(0x15c),_0x3f644f(0x274),_0x4cdffd(0x222),_0x4cdffd(0x255),_0x4cdffd(0x361),_0x4cdffd(0x2c1),_0x4cdffd(0x2c7),_0x4cdffd(0x1ac),_0x3f644f(0x19d),_0x4cdffd(0x1a8),_0x4cdffd(0x28a),_0x3f644f(0x373),_0x4cdffd(0x2c9),_0x4cdffd(0x3f7),_0x4cdffd(0x45e),_0x4cdffd(0x45b),_0x4cdffd(0x2dc),_0x4cdffd(0x283),_0x3f644f(0x11d),_0x4cdffd(0x136),_0x4cdffd(0x1b2),_0x4cdffd(0x494),_0x3f644f(0x37e),_0x3f644f(0x266),_0x4cdffd(0x36e),_0x4cdffd(0x437),_0x4cdffd(0x315),_0x4cdffd(0x2a2),_0x4cdffd(0x470),_0x4cdffd(0x485),_0x4cdffd(0x344),_0x4cdffd(0x450),_0x4cdffd(0x467),_0x4cdffd(0x3e9),_0x3f644f(0x15a),_0x4cdffd(0x1d9),_0x3f644f(0x269),_0x4cdffd(0x191),_0x3f644f(0x3d7),_0x3f644f(0x35d),_0x4cdffd(0x45f),_0x4cdffd(0x3cb),_0x4cdffd(0x36a),_0x3f644f(0x3ca),_0x4cdffd(0x388),_0x4cdffd(0x264),_0x4cdffd(0x165),_0x4cdffd(0x132),_0x4cdffd(0x318),_0x3f644f(0x3f5),_0x4cdffd(0x27b),_0x4cdffd(0x462),_0x4cdffd(0x39b),_0x3f644f(0x265),_0x3f644f(0xe8),_0x4cdffd(0x280),_0x3f644f(0x1c2),_0x4cdffd(0x320),_0x3f644f(0x3d1),_0x4cdffd(0x273),_0x4cdffd(0x355),_0x4cdffd(0x384),_0x3f644f(0x304),_0x4cdffd(0x3df),_0x4cdffd(0x2d9),_0x3f644f(0x176),_0x4cdffd(0x299),_0x3f644f(0x288),_0x4cdffd(0x3ab),_0x4cdffd(0x25f),_0x3f644f(0x3b2),_0x4cdffd(0x20e),_0x4cdffd(0x2aa),_0x4cdffd(0x180),_0x3f644f(0x213),_0x4cdffd(0x3a6),_0x4cdffd(0x42f),_0x3f644f(0x120),_0x4cdffd(0x189),_0x4cdffd(0x3b8),_0x4cdffd(0x1e8),_0x4cdffd(0x1fa),_0x4cdffd(0x1eb),_0x3f644f(0x109),_0x4cdffd(0x48b),_0x4cdffd(0x14b),_0x4cdffd(0x16e),_0x4cdffd(0x234),_0x4cdffd(0x2ec),_0x4cdffd(0x3c2),_0x4cdffd(0x3db),_0x4cdffd(0x3da),_0x3f644f(0x2c5),_0x4cdffd(0x19d),_0x4cdffd(0x1c5),_0x4cdffd(0x411),_0x4cdffd(0x46a),_0x4cdffd(0x1cb),_0x4cdffd(0x18c),_0x4cdffd(0x342),_0x4cdffd(0x182),_0x4cdffd(0x27c),_0x4cdffd(0x35e),_0x4cdffd(0x398),_0x4cdffd(0x219),_0x4cdffd(0x149),_0x4cdffd(0x229),_0x4cdffd(0x3d3),_0x4cdffd(0x2fb),_0x4cdffd(0x2c5),_0x4cdffd(0x25c),_0x4cdffd(0x364),_0x4cdffd(0x46b),_0x3f644f(0x1a2),_0x4cdffd(0x313),_0x3f644f(0x151),_0x4cdffd(0x46d),_0x3f644f(0x3f7),_0x4cdffd(0x312),_0x4cdffd(0x2e9),_0x4cdffd(0x223),_0x4cdffd(0x34e),'✅\x20Descargando\x20archivos...\x20Completado.',_0x4cdffd(0x1c9),_0x4cdffd(0x284),_0x4cdffd(0x152),_0x3f644f(0xa5),_0x4cdffd(0x216),_0x4cdffd(0x38c),_0x3f644f(0x128),_0x4cdffd(0x140),_0x4cdffd(0x482),_0x4cdffd(0x25e),_0x4cdffd(0x148),_0x3f644f(0x38f),_0x3f644f(0x362),_0x4cdffd(0x128),_0x3f644f(0x201),_0x3f644f(0xe6),_0x4cdffd(0x3ed),'ram',_0x4cdffd(0x1f3),_0x4cdffd(0x3ef),'account_information',_0x4cdffd(0x448),_0x4cdffd(0x1a1),_0x3f644f(0x372),_0x4cdffd(0x250),_0x4cdffd(0x122),_0x4cdffd(0x199),_0x4cdffd(0x381),_0x4cdffd(0x308),_0x4cdffd(0x3f1),_0x3f644f(0xc2),_0x4cdffd(0x38b),_0x4cdffd(0x2a1),_0x4cdffd(0x366),_0x3f644f(0x252),'La\x20url\x20es\x20',_0x4cdffd(0x126),_0x3f644f(0x169),_0x4cdffd(0x2c2),_0x4cdffd(0x274),_0x4cdffd(0x120),_0x4cdffd(0x194),_0x4cdffd(0x20f),_0x4cdffd(0x407),'⏩\x20La\x20carpeta\x20',_0x4cdffd(0x2f8),'Se\x20ha\x20creado\x20un\x20nuevo\x20archivo\x20servers.dat\x20con\x20éxito.',_0x4cdffd(0x2ed),'❌\x20Error\x20al\x20descargar\x20',_0x3f644f(0x22f),'65px',_0x3f644f(0xfb),_0x3f644f(0x299),_0x4cdffd(0x13c),_0x4cdffd(0x167),_0x3f644f(0x183),_0x4cdffd(0x228),_0x3f644f(0x3f2),_0x4cdffd(0x30c),_0x4cdffd(0x269),_0x4cdffd(0x41d),_0x3f644f(0x137),_0x4cdffd(0x296),_0x4cdffd(0x25b),_0x3f644f(0x329),_0x4cdffd(0x1e1),_0x3f644f(0x2fb),_0x4cdffd(0x322),_0x4cdffd(0x469),_0x3f644f(0x2a9),_0x4cdffd(0x257),_0x3f644f(0x20b),_0x4cdffd(0x2db),_0x3f644f(0xf3),_0x4cdffd(0x351),_0x4cdffd(0x1ce),_0x4cdffd(0x204),_0x4cdffd(0x455),_0x4cdffd(0x1f5),_0x3f644f(0x273),_0x4cdffd(0x441),_0x4cdffd(0x198),_0x4cdffd(0x400),_0x4cdffd(0x309),_0x4cdffd(0x18f),_0x4cdffd(0x356),_0x4cdffd(0x3b4),'toString',_0x4cdffd(0x370),_0x4cdffd(0x2af),'music',_0x4cdffd(0x316),_0x4cdffd(0x442),_0x4cdffd(0x2ca),_0x4cdffd(0x2ef),_0x4cdffd(0x197),_0x4cdffd(0x2fe),_0x4cdffd(0x495),_0x4cdffd(0x31c),_0x4cdffd(0x489),'No\x20tienes\x20la\x20versión\x20requerida\x20de\x20Java,\x20para\x20descargarla,\x20descarga\x20la\x201.20.1\x20de\x20vanilla\x20y\x20luego\x20vuelve\x20a\x20intentarlo.',_0x4cdffd(0x3ea),_0x3f644f(0x24e),_0x4cdffd(0x18d),_0x4cdffd(0x347),_0x3f644f(0x99),_0x4cdffd(0x403),_0x4cdffd(0x36f),_0x4cdffd(0x30d),_0x4cdffd(0x31d),_0x4cdffd(0x170),_0x4cdffd(0x47a),_0x3f644f(0x26f),'december',_0x3f644f(0xf0),_0x3f644f(0xfc),_0x4cdffd(0x3d0),_0x4cdffd(0x330),_0x3f644f(0x1a8),_0x4cdffd(0x19b),'https://api.battlylauncher.com',_0x4cdffd(0x211),_0x3f644f(0x2d3),_0x4cdffd(0x408),_0x4cdffd(0x2d5),_0x4cdffd(0x3fc),_0x4cdffd(0x3a9),_0x4cdffd(0x1de),_0x4cdffd(0x26c),_0x4cdffd(0x171),_0x4cdffd(0x178),_0x4cdffd(0x488),'/.battly/libraries/optifine/OptiFine',_0x3f644f(0x36d),_0x4cdffd(0x29d),_0x4cdffd(0x2a8),_0x4cdffd(0x239),_0x4cdffd(0x2fa),_0x3f644f(0x2ec),_0x3f644f(0x21e),_0x4cdffd(0x3af),_0x4cdffd(0x2a3),_0x4cdffd(0x141),_0x3f644f(0xb7),_0x4cdffd(0x418),_0x4cdffd(0x17d),_0x4cdffd(0x19a),_0x4cdffd(0x397),_0x4cdffd(0x28c),'OptiFine_',_0x4cdffd(0x456),_0x4cdffd(0x2dd),_0x3f644f(0x243),_0x4cdffd(0x268),_0x4cdffd(0x1b6),_0x4cdffd(0x3e1),_0x4cdffd(0x3ca),_0x4cdffd(0x1ca),_0x4cdffd(0x202),'instance_deleted_correctly',_0x4cdffd(0x3b1),'text',_0x4cdffd(0x193),'20px',_0x4cdffd(0x497),_0x4cdffd(0x135),_0x4cdffd(0x368),_0x4cdffd(0x371),_0x4cdffd(0x363),_0x4cdffd(0x300),_0x4cdffd(0x2f9),_0x4cdffd(0x1ee),_0x4cdffd(0x33f),'/mods/skins.jar',_0x4cdffd(0x138),'ignored',_0x4cdffd(0x282),_0x4cdffd(0x327),_0x4cdffd(0x490),_0x4cdffd(0x294),_0x4cdffd(0x386),_0x4cdffd(0x241),'error_downloading',_0x4cdffd(0x187),'1.11',_0x4cdffd(0x12d),_0x4cdffd(0x227),_0x4cdffd(0x479),_0x4cdffd(0x159),_0x3f644f(0x2b1),'news-block',_0x4cdffd(0x37a),_0x4cdffd(0x14d),_0x3f644f(0xc9),_0x4cdffd(0x287),_0x3f644f(0x3dc),_0x4cdffd(0x1da),'.select',_0x4cdffd(0x260),_0x4cdffd(0x1b7),'playing_now_text',_0x4cdffd(0x2bf),_0x3f644f(0x1b6),_0x4cdffd(0x3c9),_0x4cdffd(0x1e4),_0x4cdffd(0x225),'[EXTRACT]\x20',_0x4cdffd(0x1c6),_0x4cdffd(0x16a),_0x4cdffd(0x183),_0x4cdffd(0x302),_0x4cdffd(0x200),_0x4cdffd(0x1f4),_0x4cdffd(0x116),_0x4cdffd(0x359),_0x4cdffd(0x37b),_0x4cdffd(0x3ff),_0x4cdffd(0x426),_0x4cdffd(0x1b9),_0x4cdffd(0x131),_0x4cdffd(0x471),_0x3f644f(0x3c8),_0x4cdffd(0x215),_0x4cdffd(0x3e5),_0x4cdffd(0x377),_0x4cdffd(0x12b),_0x4cdffd(0x39a),_0x4cdffd(0x272),_0x4cdffd(0x3c1),_0x4cdffd(0x3bd),_0x4cdffd(0x39c),_0x4cdffd(0x27e),_0x4cdffd(0x184),_0x4cdffd(0x372),'april',_0x4cdffd(0x21f),_0x3f644f(0x149),_0x3f644f(0x294),_0x3f644f(0x283),_0x4cdffd(0x291),_0x3f644f(0x3b8),_0x4cdffd(0x2f2),_0x3f644f(0x195),_0x4cdffd(0x43d),_0x4cdffd(0x1c4),_0x4cdffd(0x166),_0x4cdffd(0x3c6),_0x3f644f(0x33a),_0x4cdffd(0x484),_0x4cdffd(0x288),_0x4cdffd(0x33e),_0x4cdffd(0x43a),_0x3f644f(0x320),_0x4cdffd(0x32f),'then',_0x4cdffd(0x157),_0x4cdffd(0x2b0),_0x4cdffd(0x43c),_0x3f644f(0x1d1),_0x4cdffd(0x11f),_0x4cdffd(0x11b),_0x3f644f(0x189),_0x3f644f(0xc8),_0x4cdffd(0x1f0),_0x4cdffd(0x176),_0x4cdffd(0x43b),_0x4cdffd(0x42e),_0x4cdffd(0x254),_0x4cdffd(0x499),_0x4cdffd(0x168),'../package.json',_0x3f644f(0x355),_0x4cdffd(0x1fe),_0x4cdffd(0x29c),_0x4cdffd(0x2f6),_0x3f644f(0x28a),_0x4cdffd(0x26a),_0x4cdffd(0x21e),_0x4cdffd(0x155),_0x4cdffd(0x2a4),_0x3f644f(0x27e),_0x4cdffd(0x465),_0x4cdffd(0x396),_0x4cdffd(0x1bf),_0x4cdffd(0x3a8),_0x4cdffd(0x1f1),_0x4cdffd(0x27a),_0x4cdffd(0x3e0),_0x4cdffd(0x33a),'-optifine',_0x4cdffd(0x259),'CargarVersiones',_0x3f644f(0xaa),_0x4cdffd(0x208),_0x4cdffd(0x321),_0x4cdffd(0x1f9),_0x4cdffd(0x2ac),_0x3f644f(0x1cb),'https://optifine.net/capes/{USERNAME}.png',_0x4cdffd(0x2c0),_0x4cdffd(0x22b),'selectClientes',_0x3f644f(0x260),_0x4cdffd(0x236),_0x4cdffd(0x2a9),_0x4cdffd(0x431),_0x4cdffd(0x230),_0x4cdffd(0x36c),_0x3f644f(0x15d),_0x4cdffd(0x42c),_0x4cdffd(0x263),_0x3f644f(0xa1),_0x4cdffd(0x258),_0x4cdffd(0x2d0),_0x4cdffd(0x440),_0x4cdffd(0x1a7),_0x4cdffd(0x21c),_0x4cdffd(0x3e8),_0x4cdffd(0x134),_0x4cdffd(0x34f),_0x4cdffd(0x1aa),_0x4cdffd(0x217),_0x4cdffd(0x39e),_0x4cdffd(0x169),_0x4cdffd(0x253),_0x3f644f(0x23c),_0x4cdffd(0x1ec),_0x4cdffd(0x206),_0x3f644f(0x219),_0x4cdffd(0x496),_0x4cdffd(0x285),_0x4cdffd(0x42a),_0x4cdffd(0x348),_0x4cdffd(0x1a2),_0x4cdffd(0x195),'send',_0x4cdffd(0x1e2),_0x4cdffd(0x22d),_0x4cdffd(0x45c),_0x4cdffd(0x130),_0x4cdffd(0x30e),_0x4cdffd(0x3fe),_0x4cdffd(0x430),_0x4cdffd(0x343),_0x4cdffd(0x38a),_0x4cdffd(0x1dc),_0x3f644f(0x34b),_0x4cdffd(0x44f)];return a167_0x159b=function(){return _0x2a3e74;},a167_0x159b();}
+"use strict";
+import {
+    logger,
+    database,
+    changePanel
+} from "../utils.js";
+
+const {
+    Client,
+    Status
+} = require("minecraft-launcher-core");
+const {
+    Launch,
+    Mojang
+} = require("./assets/js/libs/mc/Index");
+const {
+    ipcRenderer,
+    ipcMain,
+    shell
+} = require("electron");
+
+const pkg = require("../package.json");
+const Swal = require("./assets/js/libs/sweetalert/sweetalert2.all.min");
+
+const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 5000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+});
+
+
+function ShowPanelError(error) {
+    let audioError = new Audio("./assets/audios/error.mp3");
+    audioError.play();
+
+    ipcRenderer.send("new-notification", {
+        title: "Error al abrir Minecraft",
+        body: "Consulta el error abriendo Battly.",
+    });
+    // Crear el elemento div principal con la clase "modal is-active"
+    const modalDiv = document.createElement('div');
+    modalDiv.className = 'modal is-active';
+    modalDiv.style.zIndex = '4';
+
+    // Crear el elemento div con la clase "modal-background" y agregarlo al div principal
+    const modalBackgroundDiv = document.createElement('div');
+    modalBackgroundDiv.className = 'modal-background';
+    modalDiv.appendChild(modalBackgroundDiv);
+
+    // Crear el elemento div con la clase "modal-card" y el estilo de fondo y agregarlo al div principal
+    const modalCardDiv = document.createElement('div');
+    modalCardDiv.className = 'modal-card';
+    modalCardDiv.style.backgroundColor = '#444444';
+    modalDiv.appendChild(modalCardDiv);
+
+    // Crear el elemento header con la clase "modal-card-head" y el estilo de fondo y agregarlo al div modal-card
+    const headerDiv = document.createElement('header');
+    headerDiv.className = 'modal-card-head';
+    headerDiv.style.backgroundColor = '#444444';
+    modalCardDiv.appendChild(headerDiv);
+
+    // Crear el elemento p con la clase "modal-card-title", el estilo de color y texto, y agregarlo al div header
+    const titleP = document.createElement('p');
+    titleP.className = 'modal-card-title';
+    titleP.style.color = '#fff';
+    titleP.textContent = 'Error al abrir Minecraft';
+    headerDiv.appendChild(titleP);
+
+    // Crear el elemento section con la clase "modal-card-body" y el estilo de fondo y color, y agregarlo al div modal-card
+    const bodySection = document.createElement('section');
+    bodySection.className = 'modal-card-body';
+    bodySection.style.backgroundColor = '#444444';
+    bodySection.style.color = '#fff';
+    modalCardDiv.appendChild(bodySection);
+
+    // Crear el elemento p con el mensaje de error y agregarlo al div section
+    const errorP = document.createElement('p');
+    errorP.textContent = 'Esto es un mensaje de error al iniciar Minecraft. Esto no es por culpa de Battly, no reportar este problema.';
+    bodySection.appendChild(errorP);
+
+    // Crear el elemento div con la clase "card" y agregarlo al div section
+    const cardDiv = document.createElement('div');
+    cardDiv.className = 'card';
+    bodySection.appendChild(cardDiv);
+
+    // Crear el elemento header con la clase "card-header" y agregarlo al div card
+    const cardHeaderDiv = document.createElement('header');
+    cardHeaderDiv.className = 'card-header';
+    cardDiv.appendChild(cardHeaderDiv);
+
+    // Crear el elemento p con la clase "card-header-title" y agregarlo al div card-header
+    const cardTitleP = document.createElement('p');
+    cardTitleP.className = 'card-header-title';
+    cardTitleP.textContent = 'Error encontrado';
+    cardHeaderDiv.appendChild(cardTitleP);
+
+    // Crear el elemento div con la clase "card-content" y el id "content" y agregarlo al div card
+    const cardContentDiv = document.createElement('div');
+    cardContentDiv.className = 'card-content';
+    cardContentDiv.id = 'content';
+    cardDiv.appendChild(cardContentDiv);
+
+    // Crear el elemento textarea con las clases y atributos y agregarlo al div card-content
+    const textarea = document.createElement('textarea');
+    textarea.className = 'textarea errores is-info is-family-code';
+    textarea.disabled = true;
+    textarea.rows = '10';
+    textarea.cols = '50';
+    textarea.textContent = error;
+    cardContentDiv.appendChild(textarea);
+
+    // Crear el elemento footer con la clase "modal-card-foot" y el estilo de fondo y agregarlo al div modal-card
+    const footerDiv = document.createElement('footer');
+    footerDiv.className = 'modal-card-foot';
+    footerDiv.style.backgroundColor = '#444444';
+    modalCardDiv.appendChild(footerDiv);
+
+    // Crear el elemento button con las clases y atributos y agregarlo al div modal-card-foot
+    const closeButton = document.createElement('button');
+    closeButton.className = 'button is-danger';
+    closeButton.textContent = 'Cerrar';
+    closeButton.addEventListener('click', () => {
+        modalDiv.remove();
+    });
+
+    //boton de guardar logs, mostrará un dialogo para guardar los logs en un archivo de texto, abrirá el explorador de archivos y se podrá guardar donde quiera
+    const saveLogsButton = document.createElement('button');
+    saveLogsButton.className = 'button is-info';
+    saveLogsButton.textContent = 'Guardar logs';
+    saveLogsButton.addEventListener('click', () => {
+        let logs = document.querySelector('.errores').value;
+        let logsPath = path.join(__dirname, 'logs.txt');
+        fs.writeFileSync(logsPath, logs);
+        shell.openPath(logsPath);
+    });
+
+    const discordBtn = document.createElement('button');
+    discordBtn.className = 'button is-info';
+    discordBtn.addEventListener('click', () => {
+        shell.openExternal('https://discord.gg/tecno-bros-885235460178342009');
+    });
+    discordBtn.innerHTML = '<span><i class="fab fa-discord"></i> Discord</span>';
+
+    footerDiv.appendChild(closeButton);
+    footerDiv.appendChild(saveLogsButton);
+    footerDiv.appendChild(discordBtn);
+    // Agregar saltos de línea al final del código
+    modalDiv.appendChild(document.createElement('br'));
+
+    // Agregar el div principal al cuerpo del documento
+    document.body.appendChild(modalDiv);
+}
+
+import {
+    LoadAPI
+} from "../utils/loadAPI.js";
+
+const fetch = require("node-fetch");
+let offlineMode = false;
+fetch("https://google.com")
+    .then(async () => {
+        offlineMode = false;
+    })
+    .catch(async () => {
+        offlineMode = true;
+    });
+
+const fs = require("fs");
+const path = require("path");
+
+const dataDirectory =
+    process.env.APPDATA ||
+    (process.platform == "darwin" ?
+        `${process.env.HOME}/Library/Application Support` :
+        process.env.HOME);
+
+let logFilePath = `${dataDirectory}/.battly/Registro.log`;
+import {
+    consoleOutput
+} from "../utils/logger.js";
+let consoleOutput_;
+
+import { Lang } from "../utils/lang.js";
+import * as NBT from "../../../../node_modules/nbtify/dist/index.js";
+
+let lang;
+let langs;
+class Home {
+    static id = "home";
+    async init(config, news) {
+        lang = await new Lang().GetLang();
+        langs = lang;
+        this.WaitData();
+        this.config = config;
+        this.news = await news;
+        this.offlineMode = offlineMode;
+        this.ShowNews();
+        this.BattlyConfig = await new LoadAPI().GetConfig();
+        this.Versions = await new LoadAPI().GetVersions();
+        this.VersionsMojang = await new LoadAPI().GetVersionsMojang();
+        this.database = await new database().init();
+        this.initNews();
+        this.initLaunch();
+        this.initStatusServer();
+        this.initBtn();
+        this.CargarMods();
+        this.IniciarEstadoDiscord();
+        this.CargarVersiones();
+        this.initConfig();
+        this.InitTheme();
+        this.GetLogsSocket();
+        this.CambiarRutaJava();
+        this.Instancias();
+        this.GenerarLogsSocket();
+        this.SetStatus();
+        this.Solicitudes();
+        this.lang = await new Lang().GetLang();
+        this.Ads();
+    }
+
+    async Ads() {
+        let ads = document.getElementById("ads");
+        ads.style.backgroundImage = `url(${this.BattlyConfig.ads})`;
+    }
+
+    async Solicitudes() {
+        ipcRenderer.on("cargarSolicitudAmistad", async (event, args) => {
+            changePanel("friends");
+        });
+
+        document.getElementById("friends-btn").addEventListener("click", () => {
+            changePanel("friends");
+        });
+
+        document.getElementById("friends-volver-btn").addEventListener("click", () => {
+            document.querySelector(".preload-content").style.display = "none";
+            changePanel("home");
+        });
+    }
+
+
+    async SetStatus() {
+        let selectedAccount = (await this.database.get("1234", "accounts-selected")).value;
+        let accounts = await this.database.getAll("accounts");
+
+        accounts.forEach((account) => {
+            if (account.value.uuid === selectedAccount.selected) {
+                this.UpdateStatus(account.value.name, "online", langs.in_the_menu);
+            }
+        })
+    }
+
+    async UpdateStatus(username, status, details) {
+        console.log(`🧩 ${username} > ${status} > ${details}`);
+        
+        let uuid = (await this.database.get("1234", "accounts-selected")).value;
+        let account = (await this.database.get(uuid.selected, "accounts")).value;
+        
+        if (account.type === "battly") {
+            if (!account.password || account.password === "" || account.password === undefined || account.password === null) {
+                Toast.fire({
+                    icon: 'error',
+                    title: langs.password_not_set,
+                });
+
+                this.database.delete(uuid.selected, "accounts");
+                return;
+            } else {
+                ipcRenderer.send('updateStatus', {
+                    status: status,
+                    details: details,
+                    username: username,
+                    password: account.password,
+                })
+            }
+        }
+    }
+    
+    async Instancias() {
+        let instanciasBtn = document.getElementById("instancias-btn");
+
+        instanciasBtn.addEventListener("click", async () => {
+            // Crear el elemento modal
+            const modal = document.createElement('div');
+            modal.classList.add('modal', 'is-active');
+            modal.style.zIndex = '2';
+
+            // Crear el fondo del modal
+            const modalBackground = document.createElement('div');
+            modalBackground.classList.add('modal-background');
+
+            // Crear el div del contenido del modal
+            const modalCard = document.createElement('div');
+            modalCard.classList.add('modal-card');
+            modalCard.style.backgroundColor = '#444444';
+
+            // Crear el encabezado del modal
+            const modalHeader = document.createElement('header');
+            modalHeader.classList.add('modal-card-head');
+            modalHeader.style.backgroundColor = '#444444';
+
+            const modalTitle = document.createElement('p');
+            modalTitle.classList.add('modal-card-title');
+            modalTitle.style.color = '#fff';
+            modalTitle.innerHTML = '<i class="fa-solid fa-folder"></i> ' + langs.instances;
+
+            const closeBtn = document.createElement('button');
+            closeBtn.classList.add('delete');
+            closeBtn.setAttribute('aria-label', 'close');
+
+            modalHeader.appendChild(modalTitle);
+            modalHeader.appendChild(closeBtn);
+
+            // Crear la sección del cuerpo del modal
+            const modalBody = document.createElement('section');
+            modalBody.classList.add('modal-card-body');
+            modalBody.style.backgroundColor = '#444444';
+            modalBody.style.color = '#fff';
+
+            const bodyText = document.createElement('p');
+            bodyText.innerHTML = langs.welcome_instances;
+            
+            const lineBreak = document.createElement('br');
+            const lineBreak2 = document.createElement('br');
+            
+            modalBody.appendChild(bodyText);
+            modalBody.appendChild(lineBreak);
+
+            // Crear la primera tarjeta
+
+            //obtener todas las carpetas que hay en la carpeta de instancias
+            let instancias;
+            if (!fs.existsSync(`${dataDirectory}/.battly/instances`)) {
+                fs.mkdirSync(`${dataDirectory}/.battly/instances`);
+                instancias = fs.readdirSync(`${dataDirectory}/.battly/instances`);
+            } else {
+                instancias = fs.readdirSync(`${dataDirectory}/.battly/instances`);
+            }
+
+            //crear un array vacío
+            let instanciasArray = [];
+            //recorrer todas las carpetas
+            if (instancias.length > 0) {
+                for (let i = 0; i < instancias.length; i++) {
+                    //obtener el archivo instance.json
+                    try {
+                        let instance = fs.readFileSync(
+                            `${dataDirectory}/.battly/instances/${instancias[i]}/instance.json`
+                        );
+                        //convertir el archivo a JSON
+                        let instance_json = JSON.parse(instance);
+                        instanciasArray.push(instance_json);
+
+                        // Crear el header de la primera tarjeta
+
+                        const card1 = document.createElement('div');
+                        card1.classList.add('card');
+                        card1.style.marginBottom = '-15px';
+
+                        const cardHeader1 = document.createElement('header');
+                        cardHeader1.classList.add('card-header');
+                        cardHeader1.style.cursor = 'pointer';
+
+                        const cardTitle1 = document.createElement('p');
+                        cardTitle1.classList.add('card-header-title');
+                        cardTitle1.textContent = instance_json.name;
+
+                        const cardIcon1 = document.createElement('button');
+                        cardIcon1.classList.add('card-header-icon');
+                        cardIcon1.setAttribute('aria-label', 'more options');
+
+                        const icon1 = document.createElement('span');
+                        icon1.classList.add('icon');
+
+                        const iconImage1 = document.createElement('i');
+                        iconImage1.classList.add('fas', 'fa-angle-down');
+
+                        icon1.appendChild(iconImage1);
+                        cardIcon1.appendChild(icon1);
+
+                        // Crear el contenido de la primera tarjeta
+
+                        const cardContent1 = document.createElement('div');
+                        cardContent1.classList.add('card-content');
+                        cardContent1.setAttribute('id', 'content');
+                        cardContent1.style.display = 'none';
+
+                        const cardImage1 = document.createElement('figure');
+                        cardImage1.classList.add('image', 'is-32x32');
+
+                        const img1 = document.createElement('img');
+                        img1.setAttribute('src', instance_json.image);
+                        img1.style.borderRadius = '5px';
+
+                        const cardDescription1 = document.createElement('div');
+                        cardDescription1.classList.add('content');
+                        cardDescription1.style.marginLeft = '10px';
+                        cardDescription1.textContent = instance_json.description;
+                        //añadir font-family: 'Poppins';font-weight: 700;
+                        cardDescription1.style.fontFamily = 'Poppins';
+                        cardDescription1.style.fontWeight = '700';
+
+                        // Crear el footer de la primera tarjeta
+
+                        const cardFooter1 = document.createElement('footer');
+                        cardFooter1.classList.add('card-footer');
+                        cardFooter1.setAttribute('id', 'footer');
+                        cardFooter1.style.display = 'none';
+
+                        const openButton1 = document.createElement('button');
+                        openButton1.classList.add('card-footer-item', 'button', 'is-info');
+                        openButton1.innerHTML = '<span><i class="fa-solid fa-square-up-right"></i> ' + langs.open_instance + '</span>';
+
+                        const editButton1 = document.createElement('button');
+                        editButton1.classList.add('card-footer-item', 'button', 'is-warning');
+                        editButton1.innerHTML = '<span><i class="fa-solid fa-folder-open"></i> ' + langs.open_instance_folder + '</span>';
+
+                        const deleteButton1 = document.createElement('button');
+                        deleteButton1.classList.add('card-footer-item', 'button', 'is-danger');
+                        deleteButton1.innerHTML = '<span><i class="fa-solid fa-folder-minus"></i> ' + langs.delete_instance + '</span>';
+                
+                        card1.appendChild(cardHeader1);
+                        cardHeader1.appendChild(cardTitle1);
+                        cardHeader1.appendChild(cardIcon1);
+                        card1.appendChild(cardContent1);
+                        cardContent1.appendChild(cardImage1);
+                        cardImage1.appendChild(img1);
+                        cardContent1.appendChild(cardDescription1);
+                        card1.appendChild(cardFooter1);
+                        cardFooter1.appendChild(openButton1);
+                        cardFooter1.appendChild(editButton1);
+                        cardFooter1.appendChild(deleteButton1);
+                        cardFooter1.appendChild(lineBreak2);
+                        modalBody.appendChild(card1);
+
+                        const lineBreak3 = document.createElement('br');
+                        modalBody.appendChild(lineBreak3);
+
+
+                        cardHeader1.addEventListener('click', () => {
+                            if (cardContent1.style.display === 'none') {
+                                cardContent1.style.display = 'flex';
+                                cardFooter1.style.display = 'flex';
+                                iconImage1.classList.remove('fa-angle-down');
+                                iconImage1.classList.add('fa-angle-up');
+                            } else {
+                                cardContent1.style.display = 'none';
+                                cardFooter1.style.display = 'none';
+                                iconImage1.classList.remove('fa-angle-up');
+                                iconImage1.classList.add('fa-angle-down');
+                            }
+                        });
+
+                        editButton1.addEventListener('click', () => {
+                            let path = `${dataDirectory}/.battly/instances/${instancias[i]}`
+                            shell.openPath(path.replace(/\//g, '\\'));
+                        });
+
+
+                        deleteButton1.addEventListener('click', () => {
+                            //eliminar el card, y eliminar la carpeta de la instancia
+                            Swal.fire({
+                                title: langs.are_you_sure,
+                                text: langs.are_you_sure_text,
+                                showCancelButton: true,
+                                confirmButtonColor: '#3e8ed0',
+                                cancelButtonColor: '#d33',
+                                confirmButtonText: langs.yes_delete,
+                                cancelButtonText: langs.no_cancel,
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    card1.remove();
+                                    lineBreak3.remove();
+                                    fs.rmdirSync(`${dataDirectory}/.battly/instances/${instancias[i]}`, { recursive: true });
+                                    Toast.fire({
+                                        icon: 'success',
+                                        title: langs.instance_deleted_correctly,
+                                    });
+                                }
+                            });
+                        });
+
+
+                        let loader;
+                        if (instance_json.version.endsWith('-forge')) {
+                            loader = 'forge';
+                        } else if (instance_json.version.endsWith('-fabric')) {
+                            loader = 'fabric';
+                        } else if (instance_json.version.endsWith('-quilt')) {
+                            loader = 'quilt';
+                        }
+
+                        let version;
+
+                        let loader_json = null;
+                        if (instance_json.loader) loader_json = instance_json.loader;
+
+                        let loaderVersion = null;
+                        if (loader_json) loaderVersion = loader_json.loaderVersion;
+
+                        if (instance_json.version.endsWith('-forge') || instance_json.version.endsWith('-fabric') || instance_json.version.endsWith('-quilt')) {
+                            version = instance_json.version.replace('-forge', '').replace('-fabric', '').replace('-quilt', '');
+                        } else {
+                            version = instance_json.version;
+                        }
+
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly`);
+                        }
+
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly/mods-internos`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly/mods-internos`);
+                        }
+
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly/launcher`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly/launcher`);
+                        }
+
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly/launcher/config-launcher`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly/launcher/config-launcher`);
+                        }
+
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly/launcher/forge`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly/launcher/forge`);
+                        }
+
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly/launcher/mc-assets`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${instancias[i]}/battly/launcher/mc-assets`);
+                        }
+
+                        let urlpkg = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url;
+                        let uuid = (await this.database.get("1234", "accounts-selected")).value;
+                        let account = (await this.database.get(uuid.selected, "accounts")).value;
+                        let ram = (await this.database.get("1234", "ram")).value;
+                        let Resolution = (await this.database.get("1234", "screen")).value;
+                        let launcherSettings = (await this.database.get("1234", "launcher")).value;
+
+                        openButton1.addEventListener('click', () => {
+                            let launch = new Launch();
+                            let opts = {
+                                url: this.config.game_url === "" || this.config.game_url === undefined ?
+                                    `${urlpkg}/files` :
+                                    this.config.game_url,
+                                authenticator: account,
+                                detached: true,
+                                timeout: 10000,
+                                path: `${dataDirectory}/.battly/instances/${instancias[i]}`,
+                                downloadFileMultiple: 20,
+                                version: version,
+                                loader: {
+                                    type: loader_json ? loader_json : loader,
+                                    build: loaderVersion ? loaderVersion : this.BattlyConfig.loader.build,
+                                    enable: true
+                                },
+                                verify: false,
+                                ignored: ["loader"],
+                                java: false,
+                                memory: {
+                                    min: `${ram.ramMin * 1024}M`,
+                                    max: `${ram.ramMax * 1024}M`,
+                                },
+                            };
+                            launch.Launch(opts);
+
+                            // Crear el elemento modal
+                            const preparingModal = document.createElement("div");
+                            preparingModal.className = "modal is-active";
+                            preparingModal.style.zIndex = "4";
+
+                            // Modal background
+                            const preparingModalBackground = document.createElement("div");
+                            preparingModalBackground.className = "modal-background";
+
+                            // Modal card
+                            const preparingModalCard = document.createElement("div");
+                            preparingModalCard.className = "modal-card";
+                            preparingModalCard.style.backgroundColor = "#444444";
+
+                            // Modal card head
+                            const preparingModalCardHead = document.createElement("header");
+                            preparingModalCardHead.className = "modal-card-head";
+                            preparingModalCardHead.style.backgroundColor = "#444444";
+
+                            const preparingModalCardTitle = document.createElement("p");
+                            preparingModalCardTitle.className = "modal-card-title";
+                            preparingModalCardTitle.style.color = "#fff";
+
+                            const preparingIcon = document.createElement("i");
+                            preparingIcon.className = "fa-solid fa-spinner fa-spin-pulse fa-sm";
+                            preparingIcon.style.color = "#fff";
+                            preparingIcon.style.marginRight = "5px";
+                            preparingIcon.style.verticalAlign = "middle";
+
+                            const preparingText = document.createTextNode(langs.preparing_instance);
+
+                    
+                            preparingModalCardTitle.appendChild(preparingText);
+
+                            preparingModalCardHead.appendChild(preparingModalCardTitle);
+
+                            // Modal card body
+                            const preparingModalCardBody = document.createElement("section");
+                            preparingModalCardBody.className = "modal-card-body";
+                            preparingModalCardBody.style.backgroundColor = "#444444";
+                            preparingModalCardBody.style.color = "#fff";
+
+                            const preparingMessage = document.createElement("p");
+                            let preparingMessageText = document.createTextNode(langs.preparing_instance);
+                            preparingMessage.appendChild(preparingMessageText);
+                            preparingMessage.appendChild(document.createElement("br"));
+
+                            const progress = document.createElement("progress");
+                            progress.className = "progress is-info";
+                            progress.setAttribute("max", "100");
+
+                            preparingModalCardBody.appendChild(preparingMessage);
+                            preparingModalCardBody.appendChild(progress);
+
+                            // Crear tarjeta 1
+                            const card1 = document.createElement("div");
+                            card1.className = "card";
+
+                            const cardHeader1 = document.createElement("header");
+                            cardHeader1.className = "card-header";
+
+                            const cardHeaderTitle1 = document.createElement("p");
+                            cardHeaderTitle1.className = "card-header-title";
+                            cardHeaderTitle1.appendChild(document.createTextNode(langs.downloading_version));
+
+                            const cardHeaderIcon1 = document.createElement("button");
+                            cardHeaderIcon1.className = "card-header-icon";
+                            cardHeaderIcon1.setAttribute("aria-label", "more options");
+
+                            const iconSpan1 = document.createElement("span");
+                            iconSpan1.className = "icon";
+
+                            const icon1 = document.createElement("i");
+                            icon1.className = "fas fa-angle-down";
+                            icon1.setAttribute("aria-hidden", "true");
+
+                            iconSpan1.appendChild(icon1);
+                            cardHeaderIcon1.appendChild(iconSpan1);
+
+                            cardHeader1.appendChild(cardHeaderTitle1);
+                            cardHeader1.appendChild(cardHeaderIcon1);
+
+                            const cardContent1 = document.createElement("div");
+                            cardContent1.className = "card-content";
+                            cardContent1.id = "content";
+                            cardContent1.style.display = "none";
+
+                            const content1 = document.createElement("div");
+                            content1.className = "content";
+                            content1.appendChild(document.createTextNode(`🔄 ${langs.downloading_version}`));
+                            content1.style.fontFamily = "Poppins";
+                            content1.style.fontWeight = "700";
+
+                            cardContent1.appendChild(content1);
+
+                            card1.appendChild(cardHeader1);
+                            card1.appendChild(cardContent1);
+
+                            preparingModalCardBody.appendChild(card1);
+                            preparingModalCardBody.appendChild(document.createElement("br"));
+
+                            // Crear tarjeta 2
+                            const card2 = document.createElement("div");
+                            card2.className = "card";
+
+                            const cardHeader2 = document.createElement("header");
+                            cardHeader2.className = "card-header";
+
+                            const cardHeaderTitle2 = document.createElement("p");
+                            cardHeaderTitle2.className = "card-header-title";
+                            cardHeaderTitle2.appendChild(document.createTextNode(langs.downloading_loader));
+
+                            const cardHeaderIcon2 = document.createElement("button");
+                            cardHeaderIcon2.className = "card-header-icon";
+                            cardHeaderIcon2.setAttribute("aria-label", "more options");
+
+                            const iconSpan2 = document.createElement("span");
+                            iconSpan2.className = "icon";
+
+                            const icon2 = document.createElement("i");
+                            icon2.className = "fas fa-angle-down";
+                            icon2.setAttribute("aria-hidden", "true");
+
+                            iconSpan2.appendChild(icon2);
+                            cardHeaderIcon2.appendChild(iconSpan2);
+
+                            cardHeader2.appendChild(cardHeaderTitle2);
+                            cardHeader2.appendChild(cardHeaderIcon2);
+
+                            const cardContent2 = document.createElement("div");
+                            cardContent2.className = "card-content";
+                            cardContent2.id = "content";
+                            cardContent2.style.display = "none";
+
+                            const content2 = document.createElement("div");
+                            content2.className = "content";
+                            content2.appendChild(document.createTextNode(`🔄 ${langs.installing_loader}`));
+                            content2.style.fontFamily = "Poppins";
+                            content2.style.fontWeight = "700";
+
+                            cardContent2.appendChild(content2);
+
+                            card2.appendChild(cardHeader2);
+                            card2.appendChild(cardContent2);
+
+                            // Crear tarjeta 3
+                            const card3 = document.createElement("div");
+                            card3.className = "card";
+
+                            const cardHeader3 = document.createElement("header");
+                            cardHeader3.className = "card-header";
+
+                            const cardHeaderTitle3 = document.createElement("p");
+                            cardHeaderTitle3.className = "card-header-title";
+                            cardHeaderTitle3.appendChild(document.createTextNode(langs.downloading_java));
+
+                            const cardHeaderIcon3 = document.createElement("button");
+                            cardHeaderIcon3.className = "card-header-icon";
+                            cardHeaderIcon3.setAttribute("aria-label", "more options");
+
+                            const iconSpan3 = document.createElement("span");
+                            iconSpan3.className = "icon";
+
+                            const icon3 = document.createElement("i");
+                            icon3.className = "fas fa-angle-down";
+                            icon3.setAttribute("aria-hidden", "true");
+
+                            iconSpan3.appendChild(icon3);
+                            cardHeaderIcon3.appendChild(iconSpan3);
+
+                            cardHeader3.appendChild(cardHeaderTitle3);
+                            cardHeader3.appendChild(cardHeaderIcon3);
+
+                            const cardContent3 = document.createElement("div");
+                            cardContent3.className = "card-content";
+                            cardContent3.id = "content";
+                            cardContent3.style.display = "none";
+
+                            const content3 = document.createElement("div");
+                            content3.className = "content";
+                            content3.appendChild(document.createTextNode(`🔄 ${langs.installing_java}`));
+                            content3.style.fontFamily = "Poppins";
+                            content3.style.fontWeight = "700";
+
+                            cardContent3.appendChild(content3);
+
+                            card3.appendChild(cardHeader3);
+                            card3.appendChild(cardContent3);
+
+                    
+                            preparingModalCardBody.appendChild(card3);
+                            preparingModalCardBody.appendChild(document.createElement("br"));
+                            preparingModalCardBody.appendChild(card2);
+
+
+                            // Modal card foot
+                            const preparingModalCardFoot = document.createElement("footer");
+                            preparingModalCardFoot.className = "modal-card-foot";
+                            preparingModalCardFoot.style.backgroundColor = "#444444";
+
+                            // Construir la estructura del modal
+                            preparingModalCard.appendChild(preparingModalCardHead);
+                            preparingModalCard.appendChild(preparingModalCardBody);
+                            preparingModalCard.appendChild(preparingModalCardFoot);
+
+                            preparingModal.appendChild(preparingModalBackground);
+                            preparingModal.appendChild(preparingModalCard);
+
+                            // Agregar el modal al contenedor en el DOM
+                            document.body.appendChild(preparingModal);
+                            modal.remove();
+
+                            launch.on('extract', extract => {
+                                new logger('Extract', '#00d1b2')
+                            });
+
+                            let assetsShown = false;
+                            let javaShown = false;
+                            let librariesShown = false;
+
+                            let content1Text;
+                            content1Text = document.createTextNode(`🔄 ${langs.checking_assets}`);
+                            let content3Text;
+                            content3Text = document.createTextNode(`🔄 ${langs.checking_java}`);
+                            let content2Text;
+                            content2Text = document.createTextNode(`🔄 ${langs.checking_instance} ${loader_json ? loader_json : loader}...`);
+                    
+
+                            launch.on('progress', (progress, size, element) => {
+                                new logger('Progress', '#00d1b2')
+                                //console.log(`Downloading ${element} ${Math.round((progress / size) * 100)}%`);
+
+
+                                if (element === 'Assets') {
+
+
+                                    if (!assetsShown) {
+                                        //añadir un br
+                                        content1.appendChild(document.createElement('br'));
+                                        content1.appendChild(content1Text);
+                                        cardContent1.style.display = 'block';
+                                        cardContent2.style.display = 'none';
+                                        cardContent3.style.display = 'none';
+                                        assetsShown = true;
+                                    }
+
+                                    content1Text.textContent = `🔄 ${langs.downloading_assets}... (${Math.round((progress / size) * 100)}%)`;
+
+                                } else if (element === 'Java') {
+
+
+                                    if (!javaShown) {
+                                        content3.appendChild(document.createElement('br'));
+                                        content3.appendChild(content3Text);
+                                        cardContent1.style.display = 'none';
+                                        cardContent2.style.display = 'none';
+                                        cardContent3.style.display = 'block';
+                                        javaShown = true;
+                                    }
+
+                                    content3Text.textContent = `🔄 ${langs.downloading_java}... (${Math.round((progress / size) * 100)}%)`;
+                                } else if (element === 'libraries') {
+
+
+                                    if (!librariesShown) {
+                                        content2.appendChild(document.createElement('br'));
+                                        content2.appendChild(content2Text);
+                                        cardContent1.style.display = 'none';
+                                        cardContent2.style.display = 'block';
+                                        cardContent3.style.display = 'none';
+                                        librariesShown = true;
+                                    }
+
+                                    content2Text.textContent = `🔄 ${langs.downloading} ${loader_json ? loader_json : loader}... (${Math.round((progress / size) * 100)}%)`;
+                                }
+                            });
+
+
+                            let assetsShownCheck = false;
+                            let javaShownCheck = false;
+                            let librariesShownCheck = false;
+
+                            launch.on('check', (progress, size, element) => {
+                                new logger('Check', '#00d1b2')
+
+                    
+                                if (element === 'assets') {
+
+
+                                    if (!assetsShownCheck) {
+                                        //añadir un br
+                                        content1.appendChild(document.createElement('br'));
+                                        content1.appendChild(content1Text);
+                                        cardContent1.style.display = 'block';
+                                        cardContent2.style.display = 'none';
+                                        cardContent3.style.display = 'none';
+                                        assetsShownCheck = true;
+                                    }
+
+                                    content1Text.textContent = `🔄 ${langs.checking_assets}... (${Math.round((progress / size) * 100)}%)`;
+                                } else if (element === 'java') {
+
+                                    if (!javaShownCheck) {
+                                        content3.appendChild(document.createElement('br'));
+                                        content3.appendChild(content3Text);
+                                        cardContent1.style.display = 'none';
+                                        cardContent2.style.display = 'none';
+                                        cardContent3.style.display = 'block';
+                                        javaShownCheck = true;
+                                    }
+
+                                    content3Text.textContent = `🔄 ${langs.checking_java}... (${Math.round((progress / size) * 100)}%)`;
+                                } else if (element === 'libraries') {
+
+
+                                    if (!librariesShownCheck) {
+                                        content2.appendChild(document.createElement('br'));
+                                        content2.appendChild(content2Text);
+                                        cardContent1.style.display = 'none';
+                                        cardContent2.style.display = 'block';
+                                        cardContent3.style.display = 'none';
+                                        librariesShownCheck = true;
+                                    }
+
+                                    content2Text.textContent = `🔄 ${langs.checking_instance} ${loader_json ? loader_json : loader}... (${Math.round((progress / size) * 100)}%)`;
+                                }
+                            });
+
+                            launch.on('speed', (speed) => {
+                                preparingMessageText.textContent = `${langs.downloading_instance} (${(speed / 1067008).toFixed(2)} MB/s)`;
+                            })
+
+                            launch.on('patch', patch => {
+                                new logger('Patch', '#00d1b2')
+                            });
+
+                            let inicio = false;
+                            launch.on('data', (e) => {
+                                new logger('Data', '#00d1b2')
+                                if (!inicio) {
+                                    if (e.includes(`Setting user: ${account.name}`) || e.includes("Launching wrapped minecraft")) {
+                                        let typeOfVersion;
+                                        if (loader === "forge") {
+                                            typeOfVersion = "Forge";
+                                        } else if (loader === "fabric") {
+                                            typeOfVersion = "Fabric";
+                                        } else if (loader === "quilt") {
+                                            typeOfVersion = "Quilt";
+                                        } else {
+                                            typeOfVersion = "";
+                                        }
+
+                                        ipcRenderer.send(
+                                            "new-status-discord-jugando",
+                                            `${langs.playing_in} ${version} ${typeOfVersion}`
+                                        );
+
+                                        this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} ${version} ${typeOfVersion}`);
+                                    }
+
+                                    ipcRenderer.send("new-notification", {
+                                        title: langs.minecraft_started_correctly,
+                                        body: langs.minecraft_started_correctly_body,
+                                    });
+
+                                    ipcRenderer.send("main-window-progress-reset");
+                        
+                                    preparingModal.remove();
+                                    inicio = true;
+
+                            
+                                    if (launcherSettings.launcher.close === "close-launcher") ipcRenderer.send("main-window-hide");
+
+                                    let versiones = this.Versions;
+
+                                    const skinsJarPath = `${dataDirectory}/.battly/instances/${instancias[i]}/mods/skins.jar`;
+                                    const skinsForgeJarPath = `${dataDirectory}/.battly/instances/${instancias[i]}/mods/skins-forge.jar`;
+                                    const skinsForgeNewJarPath = `${dataDirectory}/.battly/instances/${instancias[i]}/mods/skins-forge-new.jar`;
+
+                                    let rutaPrincipalSkinsJar = `${dataDirectory}/.battly/instances/${instancias[i]}/battly/mods-internos/skins.jar`;
+                                    let rutaPrincipalSkinsForgeJar = `${dataDirectory}/.battly/instances/${instancias[i]}/battly/mods-internos/skins-forge.jar`;
+                                    let rutaPrincipalSkinsForgeNewJar = `${dataDirectory}/.battly/instances/${instancias[i]}/battly/mods-internos/skins-forge-new.jar`;
+
+                                    let rutaModMultijugadorForge = `${dataDirectory}/.battly/instances/${instancias[i]}/battly/mods-internos/multijugador-forge.jar`;
+                                    let rutaModMultijugadorFabric = `${dataDirectory}/.battly/instances/${instancias[i]}/battly/mods-internos/multijugador-fabric.jar`;
+
+                                    let rutaModMultijugadorForgeDeMods = `${dataDirectory}/.battly/instances/${instancias[i]}/mods/multijugador-forge.jar`;
+                                    let rutaModMultijugadorFabricDeMods = `${dataDirectory}/.battly/instances/${instancias[i]}/mods/multijugador-fabric.jar`;
+
+                                    if (fs.existsSync(rutaModMultijugadorFabricDeMods)) {
+                                        fs.unlinkSync(rutaModMultijugadorFabricDeMods);
+                                    }
+
+                                    if (fs.existsSync(rutaModMultijugadorForgeDeMods)) {
+                                        fs.unlinkSync(rutaModMultijugadorForgeDeMods);
+                                    }
+
+                                    fs.unlinkSync(skinsForgeJarPath);
+                                    fs.unlinkSync(skinsForgeNewJarPath);
+
+                                    const selectedVersion = version;
+                            
+                            
+
+                                    let selectedVersionWithoutHyphen;
+
+                                    if (selectedVersion.includes("-")) {
+                                        selectedVersionWithoutHyphen = selectedVersion.replace(/-[^.]+/, "");
+                                        
+                                    }
+
+                                    const versionInfo = versiones.versions.find(
+                                        (v) => v.id === selectedVersionWithoutHyphen
+                                    );
+                            
+
+                                    if (versionInfo) {
+                                        function formatVersionNumber(version) {
+                                            const parsedVersion = parseFloat(version);
+                                            if (!isNaN(parsedVersion)) {
+                                                const formattedVersion = parsedVersion.toString();
+                                                return formattedVersion;
+                                            }
+                                            return version; // Si no se puede analizar como número, devuelve la versión original
+                                        }
+
+                                        // Ejemplo de uso:
+                                        const versionNumber = formatVersionNumber(versionInfo.version);
+
+                                        let versionesCompatiblesConForgeNormal = [
+                                            "1.16.5",
+                                            "1.16.4",
+                                            "1.16.3",
+                                            "1.16.2",
+                                            "1.16.1",
+                                            "1.16",
+                                            "1.15.2",
+                                            "1.15.1",
+                                            "1.15",
+                                            "1.14.4",
+                                            "1.14.3",
+                                            "1.14.2",
+                                            "1.14.1",
+                                            "1.14",
+                                            "1.13.2",
+                                            "1.13.1",
+                                            "1.13",
+                                            "1.12.2",
+                                            "1.12.1",
+                                            "1.12",
+                                            "1.11.2",
+                                            "1.11.1",
+                                            "1.11",
+                                            "1.10.2",
+                                            "1.10.1",
+                                            "1.10",
+                                            "1.9.4",
+                                            "1.9.3",
+                                            "1.9.2",
+                                            "1.9.1",
+                                            "1.9",
+                                            "1.8.9",
+                                            "1.8.8",
+                                            "1.8.7",
+                                            "1.8.6",
+                                            "1.8.5",
+                                            "1.8.4",
+                                            "1.8.3",
+                                            "1.8.2",
+                                            "1.8.1",
+                                            "1.8",
+                                        ];
+
+                                        
+
+                                        const excludedVersions = [
+                                            1.16, 1.15, 1.14, 1.13, 1.12, 1.11, 1.1, 1.9, 1.8, 1.7, 1.6,
+                                            1.5, 1.4, 1.3,
+                                        ];
+                                        const includedVersionsForgeNew = [1.17, 1.18, 1.19, 1.2, 1.21];
+                                        const versionesConMultijugadorDesactivado = ["1.16.4", "1.16.5"];
+
+                                        
+
+                                        if (
+                                            versionesConMultijugadorDesactivado.includes(version) &&
+                                            loader === "forge"
+                                        ) {
+                                            fs.copyFileSync(
+                                                rutaModMultijugadorForge,
+                                                `${dataDirectory}/.battly/instances/${instancias[i]}/mods/multijugador-forge.jar`
+                                            );
+                                        } else if (
+                                            versionesConMultijugadorDesactivado.includes(version) &&
+                                            loader === "fabric"
+                                        ) {
+                                            fs.copyFileSync(
+                                                rutaModMultijugadorFabric,
+                                                `${dataDirectory}/.battly/instances/${instancias[i]}/mods/multijugador-fabric.jar`
+                                            );
+                                        }
+
+                                        if (
+                                            includedVersionsForgeNew.includes(parseFloat(version)) &&
+                                            !excludedVersions.includes(parseFloat(version)) &&
+                                            loader === "forge"
+                                        ) {
+                                            
+
+                                            fs.copyFileSync(
+                                                rutaPrincipalSkinsForgeNewJar,
+                                                skinsForgeNewJarPath
+                                            );
+
+                                            // Eliminar skins.jar y skins-forge.jar
+                                            if (fs.existsSync(skinsJarPath)) {
+                                                fs.unlinkSync(skinsJarPath);
+                                            }
+                                            if (fs.existsSync(skinsForgeJarPath)) {
+                                                fs.unlinkSync(skinsForgeJarPath);
+                                            }
+                                        } else if (
+                                            versionesCompatiblesConForgeNormal.includes(version) &&
+                                            loader === "forge"
+                                        ) {
+                                            
+
+                                            fs.copyFileSync(rutaPrincipalSkinsForgeJar, skinsForgeJarPath);
+
+                                            // Eliminar skins.jar y skins-forge-new.jar
+                                            if (fs.existsSync(skinsJarPath)) {
+                                                fs.unlinkSync(skinsJarPath);
+                                            }
+                                            if (fs.existsSync(skinsForgeNewJarPath)) {
+                                                fs.unlinkSync(skinsForgeNewJarPath);
+                                            }
+                                        } else if (loader == "fabric" || loader == "quilt") {
+
+                                            fs.copyFileSync(rutaPrincipalSkinsJar, skinsJarPath);
+                                            // Eliminar skins-forge.jar y skins-forge-new.jar
+                                            if (fs.existsSync(skinsForgeJarPath)) {
+                                                fs.unlinkSync(skinsForgeJarPath);
+                                            }
+                                            if (fs.existsSync(skinsForgeNewJarPath)) {
+                                                fs.unlinkSync(skinsForgeNewJarPath);
+                                            }
+                                        }
+                                    } else {
+                                        console.log("❌ La versión no está en la lista.");
+                                    }
+
+                                    let archivoConfigSkins = `${dataDirectory}/.battly/instances/${instancias[i]}/CustomSkinLoader/CustomSkinLoader.json`;
+                                    let data = {
+                                        version: "14.15",
+                                        buildNumber: 8,
+                                        loadlist: [{
+                                            name: "BattlyAPI",
+                                            type: "Legacy",
+                                            checkPNG: false,
+                                            skin: "http://api.battlylauncher.com/api/skin/{USERNAME}.png",
+                                            model: "auto",
+                                            cape: "http://api.battlylauncher.com/api/capa/{USERNAME}.png",
+                                        },
+                                        {
+                                            name: "Mojang",
+                                            type: "MojangAPI",
+                                            apiRoot: "https://api.mojang.com/",
+                                            sessionRoot: "https://sessionserver.mojang.com/",
+                                        },
+                                        {
+                                            name: "OptiFine",
+                                            type: "Legacy",
+                                            checkPNG: false,
+                                            model: "auto",
+                                            cape: "https://optifine.net/capes/{USERNAME}.png",
+                                        },
+                                        {
+                                            name: "LabyMod",
+                                            type: "Legacy",
+                                            checkPNG: false,
+                                            model: "auto",
+                                            cape: "https://dl.labymod.net/capes/{STANDARD_UUID}",
+                                        },
+                                        ],
+                                        enableDynamicSkull: true,
+                                        enableTransparentSkin: true,
+                                        forceIgnoreHttpsCertificate: true,
+                                        forceLoadAllTextures: true,
+                                        enableCape: true,
+                                        threadPoolSize: 8,
+                                        enableLogStdOut: false,
+                                        cacheExpiry: 30,
+                                        forceUpdateSkull: true,
+                                        enableLocalProfileCache: false,
+                                        enableCacheAutoClean: true,
+                                        forceDisableCache: true,
+                                    };
+
+                                    if (fs.existsSync(path.join(archivoConfigSkins))) {
+                                        fs.writeFileSync(archivoConfigSkins, JSON.stringify(data));
+                                    } else {
+                                        fs.mkdirSync(`${dataDirectory}/.battly/instances/${instancias[i]}/CustomSkinLoader`, { recursive: true });
+                                        fs.writeFileSync(archivoConfigSkins, JSON.stringify(data));
+                                    }
+                    
+                                }
+                            })
+
+                            launch.on('close', code => {
+                        
+                                if (launcherSettings.launcher.close === "close-launcher")
+                                    ipcRenderer.send("main-window-show");
+
+                                ipcRenderer.send('updateStatus', {
+                                    status: 'online',
+                                    details: langs.in_the_menu,
+                                    username: account.name,
+                                });
+                            });
+
+                            launch.on('error', err => {
+                                new logger('[Error]', '#ff3860')
+                                console.log(err);
+                            });
+
+
+                        });
+                    } catch {
+                        console.log("❌ No se ha podido leer el archivo instance.json");
+                    }
+                }
+                    
+            }
+
+            const card2 = document.createElement('div');
+            card2.classList.add('card');
+            card2.style.cursor = 'pointer';
+
+            const cardHeader2 = document.createElement('header');
+            cardHeader2.classList.add('card-header');
+
+            const cardTitle2 = document.createElement('p');
+            cardTitle2.classList.add('card-header-title');
+            cardTitle2.textContent = langs.create_instance;
+
+            const cardIcon2 = document.createElement('button');
+            cardIcon2.classList.add('card-header-icon');
+            cardIcon2.setAttribute('aria-label', 'more options');
+
+            const icon2 = document.createElement('span');
+            icon2.classList.add('icon');
+
+            const iconImage2 = document.createElement('i');
+            iconImage2.classList.add('fas', 'fa-plus');
+
+            icon2.appendChild(iconImage2);
+            cardIcon2.appendChild(icon2);
+
+            // Agregar elementos al DOM
+            document.body.appendChild(modal);
+            modal.appendChild(modalBackground);
+            modal.appendChild(modalCard);
+            modalCard.appendChild(modalHeader);
+            modalCard.appendChild(modalBody);
+            modalBody.appendChild(lineBreak2);
+            modalBody.appendChild(card2);
+            card2.appendChild(cardHeader2);
+            cardHeader2.appendChild(cardTitle2);
+            cardHeader2.appendChild(cardIcon2);
+
+
+            closeBtn.addEventListener('click', () => {
+                modal.remove();
+            });
+
+
+            card2.addEventListener('click', () => {
+                // Crear el elemento modal
+                const modal = document.createElement("div");
+                modal.className = "modal is-active";
+                modal.style.zIndex = "3";
+
+                // Modal background
+                const modalBackground = document.createElement("div");
+                modalBackground.className = "modal-background";
+
+                // Modal card
+                const modalCard = document.createElement("div");
+                modalCard.className = "modal-card";
+                modalCard.style.backgroundColor = "#444444";
+
+                // Modal card head
+                const modalCardHead = document.createElement("header");
+                modalCardHead.className = "modal-card-head";
+                modalCardHead.style.backgroundColor = "#444444";
+
+                const modalCardTitle = document.createElement("p");
+                modalCardTitle.className = "modal-card-title";
+                modalCardTitle.style.fontSize = "25px";
+                modalCardTitle.style.fontFamily = "Poppins";
+                modalCardTitle.style.color = "#fff";
+                modalCardTitle.innerText = langs.create_instance;
+
+                const closeButton = document.createElement("button");
+                closeButton.className = "delete";
+                closeButton.setAttribute("aria-label", "close");
+
+                modalCardHead.appendChild(modalCardTitle);
+                modalCardHead.appendChild(closeButton);
+
+                // Modal card body
+                const modalCardBody = document.createElement("section");
+                modalCardBody.className = "modal-card-body";
+                modalCardBody.style.backgroundColor = "#444444";
+
+                const nameLabel = document.createElement("p");
+                nameLabel.style.color = "#fff";
+                nameLabel.innerText = langs.instance_name;
+
+                const nameInput = document.createElement("input");
+                nameInput.className = "input is-info";
+                nameInput.type = "text";
+                nameInput.style.fontFamily = "Poppins";
+                nameInput.style.fontWeight = "500";
+                nameInput.style.fontSize = "12px";
+                nameInput.setAttribute("placeholder", langs.name);
+
+                const descriptionLabel = document.createElement("p");
+                descriptionLabel.style.color = "#fff";
+                descriptionLabel.innerText = langs.instance_description;
+
+                const descriptionTextarea = document.createElement("textarea");
+                descriptionTextarea.className = "textarea is-info";
+                descriptionTextarea.style.fontFamily = "Poppins";
+                descriptionTextarea.style.height = "20px";
+                descriptionTextarea.style.fontWeight = "500";
+                descriptionTextarea.style.fontSize = "12px";
+                descriptionTextarea.setAttribute("name", "about");
+                descriptionTextarea.setAttribute("placeholder", langs.description);
+
+                const imageLabel = document.createElement("p");
+                imageLabel.style.color = "#fff";
+                imageLabel.innerText = langs.instance_image;
+
+                const imageContainer = document.createElement("div");
+                imageContainer.style.display = "flex";
+
+                const imageFigure = document.createElement("figure");
+                imageFigure.className = "image is-64x64";
+                imageFigure.style.marginRight = "10px";
+
+                const image = document.createElement("img");
+                image.src = "./assets/images/icons/minecraft.png";
+                image.style.borderRadius = "5px";
+
+                const fileContainer = document.createElement("div");
+                fileContainer.className = "file is-info is-boxed";
+                fileContainer.style.height = "65px";
+
+                const fileLabel = document.createElement("label");
+                fileLabel.className = "file-label";
+
+                const fileInput = document.createElement("input");
+                fileInput.className = "file-input";
+                fileInput.type = "file";
+                fileInput.setAttribute("name", "resume");
+
+                const fileCta = document.createElement("span");
+                fileCta.className = "file-cta";
+
+                const fileIcon = document.createElement("span");
+                fileIcon.className = "file-icon";
+
+                const uploadIcon = document.createElement("i");
+                uploadIcon.className = "fas fa-cloud-upload-alt";
+
+                const fileLabelText = document.createElement("span");
+                fileLabelText.style.fontSize = "10px";
+                fileLabelText.innerText = langs.select_a_file;
+
+                fileIcon.appendChild(uploadIcon);
+                fileCta.appendChild(fileIcon);
+                fileCta.appendChild(fileLabelText);
+                fileLabel.appendChild(fileInput);
+                fileLabel.appendChild(fileCta);
+                fileContainer.appendChild(fileLabel);
+
+                imageFigure.appendChild(image);
+                imageContainer.appendChild(imageFigure);
+                imageContainer.appendChild(fileContainer);
+
+                const versionLabel = document.createElement("p");
+                versionLabel.style.color = "#fff";
+                versionLabel.innerText = langs.instance_version;
+
+                const versionSelect = document.createElement("div");
+                versionSelect.className = "select is-info";
+
+                const versionOptions = document.createElement("select");
+
+                versionSelect.appendChild(versionOptions);
+
+                modalCardBody.appendChild(nameLabel);
+                modalCardBody.appendChild(nameInput);
+                modalCardBody.appendChild(document.createElement("br"));
+                modalCardBody.appendChild(document.createElement("br"));
+                modalCardBody.appendChild(descriptionLabel);
+                modalCardBody.appendChild(descriptionTextarea);
+                modalCardBody.appendChild(document.createElement("br"));
+                modalCardBody.appendChild(imageLabel);
+                modalCardBody.appendChild(imageContainer);
+                modalCardBody.appendChild(document.createElement("br"));
+                modalCardBody.appendChild(versionLabel);
+                modalCardBody.appendChild(versionSelect);
+
+                // Modal card foot
+                const modalCardFoot = document.createElement("footer");
+                modalCardFoot.className = "modal-card-foot";
+                modalCardFoot.style.backgroundColor = "#444444";
+
+                const createButton = document.createElement("button");
+                createButton.className = "button is-info is-responsive";
+                createButton.style.fontSize = "12px";
+                createButton.style.fontFamily = "Poppins";
+                createButton.style.color = "#fff";
+                createButton.innerText = langs.create_instance;
+
+                modalCardFoot.appendChild(createButton);
+
+                // Construir la estructura del modal
+                modalCard.appendChild(modalCardHead);
+                modalCard.appendChild(modalCardBody);
+                modalCard.appendChild(modalCardFoot);
+
+                modal.appendChild(modalBackground);
+                modal.appendChild(modalCard);
+
+                // Agregar el modal al contenedor en el DOM
+                document.body.appendChild(modal);
+
+
+
+                let versiones = this.Versions;
+                for (let i = 0; i < versiones.versions.length; i++) {
+                    if (versiones.versions[i].version.endsWith("-forge") || versiones.versions[i].version.endsWith("-fabric") || versiones.versions[i].version.endsWith("-quilt")) {
+                        let version = versiones.versions[i];
+                        let option = document.createElement("option");
+                        option.value = version.version;
+                        option.innerHTML = version.name;
+                        versionOptions.appendChild(option);
+                    }
+                }
+
+                closeButton.addEventListener("click", () => {
+                    modal.remove();
+                });
+
+
+                fileInput.addEventListener("change", () => {
+                    let imagen = fileInput.files ? fileInput.files : null;
+                    if (imagen.length > 0) {
+                        let reader = new FileReader();
+                        reader.onload = function (e) {
+                            image.src = e.target.result;
+                        };
+                        reader.readAsDataURL(imagen[0]);
+                    }
+                });
+
+
+                createButton.addEventListener("click", () => {
+                    let name = nameInput.value;
+                    let description = descriptionTextarea.value;
+                    let version = versionOptions.value;
+
+                    if (name && description && version) {
+                        //crear un string random de 6 caracteres
+                        let randomString = Math.random().toString(36).substring(2, 8);
+                        //crear el archivo de la instancia
+                        //comprobar si existe la carpeta de instancias
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances`);
+                        }
+
+                        //comprobar si existe la carpeta de la instancia
+                        if (!fs.existsSync(`${dataDirectory}/.battly/instances/${randomString}`)) {
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${randomString}`);
+                        } else {
+                            //generar otro string random
+                            randomString = Math.random().toString(36).substring(2, 8);
+                            //crear la carpeta de la instancia
+                            fs.mkdirSync(`${dataDirectory}/.battly/instances/${randomString}`);
+                        }
+
+                        
+                        let imagen = fileInput.files ? fileInput.files : null;
+                        if (imagen.length > 0) {
+                            fs.copyFileSync(
+                                imagen[0].path,
+                                `${dataDirectory}/.battly/instances/${randomString}/icon.png`
+                            );
+                        } else {
+                            //descargar la imagen https://bulma.io/images/placeholders/128x128.png y moverla a la carpeta de la instancia
+                            imagen = "/assets/images/icons/minecraft.png";
+                            //convertir a buffer
+                            let buffer = fs.readFileSync(__dirname + imagen);
+                            //escribir el archivo
+                            fs.writeFileSync(
+                                `${dataDirectory}/.battly/instances/${randomString}/icon.png`,
+                                buffer
+                            );
+                        }
+
+                        let instance = {
+                            name: name,
+                            description: description,
+                            version: version,
+                            image: `${dataDirectory}/.battly/instances/${randomString}/icon.png`,
+                            id: randomString,
+                        };
+
+                        let instance_json = JSON.stringify(instance);
+                        fs.writeFileSync(
+                            path.join(
+                                `${dataDirectory}/.battly/instances/${randomString}`,
+                                "instance.json"
+                            ),
+                            instance_json
+                        );
+                        
+                        //eliminar el modal
+                        modal.remove();
+
+                        Toast.fire({
+                            icon: "success",
+                            title: langs.instance_created_correctly,
+                        });
+                    } else {
+                        Toast.fire({
+                            icon: "error",
+                            title: langs.fill_all_fields,
+                        });
+                    }
+                });
+            });
+        });
+    }
+
+
+
+    async CambiarRutaJava() {
+        let inputRutaJava = document.getElementById("ruta-java-input");
+
+        let ruta_java = localStorage.getItem("java-path");
+
+        if (ruta_java) {
+            inputRutaJava.value = ruta_java;
+        } else {
+            //si es windows
+            if (process.platform === "win32") {
+                //hacer un scan en ``${dataDirectory}/.battly/runtime`` ver si están la carpeta jre-17.0.8-win32 o jre-17.0.1.12.1-win32
+                if (
+                    fs.existsSync(`${dataDirectory}/.battly/runtime/jre-17.0.8-win32`)
+                ) {
+                    //si existe, poner la ruta en el input
+                    inputRutaJava.value = `${dataDirectory}/.battly/runtime/jre-17.0.8-win32/bin/java.exe`;
+                    localStorage.setItem(
+                        "java-path",
+                        `${dataDirectory}/.battly/runtime/jre-17.0.8-win32/bin/java.exe`
+                    );
+                } else if (
+                    fs.existsSync(`${dataDirectory}/.battly/runtime/jre-17.0.1.12.1-win32`)
+                ) {
+                    //si existe, poner la ruta en el input
+                    inputRutaJava.value = `${dataDirectory}/.battly/runtime/jre-17.0.1.12.1-win32/bin/java.exe`;
+                    localStorage.setItem(
+                        "java-path",
+                        `${dataDirectory}/.battly/runtime/jre-17.0.1.12.1-win32/bin/java.exe`
+                    );
+                } else if(fs.existsSync(`${dataDirectory}/.battly/runtime/jre-17.0.8-windows-x64`)) {
+                    inputRutaJava.value = `${dataDirectory}/.battly/runtime/jre-17.0.8-windows-x64/bin/java.exe`;
+                    localStorage.setItem(
+                        "java-path",
+                        `${dataDirectory}/.battly/runtime/jre-17.0.8-windows-x64/bin/java.exe`
+                    );
+                } else if(fs.existsSync(`${dataDirectory}/.battly/runtime/jre-17.0.1.12.1-windows-x64`)) {
+                    inputRutaJava.value = `${dataDirectory}/.battly/runtime/jre-17.0.1.12.1-windows-x64/bin/java.exe`;
+                    localStorage.setItem(
+                        "java-path",
+                        `${dataDirectory}/.battly/runtime/jre-17.0.1.12.1-windows-x64/bin/java.exe`
+                    );
+                } else {
+                    inputRutaJava.value = "Java no encontrado. Haz click aquí para buscarlo.";
+                }
+            } else {
+                inputRutaJava.value = "Java no encontrado. Haz click aquí para buscarlo.";
+            }
+        }
+    }
+
+    async GenerarLogsSocket() {
+        ipcRenderer.on("getLogsAnterior", async () => {
+            let generated = consoleOutput + "\n" + consoleOutput_;
+            await fs.writeFileSync(logFilePath, generated);
+        })
+    }
+
+    async GetLogsSocket() {
+        ipcRenderer.on("avisoObtenerLogs", async (event, args) => {
+            Swal.fire({
+                title: langs.title_access_logs,
+                text: langs.text_access_logs,
+                html: `${langs.requester} ${args.user}<br>${langs.reason}: ${args.razon}<br><br>${langs.text_access_logs_two}`,
+                showCancelButton: true,
+                confirmButtonText: langs.allow,
+                cancelButtonText: langs.deny,
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    if (!fs.existsSync(logFilePath)) {
+                        let generated = consoleOutput + "\n" + consoleOutput_;
+                        await fs.writeFileSync(logFilePath, generated);
+                        ipcRenderer.send("obtenerLogs");
+                    } else {
+                        await fs.unlinkSync(logFilePath);
+                        let generated = consoleOutput + "\n" + consoleOutput_;
+                        await fs.writeFileSync(logFilePath, generated);
+                        ipcRenderer.send("obtenerLogs");
+                    }
+                } else {
+                    Toast.fire({
+                        icon: "error",
+                        title: langs.access_logs_denied,
+                        text: langs.access_logs_denied_text
+                    });
+                }
+            });
+        });
+
+        ipcRenderer.on("enviarSocketID", async (event, args) => {
+            Swal.fire({
+                title: langs.title_access_logs,
+                text: `${langs.your_unique_id_is} ${args.sessionID} ${langs.dont_share_it}`,
+                confirmButtonText: langs.copy,
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    navigator.clipboard.writeText(args.sessionID);
+                    Toast.fire({
+                        icon: "success",
+                        title: langs.id_copied_correctly
+                    });
+                }
+            });
+        });
+    }
+
+    async WaitData() {
+        if (!fs.existsSync(`${dataDirectory}/.battly`)) {
+            fs.mkdirSync(`${dataDirectory}/.battly`);
+        }
+
+        if (!fs.existsSync(`${dataDirectory}/.battly/instances`)) {
+            fs.mkdirSync(`${dataDirectory}/.battly/instances`);
+        }
+
+        if (!fs.existsSync(`${dataDirectory}/.battly/battly`)) {
+            fs.mkdirSync(`${dataDirectory}/.battly/battly`);
+        }
+
+        if (!fs.existsSync(`${dataDirectory}/.battly/battly/mods-internos`)) {
+            fs.mkdirSync(`${dataDirectory}/.battly/battly/mods-internos`);
+        }
+
+        if (!fs.existsSync(`${dataDirectory}/.battly/battly/launcher`)) {
+            fs.mkdirSync(`${dataDirectory}/.battly/battly/launcher`);
+        }
+
+        if (!fs.existsSync(`${dataDirectory}/.battly/battly/launcher/config-launcher`)) {
+            fs.mkdirSync(`${dataDirectory}/.battly/battly/launcher/config-launcher`);
+        }
+
+        if (!fs.existsSync(`${dataDirectory}/.battly/battly/launcher/forge`)) {
+            fs.mkdirSync(`${dataDirectory}/.battly/battly/launcher/forge`);
+        }
+
+        if (!fs.existsSync(`${dataDirectory}/.battly/battly/launcher/mc-assets`)) {
+            fs.mkdirSync(`${dataDirectory}/.battly/battly/launcher/mc-assets`);
+        }
+    }
+
+    async ShowNews() {
+        let btnShowNews = document.getElementById("btnShowNews");
+        btnShowNews.addEventListener("click", async () => {
+            changePanel("news");
+        });
+        let news_shown = localStorage.getItem("news_shown_v1.7");
+        if (
+            !news_shown ||
+            news_shown == "false" ||
+            news_shown == null ||
+            news_shown == undefined
+        ) {
+            setTimeout(function () {
+                changePanel("news");
+            }, 3000);
+        }
+    }
+
+    async InitTheme() {
+        const btnDownload1 = document.getElementById("music-btn");
+        btnDownload1.addEventListener("click", () => {
+            changePanel("music");
+        });
+
+        let color = localStorage.getItem("theme-color");
+        if (!color) color = "#3e8ed0";
+        let color_bottom_bar = localStorage.getItem("theme-color-bottom-bar");
+        let opacity = localStorage.getItem("theme-opacity-bottom-bar");
+        let background_img = localStorage.getItem("background-img");
+
+        let buttons = document.querySelectorAll(".button");
+        let btns = document.querySelectorAll(".btn");
+        let tab_btns = document.querySelectorAll(".tab-btn");
+        let inputs = document.querySelectorAll(".input");
+        let select = document.querySelectorAll(".select");
+        let select_options = document.querySelectorAll(".select-version");
+        let select_selected = document.querySelectorAll(".select-selected");
+        let select_selected_span = document.querySelectorAll(
+            ".select-selected span"
+        );
+        let bottom_bar = document.querySelector(".bottom_bar");
+        let bottom_bar_settings = document.querySelector(".bottom_bar_settings");
+        let bottom_bar_mods = document.querySelector(".bottom_bar_mods");
+
+        if (color_bottom_bar) { } else {
+            color_bottom_bar.value = "#1f1f1f";
+            localStorage.setItem("theme-color-bottom-bar", "#1f1f1f");
+        }
+
+        bottom_bar.style.backgroundColor = color_bottom_bar;
+        bottom_bar_settings.style.backgroundColor = color_bottom_bar;
+        bottom_bar_mods.style.backgroundColor = color_bottom_bar;
+
+        buttons.forEach((button) => {
+            button.style.backgroundColor = color;
+        });
+
+        if (opacity) {
+            bottom_bar.style.opacity = opacity;
+            bottom_bar_settings.style.opacity = opacity;
+            bottom_bar_mods.style.opacity = opacity;
+        } else {
+            bottom_bar.style.opacity = "1";
+            bottom_bar_settings.style.opacity = "1";
+            bottom_bar_mods.style.opacity = "1";
+        }
+
+        document.querySelector(".save-tabs-btn").style.backgroundColor = color;
+
+        btns.forEach((btn) => {
+            btn.style.backgroundColor = color;
+        });
+
+        tab_btns.forEach((tab_btn) => {
+            tab_btn.style.backgroundColor = color;
+        });
+
+        inputs.forEach((input) => {
+            input.style.backgroundColor = color;
+        });
+
+        select.forEach((select) => {
+            select.style.backgroundColor = color;
+        });
+
+        select_options.forEach((select_option) => {
+            select_option.style.backgroundColor = color;
+        });
+
+        select_selected.forEach((select_selected) => {
+            select_selected.style.backgroundColor = color;
+        });
+
+        select_selected_span.forEach((select_selected_span) => {
+            select_selected_span.style.backgroundColor = color;
+        });
+
+        if (background_img) {
+            document.body.style.backgroundImage = `url(${background_img})`;
+        } else { }
+    }
+
+    async IniciarEstadoDiscord() {
+        ipcRenderer.send("new-status-discord");
+    }
+
+    async CargarVersiones() {
+        let versiones = document.getElementById("listaDeVersiones");
+        let btnReloadVersions = document.getElementById("reiniciar-versiones");
+        btnReloadVersions.addEventListener("click", () => {
+            versiones.innerHTML = "";
+            this.CargarVersiones();
+            
+            Toast.fire({
+                icon: "success",
+                title: langs.version_list_updated,
+            });
+        });
+        try {
+            let versiones_nuevas = fs.readdirSync(
+                dataDirectory + "/.battly/versions"
+            );
+
+            let versions_vanilla = [];
+
+            for (let i = 0; i < versiones_nuevas.length; i++) {
+                let data_versions_mojang = this.VersionsMojang;
+
+                for (let i = 0; i < data_versions_mojang.versions.length; i++) {
+                    let version = data_versions_mojang.versions[i].id;
+                    versions_vanilla.push(version);
+                }
+
+
+
+
+                let version = versiones_nuevas[i];
+
+                if (!versions_vanilla.includes(version)) {
+                    let option = document.createElement("option");
+                    //si contiene OptiFine- eliminar todo lo que vaya después de OptiFine pero incluir la palabra OptiFine
+                    if (version.includes("OptiFine_")) {
+                        // Usa una expresión regular para eliminar todo después de "OptiFine" y agrega "OptiFine"
+                        let version_optifine = version.replace(/OptiFine.*$/, "OptiFine");
+                        option.value = version + `-extra`;
+                        option.innerHTML = version_optifine;
+                        versiones.appendChild(option);
+                    } else {
+                        option.value = version + `-extra`;
+                        option.innerHTML = version;
+                        versiones.appendChild(option);
+                    }
+                } else {
+                    let option = document.createElement("option");
+                    option.value = version + ``;
+                    option.innerHTML = version + "";
+                    versiones.appendChild(option);
+                }
+            }
+        } catch { }
+    }
+
+    async CargarMods() {
+        let BotonUnirseServidorDiscord = document.getElementById(
+            "BotonUnirseServidorDiscord"
+        );
+        BotonUnirseServidorDiscord.addEventListener("click", function () {
+            window.open("https://discord.gg/tecno-bros-885235460178342009", "_blank");
+        });
+    }
+
+    async initConfig() {
+        let config = this.BattlyConfig;
+        let config_json = JSON.stringify(config);
+        fs.mkdirSync(
+            `${dataDirectory}/${process.platform == "darwin"
+                ? this.config.dataDirectory
+                : `.${this.config.dataDirectory}`
+            }`, {
+            recursive: true,
+        }
+        );
+        fs.mkdirSync(
+            `${dataDirectory}/${process.platform == "darwin"
+                ? this.config.dataDirectory
+                : `.${this.config.dataDirectory}`
+            }/versions`, {
+            recursive: true,
+        }
+        );
+
+        let versionsConfig = this.Versions;
+        let config_json_versions = JSON.stringify(versionsConfig);
+        fs.mkdirSync(
+            `${dataDirectory}/${process.platform == "darwin"
+                ? this.config.dataDirectory
+                : `.${this.config.dataDirectory}`
+            }`, {
+            recursive: true,
+        }
+        );
+
+        document.getElementById("instancias-btn").innerHTML = `<span><i class="fa-solid fa-folder"></i> ${langs.instances}</span>`;
+        document.getElementById("download-btn").innerHTML = `<span><i class="fa-solid fa-cloud-arrow-down"></i> ${langs.download}</span>`;
+        document.getElementById("play-btn").innerHTML = `<span>${langs.play} <i class="fa-solid fa-circle-play"></i></span>`;
+        document.getElementById("news-battly").innerHTML = `${langs.news_battly}`;
+        document.getElementById("status-battly").innerHTML = `${langs.status_battly}`;
+        document.getElementById("playing-now-text").innerHTML = `${langs.playing_now_text}`;
+        document.getElementById("playing-now-body").innerHTML = `${langs.playing_now_body}`;
+        document.getElementById("ads-text").innerHTML = `${langs.ads_text}`;
+
+        /* settings */
+        document.getElementById("accounts-btn").innerHTML = `${langs.accounts_btn}`;
+        document.getElementById("java-btn").innerHTML = `${langs.java_btn}`;
+        document.getElementById("ram-btn").innerHTML = `${langs.ram_btn}`;
+        document.getElementById("launcher-btn").innerHTML = `${langs.launcher_btn}`;
+        document.getElementById("theme-btn").innerHTML = `${langs.theme_btn}`;
+        document.getElementById("background-btn").innerHTML = `${langs.background_btn}`;
+        document.getElementById("save-btn").innerHTML = `${langs.save_btn}`;
+        document.getElementById("account-information").innerHTML = `${langs.account_information}`;
+        document.getElementById("mc-id-text").innerHTML = `${langs.mc_id_text}`;
+        document.getElementById("mostrarskin-userinfo-btn").innerHTML = `${langs.showskin_userinfo_btn}`;
+        document.getElementById("eliminarcuenta-userinfo-btn").innerHTML = `${langs.deleteaccount_userinfo_btn}`;
+        document.getElementById("establecer-skin").innerHTML = `${langs.set_skin}`;
+        document.getElementById("cerrar-userinfo-btn").innerHTML = `${langs.close}`;
+        document.getElementById("my-accounts").innerHTML = `${langs.my_accounts}`;
+        document.getElementById("add-account-text").innerHTML = `${langs.add_account_text}`;
+        document.getElementById("java-settings").innerHTML = `${langs.java_settings}`;
+        document.getElementById("java-text-info").innerHTML = `${langs.java_text_info}`;
+        document.getElementById("java-text-info2").innerHTML = `${langs.java_text_info2}`;
+        document.getElementById("ram-settings").innerHTML = `${langs.ram_settings}`;
+        document.getElementById("ram-text-info").innerHTML = `${langs.ram_text_info}`;
+        document.getElementById("of-ram").innerHTML = `${langs.of_ram}`;
+        document.getElementById("of-ram-disponible").innerHTML = `${langs.of_ram_disponible}`;
+        document.getElementById("you-have-a-total").innerHTML = `${langs.you_have_a_total}`;
+        document.getElementById("ram-text-info").innerHTML = `${langs.ram_text_info}`;
+        document.getElementById("battly-settings").innerHTML = `${langs.battly_settings}`;
+        document.getElementById("battly-settings-information").innerHTML = `${langs.battly_settings_information}`;
+        document.getElementById("minimalize-battly").innerHTML = `${langs.minimalize_battly}`;
+        document.getElementById("keep-battly-opened").innerHTML = `${langs.keep_battly_opened}`;
+        document.getElementById("obtener-socketid").innerHTML = `${langs.get_socketid}`;
+        document.getElementById("battly-theme").innerHTML = `${langs.battly_theme}`;
+        document.getElementById("welcome").innerHTML = `${langs.welcome}`;
+        document.getElementById("battly-theme-text").innerHTML = `${langs.battly_theme_text}`;
+        document.getElementById("change-theme-text").innerHTML = `${langs.change_theme_text}`;
+        document.getElementById("buttons-color").innerHTML = `${langs.buttons_color}`;
+        document.getElementById("bottom-bar-text").innerHTML = `${langs.bottom_bar_text}`;
+        document.getElementById("bottom-bar-opacity").innerHTML = `${langs.bottom_bar_opacity}`;
+        document.getElementById("starting-music").innerHTML = `${langs.starting_music}`;
+        document.getElementById("resize-image-text").innerHTML = `${langs.resize_image_text}`;
+        document.getElementById("establecer-fondo").innerHTML = `${langs.set_background_text}`;
+        document.getElementById("cerrar-preview-btn").innerHTML = `${langs.cancel}`;
+        document.getElementById("customize-background").innerHTML = `${langs.customize_background}`;
+        document.getElementById("resize-background").innerHTML = `${langs.resize_background}`;
+        document.getElementById("background-image-text").innerHTML = `${langs.background_image_text}`;
+        document.getElementById("restablecer-fondo").innerHTML = `${langs.reset_background}`;
+        document.getElementById("select-a-background").innerHTML = `${langs.select_a_background}`;
+        document.getElementById("button_instalar_modpack").innerHTML = `${langs.install_modpack}`;
+        document.getElementById("volver").innerHTML = `${langs.return}`;
+        document.getElementById("input_buscar_mods").placeholder = `${langs.search_mods}`;
+        document.getElementById("add-friends").innerHTML = `${langs.add_friend}`;
+        document.getElementById("solicitudes").innerHTML = `${langs.show_requests}`;
+        document.getElementById("friends-volver-btn").innerHTML = `${langs.return}`;
+        document.getElementById("welcome_battly_social").innerHTML = `${langs.welcome_battly_social}`;
+        document.getElementById("friends_list_text").innerHTML = `${langs.friends_list_text}`;
+        document.getElementById("start_minecraft_text").innerHTML = `${langs.start_minecraft_text}`;
+        document.getElementById("textInfo").innerHTML = `${langs.select_the_version_that_you_want}`;
+        document.getElementById("select_a_version").innerHTML = `${langs.select_a_version}`;
+        document.getElementById("show-playlists").innerHTML = `${langs.playlists}`;
+        document.getElementById("return-btn").innerHTML = `${langs.return}`;
+        document.getElementById("playing-now").innerHTML = `${langs.playing_now}`;
+        document.getElementById("nombre-de-cancion").placeholder = `${langs.song_name}`;
+        document.getElementById("reproducir-btn").innerHTML = `${langs.search_song}`;
+        document.getElementById("save-playlist").innerHTML = `${langs.save_playlist}`;
+        document.getElementById("cancel-btn-login").innerHTML = `${langs.cancel}`;
+        //document.getElementById("cancel_login_two").innerHTML = `${langs.cancel}`;
+        document.getElementById("lost_your_account").innerHTML = `${langs.lost_your_account}`;
+        document.getElementById("recover_it_here").innerHTML = `${langs.recover_it_here}`;
+        document.getElementById("username_text").placeholder = `${langs.username}`;
+        document.getElementById("password_text").placeholder = `${langs.password}`;
+        document.getElementById("register_open_btn").innerHTML = `${langs.register_open_btn}`;
+        document.getElementById("login-text").innerHTML = `${langs.login}`;
+        document.getElementById("you-dont-have-account").innerHTML = `${langs.you_dont_have_account}`;
+        document.getElementById("login-btn").innerHTML = `${langs.login}`;
+
+
+    }
+
+    async initNews() {
+        let news = document.querySelector(".news-list");
+        if (this.news) {
+            if (!this.news.length) {
+                let blockNews = document.createElement("div");
+                blockNews.classList.add("news-block", "opacity-1");
+                blockNews.innerHTML = `
+                    <div class="news-header">
+                        <div class="header-text">
+                            <div class="title_">No hay noticias disponibles actualmente.</div>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="bbWrapper">
+                            <p>Puedes seguir todas las noticias relacionadas con el servidor aquí.</p>
+                        </div>
+                    </div>`;
+                news.appendChild(blockNews);
+            } else {
+                for (let News of this.news) {
+                    let date = await this.getdate(News.publish_date);
+                    let blockNews = document.createElement("div");
+                    blockNews.classList.add("news-block");
+                    blockNews.innerHTML = `
+                        <div class="news-header">
+                            <div class="header-text">
+                                <div class="title_">${News.title}</div>
+                            </div>
+                            <div class="date">
+                                <div class="day">${date.day}</div>
+                                <div class="month">${date.month}</div>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <div class="bbWrapper">
+                                <p>${News.content.replace(/\n/g, "</br>")}</p>
+                                <p class="news-author"><span><i class="fa-solid fa-hammer"></i> ${News.author
+                        }</span></p>
+                            </div>
+                        </div>`;
+                    news.appendChild(blockNews);
+                }
+            }
+        } else {
+            let blockNews = document.createElement("div");
+            blockNews.classList.add("news-block", "opacity-1");
+            blockNews.innerHTML = `
+                <div class="news-header">
+                    <div class="header-text">
+                        <div class="title">Error.</div>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <div class="bbWrapper">
+                        <p>No se puede contactar con el servidor de noticias.</br>Por favor, compruebe su configuración.</p>
+                    </div>
+                </div>`;
+            // news.appendChild(blockNews);
+        }
+    }
+
+    async initLaunch() {
+        //crear el archivo launcher_profiles.json en la ruta de main del launcher
+        let launcherProfiles;
+        let accounts = await this.database.getAll("accounts");
+        let accountsSelected = await this.database.get("1234", "accounts-selected");
+
+        let profiles = {};
+        let profiles_ = [];
+        for (let account of accounts) {
+            profiles_.push(account);
+        }
+
+        for (let i = 0; i < profiles_.length; i++) {
+            let profileName = profiles_[i].value.name;
+            profiles[profiles_[i].value.uuid] = {
+                created: Date.now(),
+                icon: "Grass",
+                lastUsed: "1970-01-02T00:00:00.000Z",
+                lastVersionId: "latest-release",
+                name: "",
+                type: "latest-release",
+            };
+        }
+
+        launcherProfiles = {
+            profiles: profiles,
+            settings: {
+                crashAssistance: true,
+                enableAdvanced: false,
+                enableAnalytics: true,
+                enableHistorical: false,
+                enableReleases: true,
+                enableSnapshots: false,
+                keepLauncherOpen: false,
+                profileSorting: "ByLastPlayed",
+                showGameLog: false,
+                showMenu: false,
+                soundOn: false,
+            },
+            version: 3,
+        };
+
+        let launcherProfilesJson = JSON.stringify(launcherProfiles);
+        fs.mkdirSync(
+            `${dataDirectory}/${process.platform == "darwin"
+                ? this.config.dataDirectory
+                : `.${this.config.dataDirectory}`
+            }`, {
+            recursive: true,
+        }
+        );
+        fs.writeFileSync(
+            path.join(
+                `${dataDirectory}/${process.platform == "darwin"
+                    ? this.config.dataDirectory
+                    : `.${this.config.dataDirectory}`
+                }`,
+                "launcher_profiles.json"
+            ),
+            launcherProfilesJson
+        );
+
+        let data = this.BattlyConfig;
+        let new_version = data.new_version;
+        let new_version_message = data.new_version_message;
+        let new_version_news = data.new_version_news;
+        let new_version_html = data.new_version_html;
+
+        if (new_version == true) {
+            const Swal_ = require("./assets/js/libs/sweetalert/sweetalert2.all.min");
+
+            Swal_.fire({
+                title: new_version_message,
+                html: new_version_html,
+                confirmButtonText: langs.accept,
+            });
+        }
+
+        let mcModPack;
+
+        document.getElementById("play-btn").addEventListener("click", async () => {
+            let modalStartVersions = document.getElementById("modalStartVersion");
+            modalStartVersions.classList.add("is-active");
+        });
+
+        document
+            .getElementById("closeStartVersion")
+            .addEventListener("click", async () => {
+                let modalStartVersions = document.getElementById("modalStartVersion");
+                modalStartVersions.classList.remove("is-active");
+            });
+
+        document
+            .getElementById("cancelStartVersion")
+            .addEventListener("click", async () => {
+                let modalStartVersions = document.getElementById("modalStartVersion");
+                modalStartVersions.classList.remove("is-active");
+            });
+
+        let data_versions = this.Versions;
+        let data_versions_mojang = this.VersionsMojang;
+
+        document
+            .getElementById("listaDeVersiones")
+            .addEventListener("change", async () => {
+                let version_selected =
+                    document.getElementById("listaDeVersiones").value;
+                let versiones = data_versions.versions;
+
+                //comprobar si la versión es compatible con forge, fabric o quilt, obteniendo las versiones, ejemplo:
+                /* {"versions":[{"version":"1.20.1","name":"1.20.1"},{"version":"1.20.1-forge","name":"1.20.1 - Forge"},{"version":"1.20.1-fabric","name":"1.20.1 - Fabric"},{"version":"1.20.1-quilt","name":"1.20.1 - Quilt"} ]} */
+                let radioVanilla = document.getElementById("radioVanilla");
+                let radioForge = document.getElementById("radioForge");
+                let radioFabric = document.getElementById("radioFabric");
+                let radioQuilt = document.getElementById("radioQuilt");
+
+                let versions_vanilla = [];
+                let versiones_compatible_forge = [];
+                let versiones_compatible_fabric = [];
+                let versiones_compatible_quilt = [];
+
+                for (let i = 0; i < versiones.length; i++) {
+                    let version = versiones[i].version;
+                    if (version.endsWith("-forge")) {
+                        versiones_compatible_forge.push(versiones[i].realVersion);
+                    } else if (version.endsWith("-fabric")) {
+                        versiones_compatible_fabric.push(versiones[i].realVersion);
+                    } else if (version.endsWith("-quilt")) {
+                        versiones_compatible_quilt.push(versiones[i].realVersion);
+                    }
+                }
+
+                for (let i = 0; i < data_versions_mojang.versions.length; i++) {
+                    let version = data_versions_mojang.versions[i].id;
+                    versions_vanilla.push(version);
+                }
+
+                if (
+                    versiones_compatible_forge.includes(version_selected) &&
+                    versiones_compatible_fabric.includes(version_selected) &&
+                    versiones_compatible_quilt.includes(version_selected)
+                ) {
+                    document.getElementById("tipo-de-versiones").style.display = "";
+                    radioVanilla.style.display = "";
+                    radioForge.style.display = "";
+                    radioFabric.style.display = "";
+                    radioQuilt.style.display = "";
+                    let footermodaliniciarversion = document.getElementById(
+                        "footermodaliniciarversion"
+                    );
+                    footermodaliniciarversion.style.display = "none";
+                } else if (
+                    versiones_compatible_forge.includes(version_selected) &&
+                    versiones_compatible_fabric.includes(version_selected)
+                ) {
+                    document.getElementById("tipo-de-versiones").style.display = "";
+                    radioVanilla.style.display = "";
+                    radioForge.style.display = "";
+                    radioFabric.style.display = "";
+                    radioQuilt.style.display = "none";
+                    let footermodaliniciarversion = document.getElementById(
+                        "footermodaliniciarversion"
+                    );
+                    footermodaliniciarversion.style.display = "none";
+                } else if (
+                    versiones_compatible_forge.includes(version_selected) &&
+                    versiones_compatible_quilt.includes(version_selected)
+                ) {
+                    document.getElementById("tipo-de-versiones").style.display = "";
+                    radioVanilla.style.display = "";
+                    radioForge.style.display = "";
+                    radioFabric.style.display = "none";
+                    radioQuilt.style.display = "";
+                    let footermodaliniciarversion = document.getElementById(
+                        "footermodaliniciarversion"
+                    );
+                    footermodaliniciarversion.style.display = "none";
+                } else if (
+                    versiones_compatible_fabric.includes(version_selected) &&
+                    versiones_compatible_quilt.includes(version_selected)
+                ) {
+                    document.getElementById("tipo-de-versiones").style.display = "";
+                    radioVanilla.style.display = "";
+                    radioForge.style.display = "none";
+                    radioFabric.style.display = "";
+                    radioQuilt.style.display = "";
+                    let footermodaliniciarversion = document.getElementById(
+                        "footermodaliniciarversion"
+                    );
+                    footermodaliniciarversion.style.display = "none";
+                } else if (versiones_compatible_forge.includes(version_selected)) {
+                    document.getElementById("tipo-de-versiones").style.display = "";
+                    radioVanilla.style.display = "";
+                    radioForge.style.display = "";
+                    radioFabric.style.display = "none";
+                    radioQuilt.style.display = "none";
+                    let footermodaliniciarversion = document.getElementById(
+                        "footermodaliniciarversion"
+                    );
+                    footermodaliniciarversion.style.display = "none";
+                } else if (versiones_compatible_fabric.includes(version_selected)) {
+                    document.getElementById("tipo-de-versiones").style.display = "";
+                    radioVanilla.style.display = "";
+                    radioForge.style.display = "none";
+                    radioFabric.style.display = "";
+                    radioQuilt.style.display = "none";
+                    let footermodaliniciarversion = document.getElementById(
+                        "footermodaliniciarversion"
+                    );
+                    footermodaliniciarversion.style.display = "none";
+                } else if (versiones_compatible_quilt.includes(version_selected)) {
+                    document.getElementById("tipo-de-versiones").style.display = "";
+                    radioVanilla.style.display = "";
+                    radioForge.style.display = "none";
+                    radioFabric.style.display = "none";
+                    radioQuilt.style.display = "";
+                    let footermodaliniciarversion = document.getElementById(
+                        "footermodaliniciarversion"
+                    );
+                    footermodaliniciarversion.style.display = "none";
+                } else if (versions_vanilla.includes(version_selected)) {
+                    document.getElementById("tipo-de-versiones").style.display = "";
+                    radioVanilla.style.display = "";
+                    radioForge.style.display = "none";
+                    radioFabric.style.display = "none";
+                    radioQuilt.style.display = "none";
+                    let footermodaliniciarversion = document.getElementById(
+                        "footermodaliniciarversion"
+                    );
+                    footermodaliniciarversion.style.display = "none";
+                } else if (version_selected === "dx") {
+                    document.getElementById("tipo-de-versiones").display = "none";
+                    radioVanilla.style.display = "none";
+                    radioForge.style.display = "none";
+                    radioFabric.style.display = "none";
+                    radioQuilt.style.display = "none";
+                    let footermodaliniciarversion = document.getElementById(
+                        "footermodaliniciarversion"
+                    );
+                    footermodaliniciarversion.style.display = "none";
+                } else {
+                    document.getElementById("tipo-de-versiones").display = "none";
+                    radioVanilla.style.display = "none";
+                    radioForge.style.display = "none";
+                    radioFabric.style.display = "none";
+                    radioQuilt.style.display = "none";
+                    let footermodaliniciarversion = document.getElementById(
+                        "footermodaliniciarversion"
+                    );
+                    footermodaliniciarversion.style.display = "";
+                }
+            });
+
+        //radio con name loader
+        let radio = document.getElementsByName("loader");
+        radio.forEach((element) => {
+            element.addEventListener("click", async () => {
+                let footermodaliniciarversion = document.getElementById(
+                    "footermodaliniciarversion"
+                );
+                footermodaliniciarversion.style.display = "";
+            });
+        });
+
+        document
+            .getElementById("startStartVersion")
+            .addEventListener("click", async () => {
+                let version = document.getElementById("listaDeVersiones").value;
+                let versionType;
+                let progressBar1 = document.getElementById("progressBar1_");
+                let modalDiv1 = document.getElementById("modalStartVersion");
+
+                let urlpkg = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url;
+                let uuid = (await this.database.get("1234", "accounts-selected")).value;
+                let account = (await this.database.get(uuid.selected, "accounts")).value;
+                let ram = (await this.database.get("1234", "ram")).value;
+                let Resolution = (await this.database.get("1234", "screen")).value;
+                let launcherSettings = (await this.database.get("1234", "launcher")).value;
+
+                let isForgeCheckBox = false;
+                let isFabricCheckBox = false;
+                let isQuiltCheckBox = false;
+
+                let settings_btn = document.getElementById("settings-btn");
+                let select_versions = document.getElementById("select-version");
+                let mods_btn = document.getElementById("boton_abrir_mods");
+                let discord_btn = document.getElementById("BotonUnirseServidorDiscord");
+
+                let footermodaliniciarversion = document.getElementById(
+                    "footermodaliniciarversion"
+                );
+                footermodaliniciarversion.style.display = "none";
+
+                let textInfo = document.getElementById("textInfo");
+                textInfo.innerHTML = langs.starting_version_can_take;
+
+                let radio = document.getElementsByName("loader");
+
+                radio.forEach((element) => {
+                    if (element.checked) {
+                        if (version.endsWith("-extra")) {
+                            versionType = "extra";
+                        } else {
+                            versionType = element.value;
+                        }
+                    }
+                });
+
+                if (versionType === "vanilla") {
+                    version = version;
+                } else if (versionType === "fabric") {
+                    version += `-fabric`;
+                } else if (versionType === "forge") {
+                    version += `-forge`;
+                } else if (versionType === "quilt") {
+                    version += `-quilt`;
+                } else {
+                }
+
+                let version_real;
+                if (version.endsWith("-forge")) {
+                    version_real = version.replace("-forge", "");
+                } else if (version.endsWith("-fabric")) {
+                    version_real = version.replace("-fabric", "");
+                } else if (version.endsWith("-quilt")) {
+                    version_real = version.replace("-quilt", "");
+                } else if (version.endsWith("-extra")) {
+                    version_real = version.replace("-extra", "");
+                } else {
+                    version_real = version;
+                }
+
+                if (version.endsWith("-forge")) {
+                    version = version.replace("-forge", "");
+                    isForgeCheckBox = true;
+                    isFabricCheckBox = false;
+                    isQuiltCheckBox = false;
+                } else if (version.endsWith("-fabric")) {
+                    version = version.replace("-fabric", "");
+                    isFabricCheckBox = true;
+                    isForgeCheckBox = false;
+                    isQuiltCheckBox = false;
+                } else if (version.endsWith("-quilt")) {
+                    version = version.replace("-quilt", "");
+                    isQuiltCheckBox = true;
+                    isForgeCheckBox = false;
+                    isFabricCheckBox = false;
+                }
+
+                let type;
+                if (isForgeCheckBox == true) {
+                    type = "forge";
+                    mcModPack = "forge";
+                } else if (isFabricCheckBox == true) {
+                    type = "fabric";
+                    mcModPack = "fabric";
+                } else if (isQuiltCheckBox == true) {
+                    type = "quilt";
+                    mcModPack = "quilt";
+                }
+
+                //hacer un json.parse del archivo de versiones y obtener el dato "assets"
+
+                //comprobar si existe el archivo de versiones
+
+                // Si la versión acaba con -extra hacer let assets = JSON.parse(fs.readFileSync(`${dataDirectory}/.battly/versions/${version_real}/${version_real}.json`)).assets;
+                // si no, ignorar
+                let assets;
+                let versionData;
+                if (version_real === "1.8") {
+                    assets = "1.8";
+                    versionData = {
+                        number: assets,
+                        custom: version_real,
+                        type: "release",
+                    };
+                } else if (
+                    version.endsWith("-extra") &&
+                    !version.includes("OptiFine") &&
+                    !version_real.includes("LabyMod")
+                ) {
+                    assets = JSON.parse(
+                        fs.readFileSync(
+                            `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                            }/versions/${version_real}/${version_real}.json`
+                        )
+                    ).assets;
+                    versionData = {
+                        number: assets,
+                        custom: version_real,
+                        type: "release",
+                    };
+                } else if (version.includes("OptiFine") && version.endsWith("-extra")) {
+                    assets = JSON.parse(
+                        fs.readFileSync(
+                            `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                            }/versions/${version_real}/${version_real}.json`
+                        )
+                    ).inheritsFrom;
+                    versionData = {
+                        number: assets,
+                        custom: version_real,
+                        type: "release",
+                    };
+                } else if (version.includes("LabyMod") && version.endsWith("-extra")) {
+                    assets = JSON.parse(
+                        fs.readFileSync(
+                            `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                            }/versions/${version_real}/${version_real}.json`
+                        )
+                    )._minecraftVersion;
+                    versionData = {
+                        number: version_real,
+                        type: "release",
+                    };
+                } else if (
+                    version_real.endsWith("-forge") ||
+                    version_real.endsWith("-fabric") ||
+                    version_real.endsWith("-quilt")
+                ) {
+                    versionData = version;
+                } else {
+                    versionData = version_real;
+                }
+
+                let playBtn = document.getElementById("download-btn");
+                let info = document.getElementById("textInfoStatus");
+                let logTextArea1 = document.getElementById("logTextArea1_");
+
+                if (Resolution.screen.width == "<auto>") {
+                    screen = false;
+                } else {
+                    screen = {
+                        width: Resolution.screen.width,
+                        height: Resolution.screen.height,
+                    };
+                }
+
+                let opts;
+
+                let javapath = localStorage.getItem("java-path");
+                if (!javapath || javapath == null || javapath == undefined) {
+                    opts = {
+                        url: this.config.game_url === "" || this.config.game_url === undefined ?
+                            `${urlpkg}/files` :
+                            this.config.game_url,
+                        authorization: account,
+                        authenticator: account,
+                        detached: false,
+                        timeout: 10000,
+                        root: `${dataDirectory}/.battly`,
+                        path: `${dataDirectory}/.battly`,
+                        overrides: {
+                            detached: false,
+                            screen: screen,
+                        },
+                        downloadFileMultiple: 20,
+                        //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
+                        version: versionData,
+                        loader: {
+                            type: type,
+                            build: this.BattlyConfig.loader.build,
+                            enable: isForgeCheckBox ?
+                                true :
+                                isFabricCheckBox ?
+                                    true :
+                                    isQuiltCheckBox ?
+                                        true :
+                                        false,
+                        },
+                        verify: false,
+                        ignored: ["loader"],
+                        java: false,
+                        memory: {
+                            min: `${ram.ramMin * 1024}M`,
+                            max: `${ram.ramMax * 1024}M`,
+                        },
+                    };
+                } else {
+                    if (version.endsWith("-extra")) {
+                        opts = {
+                            url: this.config.game_url === "" || this.config.game_url === undefined ?
+                                `${urlpkg}/files` :
+                                this.config.game_url,
+                            authorization: account,
+                            authenticator: account,
+                            detached: false,
+                            timeout: 10000,
+                            root: `${dataDirectory}/.battly`,
+                            path: `${dataDirectory}/.battly`,
+                            overrides: {
+                                detached: false,
+                                screen: screen,
+                            },
+                            downloadFileMultiple: 20,
+                            javaPath: javapath,
+                            version: versionData,
+                            loader: {
+                                type: type,
+                                build: this.BattlyConfig.loader.build,
+                                enable: isForgeCheckBox ?
+                                    true :
+                                    isFabricCheckBox ?
+                                        true :
+                                        isQuiltCheckBox ?
+                                            true :
+                                            false,
+                            },
+                            verify: false,
+                            ignored: ["loader"],
+                            java: false,
+                            memory: {
+                                min: `${ram.ramMin * 1024}M`,
+                                max: `${ram.ramMax * 1024}M`,
+                            },
+                        };
+                    } else {
+                        opts = {
+                            url: this.config.game_url === "" || this.config.game_url === undefined ?
+                                `${urlpkg}/files` :
+                                this.config.game_url,
+                            authorization: account,
+                            authenticator: account,
+                            detached: false,
+                            timeout: 10000,
+                            root: `${dataDirectory}/.battly`,
+                            path: `${dataDirectory}/.battly`,
+                            overrides: {
+                                detached: false,
+                                screen: screen,
+                            },
+                            downloadFileMultiple: 20,
+                            //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
+                            version: versionData,
+                            loader: {
+                                type: type,
+                                build: this.BattlyConfig.loader.build,
+                                enable: isForgeCheckBox ?
+                                    true :
+                                    isFabricCheckBox ?
+                                        true :
+                                        isQuiltCheckBox ?
+                                            true :
+                                            false,
+                            },
+                            verify: false,
+                            ignored: ["loader"],
+                            java: false,
+                            memory: {
+                                min: `${ram.ramMin * 1024}M`,
+                                max: `${ram.ramMax * 1024}M`,
+                            },
+                        };
+                    }
+                }
+
+                const launch = new Client();
+                const launch_core = new Launch();
+
+                try {
+                    if (version === "1.8") {
+                        await launch.launch(opts);
+                        document.getElementById("carga-de-versiones").style.display = "";
+                    } else if (
+                        version_real.endsWith("-forge") ||
+                        version_real.endsWith("-fabric") ||
+                        version_real.endsWith("-quilt")
+                    ) {
+                        await launch_core.Launch(opts);
+                        document.getElementById("carga-de-versiones").style.display = "";
+                    } else if (version.endsWith("-extra")) {
+                        launch.launch(opts);
+                        document.getElementById("carga-de-versiones").style.display = "";
+                    } else {
+                        await launch_core.Launch(opts);
+                        document.getElementById("carga-de-versiones").style.display = "";
+                    }
+                } catch (error) {
+                    setTimeout(() => {
+                        playBtn.style.display = "";
+                        info.style.display = "none";
+                        progressBar1.style.display = "none";
+                    }, 3000);
+                    console.log(error);
+                }
+
+                launch.on("extract", (extract) => {
+                    consoleOutput_ += `[EXTRACT] ${extract}\n`;
+                    let seMostroInstalando = false;
+                    if (seMostroInstalando) { } else {
+                        seMostroInstalando = true;
+                    }
+                });
+
+                launch.on("debug", (e) => {
+                    consoleOutput_ += `[DEBUG] ${JSON.stringify(e, null, 2)}\n`;
+                    if (e.includes("Failed to start due to TypeError")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                    if (e.includes("Downloaded and extracted natives")) {
+
+                        progressBar1.style.display = "";
+                        progressBar1.max = 100;
+                        progressBar1.value = 0;
+
+                        info.innerHTML = langs.downloading_files;
+                    }
+
+                    if (e.includes("Attempting to download Minecraft version jar")) {
+                        info.innerHTML = langs.downloading_version;
+                    }
+
+                    if (e.includes("Attempting to download assets")) {
+                        info.innerHTML = langs.downloading_assets;
+                    }
+
+                    if (e.includes("Downloaded Minecraft version jar")) {
+                        info.innerHTML = langs.downloading_libraries;
+                    }
+
+                    if (e.includes("Downloaded and extracted natives")) {
+                        info.innerHTML = langs.downloading_natives;
+                    }
+
+                    if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                    if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                    if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                    if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                    if (e.includes("Forge patcher exited with code 1")) {
+                        ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                        progressBar1.style.display = "none";
+                        info.style.display = "none";
+                        playBtn.style.display = "";
+                    }
+
+                    if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                    if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+                });
+                launch.on("data", (e) => {
+                    consoleOutput_ += `[DEBUG] ${JSON.stringify(e, null, 2)}\n`;
+                    if (e.includes("Failed to start du<e to TypeError")) {
+                        Toast.fire({
+                            icon: "error",
+                            title: "Error al iniciar Minecraft",
+                        });
+                        progressBar1.style.display = "none";
+                        progressBar1.max = 100;
+                        progressBar1.value = 0;
+                        playBtn.style.display = "";
+                        info.style.display = "none";
+                        crasheo = true;
+                    }
+                });
+
+                launch.on("progress", function (e) {
+
+                    let total = e.total;
+                    let current = e.task;
+
+                    let progress = ((current / total) * 100).toFixed(0);
+                    let total_ = 100;
+
+                    ipcRenderer.send("main-window-progress_", {
+                        total_,
+                        progress,
+                    });
+
+                    progressBar1.style.display = "";
+                    progressBar1.max = total;
+                    progressBar1.value = current;
+                });
+
+                let crasheo = false;
+
+                launch.on("estimated", (time) => {
+                    ipcRenderer.send("main-window-progress-reset");
+                    /*
+                                  let hours = Math.floor(time / 3600);
+                                  let minutes = Math.floor((time - hours * 3600) / 60);
+                                  let seconds = Math.floor(time - hours * 3600 - minutes * 60);
+                                  console.log(`${hours}h ${minutes}m ${seconds}s`);*/
+                });
+
+                let timeoutId;
+
+                launch.on("speed", (speed) => {
+                    /*
+                                                  let velocidad = speed / 1067008;
+
+                                                  if (velocidad > 0) {
+                                                      clearTimeout(timeoutId); // cancela el mensaje de alerta si la velocidad no es cero
+                                                  } else {
+                                                      timeoutId = setTimeout(() => {
+                                                          progressBar1.style.display = "none"
+                                                          progressBar1.max = 100;
+                                                          progressBar1.value = 0;
+                                                          playBtn.style.display = ""
+                                                          info.style.display = "none"
+                                                          clearTimeout(timeoutId);
+                                                          const swal  = require('sweetalert');
+                                                          crasheo = true;
+
+                                                          Toast.fire({
+                                                              title: "Error",
+                                                              text: "Error al descargar esta versión. Reinicia el launcher o inténtalo de nuevo más tarde. [ERROR: 2]",
+                                                              icon: "error",
+                                                              button: "Aceptar",
+                                                          }).then((value) => {
+                                                              if(value) {
+                                                                  ipcRenderer.send('restartLauncher')
+                                                              }
+                                                          });
+                                                          
+                                                      }, 10000);
+                                                  }*/
+                });
+
+                launch.on("patch", (patch) => {
+                    consoleOutput_ += `[INSTALANDO LOADER] ${patch}\n`;
+                    let seMostroInstalando = false;
+                    if (seMostroInstalando) { } else {
+                        logTextArea1.innerHTML = `${langs.installing_loader}...`;
+                        seMostroInstalando = true;
+                    }
+
+                    info.innerHTML = `${langs.installing_loader}...`;
+                });
+
+                let inicio = false;
+                let iniciando = false;
+                launch.on("data", async (e) => {
+                    new logger("Minecraft", "#36b030");
+                    consoleOutput_ += `[MC] ${e}\n`;
+                    if (launcherSettings.launcher.close === "close-launcher")
+                        ipcRenderer.send("main-window-hide");
+
+                    if (e.includes("Launching with arguments"))
+                        info.innerHTML = `${langs.starting_minecraft}...`;;
+
+                    if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                    if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                    if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                    if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                    if (e.includes("Forge patcher exited with code 1")) {
+                        ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                        progressBar1.style.display = "none";
+                        info.style.display = "none";
+                        playBtn.style.display = "";
+                    }
+
+                    if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                    if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (
+                        e.includes(`Setting user: ${account.name}`) ||
+                        e.includes("Launching wrapped minecraft")
+                    ) {
+                        if (inicio == false) {
+                            let typeOfVersion;
+                            if (version_real.endsWith("-forge")) {
+                                typeOfVersion = "Forge";
+                            } else if (version_real.endsWith("-fabric")) {
+                                typeOfVersion = "Fabric";
+                            } else if (version_real.endsWith("-quilt")) {
+                                typeOfVersion = "Quilt";
+                            } else {
+                                typeOfVersion = "";
+                            }
+
+
+                            if (version_real.includes("OptiFine")) {
+                                let version_optifine = version_real.substring(0, 6);
+                                version_optifine = version_optifine.replace("-", "");
+
+                                ipcRenderer.send(
+                                    "new-status-discord-jugando",
+                                    `${langs.playing_in} OptiFine ${version_optifine}`
+                                );
+
+                                this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} OptiFine ${version_optifine}`);
+                            } else if (version_real.includes("LabyMod")) {
+                                ipcRenderer.send(
+                                    "new-status-discord-jugando",
+                                    `${langs.playing_in} LabyMod`
+                                );
+
+                                this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} LabyMod`);
+                            } else if (version_real.includes("cmpack")) {
+                                ipcRenderer.send(
+                                    "new-status-discord-jugando",
+                                    `${langs.playing_in} CMPack`
+                                );
+
+                                this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} CMPack`);
+                            } else {
+                                ipcRenderer.send(
+                                    "new-status-discord-jugando",
+                                    `${langs.playing_in} ${version_real
+                                        .replace("-forge", "")
+                                        .replace("-fabric", "")
+                                        .replace("-quilt", "")} ${typeOfVersion}`
+                                );
+
+                                this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} ${version_real
+                                    .replace("-forge", "")
+                                    .replace("-fabric", "")
+                                    .replace("-quilt", "")} ${typeOfVersion}`);
+                            }
+
+                            modalDiv1.classList.remove("is-active");
+                            inicio = true;
+                            info.innerHTML = `${langs.minecraft_started_correctly}.`;
+                            logTextArea1.innerHTML = ``;
+                            textInfo.innerHTML = `Selecciona la versión que quieres abrir`;
+                            ipcRenderer.send("new-notification", {
+                                title: langs.minecraft_started_correctly,
+                                body: langs.minecraft_started_correctly_body,
+                            });
+
+                            ipcRenderer.send("main-window-progress-reset");
+                        }
+                    }
+
+                    if (e.includes("Connecting to")) {
+                        let msj = e.split("Connecting to ")[1].split("...")[0];
+                        info.innerHTML = `Conectando a ${msj}`;
+                    }
+                });
+
+                launch.on("close", (code) => {
+                    consoleOutput_ += `---------- [MC] Código de salida: ${code}\n ----------`;
+                    if (launcherSettings.launcher.close === "close-launcher")
+                        ipcRenderer.send("main-window-show");
+
+                    ipcRenderer.send('updateStatus', {
+                        status: 'online',
+                        details: langs.in_the_menu,
+                        username: account.name,
+                    })
+                    info.style.display = "none";
+                    playBtn.style.display = "";
+                    info.innerHTML = `Verificando archivos...`;
+                    footermodaliniciarversion.style.display = "";
+                    textInfo.innerHTML = "Selecciona la versión que quieres abrir";
+                    new logger("Launcher", "#3e8ed0");
+                    console.log("🔧 Minecraft cerrado");
+                    document.getElementById("carga-de-versiones").style.display = "none";
+
+                    progressBar1.style.display = "none";
+
+
+                    //convertir todos los strings a null
+                    version = null;
+                    versionType = null;
+                    versionData = null;
+                    version_real = null;
+                    assets = null;
+                    type = null;
+                    isForgeCheckBox = false;
+                    isFabricCheckBox = false;
+                    isQuiltCheckBox = false;
+                    document.getElementById("radioVanilla").removeAttribute("checked");
+                    document.getElementById("radioForge").removeAttribute("checked");
+                    document.getElementById("radioFabric").removeAttribute("checked");
+                    document.getElementById("radioQuilt").removeAttribute("checked");
+
+
+
+                    ipcRenderer.send("delete-and-new-status-discord");
+                });
+
+                launch.on("error", (err) => {
+                    consoleOutput_ += `[ERROR] ${JSON.stringify(err, null, 2)}\n`;
+
+                    progressBar1.style.display = "none";
+                    info.style.display = "none";
+                    playBtn.style.display = "";
+
+                    return Toast.fire({
+                        title: "Error",
+                        text: "Error al iniciar Minecraft. Error desconocido. Vuelve a iniciar Minecraft. [ERROR: 7] \nError: " +
+                            err.error,
+                        icon: "error",
+                        button: "Aceptar",
+                    });
+                });
+
+                let seMostroExtrayendo_core = false;
+                let seMostroInstalando_core = false;
+
+                launch_core.on("extract", (extract) => {
+                    consoleOutput_ += `[EXTRACT] ${extract}\n`;
+                    if (seMostroExtrayendo_core) { } else {
+                        logTextArea1.innerHTML = `${langs.extracting_loader}.`;
+                        seMostroExtrayendo_core = true;
+                    }
+                });
+
+                launch_core.on("debug", (e) => {
+                    consoleOutput_ += `[MC] ${JSON.stringify(e, null, 2)}\n`;
+                    if (e.includes("Failed to start due to TypeError")) {
+                        Toast.fire({
+                            icon: "error",
+                            title: "Error al iniciar Minecraft",
+                        });
+                        progressBar1.style.display = "none";
+                        progressBar1.max = 100;
+                        progressBar1.value = 0;
+                        playBtn.style.display = "";
+                        info.style.display = "none";
+                        crasheo = true;
+                    }
+
+                    if (e.includes("Downloaded and extracted natives")) {
+                        progressBar1.style.display = "";
+                        progressBar1.max = 100;
+                        progressBar1.value = 0;
+
+                        info.innerHTML = langs.downloading_files;
+                    }
+
+                    if (e.includes("Attempting to download Minecraft version jar")) {
+                        info.innerHTML = langs.downloading_version;
+                    }
+
+                    if (e.includes("Attempting to download assets")) {
+                        info.innerHTML = langs.downloading_assets
+                    }
+
+                    if (e.includes("Downloaded Minecraft version jar")) {
+                        info.innerHTML = langs.downloading_libraries;
+                    }
+
+                    if (e.includes("Downloaded and extracted natives")) {
+                        info.innerHTML = langs.downloading_natives;
+                    }
+
+                    if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                    if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                    if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                    if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                    if (e.includes("Forge patcher exited with code 1")) {
+                        ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                        progressBar1.style.display = "none";
+                        info.style.display = "none";
+                        playBtn.style.display = "";
+                    }
+
+                    if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                    if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+                    
+                });
+                launch_core.on("data", async (e) => {
+                    new logger("Minecraft", "#36b030");
+                    consoleOutput_ += `[MC] ${e}\n`;
+                    if (launcherSettings.launcher.close === "close-launcher")
+                        ipcRenderer.send("main-window-hide");
+                    progressBar1.style.display = "none";
+
+                    if (e.includes("Launching with arguments"))
+                        info.innerHTML = `${langs.starting_minecraft}...`;;
+
+                    if (iniciando == false) {
+
+                        iniciando = true;
+
+                        /* editar archivo servers.dat */
+                        let serversDat = `${dataDirectory}/.battly/servers.dat`;
+
+                        if (fs.existsSync(serversDat)) {
+                            try {
+                                const serversDatFile = fs.readFileSync(serversDat);
+                                const serversDatData = await NBT.read(serversDatFile);
+                                
+
+                                let servers = this.BattlyConfig.promoted_servers;
+                                
+
+                                let serversArray = [];
+
+                                for (let i = 0; i < servers.length; i++) {
+                                    const newServer = {
+                                        name: servers[i].name,
+                                        ip: servers[i].ip,
+                                        icon: servers[i].icon,
+                                    };
+
+                                    // Verificar si la IP ya existe en el archivo servers.dat
+                                    const ipExists = serversDatData.data.servers.some(server => server.ip === newServer.ip);
+
+                                    if (!ipExists) {
+                                        serversArray.push(newServer);
+                                    }
+                                }
+
+                                
+
+                                // Añadir los nuevos servidores al array existente en serversDatData.data.servers
+                                serversDatData.data.servers = serversArray.concat(serversDatData.data.servers);
+                                const editedServersDat = await NBT.write(serversDatData);
+                                fs.writeFileSync(serversDat, editedServersDat);
+                            } catch (error) {
+                                console.error("Error al procesar el archivo NBT:", error);
+                            }
+                        } else {
+                            try {
+                                let servers = this.BattlyConfig.promoted_servers;
+                                
+
+                                let serversArray = [];
+
+                                for (let i = 0; i < servers.length; i++) {
+                                    const newServer = {
+                                        name: servers[i].name,
+                                        ip: servers[i].ip,
+                                        icon: servers[i].icon,
+                                    };
+                                    serversArray.push(newServer);
+                                }
+
+                                
+
+                                // Crear un nuevo archivo servers.dat con los servidores nuevos
+                                const newData = { servers: serversArray };
+                                const editedServersDat = await NBT.write(newData);
+                                fs.writeFileSync(serversDat, editedServersDat);
+                            } catch (error) {
+                                console.error("Error al crear el nuevo archivo NBT:", error);
+                            }
+                        }
+
+
+                        //añadir 
+
+                        let versiones = this.Versions;
+
+                        const skinsJarPath = `${dataDirectory}/.battly/mods/skins.jar`;
+                        const skinsForgeJarPath = `${dataDirectory}/.battly/mods/skins-forge.jar`;
+                        const skinsForgeNewJarPath = `${dataDirectory}/.battly/mods/skins-forge-new.jar`;
+
+                        let rutaPrincipalSkinsJar = `${dataDirectory}/.battly/battly/mods-internos/skins.jar`;
+                        let rutaPrincipalSkinsForgeJar = `${dataDirectory}/.battly/battly/mods-internos/skins-forge.jar`;
+                        let rutaPrincipalSkinsForgeNewJar = `${dataDirectory}/.battly/battly/mods-internos/skins-forge-new.jar`;
+
+                        let rutaModMultijugadorForge = `${dataDirectory}/.battly/battly/mods-internos/multijugador-forge.jar`;
+                        let rutaModMultijugadorFabric = `${dataDirectory}/.battly/battly/mods-internos/multijugador-fabric.jar`;
+
+                        let rutaModMultijugadorForgeDeMods = `${dataDirectory}/.battly/mods/multijugador-forge.jar`;
+                        let rutaModMultijugadorFabricDeMods = `${dataDirectory}/.battly/mods/multijugador-fabric.jar`;
+
+                        if (fs.existsSync(rutaModMultijugadorFabricDeMods)) {
+                            fs.unlinkSync(rutaModMultijugadorFabricDeMods);
+                        }
+
+                        if (fs.existsSync(rutaModMultijugadorForgeDeMods)) {
+                            fs.unlinkSync(rutaModMultijugadorForgeDeMods);
+                        }
+
+                        fs.unlinkSync(skinsForgeJarPath);
+                        fs.unlinkSync(skinsForgeNewJarPath);
+
+                        const selectedVersion = version;
+                        
+
+                        let selectedVersionWithoutHyphen;
+
+                        if (selectedVersion.includes("-")) {
+                            selectedVersionWithoutHyphen = selectedVersion.replace(/-[^.]+/, "");
+                        }
+
+                        const versionInfo = versiones.versions.find(
+                            (v) => v.id === selectedVersionWithoutHyphen
+                        );
+
+                        
+
+                        if (versionInfo) {
+                            function formatVersionNumber(version) {
+                                const parsedVersion = parseFloat(version);
+                                if (!isNaN(parsedVersion)) {
+                                    const formattedVersion = parsedVersion.toString();
+                                    return formattedVersion;
+                                }
+                                return version; // Si no se puede analizar como número, devuelve la versión original
+                            }
+
+                            // Ejemplo de uso:
+                            const versionNumber = formatVersionNumber(versionInfo.version);
+
+                            let versionesCompatiblesConForgeNormal = [
+                                "1.16.5",
+                                "1.16.4",
+                                "1.16.3",
+                                "1.16.2",
+                                "1.16.1",
+                                "1.16",
+                                "1.15.2",
+                                "1.15.1",
+                                "1.15",
+                                "1.14.4",
+                                "1.14.3",
+                                "1.14.2",
+                                "1.14.1",
+                                "1.14",
+                                "1.13.2",
+                                "1.13.1",
+                                "1.13",
+                                "1.12.2",
+                                "1.12.1",
+                                "1.12",
+                                "1.11.2",
+                                "1.11.1",
+                                "1.11",
+                                "1.10.2",
+                                "1.10.1",
+                                "1.10",
+                                "1.9.4",
+                                "1.9.3",
+                                "1.9.2",
+                                "1.9.1",
+                                "1.9",
+                                "1.8.9",
+                                "1.8.8",
+                                "1.8.7",
+                                "1.8.6",
+                                "1.8.5",
+                                "1.8.4",
+                                "1.8.3",
+                                "1.8.2",
+                                "1.8.1",
+                                "1.8",
+                            ];
+
+                            
+
+                            const excludedVersions = [
+                                1.16, 1.15, 1.14, 1.13, 1.12, 1.11, 1.1, 1.9, 1.8, 1.7, 1.6,
+                                1.5, 1.4, 1.3,
+                            ];
+                            const includedVersionsForgeNew = [1.17, 1.18, 1.19, 1.2, 1.21];
+                            const versionesConMultijugadorDesactivado = ["1.16.4", "1.16.5"];
+
+                            
+
+                            if (
+                                versionesConMultijugadorDesactivado.includes(version) &&
+                                versionType === "forge"
+                            ) {
+                                fs.copyFileSync(
+                                    rutaModMultijugadorForge,
+                                    `${dataDirectory}/.battly/mods/multijugador-forge.jar`
+                                );
+                            } else if (
+                                versionesConMultijugadorDesactivado.includes(version) &&
+                                versionType === "fabric"
+                            ) {
+                                fs.copyFileSync(
+                                    rutaModMultijugadorFabric,
+                                    `${dataDirectory}/.battly/mods/multijugador-fabric.jar`
+                                );
+                            }
+
+                            if (
+                                includedVersionsForgeNew.includes(parseFloat(version_real)) &&
+                                !excludedVersions.includes(parseFloat(version_real)) &&
+                                versionType == "forge"
+                            ) {
+                                
+
+                                fs.copyFileSync(
+                                    rutaPrincipalSkinsForgeNewJar,
+                                    skinsForgeNewJarPath
+                                );
+
+                                // Eliminar skins.jar y skins-forge.jar
+                                if (fs.existsSync(skinsJarPath)) {
+                                    fs.unlinkSync(skinsJarPath);
+                                }
+                                if (fs.existsSync(skinsForgeJarPath)) {
+                                    fs.unlinkSync(skinsForgeJarPath);
+                                }
+                            } else if (
+                                versionesCompatiblesConForgeNormal.includes(version_real) &&
+                                versionType == "forge"
+                            ) {
+                                
+
+                                fs.copyFileSync(rutaPrincipalSkinsForgeJar, skinsForgeJarPath);
+
+                                // Eliminar skins.jar y skins-forge-new.jar
+                                if (fs.existsSync(skinsJarPath)) {
+                                    fs.unlinkSync(skinsJarPath);
+                                }
+                                if (fs.existsSync(skinsForgeNewJarPath)) {
+                                    fs.unlinkSync(skinsForgeNewJarPath);
+                                }
+                            } else if (versionType == "fabric" || versionType == "quilt") {
+                                
+
+                                fs.copyFileSync(rutaPrincipalSkinsJar, skinsJarPath);
+                                // Eliminar skins-forge.jar y skins-forge-new.jar
+                                if (fs.existsSync(skinsForgeJarPath)) {
+                                    fs.unlinkSync(skinsForgeJarPath);
+                                }
+                                if (fs.existsSync(skinsForgeNewJarPath)) {
+                                    fs.unlinkSync(skinsForgeNewJarPath);
+                                }
+                            }
+                        }
+
+                        let archivoConfigSkins = `${dataDirectory}/.battly/CustomSkinLoader/CustomSkinLoader.json`;
+                        let data = {
+                            version: "14.15",
+                            buildNumber: 8,
+                            loadlist: [{
+                                name: "BattlyAPI",
+                                type: "Legacy",
+                                checkPNG: false,
+                                skin: "http://api.battlylauncher.com/api/skin/{USERNAME}.png",
+                                model: "auto",
+                                cape: "http://api.battlylauncher.com/api/capa/{USERNAME}.png",
+                            },
+                            {
+                                name: "Mojang",
+                                type: "MojangAPI",
+                                apiRoot: "https://api.mojang.com/",
+                                sessionRoot: "https://sessionserver.mojang.com/",
+                            },
+                            {
+                                name: "OptiFine",
+                                type: "Legacy",
+                                checkPNG: false,
+                                model: "auto",
+                                cape: "https://optifine.net/capes/{USERNAME}.png",
+                            },
+                            {
+                                name: "LabyMod",
+                                type: "Legacy",
+                                checkPNG: false,
+                                model: "auto",
+                                cape: "https://dl.labymod.net/capes/{STANDARD_UUID}",
+                            },
+                            ],
+                            enableDynamicSkull: true,
+                            enableTransparentSkin: true,
+                            forceIgnoreHttpsCertificate: true,
+                            forceLoadAllTextures: true,
+                            enableCape: true,
+                            threadPoolSize: 8,
+                            enableLogStdOut: false,
+                            cacheExpiry: 30,
+                            forceUpdateSkull: true,
+                            enableLocalProfileCache: false,
+                            enableCacheAutoClean: true,
+                            forceDisableCache: true,
+                        };
+
+                        if (fs.existsSync(path.join(archivoConfigSkins))) {
+                            fs.writeFileSync(archivoConfigSkins, JSON.stringify(data));
+                        } else {
+                            fs.mkdirSync(
+                                `${dataDirectory}/${process.platform == "darwin"
+                                    ? this.config.dataDirectory
+                                    : `.${this.config.dataDirectory}`
+                                }/CustomSkinLoader`
+                            );
+                            fs.writeFileSync(archivoConfigSkins, JSON.stringify(data));
+                        }
+                    }
+
+                    if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                    if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                    if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                    if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                    if (e.includes("Forge patcher exited with code 1")) {
+                        ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                        progressBar1.style.display = "none";
+                        info.style.display = "none";
+                        playBtn.style.display = "";
+                    }
+
+                    if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                    if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (
+                        e.includes(`Setting user: ${account.name}`) ||
+                        e.includes("Launching wrapped minecraft")
+                    ) {
+                        if (inicio == false) {
+                            let typeOfVersion;
+                            if (version_real.endsWith("-forge")) {
+                                typeOfVersion = "Forge";
+                            } else if (version_real.endsWith("-fabric")) {
+                                typeOfVersion = "Fabric";
+                            } else if (version_real.endsWith("-quilt")) {
+                                typeOfVersion = "Quilt";
+                            } else {
+                                typeOfVersion = "";
+                            }
+
+                            if (version_real.includes("OptiFine")) {
+                                let version_optifine = version_real.substring(0, 6);
+                                version_optifine = version_optifine.replace("-", "");
+
+                                ipcRenderer.send(
+                                    "new-status-discord-jugando",
+                                    `${langs.playing_in} OptiFine ${version_optifine}`
+                                );
+
+                                this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} OptiFine ${version_optifine}`);
+                            } else if (version_real.includes("LabyMod")) {
+                                ipcRenderer.send(
+                                    "new-status-discord-jugando",
+                                    `${langs.playing_in} LabyMod`
+                                );
+
+                                this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} LabyMod`);
+                            } else if (version_real.includes("cmpack")) {
+                                ipcRenderer.send(
+                                    "new-status-discord-jugando",
+                                    `${langs.playing_in} CMPack`
+                                );
+
+                                this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} CMPack`);
+                            } else {
+                                ipcRenderer.send(
+                                    "new-status-discord-jugando",
+                                    `${langs.playing_in} ${version_real
+                                        .replace("-forge", "")
+                                        .replace("-fabric", "")
+                                        .replace("-quilt", "")} ${typeOfVersion}`
+                                );
+
+                                this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} ${version_real
+                                    .replace("-forge", "")
+                                    .replace("-fabric", "")
+                                    .replace("-quilt", "")} ${typeOfVersion}`);
+                            }
+
+                            modalDiv1.classList.remove("is-active");
+                            inicio = true;
+                            info.innerHTML = `${langs.minecraft_started_correctly}.`;
+                            logTextArea1.innerHTML = ``;
+                            textInfo.innerHTML = `Selecciona la versión que quieres abrir`;
+                            ipcRenderer.send("new-notification", {
+                                title: langs.minecraft_started_correctly,
+                                body: langs.minecraft_started_correctly_body,
+                            });
+
+                            ipcRenderer.send("main-window-progress-reset");
+                        }
+                    }
+
+                    if (e.includes("Connecting to")) {
+                        let msj = e.split("Connecting to ")[1].split("...")[0];
+                        info.innerHTML = `Conectando a ${msj}`;
+                    }
+                });
+
+                launch_core.on("progress", (progress, size) => {
+                    consoleOutput_ += `[DESCARGANDO] ${progress} / ${size}\n`;
+                    if (seMostroInstalando_core) { } else {
+                        seMostroInstalando_core = true;
+                    }
+                    let progreso = ((progress / size) * 100).toFixed(0);
+                    //si el progreso es más de 100, ponerlo a 100
+                    if (progreso > 100) {
+                        progreso = 100;
+                    }
+                    progressBar1.style.display = "block";
+                    info.innerHTML = `Descargando... ${progreso}%`;
+                    ipcRenderer.send("main-window-progress", {
+                        progress,
+                        size
+                    });
+                    progressBar1.value = progress;
+                    progressBar1.max = size;
+                });
+                launch_core.on("check", (progress, size) => {
+                    consoleOutput_ += `[INSTALANDO MC] ${progress} / ${size}\n`;
+                    let seMostroInstalando = false;
+                    if (seMostroInstalando) { } else {
+                        logTextArea1.innerHTML = `${langs.extracting_loader}.`;
+                        seMostroInstalando = true;
+                    }
+                    progressBar1.style.display = "";
+                    let size_actual = 100;
+                    let progress_actual = ((progress / size) * 100).toFixed(0);
+                    ipcRenderer.send("main-window-progress", {
+                        progress_actual,
+                        size_actual,
+                    });
+                    info.innerHTML = `Extrayendo ModPack... ${progress_actual}%`;
+                    progressBar1.value = progress;
+                    progressBar1.max = size;
+                });
+
+                launch_core.on("estimated", (time) => {
+                    ipcRenderer.send("main-window-progress-reset");
+                    /*
+                                  let hours = Math.floor(time / 3600);
+                                  let minutes = Math.floor((time - hours * 3600) / 60);
+                                  let seconds = Math.floor(time - hours * 3600 - minutes * 60);
+                                  console.log(`${hours}h ${minutes}m ${seconds}s`);*/
+                });
+
+                launch_core.on("speed", (speed) => {
+                    /*
+                                                  let velocidad = speed / 1067008;
+                      
+                                                  if (velocidad > 0) {
+                                                      clearTimeout(timeoutId); // cancela el mensaje de alerta si la velocidad no es cero
+                                                  } else {
+                                                      timeoutId = setTimeout(() => {
+                                                          progressBar1.style.display = "none"
+                                                          progressBar1.max = 100;
+                                                          progressBar1.value = 0;
+                                                          playBtn.style.display = ""
+                                                          info.style.display = "none"
+                                                          clearTimeout(timeoutId);
+                                                          const swal  = require('sweetalert');
+                                                          crasheo = true;
+                      
+                                                          Toast.fire({
+                                                              title: "Error",
+                                                              text: "Error al descargar esta versión. Reinicia el launcher o inténtalo de nuevo más tarde. [ERROR: 2]",
+                                                              icon: "error",
+                                                              button: "Aceptar",
+                                                          }).then((value) => {
+                                                              if(value) {
+                                                                  ipcRenderer.send('restartLauncher')
+                                                              }
+                                                          });
+                                                          
+                                                      }, 10000);
+                                                  }*/
+                });
+
+                let seMostroInstalando = false;
+                launch_core.on("patch", (patch) => {
+                    consoleOutput_ += `[INSTALANDO LOADER] ${patch}\n`;
+                    if (seMostroInstalando) { } else {
+                        logTextArea1.innerHTML = `${langs.extracting_loader}.`;
+                        seMostroInstalando = true;
+                    }
+                });
+
+                launch_core.on("data", async (e) => {
+                    new logger("Minecraft", "#36b030");
+                    consoleOutput_ += `[MC] ${e}\n`;
+                    if (launcherSettings.launcher.close === "close-launcher")
+                        ipcRenderer.send("main-window-hide");
+                    progressBar1.style.display = "none";
+
+                    if (e.includes("Launching with arguments"))
+                        info.innerHTML = `${langs.starting_minecraft}...`;;
+
+                    if (iniciando == false) {
+                        
+                        iniciando = true;
+
+                        let serversDat = `${dataDirectory}/.battly/servers.dat`;
+
+                        if (fs.existsSync(serversDat)) {
+                            try {
+                                const serversDatFile = fs.readFileSync(serversDat);
+                                const serversDatData = await NBT.read(serversDatFile);
+                                
+
+                                let servers = this.BattlyConfig.promoted_servers;
+                                
+
+                                let serversArray = [];
+
+                                for (let i = 0; i < servers.length; i++) {
+                                    const newServer = {
+                                        name: servers[i].name,
+                                        ip: servers[i].ip,
+                                        icon: servers[i].icon,
+                                    };
+
+                                    // Verificar si la IP ya existe en el archivo servers.dat
+                                    const ipExists = serversDatData.data.servers.some(server => server.ip === newServer.ip);
+
+                                    if (!ipExists) {
+                                        serversArray.push(newServer);
+                                    }
+                                }
+
+                                
+
+                                // Añadir los nuevos servidores al array existente en serversDatData.data.servers
+                                serversDatData.data.servers = serversArray.concat(serversDatData.data.servers);
+                                const editedServersDat = await NBT.write(serversDatData);
+                                fs.writeFileSync(serversDat, editedServersDat);
+                            } catch (error) {
+                                console.error("Error al procesar el archivo NBT:", error);
+                            }
+                        } else {
+                            try {
+                                let servers = this.BattlyConfig.promoted_servers;
+                                
+
+                                let serversArray = [];
+
+                                for (let i = 0; i < servers.length; i++) {
+                                    const newServer = {
+                                        name: servers[i].name,
+                                        ip: servers[i].ip,
+                                        icon: servers[i].icon,
+                                    };
+                                    serversArray.push(newServer);
+                                }
+
+                                
+
+                                // Crear un nuevo archivo servers.dat con los servidores nuevos
+                                const newData = { servers: serversArray };
+                                const editedServersDat = await NBT.write(newData);
+                                fs.writeFileSync(serversDat, editedServersDat);
+                            } catch (error) {
+                                console.error("Error al crear el nuevo archivo NBT:", error);
+                            }
+                        }
+
+                        let versiones = this.Versions;
+
+                        const skinsJarPath = `${dataDirectory}/.battly/mods/skins.jar`;
+                        const skinsForgeJarPath = `${dataDirectory}/.battly/mods/skins-forge.jar`;
+                        const skinsForgeNewJarPath = `${dataDirectory}/.battly/mods/skins-forge-new.jar`;
+
+                        let rutaPrincipalSkinsJar = `${dataDirectory}/.battly/battly/mods-internos/skins.jar`;
+                        let rutaPrincipalSkinsForgeJar = `${dataDirectory}/.battly/battly/mods-internos/skins-forge.jar`;
+                        let rutaPrincipalSkinsForgeNewJar = `${dataDirectory}/.battly/battly/mods-internos/skins-forge-new.jar`;
+
+                        let rutaModMultijugadorForge = `${dataDirectory}/.battly/battly/mods-internos/multijugador-forge.jar`;
+                        let rutaModMultijugadorFabric = `${dataDirectory}/.battly/battly/mods-internos/multijugador-fabric.jar`;
+
+                        let rutaModMultijugadorForgeDeMods = `${dataDirectory}/.battly/mods/multijugador-forge.jar`;
+                        let rutaModMultijugadorFabricDeMods = `${dataDirectory}/.battly/mods/multijugador-fabric.jar`;
+
+                        if (fs.existsSync(rutaModMultijugadorFabricDeMods)) {
+                            fs.unlinkSync(rutaModMultijugadorFabricDeMods);
+                        }
+
+                        if (fs.existsSync(rutaModMultijugadorForgeDeMods)) {
+                            fs.unlinkSync(rutaModMultijugadorForgeDeMods);
+                        }
+
+                        fs.unlinkSync(skinsJarPath);
+                        fs.unlinkSync(skinsForgeJarPath);
+                        fs.unlinkSync(skinsForgeNewJarPath);
+
+                        const selectedVersion = version;
+
+                        let selectedVersionWithoutHyphen;
+                        if (selectedVersion.includes("-")) {
+                            selectedVersionWithoutHyphen = selectedVersion.replace(/-[^.]+/, "");
+                        }
+
+                        const versionInfo = versiones.versions.find(
+                            (v) => v.id === selectedVersionWithoutHyphen
+                        );
+
+                        if (versionInfo) {
+                            function formatVersionNumber(version) {
+                                const parsedVersion = parseFloat(version);
+                                if (!isNaN(parsedVersion)) {
+                                    const formattedVersion = parsedVersion.toString();
+                                    return formattedVersion;
+                                }
+                                return version; // Si no se puede analizar como número, devuelve la versión original
+                            }
+
+                            // Ejemplo de uso:
+                            const versionNumber = formatVersionNumber(versionInfo.version);
+
+                            let versionesCompatiblesConForgeNormal = [
+                                "1.16.5",
+                                "1.16.4",
+                                "1.16.3",
+                                "1.16.2",
+                                "1.16.1",
+                                "1.16",
+                                "1.15.2",
+                                "1.15.1",
+                                "1.15",
+                                "1.14.4",
+                                "1.14.3",
+                                "1.14.2",
+                                "1.14.1",
+                                "1.14",
+                                "1.13.2",
+                                "1.13.1",
+                                "1.13",
+                                "1.12.2",
+                                "1.12.1",
+                                "1.12",
+                                "1.11.2",
+                                "1.11.1",
+                                "1.11",
+                                "1.10.2",
+                                "1.10.1",
+                                "1.10",
+                                "1.9.4",
+                                "1.9.3",
+                                "1.9.2",
+                                "1.9.1",
+                                "1.9",
+                                "1.8.9",
+                                "1.8.8",
+                                "1.8.7",
+                                "1.8.6",
+                                "1.8.5",
+                                "1.8.4",
+                                "1.8.3",
+                                "1.8.2",
+                                "1.8.1",
+                                "1.8",
+                            ];
+
+                            
+
+                            const excludedVersions = [
+                                1.16, 1.15, 1.14, 1.13, 1.12, 1.11, 1.1, 1.9, 1.8, 1.7, 1.6,
+                                1.5, 1.4, 1.3,
+                            ];
+                            const includedVersionsForgeNew = [1.17, 1.18, 1.19, 1.2, 1.21];
+
+                            const versionesConMultijugadorDesactivado = ["1.16.4", "1.16.5"];
+
+                            
+
+                            if (
+                                versionesConMultijugadorDesactivado.includes(version) &&
+                                versionType === "forge"
+                            ) {
+                                fs.copyFileSync(
+                                    rutaModMultijugadorForge,
+                                    `${dataDirectory}/.battly/mods/multijugador-forge.jar`
+                                );
+                            } else if (
+                                versionesConMultijugadorDesactivado.includes(version) &&
+                                versionType === "fabric"
+                            ) {
+                                fs.copyFileSync(
+                                    rutaModMultijugadorFabric,
+                                    `${dataDirectory}/.battly/mods/multijugador-fabric.jar`
+                                );
+                            }
+
+                            if (
+                                includedVersionsForgeNew.includes(parseFloat(version_real)) &&
+                                !excludedVersions.includes(parseFloat(version_real)) &&
+                                versionType == "forge"
+                            ) {
+                                
+
+                                fs.copyFileSync(
+                                    rutaPrincipalSkinsForgeNewJar,
+                                    skinsForgeNewJarPath
+                                );
+
+                                // Eliminar skins.jar y skins-forge.jar
+                                if (fs.existsSync(skinsJarPath)) {
+                                    fs.unlinkSync(skinsJarPath);
+                                }
+                                if (fs.existsSync(skinsForgeJarPath)) {
+                                    fs.unlinkSync(skinsForgeJarPath);
+                                }
+                            } else if (
+                                versionesCompatiblesConForgeNormal.includes(version_real) &&
+                                versionType == "forge"
+                            ) {
+                                
+
+                                fs.copyFileSync(rutaPrincipalSkinsForgeJar, skinsForgeJarPath);
+
+                                // Eliminar skins.jar y skins-forge-new.jar
+                                if (fs.existsSync(skinsJarPath)) {
+                                    fs.unlinkSync(skinsJarPath);
+                                }
+                                if (fs.existsSync(skinsForgeNewJarPath)) {
+                                    fs.unlinkSync(skinsForgeNewJarPath);
+                                }
+                            } else if (versionType == "fabric" || versionType == "quilt") {
+                                
+
+                                fs.copyFileSync(rutaPrincipalSkinsJar, skinsJarPath);
+                                // Eliminar skins-forge.jar y skins-forge-new.jar
+                                if (fs.existsSync(skinsForgeJarPath)) {
+                                    fs.unlinkSync(skinsForgeJarPath);
+                                }
+                                if (fs.existsSync(skinsForgeNewJarPath)) {
+                                    fs.unlinkSync(skinsForgeNewJarPath);
+                                }
+                            }
+                        }
+
+                        let archivoConfigSkins = `${dataDirectory}/.battly/CustomSkinLoader/CustomSkinLoader.json`;
+                        let data = {
+                            version: "14.15",
+                            buildNumber: 8,
+                            loadlist: [{
+                                name: "BattlyAPI",
+                                type: "Legacy",
+                                checkPNG: false,
+                                skin: "http://api.battlylauncher.com/api/skin/{USERNAME}.png",
+                                model: "auto",
+                                cape: "http://api.battlylauncher.com/api/capa/{USERNAME}.png",
+                            },
+                            {
+                                name: "Mojang",
+                                type: "MojangAPI",
+                                apiRoot: "https://api.mojang.com/",
+                                sessionRoot: "https://sessionserver.mojang.com/",
+                            },
+                            {
+                                name: "OptiFine",
+                                type: "Legacy",
+                                checkPNG: false,
+                                model: "auto",
+                                cape: "https://optifine.net/capes/{USERNAME}.png",
+                            },
+                            {
+                                name: "LabyMod",
+                                type: "Legacy",
+                                checkPNG: false,
+                                model: "auto",
+                                cape: "https://dl.labymod.net/capes/{STANDARD_UUID}",
+                            },
+                            ],
+                            enableDynamicSkull: true,
+                            enableTransparentSkin: true,
+                            forceIgnoreHttpsCertificate: true,
+                            forceLoadAllTextures: true,
+                            enableCape: true,
+                            threadPoolSize: 8,
+                            enableLogStdOut: false,
+                            cacheExpiry: 30,
+                            forceUpdateSkull: true,
+                            enableLocalProfileCache: false,
+                            enableCacheAutoClean: true,
+                            forceDisableCache: true,
+                        };
+
+                        if (fs.existsSync(path.join(archivoConfigSkins))) {
+                            fs.writeFileSync(archivoConfigSkins, JSON.stringify(data));
+                        } else {
+                            fs.mkdirSync(
+                                `${dataDirectory}/${process.platform == "darwin"
+                                    ? this.config.dataDirectory
+                                    : `.${this.config.dataDirectory}`
+                                }/CustomSkinLoader`
+                            );
+                            fs.writeFileSync(archivoConfigSkins, JSON.stringify(data));
+                        }
+                    }
+
+                    if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                    if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                    if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                    if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                    if (e.includes("Forge patcher exited with code 1")) {
+                        ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                        progressBar1.style.display = "none";
+                        info.style.display = "none";
+                        playBtn.style.display = "";
+                    }
+
+                    if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                    if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                    if (
+                        e.includes(`Setting user: ${account.name}`) ||
+                        e.includes("Launching wrapped minecraft")
+                    ) {
+                        if (inicio == false) {
+                            let typeOfVersion;
+                            if (version_real.endsWith("-forge")) {
+                                typeOfVersion = "Forge";
+                            } else if (version_real.endsWith("-fabric")) {
+                                typeOfVersion = "Fabric";
+                            } else if (version_real.endsWith("-quilt")) {
+                                typeOfVersion = "Quilt";
+                            } else {
+                                typeOfVersion = "";
+                            }
+                            ipcRenderer.send(
+                                "new-status-discord-jugando",
+                                `${langs.playing_in} ${version_real
+                                    .replace("-forge", "")
+                                    .replace("-fabric", "")
+                                    .replace("-quilt", "")} ${typeOfVersion}`
+                            );
+
+                            this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} ${version_real.replace("-forge", "").replace("-fabric", "").replace("-quilt", "")} ${typeOfVersion}`);
+                            modalDiv1.classList.remove("is-active");
+                            inicio = true;
+                            info.innerHTML = `${langs.minecraft_started_correctly}.`;
+                            logTextArea1.innerHTML = ``;
+                            textInfo.innerHTML = `Selecciona la versión que quieres abrir`;
+                            ipcRenderer.send("new-notification", {
+                                title: langs.minecraft_started_correctly,
+                                body: langs.minecraft_started_correctly_body,
+                            });
+
+                            ipcRenderer.send("main-window-progress-reset");
+                        }
+                    }
+                });
+
+                launch_core.on("close", (code) => {
+                    consoleOutput_ += `---------- [MC] Código de salida: ${code}\n ----------`;
+                    modalDiv1.classList.remove("is-active");
+                    if (launcherSettings.launcher.close === "close-launcher")
+                        ipcRenderer.send("main-window-show");
+
+                    ipcRenderer.send('updateStatus', {
+                        status: 'online',
+                        details: langs.in_the_menu,
+                        username: account.name,
+                    })
+                    progressBar1.style.display = "none";
+                    info.style.display = "none";
+                    playBtn.style.display = "";
+                    info.innerHTML = `Verificando archivos...`;
+                    footermodaliniciarversion.style.display = "";
+                    textInfo.innerHTML = "Selecciona la versión que quieres abrir";
+                    new logger("Launcher", "#3e8ed0");
+                    console.log("🔧 Minecraft cerrado");
+
+                    progressBar1.style.display = "none";
+
+                    version = null;
+                    versionType = null;
+                    versionData = null;
+                    version_real = null;
+                    assets = null;
+                    type = null;
+                    isForgeCheckBox = false;
+                    isFabricCheckBox = false;
+                    isQuiltCheckBox = false;
+                    document.getElementById("radioVanilla").removeAttribute("checked");
+                    document.getElementById("radioForge").removeAttribute("checked");
+                    document.getElementById("radioFabric").removeAttribute("checked");
+                    document.getElementById("radioQuilt").removeAttribute("checked");
+
+
+
+
+                    ipcRenderer.send("delete-and-new-status-discord");
+                });
+
+                launch_core.on("error", (err) => {
+                    consoleOutput_ += `[ERROR] ${JSON.stringify(err, null, 2)}\n`;
+                });
+            });
+
+        document
+            .getElementById("download-btn")
+            .addEventListener("click", async () => {
+                let versionMojangData = this.VersionsMojang;
+                versionMojangData = versionMojangData.versions;
+
+                let snapshots = [];
+                let releases = [];
+                let betas = [];
+                let alphas = [];
+
+                for (let i = 0; i < versionMojangData.length; i++) {
+                    if (versionMojangData[i].type == "release") {
+                        releases.push(versionMojangData[i]);
+                    } else if (versionMojangData[i].type == "snapshot") {
+                        snapshots.push(versionMojangData[i]);
+                    }
+                }
+
+                let versionBattlyData = this.Versions;
+                versionBattlyData = versionBattlyData.versions;
+
+                let forgeVersions = [];
+                let fabricVersions = [];
+                let quiltVersions = [];
+                let optifineVersions = [];
+
+                for (let i = 0; i < versionBattlyData.length; i++) {
+                    if (versionBattlyData[i].version.endsWith("-forge")) {
+                        forgeVersions.push(versionBattlyData[i]);
+                    } else if (versionBattlyData[i].version.endsWith("-fabric")) {
+                        fabricVersions.push(versionBattlyData[i]);
+                    } else if (versionBattlyData[i].version.endsWith("-quilt")) {
+                        quiltVersions.push(versionBattlyData[i]);
+                    } else if (versionBattlyData[i].version.endsWith("-optifine")) {
+                        optifineVersions.push(versionBattlyData[i]);
+                    }
+                }
+
+                //betas
+                for (let i = 0; i < versionMojangData.length; i++) {
+                    if (versionMojangData[i].type == "old_beta") {
+                        betas.push(versionMojangData[i]);
+                    }
+                }
+
+                //alphas
+                for (let i = 0; i < versionMojangData.length; i++) {
+                    if (versionMojangData[i].type == "old_alpha") {
+                        alphas.push(versionMojangData[i]);
+                    }
+                }
+
+                // Crear el div modal principal
+                let modalDiv = document.createElement("div");
+                modalDiv.classList.add("modal");
+                modalDiv.classList.add("is-active");
+
+                // Crear el fondo del modal
+                let modalBackground = document.createElement("div");
+                modalBackground.classList.add("modal-background");
+
+                // Crear el div del contenido del modal
+                let modalCard = document.createElement("div");
+                modalCard.classList.add("modal-card");
+
+                // Crear el encabezado del modal
+                let modalHeader = document.createElement("header");
+                modalHeader.classList.add("modal-card-head");
+
+                let modalTitle = document.createElement("p");
+                modalTitle.classList.add("modal-card-title");
+                modalTitle.innerText = langs.download_version;
+
+                let modalCloseButton = document.createElement("button");
+                modalCloseButton.classList.add("delete");
+                modalCloseButton.setAttribute("aria-label", "close");
+
+                modalHeader.appendChild(modalTitle);
+                modalHeader.appendChild(modalCloseButton);
+
+                // Crear la sección del cuerpo del modal
+                let modalSection = document.createElement("section");
+                modalSection.classList.add("modal-card-body");
+
+                let cardDiv = document.createElement("div");
+                cardDiv.classList.add("card");
+                let cardContentDiv = document.createElement("div");
+                cardContentDiv.classList.add("card-content");
+
+                let mediaDiv = document.createElement("div");
+                mediaDiv.classList.add("media");
+
+                let mediaLeftDiv = document.createElement("div");
+                mediaLeftDiv.classList.add("media-left");
+
+                let imageFigure = document.createElement("figure");
+                imageFigure.classList.add("image");
+                imageFigure.classList.add("is-48x48");
+
+                let image = document.createElement("img");
+                image.src =
+                    "./assets/images/icons/minecraft.png";
+                image.alt = "Placeholder image";
+                image.id = "versionImg";
+
+                imageFigure.appendChild(image);
+                mediaLeftDiv.appendChild(imageFigure);
+                mediaDiv.appendChild(mediaLeftDiv);
+
+                let mediaContentDiv = document.createElement("div");
+                mediaContentDiv.classList.add("media-content");
+
+                let title = document.createElement("p");
+                title.classList.add("title");
+                title.classList.add("is-4");
+                title.id = "titleVersions";
+                title.innerText = "Java";
+
+                let subtitle = document.createElement("p");
+                subtitle.classList.add("subtitle");
+                subtitle.classList.add("is-6");
+                subtitle.id = "subtitleVersions";
+                subtitle.innerHTML = '<i class="fas fa-download"></i> 1.20.1';
+
+                mediaContentDiv.appendChild(title);
+                mediaContentDiv.appendChild(subtitle);
+                mediaDiv.appendChild(mediaContentDiv);
+
+                cardContentDiv.appendChild(mediaDiv);
+
+                let contentDiv = document.createElement("div");
+                contentDiv.classList.add("content");
+                const hr = document.createElement("hr");
+                const span = document.createElement("span");
+                span.style.fontSize = "20px";
+                span.innerText = langs.type_of_version;
+                contentDiv.appendChild(hr);
+                contentDiv.appendChild(span);
+                const br = document.createElement("br");
+                contentDiv.appendChild(br);
+                contentDiv.innerHTML += `
+<label class="radio">
+  <input type="radio" name="option" value="vanilla">
+  Vanilla
+</label>
+<label class="radio">
+  <input type="radio" name="option" value="fabric">
+  Fabric
+</label>
+<label class="radio">
+  <input type="radio" name="option" value="forge">
+  Forge
+</label>
+<label class="radio">
+  <input type="radio" name="option" value="quilt">
+  Quilt
+</label>
+<label class="radio">
+  <input type="radio" name="option" value="optifine">
+  OptiFine
+</label>
+
+<label class="radio">
+  <input type="radio" name="option" value="clientes">
+  Clients
+</label>
+<br>
+<br>
+<div id="tipoDeVersiones">
+<div id="divNormal">
+              <label class="radio" id="opcionNormal">
+                <input type="radio" name="opcion" value="normal">
+                Normal
+              </label>
+              <br>
+              <div class="select is-link" id="normal" style="width: auto;">
+                <select id="selectNormal">
+                </select>
+              </div>
+
+            </div>
+
+
+              <div id="divSnapshot">
+                <label class="radio" id="opcionSnapshot">
+                  <input type="radio" name="opcion" value="snapshot"> Snapshot
+                </label>
+                <br>
+                <div class="select is-link" id="snapshot" style="width: auto;">
+                  <select id="selectSnapshot">
+                  </select>
+                </div>
+              </div>
+
+              <div id="divBeta">
+                <label class="radio" id="opcionBeta">
+                    <input type="radio" name="opcion" value="beta"> Beta
+                </label>
+                <br>
+                <div class="select is-link" id="beta" style="width: auto;">
+                    <select id="selectBeta">
+                    </select>
+                    </div>
+                    </div>
+
+                <div id="divAlpha">
+                    <label class="radio" id="opcionAlpha">
+                        <input type="radio" name="opcion" value="alpha"> Alpha
+                    </label>
+                    <br>
+                    <div class="select is-link" id="alpha" style="width: auto;">
+                        <select id="selectAlpha">
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+              <div id="versionesFabric">
+                <label>${langs.choose_fabric_version}
+                </label>
+                <br>
+                <div class="select is-link" id="fabric" style="width: auto;">
+                  <select id="selectFabric">
+                  </select>
+                </div>
+              </div>
+
+              <div id="versionesForge">
+                <label>${langs.choose_forge_version}
+                </label>
+                <br>
+                <div class="select is-link" id="forge" style="width: auto;">
+                  <select id="selectForge">
+                  </select>
+                </div>
+                <div class="select is-link" id="forgebuild" style="width: auto;">
+                  <select id="selectForgeBuild">
+                    <option value="recommended">${langs.recommended}</option>
+                    <option value="latest">${langs.latest}</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="versionesQuilt">
+                <label>${langs.choose_quilt_version}
+                </label>
+                <br>
+                <div class="select is-link" id="quilt" style="width: auto;">
+                  <select id="selectQuilt">
+                  </select>
+                </div>
+              </div>
+
+              <div id="versionesOptiFine">
+                <label>${langs.choose_optifine_version}
+                </label>
+                <br>
+                <div class="select is-link" id="optifine" style="width: auto;">
+                  <select id="selectOptiFine">
+                  </select>
+                </div>
+              </div>
+              <div id="versionesClientes">
+                <label>${langs.choose_a_client}
+                </label>
+                <br>
+                <div class="select is-link" id="clientes" style="width: auto;">
+                  <select id="selectClientes">
+                  </select>
+                </div>
+              </div>
+</div>
+
+`;
+
+                cardContentDiv.appendChild(contentDiv);
+                cardDiv.appendChild(cardContentDiv);
+
+                let cardFooterDiv = document.createElement("div");
+                cardFooterDiv.classList.add("card-footer");
+
+                let cardFooterItemDiv = document.createElement("div");
+                cardFooterItemDiv.classList.add("card-footer-item");
+
+                let footerText = document.createElement("p");
+                footerText.style.fontSize = "10px";
+                footerText.innerHTML = langs.mojang_copyright;
+
+                cardFooterItemDiv.appendChild(footerText);
+                cardFooterDiv.appendChild(cardFooterItemDiv);
+                cardDiv.appendChild(cardFooterDiv);
+
+                modalSection.appendChild(cardDiv);
+
+                // Crear el pie del modal
+                let modalFooter = document.createElement("footer");
+                modalFooter.classList.add("modal-card-foot");
+
+                let downloadButton = document.createElement("button");
+                downloadButton.classList.add("button");
+                downloadButton.classList.add("is-info");
+                downloadButton.innerText = langs.download_version;
+
+                let deleteButton = document.createElement("button");
+                deleteButton.classList.add("button");
+                deleteButton.classList.add("is-danger");
+                deleteButton.innerText = langs.delete_version;
+
+                modalFooter.appendChild(downloadButton);
+                modalFooter.appendChild(deleteButton);
+
+                // Agregar elementos al modal
+                modalCard.appendChild(modalHeader);
+                modalCard.appendChild(modalSection);
+                modalCard.appendChild(modalFooter);
+
+                modalDiv.appendChild(modalBackground);
+                modalDiv.appendChild(modalCard);
+
+                document.body.appendChild(modalDiv);
+                // Agregar el modal al cuerpo del documento
+                modalCloseButton.addEventListener("click", function () {
+                    //eliminar el modal
+                    modalDiv.remove();
+                });
+
+                const normal = document.getElementById("normal");
+                const normalVersionType = document.getElementById("selectNormal");
+                const snapshot = document.getElementById("snapshot");
+                const beta = document.getElementById("beta");
+                const snapshotVersionType = document.getElementById("selectSnapshot");
+                const betaVersionType = document.getElementById("selectBeta");
+                const alpha = document.getElementById("alpha");
+                const alphaVersionType = document.getElementById("selectAlpha");
+                const selectAlpha = document.getElementById("selectAlpha");
+                const selectForgeBuild = document.getElementById("selectForgeBuild");
+
+                let radioNormal = document.getElementById("opcionNormal");
+                let radioSnapshot = document.getElementById("opcionSnapshot");
+
+                let tipoDeVersiones = document.getElementById("tipoDeVersiones");
+
+                normal.style.display = "none";
+                snapshot.style.display = "none";
+                beta.style.display = "none";
+                alpha.style.display = "none";
+
+                const radio = document.getElementsByName("opcion");
+
+                radio.forEach((element) => {
+                    element.addEventListener("click", () => {
+                        if (element.value == "normal") {
+                            normal.style.display = "";
+                            snapshot.style.display = "none";
+                            beta.style.display = "none";
+                            alpha.style.display = "none";
+                        } else if (element.value == "snapshot") {
+                            normal.style.display = "none";
+                            snapshot.style.display = "";
+                            beta.style.display = "none";
+                            alpha.style.display = "none";
+                        } else if (element.value == "beta") {
+                            normal.style.display = "none";
+                            snapshot.style.display = "none";
+                            beta.style.display = "";
+                            alpha.style.display = "none";
+                        } else if (element.value == "alpha") {
+                            normal.style.display = "none";
+                            snapshot.style.display = "none";
+                            beta.style.display = "none";
+                            alpha.style.display = "";
+                        }
+                    });
+                });
+
+                //si vanilla está seleccionado, style.display = "" en todos los radio de tipo de versión
+                //en cambio, si está seleccionado otra versión que nosea vanilla, style.display = "none" en todos los radio de tipo de versión
+
+                const radio2 = document.getElementsByName("option");
+                const fabric = document.getElementById("versionesFabric");
+                const fabricVersionType = document.getElementById("selectFabric");
+                const forge = document.getElementById("versionesForge");
+                const forgeVersionType = document.getElementById("selectForge");
+                const quilt = document.getElementById("versionesQuilt");
+                const quiltVersionType = document.getElementById("selectQuilt");
+                const optifine = document.getElementById("versionesOptiFine");
+                const optifineVersionType = document.getElementById("selectOptiFine");
+                const clientes = document.getElementById("versionesClientes");
+                const clientesVersionType = document.getElementById("selectClientes");
+
+                let titleVersions = document.getElementById("titleVersions");
+                let subtitleVersions = document.getElementById("subtitleVersions");
+                let versionImg = document.getElementById("versionImg");
+
+                deleteButton.style.display = "none";
+
+                tipoDeVersiones.style.display = "none";
+                fabric.style.display = "none";
+                forge.style.display = "none";
+                quilt.style.display = "none";
+                optifine.style.display = "none";
+                clientes.style.display = "none";
+
+                for (let i = 0; i < versionBattlyData.length; i++) {
+                    if (versionBattlyData[i].type === "client") {
+                        clientesVersionType.innerHTML += `<option value="${versionBattlyData[i].version}" img="${versionBattlyData[i].imgUrl}" download="${versionBattlyData[i].downlaodUrl}" folderName="${versionBattlyData[i].folderName}">${versionBattlyData[i].name}</option>`;
+                    }
+                }
+
+                radio2.forEach((element) => {
+                    element.addEventListener("click", () => {
+                        if (element.value == "vanilla") {
+                            versionImg.src =
+                                "./assets/images/icons/minecraft.png";
+                            tipoDeVersiones.style.display = "";
+                            radioNormal.style.display = "";
+                            radioSnapshot.style.display = "";
+                            fabric.style.display = "none";
+                            forge.style.display = "none";
+                            quilt.style.display = "none";
+                            optifine.style.display = "none";
+                            clientes.style.display = "none";
+                            titleVersions.innerHTML = "Java";
+                            subtitleVersions.innerHTML =
+                                '<i class="fas fa-download"></i> ' + normalVersionType.value;
+                        } else if (element.value == "fabric") {
+                            versionImg.src =
+                                "./assets/images/icons/fabric.png";
+                            tipoDeVersiones.style.display = "none";
+                            fabric.style.display = "";
+                            forge.style.display = "none";
+                            quilt.style.display = "none";
+                            optifine.style.display = "none";
+                            clientes.style.display = "none";
+                            titleVersions.innerHTML = "Fabric";
+                            subtitleVersions.innerHTML =
+                                '<i class="fas fa-download"></i> ' +
+                                fabricVersionType.value.replace("-fabric", "");
+                        } else if (element.value == "forge") {
+                            versionImg.src =
+                                "./assets/images/icons/forge.png"
+                            tipoDeVersiones.style.display = "none";
+                            fabric.style.display = "none";
+                            forge.style.display = "";
+                            quilt.style.display = "none";
+                            optifine.style.display = "none";
+                            clientes.style.display = "none";
+                            titleVersions.innerHTML = "Forge";
+                            subtitleVersions.innerHTML =
+                                '<i class="fas fa-download"></i> ' +
+                                forgeVersionType.value.replace("-forge", "");
+                        } else if (element.value == "quilt") {
+                            versionImg.src =
+                                "./assets/images/icons/quilt.png";
+                            tipoDeVersiones.style.display = "none";
+                            fabric.style.display = "none";
+                            forge.style.display = "none";
+                            quilt.style.display = "";
+                            optifine.style.display = "none";
+                            clientes.style.display = "none";
+                            titleVersions.innerHTML = "Quilt";
+                            subtitleVersions.innerHTML =
+                                '<i class="fas fa-download"></i> ' +
+                                quiltVersionType.value.replace("-quilt", "");
+                        } else if (element.value == "optifine") {
+                            versionImg.src =
+                                "./assets/images/icons/optifine.png";
+                            tipoDeVersiones.style.display = "none";
+                            fabric.style.display = "none";
+                            forge.style.display = "none";
+                            quilt.style.display = "none";
+                            optifine.style.display = "";
+                            clientes.style.display = "none";
+                            titleVersions.innerHTML = "OptiFine";
+                            subtitleVersions.innerHTML =
+                                '<i class="fas fa-download"></i> ' +
+                                optifineVersionType.value.replace("-optifine", "");
+                        } else if (element.value == "clientes") {
+                            versionImg.src =
+                                "./assets/images/icons/clients.png";
+                            tipoDeVersiones.style.display = "none";
+                            fabric.style.display = "none";
+                            forge.style.display = "none";
+                            quilt.style.display = "none";
+                            optifine.style.display = "none";
+                            clientes.style.display = "";
+                            titleVersions.innerHTML = "Clientes";
+                            subtitleVersions.innerHTML =
+                                '<i class="fas fa-download"></i> ' +
+                                clientesVersionType.name;
+                        }
+                    });
+                });
+
+                normalVersionType.addEventListener("change", () => {
+                    subtitleVersions.innerHTML =
+                        '<i class="fas fa-download"></i> ' + normalVersionType.value;
+                    if (
+                        fs.existsSync(
+                            `${dataDirectory}/.battly/versions/${normalVersionType.value}`
+                        )
+                    ) {
+                        deleteButton.style.display = "";
+                    } else {
+                        deleteButton.style.display = "none";
+                    }
+                });
+
+                snapshotVersionType.addEventListener("change", () => {
+                    subtitleVersions.innerHTML =
+                        '<i class="fas fa-download"></i> ' + snapshotVersionType.value;
+                    if (
+                        fs.existsSync(
+                            `${dataDirectory}/.battly/versions/${snapshotVersionType.value}`
+                        )
+                    ) {
+                        deleteButton.style.display = "";
+                    } else {
+                        deleteButton.style.display = "none";
+                    }
+                });
+
+                betaVersionType.addEventListener("change", () => {
+                    subtitleVersions.innerHTML =
+                        '<i class="fas fa-download"></i> ' + betaVersionType.value;
+                    if (
+                        fs.existsSync(
+                            `${dataDirectory}/.battly/versions/${betaVersionType.value}`
+                        )
+                    ) {
+                        deleteButton.style.display = "";
+                    } else {
+                        deleteButton.style.display = "none";
+                    }
+                });
+
+                alphaVersionType.addEventListener("change", () => {
+                    subtitleVersions.innerHTML =
+                        '<i class="fas fa-download"></i> ' + alphaVersionType.value;
+                    if (
+                        fs.existsSync(
+                            `${dataDirectory}/.battly/versions/${alphaVersionType.value}`
+                        )
+                    ) {
+                        deleteButton.style.display = "";
+                    } else {
+                        deleteButton.style.display = "none";
+                    }
+                });
+
+                fabricVersionType.addEventListener("change", () => {
+                    subtitleVersions.innerHTML =
+                        '<i class="fas fa-download"></i> ' +
+                        fabricVersionType.value.replace("-fabric", "");
+                });
+
+                forgeVersionType.addEventListener("change", async () => {
+                    subtitleVersions.innerHTML =
+                        '<i class="fas fa-download"></i> ' +
+                        forgeVersionType.value.replace("-forge", "");
+                    
+                    const axios = require("axios");
+                    await axios.get("https://files.minecraftforge.net/net/minecraftforge/forge/maven-metadata.json").then((response) => {
+                        let data = response.data;
+    
+                        // Agregar las opciones de "latest" y "recommended"
+                        let latestOption = document.createElement("option");
+                        latestOption.value = "latest";
+                        latestOption.innerHTML = langs.latest;
+                        selectForgeBuild.appendChild(latestOption);
+
+                        let recommendedOption = document.createElement("option");
+                        recommendedOption.value = "recommended";
+                        recommendedOption.innerHTML = langs.recommended;
+                        selectForgeBuild.appendChild(recommendedOption);
+
+                        for (let version in data) {
+                            if (version === forgeVersionType.value.replace("-forge", "")) {
+                                let build = data[version];
+                                // Limpiar el select antes de agregar nuevas opciones
+                                selectForgeBuild.innerHTML = "";
+
+                                // Agregar las opciones de "latest" y "recommended" nuevamente
+                                selectForgeBuild.appendChild(latestOption.cloneNode(true));
+                                selectForgeBuild.appendChild(recommendedOption.cloneNode(true));
+
+                                // Agregar las otras versiones
+                                for (let j = 0; j < build.length; j++) {
+                                    let option = document.createElement("option");
+                                    option.value = build[j];
+                                    option.innerHTML = build[j];
+                                    selectForgeBuild.appendChild(option);
+                                }
+                            }
+                        }
+                    });
+
+
+                });
+
+                quiltVersionType.addEventListener("change", () => {
+                    subtitleVersions.innerHTML =
+                        '<i class="fas fa-download"></i> ' +
+                        quiltVersionType.value.replace("-quilt", "");
+                });
+
+                optifineVersionType.addEventListener("change", () => {
+                    subtitleVersions.innerHTML =
+                        '<i class="fas fa-download"></i> ' +
+                        optifineVersionType.value.replace("-optifine", "");
+                });
+
+                clientesVersionType.addEventListener("change", () => {
+                    let selectedIndex = clientesVersionType.selectedIndex;
+                    subtitleVersions.innerHTML = '<i class="fas fa-download"></i> ' + clientesVersionType.options[selectedIndex].text;
+
+                    // Obtener el valor del atributo "img"
+                    let imgUrl = clientesVersionType.options[selectedIndex].getAttribute("img");
+
+                    // Usar imgUrl según tus necesidades
+                    versionImg.src = imgUrl;
+                });
+
+
+                let selectNormal = document.getElementById("selectNormal");
+                let selectSnapshot = document.getElementById("selectSnapshot");
+                let selectBeta = document.getElementById("selectBeta");
+
+                for (let i = 0; i < releases.length; i++) {
+                    let option = document.createElement("option");
+                    option.value = releases[i].id;
+                    option.innerHTML = releases[i].id;
+                    selectNormal.appendChild(option);
+                }
+
+                for (let i = 0; i < snapshots.length; i++) {
+                    let option = document.createElement("option");
+                    option.value = snapshots[i].id;
+                    option.innerHTML = snapshots[i].id;
+                    selectSnapshot.appendChild(option);
+                }
+
+                for (let i = 0; i < betas.length; i++) {
+                    let option = document.createElement("option");
+                    option.value = betas[i].id;
+                    option.innerHTML = betas[i].id;
+                    selectBeta.appendChild(option);
+                }
+
+                for (let i = 0; i < alphas.length; i++) {
+                    let option = document.createElement("option");
+                    option.value = alphas[i].id;
+                    option.innerHTML = alphas[i].id;
+                    selectAlpha.appendChild(option);
+                }
+
+                let selectFabric = document.getElementById("selectFabric");
+                let selectForge = document.getElementById("selectForge");
+                let selectQuilt = document.getElementById("selectQuilt");
+                let selectOptiFine = document.getElementById("selectOptiFine");
+
+                for (let i = 0; i < fabricVersions.length; i++) {
+                    let option = document.createElement("option");
+                    option.value = fabricVersions[i].version;
+                    option.innerHTML = fabricVersions[i].version.replace("-fabric", "");
+                    selectFabric.appendChild(option);
+                }
+
+                for (let i = 0; i < forgeVersions.length; i++) {
+                    let option = document.createElement("option");
+                    option.value = forgeVersions[i].version;
+                    option.innerHTML = forgeVersions[i].version.replace("-forge", "");
+                    selectForge.appendChild(option);
+                }
+
+                for (let i = 0; i < quiltVersions.length; i++) {
+                    let option = document.createElement("option");
+                    option.value = quiltVersions[i].version;
+                    option.innerHTML = quiltVersions[i].version.replace("-quilt", "");
+                    selectQuilt.appendChild(option);
+                }
+
+                for (let i = 0; i < optifineVersions.length; i++) {
+                    let option = document.createElement("option");
+                    option.value = optifineVersions[i].version;
+                    option.innerHTML = optifineVersions[i].version.replace("-optifine", "");
+                    selectOptiFine.appendChild(option);
+                }
+
+                deleteButton.addEventListener("click", () => {
+                    Swal.fire({
+                        title: langs.are_you_sure,
+                        text: langs.delete_version_text,
+                        showCancelButton: true,
+                        confirmButtonColor: "#00d1b2",
+                        cancelButtonColor: "#ff3860",
+                        confirmButtonText: langs.yes_delete,
+                        cancelButtonText: langs.no_cancel,
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            fs.rmdirSync(
+                                `${dataDirectory}/.battly/versions/${normalVersionType.value}`, {
+                                recursive: true
+                            }
+                            );
+                            deleteButton.style.display = "none";
+                            Toast.fire({
+                                icon: "success",
+                                title: langs.version_deleted_correctly,
+                            });
+                        }
+                    });
+                });
+
+                let version;
+                let versionType;
+
+                //comprobar el radio seleccionado, vanilla, fabric, forge o quilt
+                //si es vanilla, comprobar si el radio de tipo de versión es normal o snapshot
+                //si es normal, comprobar el valor del select de normal
+                //si es snapshot, comprobar el valor del select de snapshot
+                //si es fabric, comprobar el valor del select de fabric
+                //si es forge, comprobar el valor del select de forge
+                //si es quilt, comprobar el valor del select de quilt
+
+                
+
+                downloadButton.addEventListener("click", async () => {
+
+                    //comprobar si hay alguna opción seleccionada
+                    if (document.querySelector('input[name="option"]:checked') == null) return Toast.fire({
+                        icon: "error",
+                        title: langs.you_need_select_version,
+                    });
+
+                    //obtener el valor de option y ver si el value de checked es vanilla
+                    if (document.querySelector('input[name="option"]:checked').value == "vanilla" && document.querySelector('input[name="opcion"]:checked') == null) return Toast.fire({
+                        icon: "error",
+                        title: langs.you_need_select_version,
+                    });
+                    
+                    let urlpkg = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url;
+                    let uuid = (await this.database.get("1234", "accounts-selected"))
+                        .value;
+                    let account = (await this.database.get(uuid.selected, "accounts"))
+                        .value;
+                    let ram = (await this.database.get("1234", "ram")).value;
+                    let Resolution = (await this.database.get("1234", "screen")).value;
+                    let launcherSettings = (await this.database.get("1234", "launcher"))
+                        .value;
+                    ipcRenderer.send("main-window-progress-loading");
+                    let radio = document.getElementsByName("option");
+                    let radio2 = document.getElementsByName("opcion");
+
+                    radio.forEach((element) => {
+                        if (element.checked) {
+                            version = element.value;
+                        }
+                    });
+
+                    radio2.forEach((element) => {
+                        if (element.checked) {
+                            versionType = element.value;
+                        }
+                    });
+
+                    let tipo_del_loader = version;
+
+                    if (version == "vanilla") {
+                        if (versionType == "normal") {
+                            version = selectNormal.value;
+                        } else if (versionType == "snapshot") {
+                            version = selectSnapshot.value;
+                        } else if (versionType == "beta") {
+                            version = selectBeta.value;
+                        } else if (versionType == "alpha") {
+                            version = selectAlpha.value;
+                        }
+                    } else if (version == "fabric") {
+                        version = selectFabric.value;
+                        versionType = "fabric";
+                    } else if (version == "forge") {
+                        version = selectForge.value;
+                        versionType = "forge";
+                    } else if (version == "quilt") {
+                        version = selectQuilt.value;
+                        versionType = "quilt";
+                    } else if (version == "optifine") {
+                        await LaunchOptiFineVersion(account, ram, Resolution, launcherSettings);
+                        return;
+                    } else if (version == "clientes") {
+                        await LaunchClientVersion(account, ram, Resolution, launcherSettings);
+                        return;
+                    }
+
+
+
+                    async function LaunchClientVersion(account, ram, Resolution, launcherSettings) {
+                      
+                        const https = require("https");
+
+                        let client = clientesVersionType.value;
+
+                        modalDiv.remove();
+
+                        // Crear el div modal principal
+                        let modalDiv1 = document.createElement("div");
+                        modalDiv1.classList.add("modal");
+                        modalDiv1.classList.add("is-active");
+
+                        // Crear el fondo del modal
+                        let modalBackground1 = document.createElement("div");
+                        modalBackground1.classList.add("modal-background");
+
+                        // Crear el div del contenido del modal
+                        let modalCard1 = document.createElement("div");
+                        modalCard1.classList.add("modal-card");
+
+                        // Crear el encabezado del modal
+                        let modalHeader1 = document.createElement("header");
+                        modalHeader1.classList.add("modal-card-head");
+
+                        let modalTitle1 = document.createElement("p");
+                        modalTitle1.classList.add("modal-card-title");
+                        modalTitle1.innerText = `${langs.downloading_client}...`;
+
+                        modalHeader1.appendChild(modalTitle1);
+
+                        // Crear la sección del cuerpo del modal
+                        let modalSection1 = document.createElement("section");
+                        modalSection1.classList.add("modal-card-body");
+
+                        let cardDiv1 = document.createElement("div");
+                        cardDiv1.classList.add("card");
+                        let cardContentDiv1 = document.createElement("div");
+                        cardContentDiv1.classList.add("card-content");
+
+                        let contentDiv1 = document.createElement("div");
+                        contentDiv1.classList.add("content");
+
+                        let progressText1 = document.createElement("span");
+                        progressText1.style.fontSize = "15px";
+                        progressText1.innerText = langs.starting_download_client_can_take;
+
+                        const progressBar1 = document.createElement("progress");
+                        progressBar1.className = "progress is-info";
+                        progressBar1.setAttribute("max", "100");
+                        progressBar1.style.borderRadius = "5px";
+
+                        let logText1 = document.createElement("span");
+                        logText1.style.fontSize = "15px";
+                        logText1.innerText = langs.log;
+
+                        let logTextArea1 = document.createElement("textarea");
+                        logTextArea1.classList.add("textarea");
+                        logTextArea1.classList.add("is-link");
+                        logTextArea1.placeholder = langs.battly_log
+                        logTextArea1.disabled = true;
+                        logTextArea1.style.overflow = "hidden";
+
+                        contentDiv1.appendChild(progressText1);
+                        contentDiv1.appendChild(document.createElement("br"));
+                        contentDiv1.appendChild(progressBar1);
+                        contentDiv1.appendChild(document.createElement("br"));
+                        contentDiv1.appendChild(logText1);
+                        contentDiv1.appendChild(logTextArea1);
+                        cardContentDiv1.appendChild(contentDiv1);
+
+                        let cardFooterDiv1 = document.createElement("div");
+                        cardFooterDiv1.classList.add("card-footer");
+
+                        let cardFooterItemDiv1 = document.createElement("div");
+                        cardFooterItemDiv1.classList.add("card-footer-item");
+
+                        let footerText1 = document.createElement("p");
+                        footerText1.style.fontSize = "10px";
+                        footerText1.innerHTML = langs.mojang_copyright;
+
+                        cardFooterItemDiv1.appendChild(footerText1);
+                        cardFooterDiv1.appendChild(cardFooterItemDiv1);
+                        cardContentDiv1.appendChild(contentDiv1);
+                        cardDiv1.appendChild(cardContentDiv1);
+
+                        modalSection1.appendChild(cardDiv1);
+
+                        /* <footer class="modal-card-foot">
+      <button class="button is-info" id="guardar-logs-inicio">Guardar Logs</button>
+    </footer>
+*/
+
+                        // Crear el pie del modal
+                        let modalFooter1 = document.createElement("footer");
+                        modalFooter1.classList.add("modal-card-foot");
+
+                        let guardarLogsInicio = document.createElement("button");
+                        guardarLogsInicio.classList.add("button");
+                        guardarLogsInicio.classList.add("is-info");
+                        guardarLogsInicio.id = "guardar-logs-inicio";
+                        guardarLogsInicio.innerText = langs.save_logs;
+
+                        modalFooter1.appendChild(guardarLogsInicio);
+
+                        // Agregar elementos al modal
+                        modalCard1.appendChild(modalHeader1);
+                        modalCard1.appendChild(modalSection1);
+                        modalCard1.appendChild(modalFooter1);
+
+                        modalDiv1.appendChild(modalBackground1);
+                        modalDiv1.appendChild(modalCard1);
+
+                        // Agregar el modal al cuerpo del documento
+                        document.body.appendChild(modalDiv1);
+
+                        ipcRenderer.send("main-window-progress-loading");
+
+                      
+                        const clientURL = clientesVersionType.options[clientesVersionType.selectedIndex].getAttribute("download");
+                        const folderName = clientesVersionType.options[clientesVersionType.selectedIndex].getAttribute("folderName");
+
+                        async function downloadFiles() {
+                            try {
+                                // Crear carpeta
+                                await fs.mkdirSync(`${dataDirectory}/.battly/temp`, {
+                                    recursive: true
+                                });
+
+                                // Descargar archivo JAR
+                                const zipPath = `${dataDirectory}/.battly/temp/${client}.zip`;
+                                const zipFile = await fs.createWriteStream(zipPath);
+                                const response = await downloadFile(clientURL, zipFile);
+                            } catch (error) {
+                                console.error('Error:', error);
+                            }
+                        }
+                      
+                        async function downloadFile(url, file) {
+                            return new Promise((resolve, reject) => {
+                                https.get(url, (response) => {
+                                    let totalLength = response.headers['content-length'];
+                                    let actual = 0;
+                                    let progress = 0;
+            
+                                    if (response.statusCode === 200) {
+                                        logTextArea1.value += `🔄 ${langs.downloading} ${folderName}...\n`;
+                                        updateTextareaScroll();
+                                        response.pipe(file);
+
+                                        response.on('data', (chunk) => {
+                                            actual += chunk.length;
+                                            progress = parseInt(((actual / totalLength) * 100).toFixed(0));
+
+                                            // Asegúrate de que progressBar1 es el elemento correcto para la barra de progreso
+                                            progressBar1.value = progress;
+                                        });
+
+                                        file.on('finish', () => {
+                                            file.close();
+                                            logTextArea1.value += `✅ ${folderName} ${langs.downloaded_successfully}.\n`;
+                                            updateTextareaScroll();
+                                            resolve(response);
+                                        });
+                                    } else {
+                                        logTextArea1.value += `❌ ${langs.error_downloading} ${url}. ${langs.status}: ${response.statusCode}\n`;
+                                        reject(`Error al descargar ${url}. Estado: ${response.statusCode}`);
+                                    }
+                                }).on('error', (error) => {
+                                    logTextArea1.value += `❌ ${langs.error_http}: ${error.message}\n`;
+                                    reject(`Error en la solicitud HTTP: ${error.message}`);
+                                });
+                            });
+                        }
+
+                        const ADM = require("adm-zip");
+
+                        async function ExtractFiles() {
+                            const zipFilePath = `${dataDirectory}/.battly/temp/${client}.zip`;
+                            const extractPath = `${dataDirectory}/.battly`;
+
+                            const zip = new ADM(zipFilePath);
+
+                            // Obtener la lista de entradas en el zip
+                            const entries = zip.getEntries();
+
+                            // Establecer el máximo de la barra de progreso al número total de archivos
+                            progressBar1.max = entries.length;
+
+                            // Extraer cada archivo por separado
+                            for (let index = 0; index < entries.length; index++) {
+                                const entry = entries[index];
+
+                                let progress = parseInt(((index + 1) / entries.length) * 100).toFixed(0);
+                                // Mostrar progreso
+                                logTextArea1.value += `🔄 ${langs.extracting} ${entry.name} - ${langs.progress}: ${progress}%\n`;
+        
+                                progressBar1.value = index + 1;
+
+                                zip.extractEntryTo(entry, extractPath, true, true);
+
+                                updateTextareaScroll();
+                            }
+
+                            logTextArea1.value += `✅ ${langs.files_extracted_successfully}\n`;
+                            updateTextareaScroll();
+                            progressBar1.max = 100;
+                        }
+
+                        async function DeleteTempFiles() {
+                            logTextArea1.value += `🔄 ${langs.deleting_temp_files}...\n`;
+                            updateTextareaScroll();
+
+                            await fs.rmdirSync(`${dataDirectory}/.battly/temp`, {
+                                recursive: true
+                            });
+                            logTextArea1.value += `✅ ${langs.temp_files_deleted_successfully}\n`;
+                            updateTextareaScroll();
+                        }
+
+
+                        function updateTextareaScroll() {
+                            logTextArea1.scrollTop = logTextArea1.scrollHeight; // Hacer que el scrollTop sea igual a la altura del contenido
+                        }
+                      
+                        async function CheckAndDownloadJava() {
+                            if (!fs.existsSync(`${dataDirectory}/.battly/versions/1.20.1`)) {
+                                modalDiv1.remove();
+
+                                let Toast_ = Swal.mixin({
+                                    toast: true,
+                                    position: "top-end",
+                                    showConfirmButton: false,
+                                    timer: 10000,
+                                    timerProgressBar: true,
+                                    didOpen: (toast) => {
+                                        toast.addEventListener("mouseenter", Swal.stopTimer);
+                                        toast.addEventListener("mouseleave", Swal.resumeTimer);
+                                    },
+                                });
+                                Toast_.fire({
+                                    icon: "error",
+                                    title: langs.error_downloading_version,
+                                    text: langs.version_java_error
+                                });
+                                return;
+                            }
+                        }
+
+                        const launch = new Client();
+
+                        // Descargar los archivos y esperar
+                        try {
+                            progressText1.innerHTML = `🔄 ${langs.downloading_files}...`;
+                            logText1.innerHTML = `🔄 ${langs.downloading_files}...`;
+                            updateTextareaScroll();
+                            await CheckAndDownloadJava();
+                            await downloadFiles();
+                            await ExtractFiles();
+                            await DeleteTempFiles();
+
+                            let realVersion = await fs.readFileSync(`${dataDirectory}/.battly/versions/${folderName}/${folderName}.json`, "utf-8");
+                            realVersion = JSON.parse(realVersion).assets;
+
+                            logText1.innerHTML = `🔄 ${langs.installing_minecraft_files}...`;
+                            logTextArea1.innerHTML += `✅ ${langs.client_files_downloaded_successfully}.\n🔄 ${langs.installing_minecraft_files}...\n`;
+                            updateTextareaScroll();
+                            progressBar1.value = 100;
+                            // Realizar el lanzamiento después de descargar los archivos
+                            let javapath = localStorage.getItem("java-path");
+                            if (!javapath || javapath == null || javapath == undefined) {
+                                launch.launch({
+                                    authorization: account,
+                                    detached: false,
+                                    timeout: 10000,
+                                    root: `${dataDirectory}/.battly`,
+                                    path: `${dataDirectory}/.battly`,
+                                    overrides: {
+                                        detached: false,
+                                        screen: screen,
+                                    },
+                                    downloadFileMultiple: 20,
+                                    version: {
+                                        custom: folderName,
+                                        number: realVersion,
+                                        type: "release"
+
+                                    },
+                                    verify: false,
+                                    ignored: ["loader"],
+                                    memory: {
+                                        min: `${ram.ramMin * 1024}M`,
+                                        max: `${ram.ramMax * 1024}M`,
+                                    },
+                                });
+                            } else {
+                                launch.launch({
+                                    authorization: account,
+                                    detached: false,
+                                    timeout: 10000,
+                                    root: `${dataDirectory}/.battly`,
+                                    path: `${dataDirectory}/.battly`,
+                                    overrides: {
+                                        detached: false,
+                                        screen: screen,
+                                    },
+                                    downloadFileMultiple: 20,
+                                    version: {
+                                        custom: folderName,
+                                        number: realVersion,
+                                        type: "release"
+
+                                    },
+                                    java: true,
+                                    javaPath: javapath,
+                                    verify: false,
+                                    ignored: ["loader"],
+                                    memory: {
+                                        min: `${ram.ramMin * 1024}M`,
+                                        max: `${ram.ramMax * 1024}M`,
+                                    },
+                                });
+                            }
+
+                            launch.on('debug', (e) => {
+                                if (e.includes("Attempting to download assets")) {
+                                    progressText1.innerHTML = `🔄 ${langs.downloading_assets}...`;
+                                    logText1.innerHTML = `🔄 ${langs.downloading_assets}...`;
+                                    progressBar1.value = 0;
+                                }
+
+                                if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                                if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                                if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                                if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                                if (e.includes("Forge patcher exited with code 1")) {
+                                    ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                                    progressBar1.style.display = "none";
+                                    info.style.display = "none";
+                                    playBtn.style.display = "";
+                                }
+
+                                if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                                if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                                if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                                if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+                            });
+
+                            let inicio = false;
+                            launch.on('data', (e) => {
+                                //si sale que está iniciando, eliminar el modaldiv1
+                                if (!inicio) {
+                                    new logger("Minecraft", "#36b030");
+                                    if (e.includes("Setting user") || e.includes("Launching wrapped minecraft")) {
+                                        modalDiv1.remove();
+                                        ipcRenderer.send("new-notification", {
+                                            title: langs.minecraft_started_correctly,
+                                            body: langs.minecraft_started_correctly_body,
+                                        });
+
+                                    
+                                        if (launcherSettings.launcher.close === "close-launcher")
+                                            ipcRenderer.send("main-window-hide")
+
+                                        ipcRenderer.send("main-window-progress-reset");
+
+                                        inicio = true;
+                                    }
+                                }
+                              
+                                if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                                if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                                if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                                if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                                if (e.includes("Forge patcher exited with code 1")) {
+                                    ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                                    progressBar1.style.display = "none";
+                                    info.style.display = "none";
+                                    playBtn.style.display = "";
+                                }
+
+                                if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                                if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                                if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                                if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+                                
+                            });
+
+                            let progressShown = false;
+                            launch.on('progress', (e) => {
+                                if (!progressShown) {
+                                    logTextArea1.value += `🔄 Descargando archivos de Minecraft...`;
+                                    progressShown = true;
+                                }
+                                let progress = (e.task / e.total * 100).toFixed(2);
+                                progressText1.innerHTML = "🔄 Descargando archivos... " + progress + "%";
+                                progressBar1.value = progress
+                            });
+
+                            launch.on('close', (e) => {
+                                //eliminar el modaldiv1
+                                modalDiv1.remove();
+                                    
+                                if (launcherSettings.launcher.close === "close-launcher")
+                                    ipcRenderer.send("main-window-show");
+
+                                ipcRenderer.send('updateStatus', {
+                                    status: 'online',
+                                    details: langs.in_the_menu,
+                                    username: account.name,
+                                })
+                            });
+
+                            //download status
+                            launch.on('download-status', (e) => {
+                                if (e.type == "task") {
+                                    if (e.task == "Downloading") {
+                                        progressText1.innerHTML = "🔄 Descargando archivos... " + e.progress + "%";
+                                        progressBar1.value = e.progress;
+                                    }
+                                }
+                            });
+                        } catch (error) {
+                            console.error('Error durante la descarga:');
+                            console.error(error);
+                        }
+                    }
+                    
+
+                    async function LaunchOptiFineVersion(account, ram, Resolution, launcherSettings) {
+                      
+                        const https = require("https");
+                        const fs = require("fs");
+                        const util = require('util');
+                        const mkdir = util.promisify(fs.mkdir);
+
+                        let version = selectOptiFine.value;
+                        version = version.replace("-optifine", "");
+
+                        // Obtén el valor de fileName desde los datos de la versión
+                        let fileName = "";
+                        let realVersion = "";
+                        for (let i = 0; i < optifineVersions.length; i++) {
+                            if (optifineVersions[i].realVersion == version) {
+                                fileName = optifineVersions[i].fileName;
+                                realVersion = optifineVersions[i].realVersion;
+                            }
+                        }
+
+                        modalDiv.remove();
+
+                        // Crear el div modal principal
+                        let modalDiv1 = document.createElement("div");
+                        modalDiv1.classList.add("modal");
+                        modalDiv1.classList.add("is-active");
+
+                        // Crear el fondo del modal
+                        let modalBackground1 = document.createElement("div");
+                        modalBackground1.classList.add("modal-background");
+
+                        // Crear el div del contenido del modal
+                        let modalCard1 = document.createElement("div");
+                        modalCard1.classList.add("modal-card");
+
+                        // Crear el encabezado del modal
+                        let modalHeader1 = document.createElement("header");
+                        modalHeader1.classList.add("modal-card-head");
+
+                        let modalTitle1 = document.createElement("p");
+                        modalTitle1.classList.add("modal-card-title");
+                        modalTitle1.innerText = `${langs.downloading_version}...`;
+
+                        modalHeader1.appendChild(modalTitle1);
+
+                        // Crear la sección del cuerpo del modal
+                        let modalSection1 = document.createElement("section");
+                        modalSection1.classList.add("modal-card-body");
+
+                        let cardDiv1 = document.createElement("div");
+                        cardDiv1.classList.add("card");
+                        let cardContentDiv1 = document.createElement("div");
+                        cardContentDiv1.classList.add("card-content");
+
+                        let contentDiv1 = document.createElement("div");
+                        contentDiv1.classList.add("content");
+
+                        let progressText1 = document.createElement("span");
+                        progressText1.style.fontSize = "15px";
+                        progressText1.innerText = langs.starting_download_can_take;
+
+                        const progressBar1 = document.createElement("progress");
+                        progressBar1.className = "progress is-info";
+                        progressBar1.setAttribute("max", "100");
+                        progressBar1.style.borderRadius = "5px";
+
+                        let logText1 = document.createElement("span");
+                        logText1.style.fontSize = "15px";
+                        logText1.innerText = langs.log;
+
+                        let logTextArea1 = document.createElement("textarea");
+                        logTextArea1.classList.add("textarea");
+                        logTextArea1.classList.add("is-link");
+                        logTextArea1.placeholder = langs.battly_log;
+                        logTextArea1.disabled = true;
+                        logTextArea1.style.overflow = "hidden";
+
+                        contentDiv1.appendChild(progressText1);
+                        contentDiv1.appendChild(document.createElement("br"));
+                        contentDiv1.appendChild(progressBar1);
+                        contentDiv1.appendChild(document.createElement("br"));
+                        contentDiv1.appendChild(logText1);
+                        contentDiv1.appendChild(logTextArea1);
+                        cardContentDiv1.appendChild(contentDiv1);
+
+                        let cardFooterDiv1 = document.createElement("div");
+                        cardFooterDiv1.classList.add("card-footer");
+
+                        let cardFooterItemDiv1 = document.createElement("div");
+                        cardFooterItemDiv1.classList.add("card-footer-item");
+
+                        let footerText1 = document.createElement("p");
+                        footerText1.style.fontSize = "10px";
+                        footerText1.innerHTML = langs.mojang_copyright;
+
+                        cardFooterItemDiv1.appendChild(footerText1);
+                        cardFooterDiv1.appendChild(cardFooterItemDiv1);
+                        cardContentDiv1.appendChild(contentDiv1);
+                        cardDiv1.appendChild(cardContentDiv1);
+
+                        modalSection1.appendChild(cardDiv1);
+
+                        /* <footer class="modal-card-foot">
+      <button class="button is-info" id="guardar-logs-inicio">Guardar Logs</button>
+    </footer>
+*/
+
+                        // Crear el pie del modal
+                        let modalFooter1 = document.createElement("footer");
+                        modalFooter1.classList.add("modal-card-foot");
+
+                        let guardarLogsInicio = document.createElement("button");
+                        guardarLogsInicio.classList.add("button");
+                        guardarLogsInicio.classList.add("is-info");
+                        guardarLogsInicio.id = "guardar-logs-inicio";
+                        guardarLogsInicio.innerText = langs.save_logs;
+
+                        modalFooter1.appendChild(guardarLogsInicio);
+
+                        // Agregar elementos al modal
+                        modalCard1.appendChild(modalHeader1);
+                        modalCard1.appendChild(modalSection1);
+                        modalCard1.appendChild(modalFooter1);
+
+                        modalDiv1.appendChild(modalBackground1);
+                        modalDiv1.appendChild(modalCard1);
+
+                        // Agregar el modal al cuerpo del documento
+                        document.body.appendChild(modalDiv1);
+
+                        ipcRenderer.send("main-window-progress-loading");
+
+                        const jarURL = `https://raw.githubusercontent.com/1ly4s0/battlylauncher-optifine/main/${fileName}/${fileName}.jar`;
+                        const jsonURL = `https://raw.githubusercontent.com/1ly4s0/battlylauncher-optifine/main/${fileName}/${fileName}.json`;
+
+                        async function downloadFiles() {
+                            try {
+                                // Crear carpeta
+                                await mkdir(`${dataDirectory}/.battly/versions/${fileName}`, {
+                                    recursive: true
+                                });
+
+                                // Descargar archivo JAR
+                                const jarPath = `${dataDirectory}/.battly/versions/${fileName}/${fileName}.jar`;
+                                const jarFile = fs.createWriteStream(jarPath);
+                                const response = await downloadFile(jarURL, jarFile);
+
+                                // Descargar archivo JSON
+                                const jsonPath = `${dataDirectory}/.battly/versions/${fileName}/${fileName}.json`;
+                                const jsonFile = fs.createWriteStream(jsonPath);
+                                const jsonResponse = await downloadFile(jsonURL, jsonFile);
+                            } catch (error) {
+                                console.error('Error:', error);
+                            }
+                        }
+
+                        function downloadFile(url, file) {
+                            return new Promise((resolve, reject) => {
+                                https.get(url, (response) => {
+                                    if (response.statusCode === 200) {
+                                        response.pipe(file);
+                                        file.on('finish', () => {
+                                            file.close();
+                                            resolve(response);
+                                        });
+                                    } else {
+                                        logTextArea1.value += `❌ Error al descargar ${url}. Estado: ${response.statusCode}\n`;
+                                        reject(`Error al descargar ${url}. Estado: ${response.statusCode}`);
+                                    }
+                                }).on('error', (error) => {
+                                    logTextArea1.value += `❌ Error en la solicitud HTTP: ${error.message}\n`;
+                                    reject(`Error en la solicitud HTTP: ${error.message}`);
+                                });
+                            });
+                        }
+
+                        function updateTextareaScroll() {
+                            logTextArea1.scrollTop = logTextArea1.scrollHeight; // Hacer que el scrollTop sea igual a la altura del contenido
+                        }
+
+                        async function CreateLibrariesDirectory() {
+                            if (!fs.existsSync(`${dataDirectory}/.battly/libraries`)) {
+                                logTextArea1.value += "🔄 Creando carpeta libraries...\n";
+                                updateTextareaScroll();
+                                fs.mkdirSync(`${dataDirectory}/.battly/libraries`, {
+                                    recursive: true
+                                });
+                                logTextArea1.value += "✅ Carpeta libraries creada.\n";
+                                progressBar1.value = 10;
+                                updateTextareaScroll();
+                            } else {
+                                logTextArea1.value += "⏩ La carpeta libraries ya existe. Saltando...\n";
+                                progressBar1.value = 10;
+                                updateTextareaScroll();
+                            }
+
+                            if (!fs.existsSync(`${dataDirectory}/.battly/libraries/optifine`)) {
+                                logTextArea1.value += "🔄 Creando carpeta optifine...\n";
+                                updateTextareaScroll();
+                                fs.mkdirSync(`${dataDirectory}/.battly/libraries/optifine`, {
+                                    recursive: true
+                                });
+                                logTextArea1.value += "✅ Carpeta optifine creada.\n";
+                                progressBar1.value = 20;
+                                updateTextareaScroll();
+                            } else {
+                                logTextArea1.value += "⏩ La carpeta optifine ya existe. Saltando...\n";
+                                progressBar1.value = 20;
+                                updateTextareaScroll();
+                            }
+
+                            if (!fs.existsSync(`${dataDirectory}/.battly/libraries/optifine/OptiFine`)) {
+                                logTextArea1.value += "🔄 Creando carpeta OptiFine...\n";
+                                updateTextareaScroll();
+                                fs.mkdirSync(`${dataDirectory}/.battly/libraries/optifine/OptiFine`, {
+                                    recursive: true
+                                });
+                                logTextArea1.value += "✅ Carpeta OptiFine creada.\n";
+                                progressBar1.value = 30;
+                                updateTextareaScroll();
+                            } else {
+                                logTextArea1.value += "⏩ La carpeta OptiFine ya existe. Saltando...\n";
+                                progressBar1.value = 30;
+                                updateTextareaScroll();
+                            }
+
+                            if (!fs.existsSync(`${dataDirectory}/.battly/libraries/optifine/launchwrapper-of`)) {
+                                logTextArea1.value += "🔄 Creando carpeta launchwrapper-of...\n";
+                                updateTextareaScroll();
+                                fs.mkdirSync(`${dataDirectory}/.battly/libraries/optifine/launchwrapper-of`, {
+                                    recursive: true
+                                });
+                                logTextArea1.value += "✅ Carpeta launchwrapper-of creada.\n";
+                                progressBar1.value = 40;
+                                updateTextareaScroll();
+                            } else {
+                                logTextArea1.value += "⏩ La carpeta launchwrapper-of ya existe. Saltando...\n";
+                                progressBar1.value = 40;
+                                updateTextareaScroll();
+                            }
+
+                            if (!fs.existsSync(`${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.1`)) {
+                                logTextArea1.value += "🔄 Creando carpeta 2.1...\n";
+                                updateTextareaScroll();
+                                fs.mkdirSync(`${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.1`, {
+                                    recursive: true
+                                });
+                                logTextArea1.value += "✅ Carpeta 2.1 creada.\n";
+                                progressBar1.value = 50;
+                                updateTextareaScroll();
+                            } else {
+                                logTextArea1.value += "⏩ La carpeta 2.1 ya existe. Saltando...\n";
+                                progressBar1.value = 50;
+                                updateTextareaScroll();
+                            }
+
+                            if (!fs.existsSync(`${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.2`)) {
+                                logTextArea1.value += "🔄 Creando carpeta 2.2...\n";
+                                updateTextareaScroll();
+                                fs.mkdirSync(`${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.2`, {
+                                    recursive: true
+                                });
+                                logTextArea1.value += "✅ Carpeta 2.2 creada.\n";
+                                progressBar1.value = 60;
+                                updateTextareaScroll();
+                            } else {
+                                logTextArea1.value += "⏩ La carpeta 2.2 ya existe. Saltando...\n";
+                                progressBar1.value = 60;
+                                updateTextareaScroll();
+                            }
+
+                            if (!fs.existsSync(`${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.3`)) {
+                                logTextArea1.value += "🔄 Creando carpeta 2.3...\n";
+                                updateTextareaScroll();
+                                fs.mkdirSync(`${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.3`, {
+                                    recursive: true
+                                });
+                                logTextArea1.value += "✅ Carpeta 2.3 creada.\n";
+                                progressBar1.value = 70;
+                                updateTextareaScroll();
+                            } else {
+                                logTextArea1.value += "⏩ La carpeta 2.3 ya existe. Saltando...\n";
+                                progressBar1.value = 70;
+                                updateTextareaScroll();
+                            }
+
+                            if (!fs.existsSync(`${dataDirectory}/.battly/libraries/optifine/OptiFine/${fileName.replace("-OptiFine", "")}`)) {
+                                logTextArea1.value += "🔄 Creando carpeta " + fileName.replace("-OptiFine", "") + "...\n";
+                                updateTextareaScroll();
+                                fs.mkdirSync(`${dataDirectory}/.battly/libraries/optifine/OptiFine/${fileName.replace("-OptiFine", "")}`, {
+                                    recursive: true
+                                });
+                                logTextArea1.value += "✅ Carpeta " + fileName.replace("-OptiFine", "") + " creada.\n";
+                                progressBar1.value = 80;
+                                updateTextareaScroll();
+                            } else {
+                                logTextArea1.value += "⏩ La carpeta " + fileName.replace("-OptiFine", "") + " ya existe. Saltando...\n";
+                                progressBar1.value = 80;
+                                updateTextareaScroll();
+                            }
+
+                            const libraryJARURL = `https://raw.githubusercontent.com/1ly4s0/battlylauncher-optifine/main/libraries/optifine/OptiFine/${fileName.replace("-OptiFine", "")}/OptiFine-${fileName.replace("-OptiFine", "")}.jar`;
+
+                            logTextArea1.value += "🔄 Descargando archivo JAR de OptiFine...\n";
+                            updateTextareaScroll();
+                            const libraryJARFile = fs.createWriteStream(`${dataDirectory}/.battly/libraries/optifine/OptiFine/${fileName.replace("-OptiFine", "")}/OptiFine-${fileName.replace("-OptiFine", "")}.jar`);
+                            const libraryJARResponse = await downloadFile(libraryJARURL, libraryJARFile);
+                            logTextArea1.value += `✅ Archivo JAR de OptiFine descargado: ${libraryJARResponse.statusCode}\n`;
+                            updateTextareaScroll();
+
+                            /* ahora descargar launchwrapper-of-2.1.jar, launchwrapper-of-2.2.jar y launchwrapper-of-2.3.jar  y ponerlos en sus respectivas carpetas */
+
+                            const wrapperJARURL21 = `https://raw.githubusercontent.com/1ly4s0/battlylauncher-optifine/main/libraries/optifine/launchwrapper-of/2.1/launchwrapper-of-2.1.jar`;
+                            const wrapperJARURL22 = `https://raw.githubusercontent.com/1ly4s0/battlylauncher-optifine/main/libraries/optifine/launchwrapper-of/2.2/launchwrapper-of-2.2.jar`;
+                            const wrapperJARURL23 = `https://raw.githubusercontent.com/1ly4s0/battlylauncher-optifine/main/libraries/optifine/launchwrapper-of/2.3/launchwrapper-of-2.3.jar`;
+
+                            const wrapperJAR21File = fs.createWriteStream(`${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.1/launchwrapper-of-2.1.jar`);
+                            logTextArea1.value += "🔄 Descargando archivo launchwrapper 2.1...\n";
+                            updateTextareaScroll();
+
+                            const wrapperJAR22File = fs.createWriteStream(`${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.2/launchwrapper-of-2.2.jar`);
+                            logTextArea1.value += "🔄 Descargando archivo launchwrapper 2.2...\n";
+                            updateTextareaScroll();
+
+                            const wrapperJAR23File = fs.createWriteStream(`${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.3/launchwrapper-of-2.3.jar`);
+                            logTextArea1.value += "🔄 Descargando archivo launchwrapper 2.3...\n";
+                            updateTextareaScroll();
+
+                            const wrapperJAR21Response = await downloadFile(wrapperJARURL21, wrapperJAR21File);
+                            logTextArea1.value += `✅ Archivo JAR de launchwrapper-of-2.1 descargado: ${wrapperJAR21Response.statusCode}\n`;
+                            progressBar1.value = 85;
+                            updateTextareaScroll();
+
+                            const wrapperJAR22Response = await downloadFile(wrapperJARURL22, wrapperJAR22File);
+                            logTextArea1.value += `✅ Archivo JAR de launchwrapper-of-2.2 descargado: ${wrapperJAR22Response.statusCode}\n`;
+                            progressBar1.value = 90;
+                            updateTextareaScroll();
+
+                            const wrapperJAR23Response = await downloadFile(wrapperJARURL23, wrapperJAR23File);
+                            logTextArea1.value += `✅ Archivo JAR de launchwrapper-of-2.3 descargado: ${wrapperJAR23Response.statusCode}\n`;
+                            progressBar1.value = 95;
+                            updateTextareaScroll();
+                        }
+                      
+                        async function CheckAndDownloadJava() {
+                            if (!fs.existsSync(`${dataDirectory}/.battly/versions/1.20.1`)) {
+                                modalDiv1.remove();
+
+                                let Toast_ = Swal.mixin({
+                                    toast: true,
+                                    position: "top-end",
+                                    showConfirmButton: false,
+                                    timer: 10000,
+                                    timerProgressBar: true,
+                                    didOpen: (toast) => {
+                                        toast.addEventListener("mouseenter", Swal.stopTimer);
+                                        toast.addEventListener("mouseleave", Swal.resumeTimer);
+                                    },
+                                });
+                                Toast_.fire({
+                                    icon: "error",
+                                    title: "Error al descargar la versión.",
+                                    text: "No tienes la versión requerida de Java, para descargarla, descarga la 1.20.1 de vanilla y luego vuelve a intentarlo."
+                                });
+                                return;
+                            }
+                        }
+
+                        const launch = new Client();
+
+                        // Descargar los archivos y esperar
+                        try {
+                            progressText1.innerHTML = "🔄 Descargando archivos...";
+                            logText1.innerHTML = "🔄 Descargando archivos...";
+                            await CheckAndDownloadJava();
+                            await downloadFiles();
+                            await CreateLibrariesDirectory();
+
+                            progressText1.innerHTML = "✅ Descargando archivos... Completado.";
+                            logText1.innerHTML = "🔄 Abriendo OptiFine...";
+                            logTextArea1.innerHTML += `✅ Descarga de archivos completada. Instalando dependencias...`;
+                            progressBar1.value = 100;
+
+                            // Realizar el lanzamiento después de descargar los archivos
+                            let javapath = localStorage.getItem("java-path");
+                            if (!javapath || javapath == null || javapath == undefined) {
+                                launch.launch({
+                                    authorization: account,
+                                    detached: false,
+                                    timeout: 10000,
+                                    root: `${dataDirectory}/.battly`,
+                                    path: `${dataDirectory}/.battly`,
+                                    overrides: {
+                                        detached: false,
+                                        screen: screen,
+                                    },
+                                    downloadFileMultiple: 20,
+                                    version: {
+                                        custom: fileName,
+                                        number: realVersion,
+                                        type: "release"
+
+                                    },
+                                    verify: false,
+                                    ignored: ["loader"],
+                                    memory: {
+                                        min: `${ram.ramMin * 1024}M`,
+                                        max: `${ram.ramMax * 1024}M`,
+                                    },
+                                });
+                            } else {
+                                launch.launch({
+                                    authorization: account,
+                                    detached: false,
+                                    timeout: 10000,
+                                    root: `${dataDirectory}/.battly`,
+                                    path: `${dataDirectory}/.battly`,
+                                    overrides: {
+                                        detached: false,
+                                        screen: screen,
+                                    },
+                                    downloadFileMultiple: 20,
+                                    version: {
+                                        custom: fileName,
+                                        number: realVersion,
+                                        type: "release"
+
+                                    },
+                                    java: true,
+                                    javaPath: javapath,
+                                    verify: false,
+                                    ignored: ["loader"],
+                                    memory: {
+                                        min: `${ram.ramMin * 1024}M`,
+                                        max: `${ram.ramMax * 1024}M`,
+                                    },
+                                });
+                            }
+
+                            launch.on('debug', (e) => {
+                                if (e.includes("Attempting to download assets")) {
+                                    progressText1.innerHTML = "🔄 Descargando archivos...";
+                                    logText1.innerHTML = "🔄 Descargando archivos...";
+                                    progressBar1.value = 0;
+                                }
+
+                                if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                                if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                                if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                                if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                                if (e.includes("Forge patcher exited with code 1")) {
+                                    ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                                    progressBar1.style.display = "none";
+                                    info.style.display = "none";
+                                    playBtn.style.display = "";
+                                }
+
+                                if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                                if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                                if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                                if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+                            });
+
+                            let inicio = false;
+                            launch.on('data', (e) => {
+                                //si sale que está iniciando, eliminar el modaldiv1
+                                if (!inicio) {
+                                    new logger("Minecraft", "#36b030");
+                                    if (e.includes("Setting user") || e.includes("Launching wrapped minecraft")) {
+                                        modalDiv1.remove();
+                                        ipcRenderer.send("new-notification", {
+                                            title: langs.minecraft_started_correctly,
+                                            body: langs.minecraft_started_correctly_body,
+                                        });
+
+                                    
+                                        if (launcherSettings.launcher.close === "close-launcher")
+                                            ipcRenderer.send("main-window-hide")
+
+                                        ipcRenderer.send("main-window-progress-reset");
+
+                                        inicio = true;
+                                    }
+                                }
+                              
+                                if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                                if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                                if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                                if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                                if (e.includes("Forge patcher exited with code 1")) {
+                                    ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                                    progressBar1.style.display = "none";
+                                    info.style.display = "none";
+                                    playBtn.style.display = "";
+                                }
+
+                                if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                                if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                                if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                                if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+                            });
+
+                            let progressShown = false;
+                            launch.on('progress', (e) => {
+                                if (!progressShown) {
+                                    logTextArea1.value += `🔄 Descargando archivos de Minecraft...`;
+                                    progressShown = true;
+                                }
+                                
+                                let progress = (e.task / e.total * 100).toFixed(2);
+                                progressText1.innerHTML = "🔄 Descargando archivos... " + progress + "%";
+                                progressBar1.value = progress
+                            });
+
+                            launch.on('close', (e) => {
+                                //eliminar el modaldiv1
+                                modalDiv1.remove();
+                                    
+                                if (launcherSettings.launcher.close === "close-launcher")
+                                    ipcRenderer.send("main-window-show");
+
+                                ipcRenderer.send('updateStatus', {
+                                    status: 'online',
+                                    details: langs.in_the_menu,
+                                    username: account.name,
+                                })
+                            });
+
+                            //download status
+                            launch.on('download-status', (e) => {
+                                if (e.type == "task") {
+                                    if (e.task == "Downloading") {
+                                        progressText1.innerHTML = "🔄 Descargando archivos... " + e.progress + "%";
+                                        progressBar1.value = e.progress;
+                                    }
+                                }
+                            });
+                        } catch (error) {
+                            console.error('Error durante la descarga:');
+                            console.error(error);
+                        }
+                    }
+
+
+                    modalDiv.remove();
+
+                    // Crear el div modal principal
+                    let modalDiv1 = document.createElement("div");
+                    modalDiv1.classList.add("modal");
+                    modalDiv1.classList.add("is-active");
+
+                    // Crear el fondo del modal
+                    let modalBackground1 = document.createElement("div");
+                    modalBackground1.classList.add("modal-background");
+
+                    // Crear el div del contenido del modal
+                    let modalCard1 = document.createElement("div");
+                    modalCard1.classList.add("modal-card");
+
+                    // Crear el encabezado del modal
+                    let modalHeader1 = document.createElement("header");
+                    modalHeader1.classList.add("modal-card-head");
+
+                    let modalTitle1 = document.createElement("p");
+                    modalTitle1.classList.add("modal-card-title");
+                    modalTitle1.innerText = `${langs.downloading_version}...`;
+
+                    modalHeader1.appendChild(modalTitle1);
+
+                    // Crear la sección del cuerpo del modal
+                    let modalSection1 = document.createElement("section");
+                    modalSection1.classList.add("modal-card-body");
+
+                    let cardDiv1 = document.createElement("div");
+                    cardDiv1.classList.add("card");
+                    let cardContentDiv1 = document.createElement("div");
+                    cardContentDiv1.classList.add("card-content");
+
+                    let contentDiv1 = document.createElement("div");
+                    contentDiv1.classList.add("content");
+
+                    let progressText1 = document.createElement("span");
+                    progressText1.style.fontSize = "15px";
+                    progressText1.innerText = langs.starting_download_can_take;
+
+                    const progressBar1 = document.createElement("progress");
+                    progressBar1.className = "progress is-info";
+                    progressBar1.setAttribute("max", "100");
+                    progressBar1.style.borderRadius = "5px";
+
+                    let logText1 = document.createElement("span");
+                    logText1.style.fontSize = "15px";
+                    logText1.innerText = langs.log;
+
+                    let logTextArea1 = document.createElement("textarea");
+                    logTextArea1.classList.add("textarea");
+                    logTextArea1.classList.add("is-link");
+                    logTextArea1.placeholder = langs.battly_log;
+                    logTextArea1.disabled = true;
+                    logTextArea1.style.overflow = "hidden";
+
+                    contentDiv1.appendChild(progressText1);
+                    contentDiv1.appendChild(document.createElement("br"));
+                    contentDiv1.appendChild(progressBar1);
+                    contentDiv1.appendChild(document.createElement("br"));
+                    contentDiv1.appendChild(logText1);
+                    contentDiv1.appendChild(logTextArea1);
+                    cardContentDiv1.appendChild(contentDiv1);
+
+                    let cardFooterDiv1 = document.createElement("div");
+                    cardFooterDiv1.classList.add("card-footer");
+
+                    let cardFooterItemDiv1 = document.createElement("div");
+                    cardFooterItemDiv1.classList.add("card-footer-item");
+
+                    let footerText1 = document.createElement("p");
+                    footerText1.style.fontSize = "10px";
+                    footerText1.innerHTML = langs.mojang_copyright;
+
+                    cardFooterItemDiv1.appendChild(footerText1);
+                    cardFooterDiv1.appendChild(cardFooterItemDiv1);
+                    cardContentDiv1.appendChild(contentDiv1);
+                    cardDiv1.appendChild(cardContentDiv1);
+
+                    modalSection1.appendChild(cardDiv1);
+
+                    /* <footer class="modal-card-foot">
+      <button class="button is-info" id="guardar-logs-inicio">Guardar Logs</button>
+    </footer>
+*/
+
+                    // Crear el pie del modal
+                    let modalFooter1 = document.createElement("footer");
+                    modalFooter1.classList.add("modal-card-foot");
+
+                    let guardarLogsInicio = document.createElement("button");
+                    guardarLogsInicio.classList.add("button");
+                    guardarLogsInicio.classList.add("is-info");
+                    guardarLogsInicio.id = "guardar-logs-inicio";
+                    guardarLogsInicio.innerText = langs.save_logs;
+
+                    modalFooter1.appendChild(guardarLogsInicio);
+
+                    // Agregar elementos al modal
+                    modalCard1.appendChild(modalHeader1);
+                    modalCard1.appendChild(modalSection1);
+                    modalCard1.appendChild(modalFooter1);
+
+                    modalDiv1.appendChild(modalBackground1);
+                    modalDiv1.appendChild(modalCard1);
+
+                    // Agregar el modal al cuerpo del documento
+                    document.body.appendChild(modalDiv1);
+
+                    function updateTextareaScroll() {
+                        logTextArea1.scrollTop = logTextArea1.scrollHeight; // Hacer que el scrollTop sea igual a la altura del contenido
+                    }
+
+                    guardarLogsInicio.addEventListener("click", () => {
+                        this.Registros();
+                    });
+
+                    let isForgeCheckBox = false;
+                    let isFabricCheckBox = false;
+                    let isQuiltCheckBox = false;
+
+                    let settings_btn = document.getElementById("settings-btn");
+                    let select_versions = document.getElementById("select-version");
+                    let mods_btn = document.getElementById("boton_abrir_mods");
+                    let discord_btn = document.getElementById(
+                        "BotonUnirseServidorDiscord"
+                    );
+
+                    let version_real = version
+                        .replace("-extra", "")
+                        .replace("-forge", "")
+                        .replace("-fabric", "")
+                        .replace("-quilt", "");
+                    
+                    if (versionType === "forge") {
+                        version = version.replace("-forge", "");
+                        isForgeCheckBox = true;
+                        isFabricCheckBox = false;
+                        isQuiltCheckBox = false;
+                    } else if (versionType === "fabric") {
+                        version = version.replace("-fabric", "");
+                        isFabricCheckBox = true;
+                        isForgeCheckBox = false;
+                        isQuiltCheckBox = false;
+                    } else if (versionType === "quilt") {
+                        version = version.replace("-quilt", "");
+                        isQuiltCheckBox = true;
+                        isForgeCheckBox = false;
+                        isFabricCheckBox = false;
+                    }
+
+                    let type;
+                    if (isForgeCheckBox == true) {
+                        type = "forge";
+                        mcModPack = "forge";
+                    } else if (isFabricCheckBox == true) {
+                        type = "fabric";
+                        mcModPack = "fabric";
+                    } else if (isQuiltCheckBox == true) {
+                        type = "quilt";
+                        mcModPack = "quilt";
+                    } else {
+                        type = "vanilla";
+                        mcModPack = "vanilla";
+                    }
+
+                    //hacer un json.parse del archivo de versiones y obtener el dato "assets"
+
+                    //comprobar si existe el archivo de versiones
+
+                    // Si la versión acaba con -extra hacer let assets = JSON.parse(fs.readFileSync(`${dataDirectory}/.battly/versions/${version_real}/${version_real}.json`)).assets;
+                    // si no, ignorar
+                    let assets;
+                    let versionData;
+                    if (version_real === "1.8") {
+                        assets = "1.8";
+                        versionData = {
+                            number: assets,
+                            custom: version_real,
+                            type: "release",
+                        };
+                    } else if (
+                        version.endsWith("-extra") &&
+                        !version.includes("OptiFine") &&
+                        !version.includes("LabyMod")
+                    ) {
+                        assets = JSON.parse(
+                            fs.readFileSync(
+                                `${dataDirectory}/${process.platform == "darwin"
+                                    ? this.config.dataDirectory
+                                    : `.${this.config.dataDirectory}`
+                                }/versions/${version_real}/${version_real}.json`
+                            )
+                        ).assets;
+                        
+                        versionData = {
+                            number: assets,
+                            custom: version_real,
+                            type: "release",
+                        };
+                    } else if (
+                        version.includes("OptiFine") &&
+                        version.endsWith("-extra")
+                    ) {
+                        assets = JSON.parse(
+                            fs.readFileSync(
+                                `${dataDirectory}/${process.platform == "darwin"
+                                    ? this.config.dataDirectory
+                                    : `.${this.config.dataDirectory}`
+                                }/versions/${version_real}/${version_real}.json`
+                            )
+                        ).inheritsFrom;
+                        
+                        versionData = {
+                            number: assets,
+                            custom: version_real,
+                            type: "release",
+                        };
+                    } else if (
+                        version.includes("LabyMod") &&
+                        version.endsWith("-extra")
+                    ) {
+                        assets = JSON.parse(
+                            fs.readFileSync(
+                                `${dataDirectory}/${process.platform == "darwin"
+                                    ? this.config.dataDirectory
+                                    : `.${this.config.dataDirectory}`
+                                }/versions/${version_real}/${version_real}.json`
+                            )
+                        )._minecraftVersion;
+                        
+                        versionData = {
+                            number: version_real,
+                            type: "release",
+                        };
+                    } else if (
+                        versionType === "forge" ||
+                        versionType === "fabric" ||
+                        versionType === "quilt"
+                    ) {
+                        
+                    } else {
+                        versionData = version_real;
+                    }
+
+                    let playBtn = document.getElementById("download-btn");
+                    let info = progressText1;
+
+                    if (Resolution.screen.width == "<auto>") {
+                        screen = false;
+                    } else {
+                        screen = {
+                            width: Resolution.screen.width,
+                            height: Resolution.screen.height,
+                        };
+                    }
+
+
+                    let opts;
+                    if (isForgeCheckBox == true) {
+                        opts = {
+                            url: this.config.game_url === "" || this.config.game_url === undefined ?
+                                `${urlpkg}/files` :
+                                this.config.game_url,
+                            authorization: account,
+                            authenticator: account,
+                            detached: false,
+                            timeout: 10000,
+                            root: `${dataDirectory}/.battly`,
+                            path: `${dataDirectory}/.battly`,
+                            overrides: {
+                                detached: false,
+                                screen: screen,
+                            },
+                            downloadFileMultiple: 20,
+                            //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
+                            version: versionData,
+                            loader: {
+                                type: type,
+                                build: selectForgeBuild.value,
+                                enable: isForgeCheckBox ?
+                                    true :
+                                    isFabricCheckBox ?
+                                        true :
+                                        isQuiltCheckBox ?
+                                            true :
+                                            false,
+                            },
+                            verify: false,
+                            ignored: ["loader", ...this.config.ignored],
+                            java: false,
+                            memory: {
+                                min: `${ram.ramMin * 1024}M`,
+                                max: `${ram.ramMax * 1024}M`,
+                            },
+                        };
+                    } else {
+                        opts = {
+                            url: this.config.game_url === "" || this.config.game_url === undefined ?
+                                `${urlpkg}/files` :
+                                this.config.game_url,
+                            authorization: account,
+                            authenticator: account,
+                            detached: false,
+                            timeout: 10000,
+                            root: `${dataDirectory}/.battly`,
+                            path: `${dataDirectory}/.battly`,
+                            overrides: {
+                                detached: false,
+                                screen: screen,
+                            },
+                            downloadFileMultiple: 20,
+                            //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
+                            version: versionData,
+                            loader: {
+                                type: type,
+                                build: this.BattlyConfig.loader.build,
+                                enable: isForgeCheckBox ?
+                                    true :
+                                    isFabricCheckBox ?
+                                        true :
+                                        isQuiltCheckBox ?
+                                            true :
+                                            false,
+                            },
+                            verify: false,
+                            ignored: ["loader", ...this.config.ignored],
+                            java: false,
+                            memory: {
+                                min: `${ram.ramMin * 1024}M`,
+                                max: `${ram.ramMax * 1024}M`,
+                            },
+                        };
+                    }
+
+                    const launch = new Client();
+                    const launch_core = new Launch();
+
+                    try {
+                        /*
+                                    Si la versión acaba con -forge o -fabric, iniciar launch_core.launch(opts);
+                                    Si no, iniciar launch.launch(opts);
+                                    */
+                        if (version === "1.8") {
+                            await launch.launch(opts);
+                            document.getElementById("carga-de-versiones").style.display = "";
+                        } else if (
+                            version.endsWith("-forge") ||
+                            version.endsWith("-fabric") ||
+                            version.endsWith("-quilt")
+                        ) {
+                            await launch_core.Launch(opts);
+                            document.getElementById("carga-de-versiones").style.display = "";
+                        } else if (version.endsWith("-extra")) {
+                            launch.launch(opts);
+                            document.getElementById("carga-de-versiones").style.display = "";
+                        } else {
+                            await launch_core.Launch(opts);
+                            document.getElementById("carga-de-versiones").style.display = "";
+                        }
+                    } catch (error) {
+                        setTimeout(() => {
+                            playBtn.style.display = "";
+                            info.style.display = "none";
+                            progressBar1.style.display = "none";
+                        }, 3000);
+                        console.log(error);
+                    }
+
+                    launch.on("extract", (extract) => {
+                        consoleOutput_ += `[EXTRACT] ${extract}\n`;
+                        let seMostroInstalando = false;
+                        if (seMostroInstalando) { } else {
+                            logTextArea1.innerHTML = `${langs.extracting_loader}.`;
+                            updateTextareaScroll();
+                            seMostroInstalando = true;
+                        }
+                    });
+
+                    launch.on("debug", (e) => {
+                        consoleOutput_ += `[ERROR] ${JSON.stringify(e, null, 2)}\n`;
+                        if (e.includes("Failed to start due to TypeError")) {
+                            Toast.fire({
+                                icon: "error",
+                                title: "Error al iniciar Minecraft",
+                            });
+                            progressBar1.style.display = "none";
+                            progressBar1.max = 100;
+                            progressBar1.value = 0;
+                            playBtn.style.display = "";
+                            info.style.display = "none";
+                            crasheo = true;
+                        }
+
+                        if (e.includes("Downloaded and extracted natives")) {
+
+                            progressBar1.style.display = "";
+                            progressBar1.max = 100;
+                            progressBar1.value = 0;
+
+                            info.innerHTML = langs.downloading_files;
+                        }
+
+                        if (e.includes("Attempting to download Minecraft version jar")) {
+                            info.innerHTML = langs.downloading_version;
+                        }
+
+                        if (e.includes("Attempting to download assets")) {
+                            info.innerHTML = langs.downloading_assets;
+                        }
+
+                        if (e.includes("Downloaded Minecraft version jar")) {
+                            info.innerHTML = langs.downloading_libraries;
+                        }
+
+                        if (e.includes("Downloaded and extracted natives")) {
+                            info.innerHTML = langs.downloading_natives;
+                        }
+
+                        if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                        if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                        if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                        if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                        if (e.includes("Forge patcher exited with code 1")) {
+                            ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                            progressBar1.style.display = "none";
+                            info.style.display = "none";
+                            playBtn.style.display = "";
+                        }
+
+                        if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                        if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+                    });
+
+                    launch.on("progress", function (e) {
+
+                        let total = e.total;
+                        let current = e.task;
+
+                        let progress = ((current / total) * 100).toFixed(0);
+                        let total_ = 100;
+
+                        ipcRenderer.send("main-window-progress_", {
+                            total_,
+                            progress,
+                        });
+
+                        progressBar1.style.display = "";
+                        progressBar1.max = total;
+                        progressBar1.value = current;
+                    });
+
+                    let crasheo = false;
+
+                    launch.on("estimated", (time) => {
+                        ipcRenderer.send("main-window-progress-reset");
+                        /*
+                                    let hours = Math.floor(time / 3600);
+                                    let minutes = Math.floor((time - hours * 3600) / 60);
+                                    let seconds = Math.floor(time - hours * 3600 - minutes * 60);
+                                    console.log(`${hours}h ${minutes}m ${seconds}s`);*/
+                    });
+
+                    let timeoutId;
+
+                    launch.on("speed", (speed) => {
+                        /*
+                                                    let velocidad = speed / 1067008;
+
+                                                    if (velocidad > 0) {
+                                                        clearTimeout(timeoutId); // cancela el mensaje de alerta si la velocidad no es cero
+                                                    } else {
+                                                        timeoutId = setTimeout(() => {
+                                                            progressBar1.style.display = "none"
+                                                            progressBar1.max = 100;
+                                                            progressBar1.value = 0;
+                                                            playBtn.style.display = ""
+                                                            info.style.display = "none"
+                                                            clearTimeout(timeoutId);
+                                                            const swal  = require('sweetalert');
+                                                            crasheo = true;
+
+                                                            Toast.fire({
+                                                                title: "Error",
+                                                                text: "Error al descargar esta versión. Reinicia el launcher o inténtalo de nuevo más tarde. [ERROR: 2]",
+                                                                icon: "error",
+                                                                button: "Aceptar",
+                                                            }).then((value) => {
+                                                                if(value) {
+                                                                    ipcRenderer.send('restartLauncher')
+                                                                }
+                                                            });
+                                                            
+                                                        }, 10000);
+                                                    }*/
+                    });
+
+                    launch.on("patch", (patch) => {
+                        consoleOutput_ += `[INSTALANDO LOADER] ${patch}\n`;
+                        let seMostroInstalando = false;
+                        if (seMostroInstalando) { } else {
+                            logTextArea1.innerHTML = `${langs.installing_loader}...\n`;
+                            seMostroInstalando = true;
+                        }
+
+                        info.innerHTML = `${langs.installing_loader}...`;
+                    });
+
+                    let inicio = false;
+                    let iniciando = false;
+                    launch.on("data", async (e) => {
+                        new logger("Minecraft", "#36b030");
+                        consoleOutput_ += `[MC] ${e}\n`;
+                        if (launcherSettings.launcher.close === "close-launcher")
+                            ipcRenderer.send("main-window-hide");
+
+                        if (e.includes("Launching with arguments"))
+                            info.innerHTML = `${langs.starting_minecraft}...`;;
+
+                        if (iniciando == false) {
+                            
+                            Toast.fire({
+                                icon: "info",
+                                title: `${langs.starting_minecraft}...`,
+                            });
+                            iniciando = true;
+                        }
+
+                        let serversDat = `${dataDirectory}/.battly/servers.dat`;
+
+                        if (fs.existsSync(serversDat)) {
+                            try {
+                                const serversDatFile = fs.readFileSync(serversDat);
+                                const serversDatData = await NBT.read(serversDatFile);
+                                
+
+                                let servers = this.BattlyConfig.promoted_servers;
+                                
+
+                                let serversArray = [];
+
+                                for (let i = 0; i < servers.length; i++) {
+                                    const newServer = {
+                                        name: servers[i].name,
+                                        ip: servers[i].ip,
+                                        icon: servers[i].icon,
+                                    };
+
+                                    // Verificar si la IP ya existe en el archivo servers.dat
+                                    const ipExists = serversDatData.data.servers.some(server => server.ip === newServer.ip);
+
+                                    if (!ipExists) {
+                                        serversArray.push(newServer);
+                                    }
+                                }
+
+                                
+
+                                // Añadir los nuevos servidores al array existente en serversDatData.data.servers
+                                serversDatData.data.servers = serversArray.concat(serversDatData.data.servers);
+                                const editedServersDat = await NBT.write(serversDatData);
+                                fs.writeFileSync(serversDat, editedServersDat);
+                            } catch (error) {
+                                console.error("Error al procesar el archivo NBT:", error);
+                            }
+                        } else {
+                            try {
+                                let servers = this.BattlyConfig.promoted_servers;
+                                
+
+                                let serversArray = [];
+
+                                for (let i = 0; i < servers.length; i++) {
+                                    const newServer = {
+                                        name: servers[i].name,
+                                        ip: servers[i].ip,
+                                        icon: servers[i].icon,
+                                    };
+                                    serversArray.push(newServer);
+                                }
+
+                                
+
+                                // Crear un nuevo archivo servers.dat con los servidores nuevos
+                                const newData = { servers: serversArray };
+                                const editedServersDat = await NBT.write(newData);
+                                fs.writeFileSync(serversDat, editedServersDat);
+                            } catch (error) {
+                                console.error("Error al crear el nuevo archivo NBT:", error);
+                            }
+                        }
+
+                        if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                        if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                        if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                        if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                        if (e.includes("Forge patcher exited with code 1")) {
+                            ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                            progressBar1.style.display = "none";
+                            info.style.display = "none";
+                            playBtn.style.display = "";
+                        }
+
+                        if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                        if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (
+                            e.includes(`Setting user: ${account.name}`) ||
+                            e.includes("Launching wrapped minecraft")
+                        ) {
+                            if (inicio == false) {
+                                let typeOfVersion;
+                                if (version.endsWith("-forge")) {
+                                    typeOfVersion = "Forge";
+                                } else if (version_real.endsWith("-fabric")) {
+                                    typeOfVersion = "Fabric";
+                                } else if (version_real.endsWith("-quilt")) {
+                                    typeOfVersion = "Quilt";
+                                } else {
+                                    typeOfVersion = "";
+                                }
+                                ipcRenderer.send(
+                                    "new-status-discord-jugando",
+                                    `${langs.playing_in} ${version
+                                        .replace("-forge", "")
+                                        .replace("-fabric", "")
+                                        .replace("-quilt", "")} ${typeOfVersion}`
+                                );
+
+                                this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} ${version_real.replace("-forge", "").replace("-fabric", "").replace("-quilt", "")} ${typeOfVersion}`);
+
+                                modalDiv1.remove();
+                                inicio = true;
+                                info.innerHTML = `${langs.minecraft_started_correctly}.`;
+                                ipcRenderer.send("new-notification", {
+                                    title: langs.minecraft_started_correctly,
+                                    body: langs.minecraft_started_correctly_body,
+                                });
+
+                                ipcRenderer.send("main-window-progress-reset");
+                            }
+                        }
+
+                        if (e.includes("Connecting to")) {
+                            let msj = e.split("Connecting to ")[1].split("...")[0];
+                            info.innerHTML = `Conectando a ${msj}`;
+                        }
+                    });
+
+                    launch.on("close", (code) => {
+                        consoleOutput_ += `---------- [MC] Código de salida: ${code}\n ----------`;
+                        if (launcherSettings.launcher.close === "close-launcher")
+                            ipcRenderer.send("main-window-show");
+
+                        ipcRenderer.send('updateStatus', {
+                            status: 'online',
+                            details: langs.in_the_menu,
+                            username: account.name,
+                        })
+                        info.style.display = "none";
+                        playBtn.style.display = "";
+                        info.innerHTML = `Verificando archivos...`;
+                        new logger("Launcher", "#3e8ed0");
+                        progressBar1.style.display = "none";
+                        console.log("🔧 Minecraft cerrado");
+
+                        ipcRenderer.send("delete-and-new-status-discord");
+
+                        version = null;
+                        versionType = null;
+                        versionData = null;
+                        version_real = null;
+                        assets = null;
+                        type = null;
+                        isForgeCheckBox = false;
+                        isFabricCheckBox = false;
+                        isQuiltCheckBox = false;
+                        document.getElementById("radioVanilla").removeAttribute("checked");
+                        document.getElementById("radioForge").removeAttribute("checked");
+                        document.getElementById("radioFabric").removeAttribute("checked");
+                        document.getElementById("radioQuilt").removeAttribute("checked");
+
+
+
+                    });
+
+                    let seMostroExtrayendo_core = false;
+                    let seMostroInstalando_core = false;
+
+                    launch_core.on("extract", (extract) => {
+                        consoleOutput_ += `[EXTRACT] ${extract}\n`;
+                        if (seMostroExtrayendo_core) { } else {
+                            logTextArea1.innerHTML = `${langs.extracting_loader}.`;
+                            updateTextareaScroll();
+                            seMostroExtrayendo_core = true;
+                        }
+                    });
+
+                    launch_core.on("debug", (e) => {
+                        consoleOutput_ += `[MC] ${JSON.stringify(e, null, 2)}\n`;
+                        if (e.includes("Failed to start due to TypeError")) {
+                            progressBar1.style.display = "none";
+                            progressBar1.max = 100;
+                            progressBar1.value = 0;
+                            playBtn.style.display = "";
+                            info.style.display = "none";
+                            crasheo = true;
+                        }
+
+                        if (e.includes("Downloaded and extracted natives")) {
+                            progressBar1.style.display = "";
+                            progressBar1.max = 100;
+                            progressBar1.value = 0;
+
+                            info.innerHTML = langs.downloading_files;
+                        }
+
+                        if (e.includes("Attempting to download Minecraft version jar")) {
+                            info.innerHTML = langs.downloading_version;
+                        }
+
+                        if (e.includes("Attempting to download assets")) {
+                            info.innerHTML = langs.downloading_assets;
+                        }
+
+                        if (e.includes("Downloaded Minecraft version jar")) {
+                            info.innerHTML = langs.downloading_libraries;
+                        }
+
+                        if (e.includes("Downloaded and extracted natives")) {
+                            info.innerHTML = langs.downloading_natives;
+                        }
+
+                        if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                        if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                        if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                        if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                        if (e.includes("Forge patcher exited with code 1")) {
+                            ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                            progressBar1.style.display = "none";
+                            info.style.display = "none";
+                            playBtn.style.display = "";
+                        }
+
+                        if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                        if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+                    });
+                    launch_core.on("data", async (e) => {
+                        new logger("Minecraft", "#36b030");
+                        consoleOutput_ += `[MC] ${e}\n`;
+                        if (launcherSettings.launcher.close === "close-launcher")
+                            ipcRenderer.send("main-window-hide");
+                        progressBar1.style.display = "none";
+
+                        if (e.includes("Launching with arguments"))
+                            info.innerHTML = `${langs.starting_minecraft}...`;;
+
+                        if (iniciando == false) {
+                            
+                            iniciando = true;
+
+                            let serversDat = `${dataDirectory}/.battly/servers.dat`;
+
+                        if (fs.existsSync(serversDat)) {
+                            try {
+                                const serversDatFile = fs.readFileSync(serversDat);
+                                const serversDatData = await NBT.read(serversDatFile);
+                                
+
+                                let servers = this.BattlyConfig.promoted_servers;
+                                
+
+                                let serversArray = [];
+
+                                for (let i = 0; i < servers.length; i++) {
+                                    const newServer = {
+                                        name: servers[i].name,
+                                        ip: servers[i].ip,
+                                        icon: servers[i].icon,
+                                    };
+
+                                    // Verificar si la IP ya existe en el archivo servers.dat
+                                    const ipExists = serversDatData.data.servers.some(server => server.ip === newServer.ip);
+
+                                    if (!ipExists) {
+                                        serversArray.push(newServer);
+                                    }
+                                }
+
+                                
+
+                                // Añadir los nuevos servidores al array existente en serversDatData.data.servers
+                                serversDatData.data.servers = serversArray.concat(serversDatData.data.servers);
+                                const editedServersDat = await NBT.write(serversDatData);
+                                fs.writeFileSync(serversDat, editedServersDat);
+                            } catch (error) {
+                                console.error("Error al procesar el archivo NBT:", error);
+                            }
+                        } else {
+                            try {
+                                let servers = this.BattlyConfig.promoted_servers;
+                                
+
+                                let serversArray = [];
+
+                                for (let i = 0; i < servers.length; i++) {
+                                    const newServer = {
+                                        name: servers[i].name,
+                                        ip: servers[i].ip,
+                                        icon: servers[i].icon,
+                                    };
+                                    serversArray.push(newServer);
+                                }
+
+                                
+
+                                // Crear un nuevo archivo servers.dat con los servidores nuevos
+                                const newData = { servers: serversArray };
+                                const editedServersDat = await NBT.write(newData);
+                                fs.writeFileSync(serversDat, editedServersDat);
+                            } catch (error) {
+                                console.error("Error al crear el nuevo archivo NBT:", error);
+                            }
+                        }
+
+                            let versiones = this.Versions;
+
+                            const skinsJarPath = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/mods/skins.jar`;
+                            const skinsForgeJarPath = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/mods/skins-forge.jar`;
+                            const skinsForgeNewJarPath = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/mods/skins-forge-new.jar`;
+
+                            let rutaPrincipalSkinsJar = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/battly/mods-internos/skins.jar`;
+                            let rutaPrincipalSkinsForgeJar = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/battly/mods-internos/skins-forge.jar`;
+                            let rutaPrincipalSkinsForgeNewJar = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/battly/mods-internos/skins-forge-new.jar`;
+
+                            let rutaModMultijugadorForge = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/battly/mods-internos/multijugador-forge.jar`;
+                            let rutaModMultijugadorFabric = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/battly/mods-internos/multijugador-fabric.jar`;
+
+                            let rutaModMultijugadorForgeDeMods = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/mods/multijugador-forge.jar`;
+                            let rutaModMultijugadorFabricDeMods = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/mods/multijugador-fabric.jar`;
+
+                            if (fs.existsSync(rutaModMultijugadorFabricDeMods)) {
+                                fs.unlinkSync(rutaModMultijugadorFabricDeMods);
+                            }
+
+                            if (fs.existsSync(rutaModMultijugadorForgeDeMods)) {
+                                fs.unlinkSync(rutaModMultijugadorForgeDeMods);
+                            }
+
+                            fs.unlinkSync(skinsJarPath);
+                            fs.unlinkSync(skinsForgeJarPath);
+                            fs.unlinkSync(skinsForgeNewJarPath);
+
+                            const selectedVersion = version;
+
+                            let selectedVersionWithoutHyphen;
+                            if (selectedVersion.includes("-")) {
+                                selectedVersionWithoutHyphen = selectedVersion.replace(/-[^.]+/, "");
+                                
+                            }
+
+                            const versionInfo = versiones.versions.find(
+                                (v) => v.id === selectedVersionWithoutHyphen
+                            );
+
+                            
+
+                            if (versionInfo) {
+                                function formatVersionNumber(version) {
+                                    const parsedVersion = parseFloat(version);
+                                    if (!isNaN(parsedVersion)) {
+                                        const formattedVersion = parsedVersion.toString();
+                                        return formattedVersion;
+                                    }
+                                    return version; // Si no se puede analizar como número, devuelve la versión original
+                                }
+
+                                // Ejemplo de uso:
+                                const versionNumber = formatVersionNumber(versionInfo.version);
+
+                                let versionesCompatiblesConForgeNormal = [
+                                    "1.16.5",
+                                    "1.16.4",
+                                    "1.16.3",
+                                    "1.16.2",
+                                    "1.16.1",
+                                    "1.16",
+                                    "1.15.2",
+                                    "1.15.1",
+                                    "1.15",
+                                    "1.14.4",
+                                    "1.14.3",
+                                    "1.14.2",
+                                    "1.14.1",
+                                    "1.14",
+                                    "1.13.2",
+                                    "1.13.1",
+                                    "1.13",
+                                    "1.12.2",
+                                    "1.12.1",
+                                    "1.12",
+                                    "1.11.2",
+                                    "1.11.1",
+                                    "1.11",
+                                    "1.10.2",
+                                    "1.10.1",
+                                    "1.10",
+                                    "1.9.4",
+                                    "1.9.3",
+                                    "1.9.2",
+                                    "1.9.1",
+                                    "1.9",
+                                    "1.8.9",
+                                    "1.8.8",
+                                    "1.8.7",
+                                    "1.8.6",
+                                    "1.8.5",
+                                    "1.8.4",
+                                    "1.8.3",
+                                    "1.8.2",
+                                    "1.8.1",
+                                    "1.8",
+                                ];
+
+                                
+
+                                const excludedVersions = [
+                                    1.16, 1.15, 1.14, 1.13, 1.12, 1.11, 1.1, 1.9, 1.8, 1.7, 1.6,
+                                    1.5, 1.4, 1.3,
+                                ];
+                                const includedVersionsForgeNew = [1.17, 1.18, 1.19, 1.2, 1.21];
+                                const versionesConMultijugadorDesactivado = [
+                                    "1.16.4",
+                                    "1.16.5",
+                                ];
+
+                                
+
+                                if (
+                                    versionesConMultijugadorDesactivado.includes(version) &&
+                                    versionType === "forge"
+                                ) {
+                                    fs.copyFileSync(
+                                        rutaModMultijugadorForge,
+                                        `${dataDirectory}/${process.platform == "darwin"
+                                            ? this.config.dataDirectory
+                                            : `.${this.config.dataDirectory}`
+                                        }/mods/multijugador-forge.jar`
+                                    );
+                                } else if (
+                                    versionesConMultijugadorDesactivado.includes(version) &&
+                                    versionType === "fabric"
+                                ) {
+                                    fs.copyFileSync(
+                                        rutaModMultijugadorFabric,
+                                        `${dataDirectory}/${process.platform == "darwin"
+                                            ? this.config.dataDirectory
+                                            : `.${this.config.dataDirectory}`
+                                        }/mods/multijugador-fabric.jar`
+                                    );
+                                }
+
+                                if (
+                                    includedVersionsForgeNew.includes(
+                                        parseFloat(version_real)
+                                    ) &&
+                                    !excludedVersions.includes(parseFloat(version_real)) &&
+                                    versionType == "forge"
+                                ) {
+                                    
+
+                                    fs.copyFileSync(
+                                        rutaPrincipalSkinsForgeNewJar,
+                                        skinsForgeNewJarPath
+                                    );
+
+                                    // Eliminar skins.jar y skins-forge.jar
+                                    if (fs.existsSync(skinsJarPath)) {
+                                        fs.unlinkSync(skinsJarPath);
+                                    }
+                                    if (fs.existsSync(skinsForgeJarPath)) {
+                                        fs.unlinkSync(skinsForgeJarPath);
+                                    }
+                                } else if (
+                                    versionesCompatiblesConForgeNormal.includes(version_real) &&
+                                    versionType == "forge"
+                                ) {
+                                    
+
+                                    fs.copyFileSync(
+                                        rutaPrincipalSkinsForgeJar,
+                                        skinsForgeJarPath
+                                    );
+
+                                    // Eliminar skins.jar y skins-forge-new.jar
+                                    if (fs.existsSync(skinsJarPath)) {
+                                        fs.unlinkSync(skinsJarPath);
+                                    }
+                                    if (fs.existsSync(skinsForgeNewJarPath)) {
+                                        fs.unlinkSync(skinsForgeNewJarPath);
+                                    }
+                                } else if (versionType == "fabric" || versionType == "quilt") {
+                                    
+
+                                    fs.copyFileSync(rutaPrincipalSkinsJar, skinsJarPath);
+                                    // Eliminar skins-forge.jar y skins-forge-new.jar
+                                    if (fs.existsSync(skinsForgeJarPath)) {
+                                        fs.unlinkSync(skinsForgeJarPath);
+                                    }
+                                    if (fs.existsSync(skinsForgeNewJarPath)) {
+                                        fs.unlinkSync(skinsForgeNewJarPath);
+                                    }
+                                }
+                            }
+
+                            let archivoConfigSkins = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/CustomSkinLoader/CustomSkinLoader.json`;
+                            let data = {
+                                version: "14.15",
+                                buildNumber: 8,
+                                loadlist: [{
+                                    name: "BattlyAPI",
+                                    type: "Legacy",
+                                    checkPNG: false,
+                                    skin: "http://api.battlylauncher.com/api/skin/{USERNAME}.png",
+                                    model: "auto",
+                                    cape: "http://api.battlylauncher.com/api/capa/{USERNAME}.png",
+                                },
+                                {
+                                    name: "Mojang",
+                                    type: "MojangAPI",
+                                    apiRoot: "https://api.mojang.com/",
+                                    sessionRoot: "https://sessionserver.mojang.com/",
+                                },
+                                {
+                                    name: "OptiFine",
+                                    type: "Legacy",
+                                    checkPNG: false,
+                                    model: "auto",
+                                    cape: "https://optifine.net/capes/{USERNAME}.png",
+                                },
+                                {
+                                    name: "LabyMod",
+                                    type: "Legacy",
+                                    checkPNG: false,
+                                    model: "auto",
+                                    cape: "https://dl.labymod.net/capes/{STANDARD_UUID}",
+                                },
+                                ],
+                                enableDynamicSkull: true,
+                                enableTransparentSkin: true,
+                                forceIgnoreHttpsCertificate: true,
+                                forceLoadAllTextures: true,
+                                enableCape: true,
+                                threadPoolSize: 8,
+                                enableLogStdOut: false,
+                                cacheExpiry: 30,
+                                forceUpdateSkull: true,
+                                enableLocalProfileCache: false,
+                                enableCacheAutoClean: true,
+                                forceDisableCache: true,
+                            };
+
+                            if (fs.existsSync(path.join(archivoConfigSkins))) {
+                                fs.writeFileSync(archivoConfigSkins, JSON.stringify(data));
+                            } else {
+                                fs.mkdirSync(
+                                    `${dataDirectory}/.battly/CustomSkinLoader`
+                                );
+                                fs.writeFileSync(archivoConfigSkins, JSON.stringify(data));
+                            }
+                        }
+
+                        if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                        if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                        if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                        if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                        if (e.includes("Forge patcher exited with code 1")) {
+                            ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                            progressBar1.style.display = "none";
+                            info.style.display = "none";
+                            playBtn.style.display = "";
+                        }
+
+                        if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                        if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (
+                            e.includes(`Setting user: ${account.name}`) ||
+                            e.includes("Launching wrapped minecraft")
+                        ) {
+                            if (inicio == false) {
+                                let typeOfVersion;
+                                if (version_real.endsWith("-forge")) {
+                                    typeOfVersion = "Forge";
+                                } else if (version_real.endsWith("-fabric")) {
+                                    typeOfVersion = "Fabric";
+                                } else if (version_real.endsWith("-quilt")) {
+                                    typeOfVersion = "Quilt";
+                                } else {
+                                    typeOfVersion = "";
+                                }
+                                ipcRenderer.send(
+                                    "new-status-discord-jugando",
+                                    `${langs.playing_in} ${version_real
+                                        .replace("-forge", "")
+                                        .replace("-fabric", "")
+                                        .replace("-quilt", "")} ${typeOfVersion}`
+                                );
+
+                                
+
+                                this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} ${version_real.replace("-forge", "").replace("-fabric", "").replace("-quilt", "")} ${typeOfVersion}`);
+
+                                modalDiv1.remove();
+                                inicio = true;
+                                info.innerHTML = `${langs.minecraft_started_correctly}.`;
+                                ipcRenderer.send("new-notification", {
+                                    title: langs.minecraft_started_correctly,
+                                    body: langs.minecraft_started_correctly_body,
+                                });
+
+                                ipcRenderer.send("main-window-progress-reset");
+                            }
+                        }
+                    });
+
+                  
+                    let lastProgreso = -1;
+                  
+                    launch_core.on("progress", (progress, size) => {
+                        let progreso = ((progress / size) * 100).toFixed(0);
+                        if (progreso > 100) {
+                            progreso = 100;
+                        }
+
+                        if (progreso != lastProgreso) {
+                            logTextArea1.innerHTML += `\n${langs.downloading_version}... ${progreso}%`;
+                            lastProgreso = progreso;
+                        } else {
+                        }
+
+                        consoleOutput_ += `[DESCARGANDO] ${progress} / ${size}\n`;
+                        updateTextareaScroll();
+                        ipcRenderer.send("main-window-progress", {
+                            progress,
+                            size
+                        });
+                        if (!isNaN(progress)) {
+                            // Solo asignar progressBar1.value si progress es un número
+                            progressBar1.value = progress;
+                        }
+
+                        if (!isNaN(size)) {
+                            // Solo asignar progressBar1.max si size es un número
+                            progressBar1.max = size;
+                        }
+
+                    });
+                    launch_core.on("check", (progress, size) => {
+
+                        let progreso = ((progress / size) * 100).toFixed(0);
+                        if (progreso > 100) {
+                            progreso = 100;
+                        }
+
+                        if (progreso != lastProgreso) {
+                            logTextArea1.innerHTML += `\n${langs.downloading}... ${progreso}%`;
+                            lastProgreso = progreso;
+                            updateTextareaScroll();
+    
+                        } else {
+                        }
+
+                        consoleOutput_ += `[INSTALANDO MC] ${progress} / ${size}\n`;
+                        let seMostroInstalando = false;
+                        if (seMostroInstalando) { } else {
+                            seMostroInstalando = true;
+                        }
+                        progressBar1.style.display = "";
+                        let size_actual = 100;
+                        let progress_actual = ((progress / size) * 100).toFixed(0);
+                        ipcRenderer.send("main-window-progress", {
+                            progress_actual,
+                            size_actual,
+                        });
+                        progressBar1.value = progress;
+                        progressBar1.max = size;
+                    });
+
+                    let estimatedTime = `- ${langs.calculating_time}...`;
+
+                    launch_core.on("estimated", (time) => {
+                        ipcRenderer.send("main-window-progress-reset");
+
+                        if (isNaN(time) || !isFinite(time)) {
+                            estimatedTime = `- ${langs.estimated_time_not_available}`;
+                        } else {
+                            let hours = Math.floor(time / 3600);
+                            let minutes = Math.floor((time - hours * 3600) / 60);
+                            let seconds = Math.floor(time - hours * 3600 - minutes * 60);
+
+                            if (hours > 0) {
+                                estimatedTime = hours > 1 ? `- ${langs.remaining} ${hours}h` : `- ${langs.remaining_two} ${hours}h`;
+                            } else if (minutes > 0) {
+                                estimatedTime = minutes > 1 ? `- ${langs.remaining} ${minutes}m` : `- ${langs.remaining_two} ${minutes}m`;
+                            } else {
+                                estimatedTime = seconds > 1 ? `- ${langs.remaining} ${seconds}s` : `- ${langs.remaining_two} ${seconds}s`;
+                            }
+                        }
+
+                    });
+
+
+                    launch_core.on("speed", (speed) => {
+                        
+                        let velocidad = speed / 1067008;
+                        
+                        
+                        info.innerHTML = `${langs.downloading}... (${(velocidad).toFixed(2)} MB/s) - ${estimatedTime}`;
+                        /*
+                        
+                                                    if (velocidad > 0) {
+                                                        clearTimeout(timeoutId); // cancela el mensaje de alerta si la velocidad no es cero
+                                                    } else {
+                                                        timeoutId = setTimeout(() => {
+                                                            progressBar1.style.display = "none"
+                                                            progressBar1.max = 100;
+                                                            progressBar1.value = 0;
+                                                            playBtn.style.display = ""
+                                                            info.style.display = "none"
+                                                            clearTimeout(timeoutId);
+                                                            const swal  = require('sweetalert');
+                                                            crasheo = true;
+                        
+                                                            Toast.fire({
+                                                                title: "Error",
+                                                                text: "Error al descargar esta versión. Reinicia el launcher o inténtalo de nuevo más tarde. [ERROR: 2]",
+                                                                icon: "error",
+                                                                button: "Aceptar",
+                                                            }).then((value) => {
+                                                                if(value) {
+                                                                    ipcRenderer.send('restartLauncher')
+                                                                }
+                                                            });
+                                                            
+                                                        }, 10000);
+                                                    }*/
+                    });
+
+                    launch_core.on("patch", (patch) => {
+                        
+                        logTextArea1.innerHTML += `\n${langs.extracting_loader}... [${patch}]`;
+                        updateTextareaScroll();
+                        consoleOutput_ += `[INSTAL. LOADER] ${patch}\n`;
+                    });
+
+                    launch_core.on("data", async (e) => {
+                        new logger("Minecraft", "#36b030");
+                        consoleOutput_ += `[MC] ${e}\n`;
+                        if (launcherSettings.launcher.close === "close-launcher")
+                            ipcRenderer.send("main-window-hide");
+                        progressBar1.style.display = "none";
+
+                        if (e.includes("Launching with arguments"))
+                            info.innerHTML = `${langs.starting_minecraft}...`;;
+
+                        if (iniciando == false) {
+                            
+                            Toast.fire({
+                                icon: "info",
+                                title: `${langs.starting_minecraft}...`,
+                            });
+                            iniciando = true;
+
+                            let serversDat = `${dataDirectory}/.battly/servers.dat`;
+
+                        if (fs.existsSync(serversDat)) {
+                            try {
+                                const serversDatFile = fs.readFileSync(serversDat);
+                                const serversDatData = await NBT.read(serversDatFile);
+                                
+
+                                let servers = this.BattlyConfig.promoted_servers;
+                                
+
+                                let serversArray = [];
+
+                                for (let i = 0; i < servers.length; i++) {
+                                    const newServer = {
+                                        name: servers[i].name,
+                                        ip: servers[i].ip,
+                                        icon: servers[i].icon,
+                                    };
+
+                                    // Verificar si la IP ya existe en el archivo servers.dat
+                                    const ipExists = serversDatData.data.servers.some(server => server.ip === newServer.ip);
+
+                                    if (!ipExists) {
+                                        serversArray.push(newServer);
+                                    }
+                                }
+
+                                
+
+                                // Añadir los nuevos servidores al array existente en serversDatData.data.servers
+                                serversDatData.data.servers = serversArray.concat(serversDatData.data.servers);
+                                const editedServersDat = await NBT.write(serversDatData);
+                                fs.writeFileSync(serversDat, editedServersDat);
+                            } catch (error) {
+                                console.error("Error al procesar el archivo NBT:", error);
+                            }
+                        } else {
+                            try {
+                                let servers = this.BattlyConfig.promoted_servers;
+                                
+
+                                let serversArray = [];
+
+                                for (let i = 0; i < servers.length; i++) {
+                                    const newServer = {
+                                        name: servers[i].name,
+                                        ip: servers[i].ip,
+                                        icon: servers[i].icon,
+                                    };
+                                    serversArray.push(newServer);
+                                }
+
+                                
+
+                                // Crear un nuevo archivo servers.dat con los servidores nuevos
+                                const newData = { servers: serversArray };
+                                const editedServersDat = await NBT.write(newData);
+                                fs.writeFileSync(serversDat, editedServersDat);
+                            } catch (error) {
+                                console.error("Error al crear el nuevo archivo NBT:", error);
+                            }
+                        }
+
+                            let versiones = this.Versions;
+
+                            const skinsJarPath = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/mods/skins.jar`;
+                            const skinsForgeJarPath = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/mods/skins-forge.jar`;
+                            const skinsForgeNewJarPath = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/mods/skins-forge-new.jar`;
+
+                            let rutaPrincipalSkinsJar = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/battly/mods-internos/skins.jar`;
+                            let rutaPrincipalSkinsForgeJar = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/battly/mods-internos/skins-forge.jar`;
+                            let rutaPrincipalSkinsForgeNewJar = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/battly/mods-internos/skins-forge-new.jar`;
+
+                            let rutaModMultijugadorForge = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/battly/mods-internos/multijugador-forge.jar`;
+                            let rutaModMultijugadorFabric = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/battly/mods-internos/multijugador-fabric.jar`;
+
+                            let rutaModMultijugadorForgeDeMods = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/mods/multijugador-forge.jar`;
+                            let rutaModMultijugadorFabricDeMods = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/mods/multijugador-fabric.jar`;
+
+                            if (fs.existsSync(rutaModMultijugadorFabricDeMods)) {
+                                fs.unlinkSync(rutaModMultijugadorFabricDeMods);
+                            }
+
+                            if (fs.existsSync(rutaModMultijugadorForgeDeMods)) {
+                                fs.unlinkSync(rutaModMultijugadorForgeDeMods);
+                            }
+
+                            fs.unlinkSync(skinsJarPath);
+                            fs.unlinkSync(skinsForgeJarPath);
+                            fs.unlinkSync(skinsForgeNewJarPath);
+
+                            const selectedVersion = version;
+
+                            let selectedVersionWithoutHyphen;
+                            if (selectedVersion.includes("-")) {
+                                selectedVersionWithoutHyphen = selectedVersion.replace(/-[^.]+/, "");
+                                
+                            }
+
+                            const versionInfo = versiones.versions.find(
+                                (v) => v.id === selectedVersionWithoutHyphen
+                            );
+
+                            if (versionInfo) {
+                                function formatVersionNumber(version) {
+                                    const parsedVersion = parseFloat(version);
+                                    if (!isNaN(parsedVersion)) {
+                                        const formattedVersion = parsedVersion.toString();
+                                        return formattedVersion;
+                                    }
+                                    return version; // Si no se puede analizar como número, devuelve la versión original
+                                }
+
+                                // Ejemplo de uso:
+                                const versionNumber = formatVersionNumber(versionInfo.version);
+
+                                
+
+                                let versionesCompatiblesConForgeNormal = [
+                                    "1.16.5",
+                                    "1.16.4",
+                                    "1.16.3",
+                                    "1.16.2",
+                                    "1.16.1",
+                                    "1.16",
+                                    "1.15.2",
+                                    "1.15.1",
+                                    "1.15",
+                                    "1.14.4",
+                                    "1.14.3",
+                                    "1.14.2",
+                                    "1.14.1",
+                                    "1.14",
+                                    "1.13.2",
+                                    "1.13.1",
+                                    "1.13",
+                                    "1.12.2",
+                                    "1.12.1",
+                                    "1.12",
+                                    "1.11.2",
+                                    "1.11.1",
+                                    "1.11",
+                                    "1.10.2",
+                                    "1.10.1",
+                                    "1.10",
+                                    "1.9.4",
+                                    "1.9.3",
+                                    "1.9.2",
+                                    "1.9.1",
+                                    "1.9",
+                                    "1.8.9",
+                                    "1.8.8",
+                                    "1.8.7",
+                                    "1.8.6",
+                                    "1.8.5",
+                                    "1.8.4",
+                                    "1.8.3",
+                                    "1.8.2",
+                                    "1.8.1",
+                                    "1.8",
+                                ];
+
+                                
+
+                                const excludedVersions = [
+                                    1.16, 1.15, 1.14, 1.13, 1.12, 1.11, 1.1, 1.9, 1.8, 1.7, 1.6,
+                                    1.5, 1.4, 1.3,
+                                ];
+                                const includedVersionsForgeNew = [1.17, 1.18, 1.19, 1.2, 1.21];
+                                const versionesConMultijugadorDesactivado = [
+                                    "1.16.4",
+                                    "1.16.5",
+                                ];
+
+                                
+
+                                if (
+                                    versionesConMultijugadorDesactivado.includes(version) &&
+                                    versionType === "forge"
+                                ) {
+                                    fs.copyFileSync(
+                                        rutaModMultijugadorForge,
+                                        `${dataDirectory}/${process.platform == "darwin"
+                                            ? this.config.dataDirectory
+                                            : `.${this.config.dataDirectory}`
+                                        }/mods/multijugador-forge.jar`
+                                    );
+                                } else if (
+                                    versionesConMultijugadorDesactivado.includes(version) &&
+                                    versionType === "fabric"
+                                ) {
+                                    fs.copyFileSync(
+                                        rutaModMultijugadorFabric,
+                                        `${dataDirectory}/${process.platform == "darwin"
+                                            ? this.config.dataDirectory
+                                            : `.${this.config.dataDirectory}`
+                                        }/mods/multijugador-fabric.jar`
+                                    );
+                                }
+
+                                if (
+                                    includedVersionsForgeNew.includes(
+                                        parseFloat(version_real)
+                                    ) &&
+                                    !excludedVersions.includes(parseFloat(version_real)) &&
+                                    versionType == "forge"
+                                ) {
+                                    
+
+                                    fs.copyFileSync(
+                                        rutaPrincipalSkinsForgeNewJar,
+                                        skinsForgeNewJarPath
+                                    );
+
+                                    // Eliminar skins.jar y skins-forge.jar
+                                    if (fs.existsSync(skinsJarPath)) {
+                                        fs.unlinkSync(skinsJarPath);
+                                    }
+                                    if (fs.existsSync(skinsForgeJarPath)) {
+                                        fs.unlinkSync(skinsForgeJarPath);
+                                    }
+                                } else if (
+                                    versionesCompatiblesConForgeNormal.includes(version_real) &&
+                                    versionType == "forge"
+                                ) {
+                                    
+
+                                    fs.copyFileSync(
+                                        rutaPrincipalSkinsForgeJar,
+                                        skinsForgeJarPath
+                                    );
+
+                                    // Eliminar skins.jar y skins-forge-new.jar
+                                    if (fs.existsSync(skinsJarPath)) {
+                                        fs.unlinkSync(skinsJarPath);
+                                    }
+                                    if (fs.existsSync(skinsForgeNewJarPath)) {
+                                        fs.unlinkSync(skinsForgeNewJarPath);
+                                    }
+                                } else if (versionType == "fabric" || versionType == "quilt") {
+                                    
+
+                                    fs.copyFileSync(rutaPrincipalSkinsJar, skinsJarPath);
+                                    // Eliminar skins-forge.jar y skins-forge-new.jar
+                                    if (fs.existsSync(skinsForgeJarPath)) {
+                                        fs.unlinkSync(skinsForgeJarPath);
+                                    }
+                                    if (fs.existsSync(skinsForgeNewJarPath)) {
+                                        fs.unlinkSync(skinsForgeNewJarPath);
+                                    }
+                                }
+                            }
+
+                            let archivoConfigSkins = `${dataDirectory}/${process.platform == "darwin"
+                                ? this.config.dataDirectory
+                                : `.${this.config.dataDirectory}`
+                                }/CustomSkinLoader/CustomSkinLoader.json`;
+                            let data = {
+                                version: "14.15",
+                                buildNumber: 8,
+                                loadlist: [{
+                                    name: "BattlyAPI",
+                                    type: "Legacy",
+                                    checkPNG: false,
+                                    skin: "http://api.battlylauncher.com/api/skin/{USERNAME}.png",
+                                    model: "auto",
+                                    cape: "http://api.battlylauncher.com/api/capa/{USERNAME}.png",
+                                },
+                                {
+                                    name: "Mojang",
+                                    type: "MojangAPI",
+                                    apiRoot: "https://api.mojang.com/",
+                                    sessionRoot: "https://sessionserver.mojang.com/",
+                                },
+                                {
+                                    name: "OptiFine",
+                                    type: "Legacy",
+                                    checkPNG: false,
+                                    model: "auto",
+                                    cape: "https://optifine.net/capes/{USERNAME}.png",
+                                },
+                                {
+                                    name: "LabyMod",
+                                    type: "Legacy",
+                                    checkPNG: false,
+                                    model: "auto",
+                                    cape: "https://dl.labymod.net/capes/{STANDARD_UUID}",
+                                },
+                                ],
+                                enableDynamicSkull: true,
+                                enableTransparentSkin: true,
+                                forceIgnoreHttpsCertificate: true,
+                                forceLoadAllTextures: true,
+                                enableCape: true,
+                                threadPoolSize: 8,
+                                enableLogStdOut: false,
+                                cacheExpiry: 30,
+                                forceUpdateSkull: true,
+                                enableLocalProfileCache: false,
+                                enableCacheAutoClean: true,
+                                forceDisableCache: true,
+                            };
+
+                            if (fs.existsSync(path.join(archivoConfigSkins))) {
+                                fs.writeFileSync(archivoConfigSkins, JSON.stringify(data));
+                            } else {
+                                fs.mkdirSync(
+                                    `${dataDirectory}/.battly/CustomSkinLoader`
+                                );
+                                fs.writeFileSync(archivoConfigSkins, JSON.stringify(data));
+                            }
+                        }
+
+                        if (e.includes("Failed to start the minecraft server")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+                        if (e.includes('Exception in thread "main" ')) return ShowPanelError(`${langs.error_detected_two} \nError:\n${e}`);
+
+                        if (e.includes("There is insufficient memory for the Java Runtime Environment to continue.")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+                        if (e.includes("Could not reserve enough space for object heap")) return ShowPanelError(`${langs.error_detected_three} \nError:\n${e}`);
+
+                        if (e.includes("Forge patcher exited with code 1")) {
+                            ShowPanelError(`${langs.error_detected_four} \nError:\n${e}`);
+                            progressBar1.style.display = "none";
+                            info.style.display = "none";
+                            playBtn.style.display = "";
+                        }
+
+                        if (e.includes("Unable to launch")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (e.includes("Minecraft Crash Report") && !e.includes("THIS IS NOT A ERROR")) return ShowPanelError(`${langs.error_detected_one} \nError:\n${e}`);
+
+                        if (e.includes("java.lang.ClassCastException")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (e.includes("Minecraft has crashed!")) return ShowPanelError(`${langs.error_detected_five} \nError:\n${e}`);
+
+                        if (
+                            e.includes(`Setting user: ${account.name}`) ||
+                            e.includes("Launching wrapped minecraft")
+                        ) {
+                            if (inicio == false) {
+                                let typeOfVersion;
+                                if (version.endsWith("-forge")) {
+                                    typeOfVersion = "Forge";
+                                } else if (version.endsWith("-fabric")) {
+                                    typeOfVersion = "Fabric";
+                                } else if (version.endsWith("-quilt")) {
+                                    typeOfVersion = "Quilt";
+                                } else {
+                                    typeOfVersion = "";
+                                }
+                                ipcRenderer.send(
+                                    "new-status-discord-jugando",
+                                    `${langs.playing_in} ${version
+                                        .replace("-forge", "")
+                                        .replace("-fabric", "")
+                                        .replace("-quilt", "")} ${typeOfVersion}`
+                                );
+
+                                
+
+                                this.UpdateStatus(account.name, 'ausente', `${langs.playing_in} ${version_real.replace("-forge", "").replace("-fabric", "").replace("-quilt", "")} ${typeOfVersion}`);
+                                modalDiv1.remove();
+                                inicio = true;
+                                info.innerHTML = `${langs.minecraft_started_correctly}.`;
+                                ipcRenderer.send("new-notification", {
+                                    title: langs.minecraft_started_correctly,
+                                    body: langs.minecraft_started_correctly_body,
+                                });
+
+                                ipcRenderer.send("main-window-progress-reset");
+                            }
+                        }
+
+                        if (e.includes("Connecting to")) {
+                            let msj = e.split("Connecting to ")[1].split("...")[0];
+                            info.innerHTML = `Conectando a ${msj}`;
+                        }
+                    });
+
+                    launch_core.on("close", (code) => {
+                        consoleOutput_ += `---------- [MC] Código de salida: ${code}\n ----------`;
+                        modalDiv1.remove();
+                        if (launcherSettings.launcher.close === "close-launcher")
+                            ipcRenderer.send("main-window-show");
+
+                        ipcRenderer.send('updateStatus', {
+                            status: 'online',
+                            details: langs.in_the_menu,
+                            username: account.name,
+                        })
+                        progressBar1.style.display = "none";
+                        info.style.display = "none";
+                        playBtn.style.display = "";
+                        info.innerHTML = `Verificando archivos...`;
+                        new logger("Launcher", "#3e8ed0");
+                        console.log("🔧 Minecraft cerrado");
+
+                        progressBar1.style.display = "none";
+                        ipcRenderer.send("delete-and-new-status-discord");
+
+                        version = null;
+                        versionType = null;
+                        versionData = null;
+                        version_real = null;
+                        assets = null;
+                        type = null;
+                        isForgeCheckBox = false;
+                        isFabricCheckBox = false;
+                        isQuiltCheckBox = false;
+                        document.getElementById("radioVanilla").removeAttribute("checked");
+                        document.getElementById("radioForge").removeAttribute("checked");
+                        document.getElementById("radioFabric").removeAttribute("checked");
+                        document.getElementById("radioQuilt").removeAttribute("checked");
+
+                    });
+
+                    launch_core.on("error", (err) => {
+                        consoleOutput_ += `[ERROR] ${JSON.stringify(err, null, 2)}\n`;
+                    });
+                });
+            });
+    }
+
+    async initStatusServer() {
+        let APIServerData = document.getElementById("Battly_API_Desc");
+        let WEBServerData = document.getElementById("Battly_WEB_Desc");
+        let APIServerStatus = document.getElementById("Battly_API_Estado");
+        let WEBServerStatus = document.getElementById("Battly_WEB_Estado");
+        let miembrosEnLinea = document.getElementById("Miembros_Online");
+
+        let APIServer = "https://api.battlylauncher.com";
+        let WEBServer = "https://battlylauncher.com";
+        let APIMembers = `${APIServer}/battlylauncher/usuarios_online`;
+
+        const https = require("https");
+        const httpsAgent = new https.Agent({
+            rejectUnauthorized: false,
+        });
+
+        const axios = require("axios");
+        await axios
+            .get(APIServer, {
+                httpsAgent,
+            })
+            .then((res) => {
+                if (res.status === 200) {
+                    APIServerData.innerHTML = `<span class="green">${langs.operative}</span>`;
+                    APIServerStatus.className = "online";
+                } else {
+                    APIServerData.innerHTML = `<span class="red">${langs.no_connected}</span>`;
+                    APIServerStatus.className = "online off";
+                }
+            })
+            .catch((err) => {
+                APIServerData.innerHTML = `<span class="red">${langs.no_connected}</span>`;
+                APIServerStatus.className = "online off";
+            });
+
+        await axios
+            .get(WEBServer, {
+                httpsAgent,
+            })
+            .then((res) => {
+                if (res.status === 200) {
+                    WEBServerData.innerHTML = `<span class="green">${langs.operative}</span>`;
+                    WEBServerStatus.className = "online";
+                } else {
+                    WEBServerData.innerHTML = `<span class="red">${langs.no_connected}</span>`;
+                    WEBServerStatus.className = "online off";
+                }
+            })
+            .catch((err) => {
+                WEBServerData.innerHTML = `<span class="red">${langs.no_connected}</span>`;
+                WEBServerStatus.className = "online off";
+            });
+
+        await axios
+            .get(APIMembers, {
+                httpsAgent,
+            })
+            .then((res) => {
+                if (res.status === 200) {
+                    miembrosEnLinea.innerHTML = `${res.data.usuarios} ${langs.users_online}`
+                }
+            })
+            .catch((err) => {
+                miembrosEnLinea.innerHTML = "0";
+            });
+    }
+
+    initBtn() {
+        document.getElementById("settings-btn").addEventListener("click", () => {
+            changePanel("settings");
+        });
+    }
+
+    async getdate(e) {
+        let date = new Date(e);
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1;
+        let day = date.getDate();
+        let allMonth = [
+            langs.january,
+            langs.february,
+            langs.march,
+            langs.april,
+            langs.may,
+            langs.june,
+            langs.july,
+            langs.august,
+            langs.september,
+            langs.october,
+            langs.november,
+            langs.december,
+        ];
+        return {
+            year: year,
+            month: allMonth[month - 1],
+            day: day,
+        };
+    }
+}
+export default Home;

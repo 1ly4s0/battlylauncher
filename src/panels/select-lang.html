@@ -38,7 +38,7 @@
                 <img src="../assets/images/flags/it.png" alt="" style="margin-right: 5px;">Italiano
             </span>
         </button>
-        <button class="button is-info is-outlined is-medium" value="jp">
+        <button class="button is-info is-outlined is-medium" value="ja">
             <span style="display: flex; align-items: center;">
                 <img src="../assets/images/flags/jp.png" alt="" style="margin-right: 5px;">Japanese
             </span>
@@ -57,7 +57,7 @@
 
     <video id="video" autoplay muted>
         <source
-            src="../assets/videos/video-select-lang.mp4"
+            src="../assets/videos/video-select-lang-2.mp4"
             type="video/mp4">
     </video>
 
@@ -106,17 +106,9 @@
 </body>
 <script>
     const { ipcRenderer } = require('electron');
-    //document.querySelector('.button-divs').style.display = 'flex';
-    //cuando acabe el vídeo, reproducir el video-select-lang-2.mp4
-    document.getElementById('video').addEventListener('ended', function () {
-        this.style.width = '100%';
-        this.style.height = '100%';
-        this.src = '../assets/videos/video-select-lang-2.mp4';
-        this.play();
         setTimeout(() => {
             document.querySelector('.button-divs').style.display = 'flex';
         }, 2000);
-    }, false);
 
     //obtener todos los botones y añadirles un evento click, dependiendo del idioma, hacer un ipcRenderer.send('change-lang', 'lang')
     const buttons = document.querySelectorAll('.button');
