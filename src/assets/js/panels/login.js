@@ -9,12 +9,14 @@ import { database, changePanel, addAccount, accountSelect } from '../utils.js';
 const { ipcRenderer } = require('electron');
 import { Lang } from "../utils/lang.js";
 
+let lang;
+
 class Login {
     static id = "login";
     async init(config) {
         this.config = config
         this.database = await new database().init();
-        this.lang = await new Lang().GetLang();
+        lang = await new Lang().GetLang();
         this.getOffline()
         this.getOnline()
         this.OpenWeb()
@@ -52,16 +54,16 @@ class Login {
 
         microsoftBtn.addEventListener("click", () => {
             document.querySelector(".preload-content").style.display = "";
-            document.getElementById("loading-text").innerHTML = this.lang.a_microsoft_panel_opened;
+            document.getElementById("loading-text").innerHTML = lang.a_microsoft_panel_opened;
             microsoftBtn.disabled = true;
             mojangBtn.disabled = true;
             cancelBtn.disabled = true;
             ipcRenderer.invoke('Microsoft-window', this.config.client_id).then(account_connect => {
                 document.querySelector(".preload-content").style.display = "";
-                document.getElementById("loading-text").innerHTML = this.lang.logging_in;
+                document.getElementById("loading-text").innerHTML = lang.logging_in;
                 
                 if (!account_connect) {
-                    document.getElementById("loading-text").innerHTML = this.lang.error_logging_in;
+                    document.getElementById("loading-text").innerHTML = lang.error_logging_in;
                     setTimeout(() => {
                         document.querySelector(".preload-content").style.display = "none";
                         changePanel("settings");
@@ -115,7 +117,7 @@ class Login {
                 mojangBtn.disabled = false;
                 cancelBtn.disabled = false;
 
-                document.getElementById("loading-text").innerHTML = this.lang.error_logging_in;
+                document.getElementById("loading-text").innerHTML = lang.error_logging_in;
                 setTimeout(() => {
                     document.querySelector(".preload-content").style.display = "none";
                     changePanel("settings");
@@ -150,11 +152,11 @@ class Login {
             mailInput.disabled = true;
             passwordInput.disabled = true;
             infoLoginPanel.classList.add("is-active");
-            infoLogin.innerHTML = this.lang.logging_in;
+            infoLogin.innerHTML = lang.logging_in;
 
 
             if (mailInput.value == "") {
-                infoLogin.innerHTML = this.lang.set_your_username;
+                infoLogin.innerHTML = lang.set_your_username;
                 setTimeout(() => {
                     infoLoginPanel.classList.remove("is-active");
                 }, 3000);
@@ -166,7 +168,7 @@ class Login {
             }
 
             if (mailInput.value.length < 3) {
-                infoLogin.innerHTML = this.lang.threecharacters_username;
+                infoLogin.innerHTML = lang.threecharacters_username;
                 setTimeout(() => {
                     infoLoginPanel.classList.remove("is-active");
                 }, 3000);
@@ -178,7 +180,7 @@ class Login {
             };
 
             if (passwordInput.value == "") {
-                infoLogin.innerHTML = this.lang.set_your_password;
+                infoLogin.innerHTML = lang.set_your_password;
                 setTimeout(() => {
                     infoLoginPanel.classList.remove("is-active");
                 }, 3000);
@@ -190,7 +192,7 @@ class Login {
             }
 
             if (passwordInput.value.length < 3) {
-                infoLogin.innerHTML = this.lang.threecharacters_password;
+                infoLogin.innerHTML = lang.threecharacters_password;
                 setTimeout(() => {
                     infoLoginPanel.classList.remove("is-active");
                 }, 3000);
@@ -258,7 +260,7 @@ class Login {
             try {
                 let account = accounts.find(account => account.value.uuid == uuid_);
                 if (account) {
-                    infoLogin.innerHTML = this.lang.account_already_exists;
+                    infoLogin.innerHTML = lang.account_already_exists;
                     setTimeout(() => {
                         infoLoginPanel.classList.remove("is-active");
                     }, 3000);
@@ -292,7 +294,7 @@ class Login {
                 passwordInput.disabled = false;
                 mailInput.value = "";
                 passwordInput.value = "";
-                infoLogin.innerHTML = this.lang.username_or_password_incorrect;
+                infoLogin.innerHTML = lang.username_or_password_incorrect;
                 setTimeout(() => {
                     infoLoginPanel.classList.remove("is-active");
                 }, 3000);
@@ -364,12 +366,12 @@ class Login {
                 blockWelcome.innerHTML = `
                     <div class="news-header">
                         <div class="header-text">
-                            <div class="title_">${this.lang.welcome_again_to_battly}, ${account.name}</div>
+                            <div class="title_">${lang.welcome_again_to_battly}, ${account.name}</div>
                         </div>
                     </div>
                     <div class="news-content">
                         <div class="bbWrapper">
-                            <p>${this.lang.we_hope_you_enjoy}</p>
+                            <p>${lang.we_hope_you_enjoy}</p>
                         </div>
                     </div>`;
                 welcome.prepend(blockWelcome);

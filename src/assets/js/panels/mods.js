@@ -26,7 +26,7 @@ const Toast = Swal.mixin({
         toast.addEventListener('mouseleave', Swal.resumeTimer)
     }
 })
-
+let lang;
 import { Lang } from "../utils/lang.js";
 
 class Mods {
@@ -36,7 +36,7 @@ class Mods {
     async init(config) {
         this.config = config
         this.database = await new database().init();
-        this.lang = await new Lang().GetLang();
+        lang = await new Lang().GetLang();
         this.Inicio();
         this.BuscarMods();
         this.CheckIfIsTheLatestScroll();
@@ -71,7 +71,7 @@ class Mods {
             // Crear el elemento p con la clase "modal-card-title" y añadirlo como hijo de headerDiv
             const titleP = document.createElement("p");
             titleP.className = "modal-card-title";
-            titleP.textContent = this.lang.install_modpack_text;
+            titleP.textContent = lang.install_modpack_text;
             headerDiv.appendChild(titleP);
 
             // Crear el botón para cerrar el modal y añadirlo como hijo de headerDiv
@@ -87,7 +87,7 @@ class Mods {
 
             // Crear el elemento p con el texto y añadirlo como hijo de bodySection
             const textP = document.createElement("p");
-            textP.textContent = this.lang.compatible_with_curseforge_or_modrinth
+            textP.textContent = lang.compatible_with_curseforge_or_modrinth
             bodySection.appendChild(textP);
 
             // Crear el elemento div con las clases "file is-small is-boxed has-name" y estilos, y añadirlo como hijo de bodySection
@@ -127,7 +127,7 @@ class Mods {
             // Crear el elemento span con la clase "file-label" y añadirlo como hijo de fileCtaSpan
             const fileLabelSpan = document.createElement("span");
             fileLabelSpan.className = "file-label";
-            fileLabelSpan.textContent = this.lang.select_a_file;
+            fileLabelSpan.textContent = lang.select_a_file;
             fileCtaSpan.appendChild(fileLabelSpan);
 
             // Crear el elemento span con la clase "file-name" y estilos, y añadirlo como hijo de fileLabel
@@ -145,13 +145,13 @@ class Mods {
             // Crear el botón "Instalar" y añadirlo como hijo de footerDiv
             const installButton = document.createElement("button");
             installButton.className = "button is-info";
-            installButton.textContent = this.lang.install;
+            installButton.textContent = lang.install;
             footerDiv.appendChild(installButton);
 
             // Crear el botón "Cancelar" y añadirlo como hijo de footerDiv
             const cancelButton = document.createElement("button");
             cancelButton.className = "button";
-            cancelButton.textContent = this.lang.cancel;
+            cancelButton.textContent = lang.cancel;
             footerDiv.appendChild(cancelButton);
 
             // Agregar modalDiv al documento como último hijo del body
@@ -180,7 +180,7 @@ class Mods {
                 if (fileInput.files.length == 0) {
                     Toast.fire({
                         icon: 'error',
-                        title: this.lang.you_didnt_selected_any_file
+                        title: lang.you_didnt_selected_any_file
                     })
                 } else {
 
@@ -204,7 +204,7 @@ class Mods {
                     */
 
                     const textP2 = document.createElement("p");
-                    textP2.innerHTML = this.lang.installing_modpack_can_take;
+                    textP2.innerHTML = lang.installing_modpack_can_take;
                     bodySection2.appendChild(textP2);
 
                     const progress = document.createElement("progress");
@@ -235,7 +235,7 @@ class Mods {
                     async function descargarModModrinth(archivo, randomString) {
 
                         let name = archivo.name;
-                        let description = archivo.summary ? archivo.summary : this.lang.no_description;
+                        let description = archivo.summary ? archivo.summary : lang.no_description;
                         let version = archivo.dependencies.minecraft;
                         let loader;
                         let loaderVersion;
@@ -329,13 +329,13 @@ class Mods {
                                         totalFilesDownloaded++;
                                         progress.value = totalFilesDownloaded;
 
-                                        textP2.innerHTML = `${this.lang.installing_modpack_can_take}<br><br>${this.lang.installing_file} ${path} (${totalFilesDownloaded} / ${totalFiles})`;
+                                        textP2.innerHTML = `${lang.installing_modpack_can_take}<br><br>${lang.installing_file} ${path} (${totalFilesDownloaded} / ${totalFiles})`;
                                         if (totalFilesDownloaded == totalFiles) {
                                             modalDiv.remove();
 
                                             ipcRenderer.send("new-notification", {
-                                                title: this.lang.modpack_installed,
-                                                body: `ModPack ${name} ${this.lang.modpack_installed_correctly}.`
+                                                title: lang.modpack_installed,
+                                                body: `ModPack ${name} ${lang.modpack_installed_correctly}.`
                                             });
                                         }
                                     });
@@ -522,14 +522,14 @@ class Mods {
                                     progress.max = total;
                                     progress.value = total - restante;
                                     totalFilesDownloaded++;
-                                    textP2.innerHTML = `${this.lang.installing_modpack_can_take}<br><br>${this.lang.installing_mod} ${responseDatos.data.data.name} (${totalFilesDownloaded} / ${total})`;
+                                    textP2.innerHTML = `${lang.installing_modpack_can_take}<br><br>${lang.installing_mod} ${responseDatos.data.data.name} (${totalFilesDownloaded} / ${total})`;
 
                                     if (restante === 0) {
                                         modalDiv.remove();
                                     
                                         ipcRenderer.send("new-notification", {
-                                                title: this.lang.modpack_installed,
-                                                body: `ModPack ${name} ${this.lang.modpack_installed_correctly}.`
+                                                title: lang.modpack_installed,
+                                                body: `ModPack ${name} ${lang.modpack_installed_correctly}.`
                                             });
                                     }
                                    
@@ -576,7 +576,7 @@ class Mods {
                     } else {
                         Toast.fire({
                             icon: 'error',
-                            title: this.lang.the_file_is_not_compatible
+                            title: lang.the_file_is_not_compatible
                         })
                     }
 
@@ -659,7 +659,7 @@ class Mods {
     async BuscarModsPorNombre(nombre) {
         document.querySelector(".preload-content").style.display = "block";
         const loadingText = document.getElementById("loading-text");
-        loadingText.innerText = this.lang.searching_mods;
+        loadingText.innerText = lang.searching_mods;
 
         mods_container.innerHTML = "";
         await axios.get(`https://api.modrinth.com/v2/search?limit=100&query=${nombre}&facets=[["project_type:mod"]]`).then(async (response) => {
@@ -735,11 +735,11 @@ class Mods {
 
         Toast.fire({
             icon: 'info',
-            title: `${this.lang.downloading_mod}...`
+            title: `${lang.downloading_mod}...`
         })
 
-        let error_downloading_mod = this.lang.error_downloading_mod;
-        let mod_downloaded_successfully = this.lang.mod_downloaded_successfully;
+        let error_downloading_mod = lang.error_downloading_mod;
+        let mod_downloaded_successfully = lang.mod_downloaded_successfully;
 
         let file = fs.createWriteStream(`${dataDirectory}/.battly/mods/${fileName}`);
         let request = await fetch(downloadLink);
@@ -806,13 +806,13 @@ class Mods {
                             if (err) {
                                 Toast.fire({
                                     icon: 'error',
-                                    title: `${this.lang.error_downloading_dependency}: ${dependency_data[0].name}`,
+                                    title: `${lang.error_downloading_dependency}: ${dependency_data[0].name}`,
                                     text: err.message
                                 });
                             } else {
                                 Toast.fire({
                                     icon: 'success',
-                                    title: `${this.lang.dependency}: ${dependency_data[0].name} ${this.lang.downloaded_successfully_two}.`
+                                    title: `${lang.dependency}: ${dependency_data[0].name} ${lang.downloaded_successfully_two}.`
                                 });
                             }
                         });
@@ -825,7 +825,7 @@ class Mods {
     async ShowPanelInfo(id) {
         document.querySelector(".preload-content").style.display = "block";
         const loadingText = document.getElementById("loading-text");
-        loadingText.innerText = this.lang.loading_mod_information;
+        loadingText.innerText = lang.loading_mod_information;
         const mod_data = await this.ObtenerModData(id);
         const mod_data_downloads = await this.ObtenerMod(id);
 
@@ -874,7 +874,7 @@ class Mods {
 
         let modalTitle = document.createElement("p");
         modalTitle.classList.add("modal-card-title");
-        modalTitle.innerText = this.lang.mod_information;
+        modalTitle.innerText = lang.mod_information;
 
         let modalCloseButton = document.createElement("button");
         modalCloseButton.classList.add("delete");
@@ -931,18 +931,18 @@ class Mods {
   ${mod_data.description}
   <br>
   <hr>
-  ${this.lang.mod_stats}
+  ${lang.mod_stats}
   <br>
-  <i class="fa-solid fa-download"></i> ${this.lang.downloads}: ${mod_data.downloads}
+  <i class="fa-solid fa-download"></i> ${lang.downloads}: ${mod_data.downloads}
   <br>
-  <i class="fa-solid fa-heart"></i> ${this.lang.followers}: ${mod_data.followers}
+  <i class="fa-solid fa-heart"></i> ${lang.followers}: ${mod_data.followers}
   <br>
   <br>
   ${mod_data.body.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>').replace(/!\[(.*?)\]\((.*?)\)/g, '<img alt="$1" src="$2">').replace(/### (.*?)\n/g, '<h3>$1</h3>\n').replace(/## (.*?)\n/g, '<h2>$1</h2>\n').replace(/# (.*?)\n/g, '<h1>$1</h1>\n').replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>').replace(/- (.*)\n/g, '<li>$1</li>\n').replace(/\n---\n/g, '\n<hr>\n').replace(/<!--(.*?)-->/g, '<!--$1-->').replace(/__(.*?)__/g, '<u>$1</u>').replace(/_(.*?)_/g, '<i>$1</i>').replace(/\*(.*?)\*/g, '<i>$1</i>')}
   <br>
   <br>
 
-  <button class="button is-info is-outlined" onclick="window.open('https://modrinth.com/mod/${mod_data.id}', '_blank');">${this.lang.view_on_modrinth}</button>`;
+  <button class="button is-info is-outlined" onclick="window.open('https://modrinth.com/mod/${mod_data.id}', '_blank');">${lang.view_on_modrinth}</button>`;
 
         // ...
 
@@ -982,11 +982,11 @@ class Mods {
         let downloadButton = document.createElement("button");
         downloadButton.classList.add("button");
         downloadButton.classList.add("is-info");
-        downloadButton.innerText = this.lang.download_mod;
+        downloadButton.innerText = lang.download_mod;
 
         let deleteButton = document.createElement("button");
         deleteButton.classList.add("button");
-        deleteButton.innerText = this.lang.delete_mod;
+        deleteButton.innerText = lang.delete_mod;
         if (fs.existsSync(`${dataDirectory}/.battly/mods/${mod_data_downloads[0].files[0].filename}`)) {
             deleteButton.classList.add("is-danger");
             deleteButton.classList.add("is-active");
@@ -1003,7 +1003,7 @@ class Mods {
 
         let cardFooterText = document.createElement("p");
         cardFooterText.style.fontSize = "10px";
-        cardFooterText.innerHTML = this.lang.all_this_information_copyright_modrinth;
+        cardFooterText.innerHTML = lang.all_this_information_copyright_modrinth;
 
         // Agregar elementos al DOM
         mediaImage.appendChild(mediaImageSrc);
@@ -1086,7 +1086,7 @@ class Mods {
 
             Toast.fire({
                 icon: 'success',
-                title: `${mod_data.title} ${this.lang.deleted_successfully}.`
+                title: `${mod_data.title} ${lang.deleted_successfully}.`
             })
 
         });
@@ -1101,7 +1101,7 @@ class Mods {
     async CargarMods() {
         document.querySelector(".preload-content").style.display = "block";
         const loadingText = document.getElementById("loading-text");
-        loadingText.innerText = this.lang.searching_mods;
+        loadingText.innerText = lang.searching_mods;
         await axios.get("https://api.modrinth.com/v2/search?limit=100&index=relevance").then(async (response) => {
             let mods = response.data.hits;
             let mods_container = document.getElementById("mods_container");

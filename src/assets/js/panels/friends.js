@@ -26,6 +26,7 @@ const Toast = Swal.mixin({
 });
 
 let amigos;
+let lang;
 
 const dataDirectory = process.env.APPDATA || (process.platform == 'darwin' ? `${process.env.HOME}/Library/Application Support` : process.env.HOME)
 import { Lang } from "../utils/lang.js";
@@ -35,7 +36,7 @@ class Friends {
     async init(config, news) {
         this.config = config;
         this.database = await new database().init();
-        this.lang = await new Lang().GetLang();
+        lang = await new Lang().GetLang();
         this.AddFriend();
         this.Solicitudes();
         this.GetOnlineUsers();
@@ -89,7 +90,7 @@ class Friends {
 
             const modalTitle = document.createElement('p');
             modalTitle.className = 'modal-card-title';
-            modalTitle.textContent = this.lang.add_friend_text;
+            modalTitle.textContent = lang.add_friend_text;
 
             const closeButton = document.createElement('button');
             closeButton.className = 'delete';
@@ -111,7 +112,7 @@ class Friends {
             const input = document.createElement('input');
             input.className = 'input';
             input.setAttribute('type', 'text');
-            input.setAttribute('placeholder', this.lang.username);
+            input.setAttribute('placeholder', lang.username);
 
             inputControl.appendChild(input);
             inputContainer.appendChild(inputControl);
@@ -129,7 +130,7 @@ class Friends {
 
             const searchButton = document.createElement('button');
             searchButton.className = 'button is-info';
-            searchButton.textContent = this.lang.search;
+            searchButton.textContent = lang.search;
 
             modalFooter.appendChild(searchButton);
 
@@ -267,13 +268,13 @@ class Friends {
                                 if (user == account.name) {
                                     Toast.fire({
                                         icon: "error",
-                                        title: this.lang.you_cannot_add_yourself
+                                        title: lang.you_cannot_add_yourself
                                     });
                                     return;
                                 } else if (amigosArray.includes(user)) {
                                     Toast.fire({
                                         icon: "error",
-                                        title: this.lang.you_already_have_this_friend,
+                                        title: lang.you_already_have_this_friend,
                                     });
                                     return;
                                 } else {
@@ -285,7 +286,7 @@ class Friends {
 
                                     Toast.fire({
                                         icon: "success",
-                                        title: `${this.lang.request_sent_to} ${user} ${this.lang.correctly}.`,
+                                        title: `${lang.request_sent_to} ${user} ${lang.correctly}.`,
                                     });
                                 }
                             });
@@ -356,13 +357,13 @@ class Friends {
                                 if (user == account.name) {
                                     Toast.fire({
                                         icon: "error",
-                                        title: this.lang.you_cannot_add_yourself
+                                        title: lang.you_cannot_add_yourself
                                     });
                                     return;
                                 } else if (amigosArray.includes(user)) {
                                     Toast.fire({
                                         icon: "error",
-                                        title: this.lang.you_already_have_this_friend,
+                                        title: lang.you_already_have_this_friend,
                                     });
                                     return;
                                 } else {
@@ -374,7 +375,7 @@ class Friends {
 
                                     Toast.fire({
                                         icon: "success",
-                                        title: `${this.lang.request_sent_to} ${user} ${this.lang.correctly}.`,
+                                        title: `${lang.request_sent_to} ${user} ${lang.correctly}.`,
                                     });
                                 }
                             });
@@ -418,7 +419,7 @@ class Friends {
 
             const modalTitle = document.createElement('p');
             modalTitle.className = 'modal-card-title';
-            modalTitle.textContent = this.lang.friend_requests;
+            modalTitle.textContent = lang.friend_requests;
 
             const closeButton = document.createElement('button');
             closeButton.className = 'delete';
@@ -463,7 +464,7 @@ class Friends {
 
                     const userParagraph = document.createElement('p');
                     userParagraph.style.fontSize = '20px';
-                    userParagraph.textContent = this.lang.you_dont_have_any_friend_requests;
+                    userParagraph.textContent = lang.you_dont_have_any_friend_requests;
 
                     content.appendChild(userParagraph);
                     mediaContent.appendChild(content);
@@ -561,7 +562,7 @@ class Friends {
 
                             Toast.fire({
                                 icon: "success",
-                                title: this.lang.request_accepted
+                                title: lang.request_accepted
                             });
 
                             modal.remove();
@@ -576,7 +577,7 @@ class Friends {
 
                             Toast.fire({
                                 icon: "success",
-                                title: this.lang.request_rejected
+                                title: lang.request_rejected
                             });
 
                             modal.remove();
@@ -662,7 +663,7 @@ class Friends {
 
                             Toast.fire({
                                 icon: "success",
-                                title: this.lang.request_accepted
+                                title: lang.request_accepted
                             });
 
                             modal.remove();
@@ -677,7 +678,7 @@ class Friends {
 
                             Toast.fire({
                                 icon: "success",
-                                title: this.lang.request_rejected
+                                title: lang.request_rejected
                             });
 
                             modal.remove();
@@ -840,7 +841,7 @@ class Friends {
         
             document.querySelector(".preload-content").style.display = "block";
             const loadingText = document.getElementById("loading-text");
-            loadingText.innerHTML = this.lang.loading_friends;
+            loadingText.innerHTML = lang.loading_friends;
 
             ipcRenderer.send('obtener-amigos', {
                 username: account.name,
@@ -872,7 +873,7 @@ class Friends {
 
                     const userParagraph = document.createElement('p');
                     userParagraph.style.fontSize = '20px';
-                    userParagraph.textContent = this.lang.error_loading_friends;
+                    userParagraph.textContent = lang.error_loading_friends;
                     userParagraph.style.textAlign = 'center';
 
                     content.appendChild(userParagraph);
@@ -1028,7 +1029,7 @@ class Friends {
                         const br = document.createElement('br');
 
                         const status = document.createElement('span');
-                        status.textContent = this.lang.in_the_main_menu;
+                        status.textContent = lang.in_the_main_menu;
 
                         // Agregamos la etiqueta <p> y colocamos strong, span, br y status dentro de ella
                         const paragraph = document.createElement('p');
@@ -1106,7 +1107,7 @@ class Friends {
                         const br = document.createElement('br');
 
                         const status = document.createElement('span');
-                        status.textContent = this.lang.in_the_main_menu;
+                        status.textContent = lang.in_the_main_menu;
 
                         // Agregamos la etiqueta <p> y colocamos strong, span, br y status dentro de ella
                         const paragraph = document.createElement('p');

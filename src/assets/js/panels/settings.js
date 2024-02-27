@@ -31,13 +31,14 @@ const Toast = Swal.mixin({
 })
 
 import { Lang } from "../utils/lang.js";
+let lang;
 
 class Settings {
     static id = "settings";
     async init(config) {
         this.config = config;
         this.database = await new database().init();
-        this.lang = await new Lang().GetLang();
+        lang = await new Lang().GetLang();
         this.initSettingsDefault();
         this.initTab();
         this.initAccount();
@@ -157,7 +158,7 @@ class Settings {
             localStorage.removeItem("background-img");
 
             Toast.fire({
-                title: this.lang.background_set_successfully,
+                title: lang.background_set_successfully,
                 icon: "success",
             });
         })
@@ -263,7 +264,7 @@ class Settings {
                 localStorage.setItem("background-img", imgSrc);
 
                 Toast.fire({
-                    title: this.lang.background_set_successfully,
+                    title: lang.background_set_successfully,
                     icon: "success",
                 });
             });
@@ -487,7 +488,7 @@ class Settings {
                     //eliminar el div de la cuenta seleccionada
                     document.getElementById(uuid ? uuid : uuid_).remove();
                     Toast.fire({
-                        title: this.lang.account_deleted_successfully,
+                        title: lang.account_deleted_successfully,
                         icon: "success",
                     });
 
@@ -643,7 +644,7 @@ class Settings {
             document.querySelector('.default-tab-btn').click();
 
             Toast.fire({
-                title: this.lang.settings_saved_successfully,
+                title: lang.settings_saved_successfully,
                 icon: "success",
             });
 
@@ -714,7 +715,7 @@ class Settings {
         javaPathText.textContent = `${dataDirectory}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}/runtime`;
 
         let configClient = localStorage.getItem("java-path")
-        let javaPath = configClient?.java_config?.java_path || this.lang.java_path_didnt_set;
+        let javaPath = configClient?.java_config?.java_path || lang.java_path_didnt_set;
         let javaPathInputTxt = document.getElementById("ruta-java-input");
         let javaPathInputFile = document.getElementById("java-path-input-file");
         javaPathInputTxt.value = javaPath;
@@ -735,12 +736,12 @@ class Settings {
                 localStorage.setItem("java-path", file);
 
                 Toast.fire({
-                    title: this.lang.java_path_set_successfully,
+                    title: lang.java_path_set_successfully,
                     icon: "success",
                 });
 
             } else Toast.fire({
-                title: this.lang.the_file_name_java,
+                title: lang.the_file_name_java,
                 icon: "error",
             });
         });
@@ -750,7 +751,7 @@ class Settings {
             localStorage.removeItem("java-path");
 
             Toast.fire({
-                title: this.lang.java_path_reset_successfully,
+                title: lang.java_path_reset_successfully,
                 icon: "success",
             });
         });

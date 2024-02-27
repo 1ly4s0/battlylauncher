@@ -224,7 +224,6 @@ class Home {
         this.GenerarLogsSocket();
         this.SetStatus();
         this.Solicitudes();
-        this.lang = await new Lang().GetLang();
         this.Ads();
     }
 
@@ -5937,12 +5936,6 @@ class Home {
                             number: version_real,
                             type: "release",
                         };
-                    } else if (
-                        versionType === "forge" ||
-                        versionType === "fabric" ||
-                        versionType === "quilt"
-                    ) {
-                        
                     } else {
                         versionData = version_real;
                     }
