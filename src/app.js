@@ -198,9 +198,6 @@ if (!dev) {
     }
 }
 
-
-let filePath = `${dataDirectory}/Registro.log`;
-
 const UpdateWindow = require("./assets/js/windows/updateWindow.js");
 const MainWindow = require("./assets/js/windows/mainWindow.js");
 
@@ -221,20 +218,10 @@ if (!gotTheLock) {
 }
 
 process.on('uncaughtException', (error) => {
-    if (fs.existsSync(path.join(filePath))) {
-        fs.appendFileSync(filePath, `\n${error}`)
-    } else {
-        fs.writeFileSync(filePath, error)
-    }
     console.log(error);
 });
 
 process.on('unhandledRejection', (error) => {
-    if (fs.existsSync(path.join(filePath))) {
-        fs.appendFileSync(filePath, `\n${error}`)
-    } else {
-        fs.writeFileSync(filePath, error)
-    }
     console.log(error);
 });
 
