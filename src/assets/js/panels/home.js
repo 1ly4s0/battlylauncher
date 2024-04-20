@@ -1175,7 +1175,7 @@ class Home {
                     max: `${ram.ramMax * 1024}M`,
                   },
                   JVM_ARGS: [
-                    "-javaagent:authlib-injector.jar=http://localhost",
+                    "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                     "-Dauthlibinjector.mojangAntiFeatures=enabled",
                     "-Dauthlibinjector.noShowServerName",
                     "-Dauthlibinjector.disableHttpd"
@@ -3393,7 +3393,7 @@ class Home {
                   max: `${ram.ramMax * 1024}M`,
                 },
                 customArgs: [
-                  "-javaagent:authlib-injector.jar=http://localhost",
+                  "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                   "-Dauthlibinjector.mojangAntiFeatures=enabled",
                     "-Dauthlibinjector.noShowServerName",
                     "-Dauthlibinjector.disableHttpd"
@@ -3480,7 +3480,7 @@ class Home {
                   max: `${ram.ramMax * 1024}M`,
                 },
                 customArgs: [
-                  "-javaagent:authlib-injector.jar=http://localhost",
+                  "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                   "-Dauthlibinjector.mojangAntiFeatures=enabled",
                     "-Dauthlibinjector.noShowServerName",
                     "-Dauthlibinjector.disableHttpd"
@@ -3568,7 +3568,7 @@ class Home {
                 max: `${ram.ramMax * 1024}M`,
               },
               JVM_ARGS: [
-                "-javaagent:authlib-injector.jar=http://localhost",
+                "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                 "-Dauthlibinjector.mojangAntiFeatures=enabled",
                     "-Dauthlibinjector.noShowServerName",
                     "-Dauthlibinjector.disableHttpd"
@@ -5854,7 +5854,7 @@ class Home {
                           max: `${ram.ramMax * 1024}M`,
                         },
                         customArgs: [
-                          "-javaagent:authlib-injector.jar=http://localhost",
+                          "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                           "-Dauthlibinjector.mojangAntiFeatures=enabled",
                           "-Dauthlibinjector.noShowServerName",
                           "-Dauthlibinjector.disableHttpd"
@@ -5913,7 +5913,7 @@ class Home {
                           max: `${ram.ramMax * 1024}M`,
                         },
                         customArgs: [
-                          "-javaagent:authlib-injector.jar=http://localhost",
+                          "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                           "-Dauthlibinjector.mojangAntiFeatures=enabled",
                           "-Dauthlibinjector.noShowServerName",
                           "-Dauthlibinjector.disableHttpd"
@@ -6717,7 +6717,7 @@ class Home {
                           max: `${ram.ramMax * 1024}M`,
                         },
                         customArgs: [
-                          "-javaagent:authlib-injector.jar=http://localhost",
+                          "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                           "-Dauthlibinjector.mojangAntiFeatures=enabled",
                           "-Dauthlibinjector.noShowServerName",
                           "-Dauthlibinjector.disableHttpd"
@@ -6776,7 +6776,7 @@ class Home {
                           max: `${ram.ramMax * 1024}M`,
                         },
                         customArgs: [
-                          "-javaagent:authlib-injector.jar=http://localhost",
+                          "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                           "-Dauthlibinjector.mojangAntiFeatures=enabled",
                           "-Dauthlibinjector.noShowServerName",
                           "-Dauthlibinjector.disableHttpd"
@@ -7313,7 +7313,7 @@ class Home {
                   max: `${ram.ramMax * 1024}M`,
                 },
                 JVM_ARGS: [
-                  "-javaagent:authlib-injector.jar=http://localhost",
+                  "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                   "-Dauthlibinjector.mojangAntiFeatures=enabled",
                     "-Dauthlibinjector.noShowServerName",
                     "-Dauthlibinjector.disableHttpd"
@@ -7399,7 +7399,7 @@ class Home {
                   max: `${ram.ramMax * 1024}M`,
                 },
                 customArgs: [
-                  "-javaagent:authlib-injector.jar=http://localhost",
+                  "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                   "-Dauthlibinjector.mojangAntiFeatures=enabled",
                     "-Dauthlibinjector.noShowServerName",
                     "-Dauthlibinjector.disableHttpd"
