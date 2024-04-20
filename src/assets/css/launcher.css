@@ -1,3 +1,4 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 @import "font.css";
 @import "panels/login.css";
 @import "panels/home.css";
@@ -9,14 +10,13 @@
 @import "panels/friends.css";
 @import "skin.css";
 
+:root {
+  color-scheme: dark light;
+}
+
 * {
     outline: none;
 }
-
-body, html {
-    height: 100%;
-    
-  }
 
   html, body {
     height: 100%;
@@ -125,16 +125,18 @@ a:visited {
     z-index: 99999;
 }
 
+i.margin {
+  margin-right: 5px;
+}
+
 .preload-content h1 {
   font-family: 'Poppins';
   font-size: 18px;
   color: #E1E1E1;
   text-align: center;
   font-weight: 700;
-  position: absolute;
+  position: relative;
   top: 100%;
-  left: 50%;
-  transform: translate(-50%, 0%);
   white-space: nowrap;
 
 }
@@ -201,7 +203,6 @@ a:visited {
     opacity: 0;
     z-index: 0;
     pointer-events: none;
-    transition: opacity 0.7s ease;
 }
 
 .active {
@@ -514,3 +515,10 @@ a:visited {
                         transform: translate3d(4em, 0, 0);
                       }
                     }
+
+                                        .modal-card,
+                                        .modal-card-head,
+                                        .modal-card-body,
+                                        .modal-card-foot {
+                                          background-color: #212121;
+                                        }

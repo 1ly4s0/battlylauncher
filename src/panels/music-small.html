@@ -1,84 +1,94 @@
-<head>
-  
-  
+<body>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
-</head>
-  <body>
-    
-        <div id="boxes">
-      
-          
-      
-      
-          <div id="player03"  class="player horizontal">
-           <div class="wrapper">
-             
-  
-            <div class="info-wrapper">
-      
-              <img id="musicSmallImg" src="" alt="Música">
-        
-              <div class="info">
-                <h1 id="musicSmallName"></h1>
-                <p id="musicSmallDesc"></p>
-              </div>
-        
-              </div>
-    
-              <div class="controls">
-                <div class="prev" id="prev">
-                  <i class="fa-solid fa-backward fa-xl" style="color: #fff"></i>
-                </div>
-                <div class="play" id="play">
-                  <i class="fa-solid fa-pause fa-xl" id="pauseBtn" style="color: #fff"></i>
-                </div>
-                <div class="next" id="next">
-                  <i class="fa-solid fa-forward fa-xl" style="color: #fff"></i>
-                </div>
-              </div>
-           </div>
-          </div>    
+  <div id="boxes">
+
+
+
+
+    <div id="player03" class="player horizontal">
+      <div class="wrapper">
+
+
+        <div class="info-wrapper">
+
+          <img id="musicSmallImg" src="" alt="Música">
+
+          <div class="info">
+            <h1 id="musicSmallName"></h1>
+            <p id="musicSmallDesc"></p>
+          </div>
+
         </div>
-  </body>
-  <script>
-    
-        const { ipcRenderer } = require("electron");
 
-        ipcRenderer.on('get-song-test', (event, song) => {
-            document.getElementById("musicSmallName").innerText = song.name.substring(0, 30) + "...";
-            document.getElementById("musicSmallDesc").innerText = song.author;
-            document.getElementById("musicSmallImg").src = song.img;
-        });
+        <div class="controls">
+          <div class="prev" id="prev">
+            <i class="fa-solid fa-backward fa-xl" style="color: #fff"></i>
+          </div>
+          <div class="play" id="play">
+            <i class="fa-solid fa-pause fa-xl" id="pauseBtn" style="color: #fff"></i>
+          </div>
+          <div class="next" id="next">
+            <i class="fa-solid fa-forward fa-xl" style="color: #fff"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
 
-        document.getElementById("play").addEventListener("click", () => {
-            ipcRenderer.send("play-pause");
-            let pauseBtn = document.getElementById("pauseBtn");
-            if (pauseBtn.classList.contains("fa-pause")) {
-                pauseBtn.classList.remove("fa-pause");
-                pauseBtn.classList.add("fa-play");
-            } else {
-                pauseBtn.classList.remove("fa-play");
-                pauseBtn.classList.add("fa-pause");
-            }
-        });
+  const { ipcRenderer } = require("electron");
 
-        document.getElementById("next").addEventListener("click", () => {
-            ipcRenderer.send("next");
-        });
+  ipcRenderer.on('get-song-test', (event, song) => {
+    document.getElementById("musicSmallName").innerText = song.name.substring(0, 30) + "...";
+    document.getElementById("musicSmallDesc").innerText = song.author;
+    document.getElementById("musicSmallImg").src = song.img;
+  });
 
-        document.getElementById("prev").addEventListener("click", () => {
-            ipcRenderer.send("prev");
-        });
-  </script>
-  <style>
-    #prev, #play, #next {
-    cursor: pointer;
+  document.getElementById("play").addEventListener("click", () => {
+    ipcRenderer.send("play-pause");
+    let pauseBtn = document.getElementById("pauseBtn");
+    if (pauseBtn.classList.contains("fa-pause")) {
+      pauseBtn.classList.remove("fa-pause");
+      pauseBtn.classList.add("fa-play");
+    } else {
+      pauseBtn.classList.remove("fa-play");
+      pauseBtn.classList.add("fa-pause");
     }
+  });
 
-    * {
+  ipcRenderer.on("play-song", (event, data) => {
+    let pauseBtn = document.getElementById("pauseBtn");
+    if (pauseBtn.classList.contains("fa-play")) {
+      pauseBtn.classList.remove("fa-play");
+      pauseBtn.classList.add("fa-pause");
+    }
+  })
+
+  ipcRenderer.on("pause-song", (event, data) => {
+    let pauseBtn = document.getElementById("pauseBtn");
+    if (pauseBtn.classList.contains("fa-pause")) {
+      pauseBtn.classList.remove("fa-pause");
+      pauseBtn.classList.add("fa-play");
+    }
+  })
+
+  document.getElementById("next").addEventListener("click", () => {
+    ipcRenderer.send("next");
+  });
+
+  document.getElementById("prev").addEventListener("click", () => {
+    ipcRenderer.send("prev");
+  });
+</script>
+<style>
+  #prev,
+  #play,
+  #next {
+    cursor: pointer;
+  }
+
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -86,134 +96,134 @@
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Poppins';
   }
+
   body {
     background-repeat: no-repeat;
     background-size: cover;
     user-select: none;
   }
-  
-  
+
+
   #boxes * {
     border: 1px solid transparent;
   }
-  
+
   #boxes {
     display: grid;
     grid-template-columns: max-content max-content;
-    grid-template-areas: 
-    'A B'
-    'A C';
+    grid-template-areas:
+      'A B'
+      'A C';
     gap: 32px;
     place-content: center;
     height: 100vh;
   }
-  
+
   #player03 {
     grid-area: C;
     position: fixed;
     bottom: 0;
     right: 0;
   }
-  
+
   #player03 .controls {
     display: flex;
     justify-content: space-around;
   }
-  
+
   .player {
     background-color: #080747;
     padding: 28px;
     border-radius: 20px;
   }
-  
+
   .player img {
     width: 84px;
     height: 84px;
     object-fit: cover;
     border-radius: 10px;
   }
-  
-  
+
+
   .info {
-   color: #E1E1E6;
-   pointer-events: none;
+    color: #E1E1E6;
+    pointer-events: none;
   }
-  
+
   .info p {
     opacity: 0.68;
     font-size: 13px;
   }
-  
+
   .info-wrapper {
     display: flex;
     align-items: center;
     gap: 30px;
     pointer-events: none;
   }
-  
+
   .player h1 {
     font-size: 17px;
     color: #E1E1E6;
     padding-bottom: 7px;
   }
-  
-  
+
+
   .controls {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
   }
-  
+
   .track {
     padding-top: 28px;
-   position: relative;
-  
+    position: relative;
+
   }
-  
+
   .track::before {
-  content: '';
-  height: 6px;
-  width: 100%;
-  display: block;
-  background: #D9D9D9;
-  opacity: 0.3;
-  border-radius: 10px;
-  position: absolute;
-  }
-  
-  .track::after { 
     content: '';
-  height: 6px;
-  width: 85%;
-  display: block;
-  background: #D9D9D9;
-  border-radius: 10px;
-  
-  
+    height: 6px;
+    width: 100%;
+    display: block;
+    background: #D9D9D9;
+    opacity: 0.3;
+    border-radius: 10px;
+    position: absolute;
   }
-  
+
+  .track::after {
+    content: '';
+    height: 6px;
+    width: 85%;
+    display: block;
+    background: #D9D9D9;
+    border-radius: 10px;
+
+
+  }
+
   .time {
     opacity: 0.7;
     font-size: 14px;
     color: gainsboro;
-  
+
     display: flex;
     justify-content: space-between;
     padding-top: 9.6px;
   }
-  
+
   @media (max-width: 670px) {
     #boxes {
-      display:flex;
+      display: flex;
       flex-direction: column;
-  
+
       max-width: 270px;
       margin: auto;
-  
-  
+
+
       height: auto;
       padding-block: 60px;
     }
   }
-  </style>
-  
+</style>

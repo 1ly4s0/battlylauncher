@@ -16,9 +16,7 @@ const fs = require('fs');
 const fetch = require('node-fetch');
 const axios = require("axios");
 import { Lang } from './utils/lang.js';
-
-// Crea una instancia de la clase Lang
-const langInstance = new Lang();
+let lang;
 
 // Llama a GetLang en la instancia
 
@@ -33,18 +31,18 @@ class Splash {
 	 * @constructor
 	 */
 	constructor() {
+		this.LoadLang();
 		this.splash = document.querySelector(".splash");
 		this.splashMessage = document.querySelector(".splash-message");
 		this.splashAuthor = document.querySelector(".splash-author");
 		this.message = document.querySelector(".message");
 		this.progress = document.querySelector("progress");
 		document.addEventListener('DOMContentLoaded', () => this.startAnimation());
-		langInstance.GetLang().then(lang => {
-			this.lang = lang;
-			this.message.innerHTML = this.lang.salutate;
-		}).catch(error => {
-			console.error(error);
-		});
+	}
+
+	async LoadLang() {
+		lang = await new Lang().GetLang();
+		this.message.innerHTML = lang.salutate;
 	}
 
 
@@ -65,25 +63,27 @@ class Splash {
 		this.splashMessage.textContent = splash.message;
 		this.splashAuthor.children[0].textContent = "" + splash.author;
 		await sleep(100);
-		document.querySelector("#splash").style.display = "block";
+		document.querySelector(".splash").style.display = "block";
+		document.querySelector(".splash").classList.add("animate__animated", "animate__jackInTheBox")
 		await sleep(500);
 		sonido_inicio.play();
 		this.splash.classList.add("opacity");
 		await sleep(500);
+		document.querySelector("#splash").style.display = "block";
 		this.splash.classList.add("translate");
-		this.splashMessage.classList.add("opacity");
-		this.splashAuthor.classList.add("opacity");
-		this.message.classList.add("opacity");
+		this.splashMessage.classList.add("animate__animated", "animate__flipInX");
+		this.splashAuthor.classList.add("animate__animated", "animate__flipInX");
+		this.message.classList.add("animate__animated", "animate__flipInX");
 		await sleep(1000);
 		
 		fetch("https://google.com").then(async () => {
 			this.checkUpdate();
 	}).catch(async () => {
-			this.setStatus(this.lang.checking_connection);
+			this.setStatus(lang.checking_connection);
 			await sleep(2000);
-			this.setStatus(this.lang.no_connection);
+			this.setStatus(lang.no_connection);
 			await sleep(3000);
-			this.setStatus(this.lang.starting_battly);
+			this.setStatus(lang.starting_battly);
 			await sleep(500);
 			this.startLauncher();
 		})
@@ -99,38 +99,38 @@ class Splash {
 			
 		//aplicar las animaciones pero al reves
 		this.splash.classList.remove("translate");
-		this.splashMessage.classList.remove("opacity");
-		this.splashAuthor.classList.remove("opacity");
+		this.splashMessage.classList.add("animate__animated", "animate__flipOutX");
+		this.splashAuthor.classList.add("animate__animated", "animate__flipOutX");
 		await sleep(500);
 		this.startLauncher(); 
 		});
-		this.setStatus(this.lang.checking_updates);
+		this.setStatus(lang.checking_updates);
 		
 		ipcRenderer.invoke('update-app').then(err => {
 			if(err) {
             	if (err.error) {
                 	let error = err.message;
 					error = error.toString().slice(0, 50);
-                	this.shutdown(`${this.lang.update_error}${error}`);
+                	this.shutdown(`${lang.update_error}${error}`);
             	}
 			}
         })
 
         ipcRenderer.on('updateAvailable', () => {
-            this.setStatus(this.lang.update_available);
+            this.setStatus(lang.update_available);
             this.toggleProgress();
             
 			let boton_actualizar = document.getElementById("btn_actualizar");
 			boton_actualizar.style.display = "block";
 			boton_actualizar.addEventListener("click", () => {
-				this.setStatus(this.lang.downloading_update);			
+				this.setStatus(lang.downloading_update);			
 				ipcRenderer.send('start-update');
 			})
 
 			let boton_cancelar = document.getElementById("btn_jugar");
 			boton_cancelar.style.display = "block";
 			boton_cancelar.addEventListener("click", () => {
-				this.setStatus(this.lang.update_cancelled);
+				this.setStatus(lang.update_cancelled);
 				this.maintenanceCheck();
 			})
         })
@@ -144,7 +144,7 @@ class Splash {
         })
 
 		ipcRenderer.on('update-downloaded', async () => {
-			this.setStatus(this.lang.update_downloaded);
+			this.setStatus(lang.update_downloaded);
 			await sleep(5000);
 			this.toggleProgress();
 			ipcRenderer.send('update-window-close');
@@ -160,12 +160,12 @@ class Splash {
 	async maintenanceCheck() {
 		config.GetConfig().then(async res => {
 			if (res.maintenance) return this.shutdown(res.maintenance_message);
-			this.setStatus(this.lang.starting_launcher);
+			this.setStatus(lang.starting_launcher);
 			
 		//aplicar las animaciones pero al reves
 		this.splash.classList.remove("translate");
-		this.splashMessage.classList.remove("opacity");
-		this.splashAuthor.classList.remove("opacity");
+		this.splashMessage.classList.add("animate__animated", "animate__flipOutX");
+		this.splashAuthor.classList.add("animate__animated", "animate__flipOutX");
 		await sleep(500);
 			setTimeout(() => {
 				this.startLauncher();
@@ -173,7 +173,7 @@ class Splash {
 			return true;
 		}).catch(e => {
 			console.error(e);
-			return this.shutdown(this.lang.error_connecting_server);
+			return this.shutdown(lang.error_connecting_server);
 		})
 	}
 
@@ -182,7 +182,7 @@ class Splash {
 	 * @async
 	 */
 	async startLauncher() {
-		this.setStatus(this.lang.ending);
+		this.setStatus(lang.ending);
 		await sleep(500);
 		ipcRenderer.send('main-window-open');
 		ipcRenderer.send('update-window-close');
@@ -193,11 +193,12 @@ class Splash {
 	 * @param {string} text - The shutdown message.
 	 */
 	shutdown(text) {
-		this.setStatus(`${text}<br>Cerrando 10s`);
+		this.setStatus(`${text}<br>${lang.closing_countdown} 10s`);
 		let i = 10;
 		setInterval(() => {
-			this.setStatus(`${text}<br>${this.lang.closing_countdown} ${i}s`);
+			this.setStatus(`${text}<br>${lang.closing_countdown} ${i}s`);
 			if (i < 0) ipcRenderer.send('update-window-close');
+			i--;
 		}, 1000);
 	}
 

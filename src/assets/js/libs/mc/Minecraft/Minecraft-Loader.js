@@ -9,6 +9,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const events_1 = require("events");
 const index_js_1 = __importDefault(require("../Minecraft-Loader/index.js"));
+
 class MinecraftLoader {
     constructor(options) {
         this.options = options;

@@ -1,12 +1,62 @@
+<div class="modal" id="modaluserinfo">
+    <div class="modal-background"></div>
+    <div class="modal-card" style="width: 55%;">
+        <header class="modal-card-head">
+            <p id="account-information" class="modal-card-title" style="color: #fff"></p>
+            <button class="delete" aria-label="close" id="cerrar2-userinfo-btn"></button>
+        </header>
+        <section class="modal-card-body" style="overflow: hidden;">
+            <div class="modal-content">
+                <div class="box" style="padding: 1rem; height: 80px;">
+                    <article class="media">
+                        <div class="media-left">
+                            <figure class="image is-64x64">
+                                <div id="user-image" class="account-image mc-face-viewer-6x"
+                                    style="transform: translate(-10px, -18px); border-radius: 5px;"></div>
+                            </figure>
+                        </div>
+                        <div class="media-content" style="margin-left: -5px;">
+                            <div class="content">
+                                <p>
+                                    <strong id="user-name" style="font-size: 20px;">1ly4s0</strong>
+                                    <br>
+                                    <span id="mc-id-text"></span> <span id="user-uuid"></span><i
+                                        class="fa-solid fa-copy" id="copy-uuid"
+                                        style="cursor: pointer; margin-left: 5px;"></i>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-info" id="mostrarskin-userinfo-btn"></button>
+            <button class="button is-danger" id="eliminarcuenta-userinfo-btn"></button>
+            <button class="button is-danger" id="establecer-skin"
+                onclick="js:window.open('https://battlylauncher.com/dashboard', '_blank')"></button>
+            <button class="button is-info" id="cerrar-userinfo-btn">Cerrar</button>
+        </footer>
+    </div>
+</div>
+
 <div class="settings-content">
     <div class="bottom_bar_settings">
-        <button id="accounts-btn" class="tab-btn-css button is-info tab-btn active-tab-btn default-tab-btn"></button>
-        <button id="java-btn" class="tab-btn-css button is-info tab-btn"></button>
-        <button id="ram-btn" class="tab-btn-css button is-info tab-btn"></button>
-        <button id="launcher-btn" class="tab-btn-css button is-info tab-btn"></button>
-        <button id="theme-btn" class="tab-btn-css button is-info tab-btn"></button>
-        <button id="background-btn" class="tab-btn-css button is-info tab-btn"></button>
-        <button id="save-btn" class="tab-btn-css button is-info save-tabs-btn"></button>
+        <button id="accounts-btn" class="tab-btn-css button is-info tab-btn active-tab-btn default-tab-btn"><i
+                class="margin fa-solid fa-user"></i><span id="accounts-btn-text"></span></button>
+        <button id="java-btn" class="tab-btn-css button is-info tab-btn"><i class="margin fa-brands fa-java"></i><span
+                id="java-btn-text"></span></button>
+        <button id="ram-btn" class="tab-btn-css button is-info tab-btn"><i class="margin fa-solid fa-memory"></i><span
+                id="ram-btn-text"></span></button>
+        <button id="launcher-btn" class="tab-btn-css button is-info tab-btn"><i class="margin fa-solid fa-b"></i><span
+                id="launcher-btn-text"></span></button>
+        <button id="theme-btn" class="tab-btn-css button is-info tab-btn"><i
+                class="margin fa-solid fa-palette"></i><span id="theme-btn-text"></span></button>
+        <button id="background-btn" class="tab-btn-css button is-info tab-btn"><i
+                class="margin fa-solid fa-image"></i><span id="background-btn-text"></span></button>
+        <button id="save-btn" class="tab-btn-css button is-info save-tabs-btn"><i
+                class="margin fa-solid fa-floppy-disk"></i><span id="save-btn-text"></span></button>
     </div>
     <style>
         .modal-card-body {
@@ -14,46 +64,6 @@
         }
     </style>
     <div class="tabs-settings-content active-tab-content">
-        <div class="modal" id="modaluserinfo">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-                <header class="modal-card-head">
-                    <p id="account-information" class="modal-card-title"></p>
-                    <button class="delete" aria-label="close" id="cerrar2-userinfo-btn"></button>
-                </header>
-                <section class="modal-card-body" style="overflow: hidden;">
-                    <div class="modal-content">
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64">
-                                        <div id="user-image" class="account-image mc-face-viewer-8x"
-                                            style="transform: translate(-20px, -25px);"></div>
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong id="user-name" style="font-size: 20px;">1ly4s0</strong>
-                                            <br>
-                                            <span id="mc-id-text"></span> <span id="user-uuid"></span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-                <footer class="modal-card-foot">
-                    <button class="button is-info" id="mostrarskin-userinfo-btn"></button>
-                    <button class="button is-danger" id="eliminarcuenta-userinfo-btn"></button>
-                    <button class="button is-danger" id="establecer-skin" onclick="js:window.open('https://battlylauncher.com/dashboard', '_blank')"></button>
-                    <button class="button is-info" id="cerrar-userinfo-btn">Cerrar</button>
-                </footer>
-            </div>
-        </div>
-
         <div class="center-align">
             <div class="title-settings" id="my-accounts" style="font-size: 50px;"></div>
             <div class="accounts">
@@ -65,18 +75,19 @@
         </div>
     </div>
 
-    <div class="tabs-settings-content" style="height: 500px;">
+    <div class="tabs-settings-content" style="height: auto;">
         <div class="settings-content-scroll">
             <div class="title-settings" id="java-settings" style="font-size: 50px;">
             </div>
             <div class="java-settings">
                 <div class="information">
                     <br>
-                    <span id="java-text-info"> </span><b><span id="java-path-txt"></span></b><br><span id="java-text-info2"></span>
+                    <span id="java-text-info"> </span><b><span id="java-path-txt"></span></b><br><span
+                        id="java-text-info2"></span>
                     <br>
                     <div class="java-path">
-                        <input type="text" class="java-path-input input is-info" id="ruta-java-input"
-                            style="width: 80%; height: 40px;"
+                        <input type="text" class="java-path-input input is-info" disabled id="ruta-java-input"
+                            style="width: 80%; height: 40px; color: #fff;"
                             placeholder="C:\Program Files\Java\jre1.8.0_301\bin\javaw.exe">
                         <button class="java-path-btn button is-info" id="open-explorer-java-path"
                             style="height: 40px;"><i class="fa-solid fa-folder-open"></i></button>
@@ -93,7 +104,7 @@
         </div>
     </div>
 
-    <div class="tabs-settings-content">
+    <div class="tabs-settings-content" style="height: auto;">
         <div class="settings-content-scroll">
             <div class="title-settings" style="font-size: 50px;" id="ram-settings"></div>
             <div class="java-settings">
@@ -115,8 +126,10 @@
                         </div>
 
                         <div class="ram-info-block">
-                            <b><span id="you-have-a-total"></span> <span id="total-ram">0 GB</span> <span id="of-ram"></span></b><br>
-                            <b><span id="you-have-a-total"></span> <span id="free-ram">0 GB</span> <span id="of-ram-disponible"></span></b>
+                            <b><span id="you-have-a-total"></span> <span id="total-ram">0 GB</span> <span
+                                    id="of-ram"></span></b><br>
+                            <b><span id="you-have-a-total"></span> <span id="free-ram">0 GB</span> <span
+                                    id="of-ram-disponible"></span></b>
                         </div>
                     </div>
                     <br>
@@ -126,7 +139,7 @@
         </div>
     </div>
 
-    <div class="tabs-settings-content">
+    <div class="tabs-settings-content" style="height: auto;">
         <div class="center-page">
             <div class="title-settings" style="font-size: 50px;" id="battly-settings"></div>
             <div class="java-settings">
@@ -137,31 +150,45 @@
                         <div class="checkround"></div>
                     </label>
                     <span id="minimalize-battly"></span>
-                    </br>
+                    <br>
                     <input type="checkbox" class="checkbox-settings" id="launcher-open"><label for="launcher-open">
                         <div class="checkround"></div>
                     </label>
-                <span id="keep-battly-opened"></span>
-            </br>
+                    <span id="keep-battly-opened"></span>
+                    <br>
+                    <br>
+                    <span id="music_settings_information" style="font-size: 20px; font-weight: 700;"></span>
+                    <br>
+                    <input type="checkbox" class="checkbox-settings" id="music-close"><label for="music-close">
+                        <div class="checkround"></div>
+                    </label>
+                    <span id="minimize_music"></span>
+                    <br>
+                    <input type="checkbox" class="checkbox-settings" id="music-open"><label for="music-open">
+                        <div class="checkround"></div>
+                    </label>
+                    <span id="keep_music_opened"></span>
                     <br>
                     <br>
                     <b id="battly-logs-text" style="font-size: 20px;"></b>
                     <br>
-                    <button class="button is-info" id="obtener-socketid"></button>
+                    <button class="button is-info" id="obtener-socketid"><i class="fa-solid fa-chart-simple"></i><span
+                            id="obtener-socketid-text"></span></button>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="tabs-settings-content">
+    <style>
+        /* Estilos para el input de tipo range */
+        input[type=range] {
+            padding: 0;
+        }
+    </style>
+    <div class="tabs-settings-content" style="height: auto;">
         <div class="settings-content-scroll">
             <div class="title-settings" id="battly-theme" style="font-size: 50px;"></div>
             <div class="java-settings">
                 <div class="information">
-                    <br>
-                    <span style="font-size: 30px; font-weight: 700;" id="welcome"></span>
-                    <br>
-                    <br>
                     <span id="battly-theme-text"></span>
 
                     <br><br>
@@ -177,7 +204,11 @@
                     <br>
                     <br>
                     <span id="bottom-bar-opacity"></span>
-                    <input type="range" id="theme-opacity-bottom-bar" min="0.1" max="1" step="0.1" value="1">
+                    <input type="range" id="theme-opacity-bottom-bar" min="0.1" max="1" step="0.01" value="1">
+                    <br>
+                    <br>
+                    <span id="background-loading-screen-color-text"></span>
+                    <input type="color" id="theme-color-loading-screen" value="#3498db">
                     <br>
                     <br>
                     <span id="starting-music"></span>
@@ -187,11 +218,14 @@
                             <option value="start1">Fulgor</option>
                             <option value="start2">Neón</option>
                             <option value="start3">Centella</option>
+                            <option value="start4">Adventure</option>
+                            <option value="start5">Battle</option>
+                            <option value="start6">Modern</option>
                         </select>
                     </div>
                     <!--Boton con el icono de play para reproducir el sonido - Ruta: ./assets/sounds/value.mp3-->
-                    <button class="button is-info is-small" id="reproducir-sonido-inicio"><span><i
-                                class="fa-solid fa-play"></i></span></button>
+                    <button class="button is-info is-small" id="reproducir-sonido-inicio"><i
+                            class="fa-solid fa-play"></i></span></button>
                     <!--
                     <input type="checkbox" class="checkbox-settings" id="launcher-close"><label for="launcher-close"><div class="checkround"></div></label>  Imagen 1</br>
                     <input type="checkbox" class="checkbox-settings" id="launcher-close-all"><label for="launcher-close-all"><div class="checkround"></div></label> Imagen 2</br>
@@ -204,54 +238,71 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="modal-preview-background">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title" id="resize-image-text"></p>
+            </header>
+            <section class="modal-card-body">
 
-    <div class="tabs-settings-content">
-        <div class="modal" id="modal-preview-background">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-                <header class="modal-card-head">
-                    <p class="modal-card-title" id="resize-image-text"></p>
-                </header>
-                <section class="modal-card-body">
-
-                    <div class="box-2">
-                        <div class="result"></div>
-                    </div>
-                    <!--rightbox-->
-                    <div class="box-2 img-result hide">
-                        <!-- result of crop -->
-                        <img class="cropped" src="" alt="">
-                    </div>
-                </section>
-                <footer class="modal-card-foot">
-                    <button class="button is-success" id="establecer-fondo"></button>
-                    <button class="button is-info" id="cerrar-preview-btn"></button>
-                </footer>
-            </div>
+                <div class="box-2">
+                    <div class="result"></div>
+                </div>
+                <!--rightbox-->
+                <div class="box-2 img-result hide">
+                    <!-- result of crop -->
+                    <img class="cropped" src="" alt="">
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success" id="establecer-fondo"></button>
+                <button class="button is-info" id="cerrar-preview-btn"></button>
+            </footer>
         </div>
+    </div>
+    <div class="tabs-settings-content" style="height: auto;">
         <div class="settings-content-scroll">
             <div class="title-settings" id="customize-background" style="font-size: 50px;"></div>
             <div class="java-settings">
                 <div class="information">
                     <br>
-                    <b style="font-size: 20px;" id="resize-background"></b>
+                    <b style="font-size: 30px;" id="resize-background"></b>
                     <br>
-                    <span id="background-image-text"></span>
-                    <div class="file is-info is-boxed">
-                        <label class="file-label">
-                            <input class="file-input" type="file" name="resume" id="background-input" accept="image/*">
-                            <span class="file-cta">
-                                <span class="file-icon">
-                                    <i class="fas fa-cloud-upload-alt"></i>
-                                </span>
-                                <span class="file-label" id="select-a-background">
-                                    
-                                </span>
-                            </span>
-                        </label>
+                    <input type="file" id="background-input-file" accept="video/mp4" style="display: none;">
+                    <div id="animated-background-div">
+                        <br>
+                        <span id="you_are_premium_background"></span>
+                        <div class="select">
+                            <select id="resize-background-select">
+                                <option value="dd" id="select_a_type_background" selected></option>
+                                <option value="static-background" id="static-background-text"></option>
+                                <option value="animated-background" id="animated-background-text"></option>
+                            </select>
+                        </div>
+                        <br>
+                        <br>
                     </div>
-                    <br>
-                    <br>
+                    <div id="not-animated-background-div">
+                        <br>
+                        <span id="background-image-text"></span>
+                        <div class="file is-info is-boxed">
+                            <label class="file-label">
+                                <input class="file-input" type="file" name="resume" id="background-input"
+                                    accept="image/*">
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                    </span>
+                                    <span class="file-label" id="select-a-background">
+
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
 
                     <button class="button is-info" id="restablecer-fondo"></button>
                     <!--

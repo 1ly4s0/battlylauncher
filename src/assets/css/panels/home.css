@@ -31,8 +31,22 @@ span, div {
 
 .button {
     font-weight: 700;
+    transition: background-color 0.3s ease;
 }
 
+@keyframes liquido {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 .body-home {
     display: flex;
@@ -400,7 +414,163 @@ body, html {
       border-radius: 5px;
       opacity: 1;
       margin-bottom: -20px;
-      background-image: url('https://api.battlylauncher.com/ads/get');
       background-size: cover;
       background-repeat: no-repeat;
+      cursor: pointer;
   }
+
+  .radio-button-container {
+      display: flex;
+      align-items: center;
+    gap: 10px;
+        margin-left: -5px;
+        margin-top: 5px;
+  }
+
+  .radio-button {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+  }
+
+  .radio-button__input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+  }
+
+  .radio-button__label {
+    display: inline-block;
+        padding-left: 25px;
+        position: relative;
+        font-size: 16px;
+        color: #f2f2f2;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+  }
+
+  .radio-button__custom {
+    position: absolute;
+        top: 0;
+        left: 4;
+        width: 18px;
+        height: 18px;
+        border-radius: 40%;
+        border: 2px solid #555;
+        transition: all 0.3s ease;
+  }
+
+  .radio-button__input:checked+.radio-button__label .radio-button__custom {
+      background-color: #4c8bf5;
+      border-color: transparent;
+      transform: scale(0.8);
+      box-shadow: 0 0 20px #4c8bf580;
+  }
+
+  .radio-button__input:checked+.radio-button__label {
+      color: #4c8bf5;
+  }
+
+  .radio-button__label:hover .radio-button__custom {
+      transform: scale(1.1);
+      border-color: #4c8bf5;
+      box-shadow: 0 0 20px #4c8bf580;
+  }
+
+  .radio-button__input-with-margin {
+    margin-left: -5px;
+        margin-top: 5px;
+  }
+
+  .progress-bar.battly-s3gsqm {
+    max-width: 100%;
+      width: 100%;
+      height: 15px;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #fff;
+  }
+
+  .progress-fill.battly-s3gsqm {
+      height: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: 600ms ease width, 150ms ease background-color;
+      transform-origin: left;
+      background-color: var(--accent)
+  }
+
+  .progress-bar.error .progress-fill {
+      background-color: var(--danger)
+  }
+
+  .progress-bar.success .progress-fill {
+      background-color: #3ac172
+  }
+
+    .progress-bar.warning .progress-fill {
+        background-color: #f7b924
+    }
+
+    .progress-bar.info .progress-fill {
+        background-color: #4c8bf5
+    }
+
+        @keyframes moveRightLeft {
+            0% {
+                width: 20%;
+                display: block;
+                transform: translateX(-40%);
+            }
+    
+            50% {
+                display: none;
+                width: 90%;
+                transform: translateX(100%);
+            }
+    
+            100% {
+                width: 20%;
+                transform: translateX(-40%);
+            }
+        }
+    
+        .animated-fill {
+            animation: moveRightLeft 2s infinite;
+        }
+
+        
+
+                .modal-card,
+                .modal-card-head,
+                .modal-card-body,
+                .modal-card-foot {
+                    background-color: #212121;
+                }
+
+                                .context-menu {
+                                    display: none;
+                                    position: absolute;
+                                    background-color: #212121;
+                                    border: 1px solid #ccc;
+                                    color: #fff;
+                                    padding: 5px 0;
+                                    border-radius: 5px;
+                                }
+                
+                                .context-menu ul {
+                                    list-style-type: none;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                
+                                .context-menu ul li {
+                                    padding: 5px 20px;
+                                }
+                
+                                .context-menu li:hover {
+                                    background-color: #373737;
+                                    color: #fff;
+                                }

@@ -9,6 +9,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const node_fetch_1 = __importDefault(require("node-fetch"));
 const fs_1 = __importDefault(require("fs"));
+const events_1 = require("events");
+
 class MinecraftAssets {
     constructor(options) {
         this.options = options;

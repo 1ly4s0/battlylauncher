@@ -1,23 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <script src="https://kit.fontawesome.com/bdec180db7.js" crossorigin="anonymous"></script>
-</head>
-<body style="background-image: url(https://battlylauncher.com/assets/img/1.jpg);">
-    <div class="home-content">
-        <audio id="audioPlayer" controls autoplay style="display: none;"></audio>
+<div class="home-content">
+    <audio id="audioPlayer" controls autoplay style="display: none;"></audio>
     <div class="body-home">
         <div class="news-list">
-            <h1 id="news-battly" style="font-weight: 800; font-size: 40px; color: #fff; text-align: center;"></h1>
+            <article class="message" id="warning-status" style="display: none;">
+                <div class="message-body" style="font-weight: 600; padding: 0.5rem 0.8rem;" id="warning-status-message">
+                </div>
+            </article>
+            <h1 id="news-battly" style="font-weight: 800;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    transform: translate(50%, 0%);"></h1>
+            <div style="height: 70%;
+    width: 70%;
+    margin-top: 60px;
+    position: fixed;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;" id="battly-news-div"></div>
         </div>
         <div class="info-list">
             <h1 id="status-battly" style="font-weight: 800; font-size: 40px; color: #fff"></h1>
             <div class="info-item">
                 <div class="server">
-                    <img class="server-img" src="assets/images/icon.png"/>
+                    <img class="server-img" src="assets/images/icon.png" />
                     <div class="server-text">
                         <div class="name" id="Battly_API">Battly API</div>
                         <div class="desc" id="Battly_API_Desc"><span class="red">Apagado</span> - 0ms</div>
@@ -29,7 +36,7 @@
                 </div>
                 <br>
                 <div class="server">
-                    <img class="server-img" src="assets/images/icon.png"/>
+                    <img class="server-img" src="assets/images/icon.png" />
                     <div class="server-text">
                         <div class="name" id="Battly_WEB">Battly WEB</div>
                         <div class="desc" id="Battly_WEB_Desc"><span class="red">Apagado</span> - 0ms</div>
@@ -41,7 +48,7 @@
                 </div>
                 <br>
                 <div class="server1">
-                    <img class="server-img" src="assets/images/icon.png"/>
+                    <img class="server-img" src="assets/images/icon.png" />
                     <div class="server-text">
                         <div class="name1" id="Miembros_Online">Usuarios Online</div>
                         <div class="desc"><span class="green"></span></div>
@@ -52,10 +59,10 @@
                 </div>
                 <br>
                 <div class="server">
-                    <img class="music-img" id="music-img" src="./assets/images/icons/music.gif"/>
+                    <img class="music-img" id="music-img" src="./assets/images/icons/music.gif" />
                     <div class="server-text">
                         <div id="playing-now-text" class="name"></div>
-                        <div id="playing-now-body" class="desc" style="text-align: left;" id="music-description"></div>
+                        <div id="playing-now-body" class="desc" style="text-align: left;"></div>
                     </div>
                 </div>
                 <br>
@@ -70,83 +77,134 @@
                 </div>
                 <br>
                 <div class="ad" id="ads">
-                </div
+                </div </div>
             </div>
         </div>
-    </div>
-    <div class="modal" style="z-index: 10000;" id="modalStartVersion">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title" id="start_minecraft_text"></p>
-            <button class="delete" aria-label="close" id="closeStartVersion"></button>
-          </header>
-          <section class="modal-card-body" style="height: 250px; overflow: hidden">
-            <div class="card" style="height: 200px;">
-                <div class="card-header">
-                    <p class="card-header-title" id="textInfo"></p>
-                </div>
-                <div class="card-content">
-                  <div class="content">
-            
-            <div class="select is-info">
-              <select id="listaDeVersiones">
-                <option value="dx" id="select_a_version" selected></option>
-            </select>
-            </div>
-            <button class="button is-info is-small" id="reiniciar-versiones"><span><i class="fa-solid fa-arrows-rotate"></i></span></button>
-            <br>
-            <br>
-            <div id="tipo-de-versiones" style="display: none;">
-                <label class="radio" id="radioVanilla" style="display: none;">
-                    <input type="radio" name="loader" value="vanilla">Vanilla
-                </label>
+        <div class="modal" style="z-index: 10000;" id="modalStartVersion">
+            <div class="modal-background"></div>
+            <div class="modal-card" style="background-color: #212121;">
+                <header class="modal-card-head" style="background-color: #212121;">
+                    <p class="modal-card-title" id="start_minecraft_text" style="color: #fff;"></p>
+                    <button class="delete" aria-label="close" id="closeStartVersion"></button>
+                </header>
+                <section class="modal-card-body" style="height: 250px; overflow: hidden;  background-color: #212121;">
+                    <div class="card" style="height: 200px; background-color: #212121;">
+                        <div class="card-header" style="background-color: #212121;">
+                            <p class="card-header-title" id="textInfo" style="color: #fff;"></p>
+                        </div>
+                        <div class="card-content" style="background-color: #212121;">
+                            <div class="content">
 
-                <label class="radio" id="radioFabric" style="display: none;">
-                    <input type="radio" name="loader" value="fabric">Fabric
-                </label>
-  
-                <label class="radio" id="radioForge" style="display: none;">
-                    <input type="radio" name="loader" value="forge">Forge
-                </label>
-  
-                <label class="radio" id="radioQuilt" style="display: none;">
-                    <input type="radio" name="loader" value="quilt">Quilt
-                </label>
+                                <div class="select is-info">
+                                    <select id="listaDeVersiones">
+                                        <option value="dx" id="select_a_version" selected></option>
+                                    </select>
+                                </div>
+                                <button class="button is-info is-small" id="reiniciar-versiones"><span><i
+                                            class="fa-solid fa-arrows-rotate"></i></span></button>
+                                <br>
+                                <br>
+                                <div class="progress-bar info battly-s3gsqm animated-fill" id="progress-bar"
+                                    style="display: none;">
+                                    <div class="progress-fill battly-s3gsqm" id="progress" style="width: 88%;"></div>
+                                </div>
+                                <div id="tipo-de-versiones" style="display: none;">
+
+                                    <input type="radio" class="radio-button__input" id="radio10-inicio" name="loader"
+                                        value="vanilla">
+                                    <label class="radio-button__label radio-button__input-with-margin" id="radioVanilla"
+                                        for="radio10-inicio">
+                                        <span class="radio-button__custom"></span>
+                                        Vanilla
+                                    </label>
+
+                                    <input type="radio" class="radio-button__input" id="radio11-inicio" name="loader"
+                                        value="fabric">
+                                    <label class="radio-button__label radio-button__input-with-margin" id="radioFabric"
+                                        for="radio11-inicio">
+                                        <span class="radio-button__custom"></span>
+                                        Fabric
+                                    </label>
+
+                                    <input type="radio" class="radio-button__input" id="radio12-inicio" name="loader"
+                                        value="forge">
+                                    <label class="radio-button__label radio-button__input-with-margin" id="radioForge"
+                                        for="radio12-inicio">
+                                        <span class="radio-button__custom"></span>
+                                        Forge
+                                    </label>
+
+                                    <input type="radio" class="radio-button__input" id="radio13-inicio" name="loader"
+                                        value="quilt">
+                                    <label class="radio-button__label radio-button__input-with-margin" id="radioQuilt"
+                                        for="radio13-inicio">
+                                        <span class="radio-button__custom"></span>
+                                        Quilt
+                                    </label>
+                                </div>
+                                <div id="carga-de-versiones" style="display:none;">
+                                    <br>
+                                    <p style="font-size: 10px; color: #fff;" id="textInfoStatus"></p>
+                                    <progress class="progress is-info" id="progressBar1_"
+                                        style="border-radius: 5px; display: none;" value="1" max="100"
+                                        style="transition: all 0.5s;"></progress>
+                                    <br>
+                                    <p style="font-size: 10px;" id="logTextArea1_"></p>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <footer class="modal-card-foot" id="footermodaliniciarversion"
+                    style="display: none; background-color: #212121;">
+                    <button class="button is-success is-small" id="startStartVersion">Iniciar</button>
+                    <button class="button is-danger is-small" id="cancelStartVersion">Cancelar</button>
+                </footer>
             </div>
-            <div id="carga-de-versiones" style="display:none;">
-                <br>
-                <p style="font-size: 10px;" id="textInfoStatus"></p>
-                <progress class="progress is-info" id="progressBar1_" style="border-radius: 5px; display: none;" value="1" max="100" style="transition: all 0.5s;"></progress>
-                <br>
-                <p style="font-size: 10px;" id="logTextArea1_"></p>
-                <br>
+        </div>
+        <div class="bottom_bar">
+            <div>
+                <button id="settings-btn" class="button is-info" oncontextmenu="return false;"><span
+                        style="font-size: 20px;"><i class="fa-solid fa-gear"></i></span></button>
+                <button id="btnShowNews" class="button is-info"><span style="font-size: 20px;"><i
+                            class="fa-solid fa-newspaper"></i></span></button>
+                <button id="openBattlyFolderButton" class="button is-info" style="width: 45px;"><span
+                        style="font-size: 20px;"><i class="fa-solid fa-folder-open"></i></span></button>
+                <button id="BotonUnirseServidorDiscord" class="button is-info" style="width: 45px;"><span
+                        style="font-size: 20px;"><i class="fa-brands fa-discord"></i></span></button>
+                <button id="boton_abrir_mods" class="button is-info"><span><i class="fa-solid fa-cube"></i>
+                        Battly Mods</span></button>
+                <button id="music-btn" class="button is-info"><span><i class="fa-solid fa-music"></i>
+                        Battly Music</span></button>
+                <button id="friends-btn" class="button is-info"><span><i class="fa-solid fa-user-group"></i>
+                        Battly Social</span></button>
+                <!--<button id="servers-btn" class="button is-info"><span><i class="fa-solid fa-server"></i>
+                        Servers</span></button>-->
+            </div>
+            <div>
+
+                <button id="instancias-btn" class="button is-info"></button>
+                <button id="download-btn" class="button is-info"></button>
+                <button id="play-btn" class="button is-info"></button>
             </div>
         </div>
     </div>
-    </section>
-          <footer class="modal-card-foot" id="footermodaliniciarversion" style="display: none;">
-            <button class="button is-success is-small" id="startStartVersion">Iniciar</button>
-            <button class="button is-danger is-small" id="cancelStartVersion">Cancelar</button>
-          </footer>
-        </div>
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li style="
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+    ">
+                <img class="account-image mc-face-viewer-4x"
+                    style="border-radius: 5px; background-image: url('https://api.battlylauncher.com/api/skin/1ly4s0.png'); position: relative; margin: 0; margin-right: 10px;">
+                <p style="
+        font-size: 20px;
+    ">1ly4s0</p>
+            </li>
+            <li style="cursor: pointer;">Cambiar de cuenta</li>
+        </ul>
     </div>
-    <div class="bottom_bar">
-        <div>
-            <button id="settings-btn" class="button is-info"><span style="font-size: 20px;"><i class="fa-solid fa-gear"></i></span></button>
-            <button id="btnShowNews" class="button is-info" ><span style="font-size: 20px;"><i class="fa-solid fa-circle-question"></i></span></button>
-            <button id="BotonUnirseServidorDiscord" class="button is-info"><span><i class="fa-brands fa-discord"></i> Discord</span></button>
-            <button id="boton_abrir_mods" class="button is-info"><span><i class="fa-solid fa-cube"></i> Battly Mods</span></button>
-            <button id="music-btn" class="button is-info"><span><i class="fa-solid fa-music"></i> Battly Music</span></button>
-            <button id="friends-btn" class="button is-info"><span><i class="fa-solid fa-users"></i> Battly Social</span></button>
-        </div>
-        <div>
-            
-            <button id="instancias-btn" class="button is-info"></button>
-            <button id="download-btn" class="button is-info"></button>
-            <button id="play-btn" class="button is-info"></button>
-        </div>
-    </div>
-    </div>
-</body>
-</html>

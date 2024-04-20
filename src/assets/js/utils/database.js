@@ -51,6 +51,55 @@ class database {
         return this;
     }
 
+
+    addAccount(data) {
+        let actualAccounts = localStorage.getItem('accounts');
+        
+        if (actualAccounts) {
+            actualAccounts = JSON.parse(actualAccounts);
+            actualAccounts.push(data);
+        } else {
+            actualAccounts = [data];
+        }
+
+        localStorage.setItem('accounts', JSON.stringify(actualAccounts));
+    }
+
+    getAccounts() {
+        let actualAccounts = localStorage.getItem('accounts');
+        console.log(JSON.parse(actualAccounts));
+        if (actualAccounts) {
+            return JSON.parse(actualAccounts);
+        } else {
+            return [];
+        }
+    }
+
+    deleteAccount(uuid) {
+        let actualAccounts = localStorage.getItem('accounts');
+        actualAccounts = actualAccounts ? JSON.parse(actualAccounts) : [];
+
+        let newAccounts = actualAccounts.filter(account => account.uuid !== uuid);
+        localStorage.setItem('accounts', JSON.stringify(newAccounts));
+    }
+
+    getAccount(uuid) {
+        let actualAccounts = localStorage.getItem('accounts');
+        actualAccounts = actualAccounts ? JSON.parse(actualAccounts) : [];
+
+        return actualAccounts.find(account => account.uuid === uuid);
+    }
+
+    verifyInstall() {
+        let verifyInstall = localStorage.getItem('verify-install');
+        if (!verifyInstall) {
+            localStorage.setItem('verify-install', false);
+            return false;
+        } else {
+            return verifyInstall;
+        }
+    }
+
     add(data, type) {
         let store = this.getStore(type);
         return store.add({ key: this.genKey(data.uuid), value: data });
@@ -110,7 +159,7 @@ class database {
             return "not found";
         }
         return this.db.transaction(type, "readwrite").objectStore(type);
-    }    
+    } 
 
     genKey(int) {
         var key = 0;

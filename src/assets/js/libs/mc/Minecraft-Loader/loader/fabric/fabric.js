@@ -21,7 +21,19 @@ class FabricMC {
     }
     async downloadJson(Loader) {
         let build;
-        let metaData = await (0, node_fetch_1.default)(Loader.metaData).then(res => res.json());
+        let metaData
+        
+        try {
+            metaData = await (0, node_fetch_1.default)(Loader.metaData).then(res => res.json());
+
+            if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'fabric', this.options.loader.version))) {
+                fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'fabric', this.options.loader.version), { recursive: true });
+            }
+            
+            fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'fabric', this.options.loader.version, 'metaData.json'), JSON.stringify(metaData));
+        } catch (error) {
+            metaData = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'fabric', this.options.loader.version, 'metaData.json')));
+        }
         let version = metaData.game.find(version => version.version === this.options.loader.version);
         let AvailableBuilds = metaData.loader.map(build => build.version);
         if (!version)
@@ -35,7 +47,17 @@ class FabricMC {
         if (!build)
             return { error: `Fabric Loader ${this.options.loader.build} not found, Available builds: ${AvailableBuilds.join(', ')}` };
         let url = Loader.json.replace('${build}', build.version).replace('${version}', this.options.loader.version);
-        let json = await (0, node_fetch_1.default)(url).then(res => res.json()).catch(err => err);
+
+        let json;
+        try {
+            json = await (0, node_fetch_1.default)(url).then(res => res.json());
+            if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'fabric', this.options.loader.version, 'fabric.json'))) {
+                fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'fabric', this.options.loader.version, 'fabric.json'), JSON.stringify(json));
+            }
+        } catch (error) {
+            json = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'fabric', this.options.loader.version, 'fabric.json')));
+        }
+
         return json;
     }
     async downloadLibraries(json) {

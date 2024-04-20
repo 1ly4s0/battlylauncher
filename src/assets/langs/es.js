@@ -25,12 +25,15 @@ const strings = {
     "open_instance_folder": "Abrir carpeta",
     "delete_instance": "Eliminar",
     "create_instance": "Crear instancia",
+    "edit_instance": "Editar instancia",
+    "save_instance": "Guardar instancia",
     "instance_name": "Nombre de la instancia",
     "instance_description": "Descripción de la instancia",
     "instance_image": "Imagen de la instancia",
     "instance_version": "Versión de la instancia",
-    "create_instance": "Crear instancia",
+    "instance_version2": "Editar la versión de tu instancia puede causar problemas (y más cuando son modpacks), asegúrate de que la versión sea compatible con los mods que tienes instalados.",
     "instance_deleted_correctly": "Se ha eliminado la instancia correctamente.",
+    "instance_saved_correctly": "Se ha guardado la instancia correctamente.",
     "preparing_instance": "Preparando instancia",
     "downloading_instance": "Descargando instancia",
     "downloading_version": "Descargando versión",
@@ -44,6 +47,11 @@ const strings = {
     "estimated_time_not_available": "Tiempo estimado no disponible",
     "remaining": "Quedan",
     "remaining_two": "Queda",
+    "checking_java": "Comprobando Java",
+    "checking_assets": "Comprobando assets",
+    "installing_java": "Instalando Java",
+    "folder_opened": "Carpeta abierta correctamente",
+    "battly_folder_opened": "Carpeta de Battly abierta correctamente",
 
     "are_you_sure": "¿Estás seguro/a?",
     "are_you_sure_text": "Esta acción no se puede deshacer.",
@@ -78,13 +86,13 @@ const strings = {
 
     /* settings */
     
-    "accounts_btn": '<span><i class="fa-solid fa-user"></i> Cuentas</span>',
-    "java_btn": '<span><i class="fa-brands fa-java"></i> Java</span>',
-    "ram_btn": '<span><i class="fa-solid fa-memory"></i> RAM</span>',
-    "launcher_btn": '<span><i class="fa-solid fa-b"></i> Launcher</span>',
-    "theme_btn": '<span><i class="fa-solid fa-palette"></i> Tema</span>',
-    "background_btn": '<span><i class="fa-solid fa-image"></i> Fondo</span>',
-    "save_btn": '<span><i class="fa-solid fa-floppy-disk"></i> Guardar</span>',
+    "accounts_btn": 'Cuentas',
+    "java_btn": 'Java',
+    "ram_btn": 'RAM',
+    "launcher_btn": 'Launcher',
+    "theme_btn": 'Tema',
+    "background_btn": 'Fondo',
+    "save_btn": 'Guardar',
     "account_information": "Información de la cuenta",
     "mc_id_text": "ID de MC:",
     "showskin_userinfo_btn": "Mostrar Skin",
@@ -92,7 +100,7 @@ const strings = {
     "set_skin": "Establecer skin",
     "my_accounts": "Mis cuentas",
     "add_account_text": "Añadir cuenta",
-    "java_settings": 'Ajustes de Java <i class="fa-brands fa-java fa-sm"></i>',
+    "java_settings": 'Ajustes de Java',
     "java_text_info": `<span style="font-size: 30px; font-weight: 700;">Java</span><br><br>En este apartado podrás
                     configurar la versión de Java que se usará para iniciar tu juego. Si no sabes lo que estás haciendo,
                     no toques nada de este apartado.<br><br>
@@ -106,7 +114,7 @@ const strings = {
                         diferente de Java.
                     </span>
                     `,
-    "ram_settings": 'Ajustes de la RAM <i class="fa-solid fa-memory fa-sm"></i>',
+    "ram_settings": 'Ajustes de la RAM',
     "ram_text_info": `En este aparado podrás configurar
                     la RAM que se le asignará a tu juego. Esto es importante para que tu juego funcione correctamente.
                     Si no sabes lo que estás haciendo, no toques nada de este apartado.<br><br>
@@ -121,16 +129,16 @@ const strings = {
     "of_ram_disponible": "de RAM disponible",
     "battly_settings": "Configuración de Battly",
     "battly_settings_information": `<span style="font-size: 30px; font-weight: 700;">Inicio de Minecraft</span><br><br>En este apartado
-                    podrás configurar la acción que realizará Battly al abrir Minecraft, ya sea cerrar Battly, cerrar
-                    Minecraft o mantener Battly abierto. Si no sabes lo que estás haciendo, no toques nada de este
-                    apartado.<br><br>
-                    <br>
+                    podrás configurar la acción que realizará Battly al abrir Minecraft entre más ajustes generales.<br><br>
                     <b style="font-size: 20px;">Qué hacer al abrir Minecraft:</b>
                     <br>`,
     "minimalize_battly": "Ocultar Battly después de iniciar Minecraft",
+    "music_settings_information": "Música",
+    "minimize_music": "Ocultar el panel de música después de iniciar Minecraft",
+    "keep_music_opened": "Mantener el panel de música abierto después de iniciar Minecraft",
     "keep_battly_opened": "Mantener Battly abierto después de iniciar Minecraft",
     "battly_logs_text": "Registros de Battly:",
-    "get_socketid": '<span><i class="fa-solid fa-chart-simple"></i> Obtener ID única</span>',
+    "get_socketid": 'Obtener ID única',
     "battly_theme": "Personalizar Battly",
     "welcome": "¡Bienvenido/a!",
     "battly_theme_text": "¡Bienvenido/a al nuevo panel de personalización de Battly! Aquí podrás personalizar Battly a tu gusto, cambiando el tema, las imágenes de fondo y mucho más. ¡Esperamos que te guste!",
@@ -138,6 +146,7 @@ const strings = {
     "buttons_color": "Color de los botones",
     "bottom_bar_text": "Color de la barra inferior",
     "bottom_bar_opacity": "Transparencia de la barra inferior",
+    "background_loading_screen_color_text": "Color de fondo de la pantalla de carga",
     "starting_music": "Sonido de inicio",
     "resize_image_text": "Recortar imagen",
     "set_background_text": "Establecer fondo",
@@ -153,6 +162,10 @@ const strings = {
     "java_path_didnt_set": "Ruta de java no establecida",
     "java_path_set_successfully": "La ruta de java se ha establecido correctamente",
     "the_file_name_java": "El nombre del archivo debe ser java o javaw",
+    "java_path_reset_successfully": "La ruta de java se ha restablecido correctamente",
+    "you_are_premium_background": "Ya que eres premium, ahora podrás elegir si subir una imagen estática o animada para tu fondo de Battly.",
+    "select_a_type_background": "Elige qué fondo quieres establecer",
+    "uuid_copied_correctly": "Se ha copiado el UUID correctamente",
 
 
     /* loading */
@@ -165,6 +178,8 @@ const strings = {
     "loading_minecraft_versions": "Cargando versiones de Minecraft",
     "minecraft_versions_loaded": "Versiones de Minecraft cargadas",
     "error_loading_minecraft_versions": "Error al cargar las versiones de Minecraft",
+    "static_background_text": "Fondo estático (imagen)",
+    "animated_background_text": "Fondo animado (vídeo)",
 
 
     /* inicio */
@@ -172,6 +187,8 @@ const strings = {
     "mojang_copyright": "Todas las versiones son las oficiales sin modificaciones. Las versiones modificadas ya sean de Fabric, Forge, Quilt u OptiFine son creadas por la comunidad y no por Mojang. Todos los derechos reservados a Mojang Studios.",
     "delete_version": "Eliminar versión",
     "type_of_version": "Tipo de versión",
+    "no_accounts": "No has iniciado sesión para jugar",
+    "no_accounts_text": "Añade una cuenta para jugar. Presiona ⚙️ > Añadir cuenta",
     
     "latest": "Última",
     "recommended": "Recomendada",
@@ -186,11 +203,26 @@ const strings = {
 
     "downloading": "Descargando",
     "downloading_files": "Descargando archivos",
+    "downloading_file": "Descargando archivo",
     "downloading_librairies": "Descargando librerías",
     "downloading_natives": "Descargando nativos",
     "installing_loader": "Instalando Loader",
     "extracting_loader": "Extrayendo Loader",
+    "downloading_files_completed": "Descargando archivos... Completado",
+    "downloading_files_completed_installing_dependencies": "Descarga de archivos completada. Instalando dependencias",
+    "opening_optifine": "Abriendo OptiFine",
+    "downloading_json_files": "Descargando archivos JSON",
+    "downloading_minecraft_files": "Descargando archivos de Minecraft",
+    "creating_folder": "Creando carpeta",
+    "folder": "Carpeta",
+    "created_successfully": "creada correctamente",
     "downloaded_successfully": "Descargado correctamente",
+    "the_folder": "La carpeta",
+    "already_exists": "ya existe",
+    "downloading_jar_file_of": "Descargando archivo JAR de",
+    "downloading_jar_file": "Descargando archivo JAR",
+    "jar_file_of": "Archivo JAR de",
+    "skipping": "Saltando",
     "starting_minecraft": "Iniciando Minecraft",
     "error_downloading": "Error al descargar",
     "status": "Estado",
@@ -201,9 +233,18 @@ const strings = {
     "deleting_temp_files": "Eliminando archivos temporales",
     "temp_files_deleted_successfully": "Archivos temporales eliminados correctamente",
     "error_downloading_version": "Error al descargar la versión",
-    "version_java_error": "No tienes la versión requerida de Java, para descargarla, descarga la 1.20.1 de vanilla y luego vuelve a intentarlo.",
+    "version_java_error_title": "No puedes jugar versiones externas",
+    "version_java_error": "Para jugarlas, descarga la 1.20.1 de vanilla para que se configure Java.",
     "installing_minecraft_files": "Instalando archivos de Minecraft",
     "client_files_downloaded_successfully": "Archivos del cliente completados",
+    "you_dont_have_friends_1": "No tienes amigos...😔 ¡Añade a alguien!",
+    "you_dont_have_friends_2": "No tienes amigos, pídele a alguien su nombre :D",
+    "you_dont_have_friends_3": "No tienes amigos... Parecido a la realidad",
+    "you_dont_have_friends_4": "Que vacío está esto por aquí... Añade a alguien a ver si se anima",
+    "you_dont_have_friends_5": "No tienes amigos... ¿Quieres ser mi amigo?",
+    "you_dont_have_friends_6": "¿Porqué entras aquí si no tienes amigos?",
+    "you_dont_have_friends_7": "Vamos a llenar esto, dale a añadir amigos y añade a alguien",
+    "you_dont_have_friends_8": "Vaya, no tienes amigos... prueba a enviar una solicitud a alguien",
 
     "error_detected_one": "Error detectado: Minecraft se ha cerrado inesperadamente. Vuelve a iniciar Minecraft.",
     "error_detected_two": "Error detectado: Error desconocido. Vuelve a iniciar Minecraft.",
@@ -236,24 +277,26 @@ const strings = {
     "access_logs_denied": "Se ha denegado el acceso a los logs.",
     "access_logs_denied_text": "Si crees que estás siendo atacado, contacta con el equipo de soporte de Battly urgentemente.",
     "your_unique_id_is": "Tu ID única de Battly es:",
-    "dont_share_it": "No compartas esta ID con nadie, ya que podría suponer un riesgo para tu seguridad. Si crees que estás siendo atacado, contacta con el equipo de soporte de Battly urgentemente.",
+    "dont_share_it": "Usa esta ID para poder recibir mejor ayuda con tu problema.",
     "id_copied_correctly": "Se ha copiado la ID correctamente.",
     "copy": "Copiar",
 
     /* mods */
     "return": "Volver",
-    "install_modpack": "Instalar modpack",
+    "install_modpack": "Instalar ModPack",
     "search_mods": "Buscar mods...",
     "compatible_with_curseforge_or_modrinth": "Compatible con ModPacks de CurseForge o Modrinth",
     "install_modpack_text": "Instalar ModPack",
     "you_didnt_selected_any_file": "No has seleccionado ningún archivo",
-    "installing_modpack_can_take": '<i class="fa-solid fa-spinner fa-spin-pulse"></i> Instalando ModPack... Puede tardar...',
+    "installing_modpack_can_take": 'Instalando ModPack... Puede tardar...',
     "no_description": "Sin descripción",
     "installing_file": "Instalando archivo",
     "modpack_installed": "ModPack instalado",
     "modpack_installed_correctly": "instalado correctamente",
     "installing_mod": "Instalando mod",
     "the_file_is_not_compatible": "El archivo no es compatible",
+    "the_modpack_is_not_compatible": "El ModPack no es compatible",
+    "the_modpack_is_not_compatible_text": "Asegúrate de que sea de CurseForge o Modrinth.",
     "searching_mods": "Buscando mods",
     "downloading_mod": "Descargando mod",
     "mod_downloaded_successfully": "descargado correctamente",
@@ -269,12 +312,25 @@ const strings = {
     "view_on_modrinth": "Ver en Modrinth",
     "download_mod": "Descargar mod",
     "delete_mod": "Eliminar mod",
+    "mod_deleted_correctly": "Mod eliminado correctamente",
     "all_this_information_copyright_modrinth": 'Toda esta información (imágenes, nombres, descargas, archivos) provienen de la API oficial de <a href="https://modrinth.com" target="_blank">Modrinth</a>. Todos los derechos reservados.',
     "deleted_successfully": "eliminado correctamente",
+    "the_installation_is_in_2nd_plan": "La instalación está en segundo plano",
+    "the_installation_is_in_2nd_plan_text": "Puedes seguir navegando por Battly mientras se instala el ModPack.",
+    "the_installation_was_cancelled": "La instalación fue cancelada",
+    "the_installation_was_cancelled_text": "Has cancelado la instalación del ModPack.",
+
+    "checking_premium": "Comprobando si eres premium",
+    "account_selected": "Cuenta seleccionada",
+    "account_selected_text": "Cuenta",
+    "account_selected_text_two": "seleccionada correctamente",
 
 
     "install": "Instalar",
 
+
+
+    "logs_saved_correctly": "Registros guardados correctamente",
 
     /* battly social */
     "welcome_battly_social": "👋 Bienvenido/a al nuevo panel de amigos de Battly. Aquí podrás ver a todos tus amigos, añadirlos, ver qué están jugando y sus estadísticas",
@@ -282,7 +338,7 @@ const strings = {
     "add_friend": "Añadir amigo",
     "show_requests": "Ver solicitudes",
     "accept": "Aceptar",
-    "starting_version_can_take": '<span><i class="fa-solid fa-spinner fa-spin-pulse"></i>  Iniciando versión... Puede tardar un poco...</span>',
+    "starting_version_can_take": 'Iniciando versión... Puede tardar un poco...',
     "you_dont_have_any_friend_requests": "No tienes solicitudes de amistad",
     "friend_requests": "Solicitudes de amistad",
     "request_accepted": "Solicitud aceptada",
@@ -312,7 +368,7 @@ const strings = {
     "use_account_battly_or_microsoft": "Usa tu cuenta de Battly o Microsoft para iniciar sesión en Battly",
     "username": 'Nombre de usuario',
     "password": 'Contraseña',
-    "login_text_panel_login": '<i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión',
+    "login_text_panel_login": 'Iniciar Sesión',
     "register_open_btn": 'Regístrate',
     "lost_your_account": "¿Olvidaste tu contraseña?",
     "recover_it_here": "Recupérala aquí",
@@ -320,6 +376,10 @@ const strings = {
     "you_dont_have_account": "¿No tienes cuenta?",
     "account_already_exists": "Ya has iniciado sesión con esta cuenta",
     "password_not_set": "Se ha cerrado sesión de tu cuenta. Debes iniciar sesión de nuevo para continuar.",
+    "login_microsoft_adv_title": "Iniciar sesión con Microsoft",
+    "login_microsoft_adv_text": "Hemos recibido muchas quejas por problemas con el inicio de sesión de Microsoft... Pero... Todos es gente que no tiene Minecraft comprado... Si tienes Minecraft comprado, puedes iniciar sesión con Microsoft sin problemas. Si no, inicia sesión con una cuenta de Battly.",
+    "login_microsoft_accept": "Tengo Minecraft comprado",
+    "login_microsoft_cancel": "No tengo Minecraft comprado",
 
     /* months */
     "january": "Enero",
@@ -337,7 +397,7 @@ const strings = {
 
     /* music */
     "you_dont_have_songs_in_your_playlist": "No tienes canciones en tu lista de reproducción",
-    "save_playlist": "Guardar playlist",
+    "save_playlist": "Guardar",
     "saved_playlists": "Playlists guardadas",
     "playlist_name": "Título de la playlist",
     "save": "Guardar",
@@ -353,17 +413,38 @@ const strings = {
     "songs_loaded_playing": "¡Música cargada!<br>Reproduciendo",
     "playlist_deleted_successfully": "Playlist eliminada correctamente",
     "add": "Añadir",
+    "added": "Añadido",
     "finded": "Encontrados",
     "not_founded": "No encontrados",
     "playing_now": "Reproduciendo ahora",
     "your_playlist": "Tu playlist",
     "no_song": "Ninguna canción",
+    "add_songs_to_your_playlist": "Añade una buscándola en el buscador de aquí abajo",
     "song_name": "Nombre de la canción",
-    "playlists": '<span><i class="fa-solid fa-list-ul"></i> Playlists</span>',
-    "search_song": '<span><i class="fa-solid fa-search"></i> Buscar</span>',
-    "save_playlist": '<span><i class="fa-solid fa-save"></i> Guardar playlist</span>',
+    "playlists": 'Playlists',
+    "search_song": 'Buscar',
+    "save_playlist_text": "Guardar playlist",
+    "playlist_deleted_correctly": "Playlist eliminada correctamente",
+    "volume": "Volumen",
+    "mods_list_button": "Mis Mods",
 
+
+    "mods": "Mods",
+    "welcome_mods": "👋 Bienvenido/a al nuevo panel de mods de Battly. Aquí podrás gestionar tus mods descargados en Battly.",
     
+
+    "premium_screen_1": "Si estás leyendo esto es porque eres usuario Plus (premium) de Battly (o habrás usado truquitos para ver este mensaje). <b>Ahora podrás disfrutar de todas tus ventajas en Battly como:</b>",
+    "premium_screen_2": "Fondo animado en Battly",
+    "premium_screen_3": "Exactamente, normalmente podías añadir una imagen de fondo, pero al ser premium <b>podrás añadir un fondo animado (un vídeo que se repite).</b>",
+    "premium_screen_4": "Skins HD + Capas Custom",
+    "premium_screen_5": "Normalmente, siendo usuario normal, sólo podías subir tu skin y elegir entre las 4 capas que te da Battly, pero ahora <b>podrás añadir una skin HD y tu propia capa.</b>",
+    "premium_screen_6": "Insignia única en Battly",
+    "premium_screen_7": "Cuando acabes de leer esto, mira tu perfil, habrá aparecido un <i class=\"fa-solid fa-fire\"></i>, <b>eso significa que eres premium.</b>",
+    "premium_screen_8": "Rol en el servidor de Discord",
+    "premium_screen_9": "Si eres premium, tendrás un rol especial en el servidor de Discord de Battly.",
+    "premium_screen_10": "Soporte priotirario",
+    "premium_screen_11": "Al ser premium, tendrás soporte prioritario para solucionar tus problemas de Battly con nuestros mejores staffs.",
+    "premium_screen_12": "Battly, siempre se está actualizando, por lo cual, con el tiempo, iremos añadiendo más ventajas para vosotros. ¡Gracias por formar parte de Battly!",
 };
 
 export default strings;

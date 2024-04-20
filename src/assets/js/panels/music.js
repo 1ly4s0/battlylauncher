@@ -4,7 +4,7 @@
 const { ipcMain, ipcRenderer } = require('electron');
 import { database, changePanel, addAccount, accountSelect } from '../utils.js';
 
-const Swal = require('./assets/js/libs/sweetalert/sweetalert2.all.min');
+const Swal = require('./assets/js/libs/sweetalert/sweetalert2.all.min.js');
 const usetube = require('./assets/js/libs/youtube/usetube');
 
 const ytdl = require('ytdl-core');
@@ -26,6 +26,7 @@ const Toast = Swal.mixin({
 
 let musicList_ = [];       
 import { Lang } from "../utils/lang.js";
+import { Alert } from "../utils/alert.js";
 let lang;
 
 class Music {
@@ -64,7 +65,7 @@ class Music {
       let playlistsFile = await fs.readFileSync(`${dataDirectory}/battly/launcher/music/playlists.json`, 'utf8');
       let playlists = JSON.parse(playlistsFile);
 
-      if (musicList_.length === 0) return Toast.fire({
+      if (musicList_.length === 0) return new Alert().ShowAlert({
         icon: 'error',
         title: lang.you_dont_have_songs_in_your_playlist
       });
@@ -82,13 +83,13 @@ class Music {
       // Crear el elemento div con la clase "modal-card" y estilo de fondo y agregarlo al div principal
       const modalCardDiv = document.createElement('div');
       modalCardDiv.className = 'modal-card';
-      modalCardDiv.style.backgroundColor = '#444444';
+      modalCardDiv.style.backgroundColor = '#212121';
       modalDiv.appendChild(modalCardDiv);
 
       // Crear el elemento header con la clase "modal-card-head" y estilo de fondo y agregarlo al div modal-card
       const headerDiv = document.createElement('header');
       headerDiv.className = 'modal-card-head';
-      headerDiv.style.backgroundColor = '#444444';
+      headerDiv.style.backgroundColor = '#212121';
       modalCardDiv.appendChild(headerDiv);
 
       let modalCloseButton = document.createElement("button");
@@ -106,7 +107,7 @@ class Music {
       // Crear el elemento section con la clase "modal-card-body" y estilos de fondo y color, y agregarlo al div modal-card
       const bodySection = document.createElement('section');
       bodySection.className = 'modal-card-body';
-      bodySection.style.backgroundColor = '#444444';
+      bodySection.style.backgroundColor = '#212121';
       bodySection.style.color = '#fff';
       modalCardDiv.appendChild(bodySection);
 
@@ -124,7 +125,7 @@ class Music {
       // Crear el elemento footer con la clase "modal-card-foot" y estilo de fondo y agregarlo al div modal-card
       const footerDiv = document.createElement('footer');
       footerDiv.className = 'modal-card-foot';
-      footerDiv.style.backgroundColor = '#444444';
+      footerDiv.style.backgroundColor = '#212121';
       modalCardDiv.appendChild(footerDiv);
 
       // Crear el elemento button con la clase "button is-info" y texto "Guardar", y agregarlo al div footer
@@ -136,13 +137,13 @@ class Music {
       saveButton.addEventListener('click', () => {
         const playlistName = inputText.value;
 
-        if (playlistName.length < 0) return Toast.fire({
+        if (playlistName.length <= 0) return new Alert().ShowAlert({
           icon: 'error',
           title: lang.you_need_to_set_a_playlist_name
         });
 
         for (let playlist in playlists) {
-          if (playlist.name === playlistName) return Toast.fire({
+          if (playlist.name === playlistName) return new Alert().ShowAlert({
             icon: 'error',
             title: lang.already_have_a_playlist_with_this_name
           });
@@ -159,7 +160,7 @@ class Music {
 
         modalDiv.remove();
 
-        Toast.fire({
+        new Alert().ShowAlert({
           icon: 'success',
           title: lang.playlist_saved_correctly
         });
@@ -202,13 +203,13 @@ class Music {
       // Crear el elemento div con la clase "modal-card" y estilo de fondo y agregarlo al div principal
       const modalCardDiv = document.createElement('div');
       modalCardDiv.className = 'modal-card';
-      modalCardDiv.style.backgroundColor = '#444444';
+      modalCardDiv.style.backgroundColor = '#212121';
       modalDiv.appendChild(modalCardDiv);
 
       // Crear el elemento header con la clase "modal-card-head" y estilo de fondo y agregarlo al div modal-card
       const headerDiv = document.createElement('header');
       headerDiv.className = 'modal-card-head';
-      headerDiv.style.backgroundColor = '#444444';
+      headerDiv.style.backgroundColor = '#212121';
       modalCardDiv.appendChild(headerDiv);
 
       let modalCloseButton = document.createElement("button");
@@ -230,7 +231,7 @@ class Music {
       // Crear el elemento section con la clase "modal-card-body" y estilos de fondo y color, y agregarlo al div modal-card
       const bodySection = document.createElement('section');
       bodySection.className = 'modal-card-body';
-      bodySection.style.backgroundColor = '#444444';
+      bodySection.style.backgroundColor = '#212121';
       bodySection.style.color = '#fff';
       modalCardDiv.appendChild(bodySection);
 
@@ -283,13 +284,13 @@ class Music {
           // Crear la tarjeta del modal
           const modalCard = document.createElement("div");
           modalCard.classList.add("modal-card");
-          modalCard.style.backgroundColor = "#444444";
+          modalCard.style.backgroundColor = "#212121";
           modalCard.style.borderRadius = "5px";
 
           // Crear el cuerpo de la tarjeta del modal
           const modalCardBody = document.createElement("section");
           modalCardBody.classList.add("modal-card-body");
-          modalCardBody.style.backgroundColor = "#444444";
+          modalCardBody.style.backgroundColor = "#212121";
           modalCardBody.style.textAlign = "center";
 
           // Crear la imagen
@@ -365,59 +366,61 @@ class Music {
                     paragraph.innerText = `${lang.loading} ${music.name} (${i}/${orderedMusicList.length})`;
                     i++;
 
+                    const duration = music.duration.split(":").reduce((acc, time) => (60 * acc) + +time);
+                    const minutes = Math.floor(duration / 60);
+          const seconds = duration % 60;
+          const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+          const durationString = minutes + ":" + formattedSeconds;
+
                     const cardDiv = document.createElement("div");
-                    cardDiv.classList.add("card");
-                    cardDiv.classList.add("cards");
-                    cardDiv.setAttribute("data-id", i + 1);
+                    cardDiv.classList.add("playlist-song");
 
                     const img = document.createElement("img");
                     img.src = music.img;
-                    img.alt = lang.thumbnail;
-                    img.classList.add("thumbnail");
+                    img.classList.add("playlist-song-image");
                     cardDiv.appendChild(img);
 
-                    const cardContentDiv = document.createElement("div");
-                    cardContentDiv.classList.add("card-content");
-                    cardContentDiv.classList.add("card-content1");
+                    const infoDiv = document.createElement("div");
+                    infoDiv.classList.add("playlist-song-info");
 
-                    const songTitleDiv = document.createElement("div");
-                    songTitleDiv.classList.add("song-title");
-                    songTitleDiv.innerText = music.name;
-                    cardContentDiv.appendChild(songTitleDiv);
+                    const titleP = document.createElement("p");
+                    titleP.classList.add("playlist-song-title");
+                    titleP.innerText = music.name.substring(0, 20) + "...";
+                    infoDiv.appendChild(titleP);
 
-                    const artistDiv = document.createElement("div");
-                    artistDiv.classList.add("artist");
-                    artistDiv.innerText = music.author;
-                    cardContentDiv.appendChild(artistDiv);
+                    const artistP = document.createElement("p");
+                    artistP.classList.add("playlist-song-artist");
+                    artistP.innerHTML = `<span><i class="fa-solid fa-user"></i> ${music.author}  <i class="fa-solid fa-clock"></i> ${durationString}</span>`;
+                    infoDiv.appendChild(artistP);
+
+                    cardDiv.appendChild(infoDiv);
 
                     const button = document.createElement("button");
-                    button.classList.add("delete-button");
                     button.classList.add("button");
                     button.classList.add("is-danger");
-                    button.innerText = lang.delete;
+                    button.classList.add("playlist-song-button");
+                    button.innerHTML = '<i class="fa-solid fa-trash"></i>'
 
                     button.addEventListener("click", async () => {
                       button.disabled = true;
                       button.classList.add("is-loading");
-                      const index = orderedMusicList.indexOf(music);
+                      const index = musicList_.indexOf(music);
                       if (index > -1) {
-                        orderedMusicList.splice(index, 1);
+                        musicList_.splice(index, 1);
                       }
                       cardDiv.remove();
                       button.disabled = false;
                       button.classList.remove("is-loading");
                       button.classList.remove("is-info");
                       button.classList.add("is-success");
-
+        
                       setTimeout(() => {
                         button.classList.remove("is-success");
                         button.classList.add("is-danger");
                       }, 2000);
                     });
-
-                    cardContentDiv.appendChild(button);
-                    cardDiv.appendChild(cardContentDiv);
-
+                      
+                    cardDiv.appendChild(button);
                     resultsDiv.appendChild(cardDiv);
                   }
                 }
@@ -447,7 +450,7 @@ class Music {
           }
           fs.writeFileSync(`${dataDirectory}/battly/launcher/music/playlists.json`, JSON.stringify(playlists));
           cardDiv.remove();
-          Toast.fire({
+          new Alert().ShowAlert({
             icon: 'success',
             title: lang.playlist_deleted_correctly
           });
@@ -482,14 +485,15 @@ class Music {
       changePanel("home");
     });
 
-    const wrapper = document.getElementById("card-wrapper"),
-      musicImg = wrapper.querySelector(".img-area img"),
-      musicName = document.querySelector(".song-details .artist"),
-      playPauseBtn = wrapper.querySelector(".play-pause"),
-      prevBtn = wrapper.querySelector("#prev"),
-      nextBtn = wrapper.querySelector("#next"),
-      mainAudio = wrapper.querySelector("#main-audio"),
-      progressArea = wrapper.querySelector(".progress-area"),
+    const wrapper = document.getElementById("music-panel-card"),
+      musicImg = document.getElementById("music-player-card-img"),
+      musicName = document.getElementById("no_song"),
+      musicAuthor = document.getElementById("music-author"),
+      playPauseBtn = document.getElementById("music-player-card-pause"),
+      prevBtn = document.getElementById("prev"),
+      nextBtn = document.getElementById("next"),
+      mainAudio = document.getElementById("main-audio"),
+      progressArea = document.getElementById("music-panel-progress"),
       progressBar = progressArea.querySelector(".progress-bar");
     
       
@@ -516,8 +520,9 @@ class Music {
           const duration = info.videoDetails.lengthSeconds;
           const minutes = Math.floor(duration / 60);
           const seconds = duration % 60;
-          const durationString = minutes + ":" + seconds;
-      
+          const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+          const durationString = minutes + ":" + formattedSeconds;
+
           musicList_.push({
             url: videoId,
             name: info.videoDetails.title,
@@ -539,65 +544,80 @@ class Music {
       let btnSearch = document.getElementById("reproducir-btn");
       btnSearch.disabled = true;
       btnSearch.classList.add("is-loading");
-      let results = await usetube.searchVideo(songName)
+      let results = await usetube.searchVideo(songName);
       results = results.videos;
 
       if (results.length > 0) {
-            
 
-        const resultsDiv = document.getElementById("playlist");
+        const resultsDiv = document.getElementById("search-results");
         resultsDiv.innerHTML = "";
+
+        const getTitle = async (videoId) => {
+          try {
+            const info = await ytdl.getBasicInfo(videoId);
+            return info.videoDetails.title;
+          } catch (error) {
+            console.error(error);
+            return "Sin título";
+          }
+        };
+
+        const getAuthor = async (videoId) => {
+          try {
+            const info = await ytdl.getBasicInfo(videoId);
+            return info.videoDetails.author.name;
+          } catch (error) {
+            console.error(error);
+            return "Sin autor";
+          }
+        };
 
         for (let i = 0; i < results.length; i++) {
           const result = results[i];
           const videoId = result.id;
-          const title = result.title;
-          const author = result.artist;
+          const title = await getTitle(videoId);
+          const author = await getAuthor(videoId);
           const thumbnail = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+          //convertir result.duration que está en segundo a minutos:segundos
+          const minutes = Math.floor(result.duration / 60);
+          const seconds = result.duration % 60;
+          const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+          const duration = minutes + ":" + formattedSeconds;
 
-          /* crear esto:
-          <div class="card cards" data-id="1">
-  <!-- Datos de la primera canción -->
-  <img
-    src="miniatura"
-    alt="Miniatura" class="thumbnail">
-  <div class="card-content">
-    <div class="song-title">Nombre de la Canción 1</div>
-    <div class="artist">Nombre del Artista</div>
-    <button class="delete-button button is-infio">Añadir</button>
-  </div>
-</div>
-          */
-                
+
           const cardDiv = document.createElement("div");
-          cardDiv.classList.add("card");
+          cardDiv.classList.add("search-song");
           cardDiv.classList.add("cards");
           cardDiv.setAttribute("data-id", i + 1);
 
           const img = document.createElement("img");
           img.src = thumbnail;
-          img.alt = lang.thumbnail;
-          img.classList.add("thumbnail");
+          img.classList.add("search-song-image");
           cardDiv.appendChild(img);
 
-          const cardContentDiv = document.createElement("div");
-          cardContentDiv.classList.add("card-content");
-          cardContentDiv.classList.add("card-content1");
+          const infoDiv = document.createElement("div");
+          infoDiv.classList.add("search-song-info");
 
-          const songTitleDiv = document.createElement("div");
-          songTitleDiv.classList.add("song-title");
-          songTitleDiv.innerText = title;
-          cardContentDiv.appendChild(songTitleDiv);
+          const titleP = document.createElement("p");
+          titleP.classList.add("search-song-title");
+          if(title.length > 70) {
+            titleP.innerText = title.substring(0, 70) + "...";
+          } else {
+            titleP.innerText = title;
+          }
+          infoDiv.appendChild(titleP);
 
-          const artistDiv = document.createElement("div");
-          artistDiv.classList.add("artist");
-          artistDiv.innerText = author;
-          cardContentDiv.appendChild(artistDiv);
+          const artistP = document.createElement("p");
+          artistP.classList.add("search-song-artist");
+          artistP.innerHTML = `<span><i class="fa-solid fa-user"></i> ${author}  <i class="fa-solid fa-clock"></i> ${duration}</span>`;
+          infoDiv.appendChild(artistP);
+
+          cardDiv.appendChild(infoDiv);
 
           const button = document.createElement("button");
-          button.classList.add("delete-button");
           button.classList.add("button");
           button.classList.add("is-info");
+          button.classList.add("search-song-button");
           button.innerText = lang.add;
 
           button.addEventListener("click", async () => {
@@ -606,12 +626,14 @@ class Music {
             await playAudioFromVideoId(videoId);
             button.disabled = false;
             button.classList.remove("is-loading");
+            button.innerHTML = `<span><i class="fa-solid fa-circle-check"></i> ${lang.added}</span>`;
             button.classList.remove("is-info");
             button.classList.add("is-success");
 
             setTimeout(() => {
               button.classList.remove("is-success");
               button.classList.add("is-info");
+              button.innerHTML = lang.add;
 
 
 
@@ -619,87 +641,66 @@ class Music {
                 animation: 150,
                 ghostClass: 'seleccionado',
                 chosenClass: 'seleccionado',
-                onEnd: handleSortEnd, // Llamar a la función handleSortEnd al finalizar el arrastre
+                onEnd: handleSortEnd,
               });
 
 
                   
-              const resultsDiv = document.getElementById("playlist");
-              resultsDiv.innerHTML = "";
+              const resultsDiv1 = document.getElementById("playlist");
+              resultsDiv1.innerHTML = "";
 
               for (let music of musicList_) {
+                
+                const cardDiv1 = document.createElement("div");
+                cardDiv1.classList.add("playlist-song");
 
-                //eliminar los elementos de la lista de reproducción
-                    
-                /* crear esto:
-                <div class="card cards grab" data-id="1">
-        <!-- Datos de la primera canción -->
-        <img
-          src="miniatura"
-          alt="Miniatura" class="thumbnail">
-        <div class="card-content">
-          <div class="song-title">Nombre de la Canción 1</div>
-          <div class="artist">Nombre del Artista</div>
-          <button class="delete-button button is-infio">Eliminar</button>
-        </div>
-      </div>
-                */
-                    
-                const cardDiv = document.createElement("div");
-                cardDiv.classList.add("card");
-                cardDiv.classList.add("cards");
-                cardDiv.classList.add("grab");
-                cardDiv.setAttribute("data-id", i + 1);
-        
-                const img = document.createElement("img");
-                img.src = music.img;
-                img.alt = lang.thumbnail;
-                img.classList.add("thumbnail");
-                cardDiv.appendChild(img);
-        
-                const cardContentDiv = document.createElement("div");
-                cardContentDiv.classList.add("card-content");
-                cardContentDiv.classList.add("card-content1");
-        
-                const songTitleDiv = document.createElement("div");
-                songTitleDiv.classList.add("song-title");
-                songTitleDiv.innerText = music.name;
-                cardContentDiv.appendChild(songTitleDiv);
-        
-                const artistDiv = document.createElement("div");
-                artistDiv.classList.add("artist");
-                artistDiv.innerText = music.author;
-                cardContentDiv.appendChild(artistDiv);
-        
-                const button = document.createElement("button");
-                button.classList.add("delete-button");
-                button.classList.add("button");
-                button.classList.add("is-danger");
-                button.innerText = lang.delete;
-        
-                button.addEventListener("click", async () => {
-                  button.disabled = true;
-                  button.classList.add("is-loading");
+                const img1 = document.createElement("img");
+                img1.src = music.img;
+                img1.classList.add("playlist-song-image");
+                cardDiv1.appendChild(img1);
+
+                const infoDiv1 = document.createElement("div");
+                infoDiv1.classList.add("playlist-song-info");
+
+                const titleP1 = document.createElement("p");
+                titleP1.classList.add("playlist-song-title");
+                titleP1.innerText = music.name.substring(0, 20) + "...";
+                infoDiv1.appendChild(titleP1);
+
+                const artistP1 = document.createElement("p");
+                artistP1.classList.add("playlist-song-artist");
+                artistP1.innerHTML = `<span><i class="fa-solid fa-user"></i> ${author}  <i class="fa-solid fa-clock"></i> ${music.duration}</span>`;
+                infoDiv1.appendChild(artistP1);
+
+                cardDiv1.appendChild(infoDiv1);
+
+                const button1 = document.createElement("button");
+                button1.classList.add("button");
+                button1.classList.add("is-danger");
+                button1.classList.add("playlist-song-button");
+                button1.innerHTML = '<i class="fa-solid fa-trash"></i>'
+
+                button1.addEventListener("click", async () => {
+                  button1.disabled = true;
+                  button1.classList.add("is-loading");
                   const index = musicList_.indexOf(music);
                   if (index > -1) {
                     musicList_.splice(index, 1);
                   }
-                  cardDiv.remove();
-                  button.disabled = false;
-                  button.classList.remove("is-loading");
-                  button.classList.remove("is-info");
-                  button.classList.add("is-success");
+                  cardDiv1.remove();
+                  button1.disabled = false;
+                  button1.classList.remove("is-loading");
+                  button1.classList.remove("is-info");
+                  button1.classList.add("is-success");
         
                   setTimeout(() => {
-                    button.classList.remove("is-success");
-                    button.classList.add("is-danger");
+                    button1.classList.remove("is-success");
+                    button1.classList.add("is-danger");
                   }, 2000);
                 });
                       
-                cardContentDiv.appendChild(button);
-                cardDiv.appendChild(cardContentDiv);
-                      
-                resultsDiv.appendChild(cardDiv);
+                cardDiv1.appendChild(button1);
+                resultsDiv1.appendChild(cardDiv1);
               }
 
               function handleSortEnd(event) {
@@ -711,12 +712,12 @@ class Music {
 
               }
 
-            }, 2000);
+            }, 1000);
           });
+
+          cardDiv.appendChild(button);
                 
-          cardContentDiv.appendChild(button);
-          cardDiv.appendChild(cardContentDiv);
-                
+
           resultsDiv.appendChild(cardDiv);
                   
         }
@@ -749,12 +750,42 @@ class Music {
     }
 
     let volumenAudio = document.getElementById("volumen")
+    const volumeIcon = document.getElementById("volume-info")
+
+    mainAudio.volume = localStorage.getItem("volume") || 1;
+
     volumenAudio.addEventListener("input", function (e) {
-      let labelVolumen = document.getElementById("label-volumen");
-      labelVolumen.innerHTML = e.target.value + "%";
+      // let labelVolumen = document.getElementById("label-volumen");
+      //labelVolumen.innerHTML = e.target.value + "%";
       let value = e.target.value / 100;
       volumenAudio.style.setProperty("--thumb-rotate", `${value * 720}deg`);
       mainAudio.volume = value;
+      localStorage.setItem("volume", value);
+
+      if(value === 0) {
+        volumeIcon.classList.remove("fa-volume-high");
+        volumeIcon.classList.add("fa-volume-mute");
+      } else if(value > 0 && value <= 0.5) {
+        volumeIcon.classList.remove("fa-volume-mute");
+        volumeIcon.classList.add("fa-volume-low");
+      } else {
+        volumeIcon.classList.remove("fa-volume-low");
+        volumeIcon.classList.add("fa-volume-high");
+      }
+    });
+
+    volumeIcon.addEventListener("click", () => {
+      if (mainAudio.volume === 0) {
+        mainAudio.volume = localStorage.getItem("volume") || 1;
+        volumenAudio.value = mainAudio.volume * 100;
+        volumeIcon.classList.remove("fa-volume-mute");
+        volumeIcon.classList.add("fa-volume-high");
+      } else {
+        mainAudio.volume = 0;
+        volumenAudio.value = 0;
+        volumeIcon.classList.remove("fa-volume-high");
+        volumeIcon.classList.add("fa-volume-mute");
+      }
     });
 
       
@@ -790,75 +821,89 @@ class Music {
     });
       
     function loadMusic(indexNumb) {
-      musicName.innerText = musicList_[indexNumb - 1].name + '\n' + musicList_[indexNumb - 1].author;
+      musicName.innerText = musicList_[indexNumb - 1].name.substring(0, 20) + "...";
+      musicAuthor.innerText = musicList_[indexNumb - 1].author;
       musicImg.src = musicList_[indexNumb - 1].img;
       mainAudio.src = musicList_[indexNumb - 1].audio;
       localStorage.setItem("songPlaying", musicList_[indexNumb - 1]);
       document.getElementById("music-img").src = musicList_[indexNumb - 1].img;
-      /*width: 64px;
-  height: 36px;*/
-      //dejar sólo 30 caracteres en el título
-      //document.getElementById("music-description").innerText = musicList_[indexNumb - 1].name.substring(0, 50) + "...";
+      document.getElementById("playing-now-body").innerText = musicList_[indexNumb - 1].name.substring(0, 50) + "...";
+      
+      fetch(`https://musicapi.battlylauncher.com/api/v1/play/${musicList_[indexNumb - 1].url}`);
+      console.log(musicList_);
 
       ipcRenderer.send("set-song", musicList_[indexNumb - 1]);
     }
       
-    //play music function
     function playMusic() {
       wrapper.classList.add("paused");
-      playPauseBtn.querySelector("i").innerText = "pause";
+      playPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
       mainAudio.play();
     }
+
+    function playMusic1() {
+      wrapper.classList.add("paused");
+      playPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+      return ipcRenderer.send("play-song");
+    }
+
+    function pauseMusic1() {
+      wrapper.classList.remove("paused");
+      playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+      return ipcRenderer.send("pause-song");
+    }
+
+    mainAudio.addEventListener("play", () => {
+      return playMusic1();
+    });
+
+    mainAudio.addEventListener("pause", () => {
+      return pauseMusic1();
+    });
       
-    //pause music function
     function pauseMusic() {
       wrapper.classList.remove("paused");
-      playPauseBtn.querySelector("i").innerText = "play_arrow";
+      playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
       mainAudio.pause();
     }
       
-    //prev music function
     function prevMusic() {
-      musicIndex--; //decrement of musicIndex by 1
-      //if musicIndex is less than 1 then musicIndex will be the array length so the last music play
+      musicIndex--;
       musicIndex < 1 ? musicIndex = musicList_.length : musicIndex = musicIndex;
       loadMusic(musicIndex);
       playMusic();
       playingSong();
     }
-      
-    //next music function
+    
     function nextMusic() {
-      musicIndex++; //increment of musicIndex by 1
-      //if musicIndex is greater than array length then musicIndex will be 1 so the first music play
+      musicIndex++;
       musicIndex > musicList_.length ? musicIndex = 1 : musicIndex = musicIndex;
       loadMusic(musicIndex);
       playMusic();
       playingSong();
     }
       
-      
-    // play or pause button event
     playPauseBtn.addEventListener("click", () => {
+      if (!musicList_.length) return new Alert().ShowAlert({
+        icon: 'warning',
+        title: lang.you_dont_have_songs_in_your_playlist,
+        text: lang.add_songs_to_your_playlist
+      });
       const isMusicPlay = wrapper.classList.contains("paused");
-      //if isPlayMusic is true then call pauseMusic else call playMusic
       isMusicPlay ? pauseMusic() : playMusic();
       playingSong();
     });
       
-    //prev music button event
     prevBtn.addEventListener("click", () => {
       prevMusic();
     });
       
-    //next music button event
     nextBtn.addEventListener("click", () => {
       nextMusic();
     });
 
     ipcRenderer.on('play-pause', () => {
       const isMusicPlay = wrapper.classList.contains("paused");
-      //if isPlayMusic is true then call pauseMusic else call playMusic
       isMusicPlay ? pauseMusic() : playMusic();
       playingSong();
     });
@@ -873,13 +918,13 @@ class Music {
       
     // update progress bar width according to music current time
     mainAudio.addEventListener("timeupdate", (e) => {
-      const currentTime = e.target.currentTime; //getting playing song currentTime
-      const duration = e.target.duration; //getting playing song total duration
+      const currentTime = e.target.currentTime;
+      const duration = e.target.duration;
       let progressWidth = (currentTime / duration) * 100;
       progressBar.style.width = `${progressWidth}%`;
       
-      let musicCurrentTime = wrapper.querySelector(".current-time"),
-        musicDuartion = wrapper.querySelector(".max-duration");
+      let musicCurrentTime = document.getElementById("current-time"),
+        musicDuartion = document.getElementById("max-duration");
       mainAudio.addEventListener("loadeddata", () => {
         // update song total duration
         let mainAdDuration = mainAudio.duration;
@@ -912,14 +957,20 @@ class Music {
       
     //code for what to do after song ended
     mainAudio.addEventListener("ended", () => {
-      let randIndex = Math.floor((Math.random() * musicList_.length) + 1); //genereting random index/numb with max range of array length
-      do {
-        randIndex = Math.floor((Math.random() * musicList_.length) + 1);
-      } while (musicIndex == randIndex); //this loop run until the next random number won't be the same of current musicIndex
-      musicIndex = randIndex; //passing randomIndex to musicIndex
-      loadMusic(musicIndex);
-      playMusic();
-      playingSong();
+      if (musicList_.length !== 1) {
+        let randIndex = Math.floor((Math.random() * musicList_.length) + 1); //genereting random index/numb with max range of array length
+        do {
+          randIndex = Math.floor((Math.random() * musicList_.length) + 1);
+        } while (musicIndex == randIndex); //this loop run until the next random number won't be the same of current musicIndex
+        musicIndex = randIndex; //passing randomIndex to musicIndex
+        loadMusic(musicIndex);
+        playMusic();
+        playingSong();
+      } else {
+        loadMusic(1);
+        playMusic();
+        playingSong();
+      }
     });
       
       

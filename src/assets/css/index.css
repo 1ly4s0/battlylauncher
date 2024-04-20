@@ -7,6 +7,7 @@ body {
     background-image: url('../../assets/images/background/background_updater.png');
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 img {
@@ -19,14 +20,18 @@ img {
 .splash {
     position: absolute;
     top: 180px;
-    left: 50%;
-    transform: translate(-50%);
+    /* Otra propiedad definida en tu código */
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     width: 140px;
     height: 140px;
-    transition: opacity .3s, top 1.5s;
     opacity: 0;
+    display: none;
+    transition: top 1.5s;
+    --animate-duration: 3s;
 }
-
 .expand {
     transform: scale(2); /* Ajusta el valor para controlar el tamaño al que se agranda la imagen */
     transition: transform 2s ease-in-out;
@@ -45,13 +50,13 @@ img {
     position: absolute;
     top: 279px;
     left: 0px;
+    right: 0px;
     width: 400px;
     font: normal normal bold 25px/30px Poppins;
     text-align: center;
     letter-spacing: 0px;
-    transition: opacity 1.5s;
     color: #000;
-    opacity: 0;
+    --animate-duration: 2s;
 }
 
 .splash-message.opacity {
@@ -62,12 +67,12 @@ img {
     position: absolute;
     top: 326px;
     left: 0px;
+    right: 0px;
     width: 400px;
     text-align: center;
-    transition: opacity 1.5s;
     font: normal normal normal 9px/13px Poppins;
     color: rgb(0, 0, 0);
-    opacity: 0;
+    --animate-duration: 2s;
 }
 
 .splash-author .author {
@@ -84,10 +89,9 @@ img {
     left: 0px;
     width: 400px;
     text-align: center;
-    transition: opacity 1.5s;
     font: normal normal bold 18px/27px Poppins;
     color: rgb(0, 0, 0);
-    opacity: 0;
+    --animate-duration: 2s;
 }
 
 .message.opacity {

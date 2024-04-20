@@ -9,6 +9,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const node_fetch_1 = __importDefault(require("node-fetch"));
 const fs_1 = __importDefault(require("fs"));
+const events_1 = require("events");
+
 class Json {
     constructor(options) {
         this.options = options;
@@ -17,6 +19,7 @@ class Json {
         let version = this.options.version;
         let data;
         try {
+            console.log('Downloading version_manifest_v2.json');
             data = await (0, node_fetch_1.default)(`https://launchermeta.mojang.com/mc/game/version_manifest_v2.json?_t=${new Date().toISOString()}`);
             data = await data.json();
             fs_1.default.writeFileSync(`${this.options.path}/battly/launcher/mc-assets/version_manifest_v2.json`, JSON.stringify(data, null, 4));

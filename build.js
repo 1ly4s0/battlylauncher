@@ -26,7 +26,7 @@ async function obfuscateSrc() {
         const jsFiles = files.filter(file => path.extname(file) === '.js');
 
         // Obfuscar cada archivo .js
-        await Promise.all(jsFiles.map(file => obfuscateFile(path.join(srcPath, file))));
+        //await Promise.all(jsFiles.map(file => obfuscateFile(path.join(srcPath, file))));
     } catch (error) {
         console.error('Error al obfuscar el código', error);
     }
@@ -61,8 +61,12 @@ obfuscateSrc().then(() => {
                 icon: "./src/assets/images/icon.ico",
                 target: [{
                     target: "nsis",
+                    arch: ["x64"]
+                },
+                /*{
+                    target: "zip",
                     arch: ["x64", "ia32"]
-                }]
+                }*/]
             },
             nsis: {
                 oneClick: false,
@@ -84,37 +88,38 @@ obfuscateSrc().then(() => {
             },
             linux: {
                 icon: "./src/assets/images/icon.png",
-                target: [{
-                    target: "AppImage",
-                    arch: ["x64"]
-                }, {
-                    target: "tar.gz",
-                    arch: ["x64"]
-                },
+                target: [
+                //     {
+                //     target: "AppImage",
+                //     arch: ["x64"]
+                // }, {
+                //     target: "tar.gz",
+                //     arch: ["x64"]
+                // },
                 {
                     target: "deb",
                     arch: ["x64"]
                 },
-                {
-                    target: "rpm",
-                    arch: ["x64"]
-                },
-                {
-                    target: "AppImage",
-                    arch: ["armv7l"]
-                },
-                {
-                    target: "tar.gz",
-                    arch: ["armv7l"]
-                },
-                {
-                    target: "deb",
-                    arch: ["armv7l"]
-                },
-                {
-                    target: "rpm",
-                    arch: ["armv7l"]
-                }
+                // {
+                //     target: "rpm",
+                //     arch: ["x64"]
+                // },
+                // {
+                //     target: "AppImage",
+                //     arch: ["armv7l"]
+                // },
+                // {
+                //     target: "tar.gz",
+                //     arch: ["armv7l"]
+                // },
+                // {
+                //     target: "deb",
+                //     arch: ["armv7l"]
+                // },
+                // {
+                //     target: "rpm",
+                //     arch: ["armv7l"]
+                // }
                 ]
             }
         }

@@ -1,19 +1,16 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
-.feature-card2-feature-card {
-    border: 3px solid dimgrey;
-    width: 100%;
-    display: flex;
-    padding: var(--dl-space-space-unit);
-    position: relative;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: #151515;
+    .feature-card2-feature-card {
+      background-color: #151515;
+      width: 100%;
+      display: flex;
+      padding: var(--dl-space-space-unit);
+      position: relative;
+    border-radius: 5px;
+    margin-bottom: -15px;
     opacity: 0.9;
-    border-radius: 6px;
-    margin: -5px;
-  }
+    }
+
   .feature-card2-icon {
     fill: var(--dl-color-gray-500);
     width: 5rem;
@@ -57,15 +54,7 @@
   .feature-card2-download-icon {
     width: 2.5rem;
     height: 2.5rem;
-  }.feature-card2-feature-card {
-  width: 100%;
-  display: flex;
-  padding: var(--dl-space-space-unit);
-  position: relative;
-  align-items: flex-start;
-  flex-direction: row;
-  justify-content: flex-start;
-}
+  }
 
 @media(max-width: 767px) {
   .feature-card2-feature-card {
@@ -134,7 +123,7 @@
 .buscar-mods {
   border-radius: 5px;
   margin-right: 20px;
-  width: 50%;
+  width: 40%;
   font-size: 15px;
   font-family: Poppins;
   font-weight: 700;
@@ -176,21 +165,61 @@ color: #c9c6c6;
     align-self: stretch;
     flex-direction: column;
     scrollbar-width: none;
+    overflow: hidden;
+      height: 100%;
   }
+
+  #home-features-mods {
+    transition: height 1s ease;
+  }
+
+    .animate-height {
+      animation: heightAnimation 1s ease;
+    }
+
+    @keyframes heightAnimation {
+      from {
+        height: 100%;
+      }
+  
+      to {
+        height: 60%;
+      }
+    }
 
   .home-features::-webkit-scrollbar {
     width: 0;
 }
   .home-container1 {
-    width: 100%;
+        position: fixed;
+          height: 70%;
+    width: 92%;
     display: grid;
-    grid-gap: var(--dl-space-space-twounits);
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
+    overflow-y: auto;
+    scrollbar-width: thin;
+      /* Para Firefox */
+      scrollbar-color: transparent transparent;
+      /* Para Firefox */
+    
+      /* WebKit (Chrome, Safari) */
+      ::-webkit-scrollbar {
+        width: 0;
+        /* Ajusta el ancho del área donde se puede hacer clic y arrastrar para hacer scroll */
+      }
+    
+      ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        /* Color del pulgar (barra de desplazamiento) */
+      }
+    
+      ::-webkit-scrollbar-track {
+        background-color: transparent;
+        /* Color del área de la barra de desplazamiento */
+      }
   }
 
-  .home-container1::-webkit-scrollbar {
-    width: 0;
-}
 
   .home-container2 {
     width: 100%;
@@ -326,3 +355,10 @@ color: #c9c6c6;
   h1, h2, span, a, button {
     font-family: 'Poppins';
   }
+
+    .modal-card,
+    .modal-card-head,
+    .modal-card-body,
+    .modal-card-foot {
+      background-color: #212121;
+    }

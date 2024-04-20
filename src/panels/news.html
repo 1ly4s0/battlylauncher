@@ -1,241 +1,322 @@
-   <head>
-      <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <style>
-  span, div, p, *, .content {
+<style>
+  span,
+  div,
+  p,
+  *,
+  .content {
     font-family: 'Poppins';
-}
+  }
 </style>
-   </head>
-   <body>
-      <div class="bottom_bar">
-         <div>
-            <p style="font-size: 40px; font-weight: 800; color: #fff">Battly <span style="color: #0074F0">News</span> <span style="font-size: 20px; color: #fff">v1.7</span></p>
-         </div>
-      </div>
-      <div style="display: flex; justify-content: center; align-items: center;">
-      <div class="card animate__animated" id="card1" style="width: 90%; margin-top: 100px;">
-        <div class="card-content">
-          <span style="font-size: 40px;">¡Ya está aquí la nueva versión de Battly!</span>
-          <br>
-          <span style="font-size: 20px;">Otra de las versiones que más hype tenían</span>
-          <br>
-          <br>
-          
-          <br>
-          <p style="font-size: 30px;">¿Qué hay de nuevo?</p>
-          <div class="content">
-            - Mejorada la optimización y la fluidez del Launcher<br>
-            - Nuevo modo offline<br>
-            - Nuevo selector de versiones de Forge<br>
-            - Nuevo instalador de clientes en Battly<br>
-            - Nuevo Battly Social<br>
-            - Más personalización en Battly<br>
-            - Mejorado el panel de mods<br>
-            <br>
-            En resumen, muchas cosas, ahora te cuento más en detalle.
-          </div>
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-48x48">
-                <img  style="border-radius: 100px;" src="https://cdn.discordapp.com/avatars/534767171579019266/ced034293e09fdb305438e8698d867e0.webp?size=1024" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="media-content">
-              <p class="title is-4">1ly4s0</p>
-              <p class="subtitle is-6">Fundador de Battly</p>
-            </div>
-          </div>
-          <button class="button is-info" id="show-panel-2" style="float: right; transform: translate(0px, -70px)">Siguiente</button>
-        </div>
-      </div>
-      <div class="card animate__animated" id="card2" style="width: 90%; margin-top: 40px;">
-        <div class="card-content">
-          <span style="font-size: 40px;">Mejorada la optimización y la fluidez del Launcher</span>
-          <br>
-          <span style="font-size: 20px;">Ha mejorado un 50% la rapidez en la que inicia Battly</span>
-          <br>
-          <br>
-          
-          <br>
-          <p style="font-size: 30px;">¿Qué ha cambiado?</p>
-          <div class="content">
-            El tiempo en el que inicia Battly ha mejorado un 50%, ahora es mucho más rápido y fluido. Esto ayudará a la gente con PC's de gama baja a poder disfrutar de Battly y un mejor rendimiento en Minecraft.
-            <br>
-            <video id="video-rapidez" src="https://cdn.discordapp.com/attachments/954957708614856765/1195506242995626014/VE_Project_75.mp4" style="width: 35%; height: 35%;"></video>
-          </div>
-          <div class="media" style="margin-bottom: 0px;">
-            <div class="media-left">
-              <figure class="image is-48x48">
-                <img  style="border-radius: 100px;" src="https://cdn.discordapp.com/avatars/534767171579019266/ced034293e09fdb305438e8698d867e0.webp?size=1024" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="media-content">
-              <p class="title is-4">1ly4s0</p>
-              <p class="subtitle is-6">Fundador de Battly</p>
-            </div>
-          </div>
-          <button class="button is-info" id="show-panel-3" style="float: right; transform: translate(0px, -40px)">Siguiente</button>
-        </div>
-    </div>
-    <div class="card animate__animated" id="card3" style="width: 90%; margin-top: 100px;">
-      <div class="card-content">
-        <span style="font-size: 40px;">Nuevo selector de versiones de Forge</span>
-        <br>
-        <span style="font-size: 20px;">Ahora podrás elegir la versión de Forge que quieras descargar</span>
-        <br>
-        <br>
-        
-        <br>
-        <p style="font-size: 30px;">¿Cómo funciona?</p>
-        <div class="content">
-          Mucha gente me ha preguntado de poder descargar Forge externamente, y yo lo veía innecesario ya que Battly tenía su propio Forge, pero pensando... Recordé que mucha gente usa Forge con versiones anteriores, así que he implementado un selector de versiones de Forge, en el que podrás elegir la versión que quieras descargar.
-          <br>
-          <br>
-          Lo único que tendrás que hacer es darle a descargar, elegir una versión de Forge y automáticamente te saldrán la lista de versiones de Forge que hay disponibles de esa versión.
-        </div>
-        <div class="media">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img  style="border-radius: 100px;" src="https://cdn.discordapp.com/avatars/534767171579019266/ced034293e09fdb305438e8698d867e0.webp?size=1024" alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">1ly4s0</p>
-            <p class="subtitle is-6">Fundador de Battly</p>
-          </div>
-        </div>
-        <button class="button is-info" id="show-panel-4" style="float: right; transform: translate(0px, -70px)">Siguiente</button>
-      </div>
-    </div>
-    <div class="card animate__animated" id="card4" style="width: 90%; margin-top: 100px;">
-      <div class="card-content">
-        <span style="font-size: 40px;">Nuevo instalador de clientes en Battly</span>
-        <br>
-        <span style="font-size: 20px;">Te va a encantar 🤑</span>
-        <br>
-        <br>
-        
-        <br>
-        <p style="font-size: 30px;">¿Cómo funciona?</p>
-        <div class="content">
-          El 70% de los usuarios de Battly han usado clientes almenos una vez, y yo me preguntaba... ¿Por qué no implementar un instalador de clientes en Battly? Y así lo hice, ahora podrás instalar clientes como CMPack, Batmod, Ares Client en Battly, y todo de forma automática.
-          <br>
-          <br>
-          Es una muy buena opción ya que todo es mucho más ordenado, automático y no tienes que preocuparte de nada.
-        </div>
-        <div class="media">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img  style="border-radius: 100px;" src="https://cdn.discordapp.com/avatars/534767171579019266/ced034293e09fdb305438e8698d867e0.webp?size=1024" alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">1ly4s0</p>
-            <p class="subtitle is-6">Fundador de Battly</p>
-          </div>
-        </div>
-        <button class="button is-info" id="show-panel-5" style="float: right; transform: translate(0px, -70px)">Siguiente</button>
-      </div>
+
+<div class="bottom_bar">
+  <div>
+    <p style="font-size: 40px; font-weight: 800; color: #fff">Battly <span style="color: #0074F0">News</span> <span
+        style="font-size: 20px; color: #fff">v1.8</span></p>
   </div>
-  
-  <div class="card animate__animated" id="card5" style="width: 90%; margin-top: 100px;">
-    <div class="card-content">
-      <span style="font-size: 40px;">Nuevo Battly Social</span>
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div class="card animate__animated" id="card1" style="width: 90%; margin-top: 100px; background-color: #212121">
+    <div class="card-content" style="background-color: #212121">
+      <span style="font-size: 40px; color: #fff">¡Ya está aquí la nueva versión de Battly!</span>
       <br>
-      <span style="font-size: 20px;">¡Ya era hora!</span>
+      <span style="font-size: 20px; color: #fff">Espera, ¿otra de las versiones más esperadas? Sehh 😎</span>
       <br>
       <br>
-      
       <br>
-      <p style="font-size: 30px;">¿Cómo funciona?</p>
-      <div class="content">
-        Este sistema es el inicio de un gran sistema que se añadirá a Battly. De momento, podrás añadir amigos y ver a qué están jugando. De momento sólo es esto, pero pronto habrán chats, llamadas, etc.
+      <p style="font-size: 30px; color: #fff">¿Qué hay de nuevo?</p>
+      <div class="content" style="color: #fff">
+        - Mejorada la optimización y la fluidez del Launcher<br>
+        - Las skins ahora funcionan sin Forge/Fabric/Quilt<br>
+        - Mejoras en el diseño del Launcher (música, amigos, mods, ajustes)<br>
+        - Modo oscuro en Battly<br>
+        - Mejoradas las configuraciones de Java, ahora ya no dan problemas<br>
+        - Más personalización en Battly (fondo animado para los premium)<br>
+        - Mejoras en el panel de mods<br>
         <br>
-        <br>
-        Sé paciente, esto es sólo el inicio de un gran actualización de Battly que revolucionará los Launchers de Minecraft.
+        En resumen, muchas cosas, ahora te cuento más en detalle.
       </div>
       <div class="media">
         <div class="media-left">
           <figure class="image is-48x48">
-            <img  style="border-radius: 100px;" src="https://cdn.discordapp.com/avatars/534767171579019266/ced034293e09fdb305438e8698d867e0.webp?size=1024" alt="Placeholder image">
+            <img style="border-radius: 100px;"
+              src="https://cdn.discordapp.com/avatars/534767171579019266/a_1ce0a165571f611db6491d222fb81660.png?size=1024"
+              alt="Placeholder image">
           </figure>
         </div>
         <div class="media-content">
-          <p class="title is-4">1ly4s0</p>
-          <p class="subtitle is-6">Fundador de Battly</p>
+          <p class="title is-4" style="font-weight: 800; color: #fff">1ly4s0</p>
+          <p class="subtitle is-6" style="font-weight: 700; color: #fff">Fundador de Battly</p>
         </div>
       </div>
-      <button class="button is-info" id="show-panel-6" style="float: right; transform: translate(0px, -70px)">Siguiente</button>
+      <button class="button is-info" id="show-panel-2"
+        style="float: right; transform: translate(0px, -70px)">Siguiente</button>
     </div>
+  </div>
+  <div class="card animate__animated" id="card2" style="width: 90%; margin-top: 100px;background-color: #212121">
+    <div class="card-content" style="background-color: #212121;">
+      <span style="font-size: 40px; color: #fff;">Mejorada la optimización y la fluidez del Launcher</span>
+      <br>
+      <span style="font-size: 20px; color: #fff;">Seguimos mejorando la velocidad y el consumo de Battly</span>
+      <br>
+      <br>
+      <br>
+      <p style="font-size: 30px; color: #fff;">¿Qué ha cambiado?</p>
+      <img src="assets/images/news/rocket.gif" alt="" style="position: absolute;
+          top: -150;
+          right: -150;
+          pointer-events: none;
+          /* que esté girado 45 grados */
+          transform: rotate(45deg);
+          ">
+      <div class="content" style="color: #fff;">
+        El tiempo en el que inicia Battly ha mejorado un 30%, ahora es muchísimo más rápido y fluido. También se ha
+        reducido el consumo del sistema de música. Esto ayudará más a la
+        gente con PC's de gama baja a poder disfrutar de Battly y un mejor rendimiento en Minecraft.
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="media" style="margin-bottom: 0px;">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img style="border-radius: 100px;"
+              src="https://cdn.discordapp.com/avatars/534767171579019266/a_1ce0a165571f611db6491d222fb81660.png?size=1024"
+              alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4" style="font-weight: 800; color: #fff">1ly4s0</p>
+          <p class="subtitle is-6" style="font-weight: 700; color: #fff">Fundador de Battly</p>
+        </div>
+      </div>
+      <button class="button is-info" id="show-panel-3"
+        style="float: right; transform: translate(0px, -40px)">Siguiente</button>
     </div>
+  </div>
+  <div class="card animate__animated" id="card3" style="width: 90%; margin-top: 100px;background-color: #212121;">
+    <div class="card-content" style="background-color: #212121">
+      <span style="font-size: 40px; color: #fff;">Las skins ahora funcionan sin Forge/Fabric/Quilt</span>
+      <br>
+      <span style="font-size: 20px; color: #fff;">De las funciones más esperadas de Battly</span>
+      <br>
+      <br>
 
-    <div class="card animate__animated" id="card6" style="width: 90%; margin-top: 100px;">
-      <div class="card-content">
-        <span style="font-size: 40px;">Más personalización en Battly</span>
+      <br>
+      <p style="font-size: 30px; color: #fff;">¿Cómo funciona?</p>
+      <div class="content" style="color: #fff;">
+        Mucha gente me ha preguntado de poder usar tu skin en Battly sin tener que instalar Forge, Fabric o Quilt. Esto
+        era algo molesto cuando querías simplemente usar OptiFine o jugar a algún cliente. Pero hoy, se ha acabado eso,
+        ahora podrás usar tu skin en Battly sin tener que instalar nada.
         <br>
-        <span style="font-size: 20px;">Más opciones de personalización en Battly</span>
         <br>
-        <br>
-    
-        <br>
-        <p style="font-size: 30px;">¿Cómo funciona?</p>
-        <div class="content">
-          Battly es el Launcher más personalizable que existe, desde dejarte cambiar los colores de la barra inferior, los botones y hasta el fondo, pero hoy, podrás incluso personalizar la música de inicio de Battly.
-          <br>
-          <br>
-          Tendrás 4 opciones que elegir, pronto iré añadiendo más. Recuerda que si quieres añadir un sonido, puedes sugerirlo en el servidor de Discord.
-        </div>
-        <div class="media">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img style="border-radius: 100px;"
-                src="https://cdn.discordapp.com/avatars/534767171579019266/ced034293e09fdb305438e8698d867e0.webp?size=1024"
-                alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">1ly4s0</p>
-            <p class="subtitle is-6">Fundador de Battly</p>
-          </div>
-        </div>
-        <button class="button is-info" id="show-panel-7"
-          style="float: right; transform: translate(0px, -70px)">Siguiente</button>
+        No tendrás que hacer más cambios, pero es recomendable comprobar si tu skin se ve correctamente, si no es así,
+        simplemente habría que subirla de nuevo.
       </div>
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img style="border-radius: 100px;"
+              src="https://cdn.discordapp.com/avatars/534767171579019266/a_1ce0a165571f611db6491d222fb81660.png?size=1024"
+              alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4" style="font-weight: 800; color: #fff">1ly4s0</p>
+          <p class="subtitle is-6" style="font-weight: 700; color: #fff">Fundador de Battly</p>
+        </div>
       </div>
+      <button class="button is-info" id="show-panel-4"
+        style="float: right; transform: translate(0px, -70px)">Siguiente</button>
+    </div>
+  </div>
+  <div class="card animate__animated" id="card4" style="width: 90%; margin-top: 100px; background-color: #212121;">
+    <div class="card-content" style="background-color: #212121">
+      <span style="font-size: 40px; color: #fff;">Mejoras en el diseño del Launcher</span>
+      <br>
+      <span style="font-size: 20px; color: #fff;">Más mejoras en los iconos, colores y botones.</span>
+      <br>
+      <br>
 
-      <div class="card animate__animated" id="card7" style="width: 90%; margin-top: 100px;">
-        <div class="card-content">
-          <span style="font-size: 40px;">Y por último... Mejorado el panel de mods</span>
-          <br>
-          <span style="font-size: 20px;">Ahora es precioso</span>
-          <br>
-          <br>
-      
-          <br>
-          <p style="font-size: 30px;">¿Cómo funciona?</p>
-          <div class="content">
-            No hay cambios en el funcionamiento, simplemente he mejorado como se ve el panel de mods para que sea mucho más agradable para ti y el resto de usuarios. Ahora se han mejorado los colores y los textos de los mods.
-          </div>
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-48x48">
-                <img style="border-radius: 100px;"
-                  src="https://cdn.discordapp.com/avatars/534767171579019266/ced034293e09fdb305438e8698d867e0.webp?size=1024"
-                  alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="media-content">
-              <p class="title is-4">1ly4s0</p>
-              <p class="subtitle is-6">Fundador de Battly</p>
-            </div>
-          </div>
-          <button class="button is-info" id="terminar"
-            style="float: right; transform: translate(0px, -70px)">Terminar</button>
+      <br>
+      <p style="font-size: 30px; color: #fff;">¿Cómo funciona?</p>
+      <div class="content" style="color: #fff;">
+        Battly está bien a nivel de diseño actualmente, pero le faltaban ciertos toques que hacían que no fuera tan
+        atractivo. Ahora, se han mejorado los colores, los iconos y los botones de Battly. Ahora es mucho más atractivo
+        y bonito.
+        <br>
+        <br>
+        Hay nuevas animaciones en los botones, como colores, tamaño, etc.
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img style="border-radius: 100px;"
+              src="https://cdn.discordapp.com/avatars/534767171579019266/a_1ce0a165571f611db6491d222fb81660.png?size=1024"
+              alt="Placeholder image">
+          </figure>
         </div>
+        <div class="media-content">
+          <p class="title is-4" style="font-weight: 800; color: #fff">1ly4s0</p>
+          <p class="subtitle is-6" style="font-weight: 700; color: #fff">Fundador de Battly</p>
         </div>
+      </div>
+      <button class="button is-info" id="show-panel-5"
+        style="float: right; transform: translate(0px, -70px)">Siguiente</button>
+    </div>
+  </div>
+
+  <div class="card animate__animated" id="card5" style="width: 90%; margin-top: 100px; background-color: #212121;">
+    <div class="card-content" style="background-color: #212121">
+      <span style="font-size: 40px; color: #fff;">Modo oscuro en Battly</span>
+      <br>
+      <span style="font-size: 20px; color: #fff;">Porfin no te quedarás ciego usando Battly</span>
+      <br>
+      <br>
+
+      <br>
+      <p style="font-size: 30px; color: #fff;">¿Cómo funciona?</p>
+      <div class="content" style="color: #fff;">
+        El modo oscuro es otra de las funciones más pedidas por la comunidad, y hoy, por fin, está aquí. Todos los
+        paneles de Battly ahora son oscuros, por lo cual, ya podrás verlos sin tener que bajar el brillo de tu pantalla
+        o cerrar los ojos.
+        <br>
+        <br>
+        Si eres rarito y te gustaba el modo claro, no pasa nada, en futuras actualizaciones añadiré la opción de poder
+        cambiar entre modo claro y oscuro (no lo hagas, el modo oscuro es mejor, no te quedes ciego)
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img style="border-radius: 100px;"
+              src="https://cdn.discordapp.com/avatars/534767171579019266/a_1ce0a165571f611db6491d222fb81660.png?size=1024"
+              alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4" style="font-weight: 800; color: #fff">1ly4s0</p>
+          <p class="subtitle is-6" style="font-weight: 700; color: #fff">Fundador de Battly</p>
+        </div>
+      </div>
+      <button class="button is-info" id="show-panel-6"
+        style="float: right; transform: translate(0px, -70px)">Siguiente</button>
+    </div>
+  </div>
+
+  <div class="card animate__animated" id="card6" style="width: 90%; margin-top: 100px; background-color: #212121;">
+    <div class="card-content" style="background-color: #212121">
+      <span style="font-size: 40px; color: #fff;">Mejoradas las configuraciones de Java</span>
+      <br>
+      <span style="font-size: 20px; color: #fff;">Ahora ya no dan tantos problemas como antes</span>
+      <br>
+      <br>
+
+      <br>
+      <p style="font-size: 30px; color: #fff;">¿Cómo funciona?</p>
+      <div class="content" style="color: #fff;">
+        Básicamente, Battly, ahora te configura mucho mejor la ruta de Java. Para que se te configure bien, necesitarás
+        tener la versión 1.20.1 de Minecraft, que es la que descarga la versión de Java requerida para que las versiones
+        externas de Battly funcionen correctamente.
+        <br>
+        <br>
+        No te preocupes, esto sólo pasa en las versiones externas y no tendrás que hacer nada, simplemente abrir la
+        versión y ya está. Si sigues teniendo problemas, simplemente sería ir a Ajustes > Java y darle al botón de
+        recargar.
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img style="border-radius: 100px;"
+              src="https://cdn.discordapp.com/avatars/534767171579019266/a_1ce0a165571f611db6491d222fb81660.png?size=1024"
+              alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4" style="font-weight: 800; color: #fff">1ly4s0</p>
+          <p class="subtitle is-6" style="font-weight: 700; color: #fff">Fundador de Battly</p>
+        </div>
+      </div>
+      <button class="button is-info" id="show-panel-7"
+        style="float: right; transform: translate(0px, -70px)">Siguiente</button>
+    </div>
+  </div>
+
+  <div class="card animate__animated" id="card7" style="width: 90%; margin-top: 100px; background-color: #212121;">
+    <div class="card-content" style="background-color: #212121">
+      <span style="font-size: 40px; color: #fff;">Más personalización en Battly</span>
+      <br>
+      <span style="font-size: 20px; color: #fff;">Se han añadido más sonidos de inicio y más opciones de
+        personalización</span>
+      <br>
+      <br>
+
+      <br>
+      <p style="font-size: 30px; color: #fff;">¿Cómo funciona?</p>
+      <div class="content" style="color: #fff;">
+        Usuarios de Battly Plus, lo habéis pedido mucho y os lo prometí, ahora tenéis más opciones de personalización en
+        Battly. Ahora podréis cambiar el fondo de Battly a uno animado, es decir, podréis poner un vídeo que se repita
+        en el fondo de Battly.
+        <br>
+        <br>
+        Obviamente, si tienes una mala PC, no te recomiendo poner un vídeo de 4K porque sinó cocinarás con tu PC, pero
+        si tienes una buena PC, adelante, pon un vídeo de 4K.
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img style="border-radius: 100px;"
+              src="https://cdn.discordapp.com/avatars/534767171579019266/a_1ce0a165571f611db6491d222fb81660.png?size=1024"
+              alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4" style="font-weight: 800; color: #fff">1ly4s0</p>
+          <p class="subtitle is-6" style="font-weight: 700; color: #fff">Fundador de Battly</p>
+        </div>
+      </div>
+      <button class="button is-info" id="show-panel-8"
+        style="float: right; transform: translate(0px, -70px)">Siguiente</button>
+    </div>
+  </div>
+
+  <div class="card animate__animated" id="card8" style="width: 90%; margin-top: 60px; background-color: #212121;">
+    <div class="card-content" style="background-color: #212121">
+      <span style="font-size: 40px; color: #fff;">Y finalmente... Mejoras en el panel de mods</span>
+      <br>
+      <span style="font-size: 20px; color: #fff;">Ahora es todo más automático y hay más opciones disponibles</span>
+      <br>
+      <br>
+
+      <br>
+      <p style="font-size: 30px; color: #fff;">¿Cómo funciona?</p>
+      <div class="content" style="color: #fff;">
+        Bien, muchos pedíais el hecho de poder ver los mods que tienes instalados en Battly sin tener que abrir el
+        %appdata% y buscar la carpeta de mods. Pues bien, ahora, en el panel de mods, podrás ver todos los mods que
+        tienes instalados en Battly, y si quieres, podrás eliminarlos, ver su información o ver donde están instalados.
+        <br>
+        <br>
+        Aparte, ahora al descargar mods, Battly te descargará las dependencias necesarias, por lo cual ahora será más
+        fácil instalar mods.
+        <br>
+        <br>
+        También se ha mejorado la velocidad de carga de los mods, ahora es mucho más rápido y se han añadido las páginas
+        de mods, por lo cual, ahora podrás ver más mods.
+      </div>
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img style="border-radius: 100px;"
+              src="https://cdn.discordapp.com/avatars/534767171579019266/a_1ce0a165571f611db6491d222fb81660.png?size=1024"
+              alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4" style="font-weight: 800; color: #fff">1ly4s0</p>
+          <p class="subtitle is-6" style="font-weight: 700; color: #fff">Fundador de Battly</p>
+        </div>
+      </div>
+      <button class="button is-info" id="terminar"
+        style="float: right; transform: translate(0px, -70px)">Terminar</button>
+    </div>
+  </div>
 
 </div>
-   </body>

@@ -89,7 +89,7 @@ class Launcher {
         const loadingText = document.getElementById("loading-text");
         loadingText.innerHTML = "Cargando Cuentas";
         document.querySelector(".preload-content").style.display = "block";
-        let accounts = await this.database.getAll('accounts');
+        let accounts = await this.database.getAccounts();
         let selectaccount = (await this.database.get('1234', 'accounts-selected'))?.value?.selected;
         console.log(`🔄 Iniciando ${accounts.length} cuenta(s)...`);
         
@@ -98,8 +98,14 @@ class Launcher {
             changePanel("login");
             document.querySelector(".preload-content").style.display = "none";
         } else {
+            let premiums = [];
+            try {
+                premiums = await fetch("https://api.battlylauncher.com/api/usuarios/obtenerUsuariosPremium").then(response => response.json()).then(data => data).catch(err => {});
+            } catch (error) {
+                premiums = [];
+            }
+
             for (let account of accounts) {
-                account = account.value;
                 if (account.meta.type === 'Xbox') {
                     console.log(`🔄 Iniciando cuenta de xbox con el nombre de usuario ${account.name}...`);
                     let refresh = await new Microsoft(this.config.client_id).refresh(account);
@@ -183,7 +189,10 @@ class Launcher {
                     if (account.uuid === selectaccount) accountSelect(refresh.uuid)
                 } else if (account.meta.type === 'cracked') {
                     console.log(`🔄 Iniciando cuenta de Battly con el nombre de usuario ${account.name}...`);
-                    addAccount(account);
+                    let isPremium;
+                    if (!premiums) isPremium = false;
+                    else isPremium = premiums.includes(account.name);
+                    addAccount(account, isPremium);
                     if (account.uuid === selectaccount) accountSelect(account.uuid)
                 }
             }
@@ -200,7 +209,7 @@ class Launcher {
                 }
             }
 
-            if ((await this.database.getAll('accounts')).length == 0) {
+            if ((await this.database.getAccounts()).length == 0) {
                 changePanel("login");
                 document.querySelector(".preload-content").style.display = "none";
                 return

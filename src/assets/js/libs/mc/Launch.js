@@ -20,11 +20,13 @@ const Minecraft_Bundle_js_1 = __importDefault(require("./Minecraft/Minecraft-Bun
 const Minecraft_Arguments_js_1 = __importDefault(require("./Minecraft/Minecraft-Arguments.js"));
 const Index_js_1 = require("./utils/Index.js");
 const Downloader_js_1 = __importDefault(require("./utils/Downloader.js"));
+
 class Launch {
     constructor() {
         this.on = events_1.EventEmitter.prototype.on;
         this.emit = events_1.EventEmitter.prototype.emit;
     }
+
     async Launch(opt) {
         const defaultOptions = {
             url: null,
@@ -115,7 +117,9 @@ class Launch {
         minecraftDebug.on('close', (code) => this.emit('close', 'Minecraft closed'));
     }
     async DownloadGame() {
+        this.emit('downloadJSON', { type: 'info', file: 'version_manifest_v2.json' });
         let InfoVersion = await new Minecraft_Json_js_1.default(this.options).GetInfoVersion();
+        this.emit('downloadJSON', { type: 'success', file: 'version_manifest_v2.json' });
         let loaderJson = null;
         if (InfoVersion.error)
             return InfoVersion;
@@ -123,9 +127,15 @@ class Launch {
         let libraries = new Minecraft_Libraries_js_1.default(this.options);
         let bundle = new Minecraft_Bundle_js_1.default(this.options);
         let gameLibraries = await libraries.Getlibraries(json);
+        this.emit('downloadJSON', { type: 'info', file: 'extra-assets.json' });
         let gameAssetsOther = await libraries.GetAssetsOthers(this.options.url);
+        this.emit('downloadJSON', { type: 'success', file: 'extra-assets.json' });
+        this.emit('downloadJSON', { type: 'info', file: 'assets.json' });
         let gameAssets = await new Minecraft_Assets_js_1.default(this.options).GetAssets(json);
+        this.emit('downloadJSON', { type: 'success', file: 'assets.json' });
+        this.emit('downloadJSON', { type: 'info', file: 'java-versions.json' });
         let gameJava = this.options.javaPath ? { files: [] } : await new Minecraft_Java_js_1.default(this.options).GetJsonJava(json);
+        this.emit('downloadJSON', { type: 'success', file: 'java-versions.json' });
         if (gameJava.error)
             return gameJava;
         let filesList = await bundle.checkBundle([...gameLibraries, ...gameAssetsOther, ...gameAssets, ...gameJava.files]);

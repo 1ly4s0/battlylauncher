@@ -55,14 +55,13 @@
         </button>
     </div>
 
-    <video id="video" autoplay muted>
-        <source
-            src="../assets/videos/video-select-lang-2.mp4"
-            type="video/mp4">
+    <video id="video" autoplay loop muted>
+        <source src="../assets/videos/video-select-lang-2.mp4" type="video/mp4">
     </video>
 
     <style>
-        body, html {
+        body,
+        html {
             overflow: hidden;
         }
 
@@ -70,6 +69,7 @@
             font-family: 'Poppins', sans-serif !important;
             font-weight: 700;
         }
+
         video {
             /* que ocupe toda la pantalla */
             position: fixed;
@@ -87,28 +87,28 @@
         }
 
         .button-divs {
-                z-index: 2;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    top: 50%;
-    left: 9%;
-    width: 80%;
-    height: 100px;
-    flex-wrap: wrap;
-    gap: 10px;
-    display: none;
-    animation: fadein 2s;
+            z-index: 2;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            top: 50%;
+            left: 9%;
+            width: 80%;
+            height: 100px;
+            flex-wrap: wrap;
+            gap: 10px;
+            display: none;
+            animation: fadein 2s;
         }
     </style>
 </body>
 <script>
     const { ipcRenderer } = require('electron');
-        setTimeout(() => {
-            document.querySelector('.button-divs').style.display = 'flex';
-        }, 2000);
+    setTimeout(() => {
+        document.querySelector('.button-divs').style.display = 'flex';
+    }, 2000);
 
     //obtener todos los botones y añadirles un evento click, dependiendo del idioma, hacer un ipcRenderer.send('change-lang', 'lang')
     const buttons = document.querySelectorAll('.button');
