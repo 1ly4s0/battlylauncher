@@ -6370,7 +6370,7 @@ class Home {
                 fs.mkdirSync(`${dataDirectory}/.battly/libraries/optifine`, {
                   recursive: true,
                 });
-                logTextArea1.value += `✅ ${langs.folder} optifine ${created_successfully}.\n`;
+                logTextArea1.value += `✅ ${langs.folder} optifine ${langs.created_successfully}.\n`;
                 progressFill1.style.width = "20%";
                 updateTextareaScroll();
               } else {
@@ -6393,7 +6393,7 @@ class Home {
                     recursive: true,
                   }
                 );
-                logTextArea1.value += `✅ ${langs.folder} OptiFine ${created_successfully}.\n`;
+                logTextArea1.value += `✅ ${langs.folder} OptiFine ${langs.created_successfully}.\n`;
                 progressFill1.style.width = "30%";
                 updateTextareaScroll();
               } else {
@@ -6416,7 +6416,7 @@ class Home {
                     recursive: true,
                   }
                 );
-                logTextArea1.value += `✅ ${langs.folder} launchwrapper-of ${created_successfully}.\n`;
+                logTextArea1.value += `✅ ${langs.folder} launchwrapper-of ${langs.created_successfully}.\n`;
                 progressFill1.style.width = "40%";
                 updateTextareaScroll();
               } else {
@@ -6439,7 +6439,7 @@ class Home {
                     recursive: true,
                   }
                 );
-                logTextArea1.value += `✅ ${langs.folder} 2.1 ${created_successfully}.\n`;
+                logTextArea1.value += `✅ ${langs.folder} 2.1 ${langs.created_successfully}.\n`;
                 progressFill1.style.width = "50%";
                 updateTextareaScroll();
               } else {
@@ -6462,7 +6462,7 @@ class Home {
                     recursive: true,
                   }
                 );
-                logTextArea1.value += `✅ ${langs.folder} 2.2 ${created_successfully}.\n`;
+                logTextArea1.value += `✅ ${langs.folder} 2.2 ${langs.created_successfully}.\n`;
                 progressFill1.style.width = "60%";
                 updateTextareaScroll();
               } else {
@@ -6485,7 +6485,7 @@ class Home {
                     recursive: true,
                   }
                 );
-                logTextArea1.value += `✅ ${langs.folder} 2.3 ${created_successfully}.\n`;
+                logTextArea1.value += `✅ ${langs.folder} 2.3 ${langs.created_successfully}.\n`;
                 progressFill1.style.width = "70%";
                 updateTextareaScroll();
               } else {
