@@ -256,6 +256,8 @@ const strings = {
     "choose_forge_version": "Selecciona una versión de Forge",
     "choose_quilt_version": "Selecciona una versión de Quilt",
     "choose_optifine_version": "Selecciona una versión de OptiFine",
+    "choose_neoforge_version": "Selecciona una versión de NeoForge",
+    "choose_legacyfabric_version": "Selecciona una versión de LegacyFabric",
     "choose_a_client": "Selecciona un cliente",
 
     "starting_download_can_take": "Iniciando instalación... Puede tardar un poco...",
@@ -380,6 +382,8 @@ const strings = {
     "login_microsoft_adv_text": "Hemos recibido muchas quejas por problemas con el inicio de sesión de Microsoft... Pero... Todos es gente que no tiene Minecraft comprado... Si tienes Minecraft comprado, puedes iniciar sesión con Microsoft sin problemas. Si no, inicia sesión con una cuenta de Battly.",
     "login_microsoft_accept": "Tengo Minecraft comprado",
     "login_microsoft_cancel": "No tengo Minecraft comprado",
+    "no_accounts": "No tienes cuentas para jugar",
+    "no_accounts_message": "Añade una cuenta para jugar. Presiona ⚙️ > Añadir cuenta",
 
     /* months */
     "january": "Enero",
@@ -445,6 +449,22 @@ const strings = {
     "premium_screen_10": "Soporte priotirario",
     "premium_screen_11": "Al ser premium, tendrás soporte prioritario para solucionar tus problemas de Battly con nuestros mejores staffs.",
     "premium_screen_12": "Battly, siempre se está actualizando, por lo cual, con el tiempo, iremos añadiendo más ventajas para vosotros. ¡Gracias por formar parte de Battly!",
+
+
+    /* crash report */
+    "notification_crash_report_title": "Error al abrir Minecraft",
+    "notification_crash_report_text": "Consulta el error abriendo Battly",
+    "thats_a_error_message": "Esto es un mensaje de error al iniciar Minecraft. Esto no es por culpa de Battly, no reportar este problema.",
+    "error_found": "Error encontrado",
+    "find_solution": "Encontrar solución",
+    "save_logs": "Guardar logs",
+    "searching_solution": "Buscando solución...",
+    "searching_solution_taking_1": "Está tardando más de lo normal, por favor, espera...",
+    "searching_solution_taking_2": "Seguimos buscando...",
+    "searching_solution_taking_3": "Estamos teniendo problemas para encontrar una solución, por favor, intenta más tarde.",
+    "no_solution_found": "No se ha encontrado una solución a este problema. Puedes intentar buscar en Google el error que te ha dado.",
+    "solution_found": "¡Se ha encontrado una solución!",
+
 };
 
 export default strings;

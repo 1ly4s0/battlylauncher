@@ -1,9 +1,11 @@
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
+/// <reference types="node" />
+import { EventEmitter } from 'events';
 type loader = {
-    rootPath?: boolean;
+    path?: string;
     type?: string;
     build?: string;
     enable?: boolean;
@@ -16,6 +18,11 @@ type screen = {
 type memory = {
     min?: string;
     max?: string;
+};
+type javaOPTS = {
+    path?: string;
+    version?: number;
+    type?: string;
 };
 type LaunchOPTS = {
     url: string | null;
@@ -33,17 +40,14 @@ type LaunchOPTS = {
     ignored: string[];
     JVM_ARGS: string[];
     GAME_ARGS: string[];
-    javaPath: string;
+    java: javaOPTS;
     screen: screen;
     memory: memory;
 };
-export default class Launch {
+export default class Launch extends EventEmitter {
     options: LaunchOPTS;
-    on: any;
-    emit: any;
-    constructor();
-    Launch(opt: LaunchOPTS): Promise<any>;
-    start(): Promise<any>;
+    Launch(opt: LaunchOPTS): Promise<boolean>;
+    start(): Promise<boolean>;
     DownloadGame(): Promise<any>;
 }
 export {};

@@ -37,7 +37,15 @@ class Login {
         this.loginMicrosoft();
         document.querySelector('.cancel-login').addEventListener("click", () => {
             document.querySelector(".cancel-login").style.display = "none";
-            changePanel("settings");
+            if (this.database.getAccounts().length == 0) {
+                new Alert().ShowAlert({
+                    title: lang.no_accounts,
+                    message: lang.no_accounts_message,
+                    type: "error"
+                })
+            } else {
+                changePanel("settings");
+            }
         })
     }
 
@@ -46,7 +54,15 @@ class Login {
         this.loginOffline();
         document.querySelector('.cancel-login').addEventListener("click", () => {
             document.querySelector(".cancel-login").style.display = "none";
-            changePanel("settings");
+            if (this.database.getAccounts().length == 0) {
+                new Alert().ShowAlert({
+                    title: lang.no_accounts,
+                    message: lang.no_accounts_message,
+                    type: "error"
+                })
+            } else {
+                changePanel("settings");
+            }
         })
     }
 
@@ -153,11 +169,15 @@ class Login {
         let loginBtn = document.getElementById("login-btn")
 
         cancelMojangBtn.addEventListener("click", () => {
-            mailInput.value = "";
-            passwordInput.value = "";
-            infoLogin.innerHTML = "&nbsp;";
-            infoLoginPanel.classList.remove("is-active");
-            changePanel("settings");
+            if (this.database.getAccounts().length == 0) {
+                new Alert().ShowAlert({
+                    title: lang.no_accounts,
+                    message: lang.no_accounts_message,
+                    type: "error"
+                })
+            } else {
+                changePanel("settings");
+            }
         })
 
 

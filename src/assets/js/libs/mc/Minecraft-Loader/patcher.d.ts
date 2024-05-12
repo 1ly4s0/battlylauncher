@@ -1,7 +1,7 @@
-export default class forgePatcher {
+/// <reference types="node" />
+import { EventEmitter } from 'events';
+export default class forgePatcher extends EventEmitter {
     options: any;
-    on: any;
-    emit: any;
     constructor(options: any);
     patcher(profile: any, config: any, neoForgeOld?: boolean): Promise<void>;
     check(profile: any): boolean;

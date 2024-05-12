@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -14,18 +14,37 @@ const node_fetch_1 = __importDefault(require("node-fetch"));
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const events_1 = require("events");
-class NeoForgeMC {
+class NeoForgeMC extends events_1.EventEmitter {
     constructor(options = {}) {
+        super();
         this.options = options;
-        this.on = events_1.EventEmitter.prototype.on;
-        this.emit = events_1.EventEmitter.prototype.emit;
     }
     async downloadInstaller(Loader) {
         let build;
         let neoForgeURL;
         let oldAPI = true;
-        let legacyMetaData = await (0, node_fetch_1.default)(Loader.legacyMetaData).then(res => res.json());
-        let metaData = await (0, node_fetch_1.default)(Loader.metaData).then(res => res.json());
+        let legacyMetaData;
+        try {
+            legacyMetaData = await (0, node_fetch_1.default)(Loader.metaData).then(res => res.json());
+            if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'neoforge', this.options.loader.version))) {
+                fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'neoforge', this.options.loader.version), { recursive: true });
+            }
+            fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'neoforge', this.options.loader.version, 'metaData-legacy.json'), JSON.stringify(legacyMetaData));
+        }
+        catch (error) {
+            legacyMetaData = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'neoforge', this.options.loader.version, 'metaData-legacy.json')).toString());
+        }
+        let metaData;
+        try {
+            metaData = await (0, node_fetch_1.default)(Loader.metaData).then(res => res.json());
+            if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'neoforge', this.options.loader.version))) {
+                fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'neoforge', this.options.loader.version), { recursive: true });
+            }
+            fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'neoforge', this.options.loader.version, 'metaData.json'), JSON.stringify(metaData));
+        }
+        catch (error) {
+            metaData = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'neoforge', this.options.loader.version, 'metaData.json')).toString());
+        }
         let versions = legacyMetaData.versions.filter(version => version.includes(`${this.options.loader.version}-`));
         if (!versions.length) {
             let minecraftVersion = `${this.options.loader.version.split('.')[1]}.${this.options.loader.version.split('.')[2]}`;
@@ -60,7 +79,7 @@ class NeoForgeMC {
     }
     async extractProfile(pathInstaller) {
         let neoForgeJSON = {};
-        let file = await (0, Index_js_1.getFileFromJar)(pathInstaller, 'install_profile.json');
+        let file = await (0, Index_js_1.getFileFromArchive)(pathInstaller, 'install_profile.json');
         let neoForgeJsonOrigin = JSON.parse(file);
         if (!neoForgeJsonOrigin)
             return { error: { message: 'Invalid neoForge installer' } };
@@ -70,7 +89,7 @@ class NeoForgeMC {
         }
         else {
             neoForgeJSON.install = neoForgeJsonOrigin;
-            let file = await (0, Index_js_1.getFileFromJar)(pathInstaller, path_1.default.basename(neoForgeJSON.install.json));
+            let file = await (0, Index_js_1.getFileFromArchive)(pathInstaller, path_1.default.basename(neoForgeJSON.install.json));
             neoForgeJSON.version = JSON.parse(file);
         }
         return neoForgeJSON;
@@ -83,16 +102,16 @@ class NeoForgeMC {
             let pathFileDest = path_1.default.resolve(this.options.path, 'libraries', fileInfo.path);
             if (!fs_1.default.existsSync(pathFileDest))
                 fs_1.default.mkdirSync(pathFileDest, { recursive: true });
-            let file = await (0, Index_js_1.getFileFromJar)(pathInstaller, profile.filePath);
+            let file = await (0, Index_js_1.getFileFromArchive)(pathInstaller, profile.filePath);
             fs_1.default.writeFileSync(`${pathFileDest}/${fileInfo.name}`, file, { mode: 0o777 });
         }
         else if (profile.path) {
             let fileInfo = (0, Index_js_1.getPathLibraries)(profile.path);
-            let listFile = await (0, Index_js_1.getFileFromJar)(pathInstaller, null, `maven/${fileInfo.path}`);
+            let listFile = await (0, Index_js_1.getFileFromArchive)(pathInstaller, null, `maven/${fileInfo.path}`);
             await Promise.all(listFile.map(async (files) => {
                 let fileName = files.split('/');
                 this.emit('extract', `Extracting ${fileName[fileName.length - 1]}...`);
-                let file = await (0, Index_js_1.getFileFromJar)(pathInstaller, files);
+                let file = await (0, Index_js_1.getFileFromArchive)(pathInstaller, files);
                 let pathFileDest = path_1.default.resolve(this.options.path, 'libraries', fileInfo.path);
                 if (!fs_1.default.existsSync(pathFileDest))
                     fs_1.default.mkdirSync(pathFileDest, { recursive: true });
@@ -106,7 +125,7 @@ class NeoForgeMC {
             let universalPath = profile.libraries.find(v => {
                 return (v.name || '').startsWith(oldAPI ? 'net.neoforged:forge' : 'net.neoforged:neoforge');
             });
-            let client = await (0, Index_js_1.getFileFromJar)(pathInstaller, 'data/client.lzma');
+            let client = await (0, Index_js_1.getFileFromArchive)(pathInstaller, 'data/client.lzma');
             let fileInfo = (0, Index_js_1.getPathLibraries)(profile.path || universalPath.name, '-clientdata', '.lzma');
             let pathFile = path_1.default.resolve(this.options.path, 'libraries', fileInfo.path);
             if (!fs_1.default.existsSync(pathFile))
@@ -131,8 +150,10 @@ class NeoForgeMC {
         ];
         for (let lib of libraries) {
             if (skipneoForgeFilter && skipneoForge.find(libs => lib.name.includes(libs))) {
-                this.emit('check', check++, libraries.length, 'libraries');
-                continue;
+                if (lib.downloads?.artifact?.url == "" || !lib.downloads?.artifact?.url) {
+                    this.emit('check', check++, libraries.length, 'libraries');
+                    continue;
+                }
             }
             if (lib.rules) {
                 this.emit('check', check++, libraries.length, 'libraries');

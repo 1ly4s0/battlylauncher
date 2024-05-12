@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -58,7 +58,7 @@ class MinecraftBundle {
             instancePath = `/instances/${this.options.instance}`;
         }
         let files = this.options.instance ? this.getFiles(`${this.options.path}/instances/${this.options.instance}`) : this.getFiles(this.options.path);
-        let ignoredfiles = [...this.getFiles(`${this.options.path}/loader`)];
+        let ignoredfiles = [...this.getFiles(`${this.options.path}/loader`), ...this.getFiles(`${this.options.path}/runtime`)];
         for (let file of this.options.ignored) {
             file = (`${this.options.path}${instancePath}/${file}`);
             if (fs_1.default.existsSync(file)) {

@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -9,8 +9,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const node_fetch_1 = __importDefault(require("node-fetch"));
 const fs_1 = __importDefault(require("fs"));
-const events_1 = require("events");
-
 class MinecraftAssets {
     constructor(options) {
         this.options = options;
@@ -24,8 +22,9 @@ class MinecraftAssets {
             fs_1.default.mkdirSync(`${this.options.path}/assets/indexes`, { recursive: true });
             fs_1.default.mkdirSync(`${this.options.path}/assets/objects`, { recursive: true });
             fs_1.default.writeFileSync(`${this.options.path}/assets/indexes/${this.assetIndex.id}.json`, JSON.stringify(data));
-        } catch (e) {
-            data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/assets/indexes/${this.assetIndex.id}.json`,));
+        }
+        catch (e) {
+            data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/assets/indexes/${this.assetIndex.id}.json`, 'utf-8'));
         }
         assets.push({
             type: "CFILE",

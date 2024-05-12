@@ -30,7 +30,6 @@ class LoadAPI {
     }
     async GetConfig() {
         loadingText.innerHTML = lang.loading_config;
-        document.querySelector(".preload-content").style.display = "";
         try {
             const response = await axios.get(configURL, { httpsAgent });
             const data = response.data;

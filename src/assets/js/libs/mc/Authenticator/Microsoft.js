@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -34,21 +34,21 @@ class Microsoft {
             if (usercode === "cancel")
                 return false;
             else
-            return await this.url(usercode);
+                return await this.url(usercode);
         }
         else if (type == "nwjs") {
             let usercode = await (require('./GUI/NW.js'))(url);
             if (usercode === "cancel")
                 return false;
             else
-            return await this.url(usercode);
+                return await this.url(usercode);
         }
         else if (type == "terminal") {
             let usercode = await (require('./GUI/Terminal.js'))(url);
             if (usercode === "cancel")
                 return false;
             else
-            return await this.url(usercode);
+                return await this.url(usercode);
         }
     }
     async url(code) {
@@ -66,23 +66,8 @@ class Microsoft {
     }
     async refresh(acc) {
         let timeStamp = Math.floor(Date.now() / 1000);
-        let oauth2 = await (0, node_fetch_1.default)("https://login.live.com/oauth20_token.srf", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: `grant_type=refresh_token&client_id=${this.client_id}&refresh_token=${acc.refresh_token}`
-        }).then(res => res.json()).catch(err => { return { error: err }; });
-
-        ;
-        if (oauth2.error) {
-            oauth2.errorType = "oauth2";
-            return oauth2;
-        }
-        ;
         if (timeStamp < (acc?.meta?.access_token_expires_in - 7200)) {
             let profile = await this.getProfile(acc);
-            acc.refresh_token = oauth2.refresh_token;
             acc.profile = {
                 skins: profile.skins,
                 capes: profile.capes
@@ -90,6 +75,19 @@ class Microsoft {
             return acc;
         }
         else {
+            let oauth2 = await (0, node_fetch_1.default)("https://login.live.com/oauth20_token.srf", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `grant_type=refresh_token&client_id=${this.client_id}&refresh_token=${acc.refresh_token}`
+            }).then(res => res.json()).catch(err => { return { error: err }; });
+            ;
+            if (oauth2.error) {
+                oauth2.errorType = "oauth2";
+                return oauth2;
+            }
+            ;
             return await this.getAccount(oauth2);
         }
     }
@@ -148,6 +146,17 @@ class Microsoft {
             xsts.errorType = "xboxAccount";
             return xsts;
         }
+        let launch = await (0, node_fetch_1.default)("https://api.minecraftservices.com/launcher/login", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ xtoken: `XBL3.0 x=${xbl.DisplayClaims.xui[0].uhs};${xsts.Token}`, platform: "PC_LAUNCHER" })
+        }).then(res => res.json()).catch(err => { return { error: err }; });
+        if (launch.error) {
+            launch.errorType = "launch";
+            return launch;
+        }
         let mcLogin = await (0, node_fetch_1.default)("https://api.minecraftservices.com/authentication/login_with_xbox", {
             method: "POST",
             headers: {
@@ -158,6 +167,18 @@ class Microsoft {
         if (mcLogin.error) {
             mcLogin.errorType = "mcLogin";
             return mcLogin;
+        }
+        let hasGame = await (0, node_fetch_1.default)("https://api.minecraftservices.com/entitlements/mcstore", {
+            method: "GET",
+            headers: {
+                'Authorization': `Bearer ${mcLogin.access_token}`
+            }
+        }).then(res => res.json());
+        if (!hasGame.items.find(i => i.name == "product_minecraft" || i.name == "game_minecraft")) {
+            return {
+                error: "You don't own the game",
+                errorType: "game"
+            };
         }
         let profile = await this.getProfile(mcLogin);
         if (profile.error) {
@@ -172,10 +193,14 @@ class Microsoft {
             refresh_token: oauth2.refresh_token,
             user_properties: '{}',
             meta: {
-                xuid: xboxAccount.DisplayClaims.xui[0].xid,
                 type: "Xbox",
                 access_token_expires_in: mcLogin.expires_in + Math.floor(Date.now() / 1000),
                 demo: profile.error ? true : false
+            },
+            xboxAccount: {
+                xuid: xboxAccount.DisplayClaims.xui[0].xid,
+                gamertag: xboxAccount.DisplayClaims.xui[0].gtg,
+                ageGroup: xboxAccount.DisplayClaims.xui[0].agg
             },
             profile: {
                 skins: profile.skins,
@@ -190,7 +215,7 @@ class Microsoft {
                 'Authorization': `Bearer ${mcLogin.access_token}`
             }
         }).then(res => res.json()).catch(err => { return { error: err }; });
-            ;
+        ;
         if (profile.error)
             return profile;
         let skins = profile.skins;

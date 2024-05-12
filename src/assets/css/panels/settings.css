@@ -210,6 +210,16 @@
     max-width: 29ch;
 }
 
+.add-account-name {
+    margin: 0 100px;
+    margin-top: 25px;
+    font: normal normal bold 40px/45px Poppins;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 29ch;
+}
+
 .account-uuid {
     margin: 0 100px;
     font: normal normal normal 18px/27px Poppins;

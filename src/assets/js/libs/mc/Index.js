@@ -28,8 +28,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Status = exports.Mojang = exports.Microsoft = exports.Launch = exports.AZauth = void 0;
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 const AZauth_js_1 = __importDefault(require("./Authenticator/AZauth.js"));
 exports.AZauth = AZauth_js_1.default;

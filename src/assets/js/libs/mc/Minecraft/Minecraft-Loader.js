@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -9,16 +9,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const events_1 = require("events");
 const index_js_1 = __importDefault(require("../Minecraft-Loader/index.js"));
-
 class MinecraftLoader {
     constructor(options) {
         this.options = options;
         this.on = events_1.EventEmitter.prototype.on;
         this.emit = events_1.EventEmitter.prototype.emit;
-        if (this.options.loader.rootPath)
-            this.loaderPath = this.options.path;
-        else
-            this.loaderPath = `${this.options.path}/loader/${this.options.loader.type}`;
+        this.loaderPath = `${this.options.path}/${this.options.loader.path}`;
     }
     async GetLoader(version, javaPath) {
         let loader = new index_js_1.default({

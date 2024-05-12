@@ -1,0 +1,14 @@
+Error detectado: No se ha podido iniciar Minecraft. Vuelve a iniciar Minecraft. 
+Error:
+[23:14:01] [main/ERROR]: Unable to launch
+java.lang.ClassNotFoundException: optifine.OptiFineTweaker
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:103) ~[launchwrapper-of-2.2.jar:2.2]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:587) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[?:?]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:122) [launchwrapper-of-2.2.jar:2.2]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:30) [launchwrapper-of-2.2.jar:2.2]

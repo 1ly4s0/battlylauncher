@@ -77,6 +77,7 @@ class Splash {
 		await sleep(1000);
 		
 		fetch("https://google.com").then(async () => {
+			this.maintenanceCheck();
 			this.checkUpdate();
 	}).catch(async () => {
 			this.setStatus(lang.checking_connection);
@@ -111,7 +112,7 @@ class Splash {
             	if (err.error) {
                 	let error = err.message;
 					error = error.toString().slice(0, 50);
-                	this.shutdown(`${lang.update_error}${error}`);
+                	this.shutdown(`${lang.update_error}<br>${error}`);
             	}
 			}
         })
@@ -161,11 +162,6 @@ class Splash {
 		config.GetConfig().then(async res => {
 			if (res.maintenance) return this.shutdown(res.maintenance_message);
 			this.setStatus(lang.starting_launcher);
-			
-		//aplicar las animaciones pero al reves
-		this.splash.classList.remove("translate");
-		this.splashMessage.classList.add("animate__animated", "animate__flipOutX");
-		this.splashAuthor.classList.add("animate__animated", "animate__flipOutX");
 		await sleep(500);
 			setTimeout(() => {
 				this.startLauncher();
@@ -182,6 +178,9 @@ class Splash {
 	 * @async
 	 */
 	async startLauncher() {
+		this.splash.classList.remove("translate");
+		this.splashMessage.classList.add("animate__animated", "animate__flipOutX");
+		this.splashAuthor.classList.add("animate__animated", "animate__flipOutX");
 		this.setStatus(lang.ending);
 		await sleep(500);
 		ipcRenderer.send('main-window-open');

@@ -419,13 +419,15 @@ body, html {
       cursor: pointer;
   }
 
-  .radio-button-container {
-      display: flex;
-      align-items: center;
+.radio-button-container {
+    display: flex;
+    align-items: center;
     gap: 10px;
-        margin-left: -5px;
-        margin-top: 5px;
-  }
+    flex-wrap: wrap;
+    /* Agregamos esta propiedad para que los elementos se salten de línea */
+    margin-left: -5px;
+    margin-top: 5px;
+}
 
   .radio-button {
       display: inline-block;

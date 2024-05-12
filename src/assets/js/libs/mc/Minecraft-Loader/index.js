@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -16,11 +16,10 @@ const quilt_js_1 = __importDefault(require("./loader/quilt/quilt.js"));
 const events_1 = require("events");
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
-class Loader {
+class Loader extends events_1.EventEmitter {
     constructor(options) {
+        super();
         this.options = options;
-        this.on = events_1.EventEmitter.prototype.on;
-        this.emit = events_1.EventEmitter.prototype.emit;
     }
     async install() {
         let Loader = (0, Index_js_1.loader)(this.options.loader.type);

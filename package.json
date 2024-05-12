@@ -1,7 +1,7 @@
 {
   "name": "BattlyLauncher",
   "productname": "Battly Launcher",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "El mejor Launcher Personalizado para Minecraft Premium y No premium",
   "main": "src/app.js",
   "author": "TECNO BROS <contacto@tecnobros.es>",
@@ -30,6 +30,7 @@
     "javascript-obfuscator": "^4.1.0",
     "minecraft-launcher-core": "^3.18.0",
     "nbtify": "^1.90.1",
+    "node-7z": "^3.0.0",
     "node-fetch": "^2.7.0",
     "node-notifier": "^10.0.1",
     "protobufjs": "^7.2.6",
@@ -41,7 +42,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "electron": "^30.0.0",
+    "electron": "^30.0.1",
     "electron-builder": "^24.13.3",
     "nodemon": "^3.1.0"
   },

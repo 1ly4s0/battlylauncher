@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -72,8 +72,9 @@ class Libraries {
         try {
             data = await (0, node_fetch_1.default)(url).then(res => res.json());
             fs_1.default.writeFileSync(`${this.options.path}/battly/launcher/mc-assets/extra-assets.json`, JSON.stringify(data, null, 4));
-        } catch (e) {
-            data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/battly/launcher/mc-assets/extra-assets.json`));
+        }
+        catch (e) {
+            data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/battly/launcher/mc-assets/extra-assets.json`, 'utf-8'));
         }
         let assets = [];
         for (let asset of data) {

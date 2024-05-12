@@ -1,13 +1,13 @@
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
-export default class Loader {
+/// <reference types="node" />
+import { EventEmitter } from 'events';
+export default class Loader extends EventEmitter {
     options: any;
-    on: any;
-    emit: any;
     constructor(options: any);
-    install(): Promise<any>;
+    install(): Promise<boolean>;
     forge(Loader: any): Promise<any>;
     neoForge(Loader: any): Promise<any>;
     fabric(Loader: any): Promise<any>;

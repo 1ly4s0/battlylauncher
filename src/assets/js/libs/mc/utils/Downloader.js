@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -10,11 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 const node_fetch_1 = __importDefault(require("node-fetch"));
 const events_1 = require("events");
-class download {
-    constructor() {
-        this.on = events_1.EventEmitter.prototype.on;
-        this.emit = events_1.EventEmitter.prototype.emit;
-    }
+class download extends events_1.EventEmitter {
     async downloadFile(url, path, fileName) {
         if (!fs_1.default.existsSync(path))
             fs_1.default.mkdirSync(path, { recursive: true });

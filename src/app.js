@@ -15,7 +15,7 @@ const { Microsoft } = require("./assets/js/libs/mc/Index");
 const { autoUpdater } = require("electron-updater");
 const { io } = require("socket.io-client");
 const socket = io("https://api.battlylauncher.com");
-process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
+//process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
 const fs = require("fs");
 const path = require("path");
 const dataDirectory =
@@ -428,7 +428,7 @@ ipcMain.on("new-status-discord", async () => {
           },
         },
       })
-      .catch((error) => {});
+      .catch((error) => { });
   });
 });
 
@@ -471,7 +471,7 @@ ipcMain.on("new-status-discord-jugando", async (event, status) => {
           },
         },
       })
-      .catch((error) => {});
+      .catch((error) => { });
   });
 });
 
@@ -510,7 +510,7 @@ ipcMain.on("delete-and-new-status-discord", async () => {
           },
         },
       })
-      .catch((error) => {});
+      .catch((error) => { });
   });
 });
 
