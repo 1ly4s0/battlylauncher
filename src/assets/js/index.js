@@ -140,7 +140,7 @@ class Splash {
         })
 
         ipcRenderer.on('update-not-available', () => {
-            this.maintenanceCheck();
+            this.startLauncher();
         })
 
 		ipcRenderer.on('update-downloaded', async () => {
