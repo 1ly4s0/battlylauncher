@@ -78,7 +78,6 @@ class Splash {
 		
 		fetch("https://google.com").then(async () => {
 			this.maintenanceCheck();
-			this.checkUpdate();
 	}).catch(async () => {
 			this.setStatus(lang.checking_connection);
 			await sleep(2000);
@@ -164,7 +163,7 @@ class Splash {
 			this.setStatus(lang.starting_launcher);
 		await sleep(500);
 			setTimeout(() => {
-				this.startLauncher();
+				this.checkUpdate();
 			}, 1000);
 			return true;
 		}).catch(e => {
