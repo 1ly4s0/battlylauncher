@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -44,10 +44,10 @@ class MinecraftArguments {
             '${auth_session}': this.authenticator.access_token,
             '${auth_player_name}': this.authenticator.name,
             '${auth_uuid}': this.authenticator.uuid,
-            '${auth_xuid}': this.authenticator.meta.xuid || this.authenticator.access_token,
+            '${auth_xuid}': this.authenticator.xboxAccount ? this.authenticator.xboxAccount.xuid || this.authenticator.access_token : null,
             '${user_properties}': this.authenticator.user_properties,
             '${user_type}': userType,
-            '${version_name}': json.id,
+            '${version_name}': loaderJson ? loaderJson.id : json.id,
             '${assets_index_name}': json.assetIndex.id,
             '${game_directory}': this.options.instance ? `${this.options.path}/instances/${this.options.instance}` : this.options.path,
             '${assets_root}': (0, Index_js_1.isold)(json) ? `${this.options.path}/resources` : `${this.options.path}/assets`,
@@ -87,6 +87,9 @@ class MinecraftArguments {
             '-XX:MaxGCPauseMillis=50',
             '-XX:G1HeapRegionSize=32M',
             '-Dfml.ignoreInvalidMinecraftCertificates=true',
+            `-Djna.tmpdir=${this.options.path}/versions/${json.id}/natives`,
+            `-Dorg.lwjgl.system.SharedLibraryExtractPath=${this.options.path}/versions/${json.id}/natives`,
+            `-Dio.netty.native.workdir=${this.options.path}/versions/${json.id}/natives`
         ];
         if (!json.minecraftArguments) {
             jvm.push(opts[process.platform]);
@@ -141,6 +144,10 @@ class MinecraftArguments {
         else {
             classPath.push(`${this.options.path}/versions/${json.id}/${json.id}.jar`);
         }
+        classPath = classPath.filter((url, index, self) => {
+            let lastSegment = url.substring(url.lastIndexOf('/') + 1);
+            return self.findIndex((u) => u.substring(u.lastIndexOf('/') + 1) === lastSegment) === index;
+        });
         return {
             classpath: [
                 `-cp`,

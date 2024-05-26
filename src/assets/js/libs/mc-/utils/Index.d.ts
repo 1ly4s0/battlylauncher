@@ -1,6 +1,6 @@
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 declare function getPathLibraries(main: any, nativeString?: any, forceExt?: any): {
     path: string;
@@ -40,7 +40,7 @@ declare function loader(type: string): {
     legacyInstall?: undefined;
 };
 declare let mirrors: string[];
-declare function getFileFromJar(jar: string, file?: string, path?: string): Promise<unknown>;
+declare function getFileFromArchive(jar: string, file?: string, path?: string): Promise<unknown>;
 declare function createZIP(files: any, ignored?: any): Promise<unknown>;
 declare function skipLibrary(lib: any): boolean;
-export { getPathLibraries, isold, getFileHash, mirrors, loader, getFileFromJar, createZIP, skipLibrary };
+export { getPathLibraries, isold, getFileHash, mirrors, loader, getFileFromArchive, createZIP, skipLibrary };

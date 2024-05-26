@@ -775,6 +775,10 @@ class Home {
                             option.value = build[j];
                             option.innerHTML = build[j];
                             versionOptionsVersion.appendChild(option);
+
+                            if (instance_json.loaderVersion === build[j]) {
+                              versionOptionsVersion.value = build[j];
+                            }
                           }
                         }
                       }
@@ -910,36 +914,6 @@ class Home {
               });
             });
 
-            let loader;
-            if (instance_json.version.endsWith("-forge")) {
-              loader = "forge";
-            } else if (instance_json.version.endsWith("-fabric")) {
-              loader = "fabric";
-            } else if (instance_json.version.endsWith("-quilt")) {
-              loader = "quilt";
-            }
-
-            let version;
-
-            let loader_json = null;
-            if (instance_json.loader) loader_json = instance_json.loader;
-
-            let loaderVersion = null;
-            if (loader_json) loaderVersion = loader_json.loaderVersion;
-
-            if (
-              instance_json.version.endsWith("-forge") ||
-              instance_json.version.endsWith("-fabric") ||
-              instance_json.version.endsWith("-quilt")
-            ) {
-              version = instance_json.version
-                .replace("-forge", "")
-                .replace("-fabric", "")
-                .replace("-quilt", "");
-            } else {
-              version = instance_json.version;
-            }
-
             if (
               !fs.existsSync(
                 `${dataDirectory}/.battly/instances/${instancias[i]}/battly`
@@ -1010,6 +984,37 @@ class Home {
               .value;
 
             openButton1.addEventListener("click", () => {
+              let loader;
+            if (instance_json.version.endsWith("-forge")) {
+              loader = "forge";
+            } else if (instance_json.version.endsWith("-fabric")) {
+              loader = "fabric";
+            } else if (instance_json.version.endsWith("-quilt")) {
+              loader = "quilt";
+            }
+
+            let version;
+
+            let loader_json;
+            if (instance_json.loader) loader_json = instance_json.loader;
+
+            let loaderVersion;
+            if (instance_json) loaderVersion = instance_json.loaderVersion;
+
+              if (
+                instance_json.version.endsWith("-forge") ||
+                instance_json.version.endsWith("-fabric") ||
+                instance_json.version.endsWith("-quilt")
+              ) {
+                version = instance_json.version
+                  .replace("-forge", "")
+                  .replace("-fabric", "")
+                  .replace("-quilt", "");
+              } else {
+                version = instance_json.version;
+              }
+
+
               let launch = new Launch();
               let opts;
               if (account.type === "battly") {
@@ -1027,9 +1032,7 @@ class Home {
                   version: version,
                   loader: {
                     type: loader_json ? loader_json : loader,
-                    build: loaderVersion
-                      ? loaderVersion
-                      : this.BattlyConfig.loader.build,
+                    build: loaderVersion ? loaderVersion : "latest",
                     enable: true,
                   },
                   verify: false,
@@ -1061,9 +1064,7 @@ class Home {
                   version: version,
                   loader: {
                     type: loader_json ? loader_json : loader,
-                    build: loaderVersion
-                      ? loaderVersion
-                      : this.BattlyConfig.loader.build,
+                    build: loaderVersion ? loaderVersion : "latest",
                     enable: true,
                   },
                   verify: false,
@@ -2382,25 +2383,29 @@ class Home {
       });
     });
     try {
-      let versiones_nuevas = fs.readdirSync(
-        dataDirectory + "/.battly/versions"
-      );
+      let versiones_nuevas = fs.readdirSync(dataDirectory + "/.battly/versions");
+
+      // Filtrar solo las carpetas
+      versiones_nuevas = versiones_nuevas.filter(version => {
+        let fullPath = path.join(dataDirectory, "/.battly/versions", version);
+        return fs.statSync(fullPath).isDirectory();
+      });
 
       let versions_vanilla = [];
+      let data_versions_mojang = this.VersionsMojang;
+
+      for (let i = 0; i < data_versions_mojang.versions.length; i++) {
+        let version = data_versions_mojang.versions[i].id;
+        versions_vanilla.push(version);
+      }
 
       for (let i = 0; i < versiones_nuevas.length; i++) {
-        let data_versions_mojang = this.VersionsMojang;
-
-        for (let i = 0; i < data_versions_mojang.versions.length; i++) {
-          let version = data_versions_mojang.versions[i].id;
-          versions_vanilla.push(version);
-        }
-
         let version = versiones_nuevas[i];
 
         if (!versions_vanilla.includes(version)) {
           let option = document.createElement("option");
-          //si contiene OptiFine- eliminar todo lo que vaya después de OptiFine pero incluir la palabra OptiFine
+
+          // si contiene OptiFine- eliminar todo lo que vaya después de OptiFine pero incluir la palabra OptiFine
           if (version.includes("OptiFine_")) {
             // Usa una expresión regular para eliminar todo después de "OptiFine" y agrega "OptiFine"
             let version_optifine = version.replace(/OptiFine.*$/, "OptiFine");
@@ -2414,12 +2419,14 @@ class Home {
           }
         } else {
           let option = document.createElement("option");
-          option.value = version + ``;
-          option.innerHTML = version + "";
+          option.value = version;
+          option.innerHTML = version;
           versiones.appendChild(option);
         }
       }
-    } catch {}
+    } catch (error) {
+      console.error("Error al cargar versiones: ", error);
+    }
   }
 
   async CargarMods() {
@@ -3493,7 +3500,8 @@ class Home {
             launch.launch(opts);
             document.getElementById("carga-de-versiones").style.display = "";
           } else {
-            await launch_core.Launch(opts);
+            console.log("VEAMOS SI ES ESTO")
+            await launch_core.Launch(opts, true);
             document.getElementById("carga-de-versiones").style.display = "";
           }
         } catch (error) {
@@ -4657,13 +4665,13 @@ class Home {
     <span class="radio-button__custom"></span>
     Clients
   </label>
-  <input type="radio" class="radio-button__input" id="radio20-inicio" name="option" value="neoforge">
-  <label class="radio-button__label" for="radio20-inicio">
+  <input type="radio" class="radio-button__input" id="radio21-inicio" name="option" value="neoforge">
+  <label class="radio-button__label" for="radio21-inicio">
     <span class="radio-button__custom"></span>
      NeoForge
   </label>
-  <input type="radio" class="radio-button__input" id="radio21-inicio" name="option" value="legacyfabric">
-  <label class="radio-button__label" for="radio21-inicio">
+  <input type="radio" class="radio-button__input" id="radio22-inicio" name="option" value="legacyfabric">
+  <label class="radio-button__label" for="radio22-inicio">
     <span class="radio-button__custom"></span>
     LegacyFabric
   </label>
@@ -4962,6 +4970,8 @@ class Home {
               quilt.style.display = "none";
               optifine.style.display = "none";
               clientes.style.display = "none";
+              neoforge.style.display = "none";
+              legacyfabric.style.display = "none";
               titleVersions.innerHTML = "Java";
               subtitleVersions.innerHTML =
                 '<i class="fas fa-download"></i> ' + normalVersionType.value;
@@ -4973,6 +4983,8 @@ class Home {
               quilt.style.display = "none";
               optifine.style.display = "none";
               clientes.style.display = "none";
+              neoforge.style.display = "none";
+              legacyfabric.style.display = "none";
               titleVersions.innerHTML = "Fabric";
               subtitleVersions.innerHTML =
                 '<i class="fas fa-download"></i> ' +
@@ -4985,6 +4997,8 @@ class Home {
               quilt.style.display = "none";
               optifine.style.display = "none";
               clientes.style.display = "none";
+              neoforge.style.display = "none";
+              legacyfabric.style.display = "none";
               titleVersions.innerHTML = "Forge";
               subtitleVersions.innerHTML =
                 '<i class="fas fa-download"></i> ' +
@@ -4997,6 +5011,8 @@ class Home {
               quilt.style.display = "";
               optifine.style.display = "none";
               clientes.style.display = "none";
+              neoforge.style.display = "none";
+              legacyfabric.style.display = "none";
               titleVersions.innerHTML = "Quilt";
               subtitleVersions.innerHTML =
                 '<i class="fas fa-download"></i> ' +
@@ -5009,6 +5025,8 @@ class Home {
               quilt.style.display = "none";
               optifine.style.display = "";
               clientes.style.display = "none";
+              neoforge.style.display = "none";
+              legacyfabric.style.display = "none";
               titleVersions.innerHTML = "OptiFine";
               subtitleVersions.innerHTML =
                 '<i class="fas fa-download"></i> ' +
@@ -5021,6 +5039,8 @@ class Home {
               quilt.style.display = "none";
               optifine.style.display = "none";
               clientes.style.display = "";
+              neoforge.style.display = "none";
+              legacyfabric.style.display = "none";
               titleVersions.innerHTML = "Clientes";
               subtitleVersions.innerHTML =
                 '<i class="fas fa-download"></i> ' + clientesVersionType.name;
@@ -5033,9 +5053,10 @@ class Home {
               optifine.style.display = "none";
               clientes.style.display = "none";
               neoforge.style.display = "";
+              legacyfabric.style.display = "none";
               titleVersions.innerHTML = "NeoForge";
               subtitleVersions.innerHTML =
-                '<i class="fas fa-download"></i> ' + neoforgeVersionType.name;
+                '<i class="fas fa-download"></i> ' + neoforgeVersionType.value.replace("-neoforge", "");
             } else if (element.value == "legacyfabric") {
               versionImg.src = "./assets/images/icons/legacyfabric.png";
               tipoDeVersiones.style.display = "none";
@@ -5045,9 +5066,10 @@ class Home {
               optifine.style.display = "none";
               clientes.style.display = "none";
               legacyfabric.style.display = "";
+              neoforge.style.display = "none";
               titleVersions.innerHTML = "LegacyFabric";
               subtitleVersions.innerHTML =
-                '<i class="fas fa-download"></i> ' + legacyfabricVersionType.name;
+                '<i class="fas fa-download"></i> ' + legacyfabricVersionType.value.replace("-legacyfabric", "");
             }
           });
         });

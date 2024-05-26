@@ -1,13 +1,13 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.skipLibrary = exports.createZIP = exports.getFileFromJar = exports.loader = exports.mirrors = exports.getFileHash = exports.isold = exports.getPathLibraries = void 0;
+exports.skipLibrary = exports.createZIP = exports.getFileFromArchive = exports.loader = exports.mirrors = exports.getFileHash = exports.isold = exports.getPathLibraries = void 0;
 const crypto_1 = __importDefault(require("crypto"));
 const fs_1 = __importDefault(require("fs"));
 const adm_zip_1 = __importDefault(require("adm-zip"));
@@ -87,7 +87,7 @@ let mirrors = [
     "https://repo1.maven.org/maven2"
 ];
 exports.mirrors = mirrors;
-async function getFileFromJar(jar, file = null, path = null) {
+async function getFileFromArchive(jar, file = null, path = null) {
     let fileReturn = [];
     let zip = new adm_zip_1.default(jar);
     let entries = zip.getEntries();
@@ -106,7 +106,7 @@ async function getFileFromJar(jar, file = null, path = null) {
         resolve(fileReturn);
     });
 }
-exports.getFileFromJar = getFileFromJar;
+exports.getFileFromArchive = getFileFromArchive;
 async function createZIP(files, ignored = null) {
     let zip = new adm_zip_1.default();
     return await new Promise(resolve => {

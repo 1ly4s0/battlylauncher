@@ -1,6 +1,6 @@
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 declare function login(username: string, password?: string): Promise<any>;
 declare function refresh(acc: any): Promise<any>;

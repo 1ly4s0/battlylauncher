@@ -46,8 +46,10 @@ type LaunchOPTS = {
 };
 export default class Launch extends EventEmitter {
     options: LaunchOPTS;
-    Launch(opt: LaunchOPTS): Promise<boolean>;
-    start(): Promise<boolean>;
-    DownloadGame(): Promise<any>;
+    Launch(opt: LaunchOPTS, OnlyLaunch?: boolean): Promise<boolean>;
+    start(OnlyLaunch: boolean): Promise<boolean>;
+    OnlyDownload(opt: LaunchOPTS): Promise<boolean>;
+    OnlyLaunch(): Promise<boolean>;
+    DownloadGame(OnlyLaunch: any): Promise<any>;
 }
 export {};

@@ -21,7 +21,7 @@ class JavaDownloader extends events_1.default {
         super();
         this.options = options;
     }
-    async getJavaFiles(jsonversion) {
+    async getJavaFiles(jsonversion, OnlyLaunch) {
         if (this.options.java.version)
             return await this.getJavaOther(jsonversion, this.options.java.version);
         const archMapping = {
@@ -39,9 +39,14 @@ class JavaDownloader extends events_1.default {
         const archOs = osArchMapping[arch];
         let javaVersionsJson;
         try {
-            javaVersionsJson = await (0, node_fetch_1.default)(`https://launchermeta.mojang.com/v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json`).then(res => res.json());
-            fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, "runtime"), { recursive: true });
-            fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, "runtime/java-versions.json"), JSON.stringify(javaVersionsJson));
+            if (!OnlyLaunch) {
+                javaVersionsJson = await (0, node_fetch_1.default)(`https://launchermeta.mojang.com/v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json`).then(res => res.json());
+                fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, "runtime"), { recursive: true });
+                fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, "runtime/java-versions.json"), JSON.stringify(javaVersionsJson));
+            }
+            else {
+                javaVersionsJson = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, "runtime/java-versions.json"), 'utf-8'));
+            }
         }
         catch (e) {
             javaVersionsJson = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, "runtime/java-versions.json"), 'utf-8'));
@@ -52,9 +57,14 @@ class JavaDownloader extends events_1.default {
         const manifestUrl = javaVersionsJson[archOs][javaVersion][0]?.manifest?.url;
         let manifest;
         try {
-            manifest = await (0, node_fetch_1.default)(manifestUrl).then(res => res.json());
-            fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, `runtime/jre-${versionName}-${archOs}`), { recursive: true });
-            fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, `runtime/jre-${versionName}-${archOs}/java-versions.json`), JSON.stringify(manifest));
+            if (!OnlyLaunch) {
+                manifest = await (0, node_fetch_1.default)(manifestUrl).then(res => res.json());
+                fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, `runtime/jre-${versionName}-${archOs}`), { recursive: true });
+                fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, `runtime/jre-${versionName}-${archOs}/java-versions.json`), JSON.stringify(manifest));
+            }
+            else {
+                manifest = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, `runtime/jre-${versionName}-${archOs}/java-versions.json`), 'utf-8'));
+            }
         }
         catch (e) {
             manifest = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, `runtime/jre-${versionName}-${archOs}/java-versions.json`), 'utf-8'));

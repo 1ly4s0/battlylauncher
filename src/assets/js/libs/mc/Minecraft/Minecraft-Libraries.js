@@ -65,13 +65,18 @@ class Libraries {
         });
         return libraries;
     }
-    async GetAssetsOthers(url) {
+    async GetAssetsOthers(url, OnlyLaunch) {
         if (!url)
             return [];
         let data;
         try {
-            data = await (0, node_fetch_1.default)(url).then(res => res.json());
-            fs_1.default.writeFileSync(`${this.options.path}/battly/launcher/mc-assets/extra-assets.json`, JSON.stringify(data, null, 4));
+            if (!OnlyLaunch) {
+                data = await (0, node_fetch_1.default)(url).then(res => res.json());
+                fs_1.default.writeFileSync(`${this.options.path}/battly/launcher/mc-assets/extra-assets.json`, JSON.stringify(data, null, 4));
+            }
+            else {
+                data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/battly/launcher/mc-assets/extra-assets.json`, 'utf-8'));
+            }
         }
         catch (e) {
             data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/battly/launcher/mc-assets/extra-assets.json`, 'utf-8'));

@@ -7,7 +7,7 @@ import EventEmitter from 'events';
 export default class JavaDownloader extends EventEmitter {
     options: any;
     constructor(options: any);
-    getJavaFiles(jsonversion: any): Promise<{
+    getJavaFiles(jsonversion: any, OnlyLaunch: any): Promise<{
         error: boolean;
         message: string;
         files?: undefined;

@@ -8,11 +8,10 @@ const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const events_1 = require("events");
 const Index_js_1 = require("../utils/Index.js");
-class forgePatcher {
+class forgePatcher extends events_1.EventEmitter {
     constructor(options) {
+        super();
         this.options = options;
-        this.on = events_1.EventEmitter.prototype.on;
-        this.emit = events_1.EventEmitter.prototype.emit;
     }
     async patcher(profile, config, neoForgeOld = true) {
         let { processors } = profile;
@@ -114,7 +113,7 @@ class forgePatcher {
         return arg;
     }
     async readJarManifest(jarPath) {
-        let extraction = await (0, Index_js_1.getFileFromJar)(jarPath, 'META-INF/MANIFEST.MF');
+        let extraction = await (0, Index_js_1.getFileFromArchive)(jarPath, 'META-INF/MANIFEST.MF');
         if (extraction)
             return (extraction.toString("utf8")).split('Main-Class: ')[1].split('\r\n')[0];
         return null;

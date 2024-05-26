@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -13,15 +13,24 @@ const node_fetch_1 = __importDefault(require("node-fetch"));
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const events_1 = require("events");
-class Quilt {
+class Quilt extends events_1.EventEmitter {
     constructor(options = {}) {
+        super();
         this.options = options;
-        this.on = events_1.EventEmitter.prototype.on;
-        this.emit = events_1.EventEmitter.prototype.emit;
     }
     async downloadJson(Loader) {
         let build;
-        let metaData = await (0, node_fetch_1.default)(Loader.metaData).then(res => res.json());
+        let metaData;
+        try {
+            metaData = await (0, node_fetch_1.default)(Loader.metaData).then(res => res.json());
+            if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'quilt', this.options.loader.version))) {
+                fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'quilt', this.options.loader.version), { recursive: true });
+            }
+            fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'quilt', this.options.loader.version, 'metaData.json'), JSON.stringify(metaData));
+        }
+        catch (error) {
+            metaData = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'quilt', this.options.loader.version, 'metaData.json')).toString());
+        }
         let version = metaData.game.find(version => version.version === this.options.loader.version);
         let AvailableBuilds = metaData.loader.map(build => build.version);
         if (!version)
@@ -38,7 +47,16 @@ class Quilt {
         if (!build)
             return { error: `QuiltMC Loader ${this.options.loader.build} not found, Available builds: ${AvailableBuilds.join(', ')}` };
         let url = Loader.json.replace('${build}', build.version).replace('${version}', this.options.loader.version);
-        let json = await (0, node_fetch_1.default)(url).then(res => res.json()).catch(err => err);
+        let json;
+        try {
+            json = await (0, node_fetch_1.default)(url).then(res => res.json());
+            if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'quilt', this.options.loader.version, 'fabric.json'))) {
+                fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'quilt', this.options.loader.version, 'fabric.json'), JSON.stringify(json));
+            }
+        }
+        catch (e) {
+            json = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'quilt', this.options.loader.version, 'fabric.json'), 'utf-8'));
+        }
         return json;
     }
     async downloadLibraries(json) {

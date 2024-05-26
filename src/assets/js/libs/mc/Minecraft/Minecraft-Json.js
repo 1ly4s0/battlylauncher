@@ -14,16 +14,22 @@ const fs_1 = __importDefault(require("fs"));
 class Json {
     constructor(options) {
         this.options = options;
+        console.log(this.options);
     }
-    async GetInfoVersion() {
+    async GetInfoVersion(OnlyLaunch) {
         let version = this.options.version;
         let data;
-        try {
-            data = await (0, node_fetch_1.default)(`https://launchermeta.mojang.com/mc/game/version_manifest_v2.json?_t=${new Date().toISOString()}`);
-            data = await data.json();
-            fs_1.default.writeFileSync(`${this.options.path}/battly/launcher/mc-assets/version_manifest_v2.json`, JSON.stringify(data, null, 4));
+        if (!OnlyLaunch) {
+            try {
+                data = await (0, node_fetch_1.default)(`https://launchermeta.mojang.com/mc/game/version_manifest_v2.json?_t=${new Date().toISOString()}`);
+                data = await data.json();
+                fs_1.default.writeFileSync(`${this.options.path}/battly/launcher/mc-assets/version_manifest_v2.json`, JSON.stringify(data, null, 4));
+            }
+            catch (e) {
+                data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/battly/launcher/mc-assets/version_manifest_v2.json`, 'utf-8'));
+            }
         }
-        catch (e) {
+        else {
             data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/battly/launcher/mc-assets/version_manifest_v2.json`, 'utf-8'));
         }
         if (version == 'latest_release' || version == 'r' || version == 'lr') {
@@ -39,12 +45,17 @@ class Json {
                 message: `Minecraft ${version} is not found.`
             };
         let json;
-        try {
-            json = await (0, node_fetch_1.default)(data.url).then(res => res.json());
-            fs_1.default.mkdirSync(`${this.options.path}/versions/${version}`, { recursive: true });
-            fs_1.default.writeFileSync(`${this.options.path}/versions/${version}/${version}.json`, JSON.stringify(json, null, 4));
+        if (!OnlyLaunch) {
+            try {
+                json = await (0, node_fetch_1.default)(data.url).then(res => res.json());
+                fs_1.default.mkdirSync(`${this.options.path}/versions/${version}`, { recursive: true });
+                fs_1.default.writeFileSync(`${this.options.path}/versions/${version}/${version}.json`, JSON.stringify(json, null, 4));
+            }
+            catch (e) {
+                json = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/versions/${version}/${version}.json`, 'utf-8'));
+            }
         }
-        catch (e) {
+        else {
             json = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/versions/${version}/${version}.json`, 'utf-8'));
         }
         if (os_1.default.platform() == 'linux' && os_1.default.arch().startsWith('arm'))

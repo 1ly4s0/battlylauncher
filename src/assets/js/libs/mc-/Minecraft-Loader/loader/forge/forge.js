@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -16,26 +16,22 @@ const path_1 = __importDefault(require("path"));
 const events_1 = require("events");
 const Index_js_2 = require("../../../utils/Index.js");
 let Lib = { win32: "windows", darwin: "osx", linux: "linux" };
-class ForgeMC {
+class ForgeMC extends events_1.EventEmitter {
     constructor(options = {}) {
+        super();
         this.options = options;
-        this.on = events_1.EventEmitter.prototype.on;
-        this.emit = events_1.EventEmitter.prototype.emit;
     }
     async downloadInstaller(Loader) {
         let metaData;
         try {
             metaData = (await (0, node_fetch_1.default)(Loader.metaData).then(res => res.json()))[this.options.loader.version];
-            //comprobar si existe la carpeta de la versión en this.options.path, '..', '..', 'battly', 'launcher', 'forge', 'version'
-            //si no existe, crearla
-            if(!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version))) {
+            if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version))) {
                 fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version), { recursive: true });
             }
-            
             fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'metaData.json'), JSON.stringify(metaData));
-
-        } catch (error) {
-            metaData = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'metaData.json')));
+        }
+        catch (error) {
+            metaData = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'metaData.json')).toString());
         }
         let AvailableBuilds = metaData;
         let forgeURL;
@@ -48,12 +44,13 @@ class ForgeMC {
             let promotions;
             try {
                 promotions = await (0, node_fetch_1.default)(Loader.promotions).then(res => res.json());
-                if(!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version))) {
+                if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version))) {
                     fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version), { recursive: true });
                 }
-                fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'promotions.json'), JSON.stringify(promotions));
-            } catch (error) {
-                promotions = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'promotions.json')));
+                fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'promotions-latest.json'), JSON.stringify(promotions));
+            }
+            catch (error) {
+                promotions = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'promotions-latest.json')).toString());
             }
             promotions = promotions.promos[`${this.options.loader.version}-latest`];
             build = metaData.find(build => build.includes(promotions));
@@ -62,12 +59,13 @@ class ForgeMC {
             let promotion;
             try {
                 promotion = await (0, node_fetch_1.default)(Loader.promotions).then(res => res.json());
-                if(!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version))) {
+                if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version))) {
                     fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version), { recursive: true });
                 }
-                fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'promotions.json'), JSON.stringify(promotion));
-            } catch (error) {
-                promotion = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'promotions.json')));
+                fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'promotions-recommended.json'), JSON.stringify(promotion));
+            }
+            catch (error) {
+                promotion = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'promotions-recommended.json')).toString());
             }
             let promotions = promotion.promos[`${this.options.loader.version}-recommended`];
             if (!promotions)
@@ -83,12 +81,13 @@ class ForgeMC {
         let meta;
         try {
             meta = await (0, node_fetch_1.default)(Loader.meta.replace(/\${build}/g, metaData)).then(res => res.json());
-            if(!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version))) {
+            if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version))) {
                 fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version), { recursive: true });
             }
             fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'meta.json'), JSON.stringify(meta));
-        } catch (error) {
-            meta = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'meta.json')));
+        }
+        catch (error) {
+            meta = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'forge', this.options.loader.version, 'meta.json')).toString());
         }
         let installerType = Object.keys(meta.classifiers).find((key) => key == 'installer');
         let clientType = Object.keys(meta.classifiers).find((key) => key == 'client');
@@ -131,7 +130,7 @@ class ForgeMC {
     }
     async extractProfile(pathInstaller) {
         let forgeJSON = {};
-        let file = await (0, Index_js_1.getFileFromJar)(pathInstaller, 'install_profile.json');
+        let file = await (0, Index_js_1.getFileFromArchive)(pathInstaller, 'install_profile.json');
         let forgeJsonOrigin = JSON.parse(file);
         if (!forgeJsonOrigin)
             return { error: { message: 'Invalid forge installer' } };
@@ -141,7 +140,7 @@ class ForgeMC {
         }
         else {
             forgeJSON.install = forgeJsonOrigin;
-            let file = await (0, Index_js_1.getFileFromJar)(pathInstaller, path_1.default.basename(forgeJSON.install.json));
+            let file = await (0, Index_js_1.getFileFromArchive)(pathInstaller, path_1.default.basename(forgeJSON.install.json));
             forgeJSON.version = JSON.parse(file);
         }
         return forgeJSON;
@@ -154,16 +153,16 @@ class ForgeMC {
             let pathFileDest = path_1.default.resolve(this.options.path, 'libraries', fileInfo.path);
             if (!fs_1.default.existsSync(pathFileDest))
                 fs_1.default.mkdirSync(pathFileDest, { recursive: true });
-            let file = await (0, Index_js_1.getFileFromJar)(pathInstaller, profile.filePath);
+            let file = await (0, Index_js_1.getFileFromArchive)(pathInstaller, profile.filePath);
             fs_1.default.writeFileSync(`${pathFileDest}/${fileInfo.name}`, file, { mode: 0o777 });
         }
         else if (profile.path) {
             let fileInfo = (0, Index_js_1.getPathLibraries)(profile.path);
-            let listFile = await (0, Index_js_1.getFileFromJar)(pathInstaller, null, `maven/${fileInfo.path}`);
+            let listFile = await (0, Index_js_1.getFileFromArchive)(pathInstaller, null, `maven/${fileInfo.path}`);
             await Promise.all(listFile.map(async (files) => {
                 let fileName = files.split('/');
                 this.emit('extract', `Extracting ${fileName[fileName.length - 1]}...`);
-                let file = await (0, Index_js_1.getFileFromJar)(pathInstaller, files);
+                let file = await (0, Index_js_1.getFileFromArchive)(pathInstaller, files);
                 let pathFileDest = path_1.default.resolve(this.options.path, 'libraries', fileInfo.path);
                 if (!fs_1.default.existsSync(pathFileDest))
                     fs_1.default.mkdirSync(pathFileDest, { recursive: true });
@@ -177,7 +176,7 @@ class ForgeMC {
             let universalPath = profile.libraries.find(v => {
                 return (v.name || '').startsWith('net.minecraftforge:forge');
             });
-            let client = await (0, Index_js_1.getFileFromJar)(pathInstaller, 'data/client.lzma');
+            let client = await (0, Index_js_1.getFileFromArchive)(pathInstaller, 'data/client.lzma');
             let fileInfo = (0, Index_js_1.getPathLibraries)(profile.path || universalPath.name, '-clientdata', '.lzma');
             let pathFile = path_1.default.resolve(this.options.path, 'libraries', fileInfo.path);
             if (!fs_1.default.existsSync(pathFile))
@@ -281,8 +280,8 @@ class ForgeMC {
         return true;
     }
     async createProfile(id, pathInstaller) {
-        let forgeFiles = await (0, Index_js_1.getFileFromJar)(pathInstaller);
-        let minecraftJar = await (0, Index_js_1.getFileFromJar)(this.options.loader.config.minecraftJar);
+        let forgeFiles = await (0, Index_js_1.getFileFromArchive)(pathInstaller);
+        let minecraftJar = await (0, Index_js_1.getFileFromArchive)(this.options.loader.config.minecraftJar);
         let data = await (0, Index_js_1.createZIP)([...minecraftJar, ...forgeFiles], 'META-INF');
         let destination = path_1.default.resolve(this.options.path, 'versions', id);
         let profile = JSON.parse(fs_1.default.readFileSync(this.options.loader.config.minecraftJson, 'utf-8'));

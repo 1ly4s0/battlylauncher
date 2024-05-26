@@ -5,7 +5,7 @@
 export default class Json {
     options: any;
     constructor(options: any);
-    GetInfoVersion(): Promise<{
+    GetInfoVersion(OnlyLaunch: boolean): Promise<{
         error: boolean;
         message: string;
         InfoVersion?: undefined;

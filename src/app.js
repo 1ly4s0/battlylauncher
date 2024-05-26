@@ -41,7 +41,12 @@ app.whenReady().then(() => {
   updateTrayMenu(); // Actualizar menú inicialmente
 
   const contextMenu = Menu.buildFromTemplate([
-    { label: 'Battly Launcher', type: 'normal', icon: path.join(__dirname, '/assets/images/icon15px.png') },
+    {
+      label: 'Battly Launcher', type: 'normal', icon: path.join(__dirname, '/assets/images/icon15px.png'), click: () => {
+        const MainWindow = require("./assets/js/windows/mainWindow.js");
+        MainWindow.getWindow().show()
+      }
+    },
     { type: 'separator' },
     { label: 'Abrir carpeta de Battly', type: 'normal', click: () => { AbrirCarpeta(); } },
     {

@@ -78,16 +78,17 @@ class Splash {
 		
 		fetch("https://google.com").then(async () => {
 			this.maintenanceCheck();
-	}).catch(async () => {
+			localStorage.setItem("offline-mode", false);
+		}).catch(async () => {
+			localStorage.setItem("offline-mode", true);
 			this.setStatus(lang.checking_connection);
-			await sleep(2000);
+			await sleep(1000);
 			this.setStatus(lang.no_connection);
-			await sleep(3000);
+			await sleep(1500);
 			this.setStatus(lang.starting_battly);
 			await sleep(500);
 			this.startLauncher();
 		})
-		
 	}
 
 	/**

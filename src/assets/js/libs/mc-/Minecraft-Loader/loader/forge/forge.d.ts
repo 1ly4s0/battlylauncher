@@ -1,11 +1,11 @@
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
-export default class ForgeMC {
+/// <reference types="node" />
+import { EventEmitter } from 'events';
+export default class ForgeMC extends EventEmitter {
     options: any;
-    on: any;
-    emit: any;
     constructor(options?: {});
     downloadInstaller(Loader: any): Promise<{
         error: string;

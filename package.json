@@ -1,7 +1,7 @@
 {
   "name": "BattlyLauncher",
   "productname": "Battly Launcher",
-  "version": "1.8.2",
+  "version": "1.8.3",
   "description": "El mejor Launcher Personalizado para Minecraft Premium y No premium",
   "main": "src/app.js",
   "author": "TECNO BROS <contacto@tecnobros.es>",

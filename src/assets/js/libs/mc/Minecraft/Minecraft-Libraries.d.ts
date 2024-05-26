@@ -7,6 +7,6 @@ export default class Libraries {
     options: any;
     constructor(options: any);
     Getlibraries(json: any): Promise<any[]>;
-    GetAssetsOthers(url: any): Promise<any[]>;
+    GetAssetsOthers(url: any, OnlyLaunch: any): Promise<any[]>;
     natives(bundle: any): Promise<any>;
 }

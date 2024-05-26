@@ -1,7 +1,7 @@
 "use strict";
 /**
- * @author TECNO BROS
- 
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -20,13 +20,7 @@ const Minecraft_Bundle_js_1 = __importDefault(require("./Minecraft/Minecraft-Bun
 const Minecraft_Arguments_js_1 = __importDefault(require("./Minecraft/Minecraft-Arguments.js"));
 const Index_js_1 = require("./utils/Index.js");
 const Downloader_js_1 = __importDefault(require("./utils/Downloader.js"));
-
-class Launch {
-    constructor() {
-        this.on = events_1.EventEmitter.prototype.on;
-        this.emit = events_1.EventEmitter.prototype.emit;
-    }
-
+class Launch extends events_1.EventEmitter {
     async Launch(opt) {
         const defaultOptions = {
             url: null,
@@ -39,7 +33,7 @@ class Launch {
             intelEnabledMac: false,
             downloadFileMultiple: 5,
             loader: {
-                rootPath: false,
+                path: './loader',
                 type: null,
                 build: 'latest',
                 enable: false,
@@ -49,7 +43,11 @@ class Launch {
             ignored: [],
             JVM_ARGS: [],
             GAME_ARGS: [],
-            javaPath: null,
+            java: {
+                path: null,
+                version: null,
+                type: 'jre',
+            },
             screen: {
                 width: null,
                 height: null,
@@ -79,8 +77,11 @@ class Launch {
             this.options.downloadFileMultiple = 1;
         if (this.options.downloadFileMultiple > 30)
             this.options.downloadFileMultiple = 30;
+        if (typeof this.options.loader.path !== 'string')
+            this.options.loader.path = `./loader/${this.options.loader.type}`;
         this.start();
     }
+    
     async start() {
         let data = await this.DownloadGame();
         if (data.error)
@@ -100,7 +101,7 @@ class Launch {
             ...minecraftArguments.game,
             ...loaderArguments.game
         ];
-        let java = this.options.javaPath ? this.options.javaPath : minecraftJava.path;
+        let java = this.options.java.path ? this.options.java.path : minecraftJava.path;
         let logs = this.options.instance ? `${this.options.path}/instances/${this.options.instance}` : this.options.path;
         if (!fs_1.default.existsSync(logs))
             fs_1.default.mkdirSync(logs, { recursive: true });
@@ -117,25 +118,24 @@ class Launch {
         minecraftDebug.on('close', (code) => this.emit('close', 'Minecraft closed'));
     }
     async DownloadGame() {
-        this.emit('downloadJSON', { type: 'info', file: 'version_manifest_v2.json' });
         let InfoVersion = await new Minecraft_Json_js_1.default(this.options).GetInfoVersion();
-        this.emit('downloadJSON', { type: 'success', file: 'version_manifest_v2.json' });
         let loaderJson = null;
         if (InfoVersion.error)
             return InfoVersion;
         let { json, version } = InfoVersion;
         let libraries = new Minecraft_Libraries_js_1.default(this.options);
         let bundle = new Minecraft_Bundle_js_1.default(this.options);
+        let java = new Minecraft_Java_js_1.default(this.options);
+        java.on('progress', (progress, size, element) => {
+            this.emit('progress', progress, size, element);
+        });
+        java.on('extract', (progress) => {
+            this.emit('extract', progress);
+        });
         let gameLibraries = await libraries.Getlibraries(json);
-        this.emit('downloadJSON', { type: 'info', file: 'extra-assets.json' });
         let gameAssetsOther = await libraries.GetAssetsOthers(this.options.url);
-        this.emit('downloadJSON', { type: 'success', file: 'extra-assets.json' });
-        this.emit('downloadJSON', { type: 'info', file: 'assets.json' });
         let gameAssets = await new Minecraft_Assets_js_1.default(this.options).GetAssets(json);
-        this.emit('downloadJSON', { type: 'success', file: 'assets.json' });
-        this.emit('downloadJSON', { type: 'info', file: 'java-versions.json' });
-        let gameJava = this.options.javaPath ? { files: [] } : await new Minecraft_Java_js_1.default(this.options).GetJsonJava(json);
-        this.emit('downloadJSON', { type: 'success', file: 'java-versions.json' });
+        let gameJava = this.options.java.path ? { files: [] } : await java.getJavaFiles(json);
         if (gameJava.error)
             return gameJava;
         let filesList = await bundle.checkBundle([...gameLibraries, ...gameAssetsOther, ...gameAssets, ...gameJava.files]);
@@ -170,7 +170,7 @@ class Launch {
             loaderInstall.on('patch', (patch) => {
                 this.emit('patch', patch);
             });
-            let jsonLoader = await loaderInstall.GetLoader(version, this.options.javaPath ? this.options.javaPath : gameJava.path)
+            let jsonLoader = await loaderInstall.GetLoader(version, this.options.java.path ? this.options.java.path : gameJava.path)
                 .then((data) => data)
                 .catch((err) => err);
             if (jsonLoader.error)

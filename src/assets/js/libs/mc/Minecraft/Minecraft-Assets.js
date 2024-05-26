@@ -13,15 +13,20 @@ class MinecraftAssets {
     constructor(options) {
         this.options = options;
     }
-    async GetAssets(json) {
+    async GetAssets(json, OnlyLaunch) {
         this.assetIndex = json.assetIndex;
         let assets = [];
         let data;
         try {
-            data = await (0, node_fetch_1.default)(this.assetIndex.url).then(res => res.json());
-            fs_1.default.mkdirSync(`${this.options.path}/assets/indexes`, { recursive: true });
-            fs_1.default.mkdirSync(`${this.options.path}/assets/objects`, { recursive: true });
-            fs_1.default.writeFileSync(`${this.options.path}/assets/indexes/${this.assetIndex.id}.json`, JSON.stringify(data));
+            if (!OnlyLaunch) {
+                data = await (0, node_fetch_1.default)(this.assetIndex.url).then(res => res.json());
+                fs_1.default.mkdirSync(`${this.options.path}/assets/indexes`, { recursive: true });
+                fs_1.default.mkdirSync(`${this.options.path}/assets/objects`, { recursive: true });
+                fs_1.default.writeFileSync(`${this.options.path}/assets/indexes/${this.assetIndex.id}.json`, JSON.stringify(data));
+            }
+            else {
+                data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/assets/indexes/${this.assetIndex.id}.json`, 'utf-8'));
+            }
         }
         catch (e) {
             data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/assets/indexes/${this.assetIndex.id}.json`, 'utf-8'));

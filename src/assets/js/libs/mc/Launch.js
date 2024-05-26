@@ -21,7 +21,7 @@ const Minecraft_Arguments_js_1 = __importDefault(require("./Minecraft/Minecraft-
 const Index_js_1 = require("./utils/Index.js");
 const Downloader_js_1 = __importDefault(require("./utils/Downloader.js"));
 class Launch extends events_1.EventEmitter {
-    async Launch(opt) {
+    async Launch(opt, OnlyLaunch = false) {
         const defaultOptions = {
             url: null,
             authenticator: null,
@@ -79,11 +79,10 @@ class Launch extends events_1.EventEmitter {
             this.options.downloadFileMultiple = 30;
         if (typeof this.options.loader.path !== 'string')
             this.options.loader.path = `./loader/${this.options.loader.type}`;
-        this.start();
+        this.start(OnlyLaunch);
     }
-    
-    async start() {
-        let data = await this.DownloadGame();
+    async start(OnlyLaunch) {
+        let data = await this.DownloadGame(OnlyLaunch);
         if (data.error)
             return this.emit('error', data);
         let { minecraftJson, minecraftLoader, minecraftVersion, minecraftJava } = data;
@@ -117,8 +116,76 @@ class Launch extends events_1.EventEmitter {
         minecraftDebug.stderr.on('data', (data) => this.emit('data', data.toString('utf-8')));
         minecraftDebug.on('close', (code) => this.emit('close', 'Minecraft closed'));
     }
-    async DownloadGame() {
-        let InfoVersion = await new Minecraft_Json_js_1.default(this.options).GetInfoVersion();
+    async OnlyDownload(opt) {
+        let data = await this.DownloadGame(false);
+        if (data.error)
+            return this.emit('error', data);
+        let { minecraftJson, minecraftLoader, minecraftVersion, minecraftJava } = data;
+        let minecraftArguments = await new Minecraft_Arguments_js_1.default(this.options).GetArguments(minecraftJson, minecraftLoader);
+        if (minecraftArguments.error)
+            return this.emit('error', minecraftArguments);
+        let loaderArguments = await new Minecraft_Loader_js_1.default(this.options).GetArguments(minecraftLoader, minecraftVersion);
+        if (loaderArguments.error)
+            return this.emit('error', loaderArguments);
+        let Arguments = [
+            ...minecraftArguments.jvm,
+            ...minecraftArguments.classpath,
+            ...loaderArguments.jvm,
+            minecraftArguments.mainClass,
+            ...minecraftArguments.game,
+            ...loaderArguments.game
+        ];
+        let java = this.options.java.path ? this.options.java.path : minecraftJava.path;
+        let logs = this.options.instance ? `${this.options.path}/instances/${this.options.instance}` : this.options.path;
+        if (!fs_1.default.existsSync(logs))
+            fs_1.default.mkdirSync(logs, { recursive: true });
+        let argumentsLogs = Arguments.join(' ');
+        argumentsLogs = argumentsLogs.replaceAll(this.options.authenticator.access_token, '????????');
+        argumentsLogs = argumentsLogs.replaceAll(this.options.authenticator.client_token, '????????');
+        argumentsLogs = argumentsLogs.replaceAll(this.options.authenticator.uuid, '????????');
+        argumentsLogs = argumentsLogs.replaceAll(this.options.authenticator.xuid, '????????');
+        argumentsLogs = argumentsLogs.replaceAll(`${this.options.path}/`, '');
+        this.emit('data', `Download ended successfully and user can go to the next step.`);
+    }
+    async OnlyLaunch() {
+        let data = await this.DownloadGame(true);
+        if (data.error)
+            return this.emit('error', data);
+        let { minecraftJson, minecraftLoader, minecraftVersion, minecraftJava } = data;
+        let minecraftArguments = await new Minecraft_Arguments_js_1.default(this.options).GetArguments(minecraftJson, minecraftLoader);
+        if (minecraftArguments.error)
+            return this.emit('error', minecraftArguments);
+        let loaderArguments = await new Minecraft_Loader_js_1.default(this.options).GetArguments(minecraftLoader, minecraftVersion);
+        if (loaderArguments.error)
+            return this.emit('error', loaderArguments);
+        let Arguments = [
+            ...minecraftArguments.jvm,
+            ...minecraftArguments.classpath,
+            ...loaderArguments.jvm,
+            minecraftArguments.mainClass,
+            ...minecraftArguments.game,
+            ...loaderArguments.game
+        ];
+        let java = this.options.java.path ? this.options.java.path : minecraftJava.path;
+        let logs = this.options.instance ? `${this.options.path}/instances/${this.options.instance}` : this.options.path;
+        if (!fs_1.default.existsSync(logs))
+            fs_1.default.mkdirSync(logs, { recursive: true });
+        let argumentsLogs = Arguments.join(' ');
+        argumentsLogs = argumentsLogs.replaceAll(this.options.authenticator.access_token, '????????');
+        argumentsLogs = argumentsLogs.replaceAll(this.options.authenticator.client_token, '????????');
+        argumentsLogs = argumentsLogs.replaceAll(this.options.authenticator.uuid, '????????');
+        argumentsLogs = argumentsLogs.replaceAll(this.options.authenticator.xuid, '????????');
+        argumentsLogs = argumentsLogs.replaceAll(`${this.options.path}/`, '');
+        this.emit('data', `Launching with arguments ${argumentsLogs}`);
+        let minecraftDebug = (0, child_process_1.spawn)(java, Arguments, { cwd: logs, detached: this.options.detached });
+        minecraftDebug.stdout.on('data', (data) => this.emit('data', data.toString('utf-8')));
+        minecraftDebug.stderr.on('data', (data) => this.emit('data', data.toString('utf-8')));
+        minecraftDebug.on('close', (code) => this.emit('close', 'Minecraft closed'));
+    }
+    async DownloadGame(OnlyLaunch) {
+        this.emit('downloadJSON', { type: 'info', file: 'version_manifest_v2.json' });
+        let InfoVersion = await new Minecraft_Json_js_1.default(this.options).GetInfoVersion(OnlyLaunch);
+        this.emit('downloadJSON', { type: 'success', file: 'version_manifest_v2.json' });
         let loaderJson = null;
         if (InfoVersion.error)
             return InfoVersion;
@@ -133,9 +200,15 @@ class Launch extends events_1.EventEmitter {
             this.emit('extract', progress);
         });
         let gameLibraries = await libraries.Getlibraries(json);
-        let gameAssetsOther = await libraries.GetAssetsOthers(this.options.url);
-        let gameAssets = await new Minecraft_Assets_js_1.default(this.options).GetAssets(json);
-        let gameJava = this.options.java.path ? { files: [] } : await java.getJavaFiles(json);
+        this.emit('downloadJSON', { type: 'success', file: 'extra-assets.json' });
+        let gameAssetsOther = await libraries.GetAssetsOthers(this.options.url, OnlyLaunch);
+        this.emit('downloadJSON', { type: 'info', file: 'extra-assets.json' });
+        this.emit('downloadJSON', { type: 'info', file: 'assets.json' });
+        let gameAssets = await new Minecraft_Assets_js_1.default(this.options).GetAssets(json, OnlyLaunch);
+        this.emit('downloadJSON', { type: 'success', file: 'assets.json' });
+        this.emit('downloadJSON', { type: 'info', file: 'java-versions.json' });
+        let gameJava = this.options.java.path ? { files: [] } : await java.getJavaFiles(json, OnlyLaunch);
+        this.emit('downloadJSON', { type: 'success', file: 'java-versions.json' });
         if (gameJava.error)
             return gameJava;
         let filesList = await bundle.checkBundle([...gameLibraries, ...gameAssetsOther, ...gameAssets, ...gameJava.files]);
@@ -154,7 +227,8 @@ class Launch extends events_1.EventEmitter {
             downloader.on("error", (e) => {
                 this.emit("error", e);
             });
-            await downloader.downloadFileMultiple(filesList, totsize, this.options.downloadFileMultiple, this.options.timeout);
+            if (!OnlyLaunch)
+                await downloader.downloadFileMultiple(filesList, totsize, this.options.downloadFileMultiple, this.options.timeout);
         }
         if (this.options.loader.enable === true) {
             let loaderInstall = new Minecraft_Loader_js_1.default(this.options);

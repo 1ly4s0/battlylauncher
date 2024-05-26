@@ -281,10 +281,10 @@ class Login {
                 Headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({
-                    "username": mailInput.value ? mailInput.value : "1",
-                    "password": passwordInput.value ? passwordInput.value : "1"
-                })
+                body: {
+                    username: mailInput.value,
+                    password: passwordInput.value
+                }
             }).catch(err => {
                 console.log(err)
                 cancelMojangBtn.disabled = false;
