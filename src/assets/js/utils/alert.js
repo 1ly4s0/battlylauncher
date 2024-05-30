@@ -18,26 +18,21 @@ class Alert {
       return;
     }
 
-    isAnimating = true;
+    alertQueue.push(info);
     await this.showNextAlert(info);
   }
 
   async showNextAlert(info) {
-    if (alertQueue.length < 0) {
+    if (alertQueue.length <= 0) {
       isAnimating = false;
       return;
+    } else {
+      const info2 = alertQueue.shift();
+      isAnimating = true;
+      await this.displayAlert(info2);
+      await this.showNextAlert(info2);
+      isAnimating = false;
     }
-
-    if (alertQueue.length == 0) {
-      await this.displayAlert(info);
-      return;
-    }
-
-    const info2 = alertQueue.shift();
-
-    await this.displayAlert(info2);
-
-    await this.showNextAlert(info2);
   }
 
   async displayAlert(info) {
@@ -126,5 +121,4 @@ class Alert {
   
 }
 
-export { Alert 
-};
+export { Alert };

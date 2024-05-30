@@ -786,7 +786,7 @@ class Settings {
 
         let ram = ramDatabase ? ramDatabase : {
             ramMin: "0.5",
-            ramMax: "1"
+            ramMax: "0.5"
         };
         let slider = new Slider(".memory-slider", parseFloat(ram.ramMin), parseFloat(ram.ramMax));
 

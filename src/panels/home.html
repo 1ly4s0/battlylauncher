@@ -108,38 +108,58 @@
                                     style="display: none;">
                                     <div class="progress-fill battly-s3gsqm" id="progress" style="width: 88%;"></div>
                                 </div>
+                                <style>
+                                    .marginright5px {
+                                        margin-right: 5px;
+                                    }
+                                </style>
                                 <div id="tipo-de-versiones" style="display: none;">
-
                                     <input type="radio" class="radio-button__input" id="radio10-inicio" name="loader"
                                         value="vanilla">
-                                    <label class="radio-button__label radio-button__input-with-margin" id="radioVanilla"
-                                        for="radio10-inicio">
+                                    <label class="radio-button__label radio-button__input-with-margin marginright5px"
+                                        id="radioVanilla" for="radio10-inicio">
                                         <span class="radio-button__custom"></span>
                                         Vanilla
                                     </label>
 
                                     <input type="radio" class="radio-button__input" id="radio11-inicio" name="loader"
                                         value="fabric">
-                                    <label class="radio-button__label radio-button__input-with-margin" id="radioFabric"
-                                        for="radio11-inicio">
+                                    <label class="radio-button__label radio-button__input-with-margin marginright5px"
+                                        id="radioFabric" for="radio11-inicio">
                                         <span class="radio-button__custom"></span>
                                         Fabric
                                     </label>
 
                                     <input type="radio" class="radio-button__input" id="radio12-inicio" name="loader"
                                         value="forge">
-                                    <label class="radio-button__label radio-button__input-with-margin" id="radioForge"
-                                        for="radio12-inicio">
+                                    <label class="radio-button__label radio-button__input-with-margin marginright5px"
+                                        id="radioForge" for="radio12-inicio">
                                         <span class="radio-button__custom"></span>
                                         Forge
                                     </label>
 
                                     <input type="radio" class="radio-button__input" id="radio13-inicio" name="loader"
                                         value="quilt">
-                                    <label class="radio-button__label radio-button__input-with-margin" id="radioQuilt"
-                                        for="radio13-inicio">
+                                    <label class="radio-button__label radio-button__input-with-margin marginright5px"
+                                        id="radioQuilt" for="radio13-inicio">
                                         <span class="radio-button__custom"></span>
                                         Quilt
+                                    </label>
+
+                                    <input type="radio" class="radio-button__input" id="radio35-inicio" name="loader"
+                                        value="neoforge">
+                                    <label class="radio-button__label radio-button__input-with-margin marginright5px"
+                                        id="radioNeoForge" for="radio35-inicio">
+                                        <span class="radio-button__custom"></span>
+                                        NeoForge
+                                    </label>
+
+                                    <input type="radio" class="radio-button__input" id="radio36-inicio" name="loader"
+                                        value="legacyfabric">
+                                    <label class="radio-button__label radio-button__input-with-margin marginright5px"
+                                        id="radioLegacyFabric" for="radio36-inicio">
+                                        <span class="radio-button__custom"></span>
+                                        LegacyFabric
                                     </label>
                                 </div>
                                 <div id="carga-de-versiones" style="display:none;">
@@ -164,28 +184,65 @@
         </div>
         <div class="bottom_bar">
             <div>
-                <button id="settings-btn" class="button is-info" oncontextmenu="return false;"><span
-                        style="font-size: 20px;"><i class="fa-solid fa-gear"></i></span></button>
-                <button id="btnShowNews" class="button is-info"><span style="font-size: 20px;"><i
-                            class="fa-solid fa-newspaper"></i></span></button>
-                <button id="openBattlyFolderButton" class="button is-info" style="width: 45px;"><span
-                        style="font-size: 20px;"><i class="fa-solid fa-folder-open"></i></span></button>
-                <button id="BotonUnirseServidorDiscord" class="button is-info" style="width: 45px;"><span
-                        style="font-size: 20px;"><i class="fa-brands fa-discord"></i></span></button>
-                <button id="boton_abrir_mods" class="button is-info"><span><i class="fa-solid fa-cube"></i>
-                        Battly Mods</span></button>
-                <button id="music-btn" class="button is-info"><span><i class="fa-solid fa-music"></i>
-                        Battly Music</span></button>
-                <button id="friends-btn" class="button is-info"><span><i class="fa-solid fa-user-group"></i>
-                        Battly Social</span></button>
+                <button id="settings-btn" class="button is-info" oncontextmenu="return false;">
+                    <span style="font-size: 20px;">
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+                    <span class="settings-button-span"></span>
+                </button>
+                <button id="btnShowNews" class="button is-info">
+                    <span style="font-size: 20px;">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </span>
+                    <span class="button-span"></span>
+                </button>
+                <button id="openBattlyFolderButton" class="button is-info" style="width: 45px;">
+                    <span style="font-size: 20px;">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </span>
+                    <span class="button-span"></span>
+                </button>
+                <button id="BotonUnirseServidorDiscord" class="button is-info" style="width: 45px;">
+                    <span style="font-size: 20px;">
+                        <i class="fa-brands fa-discord"></i>
+                    </span>
+                    <span class="button-span"></span>
+                </button>
+                <button id="boton_abrir_mods" class="button is-info">
+                    <span>
+                        <i class="fa-solid fa-cube"></i> Battly Mods
+                    </span>
+                    <span class="button-span"></span>
+                </button>
+                <button id="music-btn" class="button is-info">
+                    <span>
+                        <i class="fa-solid fa-music"></i> Battly Music
+                    </span>
+                    <span class="button-span"></span>
+                </button>
+                <button id="friends-btn" class="button is-info">
+                    <span>
+                        <i class="fa-solid fa-user-group"></i> Battly Social
+                    </span>
+                    <span class="button-span"></span>
+                </button>
                 <!--<button id="servers-btn" class="button is-info"><span><i class="fa-solid fa-server"></i>
                         Servers</span></button>-->
             </div>
             <div>
 
-                <button id="instancias-btn" class="button is-info"></button>
-                <button id="download-btn" class="button is-info"></button>
-                <button id="play-btn" class="button is-info"></button>
+                <button id="instancias-btn" class="button is-info">
+                    <span id="instancias-txt"></span>
+                    <span class="button-span"></span>
+                </button>
+                <button id="download-btn" class="button is-info">
+                    <span id="download-txt"></span>
+                    <span class="button-span"></span>
+                </button>
+                <button id="play-btn" class="button is-info">
+                    <span id="play-txt"></span>
+                    <span class="play-button-span"></span>
+                </button>
             </div>
         </div>
     </div>
@@ -203,8 +260,8 @@
                     style="border-radius: 5px; background-image: url('https://api.battlylauncher.com/api/skin/1ly4s0.png'); position: relative; margin: 0; margin-right: 10px;">
                 <p style="
         font-size: 20px;
-    ">1ly4s0</p>
+    ">------</p>
             </li>
-            <li style="cursor: pointer;">Cambiar de cuenta</li>
+            <li style="cursor: pointer;">Soon...</li>
         </ul>
     </div>

@@ -18,18 +18,8 @@ const axios = require("axios");
 import { Lang } from './utils/lang.js';
 let lang;
 
-// Llama a GetLang en la instancia
-
-
-/**
- * Represents the Splash class.
- * @class
- */
 class Splash {
-	/**
-	 * Creates an instance of Splash.
-	 * @constructor
-	 */
+
 	constructor() {
 		this.LoadLang();
 		this.splash = document.querySelector(".splash");
@@ -37,7 +27,7 @@ class Splash {
 		this.splashAuthor = document.querySelector(".splash-author");
 		this.message = document.querySelector(".message");
 		this.progress = document.querySelector("progress");
-		document.addEventListener('DOMContentLoaded', () => this.startAnimation());
+		document.addEventListener('DOMContentLoaded', () => this.start());
 	}
 
 	async LoadLang() {
@@ -45,12 +35,7 @@ class Splash {
 		this.message.innerHTML = lang.salutate;
 	}
 
-
-	/**
-	 * Starts the splash animation.
-	 * @async
-	 */
-	async startAnimation() {
+	async start() {
 		let splashes = [{
 			"message": "Battly Launcher",
 			"author": "TECNO BROS"
@@ -74,10 +59,11 @@ class Splash {
 		this.splashMessage.classList.add("animate__animated", "animate__flipInX");
 		this.splashAuthor.classList.add("animate__animated", "animate__flipInX");
 		this.message.classList.add("animate__animated", "animate__flipInX");
+		
 		await sleep(1000);
 		
 		fetch("https://google.com").then(async () => {
-			this.maintenanceCheck();
+			this.checkMaintenance();
 			localStorage.setItem("offline-mode", false);
 		}).catch(async () => {
 			localStorage.setItem("offline-mode", true);
@@ -87,44 +73,40 @@ class Splash {
 			await sleep(1500);
 			this.setStatus(lang.starting_battly);
 			await sleep(500);
-			this.startLauncher();
+			this.startBattly();
 		})
 	}
 
-	/**
-	 * Checks for updates.
-	 * @async
-	 */
-	async checkUpdate() {
-		if(dev) return sleep(500).then(async () => { 
+	async checkForUpdates() {
+		if (dev) return sleep(500).then(async () => {
 			
-		//aplicar las animaciones pero al reves
-		this.splash.classList.remove("translate");
-		this.splashMessage.classList.add("animate__animated", "animate__flipOutX");
-		this.splashAuthor.classList.add("animate__animated", "animate__flipOutX");
-		await sleep(500);
-		this.startLauncher(); 
+			this.splash.classList.remove("translate");
+			this.splashMessage.classList.add("animate__animated", "animate__flipOutX");
+			this.splashAuthor.classList.add("animate__animated", "animate__flipOutX");
+			await sleep(500);
+			this.startBattly();
 		});
+
 		this.setStatus(lang.checking_updates);
 		
 		ipcRenderer.invoke('update-app').then(err => {
-			if(err) {
-            	if (err.error) {
-                	let error = err.message;
+			if (err) {
+				if (err.error) {
+					let error = err.message;
 					error = error.toString().slice(0, 50);
-                	this.shutdown(`${lang.update_error}<br>${error}`);
-            	}
+					this.shutdown(`${lang.update_error}<br>${error}`);
+				}
 			}
-        })
+		})
 
-        ipcRenderer.on('updateAvailable', () => {
-            this.setStatus(lang.update_available);
-            this.toggleProgress();
+		ipcRenderer.on('updateAvailable', () => {
+			this.setStatus(lang.update_available);
             
 			let boton_actualizar = document.getElementById("btn_actualizar");
 			boton_actualizar.style.display = "block";
 			boton_actualizar.addEventListener("click", () => {
-				this.setStatus(lang.downloading_update);			
+				this.setStatus(lang.downloading_update);
+				this.toggleProgress();
 				ipcRenderer.send('start-update');
 			})
 
@@ -132,17 +114,17 @@ class Splash {
 			boton_cancelar.style.display = "block";
 			boton_cancelar.addEventListener("click", () => {
 				this.setStatus(lang.update_cancelled);
-				this.maintenanceCheck();
+				this.checkMaintenance();
 			})
-        })
+		})
 
-        ipcRenderer.on('download-progress', (event, progress) => {
-            this.setProgress(progress.transferred, progress.total);
-        })
+		ipcRenderer.on('download-progress', (event, progress) => {
+			this.setProgress(progress.transferred, progress.total);
+		})
 
-        ipcRenderer.on('update-not-available', () => {
-            this.startLauncher();
-        })
+		ipcRenderer.on('update-not-available', () => {
+			this.startBattly();
+		})
 
 		ipcRenderer.on('update-downloaded', async () => {
 			this.setStatus(lang.update_downloaded);
@@ -154,17 +136,13 @@ class Splash {
 		)
 	}
 
-	/**
-	 * Checks for maintenance mode.
-	 * @async
-	 */
-	async maintenanceCheck() {
+	async checkMaintenance() {
 		config.GetConfig().then(async res => {
 			if (res.maintenance) return this.shutdown(res.maintenance_message);
 			this.setStatus(lang.starting_launcher);
-		await sleep(500);
+			await sleep(500);
 			setTimeout(() => {
-				this.checkUpdate();
+				this.checkForUpdates();
 			}, 1000);
 			return true;
 		}).catch(e => {
@@ -173,11 +151,7 @@ class Splash {
 		})
 	}
 
-	/**
-	 * Starts the launcher.
-	 * @async
-	 */
-	async startLauncher() {
+	async startBattly() {
 		this.splash.classList.remove("translate");
 		this.splashMessage.classList.add("animate__animated", "animate__flipOutX");
 		this.splashAuthor.classList.add("animate__animated", "animate__flipOutX");
@@ -187,10 +161,6 @@ class Splash {
 		ipcRenderer.send('update-window-close');
 	}
 
-	/**
-	 * Shuts down the launcher.
-	 * @param {string} text - The shutdown message.
-	 */
 	shutdown(text) {
 		this.setStatus(`${text}<br>${lang.closing_countdown} 10s`);
 		let i = 10;
@@ -201,32 +171,18 @@ class Splash {
 		}, 1000);
 	}
 
-	/**
-	 * Sets the status message.
-	 * @param {string} text - The status message.
-	 */
 	setStatus(text) {
 		this.message.innerHTML = text;
 	}
 
-	/**
-	 * Toggles the progress bar.
-	 */
 	toggleProgress() {
 		if (this.progress.classList.toggle("show")) this.setProgress(0, 1);
 	}
 
-	/**
-	 * Sets the progress bar value.
-	 * @param {number} value - The progress value.
-	 * @param {number} max - The maximum progress value.
-	 */
 	setProgress(value, max) {
 		this.progress.value = value;
 		this.progress.max = max;
 	}
-		
-
 }
 
 function sleep(ms) {
@@ -236,6 +192,11 @@ function sleep(ms) {
 document.addEventListener("keydown", (e) => {
 	if (e.ctrlKey && e.shiftKey && e.keyCode == 73 || e.keyCode == 123) {
 		ipcRenderer.send("update-window-dev-tools");
+
+		console.log("%c¡ESPERA!", "color: #3e8ed0; font-size: 70px; font-weight: bold; font-family: 'Poppins'; text-shadow: 0 0 5px #000;");
+		console.log("%c¡No hagas nada aquí si no sabes lo que estás haciendo!", "color: #3e8ed0; font-size: 18px; font-weight: bold; font-family: 'Poppins';");
+		console.log("%cTampoco pegues nada externo aquí, ¡hay un 101% de posibilidades de que sea un virus!", "color: #3e8ed0; font-size: 15px; font-weight: bold; font-family: 'Poppins';");
 	}
 })
+
 new Splash();

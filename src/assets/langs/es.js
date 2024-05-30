@@ -384,6 +384,16 @@ const strings = {
     "login_microsoft_cancel": "No tengo Minecraft comprado",
     "no_accounts": "No tienes cuentas para jugar",
     "no_accounts_message": "Añade una cuenta para jugar. Presiona ⚙️ > Añadir cuenta",
+    "logging_in": "Iniciando sesión",
+    "checking_if_you_are_premium": "Comprobando si eres premium",
+    "auth_code": "Código de autenticación",
+    "auth_code_not_set": "No se ha establecido el código de autenticación",
+    "login_with_google": "Iniciar sesión con Google",
+    "login_with_google_msg": "Se abrirá una ventana de Google para iniciar sesión.",
+    "checking_auth_code": "Comprobando código de autenticación",
+    "login_with_google": "Iniciar sesión con Google",
+    "code_login_text": "Pon el código que se te ha mostrado en el navegador",
+    "send": "Enviar",
 
     /* months */
     "january": "Enero",
@@ -464,6 +474,28 @@ const strings = {
     "searching_solution_taking_3": "Estamos teniendo problemas para encontrar una solución, por favor, intenta más tarde.",
     "no_solution_found": "No se ha encontrado una solución a este problema. Puedes intentar buscar en Google el error que te ha dado.",
     "solution_found": "¡Se ha encontrado una solución!",
+
+
+    /* tooltips */
+    "tooltip_settings": "Ajusta las configuraciones de Battly a tu gusto",
+    "tooltip_news": "Mira las últimas actualizaciones",
+    "tooltip_folder": "Abre la carpeta de Battly",
+    "tooltip_discord": "Únete al servidor de Discord",
+    "tooltip_mods": "Descarga tus modsfavoritos desde Battly",
+    "tooltip_music": "Escucha tu música favorita cuando quieras",
+    "tooltip_friends": "Mira que están jugando tus amigos para unirte a ellos",
+    "tooptip_instances": "Separa tus mods y juega tus modpacks favoritos",
+    "tooptip_download": "Descarga versiones de Minecraft",
+    "tooltip_play": "Juega las versiones descargadas",
+
+    /* tooltips settings */
+    "tooltip_accounts": "Gestiona tus cuentas de Battly",
+    "tooltip_java": "Configura Java",
+    "tooltip_ram": "Ajusta la RAM de Minecraft",
+    "tooltip_launcher": "Ajusta el comportamiento de Battly",
+    "tooltip_theme": "Personaliza los colores de Battly",
+    "tooltip_background": "Ajusta el fondo de Battly a tu gusto",
+    "tooltip_save": "Guarda las configuraciones y vuelve al menú",
 
 };
 

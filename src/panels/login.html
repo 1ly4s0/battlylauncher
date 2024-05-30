@@ -7,6 +7,20 @@
         </section>
     </div>
 </div>
+<div class="modal" style="z-index: 99;" id="code-login-panel">
+    <div class="modal-background"></div>
+    <div class="modal-card" style="background-color: #212121; border-radius: 5px;">
+        <section class="modal-card-body" style="background-color: #212121; text-align: center;">
+            <p style="color: #fff; font-size: 20px;" id="code-login-text">
+            </p>
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
+                <input class="input is-info" style="width: 50%;" id="code-text" type="text" placeholder="Código">
+                <button class="button is-info" id="code-btn"></button>
+                <button class="button is-danger" id="cancel-code-btn"></button>
+            </div>
+        </section>
+    </div>
+</div>
 <div class="login-content">
     <section class="container forms">
         <div class="form login">
@@ -26,6 +40,12 @@
                 </div>
                 <div class="field button-field">
                     <button id="login-btn">Iniciar sesión</button>
+                </div>
+                <div class="media-options">
+                    <a class="field facebook" id="google-button" style="text-decoration: none;">
+                        <img src="./assets/images/icons/google.png" alt="" class="google-img">
+                        <span id="login-with-google">Iniciar sesión con Google</span>
+                    </a>
                 </div>
                 <div class="form-link">
                     <span><span id="you-dont-have-account">¿No tienes cuenta?</span> <a

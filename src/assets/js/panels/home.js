@@ -245,7 +245,8 @@ class Home {
       const modalCard = document.createElement("div");
       modalCard.classList.add("modal-card");
       modalCard.style.backgroundColor = "#212121";
-      modalCard.style.height = "85%";
+      modalCard.style.height = "auto";
+      modalCard.style.maxHeight = "85%";
 
       // Crear el encabezado del modal
       const modalHeader = document.createElement("header");
@@ -785,7 +786,7 @@ class Home {
                     });
               }, 500);
 
-        versionSelect.addEventListener("change", async () => {
+              versionSelect.addEventListener("change", async () => {
                 versionOptionsVersion.innerHTML = "";
                 let optionLoading = document.createElement("option");
                 optionLoading.value = "loading";
@@ -999,7 +1000,7 @@ class Home {
             if (instance_json.loader) loader_json = instance_json.loader;
 
             let loaderVersion;
-            if (instance_json) loaderVersion = instance_json.loaderVersion;
+              if (instance_json) loaderVersion = instance_json.loaderVersion;
 
               if (
                 instance_json.version.endsWith("-forge") ||
@@ -1012,6 +1013,12 @@ class Home {
                   .replace("-quilt", "");
               } else {
                 version = instance_json.version;
+              }
+
+              
+              if (!loaderVersion.includes(version)) {
+                console.log(`Cambiando de ${loaderVersion} a ${version}-${loaderVersion}`);
+                loaderVersion = `${version}-${loaderVersion}`;
               }
 
 
@@ -1028,7 +1035,7 @@ class Home {
                   detached: true,
                   timeout: 10000,
                   path: `${dataDirectory}/.battly/instances/${instancias[i]}`,
-                  downloadFileMultiple: 20,
+                  downloadFileMultiple: 50,
                   version: version,
                   loader: {
                     type: loader_json ? loader_json : loader,
@@ -1060,7 +1067,7 @@ class Home {
                   detached: true,
                   timeout: 10000,
                   path: `${dataDirectory}/.battly/instances/${instancias[i]}`,
-                  downloadFileMultiple: 20,
+                  downloadFileMultiple: 50,
                   version: version,
                   loader: {
                     type: loader_json ? loader_json : loader,
@@ -2247,25 +2254,13 @@ class Home {
     buttons.forEach((button) => {
       button.style.backgroundColor = color;
       button.addEventListener("mouseover", () => {
-        const span = button.querySelector("span");
         colorHover = localStorage.getItem("theme-color-hover");
         button.style.backgroundColor = colorHover;
-        if (span) {
-          span.classList.add("animate__animated")
-          span.classList.add("animate__infinite")
-          span.classList.add("animate__pulse")
-        }
       });
 
       button.addEventListener("mouseout", () => {
-        const span = button.querySelector("span");
         color = localStorage.getItem("theme-color");
         button.style.backgroundColor = color;
-        if (span) {
-          span.classList.remove("animate__animated")
-          span.classList.remove("animate__infinite")
-          span.classList.remove("animate__pulse")
-        }
       });
     });
 
@@ -2331,15 +2326,11 @@ class Home {
 
     accounts.forEach((account) => {
       account.style.backgroundColor = color;
-      //si contiene la clase active-account
       if (!account.classList.contains("active-account")) {
-        //hacer que el border sea el mismo color pero más oscuro
         let colorOscuro = tinycolor(color).darken(10).toString();
         account.style.border = `4px solid ${colorOscuro}`;
       } else {
-        //hacer que el hover sea el mismo color pero más oscuro
         let colorOscuro = tinycolor(color).darken(10).toString();
-        //hover
         account.addEventListener("mouseover", () => {
           account.style.border = `4px solid ${colorOscuro}`;
         });
@@ -2385,7 +2376,6 @@ class Home {
     try {
       let versiones_nuevas = fs.readdirSync(dataDirectory + "/.battly/versions");
 
-      // Filtrar solo las carpetas
       versiones_nuevas = versiones_nuevas.filter(version => {
         let fullPath = path.join(dataDirectory, "/.battly/versions", version);
         return fs.statSync(fullPath).isDirectory();
@@ -2405,9 +2395,7 @@ class Home {
         if (!versions_vanilla.includes(version)) {
           let option = document.createElement("option");
 
-          // si contiene OptiFine- eliminar todo lo que vaya después de OptiFine pero incluir la palabra OptiFine
           if (version.includes("OptiFine_")) {
-            // Usa una expresión regular para eliminar todo después de "OptiFine" y agrega "OptiFine"
             let version_optifine = version.replace(/OptiFine.*$/, "OptiFine");
             option.value = version + `-extra`;
             option.innerHTML = version_optifine;
@@ -2448,83 +2436,54 @@ class Home {
   }
 
   async initConfig() {
-    let config = this.BattlyConfig;
-    let config_json = JSON.stringify(config);
-    fs.mkdirSync(
-      `${dataDirectory}/${
-        process.platform == "darwin"
-          ? this.config.dataDirectory
-          : `.${this.config.dataDirectory}`
-      }`,
-      {
-        recursive: true,
-      }
-    );
-    fs.mkdirSync(
-      `${dataDirectory}/${
-        process.platform == "darwin"
-          ? this.config.dataDirectory
-          : `.${this.config.dataDirectory}`
-      }/versions`,
-      {
-        recursive: true,
-      }
-    );
 
-    let versionsConfig = this.Versions;
-    let config_json_versions = JSON.stringify(versionsConfig);
-    fs.mkdirSync(
-      `${dataDirectory}/${
-        process.platform == "darwin"
-          ? this.config.dataDirectory
-          : `.${this.config.dataDirectory}`
-      }`,
-      {
-        recursive: true,
-      }
-    );
+    if (!fs.existsSync(`${dataDirectory}/.battly`)) {
+      fs.mkdirSync(`${dataDirectory}/.battly`);
+    } else if (!fs.existsSync(`${dataDirectory}/.battly/instances`)) {
+      fs.mkdirSync(`${dataDirectory}/.battly/instances`);
+    } else if (!fs.existsSync(`${dataDirectory}/.battly/versions`)) {
+      fs.mkdirSync(`${dataDirectory}/.battly/versions`);
+    };
 
-    document.getElementById(
-      "instancias-btn"
-    ).innerHTML = `<span><i class="fa-solid fa-folder"></i> ${langs.instances}</span>`;
-    document.getElementById(
-      "download-btn"
-    ).innerHTML = `<span><i class="fa-solid fa-cloud-arrow-down"></i> ${langs.download}</span>`;
-    document.getElementById(
-      "play-btn"
-    ).innerHTML = `<span><i class="fa-solid fa-gamepad"></i> ${langs.play}</span>`;
-    document.getElementById("news-battly").innerHTML = `${langs.news_battly}`;
-    document.getElementById(
-      "status-battly"
-    ).innerHTML = `${langs.status_battly}`;
-    document.getElementById(
-      "playing-now-text"
-    ).innerHTML = `${langs.playing_now_text}`;
-    document.getElementById(
-      "playing-now-body"
-    ).innerHTML = `${langs.playing_now_body}`;
-    document.getElementById("ads-text").innerHTML = `${langs.ads_text}`;
+    document.getElementById("instancias-txt").innerHTML += `<i class="fa-solid fa-folder"></i> ${langs.instances}`;
+    document.getElementById("download-txt").innerHTML += `<i class="fa-solid fa-cloud-arrow-down"></i> ${langs.download}`;
+    document.getElementById("play-txt").innerHTML += `<i class="fa-solid fa-gamepad"></i> ${langs.play}`;
+    document.getElementById("news-battly").innerHTML = langs.news_battly;
+    document.getElementById("status-battly").innerHTML = langs.status_battly;
+    document.getElementById("playing-now-text").innerHTML = langs.playing_now_text;
+    document.getElementById("playing-now-body").innerHTML = langs.playing_now_body;
+    document.getElementById("ads-text").innerHTML = langs.ads_text;
+
+    document.getElementById("settings-btn").querySelector(".settings-button-span").innerHTML = langs.tooltip_settings;
+    document.getElementById("btnShowNews").querySelector(".button-span").innerHTML = langs.tooltip_news;
+    document.getElementById("openBattlyFolderButton").querySelector(".button-span").innerHTML = langs.tooltip_folder;
+    document.getElementById("BotonUnirseServidorDiscord").querySelector(".button-span").innerHTML = langs.tooltip_discord;
+    document.getElementById("boton_abrir_mods").querySelector(".button-span").innerHTML = langs.tooltip_mods;
+    document.getElementById("music-btn").querySelector(".button-span").innerHTML = langs.tooltip_music;
+    document.getElementById("friends-btn").querySelector(".button-span").innerHTML = langs.tooltip_friends;
+    document.getElementById("instancias-btn").querySelector(".button-span").innerHTML = langs.tooptip_instances;
+    document.getElementById("download-btn").querySelector(".button-span").innerHTML = langs.tooptip_download;
+    document.getElementById("play-btn").querySelector(".play-button-span").innerHTML = langs.tooltip_play;
+    document.getElementById("accounts-btn").querySelector(".button-span").innerHTML = langs.tooltip_accounts;
+    document.getElementById("java-btn").querySelector(".button-span").innerHTML = langs.tooltip_java;
+    document.getElementById("ram-btn").querySelector(".button-span").innerHTML = langs.tooltip_ram;
+    document.getElementById("launcher-btn").querySelector(".button-span").innerHTML = langs.tooltip_launcher;
+    document.getElementById("theme-btn").querySelector(".button-span").innerHTML = langs.tooltip_theme;
+    document.getElementById("background-btn").querySelector(".button-span").innerHTML = langs.tooltip_background;
+    document.getElementById("save-btn").querySelector(".button-span").innerHTML = langs.tooltip_save;
 
     /* settings */
-    document.getElementById("accounts-btn-text").innerHTML = `${langs.accounts_btn}`;
-    document.getElementById("java-btn-text").innerHTML = `${langs.java_btn}`;
-    document.getElementById("ram-btn-text").innerHTML = `${langs.ram_btn}`;
-    document.getElementById("launcher-btn-text").innerHTML = `${langs.launcher_btn}`;
-    document.getElementById("theme-btn-text").innerHTML = `${langs.theme_btn}`;
-    document.getElementById(
-      "background-btn-text"
-    ).innerHTML = `${langs.background_btn}`;
-    document.getElementById("save-btn-text").innerHTML = `${langs.save_btn}`;
-    document.getElementById(
-      "account-information"
-    ).innerHTML = `${langs.account_information}`;
-    document.getElementById("mc-id-text").innerHTML = `${langs.mc_id_text}`;
-    document.getElementById(
-      "mostrarskin-userinfo-btn"
-    ).innerHTML = `${langs.showskin_userinfo_btn}`;
-    document.getElementById(
-      "eliminarcuenta-userinfo-btn"
-    ).innerHTML = `${langs.deleteaccount_userinfo_btn}`;
+    document.getElementById("accounts-btn-text").innerHTML = langs.accounts_btn;
+    document.getElementById("java-btn-text").innerHTML = langs.java_btn;
+    document.getElementById("ram-btn-text").innerHTML = langs.ram_btn;
+    document.getElementById("launcher-btn-text").innerHTML = langs.launcher_btn;
+    document.getElementById("theme-btn-text").innerHTML = langs.theme_btn;
+    document.getElementById("background-btn-text").innerHTML = langs.background_btn;
+    document.getElementById("save-btn-text").innerHTML = langs.save_btn;
+    document.getElementById("account-information").innerHTML = langs.account_information;
+    document.getElementById("mc-id-text").innerHTML = langs.mc_id_text;
+    document.getElementById("mostrarskin-userinfo-btn").innerHTML = langs.showskin_userinfo_btn;
+    document.getElementById("eliminarcuenta-userinfo-btn").innerHTML = `${langs.deleteaccount_userinfo_btn}`;
     document.getElementById("establecer-skin").innerHTML = `${langs.set_skin}`;
     document.getElementById("cerrar-userinfo-btn").innerHTML = `${langs.close}`;
     document.getElementById("my-accounts").innerHTML = `${langs.my_accounts}`;
@@ -2674,11 +2633,15 @@ class Home {
     
     document.getElementById("button_ver_mods").innerHTML = `${langs.mods_list_button}`;
     document.getElementById("login-with-microsoft").innerHTML = `${langs.login_microsoft_adv_title}`;
+    document.getElementById("login-with-google").innerHTML = `${langs.login_with_google}`;
     document.getElementById("select_a_type_background").innerHTML = `${langs.select_a_type_background}`;
     document.getElementById("static-background-text").innerHTML = `${langs.static_background_text}`;
     document.getElementById("animated-background-text").innerHTML = `${langs.animated_background_text}`;
     document.getElementById("minimize_music").innerHTML = `${langs.minimize_music}`;
     document.getElementById("keep_music_opened").innerHTML = `${langs.keep_music_opened}`;
+    document.getElementById("code-login-text").innerHTML = `${langs.code_login_text}`;
+    document.getElementById("code-btn").innerHTML = `${langs.send}`;
+    document.getElementById("cancel-code-btn").innerHTML = `${langs.cancel}`;
   }
 
   async initNews() {
@@ -2756,7 +2719,6 @@ class Home {
   }
 
   async initLaunch() {
-    //crear el archivo launcher_profiles.json en la ruta de main del launcher
     let launcherProfiles;
     let accounts = await this.database.getAll("accounts");
     let accountsSelected = await this.database.get("1234", "accounts-selected");
@@ -2878,17 +2840,19 @@ class Home {
           document.getElementById("listaDeVersiones").value;
         let versiones = data_versions.versions;
 
-        //comprobar si la versión es compatible con forge, fabric o quilt, obteniendo las versiones, ejemplo:
-        /* {"versions":[{"version":"1.20.1","name":"1.20.1"},{"version":"1.20.1-forge","name":"1.20.1 - Forge"},{"version":"1.20.1-fabric","name":"1.20.1 - Fabric"},{"version":"1.20.1-quilt","name":"1.20.1 - Quilt"} ]} */
         let radioVanilla = document.getElementById("radioVanilla");
         let radioForge = document.getElementById("radioForge");
         let radioFabric = document.getElementById("radioFabric");
         let radioQuilt = document.getElementById("radioQuilt");
+        let radioNeoForge = document.getElementById("radioNeoForge");
+        let radioLegacyFabric = document.getElementById("radioLegacyFabric");
 
         let versions_vanilla = [];
         let versiones_compatible_forge = [];
         let versiones_compatible_fabric = [];
         let versiones_compatible_quilt = [];
+        let versiones_compatibles_neoforge = [];
+        let versiones_compatibles_legacyfabric = [];
 
         for (let i = 0; i < versiones.length; i++) {
           let version = versiones[i].version;
@@ -2898,128 +2862,63 @@ class Home {
             versiones_compatible_fabric.push(versiones[i].realVersion);
           } else if (version.endsWith("-quilt")) {
             versiones_compatible_quilt.push(versiones[i].realVersion);
+          } else if (version.endsWith("-neoforge")) {
+            versiones_compatibles_neoforge.push(versiones[i].realVersion);
+          } else if (version.endsWith("-legacyfabric")) {
+            versiones_compatibles_legacyfabric.push(versiones[i].realVersion);
           }
         }
+
+        console.log(versiones_compatibles_legacyfabric)
 
         for (let i = 0; i < data_versions_mojang.versions.length; i++) {
           let version = data_versions_mojang.versions[i].id;
           versions_vanilla.push(version);
         }
 
-        if (
-          versiones_compatible_forge.includes(version_selected) &&
-          versiones_compatible_fabric.includes(version_selected) &&
-          versiones_compatible_quilt.includes(version_selected)
-        ) {
-          document.getElementById("tipo-de-versiones").style.display = "";
-          radioVanilla.style.display = "";
-          radioForge.style.display = "";
-          radioFabric.style.display = "";
-          radioQuilt.style.display = "";
-          let footermodaliniciarversion = document.getElementById(
-            "footermodaliniciarversion"
-          );
-          footermodaliniciarversion.style.display = "none";
-        } else if (
-          versiones_compatible_forge.includes(version_selected) &&
-          versiones_compatible_fabric.includes(version_selected)
-        ) {
-          document.getElementById("tipo-de-versiones").style.display = "";
-          radioVanilla.style.display = "";
-          radioForge.style.display = "";
-          radioFabric.style.display = "";
-          radioQuilt.style.display = "none";
-          let footermodaliniciarversion = document.getElementById(
-            "footermodaliniciarversion"
-          );
-          footermodaliniciarversion.style.display = "none";
-        } else if (
-          versiones_compatible_forge.includes(version_selected) &&
-          versiones_compatible_quilt.includes(version_selected)
-        ) {
-          document.getElementById("tipo-de-versiones").style.display = "";
-          radioVanilla.style.display = "";
-          radioForge.style.display = "";
-          radioFabric.style.display = "none";
-          radioQuilt.style.display = "";
-          let footermodaliniciarversion = document.getElementById(
-            "footermodaliniciarversion"
-          );
-          footermodaliniciarversion.style.display = "none";
-        } else if (
-          versiones_compatible_fabric.includes(version_selected) &&
-          versiones_compatible_quilt.includes(version_selected)
-        ) {
-          document.getElementById("tipo-de-versiones").style.display = "";
-          radioVanilla.style.display = "";
-          radioForge.style.display = "none";
-          radioFabric.style.display = "";
-          radioQuilt.style.display = "";
-          let footermodaliniciarversion = document.getElementById(
-            "footermodaliniciarversion"
-          );
-          footermodaliniciarversion.style.display = "none";
-        } else if (versiones_compatible_forge.includes(version_selected)) {
-          document.getElementById("tipo-de-versiones").style.display = "";
-          radioVanilla.style.display = "";
-          radioForge.style.display = "";
-          radioFabric.style.display = "none";
-          radioQuilt.style.display = "none";
-          let footermodaliniciarversion = document.getElementById(
-            "footermodaliniciarversion"
-          );
-          footermodaliniciarversion.style.display = "none";
-        } else if (versiones_compatible_fabric.includes(version_selected)) {
-          document.getElementById("tipo-de-versiones").style.display = "";
-          radioVanilla.style.display = "";
-          radioForge.style.display = "none";
-          radioFabric.style.display = "";
-          radioQuilt.style.display = "none";
-          let footermodaliniciarversion = document.getElementById(
-            "footermodaliniciarversion"
-          );
-          footermodaliniciarversion.style.display = "none";
-        } else if (versiones_compatible_quilt.includes(version_selected)) {
-          document.getElementById("tipo-de-versiones").style.display = "";
-          radioVanilla.style.display = "";
-          radioForge.style.display = "none";
-          radioFabric.style.display = "none";
-          radioQuilt.style.display = "";
-          let footermodaliniciarversion = document.getElementById(
-            "footermodaliniciarversion"
-          );
-          footermodaliniciarversion.style.display = "none";
-        } else if (versions_vanilla.includes(version_selected)) {
-          document.getElementById("tipo-de-versiones").style.display = "";
-          radioVanilla.style.display = "";
-          radioForge.style.display = "none";
-          radioFabric.style.display = "none";
-          radioQuilt.style.display = "none";
-          let footermodaliniciarversion = document.getElementById(
-            "footermodaliniciarversion"
-          );
-          footermodaliniciarversion.style.display = "none";
-        } else if (version_selected === "dx") {
-          document.getElementById("tipo-de-versiones").display = "none";
-          radioVanilla.style.display = "none";
-          radioForge.style.display = "none";
-          radioFabric.style.display = "none";
-          radioQuilt.style.display = "none";
-          let footermodaliniciarversion = document.getElementById(
-            "footermodaliniciarversion"
-          );
-          footermodaliniciarversion.style.display = "none";
-        } else {
-          document.getElementById("tipo-de-versiones").display = "none";
-          radioVanilla.style.display = "none";
-          radioForge.style.display = "none";
-          radioFabric.style.display = "none";
-          radioQuilt.style.display = "none";
-          let footermodaliniciarversion = document.getElementById(
-            "footermodaliniciarversion"
-          );
-          footermodaliniciarversion.style.display = "";
+        const versions = [
+          { id: "radioVanilla", list: versions_vanilla },
+          { id: "radioForge", list: versiones_compatible_forge },
+          { id: "radioFabric", list: versiones_compatible_fabric },
+          { id: "radioQuilt", list: versiones_compatible_quilt },
+          { id: "radioNeoForge", list: versiones_compatibles_neoforge },
+          { id: "radioLegacyFabric", list: versiones_compatibles_legacyfabric },
+        ];
+
+        function updateVersionDisplay(versionSelected) {
+          const tipoDeVersiones = document.getElementById("tipo-de-versiones");
+          const footermodaliniciarversion = document.getElementById("footermodaliniciarversion");
+  
+          if (versionSelected === "dx") {
+            tipoDeVersiones.style.display = "none";
+            versions.forEach(version => {
+              document.getElementById(version.id).style.display = "none";
+            });
+            footermodaliniciarversion.style.display = "none";
+            return;
+          }
+  
+          let anyMatch = false;
+          versions.forEach(version => {
+            if (version.list.includes(versionSelected)) {
+              document.getElementById(version.id).style.display = "";
+              anyMatch = true;
+            } else {
+              document.getElementById(version.id).style.display = "none";
+            }
+          });
+  
+          if (anyMatch) {
+            tipoDeVersiones.style.display = "";
+            footermodaliniciarversion.style.display = "none";
+          } else {
+            tipoDeVersiones.style.display = "none";
+            footermodaliniciarversion.style.display = "";
+          }
         }
+
+        updateVersionDisplay(version_selected);
+
       });
 
     //radio con name loader
@@ -3037,6 +2936,7 @@ class Home {
       .getElementById("startStartVersion")
       .addEventListener("click", async () => {
         let version = document.getElementById("listaDeVersiones").value;
+        console.log(version);
         let versionType;
         let progressBar1 = document.getElementById("progressBar1_");
         let modalDiv1 = document.getElementById("modalStartVersion");
@@ -3052,6 +2952,8 @@ class Home {
         let isForgeCheckBox = false;
         let isFabricCheckBox = false;
         let isQuiltCheckBox = false;
+        let isNeoForgeCheckBox = false;
+        let isLegacyFabricCheckBox = false;
 
         let settings_btn = document.getElementById("settings-btn");
         let select_versions = document.getElementById("select-version");
@@ -3086,37 +2988,64 @@ class Home {
           version += `-forge`;
         } else if (versionType === "quilt") {
           version += `-quilt`;
-        } else {
+        } else if (versionType === "neoforge") {
+          version += `-neoforge`;
+        } else if (versionType === "legacyfabric") {
+          version += `-legacyfabric`;
         }
 
         let version_real;
-        if (version.endsWith("-forge")) {
+        if (version.includes("-forge")) {
           version_real = version.replace("-forge", "");
-        } else if (version.endsWith("-fabric")) {
+        } else if (version.includes("-fabric")) {
           version_real = version.replace("-fabric", "");
-        } else if (version.endsWith("-quilt")) {
+        } else if (version.includes("-quilt")) {
           version_real = version.replace("-quilt", "");
-        } else if (version.endsWith("-extra")) {
+        } else if (version.includes("-neoforge")) {
+          version_real = version.replace("-neoforge", "");
+        } else if (version.includes("-legacyfabric")) {
+          version_real = version.replace("-legacyfabric", "");
+        } else if (version.includes("-extra")) {
           version_real = version.replace("-extra", "");
         } else {
           version_real = version;
         }
 
-        if (version.endsWith("-forge")) {
+        if (version.includes("-forge")) {
           version = version.replace("-forge", "");
           isForgeCheckBox = true;
           isFabricCheckBox = false;
           isQuiltCheckBox = false;
-        } else if (version.endsWith("-fabric")) {
+          isNeoForgeCheckBox = false;
+          isLegacyFabricCheckBox = false;
+        } else if (version.includes("-fabric")) {
           version = version.replace("-fabric", "");
           isFabricCheckBox = true;
           isForgeCheckBox = false;
           isQuiltCheckBox = false;
-        } else if (version.endsWith("-quilt")) {
+          isNeoForgeCheckBox = false;
+          isLegacyFabricCheckBox = false;
+        } else if (version.includes("-quilt")) {
           version = version.replace("-quilt", "");
           isQuiltCheckBox = true;
           isForgeCheckBox = false;
           isFabricCheckBox = false;
+          isNeoForgeCheckBox = false;
+          isLegacyFabricCheckBox = false;
+        } else if (version.includes("-neoforge")) {
+          version = version.replace("-neoforge", "");
+          isForgeCheckBox = false;
+          isFabricCheckBox = false;
+          isQuiltCheckBox = false;
+          isNeoForgeCheckBox = true;
+          isLegacyFabricCheckBox = false;
+        } else if (version.includes("-legacyfabric")) {
+          version = version.replace("-legacyfabric", "");
+          isFabricCheckBox = false;
+          isForgeCheckBox = false;
+          isQuiltCheckBox = false;
+          isNeoForgeCheckBox = false;
+          isLegacyFabricCheckBox = true;
         }
 
         let type;
@@ -3129,6 +3058,12 @@ class Home {
         } else if (isQuiltCheckBox == true) {
           type = "quilt";
           mcModPack = "quilt";
+        } else if (isNeoForgeCheckBox == true) {
+          type = "neoforge";
+          mcModPack = "neoforge";
+        } else if (isLegacyFabricCheckBox == true) {
+          type = "legacyfabric";
+          mcModPack = "legacyfabric";
         }
 
         //hacer un json.parse del archivo de versiones y obtener el dato "assets"
@@ -3213,8 +3148,7 @@ class Home {
 
         let opts;
 
-        console.log("AAAAAAAAAAAAAAAAAA")
-        console.log(version)
+        console.log(`✅ Versión detectada: ${version}`)
 
         let javapath = localStorage.getItem("java-path");
         if (version.endsWith("-extra")) {
@@ -3237,7 +3171,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 20,
+                downloadFileMultiple: 50,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {
@@ -3282,8 +3216,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 20,
-                //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
+                downloadFileMultiple: 50,
                 version: versionData,
                 loader: {
                   type: type,
@@ -3324,8 +3257,8 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 20,
-                javapath: javapath,
+                downloadFileMultiple: 50,
+                javaPath: javapath,
                 version: versionData,
                 loader: {
                   type: type,
@@ -3341,6 +3274,7 @@ class Home {
                 verify: false,
                 ignored: ["loader"],
                 java: false,
+                javapath: javapath,
                 memory: {
                   min: `${ram.ramMin * 1024}M`,
                   max: `${ram.ramMax * 1024}M`,
@@ -3369,8 +3303,8 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 20,
-                javapath: javapath,
+                downloadFileMultiple: 50,
+                javaPath: javapath,
                 version: versionData,
                 loader: {
                   type: type,
@@ -3386,6 +3320,7 @@ class Home {
                 verify: false,
                 ignored: ["loader"],
                 java: false,
+                javapath: javapath,
                 memory: {
                   min: `${ram.ramMin * 1024}M`,
                   max: `${ram.ramMax * 1024}M`,
@@ -3413,7 +3348,7 @@ class Home {
                 detached: false,
                 screen: screen,
               },
-              downloadFileMultiple: 20,
+              downloadFileMultiple: 50,
               version: versionData,
               loader: {
                 type: type,
@@ -3457,7 +3392,7 @@ class Home {
                 detached: false,
                 screen: screen,
               },
-              downloadFileMultiple: 20,
+              downloadFileMultiple: 50,
               javaPath: javapath,
               version: versionData,
               loader: {
@@ -5317,7 +5252,7 @@ class Home {
             title: langs.are_you_sure,
             text: langs.delete_version_text,
             showCancelButton: true,
-            confirmButtonColor: "#00d1b2",
+            confirmButtonColor: "#3e8ed0",
             cancelButtonColor: "#ff3860",
             confirmButtonText: langs.yes_delete,
             cancelButtonText: langs.no_cancel,
@@ -5804,7 +5739,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 20,
+                        downloadFileMultiple: 50,
                         version: {
                           custom: folderName,
                           number: realVersion,
@@ -5834,7 +5769,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 20,
+                        downloadFileMultiple: 50,
                         version: {
                           custom: folderName,
                           number: realVersion,
@@ -5861,7 +5796,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 20,
+                        downloadFileMultiple: 50,
                         version: {
                           custom: folderName,
                           number: realVersion,
@@ -5893,7 +5828,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 20,
+                        downloadFileMultiple: 50,
                         version: {
                           custom: folderName,
                           number: realVersion,
@@ -6668,7 +6603,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 20,
+                        downloadFileMultiple: 50,
                         version: {
                           custom: fileName,
                           number: realVersion,
@@ -6698,7 +6633,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 20,
+                        downloadFileMultiple: 50,
                         version: {
                           custom: fileName,
                           number: realVersion,
@@ -6725,7 +6660,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 20,
+                        downloadFileMultiple: 50,
                         version: {
                           custom: fileName,
                           number: realVersion,
@@ -6757,7 +6692,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 20,
+                        downloadFileMultiple: 50,
                         version: {
                           custom: fileName,
                           number: realVersion,
@@ -7285,7 +7220,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 20,
+                downloadFileMultiple: 50,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {
@@ -7334,7 +7269,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 20,
+                downloadFileMultiple: 50,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {
@@ -7375,7 +7310,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 20,
+                downloadFileMultiple: 50,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {
@@ -7420,7 +7355,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 20,
+                downloadFileMultiple: 50,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {

@@ -803,15 +803,6 @@ class Mods {
                         
 
                         if (name && description && version && loader && loaderVersion) {
-                            //crear un string random de 6 caracteres
-                            
-                            //crear el archivo de la instancia
-                            //comprobar si existe la carpeta de instancias
-                            
-
-                        
-                            
-                            //descargar la imagen https://bulma.io/images/placeholders/128x128.png y moverla a la carpeta de la instancia
                             fetch("https://battlylauncher.com/assets/img/mc-icon.png")
                                 .then((res) => res.buffer())
                                 .then((buffer) => {
@@ -894,7 +885,6 @@ class Mods {
                                 }
                             }
                         }
-                        
                     }
 
                     async function descargarMod(projectID, fileID, destino, manifestPath) {

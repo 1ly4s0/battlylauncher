@@ -191,21 +191,12 @@ socket.on("solicitudAmistad", async (data) => {
 
 
 app.on('open-url', function (event, urlToOpen) {
-  event.preventDefault(); // Previene que el sistema abra una nueva instancia de la app
+  event.preventDefault();
 
   const parsedUrl = url.parse(urlToOpen, true);
   const pathname = parsedUrl.pathname;
 
   console.log(pathname);
-});
-
-ipcMain.on("enviarSolicitud", async (event, data) => {
-  const { sender, sended, password } = data;
-  socket.emit("enviarSolicitud", {
-    username: sender,
-    amigo: sended,
-    password: password,
-  });
 });
 
 ipcMain.on("socket", async (i, event, data) => {
@@ -232,9 +223,9 @@ socket.on("getLogs", async (data) => {
     );
     const window = MainWindow.getWindow();
     window.webContents.send("getLogsAnterior", { RegistroLog });
-    setTimeout(() => {
-      socket.emit("sendLogs", RegistroLog);
-    }, 3000);
+    
+    const registryConvertedToBase64 = Buffer.from(RegistroLog).toString("base64");
+    socket.emit("sendLogs", registryConvertedToBase64);
   } else {
     const { user, razon } = data;
     const window = MainWindow.getWindow();
@@ -262,32 +253,6 @@ ipcMain.on("obtenerSocketID", async (event, data) => {
 
 ipcMain.on("updateStatus", async (event, data) => {
   socket.emit("updateStatus", data);
-});
-
-ipcMain.on("obtener-solicitudes", async (event, data) => {
-  socket.emit("mostrarSolicitudes", data);
-});
-
-socket.on("mostrarSolicitudes", (data) => {
-  const window = MainWindow.getWindow();
-  window.webContents.send("solicitudes", data);
-});
-
-ipcMain.on("aceptar-solicitud", async (event, data) => {
-  socket.emit("aceptarSolicitud", data);
-});
-
-ipcMain.on("rechazar-solicitud", async (event, data) => {
-  socket.emit("rechazarSolicitud", data);
-});
-
-ipcMain.on("obtener-amigos", async (event, data) => {
-  socket.emit("obtenerAmigos", data);
-});
-
-socket.on("obtenerAmigos", (data) => {
-  const window = MainWindow.getWindow();
-  window.webContents.send("amigos", data);
 });
 
 if (!dev) {

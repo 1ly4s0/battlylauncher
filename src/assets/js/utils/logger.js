@@ -51,6 +51,13 @@ class logger {
             if (typeof value === 'object') value = JSON.stringify(value);
             consoleOutput += `[ERROR] ${new Date().toISOString()} - ${value}\n`;
         };
+
+        console.adv = (value) => {
+            console_log.call(console, value[0], value[1]);
+            
+            if (typeof value === 'object') value = JSON.stringify(value);
+            consoleOutput += `[ADV] ${new Date().toISOString()} - ${value}\n`;
+        };
     }
 }
 

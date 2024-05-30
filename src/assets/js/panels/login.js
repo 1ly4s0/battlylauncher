@@ -7,7 +7,7 @@
 
 import { database, changePanel, addAccount, accountSelect } from '../utils.js';
 import { Alert } from '../utils/alert.js';
-const { ipcRenderer } = require('electron');
+const { ipcRenderer, shell } = require('electron');
 import { Lang } from "../utils/lang.js";
 const Swal = require("./assets/js/libs/sweetalert/sweetalert2.all.min.js");
 
@@ -168,6 +168,147 @@ class Login {
         let infoLogin = document.getElementById("info-login")
         let loginBtn = document.getElementById("login-btn")
 
+
+        document.getElementById("google-button").addEventListener("click", () => {
+            new Alert().ShowAlert({
+                title: lang.login_with_google,
+                message: lang.login_with_google_msg,
+                type: "info"
+            })
+
+            shell.openExternal("https://battlylauncher.com/api/battly/google/login")
+
+            document.getElementById("code-login-panel").classList.add("is-active");
+
+        });
+
+        document.getElementById("cancel-code-btn").addEventListener("click", () => {
+            document.getElementById("code-login-panel").classList.remove("is-active");
+        });
+
+        document.getElementById("code-btn").addEventListener("click", () => {
+            const code = document.getElementById("code-text").value;
+
+            if (code == "") {
+                new Alert().ShowAlert({
+                    title: lang.auth_code,
+                    message: lang.auth_code_not_set,
+                    type: "error"
+                })
+            } else {
+
+                infoLoginPanel.classList.add("is-active");
+                infoLogin.innerHTML = lang.checking_auth_code;
+
+
+                fetch("https://battlylauncher.com/api/battly/google/verify", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        code: code
+                    })
+                }).then(response => response.json()).then(async data => {
+                    if (data.status == "error") {
+                        new Alert().ShowAlert({
+                            title: "Error",
+                            message: data.message,
+                            type: "error"
+                        })
+
+                        infoLogin.innerHTML = data.message;
+
+                        setTimeout(() => {
+                            infoLoginPanel.classList.remove("is-active");
+                        }, 3000);
+                    } else {
+
+                        infoLogin.innerHTML = lang.logging_in;
+
+                        let account = {
+                            type: "battly",
+                            access_token: "1234",
+                            client_token: "1234",
+                            uuid: data.user.uuid,
+                            name: data.user.username,
+                            password: data.user.password,
+                            user_properties: '{}',
+                            meta: {
+                                type: "cracked",
+                                offline: true
+                            }
+                        }
+
+                        infoLogin.innerHTML = lang.checking_if_you_are_premium;
+
+                         let premiums = [];
+                    try {
+                        premiums = await fetch("https://api.battlylauncher.com/api/usuarios/obtenerUsuariosPremium").then(response => response.json()).then(data => data).catch(err => { });
+                    } catch (error) {
+                        premiums = [];
+                    }
+
+                    await this.database.addAccount(account)
+                    await this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
+
+                    let isPremium;
+                    if (!premiums) isPremium = false;
+                    else isPremium = premiums.includes(account.name);
+                    addAccount(account, isPremium);
+                
+                        document.getElementById("code-login-panel").classList.remove("is-active");
+                        document.getElementById("code-text").value = "";
+
+                        accountSelect(account.uuid)
+
+                        infoLoginPanel.classList.remove("is-active");
+
+                        let news_shown = localStorage.getItem("news_shown_v1.8");
+                        if (!news_shown || news_shown == "false" || news_shown == null || news_shown == undefined) {
+                            document.querySelector(".preload-content").style.display = "none";
+                            changePanel("news");
+                        } else {
+                            document.querySelector(".preload-content").style.display = "none";
+                            changePanel("home")
+                        }
+
+                        cancelMojangBtn.disabled = false;
+                        cancelMojangBtn.click();
+                        mailInput.value = "";
+                        passwordInput.value = "";
+                        loginBtn.disabled = false;
+                        mailInput.disabled = false;
+                        passwordInput.disabled = false;
+                        loginBtn.style.display = "block";
+                        infoLogin.innerHTML = "&nbsp;";
+
+                        let welcome = document.getElementById('battly-news-div');
+                        let blockWelcome = document.createElement('div');
+                        blockWelcome.classList.add('news-block', 'opacity-1');
+                        blockWelcome.innerHTML = `
+                        <div class="news-header">
+                            <div class="header-text">
+                                <div class="title_">${lang.welcome_again_to_battly}, ${account.name}</div>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <div class="bbWrapper">
+                                <p>${lang.we_hope_you_enjoy}</p>
+                            </div>
+                        </div>`;
+                        welcome.prepend(blockWelcome);
+                    }
+                }).catch(err => {
+                    new Alert().ShowAlert({
+                        title: "Error",
+                        message: "Ocurrió un error al iniciar sesión.",
+                        type: "error"
+                    })
+                })
+            }
+        });
+
         cancelMojangBtn.addEventListener("click", () => {
             if (this.database.getAccounts().length == 0) {
                 new Alert().ShowAlert({
@@ -275,107 +416,89 @@ class Login {
             }
             
 
-            const axios = require("axios");
-
-            let data = await axios.post("https://battlylauncher.com/api/battly/launcher/login", {
-                Headers: {
+            fetch("https://battlylauncher.com/api/battly/launcher/login", {
+                method: "POST",
+                headers: {
                     "Content-Type": "application/json"
                 },
                 body: {
                     username: mailInput.value,
                     password: passwordInput.value
                 }
-            }).catch(err => {
-                console.log(err)
-                cancelMojangBtn.disabled = false;
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                mailInput.value = "";
-                passwordInput.value = "";
-                infoLogin.innerHTML = lang.username_or_password_incorrect;
-                setTimeout(() => {
-                    infoLoginPanel.classList.remove("is-active");
-                }, 3000);
-                return
-            })
+            }).then(response => response.json()).then(async data => {
 
-            if(data.data.status == "error") {
-                infoLogin.innerHTML = data.data.error
-                cancelMojangBtn.disabled = false;
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                infoLogin.innerHTML = data.data.message;
-                setTimeout(() => {
-                    infoLoginPanel.classList.remove("is-active");
-                }, 3000);
-                return
-            }
+                if (data.status == "error") {
+                    infoLogin.innerHTML = data.error
+                    cancelMojangBtn.disabled = false;
+                    loginBtn.disabled = false;
+                    mailInput.disabled = false;
+                    passwordInput.disabled = false;
+                    infoLogin.innerHTML = data.message;
+                    setTimeout(() => {
+                        infoLoginPanel.classList.remove("is-active");
+                    }, 3000);
+                    return
+                }
 
-            if (data.data.status == "success") {
-            
-
-                
-
-                account = {
-                    type: "battly",
-                    access_token: "1234",
-                    client_token: "1234",
-                    uuid: uuid_,
-                    name: mailInput.value,
-                    password: passwordInput.value,
-                    user_properties: '{}',
-                    meta: {
-                        type: "cracked",
-                        offline: true
+                if (data.status == "success") {
+                    account = {
+                        type: "battly",
+                        access_token: "1234",
+                        client_token: "1234",
+                        uuid: uuid_,
+                        name: mailInput.value,
+                        password: passwordInput.value,
+                        user_properties: '{}',
+                        meta: {
+                            type: "cracked",
+                            offline: true
+                        }
                     }
-                }
 
-                infoLogin.innerHTML = lang.checking_premium;
+                    infoLogin.innerHTML = lang.checking_premium;
 
-                let premiums = [];
-                try {
-                    premiums = await fetch("https://api.battlylauncher.com/api/usuarios/obtenerUsuariosPremium").then(response => response.json()).then(data => data).catch(err => { });
-                } catch (error) {
-                    premiums = [];
-                }
+                    let premiums = [];
+                    try {
+                        premiums = await fetch("https://api.battlylauncher.com/api/usuarios/obtenerUsuariosPremium").then(response => response.json()).then(data => data).catch(err => { });
+                    } catch (error) {
+                        premiums = [];
+                    }
 
-                await this.database.addAccount(account)
-                await this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
+                    await this.database.addAccount(account)
+                    await this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
 
-                let isPremium;
-                if (!premiums) isPremium = false;
-                else isPremium = premiums.includes(account.name);
-                addAccount(account, isPremium);
+                    let isPremium;
+                    if (!premiums) isPremium = false;
+                    else isPremium = premiums.includes(account.name);
+                    addAccount(account, isPremium);
                 
-                infoLoginPanel.classList.remove("is-active");
+                    infoLoginPanel.classList.remove("is-active");
 
-                await accountSelect(account.uuid)
-                let news_shown = localStorage.getItem("news_shown_v1.8");
-                if (!news_shown || news_shown == "false" || news_shown == null || news_shown == undefined) {
-                    document.querySelector(".preload-content").style.display = "none";
-                    changePanel("news");
-                } else {
-                    document.querySelector(".preload-content").style.display = "none";
-                    changePanel("home")
-                }
+                    await accountSelect(account.uuid)
+                    let news_shown = localStorage.getItem("news_shown_v1.8");
+                    if (!news_shown || news_shown == "false" || news_shown == null || news_shown == undefined) {
+                        document.querySelector(".preload-content").style.display = "none";
+                        changePanel("news");
+                    } else {
+                        document.querySelector(".preload-content").style.display = "none";
+                        changePanel("home")
+                    }
 
             
-                cancelMojangBtn.disabled = false;
-                cancelMojangBtn.click();
-                mailInput.value = "";
-                passwordInput.value = "";
-                loginBtn.disabled = false;
-                mailInput.disabled = false;
-                passwordInput.disabled = false;
-                loginBtn.style.display = "block";
-                infoLogin.innerHTML = "&nbsp;";
+                    cancelMojangBtn.disabled = false;
+                    cancelMojangBtn.click();
+                    mailInput.value = "";
+                    passwordInput.value = "";
+                    loginBtn.disabled = false;
+                    mailInput.disabled = false;
+                    passwordInput.disabled = false;
+                    loginBtn.style.display = "block";
+                    infoLogin.innerHTML = "&nbsp;";
 
-                let welcome = document.getElementById('battly-news-div');
-                let blockWelcome = document.createElement('div');
-                blockWelcome.classList.add('news-block', 'opacity-1');
-                blockWelcome.innerHTML = `
+                    let welcome = document.getElementById('battly-news-div');
+                    let blockWelcome = document.createElement('div');
+                    blockWelcome.classList.add('news-block', 'opacity-1');
+                    blockWelcome.innerHTML = `
                     <div class="news-header">
                         <div class="header-text">
                             <div class="title_">${lang.welcome_again_to_battly}, ${account.name}</div>
@@ -386,8 +509,19 @@ class Login {
                             <p>${lang.we_hope_you_enjoy}</p>
                         </div>
                     </div>`;
-                welcome.prepend(blockWelcome);
-            }
+                    welcome.prepend(blockWelcome);
+                }
+            }).catch(err => {
+                console.log(err)
+                infoLogin.innerHTML = lang.error_logging_in;
+                setTimeout(() => {
+                    infoLoginPanel.classList.remove("is-active");
+                }, 3000);
+                cancelMojangBtn.disabled = false;
+                loginBtn.disabled = false;
+                mailInput.disabled = false;
+                passwordInput.disabled = false;
+            });
         })
     }
 }

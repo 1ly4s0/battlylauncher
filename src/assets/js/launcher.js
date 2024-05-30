@@ -40,6 +40,25 @@ class Launcher {
         document.addEventListener("keydown", (e) => {
             if (e.ctrlKey && e.shiftKey && e.keyCode == 73 || e.keyCode == 123) {
                 ipcRenderer.send("main-window-dev-tools");
+
+                console.adv([
+                    "%c¡ESPERA!", "color: #3e8ed0; font-size: 70px; font-weight: bold; font-family: 'Poppins'; text-shadow: 0 0 5px #000;"]);
+                console.adv(["%c¡No hagas nada aquí si no sabes lo que estás haciendo!", "color: #3e8ed0; font-size: 18px; font-weight: bold; font-family: 'Poppins';"]);
+                console.adv(["%cTampoco pegues nada externo aquí, ¡hay un 101% de posibilidades de que sea un virus!", "color: red; font-size: 15px; font-weight: bold; font-family: 'Poppins';"]);
+
+                setTimeout(() => {
+                    console.adv([
+                        "%c¡ESPERA!", "color: #3e8ed0; font-size: 70px; font-weight: bold; font-family: 'Poppins'; text-shadow: 0 0 5px #000;"]);
+                    console.adv(["%c¡No hagas nada aquí si no sabes lo que estás haciendo!", "color: #3e8ed0; font-size: 18px; font-weight: bold; font-family: 'Poppins';"]);
+                    console.adv(["%cTampoco pegues nada externo aquí, ¡hay un 101% de posibilidades de que sea un virus!", "color: red; font-size: 15px; font-weight: bold; font-family: 'Poppins';"]);
+                }, 1000);
+
+                setTimeout(() => {
+                    console.adv([
+                        "%c¡ESPERA!", "color: #3e8ed0; font-size: 70px; font-weight: bold; font-family: 'Poppins'; text-shadow: 0 0 5px #000;"]);
+                    console.adv(["%c¡No hagas nada aquí si no sabes lo que estás haciendo!", "color: #3e8ed0; font-size: 18px; font-weight: bold; font-family: 'Poppins';"]);
+                    console.adv(["%cTampoco pegues nada externo aquí, ¡hay un 101% de posibilidades de que sea un virus!", "color: red; font-size: 15px; font-weight: bold; font-family: 'Poppins';"]);
+                }, 1500);
             }
         })
         new logger('Launcher', '#3e8ed0')
