@@ -481,7 +481,7 @@ const strings = {
     "tooltip_news": "Mira las últimas actualizaciones",
     "tooltip_folder": "Abre la carpeta de Battly",
     "tooltip_discord": "Únete al servidor de Discord",
-    "tooltip_mods": "Descarga tus modsfavoritos desde Battly",
+    "tooltip_mods": "Descarga tus mods favoritos desde Battly",
     "tooltip_music": "Escucha tu música favorita cuando quieras",
     "tooltip_friends": "Mira que están jugando tus amigos para unirte a ellos",
     "tooptip_instances": "Separa tus mods y juega tus modpacks favoritos",

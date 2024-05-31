@@ -28,7 +28,10 @@ class Login {
     async OpenWeb() {
         let register_open_btn = document.getElementById("register_open_btn")
         register_open_btn.addEventListener("click", () => {
-            window.open("https://battlylauncher.com/register", "_blank")
+
+            const os = require('os').platform();
+            if (os == "win32") shell.openExternal("https://battlylauncher.com/register")
+            else window.open("https://battlylauncher.com/register", "_blank")
         });
     }
 
@@ -176,7 +179,10 @@ class Login {
                 type: "info"
             })
 
-            shell.openExternal("https://battlylauncher.com/api/battly/google/login")
+            const os = require('os').platform();
+
+            if (os == "win32") shell.openExternal("https://battlylauncher.com/api/battly/google/login")
+            else window.open("https://battlylauncher.com/api/battly/google/login", "_blank")
 
             document.getElementById("code-login-panel").classList.add("is-active");
 
@@ -421,10 +427,10 @@ class Login {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: {
+                body: JSON.stringify({
                     username: mailInput.value,
                     password: passwordInput.value
-                }
+                })
             }).then(response => response.json()).then(async data => {
 
                 if (data.status == "error") {

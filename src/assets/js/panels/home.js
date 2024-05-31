@@ -747,16 +747,9 @@ class Home {
                     .then((response) => {
                       let data = response.data;
 
-                      // Agregar las opciones de "latest" y "recommended"
-                      let latestOption = document.createElement("option");
-                      latestOption.value = "latest";
-                      latestOption.innerHTML = langs.latest;
-                      versionOptionsVersion.appendChild(latestOption);
-
                       let recommendedOption = document.createElement("option");
-                      recommendedOption.value = "recommended";
-                      recommendedOption.innerHTML = langs.recommended;
-                      versionOptionsVersion.appendChild(recommendedOption);
+recommendedOption.value = "recommended";
+recommendedOption.innerHTML = langs.recommended;
 
                       for (let version in data) {
                         if (version === forgeVersionType.value.replace("-forge", "")) {
@@ -764,14 +757,11 @@ class Home {
                           // Limpiar el select antes de agregar nuevas opciones
                           versionOptionsVersion.innerHTML = "";
 
-                          // Agregar las opciones de "latest" y "recommended" nuevamente
-                          versionOptionsVersion.appendChild(latestOption.cloneNode(true));
-                          versionOptionsVersion.appendChild(
-                            recommendedOption.cloneNode(true)
-                          );
+                          // Agregar la opción "recommended"
+                          versionOptionsVersion.appendChild(recommendedOption.cloneNode(true));
 
                           // Agregar las otras versiones
-                          for (let j = 0; j < build.length; j++) {
+                          for (let j = 0; j < build.length - 1; j++) {
                             let option = document.createElement("option");
                             option.value = build[j];
                             option.innerHTML = build[j];
@@ -780,6 +770,16 @@ class Home {
                             if (instance_json.loaderVersion === build[j]) {
                               versionOptionsVersion.value = build[j];
                             }
+                          }
+
+                          // Agregar la última versión como la opción "latest"
+                          if (build.length > 0) {
+                            let latestOption = document.createElement("option");
+                            latestOption.value = build[build.length - 1];
+                            latestOption.innerHTML = langs.latest;
+                            versionOptionsVersion.appendChild(latestOption);
+                          let latestVersion = build[build.length - 1];
+                          versionOptionsVersion.value = latestVersion;
                           }
                         }
                       }
@@ -806,16 +806,9 @@ class Home {
                 
                     versionOptionsVersion.innerHTML = "";
 
-                    // Agregar las opciones de "latest" y "recommended"
-                    let latestOption = document.createElement("option");
-                    latestOption.value = "latest";
-                    latestOption.innerHTML = langs.latest;
-                    versionOptionsVersion.appendChild(latestOption);
-
                     let recommendedOption = document.createElement("option");
-                    recommendedOption.value = "recommended";
-                    recommendedOption.innerHTML = langs.recommended;
-                    versionOptionsVersion.appendChild(recommendedOption);
+recommendedOption.value = "recommended";
+recommendedOption.innerHTML = langs.recommended;
 
                     for (let version in data) {
                       if (version === forgeVersionType.value.replace("-forge", "")) {
@@ -823,21 +816,29 @@ class Home {
                         // Limpiar el select antes de agregar nuevas opciones
                         versionOptionsVersion.innerHTML = "";
 
-                        // Agregar las opciones de "latest" y "recommended" nuevamente
-                        versionOptionsVersion.appendChild(latestOption.cloneNode(true));
-                        versionOptionsVersion.appendChild(
-                          recommendedOption.cloneNode(true)
-                        );
+                        // Agregar la opción "recommended"
+                        versionOptionsVersion.appendChild(recommendedOption.cloneNode(true));
 
                         // Agregar las otras versiones
-                        for (let j = 0; j < build.length; j++) {
+                        for (let j = 0; j < build.length - 1; j++) {
                           let option = document.createElement("option");
                           option.value = build[j];
                           option.innerHTML = build[j];
                           versionOptionsVersion.appendChild(option);
                         }
+
+                        // Agregar la última versión como la opción "latest"
+                        if (build.length > 0) {
+                          let latestOption = document.createElement("option");
+                          latestOption.value = build[build.length - 1];
+                          latestOption.innerHTML = langs.latest;
+                          versionOptionsVersion.appendChild(latestOption);
+                          let latestVersion = build[build.length - 1];
+                          versionOptionsVersion.value = latestVersion;
+                        }
                       }
                     }
+
                   });
               });
 
@@ -1035,7 +1036,7 @@ class Home {
                   detached: true,
                   timeout: 10000,
                   path: `${dataDirectory}/.battly/instances/${instancias[i]}`,
-                  downloadFileMultiple: 50,
+                  downloadFileMultiple: 40,
                   version: version,
                   loader: {
                     type: loader_json ? loader_json : loader,
@@ -1067,7 +1068,7 @@ class Home {
                   detached: true,
                   timeout: 10000,
                   path: `${dataDirectory}/.battly/instances/${instancias[i]}`,
-                  downloadFileMultiple: 50,
+                  downloadFileMultiple: 40,
                   version: version,
                   loader: {
                     type: loader_json ? loader_json : loader,
@@ -1732,7 +1733,8 @@ class Home {
                 if (
                   versiones.versions[i].version.endsWith("-forge") ||
                   versiones.versions[i].version.endsWith("-fabric") ||
-                  versiones.versions[i].version.endsWith("-quilt")
+                  versiones.versions[i].version.endsWith("-quilt") ||
+                  versiones.versions[i].version.endsWith("-neoforge")
                 ) {
                   let version = versiones.versions[i];
                   let option = document.createElement("option");
@@ -1753,15 +1755,9 @@ class Home {
                       let data = response.data;
 
                       // Agregar las opciones de "latest" y "recommended"
-                      let latestOption = document.createElement("option");
-                      latestOption.value = "latest";
-                      latestOption.innerHTML = langs.latest;
-                      versionOptionsVersion.appendChild(latestOption);
-
                       let recommendedOption = document.createElement("option");
-                      recommendedOption.value = "recommended";
-                      recommendedOption.innerHTML = langs.recommended;
-                      versionOptionsVersion.appendChild(recommendedOption);
+recommendedOption.value = "recommended";
+recommendedOption.innerHTML = langs.recommended;
 
                       for (let version in data) {
                         if (version === forgeVersionType.value.replace("-forge", "")) {
@@ -1769,21 +1765,29 @@ class Home {
                           // Limpiar el select antes de agregar nuevas opciones
                           versionOptionsVersion.innerHTML = "";
 
-                          // Agregar las opciones de "latest" y "recommended" nuevamente
-                          versionOptionsVersion.appendChild(latestOption.cloneNode(true));
-                          versionOptionsVersion.appendChild(
-                            recommendedOption.cloneNode(true)
-                          );
+                          // Agregar la opción "recommended"
+                          versionOptionsVersion.appendChild(recommendedOption.cloneNode(true));
 
                           // Agregar las otras versiones
-                          for (let j = 0; j < build.length; j++) {
+                          for (let j = 0; j < build.length - 1; j++) {
                             let option = document.createElement("option");
                             option.value = build[j];
                             option.innerHTML = build[j];
                             versionOptionsVersion.appendChild(option);
                           }
+
+                          // Agregar la última versión como la opción "latest"
+                          if (build.length > 0) {
+                            let latestOption = document.createElement("option");
+                            latestOption.value = build[build.length - 1];
+                            latestOption.innerHTML = langs.latest;
+                            versionOptionsVersion.appendChild(latestOption);
+                          let latestVersion = build[build.length - 1];
+                          versionOptionsVersion.value = latestVersion;
+                          }
                         }
                       }
+
                     });
               }, 500);
 
@@ -1807,16 +1811,9 @@ class Home {
                 
                     versionOptionsVersion.innerHTML = "";
 
-                    // Agregar las opciones de "latest" y "recommended"
-                    let latestOption = document.createElement("option");
-                    latestOption.value = "latest";
-                    latestOption.innerHTML = langs.latest;
-                    versionOptionsVersion.appendChild(latestOption);
-
                     let recommendedOption = document.createElement("option");
-                    recommendedOption.value = "recommended";
-                    recommendedOption.innerHTML = langs.recommended;
-                    versionOptionsVersion.appendChild(recommendedOption);
+recommendedOption.value = "recommended";
+recommendedOption.innerHTML = langs.recommended;
 
                     for (let version in data) {
                       if (version === forgeVersionType.value.replace("-forge", "")) {
@@ -1824,21 +1821,29 @@ class Home {
                         // Limpiar el select antes de agregar nuevas opciones
                         versionOptionsVersion.innerHTML = "";
 
-                        // Agregar las opciones de "latest" y "recommended" nuevamente
-                        versionOptionsVersion.appendChild(latestOption.cloneNode(true));
-                        versionOptionsVersion.appendChild(
-                          recommendedOption.cloneNode(true)
-                        );
+                        // Agregar la opción "recommended"
+                        versionOptionsVersion.appendChild(recommendedOption.cloneNode(true));
 
                         // Agregar las otras versiones
-                        for (let j = 0; j < build.length; j++) {
+                        for (let j = 0; j < build.length - 1; j++) {
                           let option = document.createElement("option");
                           option.value = build[j];
                           option.innerHTML = build[j];
                           versionOptionsVersion.appendChild(option);
                         }
+
+                        // Agregar la última versión como la opción "latest"
+                        if (build.length > 0) {
+                          let latestOption = document.createElement("option");
+                          latestOption.value = build[build.length - 1];
+                          latestOption.innerHTML = langs.latest;
+                          versionOptionsVersion.appendChild(latestOption);
+                          let latestVersion = build[build.length - 1];
+                          versionOptionsVersion.value = latestVersion;
+                        }
                       }
                     }
+
                   });
               });
 
@@ -2422,7 +2427,14 @@ class Home {
       "BotonUnirseServidorDiscord"
     );
     BotonUnirseServidorDiscord.addEventListener("click", function () {
-      window.open("https://discord.gg/tecno-bros-885235460178342009", "_blank");
+      const os = require("os");
+      const shell = require("electron").shell;
+
+      if (os.platform() === "win32") {
+        shell.openExternal("https://discord.gg/tecno-bros-885235460178342009");
+      } else {
+        window.open("https://discord.gg/tecno-bros-885235460178342009", "_blank");
+      }
     });
       
     document.getElementById("openBattlyFolderButton").addEventListener("click", () => {
@@ -3171,7 +3183,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 50,
+                downloadFileMultiple: 40,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {
@@ -3216,7 +3228,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 50,
+                downloadFileMultiple: 40,
                 version: versionData,
                 loader: {
                   type: type,
@@ -3257,7 +3269,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 50,
+                downloadFileMultiple: 40,
                 javaPath: javapath,
                 version: versionData,
                 loader: {
@@ -3303,7 +3315,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 50,
+                downloadFileMultiple: 40,
                 javaPath: javapath,
                 version: versionData,
                 loader: {
@@ -3348,7 +3360,7 @@ class Home {
                 detached: false,
                 screen: screen,
               },
-              downloadFileMultiple: 50,
+              downloadFileMultiple: 40,
               version: versionData,
               loader: {
                 type: type,
@@ -3392,7 +3404,7 @@ class Home {
                 detached: false,
                 screen: screen,
               },
-              downloadFileMultiple: 50,
+              downloadFileMultiple: 40,
               javaPath: javapath,
               version: versionData,
               loader: {
@@ -5096,16 +5108,9 @@ class Home {
             .then((response) => {
               let data = response.data;
 
-              // Agregar las opciones de "latest" y "recommended"
-              let latestOption = document.createElement("option");
-              latestOption.value = "latest";
-              latestOption.innerHTML = langs.latest;
-              selectForgeBuild.appendChild(latestOption);
-
               let recommendedOption = document.createElement("option");
               recommendedOption.value = "recommended";
               recommendedOption.innerHTML = langs.recommended;
-              selectForgeBuild.appendChild(recommendedOption);
 
               for (let version in data) {
                 if (version === forgeVersionType.value.replace("-forge", "")) {
@@ -5113,18 +5118,25 @@ class Home {
                   // Limpiar el select antes de agregar nuevas opciones
                   selectForgeBuild.innerHTML = "";
 
-                  // Agregar las opciones de "latest" y "recommended" nuevamente
-                  selectForgeBuild.appendChild(latestOption.cloneNode(true));
-                  selectForgeBuild.appendChild(
-                    recommendedOption.cloneNode(true)
-                  );
+                  // Agregar la opción "recommended"
+                  selectForgeBuild.appendChild(recommendedOption.cloneNode(true));
 
                   // Agregar las otras versiones
-                  for (let j = 0; j < build.length; j++) {
+                  for (let j = 0; j < build.length - 1; j++) {
                     let option = document.createElement("option");
                     option.value = build[j];
                     option.innerHTML = build[j];
                     selectForgeBuild.appendChild(option);
+                  }
+
+                  // Agregar la última versión como la opción "latest"
+                  if (build.length > 0) {
+                    let latestOption = document.createElement("option");
+                    latestOption.value = build[build.length - 1];
+                    latestOption.innerHTML = langs.latest;
+                    selectForgeBuild.appendChild(latestOption);
+                    let latestVersion = build[build.length - 1];
+                    selectForgeBuild.value = latestVersion;
                   }
                 }
               }
@@ -5739,7 +5751,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 50,
+                        downloadFileMultiple: 40,
                         version: {
                           custom: folderName,
                           number: realVersion,
@@ -5769,7 +5781,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 50,
+                        downloadFileMultiple: 40,
                         version: {
                           custom: folderName,
                           number: realVersion,
@@ -5796,7 +5808,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 50,
+                        downloadFileMultiple: 40,
                         version: {
                           custom: folderName,
                           number: realVersion,
@@ -5828,7 +5840,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 50,
+                        downloadFileMultiple: 40,
                         version: {
                           custom: folderName,
                           number: realVersion,
@@ -6603,7 +6615,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 50,
+                        downloadFileMultiple: 40,
                         version: {
                           custom: fileName,
                           number: realVersion,
@@ -6633,7 +6645,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 50,
+                        downloadFileMultiple: 40,
                         version: {
                           custom: fileName,
                           number: realVersion,
@@ -6660,7 +6672,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 50,
+                        downloadFileMultiple: 40,
                         version: {
                           custom: fileName,
                           number: realVersion,
@@ -6692,7 +6704,7 @@ class Home {
                           detached: false,
                           screen: screen,
                         },
-                        downloadFileMultiple: 50,
+                        downloadFileMultiple: 40,
                         version: {
                           custom: fileName,
                           number: realVersion,
@@ -7220,7 +7232,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 50,
+                downloadFileMultiple: 40,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {
@@ -7269,7 +7281,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 50,
+                downloadFileMultiple: 40,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {
@@ -7310,7 +7322,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 50,
+                downloadFileMultiple: 40,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {
@@ -7355,7 +7367,7 @@ class Home {
                   detached: false,
                   screen: screen,
                 },
-                downloadFileMultiple: 50,
+                downloadFileMultiple: 40,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {

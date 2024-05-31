@@ -104,7 +104,8 @@ class LoadMinecraft {
             }
           });
 
-        Launcher.on('extract', extract => {
+      Launcher.on('extract', extract => {
+          console.log(`[EXTRACT] ${extract}`);
             consoleOutput_ += `[EXTRACT] ${extract}\n`;
             if (seMostroExtrayendo_core) {
               progressText1.innerHTML = langs.extracting_loader;
@@ -115,7 +116,8 @@ class LoadMinecraft {
             }
         });
 
-        Launcher.on('progress', (progress, size, element) => {
+      Launcher.on('progress', (progress, size, element) => {
+          console.log(`Descargando ${element} ${progress} / ${size}`);
             if (!progresoShown) {
               progressFill1.classList.remove("animated-fill");
               progressText1.innerHTML = langs.downloading_version;
@@ -127,12 +129,12 @@ class LoadMinecraft {
             }
 
             if (progreso != lastProgreso) {
-              logTextArea1.innerHTML += `\n${langs.downloading_version}... ${progreso}%`;
+              logTextArea1.innerHTML += `\n${langs.downloading} ${element}... ${progreso}%`;
               lastProgreso = progreso;
             } else {
             }
 
-            consoleOutput_ += `[DESCARGANDO] ${progress} / ${size}\n`;
+            consoleOutput_ += `[DESCARGANDO] ${element} ${progress} / ${size}\n`;
             updateTextareaScroll();
             ipcRenderer.send("main-window-progress", {
               progress,
@@ -143,7 +145,8 @@ class LoadMinecraft {
             }
         });
 
-        Launcher.on('check', (progress, size, element) => {
+      Launcher.on('check', (progress, size, element) => {
+          console.log(`Checking ${element} ${Math.round((progress / size) * 100)}%`);
             let progreso = ((progress / size) * 100).toFixed(0);
             if (progreso > 100) {
               progreso = 100;
@@ -210,13 +213,15 @@ class LoadMinecraft {
             progressText1.innerHTML = `🔃 ${langs.downloading}... (${velocidad.toFixed(2)} MB/s) - ${estimatedTime}`;
         })
 
-        Launcher.on('patch', patch => {
+      Launcher.on('patch', patch => {
+          console.log(`[INSTALANDO LOADER] ${patch}`);
             logTextArea1.innerHTML += `🔃 ${langs.extracting_loader}... [${patch}]\n`;
             updateTextareaScroll();
             consoleOutput_ += `[INSTAL. LOADER] ${patch}\n`;
         });
 
-        Launcher.on('data', async (e) => {
+      Launcher.on('data', async (e) => {
+          console.log(`[MC] ${e}`);
             new logger("Minecraft", "#36b030");
             consoleOutput_ += `[MC] ${e}\n`;
             if (launcherSettings.launcher.close === "close-launcher")
@@ -380,7 +385,6 @@ class LoadMinecraft {
         })
 
       Launcher.on('close', code => {
-        console.log(launcherSettings);
         console.log(`---------- [MC] Código de salida: ${code}\n ----------`)
             consoleOutput_ += `---------- [MC] Código de salida: ${code}\n ----------`;
             if (launcherSettings.launcher.close === "close-launcher")
@@ -400,7 +404,8 @@ class LoadMinecraft {
             ipcRenderer.send("delete-and-new-status-discord");
         });
 
-        Launcher.on('error', err => {
+      Launcher.on('error', err => {
+          console.error(err);
             consoleOutput_ += `[ERROR] ${JSON.stringify(err, null, 2)}\n`;
         });
     }

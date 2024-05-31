@@ -18,35 +18,35 @@ class logger {
 
     async Logger(name, color) {
         console.log = (value) => {
-            console_log.call(console, `%c[${name}]:`, `color: ${color};`, value);
+            console_log.call(console, `%c[${name}]:`, `color: ${color}; font-weight: bold; font-family: 'Poppins', sans-serif;`, value);
             //si es un objeto lo convierte a string
             if (typeof value === 'object') value = JSON.stringify(value);
             consoleOutput += `[LOG] ${new Date().toISOString()} - ${value}\n`;
         };
 
         console.info = (value) => {
-            console_info.call(console, `%c[${name}]:`, `color: ${color};`, value);
+            console_info.call(console, `%c[${name}]:`, `color: ${color}; font-weight: bold; font-family: 'Poppins';`, value);
             
             if (typeof value === 'object') value = JSON.stringify(value);
             consoleOutput += `[INFO] ${new Date().toISOString()} - ${value}\n`;
         };
 
         console.warn = (value) => {
-            console_warn.call(console, `%c[${name}]:`, `color: ${color};`, value);
+            console_warn.call(console, `%c[${name}]:`, `color: ${color}; font-weight: bold; font-family: 'Poppins';`, value);
             
             if (typeof value === 'object') value = JSON.stringify(value);
             consoleOutput += `[WARN] ${new Date().toISOString()} - ${value}\n`;
         };
 
         console.debug = (value) => {
-            console_debug.call(console, `%c[${name}]:`, `color: ${color};`, value);
+            console_debug.call(console, `%c[${name}]:`, `color: ${color}; font-weight: bold; font-family: 'Poppins';`, value);
             
             if (typeof value === 'object') value = JSON.stringify(value);
             consoleOutput += `[DEBUG] ${new Date().toISOString()} - ${value}\n`;
         };
 
         console.error = (value) => {
-            console_error.call(console, `%c[${name}]:`, `color: ${color};`, value);
+            console_error.call(console, `%c[${name}]:`, `color: ${color}; font-weight: bold; font-family: 'Poppins';`, value);
             
             if (typeof value === 'object') value = JSON.stringify(value);
             consoleOutput += `[ERROR] ${new Date().toISOString()} - ${value}\n`;
