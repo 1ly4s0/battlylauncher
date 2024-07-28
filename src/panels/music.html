@@ -1,34 +1,39 @@
 <div class="bottom_bar_music" id="buttom_bar_music">
-  <div class="playing-song">
-    <img class="playing-song-image" id="music-player-card-img" src="./assets/images/icons/music.gif" alt="">
-    <div class="playing-song-info">
-      <p class="playing-song-title" id="no_song">Evolution</p>
-      <p class="playing-song-artist" id="music-author"></p>
-    </div>
-  </div>
-  <div class="song-control-area">
-    <div class="playing-music-progress">
-      <div class="progress-area" id="music-panel-progress">
-        <div class="progress-bar">
-          <audio id="main-audio" src=""></audio>
-        </div>
-
-        <div class="temps">
-          <p class="current-time" id="current-time">0:00</p>
-          <p class="total-time" id="max-duration">3:12</p>
-        </div>
+  <div class="bottom_bar_music_top">
+    <div class="playing-song">
+      <img class="playing-song-image" id="music-player-card-img" src="./assets/images/icons/music.gif" alt="">
+      <div class="playing-song-info">
+        <p class="playing-song-title" id="no_song"></p>
+        <span style="
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        " class="playing-song-artist">
+          <p class="playing-song-artist" id="music-author"></p>
+          <p class="current-time" id="current-time"></p>/
+          <p class="total-time" id="max-duration"></p>
+        </span>
       </div>
     </div>
-    <div class="controls">
-      <button class="control-btn prev-btn" id="prev"><i class="fa-solid fa-backward-step"></i></button>
-      <button class="control-btn play-btn play-stop" id="music-player-card-pause"><i
-          class="fa-solid fa-play"></i></button>
-      <button class="control-btn next-btn" id="next"><i class="fa-solid fa-forward-step"></i></button>
+    <div class="song-control-area">
+      <div class="controls">
+        <button class="control-btn prev-btn" id="prev"><i class="fa-solid fa-backward-step"></i></button>
+        <button class="control-btn play-btn play-stop" id="music-player-card-pause"><i
+            class="fa-solid fa-play"></i></button>
+        <button class="control-btn next-btn" id="next"><i class="fa-solid fa-forward-step"></i></button>
+      </div>
+    </div>
+    <div class="volume-control">
+      <i class="fa-solid fa-volume-high" id="volume-info"></i>
+      <input name="slider" type="range" style="color: #fff" value="100" id="volumen">
     </div>
   </div>
-  <div class="volume-control">
-    <i class="fa-solid fa-volume-high" id="volume-info"></i>
-    <input name="slider" type="range" style="margin-right: 20px; color: #fff" value="100" id="volumen">
+  <div class="playing-music-progress">
+    <div class="progress-area" id="music-panel-progress">
+      <div class="progress-bar">
+        <audio id="main-audio" src=""></audio>
+      </div>
+    </div>
   </div>
 </div>
 

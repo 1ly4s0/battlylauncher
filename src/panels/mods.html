@@ -3,7 +3,7 @@
 
   <div class="home-container">
     <span class="home-text">
-      <p style="color: #fff; font-weight: 800;">Battly <span style="color: #3e8ed0">Mods</span></p>
+      <p style="color: #fff; font-weight: 800;">Battly <span style="color: #3e8ed0" id="battlymodstext">Mods</span></p>
       <br />
     </span>
     <div class="home-features" id="home-features-mods">
@@ -24,13 +24,29 @@
     </ul>
   </nav>
   <div class="bottom_bar_mods">
-    <div>
-      <button class="boton-volver button is-info" id="volver">Volver</button>
+    <div style="
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+  ">
+      <input class="buscar-mods input" id="input_buscar_mods" type="text" placeholder="Buscar mods...">
+      <div class="select is-info" id="select_mods" style="height: 40px;">
+        <select style="height: 40px;" id="select-type-of-search-mods">
+          <option value="mod">Mods</option>
+          <option value="resourcepack">Resourcepacks</option>
+          <option value="shader">Shaders</option>
+        </select>
+      </div>
     </div>
-    <div>
-      <button class="button is-info" id="button_instalar_modpack">Instalar ModPack</button>
+    <div style="
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+  ">
+      <button class="button is-info" id="button_instalar_modpack" style="background-color: rgb(62, 142, 208);">Instalar
+        ModPack</button>
       <button class="button is-info" id="button_ver_mods">Mis Mods</button>
-      <input class="buscar-mods input" id="input_buscar_mods" type="text" placeholder="Buscar Mods..">
+      <button class="boton-volver button is-info" id="volver">Volver</button>
     </div>
   </div>
 </div>

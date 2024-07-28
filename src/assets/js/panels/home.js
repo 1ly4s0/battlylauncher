@@ -17,19 +17,15 @@ import { CrashReport } from "../utils/crash-report.js";
 import { LoadMinecraft } from "../utils/load-minecraft.js";
 
 const fetch = require("node-fetch");
-let offlineMode = false;
-fetch("https://google.com")
-  .then(async () => {
-    offlineMode = false;
-  })
-  .catch(async () => {
-    offlineMode = true;
-  });
 
 const fs = require("fs");
 const path = require("path");
 
-const dataDirectory = process.env.APPDATA || (process.platform == "darwin" ? `${process.env.HOME}/Library/Application Support` : process.env.HOME);
+const dataDirectory =
+  process.env.APPDATA ||
+  (process.platform == "darwin"
+    ? `${process.env.HOME}/Library/Application Support`
+    : process.env.HOME);
 
 let logFilePath = `${dataDirectory}/.battly/Registro.log`;
 import { consoleOutput } from "../utils/logger.js";
@@ -53,7 +49,6 @@ class Home {
     this.WaitData();
     this.config = config;
     this.news = await news;
-    this.offlineMode = offlineMode;
     this.ShowNews();
     this.BattlyConfig = await new LoadAPI().GetConfig();
     this.Versions = await new LoadAPI().GetVersions();
@@ -75,36 +70,136 @@ class Home {
     this.SetStatus();
     this.Solicitudes();
     this.Ads();
-    this.ContextMenuSettings();
+    // this.ContextMenuSettings();
+    this.LoadFriends();
+  }
+
+  async LoadFriends() {
+    let friendsList = document.querySelector(".home-online-friends");
+    let uuid = (await this.database.get("1234", "accounts-selected")).value;
+    let account = this.database
+      .getAccounts()
+      .find((account) => account.uuid === uuid.selected);
+
+    fetch("https://api.battlylauncher.com/api/users/obtenerAmigos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: account.name,
+        password: account.password,
+      }),
+    })
+      .then((res) => res.json())
+      .then(async (res) => {
+        if (res.error) {
+          let errorDiv = document.createElement("div");
+          errorDiv.classList.add("online-friend");
+
+          let errorData = document.createElement("div");
+          errorData.classList.add("online-friend-data");
+
+          let errorName = document.createElement("p");
+          errorName.classList.add("online-friend-name");
+          errorName.innerText = langs["error"];
+
+          let errorStatus = document.createElement("p");
+          errorStatus.classList.add("online-friend-status");
+          errorStatus.innerText = langs["error_loading_friends"];
+
+          errorData.appendChild(errorName);
+          errorData.appendChild(errorStatus);
+
+          errorDiv.appendChild(errorData);
+        } else {
+          if (res.amigos.filter((friend) => friend.estado != "offline").length === 0) {
+            friendsList.innerHTML = "";
+
+            let errorDiv = document.createElement("div");
+            errorDiv.classList.add("online-friend");
+
+            let errorData = document.createElement("div");
+            errorData.classList.add("online-friend-data");
+
+            let errorStatus = document.createElement("p");
+            errorStatus.classList.add("online-friend-status");
+            errorStatus.innerText = langs["no_friends_online"];
+
+            errorData.appendChild(errorStatus);
+
+            errorDiv.appendChild(errorData);
+            friendsList.appendChild(errorDiv);
+          } else {
+            let friends = res.amigos;
+            friendsList.innerHTML = "";
+
+            friends.forEach((friend) => {
+              if (friend.estado === "offline") return;
+              let friendDiv = document.createElement("div");
+              friendDiv.classList.add("online-friend");
+
+              let friendAvatar = document.createElement("div");
+              friendAvatar.classList.add("mc-face-viewer-6x");
+              friendAvatar.classList.add("online-friend-avatar");
+              friendAvatar.style.backgroundImage = `url('https://api.battlylauncher.com/api/skin/${friend.username}')`;
+
+              let friendData = document.createElement("div");
+              friendData.classList.add("online-friend-data");
+
+              let friendName = document.createElement("p");
+              friendName.classList.add("online-friend-name");
+              friendName.innerText = friend.username;
+
+              let friendStatus = document.createElement("p");
+              friendStatus.classList.add("online-friend-status");
+              friendStatus.innerText = friend.details;
+
+              friendData.appendChild(friendName);
+              friendData.appendChild(friendStatus);
+
+              friendDiv.appendChild(friendAvatar);
+              friendDiv.appendChild(friendData);
+
+              friendsList.appendChild(friendDiv);
+            });
+          }
+        }
+      });
   }
 
   async ContextMenuSettings() {
-    var container = document.getElementById("settings-btn");
-    var contextMenu = document.getElementById("contextMenu");
+    const contextMenu = document.querySelector(".wrapper-contextmenu"),
+      shareMenu = contextMenu.querySelector(".share-menu-contextmenu");
 
-    container.addEventListener("contextmenu", function (event) {
-      if (contextMenu.style.display === "none") {
-        event.preventDefault();
-        var rect = container.getBoundingClientRect();
-        var x = rect.left + window.pageXOffset + 35;
-        var y = rect.top + window.pageYOffset - 80;
+    window.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      let x = e.offsetX,
+        y = e.offsetY,
+        winWidth = window.innerWidth,
+        winHeight = window.innerHeight,
+        cmWidth = contextMenu.offsetWidth,
+        cmHeight = contextMenu.offsetHeight;
 
-        // Ajustamos la posición para que el menú aparezca arriba del botón
-        y = y - contextMenu.offsetHeight;
-
-        contextMenu.style.display = "block";
-        contextMenu.style.left = x + "px";
-        contextMenu.style.top = y + "px";
-        contextMenu.style.zIndex = "9999999"; // Ajusta el z-index a un valor más alto
+      if (x > winWidth - cmWidth - shareMenu.offsetWidth) {
+        shareMenu.style.left = "-150px";
       } else {
-        contextMenu.style.display = "none";
+        shareMenu.style.left = "";
+        shareMenu.style.right = "-200px";
       }
+
+      x = x > winWidth - cmWidth ? winWidth - cmWidth - 5 : x;
+      y = y > winHeight - cmHeight ? winHeight - cmHeight - 5 : y;
+
+      contextMenu.style.left = `${x}px`;
+      contextMenu.style.top = `${y}px`;
+      contextMenu.style.visibility = "visible";
     });
 
-    document.addEventListener("click", function (event) {
-      contextMenu.style.display = "none";
-    });
-
+    document.addEventListener(
+      "click",
+      () => (contextMenu.style.visibility = "hidden")
+    );
   }
 
   async Ads() {
@@ -112,48 +207,11 @@ class Home {
       let adsData = await res.json();
 
       let ads = document.getElementById("ads");
-      ads.style.backgroundImage = `url(${adsData.image})`;
+      ads.src = adsData.image;
       ads.addEventListener("click", () => {
         shell.openExternal(adsData.link);
       });
     });
-    /*
-    setTimeout(() => {
-      console.log("alerting")
-      new Alert().ShowAlert({
-        title: "Testing",
-        text: "Esta es una alerta de prueba de info",
-        icon: "info"
-    });
-    }, 5000);
-
-    setTimeout(() => {
-      console.log("alerting")
-      new Alert().ShowAlert(
-        "Testing",
-        "Esta es una alerta de prueba de error",
-        "error"
-      );
-    }, 12000);
-
-    setTimeout(() => {
-      console.log("alerting")
-      new Alert().ShowAlert(
-        "Testing",
-        "Esta es una alerta de prueba de success",
-        "success"
-      );
-    }, 19000);
-
-    setTimeout(() => {
-      console.log("alerting")
-      new Alert().ShowAlert(
-        "Testing",
-        "Esta es una alerta de prueba de warning",
-        "warning"
-      );
-    }, 25000);
-    */
   }
 
   async Solicitudes() {
@@ -187,33 +245,54 @@ class Home {
   async UpdateStatus(username, status, details) {
     console.log(`🧩 ${username} > ${status} > ${details}`);
 
-    let uuid = (await this.database.get("1234", "accounts-selected")).value;
-    let account = this.database.getAccounts().find(account => account.uuid === uuid.selected);
+    const { value: { selected: uuid } } = await this.database.get("1234", "accounts-selected");
+    const account = this.database.getAccounts().find(account => account.uuid === uuid);
 
-    if (account.type === "battly") {
-      if (
-        !account.password ||
-        account.password === "" ||
-        account.password === undefined ||
-        account.password === null
-      ) {
+    if (account?.type === "battly") {
+      if (!account.password) {
         new Alert().ShowAlert({
           icon: "error",
           title: langs.password_not_set,
         });
 
-        this.database.delete(uuid.selected, "accounts");
+        this.database.delete(uuid, "accounts");
         return;
-      } else {
-        ipcRenderer.send("updateStatus", {
-          status: status,
-          details: details,
-          username: username,
-          password: account.password,
-        });
       }
+
+      ipcRenderer.send("updateStatus", {
+        status,
+        details,
+        username,
+        password: account.password,
+      });
     }
   }
+  async UpdateStatus(username, status, details) {
+    console.log(`🧩 ${username} > ${status} > ${details}`);
+
+    const { value: { selected: uuid } } = await this.database.get("1234", "accounts-selected");
+    const account = this.database.getAccounts().find(account => account.uuid === uuid);
+
+    if (account?.type === "battly") {
+      if (!account.password) {
+        new Alert().ShowAlert({
+          icon: "error",
+          title: langs.password_not_set,
+        });
+
+        this.database.delete(uuid, "accounts");
+        return;
+      }
+
+      ipcRenderer.send("updateStatus", {
+        status,
+        details,
+        username,
+        password: account.password,
+      });
+    }
+  }
+
 
   async Registros() {
     let logs = document.getElementById("battly-logs").value;
@@ -244,6 +323,7 @@ class Home {
       // Crear el div del contenido del modal
       const modalCard = document.createElement("div");
       modalCard.classList.add("modal-card");
+      modalCard.classList.add("ten-radius");
       modalCard.style.backgroundColor = "#212121";
       modalCard.style.height = "auto";
       modalCard.style.maxHeight = "85%";
@@ -311,15 +391,19 @@ class Home {
 
             const card1 = document.createElement("div");
             card1.classList.add("card");
+            card1.classList.add("ten-radius");
             card1.classList.add(`card-instance${i}`);
             card1.style.marginBottom = "-15px";
+            card1.style.backgroundColor = "rgb(50, 50, 50)";
 
             const cardHeader1 = document.createElement("header");
             cardHeader1.classList.add("card-header");
+            cardHeader1.style.color = "#fff";
             cardHeader1.style.cursor = "pointer";
 
             const cardTitle1 = document.createElement("p");
             cardTitle1.classList.add("card-header-title");
+            cardTitle1.style.color = "#fff";
 
             const cardTitleSpan = document.createElement("span");
             cardTitleSpan.innerHTML = instance_json.name;
@@ -383,7 +467,7 @@ class Home {
             cardFooter1.style.display = "none";
 
             const openButton1 = document.createElement("button");
-            openButton1.classList.add("card-footer-item", "button", "is-info");
+            openButton1.classList.add("card-footer-item", "button", "is-info", "ten-radius");
             openButton1.innerHTML =
               '<span><i class="fa-solid fa-square-up-right"></i> ' +
               langs.open_instance +
@@ -394,7 +478,7 @@ class Home {
             editButton1.classList.add(
               "card-footer-item",
               "button",
-              "is-warning"
+              "is-warning", "ten-radius"
             );
             editButton1.innerHTML =
               '<span><i class="fa-solid fa-folder-open"></i> ' +
@@ -406,7 +490,7 @@ class Home {
             deleteButton1.classList.add(
               "card-footer-item",
               "button",
-              "is-danger"
+              "is-danger", "ten-radius"
             );
             deleteButton1.innerHTML =
               '<span><i class="fa-solid fa-folder-minus"></i> ' +
@@ -434,9 +518,10 @@ class Home {
             cardHeader1.addEventListener("click", () => {
               if (cardContent1.style.display === "none") {
                 if (openedInstance) {
-                  const card_ = document.querySelector(`.card-instance${openedInstance}`);
+                  const card_ = document.querySelector(
+                    `.card-instance${openedInstance}`
+                  );
                   if (card_) {
-                    
                     const cardContent_ = card_.querySelector(".card-content");
                     const cardFooter_ = card_.querySelector(".card-footer");
                     const iconImage_ = card_.querySelector("i");
@@ -467,7 +552,7 @@ class Home {
                   iconImage1.classList.add("fa-angle-up");
                 }
               } else {
-                if(openedInstance === i) {
+                if (openedInstance === i) {
                   cardContent1.style.display = "none";
                   cardFooter1.style.display = "none";
                   iconImage1.classList.remove("fa-angle-up");
@@ -551,6 +636,7 @@ class Home {
               // Modal card
               const modalCard = document.createElement("div");
               modalCard.className = "modal-card";
+              modalCard.classList.add("ten-radius");
               modalCard.style.backgroundColor = "#212121";
 
               // Modal card head
@@ -656,7 +742,7 @@ class Home {
               const versionLabel = document.createElement("p");
               versionLabel.style.color = "#fff";
               versionLabel.innerText = langs.instance_version;
-              
+
               const adv = `
               <article class="message is-danger" style="margin-bottom: 10px;">
                 <div class="message-body" style="padding: 0.5rem 0.8rem">
@@ -738,52 +824,56 @@ class Home {
               }
 
               setTimeout(async () => {
-                  let forgeVersionType = versionOptions;
-                  const axios = require("axios");
-                  await axios
-                    .get(
-                      "https://files.minecraftforge.net/net/minecraftforge/forge/maven-metadata.json"
-                    )
-                    .then((response) => {
-                      let data = response.data;
+                let forgeVersionType = versionOptions;
+                const axios = require("axios");
+                await axios
+                  .get(
+                    "https://files.minecraftforge.net/net/minecraftforge/forge/maven-metadata.json"
+                  )
+                  .then((response) => {
+                    let data = response.data;
 
-                      let recommendedOption = document.createElement("option");
-recommendedOption.value = "recommended";
-recommendedOption.innerHTML = langs.recommended;
+                    let recommendedOption = document.createElement("option");
+                    recommendedOption.value = "recommended";
+                    recommendedOption.innerHTML = langs.recommended;
 
-                      for (let version in data) {
-                        if (version === forgeVersionType.value.replace("-forge", "")) {
-                          let build = data[version];
-                          // Limpiar el select antes de agregar nuevas opciones
-                          versionOptionsVersion.innerHTML = "";
+                    for (let version in data) {
+                      if (
+                        version === forgeVersionType.value.replace("-forge", "")
+                      ) {
+                        let build = data[version];
+                        // Limpiar el select antes de agregar nuevas opciones
+                        versionOptionsVersion.innerHTML = "";
 
-                          // Agregar la opción "recommended"
-                          versionOptionsVersion.appendChild(recommendedOption.cloneNode(true));
+                        // Agregar la opción "recommended"
+                        versionOptionsVersion.appendChild(
+                          recommendedOption.cloneNode(true)
+                        );
 
-                          // Agregar las otras versiones
-                          for (let j = 0; j < build.length - 1; j++) {
-                            let option = document.createElement("option");
-                            option.value = build[j];
-                            option.innerHTML = build[j];
-                            versionOptionsVersion.appendChild(option);
+                        // Agregar las otras versiones
+                        for (let j = 0; j < build.length - 1; j++) {
+                          let option = document.createElement("option");
+                          option.value = build[j];
+                          option.innerHTML = build[j];
+                          versionOptionsVersion.appendChild(option);
 
-                            if (instance_json.loaderVersion === build[j]) {
-                              versionOptionsVersion.value = build[j];
-                            }
-                          }
-
-                          // Agregar la última versión como la opción "latest"
-                          if (build.length > 0) {
-                            let latestOption = document.createElement("option");
-                            latestOption.value = build[build.length - 1];
-                            latestOption.innerHTML = langs.latest;
-                            versionOptionsVersion.appendChild(latestOption);
-                          let latestVersion = build[build.length - 1];
-                          versionOptionsVersion.value = latestVersion;
+                          if (instance_json.loaderVersion === build[j]) {
+                            versionOptionsVersion.value = build[j];
                           }
                         }
+
+                        // Agregar la última versión como la opción "latest"
+                        if (build.length > 0) {
+                          let latestOption = document.createElement("option");
+                          latestOption.value = build[build.length - 1];
+                          latestOption.innerHTML = langs.latest;
+                          versionOptionsVersion.appendChild(latestOption);
+                          let latestVersion = build[build.length - 1];
+                          versionOptionsVersion.value = latestVersion;
+                        }
                       }
-                    });
+                    }
+                  });
               }, 500);
 
               versionSelect.addEventListener("change", async () => {
@@ -794,7 +884,6 @@ recommendedOption.innerHTML = langs.recommended;
                 versionOptionsVersion.selectedIndex = 0;
                 versionOptionsVersion.appendChild(optionLoading);
 
-
                 let forgeVersionType = versionOptions;
                 const axios = require("axios");
                 await axios
@@ -803,21 +892,25 @@ recommendedOption.innerHTML = langs.recommended;
                   )
                   .then((response) => {
                     let data = response.data;
-                
+
                     versionOptionsVersion.innerHTML = "";
 
                     let recommendedOption = document.createElement("option");
-recommendedOption.value = "recommended";
-recommendedOption.innerHTML = langs.recommended;
+                    recommendedOption.value = "recommended";
+                    recommendedOption.innerHTML = langs.recommended;
 
                     for (let version in data) {
-                      if (version === forgeVersionType.value.replace("-forge", "")) {
+                      if (
+                        version === forgeVersionType.value.replace("-forge", "")
+                      ) {
                         let build = data[version];
                         // Limpiar el select antes de agregar nuevas opciones
                         versionOptionsVersion.innerHTML = "";
 
                         // Agregar la opción "recommended"
-                        versionOptionsVersion.appendChild(recommendedOption.cloneNode(true));
+                        versionOptionsVersion.appendChild(
+                          recommendedOption.cloneNode(true)
+                        );
 
                         // Agregar las otras versiones
                         for (let j = 0; j < build.length - 1; j++) {
@@ -838,14 +931,18 @@ recommendedOption.innerHTML = langs.recommended;
                         }
                       }
                     }
-
                   });
               });
 
-              if (instance_json.version.endsWith("-forge") || instance_json.version.endsWith("-fabric") || instance_json.version.endsWith("-quilt")) {
+              if (
+                instance_json.version.endsWith("-forge") ||
+                instance_json.version.endsWith("-fabric") ||
+                instance_json.version.endsWith("-quilt")
+              ) {
                 versionOptions.value = instance_json.version;
               } else if (instance_json.loader) {
-                versionOptions.value = instance_json.version + "-" + instance_json.loader;
+                versionOptions.value =
+                  instance_json.version + "-" + instance_json.loader;
               } else {
                 versionOptions.value = instance_json.version;
               }
@@ -870,7 +967,9 @@ recommendedOption.innerHTML = langs.recommended;
                 let description = descriptionTextarea.value;
                 let version = versionOptions.value;
                 let loaderVersion = versionOptionsVersion.value;
-                let imagen = fileInput.files[0] ? fileInput.files[0].path : instance_json.image;
+                let imagen = fileInput.files[0]
+                  ? fileInput.files[0].path
+                  : instance_json.image;
 
                 if (name && description && version) {
                   let instance_data = {
@@ -883,7 +982,6 @@ recommendedOption.innerHTML = langs.recommended;
                   };
 
                   console.log(instance_data);
-
 
                   let instance_json_new = JSON.stringify(instance_data);
                   fs.writeFileSync(
@@ -979,7 +1077,9 @@ recommendedOption.innerHTML = langs.recommended;
             let urlpkg = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url;
             let uuid = (await this.database.get("1234", "accounts-selected"))
               .value;
-            let account = this.database.getAccounts().find(account => account.uuid === uuid.selected);
+            let account = this.database
+              .getAccounts()
+              .find((account) => account.uuid === uuid.selected);
             let ram = (await this.database.get("1234", "ram")).value;
             let Resolution = (await this.database.get("1234", "screen")).value;
             let launcherSettings = (await this.database.get("1234", "launcher"))
@@ -987,20 +1087,20 @@ recommendedOption.innerHTML = langs.recommended;
 
             openButton1.addEventListener("click", () => {
               let loader;
-            if (instance_json.version.endsWith("-forge")) {
-              loader = "forge";
-            } else if (instance_json.version.endsWith("-fabric")) {
-              loader = "fabric";
-            } else if (instance_json.version.endsWith("-quilt")) {
-              loader = "quilt";
-            }
+              if (instance_json.version.endsWith("-forge")) {
+                loader = "forge";
+              } else if (instance_json.version.endsWith("-fabric")) {
+                loader = "fabric";
+              } else if (instance_json.version.endsWith("-quilt")) {
+                loader = "quilt";
+              }
 
-            let version;
+              let version;
 
-            let loader_json;
-            if (instance_json.loader) loader_json = instance_json.loader;
+              let loader_json;
+              if (instance_json.loader) loader_json = instance_json.loader;
 
-            let loaderVersion;
+              let loaderVersion;
               if (instance_json) loaderVersion = instance_json.loaderVersion;
 
               if (
@@ -1016,12 +1116,15 @@ recommendedOption.innerHTML = langs.recommended;
                 version = instance_json.version;
               }
 
-              
-              if (!loaderVersion.includes(version)) {
-                console.log(`Cambiando de ${loaderVersion} a ${version}-${loaderVersion}`);
+              if (
+                !loaderVersion.includes(version) &&
+                instance_json.version.endsWith("-forge")
+              ) {
+                console.log(
+                  `Cambiando de ${loaderVersion} a ${version}-${loaderVersion}`
+                );
                 loaderVersion = `${version}-${loaderVersion}`;
               }
-
 
               let launch = new Launch();
               let opts;
@@ -1029,7 +1132,7 @@ recommendedOption.innerHTML = langs.recommended;
                 opts = {
                   url:
                     this.config.game_url === "" ||
-                    this.config.game_url === undefined
+                      this.config.game_url === undefined
                       ? `${urlpkg}/files`
                       : this.config.game_url,
                   authenticator: account,
@@ -1054,14 +1157,14 @@ recommendedOption.innerHTML = langs.recommended;
                     "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                     "-Dauthlibinjector.mojangAntiFeatures=enabled",
                     "-Dauthlibinjector.noShowServerName",
-                    "-Dauthlibinjector.disableHttpd"
+                    "-Dauthlibinjector.disableHttpd",
                   ],
                 };
               } else {
                 opts = {
                   url:
                     this.config.game_url === "" ||
-                    this.config.game_url === undefined
+                      this.config.game_url === undefined
                       ? `${urlpkg}/files`
                       : this.config.game_url,
                   authenticator: account,
@@ -1331,8 +1434,7 @@ recommendedOption.innerHTML = langs.recommended;
               );
               let content2Text;
               content2Text = document.createTextNode(
-                `🔄 ${langs.checking_instance} ${
-                  loader_json ? loader_json : loader
+                `🔄 ${langs.checking_instance} ${loader_json ? loader_json : loader
                 }...`
               );
 
@@ -1351,9 +1453,8 @@ recommendedOption.innerHTML = langs.recommended;
                     assetsShown = true;
                   }
 
-                  content1Text.textContent = `🔄 ${
-                    langs.downloading_assets
-                  }... (${Math.round((progress / size) * 100)}%)`;
+                  content1Text.textContent = `🔄 ${langs.downloading_assets
+                    }... (${Math.round((progress / size) * 100)}%)`;
                 } else if (element === "Java") {
                   if (!javaShown) {
                     content3.appendChild(document.createElement("br"));
@@ -1364,9 +1465,8 @@ recommendedOption.innerHTML = langs.recommended;
                     javaShown = true;
                   }
 
-                  content3Text.textContent = `🔄 ${
-                    langs.downloading_java
-                  }... (${Math.round((progress / size) * 100)}%)`;
+                  content3Text.textContent = `🔄 ${langs.downloading_java
+                    }... (${Math.round((progress / size) * 100)}%)`;
                 } else if (element === "libraries") {
                   if (!librariesShown) {
                     content2.appendChild(content2Text);
@@ -1376,9 +1476,8 @@ recommendedOption.innerHTML = langs.recommended;
                     librariesShown = true;
                   }
 
-                  content2Text.textContent = `🔄 ${langs.downloading} ${
-                    loader_json ? loader_json : loader
-                  }... (${Math.round((progress / size) * 100)}%)`;
+                  content2Text.textContent = `🔄 ${langs.downloading} ${loader_json ? loader_json : loader
+                    }... (${Math.round((progress / size) * 100)}%)`;
                 }
               });
 
@@ -1400,9 +1499,8 @@ recommendedOption.innerHTML = langs.recommended;
                     assetsShownCheck = true;
                   }
 
-                  content1Text.textContent = `🔄 ${
-                    langs.checking_assets
-                  }... (${Math.round((progress / size) * 100)}%)`;
+                  content1Text.textContent = `🔄 ${langs.checking_assets
+                    }... (${Math.round((progress / size) * 100)}%)`;
                 } else if (element === "java") {
                   if (!javaShownCheck) {
                     content3.appendChild(document.createElement("br"));
@@ -1413,9 +1511,8 @@ recommendedOption.innerHTML = langs.recommended;
                     javaShownCheck = true;
                   }
 
-                  content3Text.textContent = `🔄 ${
-                    langs.checking_java
-                  }... (${Math.round((progress / size) * 100)}%)`;
+                  content3Text.textContent = `🔄 ${langs.checking_java
+                    }... (${Math.round((progress / size) * 100)}%)`;
                 } else if (element === "libraries") {
                   if (!librariesShownCheck) {
                     content2.appendChild(document.createElement("br"));
@@ -1426,16 +1523,14 @@ recommendedOption.innerHTML = langs.recommended;
                     librariesShownCheck = true;
                   }
 
-                  content2Text.textContent = `🔄 ${langs.checking_instance} ${
-                    loader_json ? loader_json : loader
-                  }... (${Math.round((progress / size) * 100)}%)`;
+                  content2Text.textContent = `🔄 ${langs.checking_instance} ${loader_json ? loader_json : loader
+                    }... (${Math.round((progress / size) * 100)}%)`;
                 }
               });
 
               launch.on("speed", (speed) => {
-                preparingMessageText.textContent = `${
-                  langs.downloading_instance
-                } (${(speed / 1067008).toFixed(2)} MB/s)`;
+                preparingMessageText.textContent = `${langs.downloading_instance
+                  } (${(speed / 1067008).toFixed(2)} MB/s)`;
               });
 
               launch.on("patch", (patch) => {
@@ -1471,20 +1566,20 @@ recommendedOption.innerHTML = langs.recommended;
                       "ausente",
                       `${langs.playing_in} ${version} ${typeOfVersion}`
                     );
+
+                    ipcRenderer.send("new-notification", {
+                      title: langs.minecraft_started_correctly,
+                      body: langs.minecraft_started_correctly_body,
+                    });
+
+                    ipcRenderer.send("main-window-progress-reset");
+
+                    preparingModal.remove();
+                    inicio = true;
+
+                    if (launcherSettings.launcher.close === "close-launcher")
+                      ipcRenderer.send("main-window-hide");
                   }
-
-                  ipcRenderer.send("new-notification", {
-                    title: langs.minecraft_started_correctly,
-                    body: langs.minecraft_started_correctly_body,
-                  });
-
-                  ipcRenderer.send("main-window-progress-reset");
-
-                  preparingModal.remove();
-                  inicio = true;
-
-                  if (launcherSettings.launcher.close === "close-launcher")
-                    ipcRenderer.send("main-window-hide");
                 }
               });
 
@@ -1497,6 +1592,8 @@ recommendedOption.innerHTML = langs.recommended;
                   details: langs.in_the_menu,
                   username: account.name,
                 });
+
+                console.info(`MineCraft cerrado con el código ${code}`);
               });
 
               launch.on("error", (err) => {
@@ -1512,6 +1609,7 @@ recommendedOption.innerHTML = langs.recommended;
 
       const card2 = document.createElement("div");
       card2.classList.add("card");
+      card2.classList.add("ten-radius");
       card2.style.cursor = "pointer";
       card2.style.width = "100%";
 
@@ -1568,6 +1666,7 @@ recommendedOption.innerHTML = langs.recommended;
         // Modal card
         const modalCard = document.createElement("div");
         modalCard.className = "modal-card";
+        modalCard.classList.add("ten-radius");
         modalCard.style.backgroundColor = "#212121";
 
         // Modal card head
@@ -1678,11 +1777,11 @@ recommendedOption.innerHTML = langs.recommended;
         versionSelect.className = "select is-info";
 
         const versionVersionSelect = document.createElement("div");
-              versionVersionSelect.className = "select is-info";
-              versionVersionSelect.style.marginLeft = "5px";
+        versionVersionSelect.className = "select is-info";
+        versionVersionSelect.style.marginLeft = "5px";
 
-              const versionOptionsVersion = document.createElement("select");
-              versionVersionSelect.appendChild(versionOptionsVersion);
+        const versionOptionsVersion = document.createElement("select");
+        versionVersionSelect.appendChild(versionOptionsVersion);
 
         const versionOptions = document.createElement("select");
 
@@ -1729,123 +1828,124 @@ recommendedOption.innerHTML = langs.recommended;
         document.body.appendChild(modal);
 
         let versiones = this.Versions;
-              for (let i = 0; i < versiones.versions.length; i++) {
-                if (
-                  versiones.versions[i].version.endsWith("-forge") ||
-                  versiones.versions[i].version.endsWith("-fabric") ||
-                  versiones.versions[i].version.endsWith("-quilt") ||
-                  versiones.versions[i].version.endsWith("-neoforge")
-                ) {
-                  let version = versiones.versions[i];
-                  let option = document.createElement("option");
-                  option.value = version.version;
-                  option.innerHTML = version.name;
-                  versionOptions.appendChild(option);
+        for (let i = 0; i < versiones.versions.length; i++) {
+          if (
+            versiones.versions[i].version.endsWith("-forge") ||
+            versiones.versions[i].version.endsWith("-fabric") ||
+            versiones.versions[i].version.endsWith("-quilt") ||
+            versiones.versions[i].version.endsWith("-neoforge")
+          ) {
+            let version = versiones.versions[i];
+            let option = document.createElement("option");
+            option.value = version.version;
+            option.innerHTML = version.name;
+            versionOptions.appendChild(option);
+          }
+        }
+
+        setTimeout(async () => {
+          let forgeVersionType = versionOptions;
+          const axios = require("axios");
+          await axios
+            .get(
+              "https://files.minecraftforge.net/net/minecraftforge/forge/maven-metadata.json"
+            )
+            .then((response) => {
+              let data = response.data;
+
+              // Agregar las opciones de "latest" y "recommended"
+              let recommendedOption = document.createElement("option");
+              recommendedOption.value = "recommended";
+              recommendedOption.innerHTML = langs.recommended;
+
+              for (let version in data) {
+                if (version === forgeVersionType.value.replace("-forge", "")) {
+                  let build = data[version];
+                  // Limpiar el select antes de agregar nuevas opciones
+                  versionOptionsVersion.innerHTML = "";
+
+                  // Agregar la opción "recommended"
+                  versionOptionsVersion.appendChild(
+                    recommendedOption.cloneNode(true)
+                  );
+
+                  // Agregar las otras versiones
+                  for (let j = 0; j < build.length - 1; j++) {
+                    let option = document.createElement("option");
+                    option.value = build[j];
+                    option.innerHTML = build[j];
+                    versionOptionsVersion.appendChild(option);
+                  }
+
+                  // Agregar la última versión como la opción "latest"
+                  if (build.length > 0) {
+                    let latestOption = document.createElement("option");
+                    latestOption.value = build[build.length - 1];
+                    latestOption.innerHTML = langs.latest;
+                    versionOptionsVersion.appendChild(latestOption);
+                    let latestVersion = build[build.length - 1];
+                    versionOptionsVersion.value = latestVersion;
+                  }
                 }
               }
-
-              setTimeout(async () => {
-                  let forgeVersionType = versionOptions;
-                  const axios = require("axios");
-                  await axios
-                    .get(
-                      "https://files.minecraftforge.net/net/minecraftforge/forge/maven-metadata.json"
-                    )
-                    .then((response) => {
-                      let data = response.data;
-
-                      // Agregar las opciones de "latest" y "recommended"
-                      let recommendedOption = document.createElement("option");
-recommendedOption.value = "recommended";
-recommendedOption.innerHTML = langs.recommended;
-
-                      for (let version in data) {
-                        if (version === forgeVersionType.value.replace("-forge", "")) {
-                          let build = data[version];
-                          // Limpiar el select antes de agregar nuevas opciones
-                          versionOptionsVersion.innerHTML = "";
-
-                          // Agregar la opción "recommended"
-                          versionOptionsVersion.appendChild(recommendedOption.cloneNode(true));
-
-                          // Agregar las otras versiones
-                          for (let j = 0; j < build.length - 1; j++) {
-                            let option = document.createElement("option");
-                            option.value = build[j];
-                            option.innerHTML = build[j];
-                            versionOptionsVersion.appendChild(option);
-                          }
-
-                          // Agregar la última versión como la opción "latest"
-                          if (build.length > 0) {
-                            let latestOption = document.createElement("option");
-                            latestOption.value = build[build.length - 1];
-                            latestOption.innerHTML = langs.latest;
-                            versionOptionsVersion.appendChild(latestOption);
-                          let latestVersion = build[build.length - 1];
-                          versionOptionsVersion.value = latestVersion;
-                          }
-                        }
-                      }
-
-                    });
-              }, 500);
+            });
+        }, 500);
 
         versionSelect.addEventListener("change", async () => {
-                versionOptionsVersion.innerHTML = "";
-                let optionLoading = document.createElement("option");
-                optionLoading.value = "loading";
-                optionLoading.innerHTML = langs.loading;
-                versionOptionsVersion.selectedIndex = 0;
-                versionOptionsVersion.appendChild(optionLoading);
+          versionOptionsVersion.innerHTML = "";
+          let optionLoading = document.createElement("option");
+          optionLoading.value = "loading";
+          optionLoading.innerHTML = langs.loading;
+          versionOptionsVersion.selectedIndex = 0;
+          versionOptionsVersion.appendChild(optionLoading);
 
+          let forgeVersionType = versionOptions;
+          const axios = require("axios");
+          await axios
+            .get(
+              "https://files.minecraftforge.net/net/minecraftforge/forge/maven-metadata.json"
+            )
+            .then((response) => {
+              let data = response.data;
 
-                let forgeVersionType = versionOptions;
-                const axios = require("axios");
-                await axios
-                  .get(
-                    "https://files.minecraftforge.net/net/minecraftforge/forge/maven-metadata.json"
-                  )
-                  .then((response) => {
-                    let data = response.data;
-                
-                    versionOptionsVersion.innerHTML = "";
+              versionOptionsVersion.innerHTML = "";
 
-                    let recommendedOption = document.createElement("option");
-recommendedOption.value = "recommended";
-recommendedOption.innerHTML = langs.recommended;
+              let recommendedOption = document.createElement("option");
+              recommendedOption.value = "recommended";
+              recommendedOption.innerHTML = langs.recommended;
 
-                    for (let version in data) {
-                      if (version === forgeVersionType.value.replace("-forge", "")) {
-                        let build = data[version];
-                        // Limpiar el select antes de agregar nuevas opciones
-                        versionOptionsVersion.innerHTML = "";
+              for (let version in data) {
+                if (version === forgeVersionType.value.replace("-forge", "")) {
+                  let build = data[version];
+                  // Limpiar el select antes de agregar nuevas opciones
+                  versionOptionsVersion.innerHTML = "";
 
-                        // Agregar la opción "recommended"
-                        versionOptionsVersion.appendChild(recommendedOption.cloneNode(true));
+                  // Agregar la opción "recommended"
+                  versionOptionsVersion.appendChild(
+                    recommendedOption.cloneNode(true)
+                  );
 
-                        // Agregar las otras versiones
-                        for (let j = 0; j < build.length - 1; j++) {
-                          let option = document.createElement("option");
-                          option.value = build[j];
-                          option.innerHTML = build[j];
-                          versionOptionsVersion.appendChild(option);
-                        }
+                  // Agregar las otras versiones
+                  for (let j = 0; j < build.length - 1; j++) {
+                    let option = document.createElement("option");
+                    option.value = build[j];
+                    option.innerHTML = build[j];
+                    versionOptionsVersion.appendChild(option);
+                  }
 
-                        // Agregar la última versión como la opción "latest"
-                        if (build.length > 0) {
-                          let latestOption = document.createElement("option");
-                          latestOption.value = build[build.length - 1];
-                          latestOption.innerHTML = langs.latest;
-                          versionOptionsVersion.appendChild(latestOption);
-                          let latestVersion = build[build.length - 1];
-                          versionOptionsVersion.value = latestVersion;
-                        }
-                      }
-                    }
-
-                  });
-              });
+                  // Agregar la última versión como la opción "latest"
+                  if (build.length > 0) {
+                    let latestOption = document.createElement("option");
+                    latestOption.value = build[build.length - 1];
+                    latestOption.innerHTML = langs.latest;
+                    versionOptionsVersion.appendChild(latestOption);
+                    let latestVersion = build[build.length - 1];
+                    versionOptionsVersion.value = latestVersion;
+                  }
+                }
+              }
+            });
+        });
 
         closeButton.addEventListener("click", () => {
           modal.remove();
@@ -1918,9 +2018,18 @@ recommendedOption.innerHTML = langs.recommended;
               image: `${dataDirectory}/.battly/instances/${randomString}/icon.png`,
               name: name,
               description: description,
-              loader: version.endsWith("-forge") ? "forge" : version.endsWith("-fabric") ? "fabric" : version.endsWith("-quilt") ? "quilt" : null,
+              loader: version.endsWith("-forge")
+                ? "forge"
+                : version.endsWith("-fabric")
+                  ? "fabric"
+                  : version.endsWith("-quilt")
+                    ? "quilt"
+                    : null,
               loaderVersion: loaderVersion,
-              version: version.replace("-forge", "").replace("-fabric", "").replace("-quilt", ""),
+              version: version
+                .replace("-forge", "")
+                .replace("-fabric", "")
+                .replace("-quilt", ""),
             };
 
             let instance_json = JSON.stringify(instance);
@@ -2036,20 +2145,25 @@ recommendedOption.innerHTML = langs.recommended;
             let generated = consoleOutput + "\n" + consoleOutput_;
             await fs.writeFileSync(logFilePath, generated);
 
-            let uuid = (await this.database.get("1234", "accounts-selected")).value;
-            let account = this.database.getAccounts().find(account => account.uuid === uuid.selected);
+            let uuid = (await this.database.get("1234", "accounts-selected"))
+              .value;
+            let account = this.database
+              .getAccounts()
+              .find((account) => account.uuid === uuid.selected);
             let ram = (await this.database.get("1234", "ram")).value;
             let Resolution = (await this.database.get("1234", "screen")).value;
             let launcherSettings = (await this.database.get("1234", "launcher"))
               .value;
-            
-            let accountsOnlyUsernamesAndUUID = this.database.getAccounts().map(account => {
-              return {
-                username: account.name,
-                uuid: account.uuid
-              }
-            });
-      
+
+            let accountsOnlyUsernamesAndUUID = this.database
+              .getAccounts()
+              .map((account) => {
+                return {
+                  username: account.name,
+                  uuid: account.uuid,
+                };
+              });
+
             let accountOnlyUsernameAndUUID = {
               username: account.name,
               uuid: account.uuid,
@@ -2064,20 +2178,27 @@ recommendedOption.innerHTML = langs.recommended;
               javaPath: localStorage.getItem("java-path"),
               lang: localStorage.getItem("lang"),
               theme: {
-                background_loading_screen_color: localStorage.getItem("background-loading-screen-color"),
-                bottom_bar_opacity: localStorage.getItem("theme-opacity-bottom-bar"),
-                color_bottom_bar: localStorage.getItem("theme-color-bottom-bar"),
+                background_loading_screen_color: localStorage.getItem(
+                  "background-loading-screen-color"
+                ),
+                bottom_bar_opacity: localStorage.getItem(
+                  "theme-opacity-bottom-bar"
+                ),
+                color_bottom_bar: localStorage.getItem(
+                  "theme-color-bottom-bar"
+                ),
                 color: localStorage.getItem("theme-color"),
                 start_sound: localStorage.getItem("sonido-inicio"),
                 playing_song: localStorage.getItem("songPlaying"),
               },
               news_shown: {
                 news_shown_v17: localStorage.getItem("news_shown_v1.7"),
-                news_shown_v18: localStorage.getItem("news_shown_v1.8"),
+                news_shown_v18: localStorage.getItem("news_shown_v2.0"),
               },
-              welcome_premium_shown: localStorage.getItem("WelcomePremiumShown"),
+              welcome_premium_shown: localStorage.getItem(
+                "WelcomePremiumShown"
+              ),
             };
-
 
             ipcRenderer.send("obtenerLogs", userData);
           } else {
@@ -2085,20 +2206,25 @@ recommendedOption.innerHTML = langs.recommended;
             let generated = consoleOutput + "\n" + consoleOutput_;
             await fs.writeFileSync(logFilePath, generated);
 
-            let uuid = (await this.database.get("1234", "accounts-selected")).value;
-            let account = this.database.getAccounts().find(account => account.uuid === uuid.selected);
+            let uuid = (await this.database.get("1234", "accounts-selected"))
+              .value;
+            let account = this.database
+              .getAccounts()
+              .find((account) => account.uuid === uuid.selected);
             let ram = (await this.database.get("1234", "ram")).value;
             let Resolution = (await this.database.get("1234", "screen")).value;
             let launcherSettings = (await this.database.get("1234", "launcher"))
               .value;
-            
-            let accountsOnlyUsernamesAndUUID = this.database.getAccounts().map(account => {
-              return {
-                username: account.name,
-                uuid: account.uuid
-              }
-            });
-      
+
+            let accountsOnlyUsernamesAndUUID = this.database
+              .getAccounts()
+              .map((account) => {
+                return {
+                  username: account.name,
+                  uuid: account.uuid,
+                };
+              });
+
             let accountOnlyUsernameAndUUID = {
               username: account.name,
               uuid: account.uuid,
@@ -2113,18 +2239,26 @@ recommendedOption.innerHTML = langs.recommended;
               javaPath: localStorage.getItem("java-path"),
               lang: localStorage.getItem("lang"),
               theme: {
-                background_loading_screen_color: localStorage.getItem("background-loading-screen-color"),
-                bottom_bar_opacity: localStorage.getItem("theme-opacity-bottom-bar"),
-                color_bottom_bar: localStorage.getItem("theme-color-bottom-bar"),
+                background_loading_screen_color: localStorage.getItem(
+                  "background-loading-screen-color"
+                ),
+                bottom_bar_opacity: localStorage.getItem(
+                  "theme-opacity-bottom-bar"
+                ),
+                color_bottom_bar: localStorage.getItem(
+                  "theme-color-bottom-bar"
+                ),
                 color: localStorage.getItem("theme-color"),
                 start_sound: localStorage.getItem("sonido-inicio"),
                 playing_song: localStorage.getItem("songPlaying"),
               },
               news_shown: {
                 news_shown_v17: localStorage.getItem("news_shown_v1.7"),
-                news_shown_v18: localStorage.getItem("news_shown_v1.8"),
+                news_shown_v18: localStorage.getItem("news_shown_v2.0"),
               },
-              welcome_premium_shown: localStorage.getItem("WelcomePremiumShown"),
+              welcome_premium_shown: localStorage.getItem(
+                "WelcomePremiumShown"
+              ),
             };
 
             ipcRenderer.send("obtenerLogs", userData);
@@ -2197,7 +2331,7 @@ recommendedOption.innerHTML = langs.recommended;
     btnShowNews.addEventListener("click", async () => {
       changePanel("news");
     });
-    let news_shown = localStorage.getItem("news_shown_v1.8");
+    let news_shown = localStorage.getItem("news_shown_v2.0");
     if (
       !news_shown ||
       news_shown == "false" ||
@@ -2223,7 +2357,9 @@ recommendedOption.innerHTML = langs.recommended;
     let color_bottom_bar = localStorage.getItem("theme-color-bottom-bar");
     let opacity = localStorage.getItem("theme-opacity-bottom-bar");
     let background_img = localStorage.getItem("background-img");
-    let background_loading_screen_color = localStorage.getItem("background-loading-screen-color");
+    let background_loading_screen_color = localStorage.getItem(
+      "background-loading-screen-color"
+    );
     let background_video = localStorage.getItem("background-video");
 
     let buttons = document.querySelectorAll(".button");
@@ -2238,7 +2374,6 @@ recommendedOption.innerHTML = langs.recommended;
     );
     let accounts = document.querySelectorAll(".account");
     let rectangulos = document.querySelectorAll(".rectangulo");
-
 
     let bottom_bar_settings = document.querySelector(".bottom_bar_settings");
     let bottom_bar_mods = document.querySelector(".bottom_bar_mods");
@@ -2257,6 +2392,7 @@ recommendedOption.innerHTML = langs.recommended;
     bottom_bar_mods.style.backgroundColor = color_bottom_bar;
 
     buttons.forEach((button) => {
+      if (button.classList.contains("notchange")) return;
       button.style.backgroundColor = color;
       button.addEventListener("mouseover", () => {
         colorHover = localStorage.getItem("theme-color-hover");
@@ -2270,10 +2406,14 @@ recommendedOption.innerHTML = langs.recommended;
     });
 
     let video = document.getElementById("video-background");
-    let source = video.querySelector('source');
+    let source = video.querySelector("source");
     video.style.display = "none";
 
-    if (!background_video || background_video == null || background_video == undefined) {
+    if (
+      !background_video ||
+      background_video == null ||
+      background_video == undefined
+    ) {
       video.style.display = "none";
     } else {
       console.log("entra");
@@ -2302,6 +2442,7 @@ recommendedOption.innerHTML = langs.recommended;
     document.querySelector(".save-tabs-btn").style.backgroundColor = color;
 
     btns.forEach((btn) => {
+      if (btn.classList.contains("notchange")) return;
       btn.style.backgroundColor = color;
     });
 
@@ -2327,23 +2468,6 @@ recommendedOption.innerHTML = langs.recommended;
 
     select_selected_span.forEach((select_selected_span) => {
       select_selected_span.style.backgroundColor = color;
-    });
-
-    accounts.forEach((account) => {
-      account.style.backgroundColor = color;
-      if (!account.classList.contains("active-account")) {
-        let colorOscuro = tinycolor(color).darken(10).toString();
-        account.style.border = `4px solid ${colorOscuro}`;
-      } else {
-        let colorOscuro = tinycolor(color).darken(10).toString();
-        account.addEventListener("mouseover", () => {
-          account.style.border = `4px solid ${colorOscuro}`;
-        });
-
-        account.addEventListener("mouseout", () => {
-          account.style.border = `4px solid #00ff91`;
-        });
-      }
     });
 
     document.querySelectorAll(".file-cta").forEach((fileCta) => {
@@ -2379,9 +2503,11 @@ recommendedOption.innerHTML = langs.recommended;
       });
     });
     try {
-      let versiones_nuevas = fs.readdirSync(dataDirectory + "/.battly/versions");
+      let versiones_nuevas = fs.readdirSync(
+        dataDirectory + "/.battly/versions"
+      );
 
-      versiones_nuevas = versiones_nuevas.filter(version => {
+      versiones_nuevas = versiones_nuevas.filter((version) => {
         let fullPath = path.join(dataDirectory, "/.battly/versions", version);
         return fs.statSync(fullPath).isDirectory();
       });
@@ -2433,56 +2559,189 @@ recommendedOption.innerHTML = langs.recommended;
       if (os.platform() === "win32") {
         shell.openExternal("https://discord.gg/tecno-bros-885235460178342009");
       } else {
-        window.open("https://discord.gg/tecno-bros-885235460178342009", "_blank");
+        window.open(
+          "https://discord.gg/tecno-bros-885235460178342009",
+          "_blank"
+        );
       }
     });
-      
-    document.getElementById("openBattlyFolderButton").addEventListener("click", () => {
-      shell.openPath(`${dataDirectory}\\.battly`).then(() => {
-        new Alert().ShowAlert({
-          icon: "success",
-          title: langs.battly_folder_opened,
+
+    document
+      .getElementById("openBattlyFolderButton")
+      .addEventListener("click", () => {
+        shell.openPath(`${dataDirectory}\\.battly`).then(() => {
+          new Alert().ShowAlert({
+            icon: "success",
+            title: langs.battly_folder_opened,
+          });
         });
       });
-    });
   }
 
   async initConfig() {
+    let opened = false;
+    let moreSettingsBtn = document.getElementById("more-settings-btn");
+    moreSettingsBtn.addEventListener("click", () => {
+      const moreOptions = document.querySelector(".more-options");
+      const moreSettingsIcon = document.querySelector("#more-settings-btn i");
+      if (opened) {
+        moreOptions.style.transition =
+          "max-height 0.3s ease-in, opacity 0.3s ease-in, visibility 0s 0.3s";
+        moreOptions.classList.remove("active");
+        moreSettingsIcon.style.transform = "rotate(0deg)";
+      } else {
+        moreOptions.style.transition =
+          "max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0s";
+        moreOptions.classList.add("active");
+        moreSettingsIcon.style.transform = "rotate(180deg)";
+      }
+      opened = !opened;
 
+      /* si se hace click fuera del menu, se cierra */
+      document.addEventListener("click", (e) => {
+        if (
+          !moreSettingsBtn.contains(e.target) &&
+          !moreOptions.contains(e.target)
+        ) {
+          moreOptions.style.transition =
+            "max-height 0.3s ease-in, opacity 0.3s ease-in, visibility 0s 0.3s";
+          moreOptions.classList.remove("active");
+          moreSettingsIcon.style.transform = "rotate(0deg)";
+          opened = false;
+        }
+      });
+    });
+
+    const slider = document.querySelector(".home-online-friends");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let velX = 0; // Variable to keep track of velocity
+    let momentumID;
+
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      slider.classList.add("active");
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+
+      document.querySelectorAll(".online-friend").forEach((friend) => {
+        friend.style.cursor = "grabbing";
+      });
+      cancelMomentumTracking();
+    });
+
+    slider.addEventListener("mouseleave", () => {
+      isDown = false;
+      slider.classList.remove("active");
+
+      document.querySelectorAll(".online-friend").forEach((friend) => {
+        friend.style.cursor = "pointer";
+      });
+
+      beginMomentumTracking();
+    });
+
+    slider.addEventListener("mouseup", () => {
+      isDown = false;
+      slider.classList.remove("active");
+
+      document.querySelectorAll(".online-friend").forEach((friend) => {
+        friend.style.cursor = "pointer";
+      });
+
+      beginMomentumTracking();
+    });
+
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 1.1;
+      velX = walk - (slider.scrollLeft - scrollLeft);
+      slider.scrollLeft = scrollLeft - walk;
+    });
+
+    function beginMomentumTracking() {
+      cancelMomentumTracking();
+      momentumID = requestAnimationFrame(momentumLoop);
+    }
+
+    function cancelMomentumTracking() {
+      cancelAnimationFrame(momentumID);
+    }
+
+    function momentumLoop() {
+      slider.scrollLeft -= velX;
+      velX *= 0.95; // Damping factor
+      if (Math.abs(velX) > 0.5) {
+        momentumID = requestAnimationFrame(momentumLoop);
+      }
+    }
     if (!fs.existsSync(`${dataDirectory}/.battly`)) {
       fs.mkdirSync(`${dataDirectory}/.battly`);
     } else if (!fs.existsSync(`${dataDirectory}/.battly/instances`)) {
       fs.mkdirSync(`${dataDirectory}/.battly/instances`);
     } else if (!fs.existsSync(`${dataDirectory}/.battly/versions`)) {
       fs.mkdirSync(`${dataDirectory}/.battly/versions`);
-    };
+    }
 
-    document.getElementById("instancias-txt").innerHTML += `<i class="fa-solid fa-folder"></i> ${langs.instances}`;
-    document.getElementById("download-txt").innerHTML += `<i class="fa-solid fa-cloud-arrow-down"></i> ${langs.download}`;
-    document.getElementById("play-txt").innerHTML += `<i class="fa-solid fa-gamepad"></i> ${langs.play}`;
+    document.getElementById(
+      "instancias-txt"
+    ).innerHTML += `<i class="fa-solid fa-folder"></i> ${langs.instances}`;
+    document.getElementById(
+      "download-txt"
+    ).innerHTML += `<i class="fa-solid fa-cloud-arrow-down"></i> ${langs.download}`;
+    document.getElementById(
+      "play-txt"
+    ).innerHTML += `<i class="fa-solid fa-gamepad"></i> ${langs.play}`;
     document.getElementById("news-battly").innerHTML = langs.news_battly;
     document.getElementById("status-battly").innerHTML = langs.status_battly;
-    document.getElementById("playing-now-text").innerHTML = langs.playing_now_text;
-    document.getElementById("playing-now-body").innerHTML = langs.playing_now_body;
-    document.getElementById("ads-text").innerHTML = langs.ads_text;
+    document.getElementById(
+      "playing-now-text"
+    ).innerHTML = `<i class="fa-solid fa-music"></i> ${langs.playing_now_text}`;
+    document.getElementById("playing-now-body").innerHTML =
+      langs.playing_now_body;
 
-    document.getElementById("settings-btn").querySelector(".settings-button-span").innerHTML = langs.tooltip_settings;
-    document.getElementById("btnShowNews").querySelector(".button-span").innerHTML = langs.tooltip_news;
-    document.getElementById("openBattlyFolderButton").querySelector(".button-span").innerHTML = langs.tooltip_folder;
-    document.getElementById("BotonUnirseServidorDiscord").querySelector(".button-span").innerHTML = langs.tooltip_discord;
-    document.getElementById("boton_abrir_mods").querySelector(".button-span").innerHTML = langs.tooltip_mods;
-    document.getElementById("music-btn").querySelector(".button-span").innerHTML = langs.tooltip_music;
-    document.getElementById("friends-btn").querySelector(".button-span").innerHTML = langs.tooltip_friends;
-    document.getElementById("instancias-btn").querySelector(".button-span").innerHTML = langs.tooptip_instances;
-    document.getElementById("download-btn").querySelector(".button-span").innerHTML = langs.tooptip_download;
-    document.getElementById("play-btn").querySelector(".play-button-span").innerHTML = langs.tooltip_play;
-    document.getElementById("accounts-btn").querySelector(".button-span").innerHTML = langs.tooltip_accounts;
-    document.getElementById("java-btn").querySelector(".button-span").innerHTML = langs.tooltip_java;
-    document.getElementById("ram-btn").querySelector(".button-span").innerHTML = langs.tooltip_ram;
-    document.getElementById("launcher-btn").querySelector(".button-span").innerHTML = langs.tooltip_launcher;
-    document.getElementById("theme-btn").querySelector(".button-span").innerHTML = langs.tooltip_theme;
-    document.getElementById("background-btn").querySelector(".button-span").innerHTML = langs.tooltip_background;
-    document.getElementById("save-btn").querySelector(".button-span").innerHTML = langs.tooltip_save;
+    // document
+    //   .getElementById("settings-btn")
+    //   .querySelector(".settings-button-span").innerHTML =
+    //   langs.tooltip_settings;
+    document
+      .getElementById("boton_abrir_mods")
+      .querySelector(".button-span").innerHTML = langs.tooltip_mods;
+    document
+      .getElementById("music-btn")
+      .querySelector(".button-span").innerHTML = langs.tooltip_music;
+    document
+      .getElementById("instancias-btn")
+      .querySelector(".button-span").innerHTML = langs.tooptip_instances;
+    document
+      .getElementById("download-btn")
+      .querySelector(".button-span").innerHTML = langs.tooptip_download;
+    document
+      .getElementById("play-btn")
+      .querySelector(".play-button-span").innerHTML = langs.tooltip_play;
+    document
+      .getElementById("accounts-btn")
+      .querySelector(".button-span").innerHTML = langs.tooltip_accounts;
+    document
+      .getElementById("java-btn")
+      .querySelector(".button-span").innerHTML = langs.tooltip_java;
+    document.getElementById("ram-btn").querySelector(".button-span").innerHTML =
+      langs.tooltip_ram;
+    document
+      .getElementById("launcher-btn")
+      .querySelector(".button-span").innerHTML = langs.tooltip_launcher;
+    document
+      .getElementById("theme-btn")
+      .querySelector(".button-span").innerHTML = langs.tooltip_theme;
+    document
+      .getElementById("background-btn")
+      .querySelector(".button-span").innerHTML = langs.tooltip_background;
+    document
+      .getElementById("save-btn")
+      .querySelector(".button-span").innerHTML = langs.tooltip_save;
 
     /* settings */
     document.getElementById("accounts-btn-text").innerHTML = langs.accounts_btn;
@@ -2490,12 +2749,17 @@ recommendedOption.innerHTML = langs.recommended;
     document.getElementById("ram-btn-text").innerHTML = langs.ram_btn;
     document.getElementById("launcher-btn-text").innerHTML = langs.launcher_btn;
     document.getElementById("theme-btn-text").innerHTML = langs.theme_btn;
-    document.getElementById("background-btn-text").innerHTML = langs.background_btn;
+    document.getElementById("background-btn-text").innerHTML =
+      langs.background_btn;
     document.getElementById("save-btn-text").innerHTML = langs.save_btn;
-    document.getElementById("account-information").innerHTML = langs.account_information;
+    document.getElementById("account-information").innerHTML =
+      langs.account_information;
     document.getElementById("mc-id-text").innerHTML = langs.mc_id_text;
-    document.getElementById("mostrarskin-userinfo-btn").innerHTML = langs.showskin_userinfo_btn;
-    document.getElementById("eliminarcuenta-userinfo-btn").innerHTML = `${langs.deleteaccount_userinfo_btn}`;
+    document.getElementById("mostrarskin-userinfo-btn").innerHTML =
+      langs.showskin_userinfo_btn;
+    document.getElementById(
+      "eliminarcuenta-userinfo-btn"
+    ).innerHTML = `${langs.deleteaccount_userinfo_btn}`;
     document.getElementById("establecer-skin").innerHTML = `${langs.set_skin}`;
     document.getElementById("cerrar-userinfo-btn").innerHTML = `${langs.close}`;
     document.getElementById("my-accounts").innerHTML = `${langs.my_accounts}`;
@@ -2547,9 +2811,6 @@ recommendedOption.innerHTML = langs.recommended;
     document.getElementById(
       "battly-theme-text"
     ).innerHTML = `${langs.battly_theme_text}`;
-    document.getElementById(
-      "change-theme-text"
-    ).innerHTML = `${langs.change_theme_text}`;
     document.getElementById(
       "buttons-color"
     ).innerHTML = `${langs.buttons_color}`;
@@ -2609,7 +2870,9 @@ recommendedOption.innerHTML = langs.recommended;
     document.getElementById(
       "select_a_version"
     ).innerHTML = `${langs.select_a_version}`;
-    document.getElementById("show-playlists-text").innerHTML = `${langs.playlists}`;
+    document.getElementById(
+      "show-playlists-text"
+    ).innerHTML = `${langs.playlists}`;
     document.getElementById("no_song").innerHTML = `${langs.no_song}`;
     document.getElementById("return-btn").innerHTML = `${langs.return}`;
     //document.getElementById("playing-now").innerHTML = `${langs.playing_now}`;
@@ -2640,70 +2903,93 @@ recommendedOption.innerHTML = langs.recommended;
       "you-dont-have-account"
     ).innerHTML = `${langs.you_dont_have_account}`;
     document.getElementById("login-btn").innerHTML = `${langs.login}`;
-    document.getElementById("background-loading-screen-color-text").innerHTML = `${langs.background_loading_screen_color_text}`;
-    document.getElementById("you_are_premium_background").innerHTML = `${langs.you_are_premium_background}`;
-    
-    document.getElementById("button_ver_mods").innerHTML = `${langs.mods_list_button}`;
-    document.getElementById("login-with-microsoft").innerHTML = `${langs.login_microsoft_adv_title}`;
-    document.getElementById("login-with-google").innerHTML = `${langs.login_with_google}`;
-    document.getElementById("select_a_type_background").innerHTML = `${langs.select_a_type_background}`;
-    document.getElementById("static-background-text").innerHTML = `${langs.static_background_text}`;
-    document.getElementById("animated-background-text").innerHTML = `${langs.animated_background_text}`;
-    document.getElementById("minimize_music").innerHTML = `${langs.minimize_music}`;
-    document.getElementById("keep_music_opened").innerHTML = `${langs.keep_music_opened}`;
-    document.getElementById("code-login-text").innerHTML = `${langs.code_login_text}`;
+    document.getElementById(
+      "background-loading-screen-color-text"
+    ).innerHTML = `${langs.background_loading_screen_color_text}`;
+    document.getElementById(
+      "you_are_premium_background"
+    ).innerHTML = `${langs.you_are_premium_background}`;
+
+    document.getElementById(
+      "button_ver_mods"
+    ).innerHTML = `${langs.mods_list_button}`;
+    document.getElementById(
+      "login-with-microsoft"
+    ).innerHTML = `${langs.login_microsoft_adv_title}`;
+    document.getElementById(
+      "login-with-google"
+    ).innerHTML = `${langs.login_with_google}`;
+    document.getElementById(
+      "select_a_type_background"
+    ).innerHTML = `${langs.select_a_type_background}`;
+    document.getElementById(
+      "static-background-text"
+    ).innerHTML = `${langs.static_background_text}`;
+    document.getElementById(
+      "animated-background-text"
+    ).innerHTML = `${langs.animated_background_text}`;
+    document.getElementById(
+      "minimize_music"
+    ).innerHTML = `${langs.minimize_music}`;
+    document.getElementById(
+      "keep_music_opened"
+    ).innerHTML = `${langs.keep_music_opened}`;
+    document.getElementById(
+      "code-login-text"
+    ).innerHTML = `${langs.code_login_text}`;
     document.getElementById("code-btn").innerHTML = `${langs.send}`;
     document.getElementById("cancel-code-btn").innerHTML = `${langs.cancel}`;
   }
 
   async initNews() {
     let news = document.getElementById("battly-news-div");
-    if (this.news) {
-      if (!this.news.length) {
+    let thiss = this;
+
+    async function LoadNews() {
+      if (thiss.news) {
+        if (!thiss.news.length) {
+          let blockNews = document.createElement("div");
+          blockNews.classList.add("news-block", "opacity-1");
+          blockNews.innerHTML = `
+                    <div class="new-panel">
+                        <div class="new-panel-top">
+                            <p class="new-panel-title">No hay noticias disponibles actualmente.</p>
+                        </div>
+                    <div class="new-panel-bottom">
+                            <p class="new-panel-description">Puedes seguir todas las noticias relacionadas con el servidor aquí.</p>
+                    </div>
+                    </div>`;
+          news.appendChild(blockNews);
+        } else {
+          for (let News of thiss.news) {
+            let date = await thiss.getdate(News.publish_date);
+            let blockNews = document.createElement("div");
+            blockNews.classList.add("news-block");
+            blockNews.innerHTML = `
+                        <div class="new-panel">
+                    <div class="new-panel-top">
+                        <p class="new-panel-title">${News.title}</p>
+                        <div class="new-panel-date">
+                            <p class="new-panel-date-day">${date.day}</p>
+                            <p class="new-panel-date-month">${date.month}</p>
+                        </div>
+                    </div>
+                    <div class="new-panel-bottom">
+                        <p class="new-panel-description">${News.content.replace(
+              /\n/g,
+              "</br>"
+            )}</p>
+                        <p class="new-panel-author"><span><i class="fa-solid fa-hammer"></i> ${News.author
+              }</span></p>
+                    </div>
+                </div>`;
+            news.appendChild(blockNews);
+          }
+        }
+      } else {
         let blockNews = document.createElement("div");
         blockNews.classList.add("news-block", "opacity-1");
         blockNews.innerHTML = `
-                    <div class="news-header">
-                        <div class="header-text">
-                            <div class="title_">No hay noticias disponibles actualmente.</div>
-                        </div>
-                    </div>
-                    <div class="news-content">
-                        <div class="bbWrapper">
-                            <p>Puedes seguir todas las noticias relacionadas con el servidor aquí.</p>
-                        </div>
-                    </div>`;
-        news.appendChild(blockNews);
-      } else {
-        for (let News of this.news) {
-          let date = await this.getdate(News.publish_date);
-          let blockNews = document.createElement("div");
-          blockNews.classList.add("news-block");
-          blockNews.innerHTML = `
-                        <div class="news-header">
-                            <div class="header-text">
-                                <div class="title_">${News.title}</div>
-                            </div>
-                            <div class="date">
-                                <div class="day">${date.day}</div>
-                                <div class="month">${date.month}</div>
-                            </div>
-                        </div>
-                        <div class="news-content">
-                            <div class="bbWrapper">
-                                <p>${News.content.replace(/\n/g, "</br>")}</p>
-                                <p class="news-author"><span><i class="fa-solid fa-hammer"></i> ${
-                                  News.author
-                                }</span></p>
-                            </div>
-                        </div>`;
-          news.appendChild(blockNews);
-        }
-      }
-    } else {
-      let blockNews = document.createElement("div");
-      blockNews.classList.add("news-block", "opacity-1");
-      blockNews.innerHTML = `
                 <div class="news-header">
                     <div class="header-text">
                         <div class="title">Error</div>
@@ -2714,20 +3000,100 @@ recommendedOption.innerHTML = langs.recommended;
                         <p>No se puede conectar al servidor de noticias.</br>Por favor, comprueba tu conexión a internet</p>
                     </div>
                 </div>`;
-      // news.appendChild(blockNews);
+        news.appendChild(blockNews);
+      }
+
+      if (thiss.BattlyConfig.adv === true) {
+        const advStatus = thiss.BattlyConfig.advStatus;
+        const advText = thiss.BattlyConfig.advText;
+
+        document.getElementById("warning-status").classList.add(advStatus);
+        document.getElementById("warning-status").style.display = "block";
+
+        document.getElementById("warning-status-message").innerHTML = advText;
+      } else {
+        document.getElementById("warning-status").style.display = "none";
+      }
     }
 
-    if (this.BattlyConfig.adv === true) {
-      const advStatus = this.BattlyConfig.advStatus;
-      const advText = this.BattlyConfig.advText;
+    let totalNewsLoaded = 0;
 
-      document.getElementById("warning-status").classList.add(advStatus);
-      document.getElementById("warning-status").style.display = "block";
 
-      document.getElementById("warning-status-message").innerHTML = advText;
-    } else {
-      document.getElementById("warning-status").style.display = "none";
+    news.addEventListener("scroll", async () => {
+      const scrollPosition = Math.round(news.scrollTop + news.clientHeight);
+      const scrollThreshold = Math.round(news.scrollHeight);
+
+      console.log(`${scrollPosition} >= ${scrollThreshold}`);
+
+      if (scrollPosition >= scrollThreshold) {
+        if (document.getElementById("tpyeofnews").value === "minecraft") {
+          totalNewsLoaded += 10;
+          console.log(totalNewsLoaded);
+          LoadMinecraftNews();
+        }
+      }
+    });
+
+
+    async function LoadMinecraftNews() {
+      function compareDates(a, b) {
+        let dateA = new Date(a.date);
+        let dateB = new Date(b.date);
+        return dateB - dateA;
+      }
+
+      function convertDates(date) {
+        let date_ = new Date(date);
+        let day = date_.getDate();
+        let month = date_.getMonth() + 1;
+        let year = date_.getFullYear();
+        return `${day}/${month}/${year}`;
+      }
+
+      fetch("https://launchercontent.mojang.com/v2/javaPatchNotes.json", {
+        method: "GET",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          let minecraftNews = data.entries;
+          minecraftNews.sort(compareDates);
+          for (let i = 0; i < totalNewsLoaded + 10 && i < minecraftNews.length; i++) {
+            fetch(`https://launchercontent.mojang.com/v2/${minecraftNews[i].contentPath}`, {
+              method: "GET",
+            }).then((response) => response.json()).then((data_) => {
+              console.log(data_);
+              let blockNews = document.createElement("div");
+              blockNews.classList.add("news-block");
+              blockNews.innerHTML = `
+                    <div class="new-panel">
+                        <div class="new-panel-top">
+                            <p class="new-panel-title">${minecraftNews[i].title}</p>
+                            <div class="new-panel-date">
+                                <p class="new-panel-date-day">${convertDates(minecraftNews[i].date)}</p>
+                            </div>
+                        </div>
+                        <div class="new-panel-bottom">
+                            <p class="new-panel-description">${data_.body}</p>
+                            <p class="new-panel-author"><span><i class="fa-solid fa-hammer"></i> Mojang</span></p>
+                        </div>
+                    </div>`;
+              news.appendChild(blockNews);
+            });
+          }
+        });
     }
+
+    LoadNews();
+
+    document.getElementById("tpyeofnews").addEventListener("change", (e) => {
+      let type = e.target.value;
+      news.innerHTML = "";
+      if (type === "battly") {
+        LoadNews();
+      } else {
+        LoadMinecraftNews();
+      }
+    });
   }
 
   async initLaunch() {
@@ -2773,10 +3139,9 @@ recommendedOption.innerHTML = langs.recommended;
 
     let launcherProfilesJson = JSON.stringify(launcherProfiles);
     fs.mkdirSync(
-      `${dataDirectory}/${
-        process.platform == "darwin"
-          ? this.config.dataDirectory
-          : `.${this.config.dataDirectory}`
+      `${dataDirectory}/${process.platform == "darwin"
+        ? this.config.dataDirectory
+        : `.${this.config.dataDirectory}`
       }`,
       {
         recursive: true,
@@ -2784,10 +3149,9 @@ recommendedOption.innerHTML = langs.recommended;
     );
     fs.writeFileSync(
       path.join(
-        `${dataDirectory}/${
-          process.platform == "darwin"
-            ? this.config.dataDirectory
-            : `.${this.config.dataDirectory}`
+        `${dataDirectory}/${process.platform == "darwin"
+          ? this.config.dataDirectory
+          : `.${this.config.dataDirectory}`
         }`,
         "launcher_profiles.json"
       ),
@@ -2839,7 +3203,13 @@ recommendedOption.innerHTML = langs.recommended;
       .getElementById("cancelStartVersion")
       .addEventListener("click", async () => {
         let modalStartVersions = document.getElementById("modalStartVersion");
-        modalStartVersions.classList.remove("is-active");
+        let modalCard = modalStartVersions.querySelector(".modal-card");
+        modalCard.classList.remove("animate__fadeInDown");
+        modalCard.classList.add("animate__fadeOutUp");
+
+        setTimeout(() => {
+          modalStartVersions.classList.remove("is-active");
+        }, 300);
       });
 
     let data_versions = this.Versions;
@@ -2881,7 +3251,7 @@ recommendedOption.innerHTML = langs.recommended;
           }
         }
 
-        console.log(versiones_compatibles_legacyfabric)
+        console.log(versiones_compatibles_legacyfabric);
 
         for (let i = 0; i < data_versions_mojang.versions.length; i++) {
           let version = data_versions_mojang.versions[i].id;
@@ -2899,19 +3269,21 @@ recommendedOption.innerHTML = langs.recommended;
 
         function updateVersionDisplay(versionSelected) {
           const tipoDeVersiones = document.getElementById("tipo-de-versiones");
-          const footermodaliniciarversion = document.getElementById("footermodaliniciarversion");
-  
+          const footermodaliniciarversion = document.getElementById(
+            "footermodaliniciarversion"
+          );
+
           if (versionSelected === "dx") {
             tipoDeVersiones.style.display = "none";
-            versions.forEach(version => {
+            versions.forEach((version) => {
               document.getElementById(version.id).style.display = "none";
             });
             footermodaliniciarversion.style.display = "none";
             return;
           }
-  
+
           let anyMatch = false;
-          versions.forEach(version => {
+          versions.forEach((version) => {
             if (version.list.includes(versionSelected)) {
               document.getElementById(version.id).style.display = "";
               anyMatch = true;
@@ -2919,7 +3291,7 @@ recommendedOption.innerHTML = langs.recommended;
               document.getElementById(version.id).style.display = "none";
             }
           });
-  
+
           if (anyMatch) {
             tipoDeVersiones.style.display = "";
             footermodaliniciarversion.style.display = "none";
@@ -2930,7 +3302,6 @@ recommendedOption.innerHTML = langs.recommended;
         }
 
         updateVersionDisplay(version_selected);
-
       });
 
     //radio con name loader
@@ -2955,7 +3326,9 @@ recommendedOption.innerHTML = langs.recommended;
 
         let urlpkg = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url;
         let uuid = (await this.database.get("1234", "accounts-selected")).value;
-        let account = this.database.getAccounts().find(account => account.uuid === uuid.selected);
+        let account = this.database
+          .getAccounts()
+          .find((account) => account.uuid === uuid.selected);
         let ram = (await this.database.get("1234", "ram")).value;
         let Resolution = (await this.database.get("1234", "screen")).value;
         let launcherSettings = (await this.database.get("1234", "launcher"))
@@ -3078,12 +3451,6 @@ recommendedOption.innerHTML = langs.recommended;
           mcModPack = "legacyfabric";
         }
 
-        //hacer un json.parse del archivo de versiones y obtener el dato "assets"
-
-        //comprobar si existe el archivo de versiones
-
-        // Si la versión acaba con -extra hacer let assets = JSON.parse(fs.readFileSync(`${dataDirectory}/.battly/versions/${version_real}/${version_real}.json`)).assets;
-        // si no, ignorar
         let assets;
         let versionData;
         if (version_real === "1.8") {
@@ -3095,16 +3462,14 @@ recommendedOption.innerHTML = langs.recommended;
           };
         } else if (
           version.endsWith("-extra") &&
-          !version.includes("OptiFine") &&
-          !version_real.includes("LabyMod")
+          !version.includes("OptiFine")
         ) {
           assets = JSON.parse(
             fs.readFileSync(
-              `${dataDirectory}/${
-                process.platform == "darwin"
-                  ? this.config.dataDirectory
-                  : `.${this.config.dataDirectory}`
-              }/versions/${version_real}/${version_real}.json`
+              `${dataDirectory}/${process.platform == "darwin"
+                ? this.config.dataDirectory
+                : `.${this.config.dataDirectory}`
+              }/versions/${version_real.replace("-extra", "")}/${version_real.replace("-extra", "")}.json`
             )
           ).assets;
           versionData = {
@@ -3113,28 +3478,13 @@ recommendedOption.innerHTML = langs.recommended;
             type: "release",
           };
         } else if (version.includes("OptiFine") && version.endsWith("-extra")) {
-          assets = version.split("-OptiFine")[0].replace("-extra", "")
+          assets = version.split("-OptiFine")[0].replace("-extra", "");
           versionData = {
             number: assets,
             custom: version.replace("-extra", ""),
             type: "release",
           };
 
-          console.log(versionData)
-        } else if (version.includes("LabyMod") && version.endsWith("-extra")) {
-          assets = JSON.parse(
-            fs.readFileSync(
-              `${dataDirectory}/${
-                process.platform == "darwin"
-                  ? this.config.dataDirectory
-                  : `.${this.config.dataDirectory}`
-              }/versions/${version_real}/${version_real}.json`
-            )
-          )._minecraftVersion;
-          versionData = {
-            number: version.replace("-extra", ""),
-            type: "release",
-          };
         } else if (
           version_real.endsWith("-forge") ||
           version_real.endsWith("-fabric") ||
@@ -3160,613 +3510,279 @@ recommendedOption.innerHTML = langs.recommended;
 
         let opts;
 
-        console.log(`✅ Versión detectada: ${version}`)
+        console.log(`✅ Versión detectada: ${version}`);
 
-        let javapath = localStorage.getItem("java-path");
-        if (version.endsWith("-extra")) {
-          if (!javapath || javapath == null || javapath == undefined) {
-            if (account.type === "battly") {
-              console.log("No hay java path")
-              opts = {
-                url:
-                  this.config.game_url === "" ||
-                    this.config.game_url === undefined
-                    ? `${urlpkg}/files`
-                    : this.config.game_url,
-                authorization: account,
-                authenticator: account,
-                detached: false,
-                timeout: 10000,
-                root: `${dataDirectory}/.battly`,
-                path: `${dataDirectory}/.battly`,
-                overrides: {
-                  detached: false,
-                  screen: screen,
-                },
-                downloadFileMultiple: 40,
-                //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
-                version: versionData,
-                loader: {
-                  type: type,
-                  build: this.BattlyConfig.loader.build,
-                  enable: isForgeCheckBox
-                    ? true
-                    : isFabricCheckBox
-                      ? true
-                      : isQuiltCheckBox
-                        ? true
-                        : false,
-                },
-                verify: false,
-                ignored: ["loader"],
-                java: false,
-                memory: {
-                  min: `${ram.ramMin * 1024}M`,
-                  max: `${ram.ramMax * 1024}M`,
-                },
-                customArgs: [
-                  "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
-                  "-Dauthlibinjector.mojangAntiFeatures=enabled",
-                    "-Dauthlibinjector.noShowServerName",
-                    "-Dauthlibinjector.disableHttpd"
-                ],
-              };
-            } else {
-              opts = {
-                url:
-                  this.config.game_url === "" ||
-                    this.config.game_url === undefined
-                    ? `${urlpkg}/files`
-                    : this.config.game_url,
-                authorization: account,
-                authenticator: account,
-                detached: false,
-                timeout: 10000,
-                root: `${dataDirectory}/.battly`,
-                path: `${dataDirectory}/.battly`,
-                overrides: {
-                  detached: false,
-                  screen: screen,
-                },
-                downloadFileMultiple: 40,
-                version: versionData,
-                loader: {
-                  type: type,
-                  build: this.BattlyConfig.loader.build,
-                  enable: isForgeCheckBox
-                    ? true
-                    : isFabricCheckBox
-                      ? true
-                      : isQuiltCheckBox
-                        ? true
-                        : false,
-                },
-                verify: false,
-                ignored: ["loader"],
-                java: false,
-                memory: {
-                  min: `${ram.ramMin * 1024}M`,
-                  max: `${ram.ramMax * 1024}M`,
-                },
-              };
-            }
-          } else {
-            if (account.type === "battly") {
-              console.log("HAY JAVA PATH")
-              opts = {
-                url:
-                  this.config.game_url === "" ||
-                    this.config.game_url === undefined
-                    ? `${urlpkg}/files`
-                    : this.config.game_url,
-                authorization: account,
-                authenticator: account,
-                detached: false,
-                timeout: 10000,
-                root: `${dataDirectory}/.battly`,
-                path: `${dataDirectory}/.battly`,
-                overrides: {
-                  detached: false,
-                  screen: screen,
-                },
-                downloadFileMultiple: 40,
-                javaPath: javapath,
-                version: versionData,
-                loader: {
-                  type: type,
-                  build: this.BattlyConfig.loader.build,
-                  enable: isForgeCheckBox
-                    ? true
-                    : isFabricCheckBox
-                      ? true
-                      : isQuiltCheckBox
-                        ? true
-                        : false,
-                },
-                verify: false,
-                ignored: ["loader"],
-                java: false,
-                javapath: javapath,
-                memory: {
-                  min: `${ram.ramMin * 1024}M`,
-                  max: `${ram.ramMax * 1024}M`,
-                },
-                customArgs: [
-                  "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
-                  "-Dauthlibinjector.mojangAntiFeatures=enabled",
-                    "-Dauthlibinjector.noShowServerName",
-                    "-Dauthlibinjector.disableHttpd"
-                ],
-              };
-            } else {
-              opts = {
-                url:
-                  this.config.game_url === "" ||
-                    this.config.game_url === undefined
-                    ? `${urlpkg}/files`
-                    : this.config.game_url,
-                authorization: account,
-                authenticator: account,
-                detached: false,
-                timeout: 10000,
-                root: `${dataDirectory}/.battly`,
-                path: `${dataDirectory}/.battly`,
-                overrides: {
-                  detached: false,
-                  screen: screen,
-                },
-                downloadFileMultiple: 40,
-                javaPath: javapath,
-                version: versionData,
-                loader: {
-                  type: type,
-                  build: this.BattlyConfig.loader.build,
-                  enable: isForgeCheckBox
-                    ? true
-                    : isFabricCheckBox
-                      ? true
-                      : isQuiltCheckBox
-                        ? true
-                        : false,
-                },
-                verify: false,
-                ignored: ["loader"],
-                java: false,
-                javapath: javapath,
-                memory: {
-                  min: `${ram.ramMin * 1024}M`,
-                  max: `${ram.ramMax * 1024}M`,
-                },
-              };
-            }
-          }
+        const javapath = localStorage.getItem("java-path");
+        const isExtra = version.endsWith("-extra");
+        const gameUrl = this.config.game_url || `${urlpkg}/files`;
+        const rootPath = `${dataDirectory}/.battly`;
+        const loaderEnable = isForgeCheckBox || isFabricCheckBox || isQuiltCheckBox;
+        const memory = {
+          min: `${ram.ramMin * 1024}M`,
+          max: `${ram.ramMax * 1024}M`,
+        };
+        const commonOpts = {
+          url: gameUrl,
+          authorization: account,
+          authenticator: account,
+          detached: false,
+          timeout: 10000,
+          root: rootPath,
+          path: rootPath,
+          overrides: {
+            detached: false,
+            screen: screen,
+          },
+          downloadFileMultiple: 40,
+          version: versionData,
+          loader: {
+            type: type,
+            build: this.BattlyConfig.loader.build,
+            enable: loaderEnable,
+          },
+          verify: false,
+          ignored: ["loader"],
+          java: false,
+          memory: memory,
+        };
+
+        const commonArgs = [
+          "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
+          "-Dauthlibinjector.mojangAntiFeatures=enabled",
+          "-Dauthlibinjector.noShowServerName",
+          "-Dauthlibinjector.disableHttpd",
+        ];
+
+        if (isExtra) {
+          opts = {
+            ...commonOpts,
+            javaPath: javapath,
+            customArgs: javapath ? commonArgs : undefined,
+          };
         } else {
-          console.log("NO ES EXTRA")
-          if (account.type === "battly") {
-            console.log("battly");
-            opts = {
-              url:
-                this.config.game_url === "" ||
-                  this.config.game_url === undefined
-                  ? `${urlpkg}/files`
-                  : this.config.game_url,
-              authorization: account,
-              authenticator: account,
-              detached: false,
-              timeout: 10000,
-              root: `${dataDirectory}/.battly`,
-              path: `${dataDirectory}/.battly`,
-              overrides: {
-                detached: false,
-                screen: screen,
-              },
-              downloadFileMultiple: 40,
-              version: versionData,
-              loader: {
-                type: type,
-                build: this.BattlyConfig.loader.build,
-                enable: isForgeCheckBox
-                  ? true
-                  : isFabricCheckBox
-                    ? true
-                    : isQuiltCheckBox
-                      ? true
-                      : false,
-              },
-              verify: false,
-              ignored: ["loader"],
-              java: false,
-              memory: {
-                min: `${ram.ramMin * 1024}M`,
-                max: `${ram.ramMax * 1024}M`,
-              },
-              JVM_ARGS: [
-                "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
-                "-Dauthlibinjector.mojangAntiFeatures=enabled",
-                    "-Dauthlibinjector.noShowServerName",
-                    "-Dauthlibinjector.disableHttpd"
-              ],
-            };
-          } else {
-            opts = {
-              url:
-                this.config.game_url === "" ||
-                  this.config.game_url === undefined
-                  ? `${urlpkg}/files`
-                  : this.config.game_url,
-              authorization: account,
-              authenticator: account,
-              detached: false,
-              timeout: 10000,
-              root: `${dataDirectory}/.battly`,
-              path: `${dataDirectory}/.battly`,
-              overrides: {
-                detached: false,
-                screen: screen,
-              },
-              downloadFileMultiple: 40,
-              javaPath: javapath,
-              version: versionData,
-              loader: {
-                type: type,
-                build: this.BattlyConfig.loader.build,
-                enable: isForgeCheckBox
-                  ? true
-                  : isFabricCheckBox
-                    ? true
-                    : isQuiltCheckBox
-                      ? true
-                      : false,
-              },
-              verify: false,
-              ignored: ["loader"],
-              java: false,
-              memory: {
-                min: `${ram.ramMin * 1024}M`,
-                max: `${ram.ramMax * 1024}M`,
-              },
-            };
-          }
+          opts = {
+            ...commonOpts,
+            javaPath: javapath,
+            JVM_ARGS: commonArgs,
+          };
         }
+
+        if (account.type === "battly" && !javapath) {
+          console.log("No hay java path");
+        } else if (account.type === "battly" && javapath) {
+          console.log("HAY JAVA PATH");
+        } else {
+          opts = commonOpts;
+        }
+
 
         const launch = new Client();
         const launch_core = new Launch();
+        const progressBar = document.getElementById("progressBar1_");
+        console.log(progressBar);
+        const playButton = document.getElementById("playBtn");
+        console.log(playButton);
+        const infoDisplay = document.getElementById("textInfoStatus");
+        console.log(infoDisplay);
+        let crashOccurred = false;
+        let iniciando = false;
 
-        try {
-          if (version === "1.8") {
-            await launch.launch(opts);
-            document.getElementById("carga-de-versiones").style.display = "";
-          } else if (
-            version_real.endsWith("-forge") ||
-            version_real.endsWith("-fabric") ||
-            version_real.endsWith("-quilt")
-          ) {
-            await launch_core.Launch(opts);
-            document.getElementById("carga-de-versiones").style.display = "";
-          } else if (version.endsWith("-extra")) {
-            launch.launch(opts);
-            document.getElementById("carga-de-versiones").style.display = "";
-          } else {
-            console.log("VEAMOS SI ES ESTO")
-            await launch_core.Launch(opts, true);
-            document.getElementById("carga-de-versiones").style.display = "";
-          }
-        } catch (error) {
-          setTimeout(() => {
-            playBtn.style.display = "";
-            info.style.display = "none";
-            progressBar1.style.display = "none";
-          }, 3000);
-          console.log(error);
+        function displayElement(element, display) {
+          element.style.display = display;
         }
+
+        function showErrorReport(errorMsg, langErrorMsg) {
+          ShowCrashReport(`${langErrorMsg} \nError:\n${errorMsg}`);
+        }
+
+        function handleLaunch(launchFunction, options) {
+          try {
+            launchFunction(options);
+            displayElement(document.getElementById("carga-de-versiones"), "");
+          } catch (error) {
+            setTimeout(() => {
+              displayElement(infoDisplay, "none");
+              displayElement(progressBar, "none");
+            }, 3000);
+            console.log(error);
+          }
+        }
+
+        async function initializeLaunch() {
+          switch (true) {
+            case version === "1.8":
+              await handleLaunch(launch.launch.bind(launch), opts);
+              break;
+            case version_real.endsWith("-forge") || version_real.endsWith("-fabric") || version_real.endsWith("-quilt"):
+              await handleLaunch(launch_core.Launch.bind(launch_core), opts);
+              break;
+            case version.endsWith("-extra"):
+              handleLaunch(launch.launch.bind(launch), opts);
+              break;
+            default:
+              await handleLaunch(launch_core.Launch.bind(launch_core), { ...opts, flag: true });
+              break;
+          }
+        }
+
+        initializeLaunch();
 
         launch.on("extract", (extract) => {
           consoleOutput_ += `[EXTRACT] ${extract}\n`;
-          let seMostroInstalando = false;
-          if (seMostroInstalando) {
-          } else {
-            seMostroInstalando = true;
-          }
         });
 
         launch.on("debug", (e) => {
+          console.info(e);
           consoleOutput_ += `[DEBUG] ${JSON.stringify(e, null, 2)}\n`;
-          if (e.includes("Failed to start due to TypeError"))
-            return ShowCrashReport(`${langs.error_detected_one} \nError:\n${e}`);
+
+          const errorMessages = {
+            "Failed to start due to TypeError": langs.error_detected_one,
+            "Failed to start the minecraft server": langs.error_detected_one,
+            'Exception in thread "main" ': langs.error_detected_two,
+            "There is insufficient memory for the Java Runtime Environment to continue.": langs.error_detected_three,
+            "Could not reserve enough space for object heap": langs.error_detected_three,
+            "Forge patcher exited with code 1": langs.error_detected_four,
+            "Unable to launch": langs.error_detected_five,
+            "java.lang.ClassCastException": langs.error_detected_five,
+            "Minecraft has crashed!": langs.error_detected_five,
+            "Minecraft Crash Report": langs.error_detected_one,
+          };
+
+          for (let [key, message] of Object.entries(errorMessages)) {
+            if (e.includes(key)) return showErrorReport(e, message);
+          }
+
+          const downloadStatus = {
+            "Downloaded and extracted natives": langs.downloading_natives,
+            "Attempting to download Minecraft version jar": langs.downloading_version,
+            "Attempting to download assets": langs.downloading_assets,
+            "Downloaded Minecraft version jar": langs.downloading_libraries,
+          };
+
+          for (let [key, message] of Object.entries(downloadStatus)) {
+            if (e.includes(key)) infoDisplay.innerHTML = message;
+          }
 
           if (e.includes("Downloaded and extracted natives")) {
-            progressBar1.style.display = "";
-            progressBar1.max = 100;
-            progressBar1.value = 0;
-
-            info.innerHTML = langs.downloading_files;
+            displayElement(progressBar, "");
+            progressBar.max = 100;
+            progressBar.value = 0;
+            infoDisplay.innerHTML = langs.downloading_files;
           }
-
-          if (e.includes("Attempting to download Minecraft version jar")) {
-            info.innerHTML = langs.downloading_version;
-          }
-
-          if (e.includes("Attempting to download assets")) {
-            info.innerHTML = langs.downloading_assets;
-          }
-
-          if (e.includes("Downloaded Minecraft version jar")) {
-            info.innerHTML = langs.downloading_libraries;
-          }
-
-          if (e.includes("Downloaded and extracted natives")) {
-            info.innerHTML = langs.downloading_natives;
-          }
-
-          if (e.includes("Failed to start the minecraft server"))
-            return ShowCrashReport(`${langs.error_detected_one} \nError:\n${e}`);
-          if (e.includes('Exception in thread "main" '))
-            return ShowCrashReport(`${langs.error_detected_two} \nError:\n${e}`);
-
-          if (
-            e.includes(
-              "There is insufficient memory for the Java Runtime Environment to continue."
-            )
-          )
-            return ShowCrashReport(
-              `${langs.error_detected_three} \nError:\n${e}`
-            );
-          if (e.includes("Could not reserve enough space for object heap"))
-            return ShowCrashReport(
-              `${langs.error_detected_three} \nError:\n${e}`
-            );
-
-          if (e.includes("Forge patcher exited with code 1")) {
-            ShowCrashReport(`${langs.error_detected_four} \nError:\n${e}`);
-            progressBar1.style.display = "none";
-            info.style.display = "none";
-            playBtn.style.display = "";
-          }
-
-          if (e.includes("Unable to launch"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
-
-          if (
-            e.includes("Minecraft Crash Report") &&
-            !e.includes("THIS IS NOT A ERROR")
-          )
-            return ShowCrashReport(`${langs.error_detected_one} \nError:\n${e}`);
-
-          if (e.includes("java.lang.ClassCastException"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
-
-          if (e.includes("Minecraft has crashed!"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
         });
+
         launch.on("data", (e) => {
           consoleOutput_ += `[DEBUG] ${JSON.stringify(e, null, 2)}\n`;
-          if (e.includes("Failed to start du<e to TypeError")) {
+
+          if (e.includes("Failed to start due to TypeError")) {
             new Alert().ShowAlert({
               icon: "error",
               title: "Error al iniciar Minecraft",
             });
-            progressBar1.style.display = "none";
-            progressBar1.max = 100;
-            progressBar1.value = 0;
-            playBtn.style.display = "";
-            info.style.display = "none";
-            crasheo = true;
+            displayElement(progressBar, "none");
+            progressBar.max = 100;
+            progressBar.value = 0;
+            displayElement(playButton, "");
+            displayElement(infoDisplay, "none");
+            crashOccurred = true;
           }
         });
 
-        launch.on("progress", function (e) {
-          let total = e.total;
-          let current = e.task;
-
-          let progress = ((current / total) * 100).toFixed(0);
-          let total_ = 100;
+        launch.on("progress", (e) => {
+          let progress = ((e.task / e.total) * 100).toFixed(0);
+          console.log(progress);
 
           ipcRenderer.send("main-window-progress_", {
-            total_,
+            total_: 100,
             progress,
           });
 
-          progressBar1.style.display = "";
-          progressBar1.max = total;
-          progressBar1.value = current;
+          displayElement(progressBar, "");
+          progressBar.max = e.total;
+          progressBar.value = e.task;
         });
 
-        let crasheo = false;
-
-        launch.on("estimated", (time) => {
+        launch.on("estimated", () => {
           ipcRenderer.send("main-window-progress-reset");
-          /*
-                                  let hours = Math.floor(time / 3600);
-                                  let minutes = Math.floor((time - hours * 3600) / 60);
-                                  let seconds = Math.floor(time - hours * 3600 - minutes * 60);
-                                  console.log(`${hours}h ${minutes}m ${seconds}s`);*/
         });
 
         let timeoutId;
 
         launch.on("speed", (speed) => {
-          /*
-                                                  let velocidad = speed / 1067008;
+          if (speed <= 0) {
+            timeoutId = setTimeout(() => {
+              displayElement(progressBar, "none");
+              progressBar.max = 100;
+              progressBar.value = 0;
+              displayElement(playButton, "");
+              displayElement(infoDisplay, "none");
+              clearTimeout(timeoutId);
+              crashOccurred = true;
 
-                                                  if (velocidad > 0) {
-                                                      clearTimeout(timeoutId); // cancela el mensaje de alerta si la velocidad no es cero
-                                                  } else {
-                                                      timeoutId = setTimeout(() => {
-                                                          progressBar1.style.display = "none"
-                                                          progressBar1.max = 100;
-                                                          progressBar1.value = 0;
-                                                          playBtn.style.display = ""
-                                                          info.style.display = "none"
-                                                          clearTimeout(timeoutId);
-                                                          const swal  = require('sweetalert');
-                                                          crasheo = true;
-
-                                                          new Alert().ShowAlert({
-                                                              title: "Error",
-                                                              text: "Error al descargar esta versión. Reinicia el launcher o inténtalo de nuevo más tarde. [ERROR: 2]",
-                                                              icon: "error",
-                                                              button: "Aceptar",
-                                                          }).then((value) => {
-                                                              if(value) {
-                                                                  ipcRenderer.send('restartLauncher')
-                                                              }
-                                                          });
-                                                          
-                                                      }, 10000);
-                                                  }*/
+              new Alert().ShowAlert({
+                title: "Error",
+                text: "Error al descargar esta versión. Reinicia el launcher o inténtalo de nuevo más tarde. [ERROR: 2]",
+                icon: "error",
+                button: "Aceptar",
+              }).then((value) => {
+                if (value) ipcRenderer.send('restartLauncher');
+              });
+            }, 10000);
+          } else {
+            clearTimeout(timeoutId);
+          }
         });
 
         launch.on("patch", (patch) => {
           consoleOutput_ += `[INSTALANDO LOADER] ${patch}\n`;
-          let seMostroInstalando = false;
-          if (seMostroInstalando) {
-          } else {
-            logTextArea1.innerHTML = `${langs.installing_loader}...`;
-            seMostroInstalando = true;
-          }
-
-          info.innerHTML = `${langs.installing_loader}...`;
+          logTextArea1.innerHTML = `${langs.installing_loader}...`;
+          infoDisplay.innerHTML = `${langs.installing_loader}...`;
         });
 
         let inicio = false;
-        let iniciando = false;
+
         launch.on("data", async (e) => {
           new logger("Minecraft", "#36b030");
+          console.log(e);
           consoleOutput_ += `[MC] ${e}\n`;
-          if (launcherSettings.launcher.close === "close-launcher")
-            ipcRenderer.send("main-window-hide");
 
-          if (e.includes("Launching with arguments"))
-            info.innerHTML = `${langs.starting_minecraft}...`;
+          const startupErrors = [
+            "Failed to start the minecraft server",
+            'Exception in thread "main" ',
+            "There is insufficient memory for the Java Runtime Environment to continue.",
+            "Could not reserve enough space for object heap",
+            "Forge patcher exited with code 1",
+            "Unable to launch",
+            "java.lang.ClassCastException",
+            "Minecraft has crashed!",
+            "Minecraft Crash Report",
+          ];
 
-          if (e.includes("Failed to start the minecraft server"))
-            return ShowCrashReport(`${langs.error_detected_one} \nError:\n${e}`);
-          if (e.includes('Exception in thread "main" '))
-            return ShowCrashReport(`${langs.error_detected_two} \nError:\n${e}`);
-
-          if (
-            e.includes(
-              "There is insufficient memory for the Java Runtime Environment to continue."
-            )
-          )
-            return ShowCrashReport(
-              `${langs.error_detected_three} \nError:\n${e}`
-            );
-          if (e.includes("Could not reserve enough space for object heap"))
-            return ShowCrashReport(
-              `${langs.error_detected_three} \nError:\n${e}`
-            );
-
-          if (e.includes("Forge patcher exited with code 1")) {
-            ShowCrashReport(`${langs.error_detected_four} \nError:\n${e}`);
-            progressBar1.style.display = "none";
-            info.style.display = "none";
-            playBtn.style.display = "";
+          for (let errorMsg of startupErrors) {
+            if (e.includes(errorMsg)) return showErrorReport(e, errorMessages[errorMsg]);
           }
 
-          if (e.includes("Unable to launch"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
+          if (e.includes("Setting user:") || e.includes("Launching wrapped minecraft")) {
+            if (!inicio) {
+              if (launcherSettings.launcher.close === "close-launcher") ipcRenderer.send("main-window-hide");
 
-          if (
-            e.includes("Minecraft Crash Report") &&
-            !e.includes("THIS IS NOT A ERROR")
-          )
-            return ShowCrashReport(`${langs.error_detected_one} \nError:\n${e}`);
+              const typeOfVersion = ["forge", "fabric", "quilt"].find((type) => version_real.endsWith(`-${type}`)) || "";
+              const discordStatus = version_real.includes("OptiFine")
+                ? `OptiFine ${version_real.substring(0, 6).replace("-", "")}`
+                : version_real.includes("LabyMod")
+                  ? "LabyMod"
+                  : version_real.includes("cmpack")
+                    ? "CMPack"
+                    : `${version_real.replace("-forge", "").replace("-fabric", "").replace("-quilt", "")} ${typeOfVersion}`;
 
-          if (e.includes("java.lang.ClassCastException"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
-
-          if (e.includes("Minecraft has crashed!"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
-
-          if (
-            e.includes(`Setting user: ${account.name}`) ||
-            e.includes("Launching wrapped minecraft")
-          ) {
-            if (inicio == false) {
-              let typeOfVersion;
-              if (version_real.endsWith("-forge")) {
-                typeOfVersion = "Forge";
-              } else if (version_real.endsWith("-fabric")) {
-                typeOfVersion = "Fabric";
-              } else if (version_real.endsWith("-quilt")) {
-                typeOfVersion = "Quilt";
-              } else {
-                typeOfVersion = "";
-              }
-
-              if (version_real.includes("OptiFine")) {
-                let version_optifine = version_real.substring(0, 6);
-                version_optifine = version_optifine.replace("-", "");
-
-                ipcRenderer.send(
-                  "new-status-discord-jugando",
-                  `${langs.playing_in} OptiFine ${version_optifine}`
-                );
-
-                this.UpdateStatus(
-                  account.name,
-                  "ausente",
-                  `${langs.playing_in} OptiFine ${version_optifine}`
-                );
-              } else if (version_real.includes("LabyMod")) {
-                ipcRenderer.send(
-                  "new-status-discord-jugando",
-                  `${langs.playing_in} LabyMod`
-                );
-
-                this.UpdateStatus(
-                  account.name,
-                  "ausente",
-                  `${langs.playing_in} LabyMod`
-                );
-              } else if (version_real.includes("cmpack")) {
-                ipcRenderer.send(
-                  "new-status-discord-jugando",
-                  `${langs.playing_in} CMPack`
-                );
-
-                this.UpdateStatus(
-                  account.name,
-                  "ausente",
-                  `${langs.playing_in} CMPack`
-                );
-              } else {
-                ipcRenderer.send(
-                  "new-status-discord-jugando",
-                  `${langs.playing_in} ${version_real
-                    .replace("-forge", "")
-                    .replace("-fabric", "")
-                    .replace("-quilt", "")} ${typeOfVersion}`
-                );
-
-                this.UpdateStatus(
-                  account.name,
-                  "ausente",
-                  `${langs.playing_in} ${version_real
-                    .replace("-forge", "")
-                    .replace("-fabric", "")
-                    .replace("-quilt", "")} ${typeOfVersion}`
-                );
-              }
+              ipcRenderer.send("new-status-discord-jugando", `${langs.playing_in} ${discordStatus}`);
+              this.UpdateStatus(account.name, "ausente", `${langs.playing_in} ${discordStatus}`);
 
               modalDiv1.classList.remove("is-active");
               inicio = true;
-              info.innerHTML = `${langs.minecraft_started_correctly}.`;
-              logTextArea1.innerHTML = ``;
-              textInfo.innerHTML = `Selecciona la versión que quieres abrir`;
+              infoDisplay.innerHTML = `${langs.minecraft_started_correctly}.`;
+              logTextArea1.innerHTML = "";
+              textInfo.innerHTML = "Selecciona la versión que quieres abrir";
               ipcRenderer.send("new-notification", {
                 title: langs.minecraft_started_correctly,
                 body: langs.minecraft_started_correctly_body,
@@ -3778,14 +3794,15 @@ recommendedOption.innerHTML = langs.recommended;
 
           if (e.includes("Connecting to")) {
             let msj = e.split("Connecting to ")[1].split("...")[0];
-            info.innerHTML = `Conectando a ${msj}`;
+            infoDisplay.innerHTML = `Conectando a ${msj}`;
           }
         });
 
+
         launch.on("close", (code) => {
           consoleOutput_ += `---------- [MC] Código de salida: ${code}\n ----------`;
-          if (launcherSettings.launcher.close === "close-launcher")
-            ipcRenderer.send("main-window-show");
+
+          if (launcherSettings.launcher.close === "close-launcher") ipcRenderer.send("main-window-show");
 
           ipcRenderer.send("updateStatus", {
             status: "online",
@@ -3799,24 +3816,19 @@ recommendedOption.innerHTML = langs.recommended;
           new logger("Launcher", "#3e8ed0");
           console.log("🔧 Minecraft cerrado");
           document.getElementById("carga-de-versiones").style.display = "none";
-
           progressBar1.style.display = "none";
-
           ipcRenderer.send("delete-and-new-status-discord");
         });
 
         launch.on("error", (err) => {
           consoleOutput_ += `[ERROR] ${JSON.stringify(err, null, 2)}\n`;
-
+          console.log(JSON.stringify(err, null, 2));
           progressBar1.style.display = "none";
           info.style.display = "none";
           playBtn.style.display = "";
-
           return new Alert().ShowAlert({
             title: "Error",
-            text:
-              "Error al iniciar Minecraft. Error desconocido. Vuelve a iniciar Minecraft. [ERROR: 7] \nError: " +
-              err.error,
+            text: `Error al iniciar Minecraft. Error desconocido. Vuelve a iniciar Minecraft. [ERROR: 7] \nError: ${err.error}`,
             icon: "error",
             button: "Aceptar",
           });
@@ -3827,8 +3839,7 @@ recommendedOption.innerHTML = langs.recommended;
 
         launch_core.on("extract", (extract) => {
           consoleOutput_ += `[EXTRACT] ${extract}\n`;
-          if (seMostroExtrayendo_core) {
-          } else {
+          if (!seMostroExtrayendo_core) {
             logTextArea1.innerHTML = `${langs.extracting_loader}.`;
             seMostroExtrayendo_core = true;
           }
@@ -3836,276 +3847,111 @@ recommendedOption.innerHTML = langs.recommended;
 
         launch_core.on("debug", (e) => {
           consoleOutput_ += `[MC] ${JSON.stringify(e, null, 2)}\n`;
-          if (e.includes("Failed to start due to TypeError")) {
-            new Alert().ShowAlert({
-              icon: "error",
-              title: "Error al iniciar Minecraft",
-            });
-            progressBar1.style.display = "none";
-            progressBar1.max = 100;
-            progressBar1.value = 0;
-            playBtn.style.display = "";
-            info.style.display = "none";
-            crasheo = true;
-          }
+          const errorMap = {
+            "Failed to start due to TypeError": `${langs.error_detected_one} \nError:\n${e}`,
+            "Failed to start the minecraft server": `${langs.error_detected_one} \nError:\n${e}`,
+            'Exception in thread "main" ': `${langs.error_detected_two} \nError:\n${e}`,
+            "There is insufficient memory for the Java Runtime Environment to continue.": `${langs.error_detected_three} \nError:\n${e}`,
+            "Could not reserve enough space for object heap": `${langs.error_detected_three} \nError:\n${e}`,
+            "Forge patcher exited with code 1": `${langs.error_detected_four} \nError:\n${e}`,
+            "Unable to launch": `${langs.error_detected_five} \nError:\n${e}`,
+            "java.lang.ClassCastException": `${langs.error_detected_five} \nError:\n${e}`,
+            "Minecraft has crashed!": `${langs.error_detected_five} \nError:\n${e}`,
+          };
 
-          if (e.includes("Downloaded and extracted natives")) {
-            progressBar1.style.display = "";
-            progressBar1.max = 100;
-            progressBar1.value = 0;
+          if (errorMap[e]) return ShowCrashReport(errorMap[e]);
 
-            info.innerHTML = langs.downloading_files;
-          }
+          const statusMap = {
+            "Downloaded and extracted natives": langs.downloading_files,
+            "Attempting to download Minecraft version jar": langs.downloading_version,
+            "Attempting to download assets": langs.downloading_assets,
+            "Downloaded Minecraft version jar": langs.downloading_libraries,
+            "Downloaded and extracted natives": langs.downloading_natives,
+          };
 
-          if (e.includes("Attempting to download Minecraft version jar")) {
-            info.innerHTML = langs.downloading_version;
-          }
-
-          if (e.includes("Attempting to download assets")) {
-            info.innerHTML = langs.downloading_assets;
-          }
-
-          if (e.includes("Downloaded Minecraft version jar")) {
-            info.innerHTML = langs.downloading_libraries;
-          }
-
-          if (e.includes("Downloaded and extracted natives")) {
-            info.innerHTML = langs.downloading_natives;
-          }
-
-          if (e.includes("Failed to start the minecraft server"))
-            return ShowCrashReport(`${langs.error_detected_one} \nError:\n${e}`);
-          if (e.includes('Exception in thread "main" '))
-            return ShowCrashReport(`${langs.error_detected_two} \nError:\n${e}`);
-
-          if (
-            e.includes(
-              "There is insufficient memory for the Java Runtime Environment to continue."
-            )
-          )
-            return ShowCrashReport(
-              `${langs.error_detected_three} \nError:\n${e}`
-            );
-          if (e.includes("Could not reserve enough space for object heap"))
-            return ShowCrashReport(
-              `${langs.error_detected_three} \nError:\n${e}`
-            );
-
-          if (e.includes("Forge patcher exited with code 1")) {
-            ShowCrashReport(`${langs.error_detected_four} \nError:\n${e}`);
-            progressBar1.style.display = "none";
-            info.style.display = "none";
-            playBtn.style.display = "";
-          }
-
-          if (e.includes("Unable to launch"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
-
-          if (
-            e.includes("Minecraft Crash Report") &&
-            !e.includes("THIS IS NOT A ERROR")
-          )
-            return ShowCrashReport(`${langs.error_detected_one} \nError:\n${e}`);
-
-          if (e.includes("java.lang.ClassCastException"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
-
-          if (e.includes("Minecraft has crashed!"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
+          if (statusMap[e]) info.innerHTML = statusMap[e];
         });
+
         launch_core.on("data", async (e) => {
           new logger("Minecraft", "#36b030");
           consoleOutput_ += `[MC] ${e}\n`;
-          if (launcherSettings.launcher.close === "close-launcher")
-            ipcRenderer.send("main-window-hide");
-          progressBar1.style.display = "none";
 
-          if (e.includes("Launching with arguments"))
-            info.innerHTML = `${langs.starting_minecraft}...`;
+          if (e.includes("Launching with arguments")) info.innerHTML = `${langs.starting_minecraft}...`;
 
-          if (iniciando == false) {
+          if (!iniciando) {
             iniciando = true;
 
-            /* editar archivo servers.dat */
-            let serversDat = `${dataDirectory}/.battly/servers.dat`;
-
-            if (fs.existsSync(serversDat)) {
-                try {
-                    const serversDatFile = fs.readFileSync(serversDat);
-                    const serversDatData = await NBT.read(serversDatFile);
-
-                    const servers = this.BattlyConfig.promoted_servers;
-                    const existingIPs = new Set(serversDatData.data.servers.map(server => server.ip));
-
-                    const serversArray = servers.reduce((accumulator, server) => {
-                      if (!existingIPs.has(server.ip) && server.enabled) {
-                        accumulator.push(server);
-                      } else if (existingIPs.has(server.ip) && !server.enabled) {
-                        // Si está deshabilitado y la IP existe, la eliminamos
-                        serversDatData.data.servers = serversDatData.data.servers.filter(existingServer => existingServer.ip !== server.ip);
-                      } else if (existingIPs.has(server.ip) && server.enabled) {
-                        // Si está habilitado y la IP existe, la reemplazamos eliminando la antigua
-                        serversDatData.data.servers = serversDatData.data.servers.filter(existingServer => existingServer.ip !== server.ip);
-                        accumulator.push(server);
-                      }
-                      return accumulator;
-                    }, []);
-
-                  serversDatData.data.servers = serversArray.concat(serversDatData.data.servers);
-                  console.log(serversDatData);
-                    const editedServersDat = await NBT.write(serversDatData);
-                    fs.writeFileSync(serversDat, editedServersDat);
-                  } catch (error) {
-                    console.error("Error al procesar el archivo NBT");
-                    console.error(error);
-                  }
-              } else {
-                try {
-                  let servers = this.BattlyConfig.promoted_servers;
-
-                  let serversArray = [];
-
-                  for (let i = 0; i < servers.length; i++) {
-                    const newServer = {
-                      name: servers[i].name,
-                      ip: servers[i].ip,
-                      icon: servers[i].icon,
-                    };
-                    serversArray.push(newServer);
-                  }
-
-                  // Crear un nuevo archivo servers.dat con los servidores nuevos
-                  const newData = { servers: serversArray };
-                  const editedServersDat = await NBT.write(newData);
-                  fs.writeFileSync(serversDat, editedServersDat);
-                } catch (error) {
-                  console.error("Error al crear el nuevo archivo NBT:", error);
-                }
-              }
-            }
-
-          if (e.includes("Failed to start the minecraft server"))
-            return ShowCrashReport(`${langs.error_detected_one} \nError:\n${e}`);
-          if (e.includes('Exception in thread "main" '))
-            return ShowCrashReport(`${langs.error_detected_two} \nError:\n${e}`);
-
-          if (
-            e.includes(
-              "There is insufficient memory for the Java Runtime Environment to continue."
-            )
-          )
-            return ShowCrashReport(
-              `${langs.error_detected_three} \nError:\n${e}`
-            );
-          if (e.includes("Could not reserve enough space for object heap"))
-            return ShowCrashReport(
-              `${langs.error_detected_three} \nError:\n${e}`
-            );
-
-          if (e.includes("Forge patcher exited with code 1")) {
-            ShowCrashReport(`${langs.error_detected_four} \nError:\n${e}`);
+            if (launcherSettings.launcher.close === "close-launcher") ipcRenderer.send("main-window-hide");
             progressBar1.style.display = "none";
-            info.style.display = "none";
-            playBtn.style.display = "";
+
+            /* Editar archivo servers.dat */
+            const serversDat = `${dataDirectory}/.battly/servers.dat`;
+
+            try {
+              if (fs.existsSync(serversDat)) {
+                const serversDatFile = fs.readFileSync(serversDat);
+                const serversDatData = await NBT.read(serversDatFile);
+
+                const servers = this.BattlyConfig.promoted_servers;
+                const existingIPs = new Set(serversDatData.data.servers.map((server) => server.ip));
+
+                const serversArray = servers.reduce((accumulator, server) => {
+                  if (!existingIPs.has(server.ip) && server.enabled) {
+                    accumulator.push(server);
+                  } else if (existingIPs.has(server.ip)) {
+                    serversDatData.data.servers = serversDatData.data.servers.filter(
+                      (existingServer) => existingServer.ip !== server.ip
+                    );
+                    if (server.enabled) accumulator.push(server);
+                  }
+                  return accumulator;
+                }, []);
+
+                serversDatData.data.servers = serversArray.concat(serversDatData.data.servers);
+                const editedServersDat = await NBT.write(serversDatData);
+                fs.writeFileSync(serversDat, editedServersDat);
+              } else {
+                const servers = this.BattlyConfig.promoted_servers.map((server) => ({
+                  name: server.name,
+                  ip: server.ip,
+                  icon: server.icon,
+                }));
+
+                const newData = { servers };
+                const editedServersDat = await NBT.write(newData);
+                fs.writeFileSync(serversDat, editedServersDat);
+              }
+            } catch (error) {
+              console.error("Error al procesar el archivo NBT:", error);
+            }
           }
 
-          if (e.includes("Unable to launch"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
+          const errorMap = {
+            "Failed to start the minecraft server": `${langs.error_detected_one} \nError:\n${e}`,
+            'Exception in thread "main" ': `${langs.error_detected_two} \nError:\n${e}`,
+            "There is insufficient memory for the Java Runtime Environment to continue.": `${langs.error_detected_three} \nError:\n${e}`,
+            "Could not reserve enough space for object heap": `${langs.error_detected_three} \nError:\n${e}`,
+            "Forge patcher exited with code 1": `${langs.error_detected_four} \nError:\n${e}`,
+            "Unable to launch": `${langs.error_detected_five} \nError:\n${e}`,
+            "java.lang.ClassCastException": `${langs.error_detected_five} \nError:\n${e}`,
+            "Minecraft has crashed!": `${langs.error_detected_five} \nError:\n${e}`,
+          };
 
-          if (
-            e.includes("Minecraft Crash Report") &&
-            !e.includes("THIS IS NOT A ERROR")
-          )
-            return ShowCrashReport(`${langs.error_detected_one} \nError:\n${e}`);
+          if (errorMap[e]) return ShowCrashReport(errorMap[e]);
 
-          if (e.includes("java.lang.ClassCastException"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
+          if (e.includes(`Setting user: ${account.name}`) || e.includes("Launching wrapped minecraft")) {
+            if (!inicio) {
+              const versionTypeMap = {
+                "-forge": "Forge",
+                "-fabric": "Fabric",
+                "-quilt": "Quilt",
+              };
 
-          if (e.includes("Minecraft has crashed!"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
+              const typeOfVersion = Object.keys(versionTypeMap).find((key) => version_real.endsWith(key)) || "";
+              const versionStr = version_real.replace(/-forge|-fabric|-quilt/, "") + (typeOfVersion ? ` ${versionTypeMap[typeOfVersion]}` : "");
 
-          if (
-            e.includes(`Setting user: ${account.name}`) ||
-            e.includes("Launching wrapped minecraft")
-          ) {
-            if (inicio == false) {
-              let typeOfVersion;
-              if (version_real.endsWith("-forge")) {
-                typeOfVersion = "Forge";
-              } else if (version_real.endsWith("-fabric")) {
-                typeOfVersion = "Fabric";
-              } else if (version_real.endsWith("-quilt")) {
-                typeOfVersion = "Quilt";
-              } else {
-                typeOfVersion = "";
-              }
-
-              if (version_real.includes("OptiFine")) {
-                let version_optifine = version_real.substring(0, 6);
-                version_optifine = version_optifine.replace("-", "");
-
-                ipcRenderer.send(
-                  "new-status-discord-jugando",
-                  `${langs.playing_in} OptiFine ${version_optifine}`
-                );
-
-                this.UpdateStatus(
-                  account.name,
-                  "ausente",
-                  `${langs.playing_in} OptiFine ${version_optifine}`
-                );
-              } else if (version_real.includes("LabyMod")) {
-                ipcRenderer.send(
-                  "new-status-discord-jugando",
-                  `${langs.playing_in} LabyMod`
-                );
-
-                this.UpdateStatus(
-                  account.name,
-                  "ausente",
-                  `${langs.playing_in} LabyMod`
-                );
-              } else if (version_real.includes("cmpack")) {
-                ipcRenderer.send(
-                  "new-status-discord-jugando",
-                  `${langs.playing_in} CMPack`
-                );
-
-                this.UpdateStatus(
-                  account.name,
-                  "ausente",
-                  `${langs.playing_in} CMPack`
-                );
-              } else {
-                ipcRenderer.send(
-                  "new-status-discord-jugando",
-                  `${langs.playing_in} ${version_real
-                    .replace("-forge", "")
-                    .replace("-fabric", "")
-                    .replace("-quilt", "")} ${typeOfVersion}`
-                );
-
-                this.UpdateStatus(
-                  account.name,
-                  "ausente",
-                  `${langs.playing_in} ${version_real
-                    .replace("-forge", "")
-                    .replace("-fabric", "")
-                    .replace("-quilt", "")} ${typeOfVersion}`
-                );
-              }
+              ipcRenderer.send("new-status-discord-jugando", `${langs.playing_in} ${versionStr}`);
+              this.UpdateStatus(account.name, "ausente", `${langs.playing_in} ${versionStr}`);
 
               modalDiv1.classList.remove("is-active");
               inicio = true;
@@ -4116,318 +3962,48 @@ recommendedOption.innerHTML = langs.recommended;
                 title: langs.minecraft_started_correctly,
                 body: langs.minecraft_started_correctly_body,
               });
-
               ipcRenderer.send("main-window-progress-reset");
             }
           }
 
           if (e.includes("Connecting to")) {
-            let msj = e.split("Connecting to ")[1].split("...")[0];
+            const msj = e.split("Connecting to ")[1].split("...")[0];
             info.innerHTML = `Conectando a ${msj}`;
           }
         });
 
         launch_core.on("progress", (progress, size) => {
           consoleOutput_ += `[DESCARGANDO] ${progress} / ${size}\n`;
-          if (seMostroInstalando_core) {
-          } else {
+          if (!seMostroInstalando_core) {
             seMostroInstalando_core = true;
           }
-          let progreso = ((progress / size) * 100).toFixed(0);
-          //si el progreso es más de 100, ponerlo a 100
-          if (progreso > 100) {
-            progreso = 100;
-          }
+          const progreso = Math.min((progress / size) * 100, 100).toFixed(0);
           progressBar1.style.display = "block";
           info.innerHTML = `Descargando... ${progreso}%`;
-          ipcRenderer.send("main-window-progress", {
-            progress,
-            size,
-          });
+          ipcRenderer.send("main-window-progress", { progress, size });
           progressBar1.value = progress;
           progressBar1.max = size;
         });
+
         launch_core.on("check", (progress, size) => {
           consoleOutput_ += `[INSTALANDO MC] ${progress} / ${size}\n`;
-          let seMostroInstalando = false;
-          if (seMostroInstalando) {
-          } else {
+          if (!seMostroInstalando) {
             logTextArea1.innerHTML = `${langs.extracting_loader}.`;
             seMostroInstalando = true;
           }
-          progressBar1.style.display = "";
-          let size_actual = 100;
-          let progress_actual = ((progress / size) * 100).toFixed(0);
-          ipcRenderer.send("main-window-progress", {
-            progress_actual,
-            size_actual,
-          });
+          const progress_actual = ((progress / size) * 100).toFixed(0);
+          ipcRenderer.send("main-window-progress", { progress_actual, size_actual: 100 });
           info.innerHTML = `Extrayendo ModPack... ${progress_actual}%`;
-          progressBar1.value = progress;
-          progressBar1.max = size;
-        });
-
-        launch_core.on("estimated", (time) => {
-          ipcRenderer.send("main-window-progress-reset");
-          /*
-                                  let hours = Math.floor(time / 3600);
-                                  let minutes = Math.floor((time - hours * 3600) / 60);
-                                  let seconds = Math.floor(time - hours * 3600 - minutes * 60);
-                                  console.log(`${hours}h ${minutes}m ${seconds}s`);*/
-        });
-
-        launch_core.on("speed", (speed) => {
-          /*
-                                                  let velocidad = speed / 1067008;
-                      
-                                                  if (velocidad > 0) {
-                                                      clearTimeout(timeoutId); // cancela el mensaje de alerta si la velocidad no es cero
-                                                  } else {
-                                                      timeoutId = setTimeout(() => {
-                                                          progressBar1.style.display = "none"
-                                                          progressBar1.max = 100;
-                                                          progressBar1.value = 0;
-                                                          playBtn.style.display = ""
-                                                          info.style.display = "none"
-                                                          clearTimeout(timeoutId);
-                                                          const swal  = require('sweetalert');
-                                                          crasheo = true;
-                      
-                                                          new Alert().ShowAlert({
-                                                              title: "Error",
-                                                              text: "Error al descargar esta versión. Reinicia el launcher o inténtalo de nuevo más tarde. [ERROR: 2]",
-                                                              icon: "error",
-                                                              button: "Aceptar",
-                                                          }).then((value) => {
-                                                              if(value) {
-                                                                  ipcRenderer.send('restartLauncher')
-                                                              }
-                                                          });
-                                                          
-                                                      }, 10000);
-                                                  }*/
-        });
-
-        let seMostroInstalando = false;
-        launch_core.on("patch", (patch) => {
-          consoleOutput_ += `[INSTALANDO LOADER] ${patch}\n`;
-          if (seMostroInstalando) {
-          } else {
-            logTextArea1.innerHTML = `${langs.extracting_loader}.`;
-            seMostroInstalando = true;
-          }
-        });
-
-        launch_core.on("data", async (e) => {
-          new logger("Minecraft", "#36b030");
-          consoleOutput_ += `[MC] ${e}\n`;
-          if (launcherSettings.launcher.close === "close-launcher")
-            ipcRenderer.send("main-window-hide");
-          progressBar1.style.display = "none";
-
-          if (e.includes("Launching with arguments"))
-            info.innerHTML = `${langs.starting_minecraft}...`;
-
-          if (iniciando == false) {
-            iniciando = true;
-
-            let serversDat = `${dataDirectory}/.battly/servers.dat`;
-
-            if (fs.existsSync(serversDat)) {
-                try {
-                    const serversDatFile = fs.readFileSync(serversDat);
-                    const serversDatData = await NBT.read(serversDatFile);
-
-                    const servers = this.BattlyConfig.promoted_servers;
-                    const existingIPs = new Set(serversDatData.data.servers.map(server => server.ip));
-
-                    const serversArray = servers.reduce((accumulator, server) => {
-                      if (!existingIPs.has(server.ip) && server.enabled) {
-                        accumulator.push(server);
-                      } else if (existingIPs.has(server.ip) && !server.enabled) {
-                        // Si está deshabilitado y la IP existe, la eliminamos
-                        serversDatData.data.servers = serversDatData.data.servers.filter(existingServer => existingServer.ip !== server.ip);
-                      } else if (existingIPs.has(server.ip) && server.enabled) {
-                        // Si está habilitado y la IP existe, la reemplazamos eliminando la antigua
-                        serversDatData.data.servers = serversDatData.data.servers.filter(existingServer => existingServer.ip !== server.ip);
-                        accumulator.push(server);
-                      }
-                      return accumulator;
-                    }, []);
-
-                  serversDatData.data.servers = serversArray.concat(serversDatData.data.servers);
-                  console.log(serversDatData);
-                    const editedServersDat = await NBT.write(serversDatData);
-                    fs.writeFileSync(serversDat, editedServersDat);
-                  } catch (error) {
-                    console.error("Error al procesar el archivo NBT");
-                    console.error(error);
-                  }
-              } else {
-                try {
-                  let servers = this.BattlyConfig.promoted_servers;
-
-                  let serversArray = [];
-
-                  for (let i = 0; i < servers.length; i++) {
-                    const newServer = {
-                      name: servers[i].name,
-                      ip: servers[i].ip,
-                      icon: servers[i].icon,
-                    };
-                    serversArray.push(newServer);
-                  }
-
-                  // Crear un nuevo archivo servers.dat con los servidores nuevos
-                  const newData = { servers: serversArray };
-                  const editedServersDat = await NBT.write(newData);
-                  fs.writeFileSync(serversDat, editedServersDat);
-                } catch (error) {
-                  console.error("Error al crear el nuevo archivo NBT:", error);
-                }
-              }
-            }
-
-          if (e.includes("Failed to start the minecraft server"))
-            return ShowCrashReport(`${langs.error_detected_one} \nError:\n${e}`);
-          if (e.includes('Exception in thread "main" '))
-            return ShowCrashReport(`${langs.error_detected_two} \nError:\n${e}`);
-
-          if (
-            e.includes(
-              "There is insufficient memory for the Java Runtime Environment to continue."
-            )
-          )
-            return ShowCrashReport(
-              `${langs.error_detected_three} \nError:\n${e}`
-            );
-          if (e.includes("Could not reserve enough space for object heap"))
-            return ShowCrashReport(
-              `${langs.error_detected_three} \nError:\n${e}`
-            );
-
-          if (e.includes("Forge patcher exited with code 1")) {
-            ShowCrashReport(`${langs.error_detected_four} \nError:\n${e}`);
-            progressBar1.style.display = "none";
-            info.style.display = "none";
-            playBtn.style.display = "";
-          }
-
-          if (e.includes("Unable to launch"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
-
-          if (
-            e.includes("Minecraft Crash Report") &&
-            !e.includes("THIS IS NOT A ERROR")
-          )
-            return ShowCrashReport(`${langs.error_detected_one} \nError:\n${e}`);
-
-          if (e.includes("java.lang.ClassCastException"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
-
-          if (e.includes("Minecraft has crashed!"))
-            return ShowCrashReport(
-              `${langs.error_detected_five} \nError:\n${e}`
-            );
-
-          if (
-            e.includes(`Setting user: ${account.name}`) ||
-            e.includes("Launching wrapped minecraft")
-          ) {
-            if (inicio == false) {
-              let typeOfVersion;
-              if (version_real.endsWith("-forge")) {
-                typeOfVersion = "Forge";
-              } else if (version_real.endsWith("-fabric")) {
-                typeOfVersion = "Fabric";
-              } else if (version_real.endsWith("-quilt")) {
-                typeOfVersion = "Quilt";
-              } else {
-                typeOfVersion = "";
-              }
-              ipcRenderer.send(
-                "new-status-discord-jugando",
-                `${langs.playing_in} ${version_real
-                  .replace("-forge", "")
-                  .replace("-fabric", "")
-                  .replace("-quilt", "")} ${typeOfVersion}`
-              );
-
-              this.UpdateStatus(
-                account.name,
-                "ausente",
-                `${langs.playing_in} ${version_real
-                  .replace("-forge", "")
-                  .replace("-fabric", "")
-                  .replace("-quilt", "")} ${typeOfVersion}`
-              );
-              modalDiv1.classList.remove("is-active");
-              inicio = true;
-              info.innerHTML = `${langs.minecraft_started_correctly}.`;
-              logTextArea1.innerHTML = ``;
-              textInfo.innerHTML = `Selecciona la versión que quieres abrir`;
-              ipcRenderer.send("new-notification", {
-                title: langs.minecraft_started_correctly,
-                body: langs.minecraft_started_correctly_body,
-              });
-
-              ipcRenderer.send("main-window-progress-reset");
-            }
-          }
-        });
-
-        launch_core.on("close", (code) => {
-          consoleOutput_ += `---------- [MC] Código de salida: ${code}\n ----------`;
-          modalDiv1.classList.remove("is-active");
-          if (launcherSettings.launcher.close === "close-launcher")
-            ipcRenderer.send("main-window-show");
-
-          ipcRenderer.send("updateStatus", {
-            status: "online",
-            details: langs.in_the_menu,
-            username: account.name,
-          });
-          progressBar1.style.display = "none";
-          info.style.display = "none";
-          playBtn.style.display = "";
-          info.innerHTML = `Verificando archivos...`;
-          footermodaliniciarversion.style.display = "";
-          textInfo.innerHTML = "Selecciona la versión que quieres abrir";
-          new logger("Launcher", "#3e8ed0");
-          console.log("🔧 Minecraft cerrado");
-
-          progressBar1.style.display = "none";
-
-          version = null;
-          versionType = null;
-          versionData = null;
-          version_real = null;
-          assets = null;
-          type = null;
-          isForgeCheckBox = false;
-          isFabricCheckBox = false;
-          isQuiltCheckBox = false;
-          document.getElementById("radioVanilla").removeAttribute("checked");
-          document.getElementById("radioForge").removeAttribute("checked");
-          document.getElementById("radioFabric").removeAttribute("checked");
-          document.getElementById("radioQuilt").removeAttribute("checked");
-
-          ipcRenderer.send("delete-and-new-status-discord");
-        });
-
-        launch_core.on("error", (err) => {
-          consoleOutput_ += `[ERROR] ${JSON.stringify(err, null, 2)}\n`;
+          progressBar1.style.display = "block";
+          progressBar1.value = progress_actual;
+          progressBar1.max = 100;
         });
       });
+
 
     document
       .getElementById("download-btn")
       .addEventListener("click", async () => {
-
 
         let versionMojangData = this.VersionsMojang;
         versionMojangData = versionMojangData.versions;
@@ -4497,6 +4073,7 @@ recommendedOption.innerHTML = langs.recommended;
         // Crear el div del contenido del modal
         let modalCard = document.createElement("div");
         modalCard.classList.add("modal-card");
+        modalCard.classList.add("ten-radius");
 
         // Crear el encabezado del modal
         let modalHeader = document.createElement("header");
@@ -4525,6 +4102,7 @@ recommendedOption.innerHTML = langs.recommended;
         let cardContentDiv = document.createElement("div");
         cardContentDiv.classList.add("card-content");
         cardContentDiv.style.backgroundColor = "#212121";
+        cardContentDiv.style.borderRadius = "0px !important";
 
         let mediaDiv = document.createElement("div");
         mediaDiv.classList.add("media");
@@ -4581,186 +4159,186 @@ recommendedOption.innerHTML = langs.recommended;
         contentDiv.appendChild(br);
         contentDiv.style.color = "white";
         contentDiv.innerHTML += `
-<div class="radio-button-container">
-  <input type="radio" class="radio-button__input" id="radio1-inicio" name="option" value="vanilla">
-  <label class="radio-button__label" for="radio1-inicio">
-    <span class="radio-button__custom"></span>
-    Vanilla
-  </label>
-  <input type="radio" class="radio-button__input" id="radio2-inicio" name="option" value="fabric">
-  <label class="radio-button__label" for="radio2-inicio">
-    <span class="radio-button__custom"></span>
-    Fabric
-  </label>
-  <input type="radio" class="radio-button__input" id="radio3-inicio" name="option" value="forge">
-  <label class="radio-button__label" for="radio3-inicio">
-    <span class="radio-button__custom"></span>
-    Forge
-  </label>
-  <input type="radio" class="radio-button__input" id="radio4-inicio" name="option" value="quilt">
-  <label class="radio-button__label" for="radio4-inicio">
-    <span class="radio-button__custom"></span>
-    Quilt
-  </label>
-  <input type="radio" class="radio-button__input" id="radio5-inicio" name="option" value="optifine">
-  <label class="radio-button__label" for="radio5-inicio">
-    <span class="radio-button__custom"></span>
-    OptiFine
-  </label>
-  <input type="radio" class="radio-button__input" id="radio6-inicio" name="option" value="clientes">
-  <label class="radio-button__label" for="radio6-inicio">
-    <span class="radio-button__custom"></span>
-    Clients
-  </label>
-  <input type="radio" class="radio-button__input" id="radio21-inicio" name="option" value="neoforge">
-  <label class="radio-button__label" for="radio21-inicio">
-    <span class="radio-button__custom"></span>
-     NeoForge
-  </label>
-  <input type="radio" class="radio-button__input" id="radio22-inicio" name="option" value="legacyfabric">
-  <label class="radio-button__label" for="radio22-inicio">
-    <span class="radio-button__custom"></span>
-    LegacyFabric
-  </label>
-</div>
-<br>
-<br>
-<div id="tipoDeVersiones">
-<div id="divNormal">
-              <input type="radio" class="radio-button__input" id="radio7-inicio" name="opcion" value="normal">
-  <label class="radio-button__label radio-button__input-with-margin" id="opcionNormal" for="radio7-inicio">
-    <span class="radio-button__custom"></span>
-    Normal
-  </label>
-              <br>
-              <div class="select is-link" id="normal" style="width: auto;">
-                <select id="selectNormal">
-                </select>
-              </div>
-
-            </div>
-
-
-              <div id="divSnapshot">
-                <input type="radio" class="radio-button__input" id="radio8-inicio" name="opcion" value="snapshot">
-  <label class="radio-button__label radio-button__input-with-margin" id="opcionSnapshot" for="radio8-inicio">
-    <span class="radio-button__custom"></span>
-    Snapshot
-  </label>
-                <br>
-                <div class="select is-link" id="snapshot" style="width: auto;">
-                  <select id="selectSnapshot">
-                  </select>
-                </div>
-              </div>
-
-              <div id="divBeta">
-
-                <input type="radio" class="radio-button__input" id="radio9-inicio" name="opcion" value="beta">
-  <label class="radio-button__label radio-button__input-with-margin" id="opcionBeta" for="radio9-inicio">
-    <span class="radio-button__custom"></span>
-    Beta
-  </label>
-                <br>
-                <div class="select is-link" id="beta" style="width: auto;">
-                    <select id="selectBeta">
+    <div class="radio-button-container">
+      <input type="radio" class="radio-button__input" id="radio1-inicio" name="option" value="vanilla">
+      <label class="radio-button__label" for="radio1-inicio">
+        <span class="radio-button__custom"></span>
+        Vanilla
+      </label>
+      <input type="radio" class="radio-button__input" id="radio2-inicio" name="option" value="fabric">
+      <label class="radio-button__label" for="radio2-inicio">
+        <span class="radio-button__custom"></span>
+        Fabric
+      </label>
+      <input type="radio" class="radio-button__input" id="radio3-inicio" name="option" value="forge">
+      <label class="radio-button__label" for="radio3-inicio">
+        <span class="radio-button__custom"></span>
+        Forge
+      </label>
+      <input type="radio" class="radio-button__input" id="radio4-inicio" name="option" value="quilt">
+      <label class="radio-button__label" for="radio4-inicio">
+        <span class="radio-button__custom"></span>
+        Quilt
+      </label>
+      <input type="radio" class="radio-button__input" id="radio5-inicio" name="option" value="optifine">
+      <label class="radio-button__label" for="radio5-inicio">
+        <span class="radio-button__custom"></span>
+        OptiFine
+      </label>
+      <input type="radio" class="radio-button__input" id="radio6-inicio" name="option" value="clientes">
+      <label class="radio-button__label" for="radio6-inicio">
+        <span class="radio-button__custom"></span>
+        Clients
+      </label>
+      <input type="radio" class="radio-button__input" id="radio21-inicio" name="option" value="neoforge">
+      <label class="radio-button__label" for="radio21-inicio">
+        <span class="radio-button__custom"></span>
+         NeoForge
+      </label>
+      <input type="radio" class="radio-button__input" id="radio22-inicio" name="option" value="legacyfabric">
+      <label class="radio-button__label" for="radio22-inicio">
+        <span class="radio-button__custom"></span>
+        LegacyFabric
+      </label>
+    </div>
+    <br>
+    <br>
+    <div id="tipoDeVersiones">
+    <div id="divNormal">
+                  <input type="radio" class="radio-button__input" id="radio7-inicio" name="opcion" value="normal">
+      <label class="radio-button__label radio-button__input-with-margin" id="opcionNormal" for="radio7-inicio">
+        <span class="radio-button__custom"></span>
+        Normal
+      </label>
+                  <br>
+                  <div class="select is-link" id="normal" style="width: auto;">
+                    <select id="selectNormal">
                     </select>
-                    </div>
-                    </div>
+                  </div>
 
-                <div id="divAlpha">
+                </div>
 
-                <input type="radio" class="radio-button__input" id="radio20-inicio" name="opcion" value="alpha">
-  <label class="radio-button__label radio-button__input-with-margin" id="opcionAlpha" for="radio20-inicio">
-    <span class="radio-button__custom"></span>
-    Alpha
-  </label>
+
+                  <div id="divSnapshot">
+                    <input type="radio" class="radio-button__input" id="radio8-inicio" name="opcion" value="snapshot">
+      <label class="radio-button__label radio-button__input-with-margin" id="opcionSnapshot" for="radio8-inicio">
+        <span class="radio-button__custom"></span>
+        Snapshot
+      </label>
                     <br>
-                    <div class="select is-link" id="alpha" style="width: auto;">
-                        <select id="selectAlpha">
-                        </select>
+                    <div class="select is-link" id="snapshot" style="width: auto;">
+                      <select id="selectSnapshot">
+                      </select>
                     </div>
-                </div>
-
-            </div>
-
-              <div id="versionesFabric">
-                <label>${langs.choose_fabric_version}
-                </label>
-                <br>
-                <div class="select is-link" id="fabric" style="width: auto;">
-                  <select id="selectFabric">
-                  </select>
-                </div>
-              </div>
-
-              <div id="versionesForge">
-                <label>${langs.choose_forge_version}
-                </label>
-                <br>
-                <div class="select is-link" id="forge" style="width: auto;">
-                  <select id="selectForge">
-                  </select>
-                </div>
-                <div class="select is-link" id="forgebuild" style="width: auto;">
-                  <select id="selectForgeBuild">
-                    <option value="recommended">${langs.recommended}</option>
-                    <option value="latest">${langs.latest}</option>
-                  </select>
-                </div>
-              </div>
-
-              <div id="versionesQuilt">
-                <label>${langs.choose_quilt_version}
-                </label>
-                <br>
-                <div class="select is-link" id="quilt" style="width: auto;">
-                  <select id="selectQuilt">
-                  </select>
-                </div>
-              </div>
-
-              <div id="versionesOptiFine">
-                <label>${langs.choose_optifine_version}
-                </label>
-                <br>
-                <div class="select is-link" id="optifine" style="width: auto;">
-                  <select id="selectOptiFine">
-                  </select>
-                </div>
-              </div>
-              <div id="versionesClientes">
-                <label>${langs.choose_a_client}
-                </label>
-                <br>
-                <div class="select is-link" id="clientes" style="width: auto;">
-                  <select id="selectClientes">
-                  </select>
-                </div>
-              </div>
-
-              <div id="versionesNeoForge">
-                <label>${langs.choose_neoforge_version}
-                </label>
-                <br>
-                <div class="select is-link" id="neoforge" style="width: auto;">
-                  <select id="selectNeoForge">
-                  </select>
-                  </div>
                   </div>
 
-              <div id="versionesLegacyFabric">
-                <label>${langs.choose_legacyfabric_version}
-                </label>
-                <br>
-                <div class="select is-link" id="legacyfabric" style="width: auto;">
-                  <select id="selectLegacyFabric">
-                  </select>
-                  </div>
-                  </div>
-</div>
+                  <div id="divBeta">
 
-`;
+                    <input type="radio" class="radio-button__input" id="radio9-inicio" name="opcion" value="beta">
+      <label class="radio-button__label radio-button__input-with-margin" id="opcionBeta" for="radio9-inicio">
+        <span class="radio-button__custom"></span>
+        Beta
+      </label>
+                    <br>
+                    <div class="select is-link" id="beta" style="width: auto;">
+                        <select id="selectBeta">
+                        </select>
+                        </div>
+                        </div>
+
+                    <div id="divAlpha">
+
+                    <input type="radio" class="radio-button__input" id="radio20-inicio" name="opcion" value="alpha">
+      <label class="radio-button__label radio-button__input-with-margin" id="opcionAlpha" for="radio20-inicio">
+        <span class="radio-button__custom"></span>
+        Alpha
+      </label>
+                        <br>
+                        <div class="select is-link" id="alpha" style="width: auto;">
+                            <select id="selectAlpha">
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                  <div id="versionesFabric">
+                    <label>${langs.choose_fabric_version}
+                    </label>
+                    <br>
+                    <div class="select is-link" id="fabric" style="width: auto;">
+                      <select id="selectFabric">
+                      </select>
+                    </div>
+                  </div>
+
+                  <div id="versionesForge">
+                    <label>${langs.choose_forge_version}
+                    </label>
+                    <br>
+                    <div class="select is-link" id="forge" style="width: auto;">
+                      <select id="selectForge">
+                      </select>
+                    </div>
+                    <div class="select is-link" id="forgebuild" style="width: auto;">
+                      <select id="selectForgeBuild">
+                        <option value="recommended">${langs.recommended}</option>
+                        <option value="latest">${langs.latest}</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div id="versionesQuilt">
+                    <label>${langs.choose_quilt_version}
+                    </label>
+                    <br>
+                    <div class="select is-link" id="quilt" style="width: auto;">
+                      <select id="selectQuilt">
+                      </select>
+                    </div>
+                  </div>
+
+                  <div id="versionesOptiFine">
+                    <label>${langs.choose_optifine_version}
+                    </label>
+                    <br>
+                    <div class="select is-link" id="optifine" style="width: auto;">
+                      <select id="selectOptiFine">
+                      </select>
+                    </div>
+                  </div>
+                  <div id="versionesClientes">
+                    <label>${langs.choose_a_client}
+                    </label>
+                    <br>
+                    <div class="select is-link" id="clientes" style="width: auto;">
+                      <select id="selectClientes">
+                      </select>
+                    </div>
+                  </div>
+
+                  <div id="versionesNeoForge">
+                    <label>${langs.choose_neoforge_version}
+                    </label>
+                    <br>
+                    <div class="select is-link" id="neoforge" style="width: auto;">
+                      <select id="selectNeoForge">
+                      </select>
+                      </div>
+                      </div>
+
+                  <div id="versionesLegacyFabric">
+                    <label>${langs.choose_legacyfabric_version}
+                    </label>
+                    <br>
+                    <div class="select is-link" id="legacyfabric" style="width: auto;">
+                      <select id="selectLegacyFabric">
+                      </select>
+                      </div>
+                      </div>
+    </div>
+
+    `;
 
         cardContentDiv.appendChild(contentDiv);
         cardDiv.appendChild(cardContentDiv);
@@ -4771,6 +4349,7 @@ recommendedOption.innerHTML = langs.recommended;
         let cardFooterItemDiv = document.createElement("div");
         cardFooterItemDiv.classList.add("card-footer-item");
         cardFooterItemDiv.style.backgroundColor = "#212121";
+        cardFooterItemDiv.style.borderRadius = "0px !important";
 
         let footerText = document.createElement("p");
         footerText.style.fontSize = "10px";
@@ -4882,7 +4461,8 @@ recommendedOption.innerHTML = langs.recommended;
         const neoforge = document.getElementById("versionesNeoForge");
         const neoforgeVersionType = document.getElementById("selectNeoForge");
         const legacyfabric = document.getElementById("versionesLegacyFabric");
-        const legacyfabricVersionType = document.getElementById("selectLegacyFabric");
+        const legacyfabricVersionType =
+          document.getElementById("selectLegacyFabric");
 
         let titleVersions = document.getElementById("titleVersions");
         let subtitleVersions = document.getElementById("subtitleVersions");
@@ -5003,7 +4583,8 @@ recommendedOption.innerHTML = langs.recommended;
               legacyfabric.style.display = "none";
               titleVersions.innerHTML = "NeoForge";
               subtitleVersions.innerHTML =
-                '<i class="fas fa-download"></i> ' + neoforgeVersionType.value.replace("-neoforge", "");
+                '<i class="fas fa-download"></i> ' +
+                neoforgeVersionType.value.replace("-neoforge", "");
             } else if (element.value == "legacyfabric") {
               versionImg.src = "./assets/images/icons/legacyfabric.png";
               tipoDeVersiones.style.display = "none";
@@ -5016,7 +4597,8 @@ recommendedOption.innerHTML = langs.recommended;
               neoforge.style.display = "none";
               titleVersions.innerHTML = "LegacyFabric";
               subtitleVersions.innerHTML =
-                '<i class="fas fa-download"></i> ' + legacyfabricVersionType.value.replace("-legacyfabric", "");
+                '<i class="fas fa-download"></i> ' +
+                legacyfabricVersionType.value.replace("-legacyfabric", "");
             }
           });
         });
@@ -5087,7 +4669,7 @@ recommendedOption.innerHTML = langs.recommended;
           subtitleVersions.innerHTML =
             '<i class="fas fa-download"></i> ' +
             forgeVersionType.value.replace("-forge", "");
-          
+
           neoforgeVersionType.addEventListener("change", () => {
             subtitleVersions.innerHTML =
               '<i class="fas fa-download"></i> ' +
@@ -5119,7 +4701,9 @@ recommendedOption.innerHTML = langs.recommended;
                   selectForgeBuild.innerHTML = "";
 
                   // Agregar la opción "recommended"
-                  selectForgeBuild.appendChild(recommendedOption.cloneNode(true));
+                  selectForgeBuild.appendChild(
+                    recommendedOption.cloneNode(true)
+                  );
 
                   // Agregar las otras versiones
                   for (let j = 0; j < build.length - 1; j++) {
@@ -5307,24 +4891,27 @@ recommendedOption.innerHTML = langs.recommended;
           //obtener el valor de option y ver si el value de checked es vanilla
           if (
             document.querySelector('input[name="option"]:checked').value ==
-              "vanilla" &&
+            "vanilla" &&
             document.querySelector('input[name="opcion"]:checked') == null
           )
             return new Alert().ShowAlert({
               icon: "error",
               title: langs.you_need_select_version,
             });
-          
-          if (this.database.getAccounts().length == 0) return new Alert().ShowAlert({
-            icon: "error",
-            title: langs.no_accounts,
-            text: langs.no_accounts_text
-          });
+
+          if (this.database.getAccounts().length == 0)
+            return new Alert().ShowAlert({
+              icon: "error",
+              title: langs.no_accounts,
+              text: langs.no_accounts_text,
+            });
 
           let urlpkg = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url;
           let uuid = (await this.database.get("1234", "accounts-selected"))
             .value;
-          let account = this.database.getAccounts().find(account => account.uuid === uuid.selected);
+          let account = this.database
+            .getAccounts()
+            .find((account) => account.uuid === uuid.selected);
           let ram = (await this.database.get("1234", "ram")).value;
           let Resolution = (await this.database.get("1234", "screen")).value;
           let launcherSettings = (await this.database.get("1234", "launcher"))
@@ -5456,7 +5043,7 @@ recommendedOption.innerHTML = langs.recommended;
 
             let logText1 = document.createElement("span");
             logText1.style.fontSize = "15px";
-            logText1.style.color = "white"; 
+            logText1.style.color = "white";
             logText1.innerText = langs.log;
 
             let logTextArea1 = document.createElement("textarea");
@@ -5499,7 +5086,7 @@ recommendedOption.innerHTML = langs.recommended;
             /* <footer class="modal-card-foot">
       <button class="button is-info" id="guardar-logs-inicio">Guardar Logs</button>
     </footer>
-*/
+  */
 
             // Crear el pie del modal
             let modalFooter1 = document.createElement("footer");
@@ -5657,10 +5244,13 @@ recommendedOption.innerHTML = langs.recommended;
                 });
                 return false;
               } else {
-                const inputRutaJava = document.getElementById("ruta-java-input");
+                const inputRutaJava =
+                  document.getElementById("ruta-java-input");
                 if (process.platform === "win32") {
                   if (
-                    fs.existsSync(`${dataDirectory}/.battly/runtime/jre-17.0.8-win32`)
+                    fs.existsSync(
+                      `${dataDirectory}/.battly/runtime/jre-17.0.8-win32`
+                    )
                   ) {
                     //si existe, poner la ruta en el input
                     inputRutaJava.value = `${dataDirectory}/.battly/runtime/jre-17.0.8-win32/bin/java.exe`;
@@ -5767,7 +5357,7 @@ recommendedOption.innerHTML = langs.recommended;
                           "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                           "-Dauthlibinjector.mojangAntiFeatures=enabled",
                           "-Dauthlibinjector.noShowServerName",
-                          "-Dauthlibinjector.disableHttpd"
+                          "-Dauthlibinjector.disableHttpd",
                         ],
                       });
                     } else {
@@ -5826,7 +5416,7 @@ recommendedOption.innerHTML = langs.recommended;
                           "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                           "-Dauthlibinjector.mojangAntiFeatures=enabled",
                           "-Dauthlibinjector.noShowServerName",
-                          "-Dauthlibinjector.disableHttpd"
+                          "-Dauthlibinjector.disableHttpd",
                         ],
                       });
                     } else {
@@ -5883,14 +5473,18 @@ recommendedOption.innerHTML = langs.recommended;
                         `${langs.error_detected_three} \nError:\n${e}`
                       );
                     if (
-                      e.includes("Could not reserve enough space for object heap")
+                      e.includes(
+                        "Could not reserve enough space for object heap"
+                      )
                     )
                       return ShowCrashReport(
                         `${langs.error_detected_three} \nError:\n${e}`
                       );
 
                     if (e.includes("Forge patcher exited with code 1")) {
-                      ShowCrashReport(`${langs.error_detected_four} \nError:\n${e}`);
+                      ShowCrashReport(
+                        `${langs.error_detected_four} \nError:\n${e}`
+                      );
                       progressBar1.style.display = "none";
                       info.style.display = "none";
                       playBtn.style.display = "";
@@ -5935,7 +5529,9 @@ recommendedOption.innerHTML = langs.recommended;
                           body: langs.minecraft_started_correctly_body,
                         });
 
-                        if (launcherSettings.launcher.close === "close-launcher")
+                        if (
+                          launcherSettings.launcher.close === "close-launcher"
+                        )
                           ipcRenderer.send("main-window-hide");
 
                         ipcRenderer.send("main-window-progress-reset");
@@ -5962,14 +5558,18 @@ recommendedOption.innerHTML = langs.recommended;
                         `${langs.error_detected_three} \nError:\n${e}`
                       );
                     if (
-                      e.includes("Could not reserve enough space for object heap")
+                      e.includes(
+                        "Could not reserve enough space for object heap"
+                      )
                     )
                       return ShowCrashReport(
                         `${langs.error_detected_three} \nError:\n${e}`
                       );
 
                     if (e.includes("Forge patcher exited with code 1")) {
-                      ShowCrashReport(`${langs.error_detected_four} \nError:\n${e}`);
+                      ShowCrashReport(
+                        `${langs.error_detected_four} \nError:\n${e}`
+                      );
                       progressBar1.style.display = "none";
                       info.style.display = "none";
                       playBtn.style.display = "";
@@ -6028,8 +5628,7 @@ recommendedOption.innerHTML = langs.recommended;
                   launch.on("download-status", (e) => {
                     if (e.type == "task") {
                       if (e.task == "Downloading") {
-                        progressText1.innerHTML =
-                          `🔄 ${langs.downloading_files}... ${e.progress}%`;
+                        progressText1.innerHTML = `🔄 ${langs.downloading_files}... ${e.progress}%`;
                         progressBar1.value = e.progress;
                       }
                     }
@@ -6119,13 +5718,14 @@ recommendedOption.innerHTML = langs.recommended;
                                             <div class="progress-fill battly-s3gsqm" id="progress" style="width: 0%;"></div>
                                         </div>
             */
-            
+
             const progressBar1 = document.createElement("div");
             progressBar1.className = "progress-bar info battly-s3gsqm";
             progressBar1.id = "progress-bar";
 
             const progressFill1 = document.createElement("div");
-            progressFill1.className = "progress-fill battly-s3gsqm animated-fill";
+            progressFill1.className =
+              "progress-fill battly-s3gsqm animated-fill";
             progressFill1.id = "progress";
             progressFill1.style.width = "0%";
             progressBar1.appendChild(progressFill1);
@@ -6175,7 +5775,7 @@ recommendedOption.innerHTML = langs.recommended;
             /* <footer class="modal-card-foot">
       <button class="button is-info" id="guardar-logs-inicio">Guardar Logs</button>
     </footer>
-*/
+  */
 
             // Crear el pie del modal
             let modalFooter1 = document.createElement("footer");
@@ -6267,8 +5867,7 @@ recommendedOption.innerHTML = langs.recommended;
                 progressFill1.style.width = "10%";
                 updateTextareaScroll();
               } else {
-                logTextArea1.value +=
-                  `⏩ ${langs.the_folder} libraries ${langs.already_exists}. ${langs.skipping}...\n`;
+                logTextArea1.value += `⏩ ${langs.the_folder} libraries ${langs.already_exists}. ${langs.skipping}...\n`;
                 progressFill1.style.width = "20%";
                 updateTextareaScroll();
               }
@@ -6285,8 +5884,7 @@ recommendedOption.innerHTML = langs.recommended;
                 progressFill1.style.width = "20%";
                 updateTextareaScroll();
               } else {
-                logTextArea1.value +=
-                  `⏩ ${langs.the_folder} optifine ${langs.already_exists}. ${langs.skipping}...\n`;
+                logTextArea1.value += `⏩ ${langs.the_folder} optifine ${langs.already_exists}. ${langs.skipping}...\n`;
                 progressFill1.style.width = "20%";
                 updateTextareaScroll();
               }
@@ -6308,8 +5906,7 @@ recommendedOption.innerHTML = langs.recommended;
                 progressFill1.style.width = "30%";
                 updateTextareaScroll();
               } else {
-                logTextArea1.value +=
-                  `⏩ ${langs.the_folder} OptiFine ${langs.already_exists}. ${langs.skipping}...\n`;
+                logTextArea1.value += `⏩ ${langs.the_folder} OptiFine ${langs.already_exists}. ${langs.skipping}...\n`;
                 progressFill1.style.width = "30%";
                 updateTextareaScroll();
               }
@@ -6331,8 +5928,7 @@ recommendedOption.innerHTML = langs.recommended;
                 progressFill1.style.width = "40%";
                 updateTextareaScroll();
               } else {
-                logTextArea1.value +=
-                  `⏩ ${langs.the_folder} launchwrapper-of ${langs.already_exists}. ${langs.skipping}...\n`;
+                logTextArea1.value += `⏩ ${langs.the_folder} launchwrapper-of ${langs.already_exists}. ${langs.skipping}...\n`;
                 progressFill1.style.width = "40%";
                 updateTextareaScroll();
               }
@@ -6354,8 +5950,7 @@ recommendedOption.innerHTML = langs.recommended;
                 progressFill1.style.width = "50%";
                 updateTextareaScroll();
               } else {
-                logTextArea1.value +=
-                  `⏩ ${langs.the_folder} 2.1 ${langs.already_exists}. ${langs.skipping}...\n`;
+                logTextArea1.value += `⏩ ${langs.the_folder} 2.1 ${langs.already_exists}. ${langs.skipping}...\n`;
                 progressFill1.style.width = "50%";
                 updateTextareaScroll();
               }
@@ -6377,8 +5972,7 @@ recommendedOption.innerHTML = langs.recommended;
                 progressFill1.style.width = "60%";
                 updateTextareaScroll();
               } else {
-                logTextArea1.value +=
-                  `⏩ ${langs.the_folder} 2.2 ${langs.already_exists}. ${langs.skipping}...\n`;
+                logTextArea1.value += `⏩ ${langs.the_folder} 2.2 ${langs.already_exists}. ${langs.skipping}...\n`;
                 progressFill1.style.width = "60%";
                 updateTextareaScroll();
               }
@@ -6400,8 +5994,7 @@ recommendedOption.innerHTML = langs.recommended;
                 progressFill1.style.width = "70%";
                 updateTextareaScroll();
               } else {
-                logTextArea1.value +=
-                  `⏩ ${langs.the_folder} 2.3 ${langs.already_exists}. ${langs.skipping}...\n`;
+                logTextArea1.value += `⏩ ${langs.the_folder} 2.3 ${langs.already_exists}. ${langs.skipping}...\n`;
                 progressFill1.style.width = "70%";
                 updateTextareaScroll();
               }
@@ -6448,8 +6041,7 @@ recommendedOption.innerHTML = langs.recommended;
                 ""
               )}/OptiFine-${fileName.replace("-OptiFine", "")}.jar`;
 
-              logTextArea1.value +=
-                `🔄 ${langs.downloading_jar_file_of}...\n`;
+              logTextArea1.value += `🔄 ${langs.downloading_jar_file_of}...\n`;
               updateTextareaScroll();
               const libraryJARFile = fs.createWriteStream(
                 `${dataDirectory}/.battly/libraries/optifine/OptiFine/${fileName.replace(
@@ -6473,22 +6065,19 @@ recommendedOption.innerHTML = langs.recommended;
               const wrapperJAR21File = fs.createWriteStream(
                 `${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.1/launchwrapper-of-2.1.jar`
               );
-              logTextArea1.value +=
-                `🔄 ${langs.downloading_file} launchwrapper 2.1...\n`;
+              logTextArea1.value += `🔄 ${langs.downloading_file} launchwrapper 2.1...\n`;
               updateTextareaScroll();
 
               const wrapperJAR22File = fs.createWriteStream(
                 `${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.2/launchwrapper-of-2.2.jar`
               );
-              logTextArea1.value +=
-                `🔄 ${langs.downloading_file} launchwrapper 2.2...\n`;
+              logTextArea1.value += `🔄 ${langs.downloading_file} launchwrapper 2.2...\n`;
               updateTextareaScroll();
 
               const wrapperJAR23File = fs.createWriteStream(
                 `${dataDirectory}/.battly/libraries/optifine/launchwrapper-of/2.3/launchwrapper-of-2.3.jar`
               );
-              logTextArea1.value +=
-                `🔄 ${langs.downloading_file} launchwrapper 2.3...\n`;
+              logTextArea1.value += `🔄 ${langs.downloading_file} launchwrapper 2.3...\n`;
               updateTextareaScroll();
 
               const wrapperJAR21Response = await downloadFile(
@@ -6527,10 +6116,13 @@ recommendedOption.innerHTML = langs.recommended;
                 });
                 return false;
               } else {
-                const inputRutaJava = document.getElementById("ruta-java-input");
+                const inputRutaJava =
+                  document.getElementById("ruta-java-input");
                 if (process.platform === "win32") {
                   if (
-                    fs.existsSync(`${dataDirectory}/.battly/runtime/jre-17.0.8-win32`)
+                    fs.existsSync(
+                      `${dataDirectory}/.battly/runtime/jre-17.0.8-win32`
+                    )
                   ) {
                     //si existe, poner la ruta en el input
                     inputRutaJava.value = `${dataDirectory}/.battly/runtime/jre-17.0.8-win32/bin/java.exe`;
@@ -6594,8 +6186,7 @@ recommendedOption.innerHTML = langs.recommended;
                   await downloadFiles();
                   await CreateLibrariesDirectory();
 
-                  progressText1.innerHTML =
-                    `✅ ${langs.downloading_files_completed}.`;
+                  progressText1.innerHTML = `✅ ${langs.downloading_files_completed}.`;
                   logText1.innerHTML = `🔄 ${langs.opening_optifine}...`;
                   logTextArea1.innerHTML += `✅ ${langs.downloading_files_completed_installing_dependencies}...`;
                   progressFill1.style.width = "100%";
@@ -6631,7 +6222,7 @@ recommendedOption.innerHTML = langs.recommended;
                           "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                           "-Dauthlibinjector.mojangAntiFeatures=enabled",
                           "-Dauthlibinjector.noShowServerName",
-                          "-Dauthlibinjector.disableHttpd"
+                          "-Dauthlibinjector.disableHttpd",
                         ],
                       });
                     } else {
@@ -6690,7 +6281,7 @@ recommendedOption.innerHTML = langs.recommended;
                           "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                           "-Dauthlibinjector.mojangAntiFeatures=enabled",
                           "-Dauthlibinjector.noShowServerName",
-                          "-Dauthlibinjector.disableHttpd"
+                          "-Dauthlibinjector.disableHttpd",
                         ],
                       });
                     } else {
@@ -6747,14 +6338,18 @@ recommendedOption.innerHTML = langs.recommended;
                         `${langs.error_detected_three} \nError:\n${e}`
                       );
                     if (
-                      e.includes("Could not reserve enough space for object heap")
+                      e.includes(
+                        "Could not reserve enough space for object heap"
+                      )
                     )
                       return ShowCrashReport(
                         `${langs.error_detected_three} \nError:\n${e}`
                       );
 
                     if (e.includes("Forge patcher exited with code 1")) {
-                      ShowCrashReport(`${langs.error_detected_four} \nError:\n${e}`);
+                      ShowCrashReport(
+                        `${langs.error_detected_four} \nError:\n${e}`
+                      );
                       progressBar1.style.display = "none";
                       info.style.display = "none";
                       playBtn.style.display = "";
@@ -6799,7 +6394,9 @@ recommendedOption.innerHTML = langs.recommended;
                           body: langs.minecraft_started_correctly_body,
                         });
 
-                        if (launcherSettings.launcher.close === "close-launcher")
+                        if (
+                          launcherSettings.launcher.close === "close-launcher"
+                        )
                           ipcRenderer.send("main-window-hide");
 
                         ipcRenderer.send("main-window-progress-reset");
@@ -6826,14 +6423,18 @@ recommendedOption.innerHTML = langs.recommended;
                         `${langs.error_detected_three} \nError:\n${e}`
                       );
                     if (
-                      e.includes("Could not reserve enough space for object heap")
+                      e.includes(
+                        "Could not reserve enough space for object heap"
+                      )
                     )
                       return ShowCrashReport(
                         `${langs.error_detected_three} \nError:\n${e}`
                       );
 
                     if (e.includes("Forge patcher exited with code 1")) {
-                      ShowCrashReport(`${langs.error_detected_four} \nError:\n${e}`);
+                      ShowCrashReport(
+                        `${langs.error_detected_four} \nError:\n${e}`
+                      );
                       progressBar1.style.display = "none";
                       info.style.display = "none";
                       playBtn.style.display = "";
@@ -6895,14 +6496,15 @@ recommendedOption.innerHTML = langs.recommended;
                     if (e.type == "task") {
                       if (e.task == "Downloading") {
                         progressText1.innerHTML =
-                          `🔄 ${langs.downloading_files}... ` + e.progress + "%";
+                          `🔄 ${langs.downloading_files}... ` +
+                          e.progress +
+                          "%";
                         progressFill1.style.width = e.progress + "%";
                       }
                     }
                   });
                 }
               });
-              
             } catch (error) {
               console.error("Error durante la descarga:");
               console.error(error);
@@ -6915,7 +6517,7 @@ recommendedOption.innerHTML = langs.recommended;
           let modalDiv1 = document.createElement("div");
           modalDiv1.classList.add("modal");
           modalDiv1.classList.add("is-active");
-            modalDiv1.id = "modalDiv1-download";
+          modalDiv1.id = "modalDiv1-download";
 
           // Crear el fondo del modal
           let modalBackground1 = document.createElement("div");
@@ -6976,7 +6578,7 @@ recommendedOption.innerHTML = langs.recommended;
           let logTextArea1 = document.createElement("textarea");
           logTextArea1.classList.add("textarea");
           logTextArea1.classList.add("is-link");
-            logTextArea1.id = "battly-logs";
+          logTextArea1.id = "battly-logs";
           logTextArea1.placeholder = langs.battly_log;
           logTextArea1.disabled = true;
           logTextArea1.style.overflow = "hidden";
@@ -7013,7 +6615,7 @@ recommendedOption.innerHTML = langs.recommended;
           /* <footer class="modal-card-foot">
       <button class="button is-info" id="guardar-logs-inicio">Guardar Logs</button>
     </footer>
-*/
+  */
 
           // Crear el pie del modal
           let modalFooter1 = document.createElement("footer");
@@ -7066,11 +6668,10 @@ recommendedOption.innerHTML = langs.recommended;
             .replace("-fabric", "")
             .replace("-quilt", "")
             .replace("-neoforge", "")
-            .replace("-legacyfabric", "")
-          
+            .replace("-legacyfabric", "");
 
           if (versionType === "forge") {
-            console.log("is Forge")
+            console.log("is Forge");
             version = version.replace("-forge", "");
             isForgeCheckBox = true;
             isFabricCheckBox = false;
@@ -7107,7 +6708,6 @@ recommendedOption.innerHTML = langs.recommended;
             isLegacyFabricCheckBox = true;
           }
 
-
           let type;
           if (isForgeCheckBox === true) {
             type = "forge";
@@ -7129,7 +6729,6 @@ recommendedOption.innerHTML = langs.recommended;
             mcModPack = "vanilla";
           }
 
-        
           let assets;
           let versionData;
           if (version_real === "1.8") {
@@ -7146,10 +6745,9 @@ recommendedOption.innerHTML = langs.recommended;
           ) {
             assets = JSON.parse(
               fs.readFileSync(
-                `${dataDirectory}/${
-                  process.platform == "darwin"
-                    ? this.config.dataDirectory
-                    : `.${this.config.dataDirectory}`
+                `${dataDirectory}/${process.platform == "darwin"
+                  ? this.config.dataDirectory
+                  : `.${this.config.dataDirectory}`
                 }/versions/${version_real}/${version_real}.json`
               )
             ).assets;
@@ -7165,10 +6763,9 @@ recommendedOption.innerHTML = langs.recommended;
           ) {
             assets = JSON.parse(
               fs.readFileSync(
-                `${dataDirectory}/${
-                  process.platform == "darwin"
-                    ? this.config.dataDirectory
-                    : `.${this.config.dataDirectory}`
+                `${dataDirectory}/${process.platform == "darwin"
+                  ? this.config.dataDirectory
+                  : `.${this.config.dataDirectory}`
                 }/versions/${version_real}/${version_real}.json`
               )
             ).inheritsFrom;
@@ -7184,10 +6781,9 @@ recommendedOption.innerHTML = langs.recommended;
           ) {
             assets = JSON.parse(
               fs.readFileSync(
-                `${dataDirectory}/${
-                  process.platform == "darwin"
-                    ? this.config.dataDirectory
-                    : `.${this.config.dataDirectory}`
+                `${dataDirectory}/${process.platform == "darwin"
+                  ? this.config.dataDirectory
+                  : `.${this.config.dataDirectory}`
                 }/versions/${version_real}/${version_real}.json`
               )
             )._minecraftVersion;
@@ -7213,13 +6809,13 @@ recommendedOption.innerHTML = langs.recommended;
           }
 
           let opts;
-          console.log(version)
+          console.log(version);
           if (!version.endsWith("-extra") && !version.includes("OptiFine")) {
             if (account.type === "battly") {
               opts = {
                 url:
                   this.config.game_url === "" ||
-                  this.config.game_url === undefined
+                    this.config.game_url === undefined
                     ? `${urlpkg}/files`
                     : this.config.game_url,
                 authorization: account,
@@ -7241,9 +6837,9 @@ recommendedOption.innerHTML = langs.recommended;
                   enable: isForgeCheckBox
                     ? true
                     : isFabricCheckBox
-                    ? true
-                    : isQuiltCheckBox
-                    ? true
+                      ? true
+                      : isQuiltCheckBox
+                        ? true
                         : isNeoForgeCheckBox
                           ? true
                           : isLegacyFabricCheckBox
@@ -7260,15 +6856,15 @@ recommendedOption.innerHTML = langs.recommended;
                 JVM_ARGS: [
                   "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                   "-Dauthlibinjector.mojangAntiFeatures=enabled",
-                    "-Dauthlibinjector.noShowServerName",
-                    "-Dauthlibinjector.disableHttpd"
+                  "-Dauthlibinjector.noShowServerName",
+                  "-Dauthlibinjector.disableHttpd",
                 ],
               };
             } else {
               opts = {
                 url:
                   this.config.game_url === "" ||
-                  this.config.game_url === undefined
+                    this.config.game_url === undefined
                     ? `${urlpkg}/files`
                     : this.config.game_url,
                 authorization: account,
@@ -7290,10 +6886,10 @@ recommendedOption.innerHTML = langs.recommended;
                   enable: isForgeCheckBox
                     ? true
                     : isFabricCheckBox
-                    ? true
-                    : isQuiltCheckBox
-                    ? true
-                    : false,
+                      ? true
+                      : isQuiltCheckBox
+                        ? true
+                        : false,
                 },
                 verify: false,
                 ignored: ["loader", ...this.config.ignored],
@@ -7309,7 +6905,7 @@ recommendedOption.innerHTML = langs.recommended;
               opts = {
                 url:
                   this.config.game_url === "" ||
-                  this.config.game_url === undefined
+                    this.config.game_url === undefined
                     ? `${urlpkg}/files`
                     : this.config.game_url,
                 authorization: account,
@@ -7331,10 +6927,10 @@ recommendedOption.innerHTML = langs.recommended;
                   enable: isForgeCheckBox
                     ? true
                     : isFabricCheckBox
-                    ? true
-                    : isQuiltCheckBox
-                    ? true
-                    : false,
+                      ? true
+                      : isQuiltCheckBox
+                        ? true
+                        : false,
                 },
                 verify: false,
                 ignored: ["loader", ...this.config.ignored],
@@ -7346,15 +6942,15 @@ recommendedOption.innerHTML = langs.recommended;
                 customArgs: [
                   "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
                   "-Dauthlibinjector.mojangAntiFeatures=enabled",
-                    "-Dauthlibinjector.noShowServerName",
-                    "-Dauthlibinjector.disableHttpd"
+                  "-Dauthlibinjector.noShowServerName",
+                  "-Dauthlibinjector.disableHttpd",
                 ],
               };
             } else {
               opts = {
                 url:
                   this.config.game_url === "" ||
-                  this.config.game_url === undefined
+                    this.config.game_url === undefined
                     ? `${urlpkg}/files`
                     : this.config.game_url,
                 authorization: account,
@@ -7376,10 +6972,10 @@ recommendedOption.innerHTML = langs.recommended;
                   enable: isForgeCheckBox
                     ? true
                     : isFabricCheckBox
-                    ? true
-                    : isQuiltCheckBox
-                    ? true
-                    : false,
+                      ? true
+                      : isQuiltCheckBox
+                        ? true
+                        : false,
                 },
                 verify: false,
                 ignored: ["loader", ...this.config.ignored],
@@ -7568,7 +7164,7 @@ recommendedOption.innerHTML = langs.recommended;
           launch.on("speed", (speed) => {
             /*
                                                     let velocidad = speed / 1067008;
-
+  
                                                     if (velocidad > 0) {
                                                         clearTimeout(timeoutId); // cancela el mensaje de alerta si la velocidad no es cero
                                                     } else {
@@ -7581,7 +7177,7 @@ recommendedOption.innerHTML = langs.recommended;
                                                             clearTimeout(timeoutId);
                                                             const swal  = require('sweetalert');
                                                             crasheo = true;
-
+  
                                                             new Alert().ShowAlert({
                                                                 title: "Error",
                                                                 text: "Error al descargar esta versión. Reinicia el launcher o inténtalo de nuevo más tarde. [ERROR: 2]",
@@ -7592,7 +7188,7 @@ recommendedOption.innerHTML = langs.recommended;
                                                                     ipcRenderer.send('restartLauncher')
                                                                 }
                                                             });
-                                                            
+  
                                                         }, 10000);
                                                     }*/
           });
@@ -7614,8 +7210,6 @@ recommendedOption.innerHTML = langs.recommended;
           launch.on("data", async (e) => {
             new logger("Minecraft", "#36b030");
             consoleOutput_ += `[MC] ${e}\n`;
-            if (launcherSettings.launcher.close === "close-launcher")
-              ipcRenderer.send("main-window-hide");
 
             if (e.includes("Launching with arguments"))
               info.innerHTML = `${langs.starting_minecraft}...`;
@@ -7631,59 +7225,69 @@ recommendedOption.innerHTML = langs.recommended;
             let serversDat = `${dataDirectory}/.battly/servers.dat`;
 
             if (fs.existsSync(serversDat)) {
-                try {
-                    const serversDatFile = fs.readFileSync(serversDat);
-                    const serversDatData = await NBT.read(serversDatFile);
+              try {
+                const serversDatFile = fs.readFileSync(serversDat);
+                const serversDatData = await NBT.read(serversDatFile);
 
-                    const servers = this.BattlyConfig.promoted_servers;
-                    const existingIPs = new Set(serversDatData.data.servers.map(server => server.ip));
+                const servers = this.BattlyConfig.promoted_servers;
+                const existingIPs = new Set(
+                  serversDatData.data.servers.map((server) => server.ip)
+                );
 
-                    const serversArray = servers.reduce((accumulator, server) => {
-                      if (!existingIPs.has(server.ip) && server.enabled) {
-                        accumulator.push(server);
-                      } else if (existingIPs.has(server.ip) && !server.enabled) {
-                        // Si está deshabilitado y la IP existe, la eliminamos
-                        serversDatData.data.servers = serversDatData.data.servers.filter(existingServer => existingServer.ip !== server.ip);
-                      } else if (existingIPs.has(server.ip) && server.enabled) {
-                        // Si está habilitado y la IP existe, la reemplazamos eliminando la antigua
-                        serversDatData.data.servers = serversDatData.data.servers.filter(existingServer => existingServer.ip !== server.ip);
-                        accumulator.push(server);
-                      }
-                      return accumulator;
-                    }, []);
-
-                  serversDatData.data.servers = serversArray.concat(serversDatData.data.servers);
-                  console.log(serversDatData);
-                    const editedServersDat = await NBT.write(serversDatData);
-                    fs.writeFileSync(serversDat, editedServersDat);
-                  } catch (error) {
-                    console.error("Error al procesar el archivo NBT");
-                    console.error(error);
+                const serversArray = servers.reduce((accumulator, server) => {
+                  if (!existingIPs.has(server.ip) && server.enabled) {
+                    accumulator.push(server);
+                  } else if (existingIPs.has(server.ip) && !server.enabled) {
+                    // Si está deshabilitado y la IP existe, la eliminamos
+                    serversDatData.data.servers =
+                      serversDatData.data.servers.filter(
+                        (existingServer) => existingServer.ip !== server.ip
+                      );
+                  } else if (existingIPs.has(server.ip) && server.enabled) {
+                    // Si está habilitado y la IP existe, la reemplazamos eliminando la antigua
+                    serversDatData.data.servers =
+                      serversDatData.data.servers.filter(
+                        (existingServer) => existingServer.ip !== server.ip
+                      );
+                    accumulator.push(server);
                   }
-              } else {
-                try {
-                  let servers = this.BattlyConfig.promoted_servers;
+                  return accumulator;
+                }, []);
 
-                  let serversArray = [];
-
-                  for (let i = 0; i < servers.length; i++) {
-                    const newServer = {
-                      name: servers[i].name,
-                      ip: servers[i].ip,
-                      icon: servers[i].icon,
-                    };
-                    serversArray.push(newServer);
-                  }
-
-                  // Crear un nuevo archivo servers.dat con los servidores nuevos
-                  const newData = { servers: serversArray };
-                  const editedServersDat = await NBT.write(newData);
-                  fs.writeFileSync(serversDat, editedServersDat);
-                } catch (error) {
-                  console.error("Error al crear el nuevo archivo NBT:", error);
-                }
+                serversDatData.data.servers = serversArray.concat(
+                  serversDatData.data.servers
+                );
+                console.log(serversDatData);
+                const editedServersDat = await NBT.write(serversDatData);
+                fs.writeFileSync(serversDat, editedServersDat);
+              } catch (error) {
+                console.error("Error al procesar el archivo NBT");
+                console.error(error);
               }
-            
+            } else {
+              try {
+                let servers = this.BattlyConfig.promoted_servers;
+
+                let serversArray = [];
+
+                for (let i = 0; i < servers.length; i++) {
+                  const newServer = {
+                    name: servers[i].name,
+                    ip: servers[i].ip,
+                    icon: servers[i].icon,
+                  };
+                  serversArray.push(newServer);
+                }
+
+                // Crear un nuevo archivo servers.dat con los servidores nuevos
+                const newData = { servers: serversArray };
+                const editedServersDat = await NBT.write(newData);
+                fs.writeFileSync(serversDat, editedServersDat);
+              } catch (error) {
+                console.error("Error al crear el nuevo archivo NBT:", error);
+              }
+            }
+
             if (e.includes("Failed to start the minecraft server"))
               return ShowCrashReport(
                 `${langs.error_detected_one} \nError:\n${e}`
@@ -7741,6 +7345,9 @@ recommendedOption.innerHTML = langs.recommended;
               e.includes("Launching wrapped minecraft")
             ) {
               if (inicio == false) {
+                if (launcherSettings.launcher.close === "close-launcher")
+                  ipcRenderer.send("main-window-hide");
+
                 let typeOfVersion;
                 if (version.endsWith("-forge")) {
                   typeOfVersion = "Forge";
@@ -7813,15 +7420,12 @@ recommendedOption.innerHTML = langs.recommended;
       .then((res) => {
         if (res.status === 200) {
           APIServerData.innerHTML = `<span class="green">${langs.operative}</span>`;
-          APIServerStatus.className = "online";
         } else {
           APIServerData.innerHTML = `<span class="red">${langs.no_connected}</span>`;
-          APIServerStatus.className = "online off";
         }
       })
       .catch((err) => {
         APIServerData.innerHTML = `<span class="red">${langs.no_connected}</span>`;
-        APIServerStatus.className = "online off";
       });
 
     await axios
@@ -7831,15 +7435,12 @@ recommendedOption.innerHTML = langs.recommended;
       .then((res) => {
         if (res.status === 200) {
           WEBServerData.innerHTML = `<span class="green">${langs.operative}</span>`;
-          WEBServerStatus.className = "online";
         } else {
           WEBServerData.innerHTML = `<span class="red">${langs.no_connected}</span>`;
-          WEBServerStatus.className = "online off";
         }
       })
       .catch((err) => {
         WEBServerData.innerHTML = `<span class="red">${langs.no_connected}</span>`;
-        WEBServerStatus.className = "online off";
       });
 
     await axios

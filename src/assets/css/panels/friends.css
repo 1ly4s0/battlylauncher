@@ -1,55 +1,55 @@
 .has-separation {
-    margin: 30px;
+  margin: 30px;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .lista-de-amigos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .friend-card {
-    width: calc(33% - 20px);
-    margin: 10px;
+  width: calc(33% - 20px);
+  margin: 10px;
 }
 
 .friend-username {
-    font-size: 23px;
-    display: inline;
+  font-size: 23px;
+  display: inline;
 }
 
 .status-overlay {
-    position: absolute;
-    bottom: -10px;
-    right: -5px;
+  position: absolute;
+  bottom: -10px;
+  right: -5px;
 }
 
 .resultado-amigos::-webkit-scrollbar {
-    width: var(--scroll-size, 15px);
+  width: var(--scroll-size, 15px);
 }
 
 .resultado-amigos::-webkit-scrollbar-thumb {
-    background: var(--scroll-thumb, linear-gradient(45deg, #00aeff, #a68eff));
+  background: var(--scroll-thumb, linear-gradient(45deg, #00aeff, #a68eff));
 }
 
 .resultado-amigos::-webkit-scrollbar-track {
-    background: var(--scroll-track, rgb(255 255 255 / 10%));
+  background: var(--scroll-track, rgb(255 255 255 / 10%));
 }
 
 .panel-amigos {
-    position: fixed;
-    overflow-y: auto;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -45%);
-    width: 90%;
-    height: 70%;
+  position: fixed;
+  overflow-y: auto;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  width: 90%;
+  height: 70%;
 }
 
 .panel-amigos::-webkit-scrollbar {
-    width: 0px;
+  width: 0px;
 }

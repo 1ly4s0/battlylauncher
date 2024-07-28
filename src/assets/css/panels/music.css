@@ -1,7 +1,7 @@
 :root {
   --pink: #3e8ed0;
   --violet: #0063f6;
-  --lightblack: #515C6F;
+  --lightblack: #515c6f;
   --white: #ffffff;
   --darkwhite: #cecaca;
   --pinkshadow: #ff7fac;
@@ -11,38 +11,50 @@
 .bottom_bar_music {
   opacity: 1;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 100px;
-  padding: 0 20px;
-  background-color: #1f1f1f;
+  background-color: rgba(33, 33, 33, 0.7);
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 9999;
+  border-radius: 15px !important;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  height: 80px;
+  transition: width 0.3s ease;
+  flex-direction: column;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.bottom_bar_music_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 0px;
 }
 
 .playing-song,
 .volume-control {
-  width: 33%;
-  /* Establece un ancho igual para estos elementos */
+  width: 60%;
 }
 
 .header-battly-music {
   background-color: #212121;
   margin: 20px;
   padding: 15px;
-  margin-bottom: 10px;
-  margin-top: 40px;
+  margin-bottom: 0px;
+  margin-top: 65px;
   height: 8%;
-  border-radius: 5px;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
 }
-
 
 .header-battly-music-buttons {
   display: flex;
@@ -56,8 +68,9 @@
   margin: 20px;
   margin-top: 0px;
   height: 55%;
-  border-radius: 5px;
   color: #fff;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
 }
 
 .body-header-battly-music {
@@ -67,7 +80,7 @@
   padding: 10px;
   display: flex;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 10px;
   border-bottom: 2px solid #fff;
   color: #fff;
 }
@@ -90,6 +103,8 @@
   padding: 10px;
   border-right: 2px solid #fff;
   color: #fff;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
 }
 
 .body-header-search-panel-div-battly-music {
@@ -118,7 +133,6 @@
   align-items: center;
 }
 
-
 .body-body-search-panel-battly-music {
   width: 100%;
   height: 100%;
@@ -126,6 +140,8 @@
   flex-direction: column;
   border-right: 2px solid #fff;
   padding: 20px;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
 }
 
 .body-body-playlist-panel-battly-music {
@@ -154,13 +170,13 @@
   display: flex;
   align-items: center;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 10px;
   cursor: pointer;
 }
 
 .playlist-song-image {
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 5px;
   width: 60px;
   height: 60px;
@@ -198,14 +214,14 @@
   display: flex;
   align-items: center;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 5px;
   margin-right: 5px;
   cursor: pointer;
 }
 
 .search-song-image {
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 5px;
   width: 60px;
   height: 60px;
@@ -240,11 +256,13 @@
 }
 
 .progress-area {
-  height: 6px;
+  height: 10px;
   width: 100%;
-  border-radius: 50px;
+  border-radius: 10px;
   background: #fff;
   cursor: pointer;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
 }
 
 .progress-area .progress-bar {
@@ -253,22 +271,9 @@
   position: relative;
   border-radius: inherit;
   background: linear-gradient(90deg, var(--pink) 0%, var(--pinkshadow) 100%);
-}
-
-.progress-bar::before {
-  content: "";
-  position: absolute;
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  top: 50%;
-  right: -5px;
-  z-index: 2;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-50%);
-  background: inherit;
-  transition: opacity 0.2s ease;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
 }
 
 .progress-area:hover .progress-bar::before {
@@ -294,7 +299,7 @@
 
 .results::-webkit-scrollbar-thumb {
   background: var(--scroll-thumb, linear-gradient(45deg, #00aeff, #a68eff));
-  border-radius: var(--scroll-radius, 0px);
+  border-radius: var(--scroll-radius, 10px);
 }
 
 .results::-webkit-scrollbar-track {
@@ -304,33 +309,34 @@
 .playing-song {
   display: flex;
   align-items: center;
-  padding: 5px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  margin-bottom: 30px
+  gap: 5px;
+  margin-right: 20px;
+  transition: 0.3s width ease;
 }
 
 .playing-song-image {
-  border-radius: 5px;
-  width: 100px;
-  height: 100px;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
-  margin-bottom: 30px;
 }
 
 .playing-song-info {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-left: 5px;
 }
 
-
 .playing-song-title {
-  margin-left: 10px;
   font-size: 20px;
   color: #fff;
+  white-space: wrap;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 30px;
 }
 
 .playing-song-artist {
-  margin-left: 10px;
   color: #fff;
   line-height: 20px;
   font-size: 15px;
@@ -348,7 +354,6 @@
 
 .playing-music-progress {
   width: 100%;
-  margin-bottom: 20px;
 }
 
 .current-time {
@@ -357,7 +362,6 @@
   -webkit-text-fill-color: transparent;
   font-weight: 600;
   align-content: start;
-  margin-top: 10px;
 }
 
 .total-time {
@@ -366,23 +370,21 @@
   -webkit-text-fill-color: transparent;
   font-weight: 600;
   align-content: end;
-  margin-top: 10px;
 }
 
 .temps {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: baseline;
 }
 
 .song-control-area {
-  width: 33%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 }
-
 
 .controls {
   display: flex;
@@ -433,9 +435,10 @@
 
 .volume-control {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-left: 20px;
 }
 
 .volume-control i {
@@ -447,7 +450,7 @@
 #volumen {
   -webkit-appearance: none;
   background: transparent;
-  width: 40%;
+  width: 100%;
   max-width: 500px;
   outline: none;
 }

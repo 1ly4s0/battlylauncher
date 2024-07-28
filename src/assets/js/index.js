@@ -40,7 +40,9 @@ class Splash {
 			"message": "Battly Launcher",
 			"author": "TECNO BROS"
 		},]
-		
+
+		console.log(document.getElementById("version_id"));
+
 		let sonidoDB = localStorage.getItem("sonido-inicio") ? localStorage.getItem("sonido-inicio") : "start";
 		let sonido_inicio = new Audio('./assets/audios/' + sonidoDB + '.mp3');
 		sonido_inicio.volume = 0.8;
@@ -59,9 +61,9 @@ class Splash {
 		this.splashMessage.classList.add("animate__animated", "animate__flipInX");
 		this.splashAuthor.classList.add("animate__animated", "animate__flipInX");
 		this.message.classList.add("animate__animated", "animate__flipInX");
-		
+
 		await sleep(1000);
-		
+
 		fetch("https://google.com").then(async () => {
 			this.checkMaintenance();
 			localStorage.setItem("offline-mode", false);
@@ -79,7 +81,7 @@ class Splash {
 
 	async checkForUpdates() {
 		if (dev) return sleep(500).then(async () => {
-			
+
 			this.splash.classList.remove("translate");
 			this.splashMessage.classList.add("animate__animated", "animate__flipOutX");
 			this.splashAuthor.classList.add("animate__animated", "animate__flipOutX");
@@ -88,8 +90,18 @@ class Splash {
 		});
 
 		this.setStatus(lang.checking_updates);
-		
+
 		ipcRenderer.invoke('update-app').then(err => {
+			if (err) {
+				if (err.error) {
+					let error = err.message;
+					error = error.toString().slice(0, 50);
+					this.shutdown(`${lang.update_error}<br>${error}`);
+				}
+			}
+		})
+
+		ipcRenderer.invoke('update-new-app').then(err => {
 			if (err) {
 				if (err.error) {
 					let error = err.message;
@@ -101,7 +113,7 @@ class Splash {
 
 		ipcRenderer.on('updateAvailable', () => {
 			this.setStatus(lang.update_available);
-            
+
 			let boton_actualizar = document.getElementById("btn_actualizar");
 			boton_actualizar.style.display = "block";
 			boton_actualizar.addEventListener("click", () => {
@@ -116,6 +128,12 @@ class Splash {
 				this.setStatus(lang.update_cancelled);
 				this.checkMaintenance();
 			})
+		})
+
+		ipcRenderer.on('updateNewAvailable', () => {
+			this.setStatus(lang.update_available);
+
+			ipcRenderer.send('start-new-update');
 		})
 
 		ipcRenderer.on('download-progress', (event, progress) => {

@@ -55,7 +55,7 @@ class Friends {
 
     async AddFriend() {
         let btnAddFriends = document.getElementById('add-friends');
-        
+
         let uuid = (await this.database.get("1234", "accounts-selected")).value;
         let account = this.database.getAccounts().find(account => account.uuid === uuid.selected);
 
@@ -194,7 +194,7 @@ class Friends {
                     Y añadirlo debajo del input
 
                     */
-                    
+
                     for (let user of res.usuarios) {
                         try {
                             await axios.get(`https://api.battlylauncher.com/api/skin/${user}.png`)
@@ -255,14 +255,13 @@ class Friends {
                             imgInsideFaceViewer.style.backgroundImage = `url(https://api.battlylauncher.com/api/skin/${user}.png)`
 
 
-                            addButton.addEventListener('click', () =>
-                            {
+                            addButton.addEventListener('click', () => {
 
                                 let amigosArray = [];
                                 for (let amigo of amigos) {
                                     amigosArray.push(amigo.username);
                                 }
-                                
+
                                 if (user == account.name) {
                                     new Alert().ShowAlert({
                                         icon: "error",
@@ -303,7 +302,7 @@ class Friends {
                                     });
                                 }
                             });
-                                    
+
                         } catch (error) {
                             console.log(`❌ Error al obtener la skin de ${user}.`);
                             const box = document.createElement('div');
@@ -362,14 +361,13 @@ class Friends {
                             users.appendChild(box);
                             imgInsideFaceViewer.style.backgroundImage = `url(https://minotar.net/skin/MHF_Steve.png)`
 
-                            addButton.addEventListener('click', () =>
-                            {
+                            addButton.addEventListener('click', () => {
 
                                 let amigosArray = [];
                                 for (let amigo of amigos) {
                                     amigosArray.push(amigo.username);
                                 }
-                                
+
                                 if (user == account.name) {
                                     new Alert().ShowAlert({
                                         icon: "error",
@@ -524,7 +522,7 @@ class Friends {
                         box.appendChild(article);
 
                         modalBody.appendChild(box);
-                    
+
                         img.style.backgroundImage = "url('https://minotar.net/skin/MHF_Steve.png')";
                     }
 
@@ -620,7 +618,7 @@ class Friends {
                                 }).then(res => res.json()).then(res => {
                                     if (res.error) {
                                         console.error(res.error);
-                                         
+
                                         new Alert().ShowAlert({
                                             icon: "error",
                                             title: lang.error_accepting_request
@@ -656,7 +654,7 @@ class Friends {
                                             title: lang.error_rejecting_request
                                         });
                                     } else {
-                                        
+
                                         new Alert().ShowAlert({
                                             icon: "success",
                                             title: lang.request_rejected
@@ -761,7 +759,7 @@ class Friends {
                                 }).then(res => res.json()).then(res => {
                                     if (res.error) {
                                         console.error(res.error);
-                                         
+
                                         new Alert().ShowAlert({
                                             icon: "error",
                                             title: lang.error_accepting_request
@@ -802,7 +800,7 @@ class Friends {
                                             title: lang.error_rejecting_request
                                         });
                                     } else {
-                                        
+
                                         new Alert().ShowAlert({
                                             icon: "success",
                                             title: lang.request_rejected
@@ -818,7 +816,7 @@ class Friends {
                     for (let solicitud of solicitudes.enviadas) {
                         try {
                             await axios.get(`https://api.battlylauncher.com/api/skin/${solicitud}.png`)
-                    
+
                             // Crear el segundo cuadro de solicitud
                             const box2 = document.createElement('div');
                             box2.className = 'box';
@@ -952,8 +950,8 @@ class Friends {
 
             modal.appendChild(modalBackground);
             modal.appendChild(modalCard);
-            
-            
+
+
             document.body.appendChild(modal);
         };
 
@@ -973,9 +971,9 @@ class Friends {
         btnAmigos.addEventListener('click', async (e) => {
             let uuid = (await this.database.get("1234", "accounts-selected")).value;
             let account = this.database.getAccounts().find(account => account.uuid === uuid.selected);
-            
+
             panelAmigos.innerHTML = '';
-        
+
             const loadingText = document.getElementById("loading-text");
             loadingText.innerHTML = lang.loading_friends;
 
@@ -998,9 +996,9 @@ class Friends {
                     return;
                 } else {
                     amigos = res.amigos;
-                    
+
                     amigosObtenidos = true;
-        
+
                     if (amigos.length == 0) {
                         const box = document.createElement('div');
                         box.className = 'box';
@@ -1035,7 +1033,7 @@ class Friends {
 
                         content.appendChild(userParagraph);
                         mediaContent.appendChild(content);
-                
+
                         article.appendChild(mediaContent);
 
                         box.appendChild(article);
@@ -1081,7 +1079,7 @@ class Friends {
                             try {
                                 await axios.get(`https://api.battlylauncher.com/api/skin/${username}.png`)
 
-                    
+
                                 const box = document.createElement('div');
                                 box.className = 'box friend-card';
 
@@ -1241,7 +1239,7 @@ class Friends {
                             }
 
                         } else if (status === "ausente") {
-                    
+
                             let version;
                             let icon;
 
@@ -1310,7 +1308,7 @@ class Friends {
                                 statusImg.alt = 'Status';
                                 statusImg.style.width = '25px';
                                 statusImg.style.borderRadius = '5px';
-                    
+
                                 statusOverlay.appendChild(statusImg);
                                 figure.appendChild(img);
                                 figure.appendChild(statusOverlay);
@@ -1318,7 +1316,7 @@ class Friends {
 
                                 const mediaContent = document.createElement('div');
                                 mediaContent.className = 'media-content';
-                    
+
                                 const content = document.createElement('div');
                                 content.className = 'content';
 
@@ -1387,7 +1385,7 @@ class Friends {
                                 statusImg.alt = 'Status';
                                 statusImg.style.width = '25px';
                                 statusImg.style.borderRadius = '5px';
-                    
+
                                 statusOverlay.appendChild(statusImg);
                                 figure.appendChild(img);
                                 figure.appendChild(statusOverlay);
@@ -1395,7 +1393,7 @@ class Friends {
 
                                 const mediaContent = document.createElement('div');
                                 mediaContent.className = 'media-content';
-                    
+
                                 const content = document.createElement('div');
                                 content.className = 'content';
 
@@ -1440,7 +1438,7 @@ class Friends {
                         } else {
                             try {
                                 await axios.get(`https://api.battlylauncher.com/api/skin/${username}.png`)
-                    
+
                                 const box = document.createElement('div');
                                 box.className = 'box friend-card';
 
@@ -1506,7 +1504,7 @@ class Friends {
                                 panelAmigos.appendChild(box);
                                 img.style.backgroundImage = `url('https://api.battlylauncher.com/api/skin/${username}.png')`;
                             }
-                    
+
                             catch (error) {
                                 console.log(`❌ Error al obtener la skin de ${username}.`);
                                 const box = document.createElement('div');

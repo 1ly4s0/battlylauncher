@@ -13,15 +13,15 @@ const pkg = require('../package.json');
 const Swal = require("./assets/js/libs/sweetalert/sweetalert2.all.min.js");
 
 const Toast = Swal.mixin({
-    toast: true,
-    position: 'top-end',
-    showConfirmButton: false,
-    timer: 5000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener('mouseenter', Swal.stopTimer)
-      toast.addEventListener('mouseleave', Swal.resumeTimer)
-    }
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 5000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
 })
 import { Alert } from "../utils/alert.js";
 
@@ -40,6 +40,12 @@ class NewsPanel {
   }
 
   async First() {
+
+    document.getElementById('XXXXXXXX').addEventListener("mouseenter", () => {
+      const audio = new Audio("https://www.myinstants.com/media/sounds/gta-san-andreas-ah-shit-here-we-go-again.mp3")
+      audio.play();
+    });
+
     let card1 = document.getElementById('card1');
     let card2 = document.getElementById('card2');
     let card3 = document.getElementById('card3');
@@ -47,7 +53,6 @@ class NewsPanel {
     let card5 = document.getElementById('card5');
     let card6 = document.getElementById('card6');
     let card7 = document.getElementById('card7');
-    let card8 = document.getElementById('card8');
 
     let btnShowPanel2 = document.getElementById('show-panel-2');
     let btnShowPanel3 = document.getElementById('show-panel-3');
@@ -55,7 +60,6 @@ class NewsPanel {
     let btnShowPanel5 = document.getElementById('show-panel-5');
     let btnShowPanel6 = document.getElementById('show-panel-6');
     let btnShowPanel7 = document.getElementById('show-panel-7');
-    let btnShowPanel8 = document.getElementById('show-panel-8');
     let btnTerminar = document.getElementById('terminar');
 
     btnShowPanel2.addEventListener('click', showCard2);
@@ -64,7 +68,6 @@ class NewsPanel {
     btnShowPanel5.addEventListener('click', showCard5);
     btnShowPanel6.addEventListener('click', showCard6);
     btnShowPanel7.addEventListener('click', showCard7);
-    btnShowPanel8.addEventListener('click', showCard8);
     btnTerminar.addEventListener('click', terminar);
 
     card1.style.display = '';
@@ -74,11 +77,10 @@ class NewsPanel {
     card5.style.display = 'none';
     card6.style.display = 'none';
     card7.style.display = 'none';
-    card8.style.display = 'none';
-    
+
     function showCard2() {
       card1.classList.add('animate__backOutLeft');
-  
+
       // Después de aplicar la animación, espera a que termine y luego oculta la tarjeta nuevamente
       setTimeout(() => {
         card1.style.display = 'none';
@@ -89,7 +91,7 @@ class NewsPanel {
 
     function showCard3() {
       card2.classList.add('animate__backOutLeft');
-  
+
       // Después de aplicar la animación, espera a que termine y luego oculta la tarjeta nuevamente
       setTimeout(() => {
         card2.style.display = 'none';
@@ -100,7 +102,7 @@ class NewsPanel {
 
     function showCard4() {
       card3.classList.add('animate__backOutLeft');
-  
+
       // Después de aplicar la animación, espera a que termine y luego oculta la tarjeta nuevamente
       setTimeout(() => {
         card3.style.display = 'none';
@@ -111,7 +113,7 @@ class NewsPanel {
 
     function showCard5() {
       card4.classList.add('animate__backOutLeft');
-  
+
       // Después de aplicar la animación, espera a que termine y luego oculta la tarjeta nuevamente
       setTimeout(() => {
         card4.style.display = 'none';
@@ -119,10 +121,10 @@ class NewsPanel {
         card5.classList.add('animate__backInRight');
       }, 500);
     }
-      
+
     function showCard6() {
       card5.classList.add('animate__backOutLeft');
-    
+
       // Después de aplicar la animación, espera a que termine y luego oculta la tarjeta nuevamente
       setTimeout(() => {
         card5.style.display = 'none';
@@ -133,7 +135,7 @@ class NewsPanel {
 
     function showCard7() {
       card6.classList.add('animate__backOutLeft');
-    
+
       // Después de aplicar la animación, espera a que termine y luego oculta la tarjeta nuevamente
       setTimeout(() => {
         card6.style.display = 'none';
@@ -142,24 +144,12 @@ class NewsPanel {
       }, 500);
     }
 
-    function showCard8() {
-      card7.classList.add('animate__backOutLeft');
-      
-      // Después de aplicar la animación, espera a que termine y luego oculta la tarjeta nuevamente
-      setTimeout(() => {
-        card7.style.display = 'none';
-        card8.style.display = 'block';
-        card8.classList.add('animate__backInRight');
-      }, 500);
-    }
-    
-
     function terminar() {
       card5.classList.add('animate__backOutLeft');
       card5.addEventListener('animationend', function () {
         card5.style.display = 'none';
       });
-  
+
       // Después de aplicar la animación, espera a que termine y luego oculta la tarjeta nuevamente
       let preload = document.querySelector(".preload-content");
       preload.style.display = "";
@@ -189,8 +179,8 @@ class NewsPanel {
       }
 
       setTimeout(async () => {
-        localStorage.setItem('news_shown_v1.8', true);
-      
+        localStorage.setItem('news_shown_v2.0', true);
+
         if (thiss.accounts.length == 0) {
           new Alert().ShowAlert({
             title: '¡Bienvenido!',
@@ -206,7 +196,7 @@ class NewsPanel {
         preload.style.display = "none";
       }, 1000);
 
-      
+
     }
   }
 }

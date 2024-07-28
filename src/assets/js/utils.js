@@ -122,6 +122,8 @@ function accountSelect(uuid) {
 
     
     if (account.querySelector('.account-name').innerHTML.includes('fa-solid fa-fire')) {
+        document.getElementById("ads").style.display = "none";
+        document.getElementById("ads-text").style.display = "none";
         console.log('Es premium');
         let WelcomePremiumShown = localStorage.getItem('WelcomePremiumShown');
         if (!WelcomePremiumShown || WelcomePremiumShown === 'false' || WelcomePremiumShown === null || WelcomePremiumShown === undefined) {

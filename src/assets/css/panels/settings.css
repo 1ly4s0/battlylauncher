@@ -23,35 +23,22 @@ section {
   overflow: hidden;
 }
 
-.tab-btn-css {
-  border-radius: 5px;
-  width: auto;
-  height: 37px;
-  margin: 10px;
-  font-family: Poppins;
-  font-weight: 700;
-  font-size: 17px;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-}
-
-.tab-btn-css:hover {
-  background: #3e8ed0;
-}
-
 .bottom_bar_settings {
   display: flex;
-  height: 75px;
-  padding: 0 20px;
-  background-color: #1f1f1f;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  max-height: 80px;
+  padding: 10px;
+  background-color: rgba(33, 33, 33, 0.7);
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  gap: 6px;
+  z-index: 9999;
+  border-radius: 15px !important;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .bottom_bar_settings::-webkit-scrollbar {
@@ -60,13 +47,11 @@ section {
 
 .active-tab-btn {
   background: #3ea8ff;
-  border: none;
-  box-shadow: 0 0 5px #1e4e76;
+  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
 }
 
 .active-tab-btn:hover {
   background: #3e8ed0;
-  border: none;
 }
 
 .tabs-settings-content {
@@ -93,7 +78,7 @@ section {
 }
 
 .information {
-  padding: 0 40px;
+  text-align: center;
   font: normal normal normal 16px/25px Poppins;
   color: #f1f1f1;
 }
@@ -177,13 +162,13 @@ section {
 
 .active-account {
   background: #3e8ed0;
-  border: 4px solid #00ff91;
+  border: 4px solid #00ff91 !important;
   color: #fff;
 }
 
 .active-account:hover {
   background: #005daa;
-  border: 4px solid #275276;
+  border: 4px solid #08c272 !important;
 }
 
 .account-image {

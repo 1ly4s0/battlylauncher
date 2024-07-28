@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Actualizaciones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="assets/js/update.js" type="module"></script>
+</head>
+
+<body>
+    <section class="section" style="align-self: center; width: 100%;">
+        <div class="container">
+            <div class="box update-panel">
+                <h2 class="title is-4 has-text-white has-text-centered" style="margin-bottom: 1rem;">Actualización de
+                    Battly</h2>
+                <hr style="margin-top: -10px; margin-bottom: 10px;">
+                <div class="update-info">
+                    <h3 class="title is-5 has-text-white" style="margin-bottom: 0px;">Información de la Actualización
+                    </h3>
+                    <div style="display: flex; justify-content: space-between;">
+                        <p class="has-text-white"><b>Versión: </b><span id="version_id"></span></p>
+                        <p class="has-text-white"><b>Fecha de lanzamiento: </b><span id="update-date"></span></p>
+                    </div>
+                    <div id="version-news" class="has-text-white">
+                    </div>
+                </div>
+
+                <div class="download-status">
+                    <div style="margin-bottom: 10px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: -20px !important;">
+                            <h3 class="title is-5 has-text-white">Estado de la Descarga</h3>
+                            <p class="has-text-white" id="download-progress-text">Progreso: 0%</p>
+                        </div>
+                        <progress class="progress is-info" max="100" id="download-progress-bar"></progress>
+                    </div>
+
+                    <div class="logs">
+                        <textarea class="textarea" rows="5" readonly style="height: 100px;" id="log"></textarea>
+                    </div>
+                </div>
+
+                <div class="controls before-download-buttons">
+                    <button id="start-download" class="button is-info">Iniciar descarga <i
+                            class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+<style>
+    html,
+    body {
+        scrollbar-width: none;
+        background-color: #212121 !important;
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        margin: 0;
+        -webkit-app-region: drag;
+        background-color: #212121 !important;
+        display: flex;
+    }
+
+    .has-text-white {
+        color: #fff !important;
+
+        & h1 {
+            color: #fff !important;
+        }
+
+        & h2 {
+            color: #fff !important;
+        }
+
+        & h3 {
+            color: #fff !important;
+        }
+
+        & p {
+            color: #fff !important;
+        }
+
+        & span {
+            color: #fff !important;
+        }
+
+        & a {
+            color: #fff !important;
+        }
+
+        & strong {
+            color: #fff !important;
+        }
+    }
+
+    .section {
+        padding: 1rem;
+    }
+
+    .update-panel {
+        background-color: #2c2c2c !important;
+        border-radius: 8px;
+        padding: 20px;
+        -webkit-app-region: no-drag;
+    }
+
+    .download-status {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .after-download-buttons {
+        display: none !important;
+    }
+
+    .before-download-buttons {
+        display: flex;
+        justify-content: flex-end !important;
+    }
+
+    h2,
+    h3,
+    p,
+    ul {
+        color: #fff;
+    }
+
+    ul {
+        padding-left: 1rem;
+    }
+
+    ul li::before {
+        content: '\f0da';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-right: 10px;
+        color: #fff;
+    }
+
+    textarea {
+        background-color: #2c2c2c;
+        color: #fff;
+        border: 1px solid #4a4a4a;
+        border-radius: 5px;
+        padding: 10px;
+        resize: none;
+    }
+
+    textarea:focus {
+        border-color: #4a4a4a;
+        box-shadow: none;
+    }
+
+    .progress {
+        background-color: #4a4a4a !important;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    button {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        align-items: center;
+    }
+</style>

@@ -210,51 +210,149 @@
             <div class="title-settings" id="battly-theme" style="font-size: 50px;"></div>
             <div class="java-settings">
                 <div class="information">
-                    <span id="battly-theme-text"></span>
+                    <span id="battly-theme-text">¡Bienvenido/a al nuevo panel de personalización de Battly! Aquí
+                        podrás personalizar Battly a tu gusto, cambiando el tema, las imágenes de fondo y mucho más.
+                        ¡Esperamos que te guste!</span>
+                    <br>
+                    <style>
+                        .actual-theme {
+                            background-color: #212121;
+                            padding: 40px;
+                            border-radius: 10px;
+                            margin-top: 20px;
+                            text-align: center;
+                            gap: 10px;
+                            display: flex;
+                            flex-direction: column;
+                        }
 
-                    <br><br>
-                    <br>
-                    <b style="font-size: 20px;" id="change-theme-text"></b>
-                    <br>
-                    <span id="buttons-color"></span>
-                    <input type="color" id="theme-color" value="#ff0000">
-                    <br>
-                    <br>
-                    <span id="bottom-bar-text"></span>
-                    <input type="color" id="theme-color-bottom-bar" value="#ff0000">
-                    <br>
-                    <br>
-                    <span id="bottom-bar-opacity"></span>
-                    <input type="range" id="theme-opacity-bottom-bar" min="0.1" max="1" step="0.01" value="1">
-                    <br>
-                    <br>
-                    <span id="background-loading-screen-color-text"></span>
-                    <input type="color" id="theme-color-loading-screen" value="#3498db">
-                    <br>
-                    <br>
-                    <span id="starting-music"></span>
-                    <div class="select is-info">
-                        <select id="sonido-inicio">
-                            <option value="start">Retro</option>
-                            <option value="start1">Fulgor</option>
-                            <option value="start2">Neón</option>
-                            <option value="start3">Centella</option>
-                            <option value="start4">Adventure</option>
-                            <option value="start5">Battle</option>
-                            <option value="start6">Modern</option>
-                        </select>
+                        .actual-theme-text {
+                            font-size: 30px;
+                            font-weight: 700;
+                            margin-bottom: 15px !important;
+                        }
+
+                        .select-theme-panel-1 {
+                            display: flex;
+                            gap: 10px
+                        }
+
+                        .select-theme-panel-2 {
+                            width: 33%;
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .select-theme-panel-2 span {
+                            font-size: 20px;
+                            font-weight: 500;
+                            text-align: center;
+                        }
+
+                        .select-theme-panel-2 input {
+                            width: 100%;
+                            height: 50px;
+                            background-color: #212121;
+                            border: 0px;
+                            padding: 0px !important;
+                            overflow: hidden;
+                        }
+
+                        .select-theme-panel-3 {
+                            display: flex;
+                            gap: 10px;
+                            margin-top: 20px;
+                        }
+
+                        .select-theme-panel-4 {
+                            width: 50%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 5px;
+                        }
+
+                        .select-theme-panel-4 span {
+                            font-size: 20px;
+                            font-weight: 500;
+                            text-align: center;
+                        }
+
+                        .select-theme-panel-4 input {
+                            width: 60%;
+                            height: 30px;
+                            border: 0px;
+                            padding: 0px !important;
+                            overflow: hidden;
+                            border-radius: 10px;
+                        }
+
+                        .select-theme-panel-4 input[type=range] {
+                            -webkit-appearance: none;
+                            background: #656565;
+                            overflow: hidden;
+                        }
+
+                        .select-theme-panel-4 input[type=range]::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            appearance: none;
+                            width: 20px;
+                            height: 100%;
+                            background: #3498db;
+                            cursor: pointer;
+                        }
+
+                        .select-theme-panel-5 {
+                            display: flex;
+                            gap: 10px;
+                            justify-content: center;
+                        }
+                    </style>
+                    <div class="actual-theme">
+                        <span id="actual-theme-text" class="actual-theme-text">Tema actual</span>
+                        <div class="select-theme-panel-1">
+                            <div class="select-theme-panel-2">
+                                <span id="buttons-color">Color de los botones</span>
+                                <input type="color" id="theme-color" value="#ff0000">
+                            </div>
+                            <div class="select-theme-panel-2">
+                                <span id="bottom-bar-text">Color de la barra inferior</span>
+                                <input type="color" id="theme-color-bottom-bar" value="#ff0000">
+                            </div>
+                            <div class="select-theme-panel-2">
+                                <span id="background-loading-screen-color-text">Color de fondo de la pantalla de
+                                    carga</span>
+                                <input type="color" id="theme-color-loading-screen" value="#3498db">
+                            </div>
+                        </div>
+                        <div class="select-theme-panel-3">
+                            <div class="select-theme-panel-4">
+                                <span id="bottom-bar-opacity">Transparencia de la barra inferior</span>
+                                <input type="range" id="theme-opacity-bottom-bar" min="0.1" max="1" step="0.01"
+                                    value="1">
+                            </div>
+                            <div class="select-theme-panel-4">
+                                <span id="starting-music">Sonido de inicio</span>
+                                <div class="select-theme-panel-5">
+                                    <div class="select is-info is-normal"
+                                        style="background-color: rgb(62, 142, 208); height: 30px; width: 200px">
+                                        <select id="sonido-inicio" style=" height: 30px; width: 200px">
+                                            <option value="start">Retro</option>
+                                            <option value="start1">Fulgor</option>
+                                            <option value="start2">Neón</option>
+                                            <option value="start3">Centella</option>
+                                            <option value="start4">Adventure</option>
+                                            <option value="start5">Battle</option>
+                                            <option value="start6">Modern</option>
+                                        </select>
+                                    </div>
+                                    <button class="button is-info" id="reproducir-sonido-inicio"
+                                        style="background-color: rgb(62, 142, 208); height: 30px; width: 40px;"><i
+                                            class="fa-solid fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!--Boton con el icono de play para reproducir el sonido - Ruta: ./assets/sounds/value.mp3-->
-                    <button class="button is-info is-small" id="reproducir-sonido-inicio"><i
-                            class="fa-solid fa-play"></i></span></button>
-                    <!--
-                    <input type="checkbox" class="checkbox-settings" id="launcher-close"><label for="launcher-close"><div class="checkround"></div></label>  Imagen 1</br>
-                    <input type="checkbox" class="checkbox-settings" id="launcher-close-all"><label for="launcher-close-all"><div class="checkround"></div></label> Imagen 2</br>
-                    <input type="checkbox" class="checkbox-settings" id="launcher-open"><label for="launcher-open"><div class="checkround"></div></label> Imagen 3</br>
-                    <input type="checkbox" class="checkbox-settings" id="launcher-open"><label for="launcher-open"><div class="checkround"></div></label> Imagen 4</br>
-                    <input type="checkbox" class="checkbox-settings" id="launcher-open"><label for="launcher-open"><div class="checkround"></div></label> Imagen 5</br>
-                    -->
-
                 </div>
             </div>
         </div>
@@ -307,11 +405,11 @@
                     <div id="not-animated-background-div">
                         <br>
                         <span id="background-image-text"></span>
-                        <div class="file is-info is-boxed">
+                        <div class="file is-info is-boxed" style="justify-content: center;">
                             <label class="file-label">
                                 <input class="file-input" type="file" name="resume" id="background-input"
                                     accept="image/*">
-                                <span class="file-cta">
+                                <span class="file-cta" style="border-radius: 10px;">
                                     <span class="file-icon">
                                         <i class="fas fa-cloud-upload-alt"></i>
                                     </span>

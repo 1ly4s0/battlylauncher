@@ -50,6 +50,21 @@ class Mods {
     }
 
     async GetLocalMods() {
+        let thisss = this;
+
+        document.getElementById("select-type-of-search-mods").addEventListener("change", async () => {
+            let typeOfSearch = document.getElementById("select-type-of-search-mods").value;
+
+            const type = {
+                mod: "Mods",
+                resourcepack: "ResourcePacks",
+                shader: "Shaders",
+            }
+            document.getElementById("battlymodstext").innerHTML = type[typeOfSearch];
+
+            thisss.CargarMods(0, typeOfSearch);
+        });
+
         let modsBtn = document.getElementById("button_ver_mods");
 
         modsBtn.addEventListener("click", async () => {
@@ -96,10 +111,10 @@ class Mods {
 
             const bodyText = document.createElement('p');
             bodyText.innerHTML = lang.welcome_mods;
-            
+
             const lineBreak = document.createElement('br');
             const lineBreak2 = document.createElement('br');
-            
+
             modalBody.appendChild(bodyText);
             modalBody.appendChild(lineBreak);
 
@@ -120,11 +135,9 @@ class Mods {
             }
 
             mods = await fs.readdirSync(modsDirectory)
-                .filter(file => path.extname(file) === '.jar')
+                .filter(file => path.extname(file) === '.jar' || path.extname(file) === '.disabledmod')
                 .map(file => path.join(modsDirectory, file));
-            //crear un array vacío
             let modsArray = [];
-            //recorrer todas las carpetas
             if (mods.length > 0) {
                 for (let i = 0; i < mods.length; i++) {
                     try {
@@ -148,7 +161,7 @@ class Mods {
 
                             try {
                                 const tomlData = toml.parse(manifestString);
-        
+
                                 if (tomlData.mods && Array.isArray(tomlData.mods) && tomlData.mods.length > 0) {
                                     const modInfo = tomlData.mods[0];
 
@@ -159,89 +172,81 @@ class Mods {
                                     };
 
                                     modsArray.push(modObject);
-            
+
 
                                     // Crear el header de la primera tarjeta
 
                                     const card1 = document.createElement('div');
                                     card1.classList.add('card');
-                                    card1.style.marginBottom = '-15px';
+                                    card1.style.marginBottom = '10px';
+                                    card1.style.color = '#fff !important';
+                                    card1.style.backgroundColor = '#323232';
+                                    card1.id = mods[i];
 
-                                    const cardHeader1 = document.createElement('header');
-                                    cardHeader1.className = 'card-header is-flex';
+                                    card1.innerHTML = `
+   <header class="card-header is-flex">
+      <p class="card-header-title" style="
+         color: #fff;
+         ">${modObject.name}</p>
+      <div class="buttons buttons-no-margin" style="margin-right: 10px;">
+      ${mods[i].endsWith('.disabledmod') ? '<i class="fa-solid fa-eye"></i>' : '<i class="fa-solid fa-eye-slash"></i>'}
+                    <i class="fa-solid fa-folder-open"></i>
+                    <i class="fa-solid fa-trash"></i>
+                    <i class="fa-solid fa-angle-down"></i>
+      </div>
+   </header>
+   <div class="card-content" id="content" style="display: none; padding-top: 15px;
+    padding-bottom: 15px;">
+      <div class="content" style="margin-left: -5px; font-family: Poppins; font-weight: 700; color: #fff;">${modObject.description}</div>
+   </div>
+                                    `;
 
-                                    const cardTitle1 = document.createElement('p');
-                                    cardTitle1.classList.add('card-header-title');
-                                    cardTitle1.textContent = modObject.name;
 
-                                    const buttonsDiv = document.createElement('div');
-        buttonsDiv.className = 'buttons';
-        buttonsDiv.style.marginRight = '5px';
-
-        // Crear el elemento button con la clase "button is-info" y estilo de margen derecho, y agregarlo al div buttons
-        const playButton = document.createElement('button');
-        playButton.className = 'button is-info';
-        playButton.style.marginRight = '0px';
-                                    buttonsDiv.appendChild(playButton);
-
-                                    const playIconSpan = document.createElement('span');
-        playIconSpan.innerHTML = '<i class="fa-solid fa-folder-open"></i>';
-        playButton.appendChild(playIconSpan);
-
-        // Crear el elemento button con la clase "button is-danger", y agregarlo al div buttons
-        const deleteButton = document.createElement('button');
-        deleteButton.className = 'button is-danger';
-        deleteButton.style.marginRight = '0px';
-                                    buttonsDiv.appendChild(deleteButton);
-                                    
-                                    const deleteIconSpan = document.createElement('span');
-        deleteIconSpan.innerHTML = '<i class="fa-solid fa-trash"></i>';
-                                    deleteButton.appendChild(deleteIconSpan);
-
-                                    const openButton = document.createElement('button');
-        openButton.className = 'button is-warning';
-        openButton.style.marginRight = '0px';
-                                    buttonsDiv.appendChild(openButton);
-                                    
-                                    const openIconSpan = document.createElement('span');
-        openIconSpan.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
-        openButton.appendChild(openIconSpan);
-                                    
-
-                                    
-
-                                    // Crear el contenido de la primera tarjeta
-
-                                    const cardContent1 = document.createElement('div');
-                                    cardContent1.classList.add('card-content');
-                                    cardContent1.setAttribute('id', 'content');
-                                    cardContent1.style.display = 'none';
-
-                                    const cardDescription1 = document.createElement('div');
-                                    cardDescription1.classList.add('content');
-                                    cardDescription1.style.marginLeft = '-5px';
-                                    cardDescription1.textContent = modObject.description;
-                                    //añadir font-family: 'Poppins';font-weight: 700;
-                                    cardDescription1.style.fontFamily = 'Poppins';
-                                    cardDescription1.style.fontWeight = '700';
-                
-                                    card1.appendChild(cardHeader1);
-                                    cardHeader1.appendChild(cardTitle1);
-                                    cardHeader1.appendChild(buttonsDiv);
-                                    card1.appendChild(cardContent1);
-                                    cardContent1.appendChild(cardDescription1);
                                     modalBody.appendChild(card1);
 
-                                    const lineBreak3 = document.createElement('br');
-                                    modalBody.appendChild(lineBreak3);
+                                    const openButton = card1.querySelector('.buttons-no-margin').children[3];
+                                    const deleteButton = card1.querySelector('.buttons-no-margin').children[2];
+                                    const playButton = card1.querySelector('.buttons-no-margin').children[1];
+                                    const deactivateButton = card1.querySelector('.buttons-no-margin').children[0];
+                                    const cardContent1 = card1.querySelector('.card-content');
+
+                                    deactivateButton.addEventListener('click', () => {
+                                        if (mods[i].endsWith('.disabledmod')) {
+                                            const modPath = mods[i].replace(/\//g, '\\');
+                                            const enabledModPath = modPath.replace('.disabledmod', '.jar');
+                                            fs.renameSync(modPath, enabledModPath);
+
+                                            deactivateButton.classList.remove('fa-eye');
+                                            deactivateButton.classList.add('fa-eye-slash');
+
+                                            new Alert().ShowAlert({
+                                                icon: 'success',
+                                                title: lang.mod_activated,
+                                            });
+                                        } else {
+                                            const modPath = mods[i].replace(/\//g, '\\');
+                                            const disabledModPath = modPath.replace('.jar', '.disabledmod');
+                                            fs.renameSync(modPath, disabledModPath);
+
+                                            deactivateButton.classList.remove('fa-eye-slash');
+                                            deactivateButton.classList.add('fa-eye');
+
+                                            new Alert().ShowAlert({
+                                                icon: 'success',
+                                                title: lang.mod_deactivated,
+                                            });
+                                        }
+                                    });
 
                                     openButton.addEventListener('click', () => {
                                         if (cardContent1.style.display === 'none') {
                                             cardContent1.style.display = 'flex';
-                                            openIconSpan.innerHTML = '<i class="fa-solid fa-angle-up"></i>';
+                                            openButton.classList.remove('fa-angle-down');
+                                            openButton.classList.add('fa-angle-up');
                                         } else {
                                             cardContent1.style.display = 'none';
-                                            openIconSpan.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+                                            openButton.classList.remove('fa-angle-up');
+                                            openButton.classList.add('fa-angle-down');
                                         }
                                     });
 
@@ -259,34 +264,34 @@ class Mods {
 
 
 
-                            deleteButton.addEventListener('click', () => {
-                                Swal.fire({
-                                    title: lang.are_you_sure,
-                                    text: lang.are_you_sure_text,
-                                    showCancelButton: true,
-                                    confirmButtonColor: '#f14668',
-                                    cancelButtonColor: '#3e8ed0',
-                                    confirmButtonText: lang.yes_delete,
-                                    cancelButtonText: lang.no_cancel,
-                                }).then((result) => {
-                                    if (result.isConfirmed) {
-                                        card1.remove();
-                                        lineBreak3.remove();
-                                        fs.unlinkSync(mods[i]);
-                                        new Alert().ShowAlert({
-                                            icon: 'success',
-                                            title: lang.mod_deleted_correctly,
+                                    deleteButton.addEventListener('click', () => {
+                                        Swal.fire({
+                                            title: lang.are_you_sure,
+                                            text: lang.are_you_sure_text,
+                                            showCancelButton: true,
+                                            confirmButtonColor: '#f14668',
+                                            cancelButtonColor: '#3e8ed0',
+                                            confirmButtonText: lang.yes_delete,
+                                            cancelButtonText: lang.no_cancel,
+                                        }).then((result) => {
+                                            if (result.isConfirmed) {
+                                                card1.remove();
+                                                lineBreak3.remove();
+                                                fs.unlinkSync(mods[i]);
+                                                new Alert().ShowAlert({
+                                                    icon: 'success',
+                                                    title: lang.mod_deleted_correctly,
+                                                });
+                                            }
                                         });
-                                    }
-                                });
-                            });
-                                    
+                                    });
+
                                     closeBtn.addEventListener('click', () => {
                                         modal.remove();
                                     });
 
 
-                            
+
                                 } else {
                                     console.log("No se ha encontrado el archivo manifest.json");
                                 }
@@ -310,81 +315,75 @@ class Mods {
 
                             const card1 = document.createElement('div');
                             card1.classList.add('card');
-                            card1.style.marginBottom = '-15px';
+                            card1.style.marginBottom = '10px';
+                            card1.style.color = '#fff !important';
+                            card1.style.backgroundColor = '#323232';
+                            card1.id = mods[i];
 
-                            const cardHeader1 = document.createElement('header');
-                            cardHeader1.className = 'card-header is-flex';
+                            card1.innerHTML = `
+   <header class="card-header is-flex">
+      <p class="card-header-title" style="
+         color: #fff;
+         ">${modObject.name}</p>
+      <div class="buttons buttons-no-margin" style="margin-right: 10px;">
+      ${mods[i].endsWith('.disabledmod') ? '<i class="fa-solid fa-eye"></i>' : '<i class="fa-solid fa-eye-slash"></i>'}
+                    <i class="fa-solid fa-folder-open"></i>
+                    <i class="fa-solid fa-trash"></i>
+                    <i class="fa-solid fa-angle-down"></i>
+      </div>
+   </header>
+   <div class="card-content" id="content" style="display: none; padding-top: 15px;
+    padding-bottom: 15px;">
+      <div class="content" style="margin-left: -5px; font-family: Poppins; font-weight: 700; color: #fff;">${modObject.description}</div>
+   </div>
+                                    `;
 
-                            const cardTitle1 = document.createElement('p');
-                            cardTitle1.classList.add('card-header-title');
-                            cardTitle1.textContent = modObject.name;
 
-                            const buttonsDiv = document.createElement('div');
-                            buttonsDiv.className = 'buttons';
-                            buttonsDiv.style.marginRight = '5px';
-
-                            // Crear el elemento button con la clase "button is-info" y estilo de margen derecho, y agregarlo al div buttons
-                            const playButton = document.createElement('button');
-                            playButton.className = 'button is-info';
-                            playButton.style.marginRight = '0px';
-                            buttonsDiv.appendChild(playButton);
-
-                            const playIconSpan = document.createElement('span');
-                            playIconSpan.innerHTML = '<i class="fa-solid fa-folder-open"></i>';
-                            playButton.appendChild(playIconSpan);
-
-                            // Crear el elemento button con la clase "button is-danger", y agregarlo al div buttons
-                            const deleteButton = document.createElement('button');
-                            deleteButton.className = 'button is-danger';
-                            deleteButton.style.marginRight = '0px';
-                            buttonsDiv.appendChild(deleteButton);
-
-                            const deleteIconSpan = document.createElement('span');
-                            deleteIconSpan.innerHTML = '<i class="fa-solid fa-trash"></i>';
-                            deleteButton.appendChild(deleteIconSpan);
-
-                            const openButton = document.createElement('button');
-                            openButton.className = 'button is-warning';
-                            openButton.style.marginRight = '0px';
-                            buttonsDiv.appendChild(openButton);
-
-                            const openIconSpan = document.createElement('span');
-                            openIconSpan.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
-                            openButton.appendChild(openIconSpan);
-
-                            // Crear el contenido de la primera tarjeta
-
-                            const cardContent1 = document.createElement('div');
-                            cardContent1.classList.add('card-content');
-                            cardContent1.setAttribute('id', 'content');
-                            cardContent1.style.display = 'none';
-
-                            const cardDescription1 = document.createElement('div');
-                            cardDescription1.classList.add('content');
-                            cardDescription1.style.marginLeft = '-5px';
-                            cardDescription1.textContent = modObject.description;
-                            //añadir font-family: 'Poppins';font-weight: 700;
-                            cardDescription1.style.fontFamily = 'Poppins';
-                            cardDescription1.style.fontWeight = '700';
-
-                            card1.appendChild(cardHeader1);
-                            cardHeader1.appendChild(cardTitle1);
-                            cardHeader1.appendChild(buttonsDiv);
-                            card1.appendChild(cardContent1);
-                            cardContent1.appendChild(cardDescription1);
                             modalBody.appendChild(card1);
 
-                            const lineBreak3 = document.createElement('br');
-                            modalBody.appendChild(lineBreak3);
+                            const openButton = card1.querySelector('.buttons-no-margin').children[3];
+                            const deleteButton = card1.querySelector('.buttons-no-margin').children[2];
+                            const playButton = card1.querySelector('.buttons-no-margin').children[1];
+                            const deactivateButton = card1.querySelector('.buttons-no-margin').children[0];
+                            const cardContent1 = card1.querySelector('.card-content');
+
+                            deactivateButton.addEventListener('click', () => {
+                                if (mods[i].endsWith('.disabledmod')) {
+                                    const modPath = mods[i].replace(/\//g, '\\');
+                                    const enabledModPath = modPath.replace('.disabledmod', '.jar');
+                                    fs.renameSync(modPath, enabledModPath);
+
+                                    deactivateButton.classList.remove('fa-eye');
+                                    deactivateButton.classList.add('fa-eye-slash');
+
+                                    new Alert().ShowAlert({
+                                        icon: 'success',
+                                        title: lang.mod_activated,
+                                    });
+                                } else {
+                                    const modPath = mods[i].replace(/\//g, '\\');
+                                    const disabledModPath = modPath.replace('.jar', '.disabledmod');
+                                    fs.renameSync(modPath, disabledModPath);
+
+                                    deactivateButton.classList.remove('fa-eye-slash');
+                                    deactivateButton.classList.add('fa-eye');
+
+                                    new Alert().ShowAlert({
+                                        icon: 'success',
+                                        title: lang.mod_deactivated,
+                                    });
+                                }
+                            });
 
                             openButton.addEventListener('click', () => {
                                 if (cardContent1.style.display === 'none') {
                                     cardContent1.style.display = 'flex';
-                                    openIconSpan.innerHTML = '<i class="fa-solid fa-angle-up"></i>';
-                                }
-                                else {
+                                    openButton.classList.remove('fa-angle-down');
+                                    openButton.classList.add('fa-angle-up');
+                                } else {
                                     cardContent1.style.display = 'none';
-                                    openIconSpan.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+                                    openButton.classList.remove('fa-angle-up');
+                                    openButton.classList.add('fa-angle-down');
                                 }
                             });
 
@@ -395,8 +394,7 @@ class Mods {
                                     let modPath = mods[i].replace(/\//g, '\\');
                                     console.log(modPath);
                                     shell.showItemInFolder(`${modPath}`);
-                                }
-                                catch (error) {
+                                } catch (error) {
                                     console.error('Error al abrir el gestor de archivos:', error);
                                 }
                             });
@@ -441,85 +439,78 @@ class Mods {
 
                             modsArray.push(modObject);
 
-                            // Crear el header de la primera tarjeta
 
                             const card1 = document.createElement('div');
                             card1.classList.add('card');
-                            card1.style.marginBottom = '-15px';
+                            card1.style.marginBottom = '10px';
+                            card1.style.color = '#fff !important';
+                            card1.style.backgroundColor = '#323232';
+                            card1.id = mods[i];
 
-                            const cardHeader1 = document.createElement('header');
-                            cardHeader1.className = 'card-header is-flex';
+                            card1.innerHTML = `
+   <header class="card-header is-flex">
+      <p class="card-header-title" style="
+         color: #fff;
+         ">${modObject.name}</p>
+      <div class="buttons buttons-no-margin" style="margin-right: 10px;">
+      ${mods[i].endsWith('.disabledmod') ? '<i class="fa-solid fa-eye"></i>' : '<i class="fa-solid fa-eye-slash"></i>'}
+                    <i class="fa-solid fa-folder-open"></i>
+                    <i class="fa-solid fa-trash"></i>
+                    <i class="fa-solid fa-angle-down"></i>
+      </div>
+   </header>
+   <div class="card-content" id="content" style="display: none; padding-top: 15px;
+    padding-bottom: 15px;">
+      <div class="content" style="margin-left: -5px; font-family: Poppins; font-weight: 700; color: #fff;">${modObject.description}</div>
+   </div>
+                                    `;
 
-                            const cardTitle1 = document.createElement('p');
-                            cardTitle1.classList.add('card-header-title');
-                            cardTitle1.textContent = modObject.name;
 
-                            const buttonsDiv = document.createElement('div');
-                            buttonsDiv.className = 'buttons';
-                            buttonsDiv.style.marginRight = '5px';
-
-                            // Crear el elemento button con la clase "button is-info" y estilo de margen derecho, y agregarlo al div buttons
-                            const playButton = document.createElement('button');
-                            playButton.className = 'button is-info';
-                            playButton.style.marginRight = '0px';
-                            buttonsDiv.appendChild(playButton);
-
-                            const playIconSpan = document.createElement('span');
-                            playIconSpan.innerHTML = '<i class="fa-solid fa-folder-open"></i>';
-                            playButton.appendChild(playIconSpan);
-
-                            // Crear el elemento button con la clase "button is-danger", y agregarlo al div buttons
-                            const deleteButton = document.createElement('button');
-                            deleteButton.className = 'button is-danger';
-                            deleteButton.style.marginRight = '0px';
-                            buttonsDiv.appendChild(deleteButton);
-
-                            const deleteIconSpan = document.createElement('span');
-                            deleteIconSpan.innerHTML = '<i class="fa-solid fa-trash"></i>';
-                            deleteButton.appendChild(deleteIconSpan);
-
-                            const openButton = document.createElement('button');
-                            openButton.className = 'button is-warning';
-                            openButton.style.marginRight = '0px';
-                            buttonsDiv.appendChild(openButton);
-
-                            const openIconSpan = document.createElement('span');
-                            openIconSpan.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
-                            openButton.appendChild(openIconSpan);
-
-                            // Crear el contenido de la primera tarjeta
-
-                            const cardContent1 = document.createElement('div');
-                            cardContent1.classList.add('card-content');
-                            cardContent1.setAttribute('id', 'content');
-                            cardContent1.style.display = 'none';
-                            
-                            
-                            const cardDescription1 = document.createElement('div');
-                            cardDescription1.classList.add('content');
-                            cardDescription1.style.marginLeft = '-5px';
-                            cardDescription1.textContent = modObject.description;
-                            //añadir font-family: 'Poppins';font-weight: 700;
-                            cardDescription1.style.fontFamily = 'Poppins';
-                            cardDescription1.style.fontWeight = '700';
-
-                            card1.appendChild(cardHeader1);
-                            cardHeader1.appendChild(cardTitle1);
-                            cardHeader1.appendChild(buttonsDiv);
-                            card1.appendChild(cardContent1);
-                            cardContent1.appendChild(cardDescription1);
                             modalBody.appendChild(card1);
 
-                            const lineBreak3 = document.createElement('br');
-                            modalBody.appendChild(lineBreak3);
+                            const openButton = card1.querySelector('.buttons-no-margin').children[3];
+                            const deleteButton = card1.querySelector('.buttons-no-margin').children[2];
+                            const playButton = card1.querySelector('.buttons-no-margin').children[1];
+                            const deactivateButton = card1.querySelector('.buttons-no-margin').children[0];
+                            const cardContent1 = card1.querySelector('.card-content');
+
+                            deactivateButton.addEventListener('click', () => {
+                                if (mods[i].endsWith('.disabledmod')) {
+                                    const modPath = mods[i].replace(/\//g, '\\');
+                                    const enabledModPath = modPath.replace('.disabledmod', '.jar');
+                                    fs.renameSync(modPath, enabledModPath);
+
+                                    deactivateButton.classList.remove('fa-eye');
+                                    deactivateButton.classList.add('fa-eye-slash');
+
+                                    new Alert().ShowAlert({
+                                        icon: 'success',
+                                        title: lang.mod_activated,
+                                    });
+                                } else {
+                                    const modPath = mods[i].replace(/\//g, '\\');
+                                    const disabledModPath = modPath.replace('.jar', '.disabledmod');
+                                    fs.renameSync(modPath, disabledModPath);
+
+                                    deactivateButton.classList.remove('fa-eye-slash');
+                                    deactivateButton.classList.add('fa-eye');
+
+                                    new Alert().ShowAlert({
+                                        icon: 'success',
+                                        title: lang.mod_deactivated,
+                                    });
+                                }
+                            });
 
                             openButton.addEventListener('click', () => {
                                 if (cardContent1.style.display === 'none') {
                                     cardContent1.style.display = 'flex';
-                                    openIconSpan.innerHTML = '<i class="fa-solid fa-angle-up"></i>';
+                                    openButton.classList.remove('fa-angle-down');
+                                    openButton.classList.add('fa-angle-up');
                                 } else {
                                     cardContent1.style.display = 'none';
-                                    openIconSpan.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+                                    openButton.classList.remove('fa-angle-up');
+                                    openButton.classList.add('fa-angle-down');
                                 }
                             });
 
@@ -568,9 +559,9 @@ class Mods {
                     } catch (error) {
                         console.log(error);
                     }
-                document.body.appendChild(modal);
-                
-            }
+                    document.body.appendChild(modal);
+
+                }
             }
         });
     }
@@ -680,13 +671,13 @@ class Mods {
 
             // Crear el botón "Instalar" y añadirlo como hijo de footerDiv
             const installButton = document.createElement("button");
-            installButton.className = "button is-info";
+            installButton.className = "button is-info is-outlined";
             installButton.textContent = lang.install;
             footerDiv.appendChild(installButton);
 
             // Crear el botón "Cancelar" y añadirlo como hijo de footerDiv
             const cancelButton = document.createElement("button");
-            cancelButton.className = "button";
+            cancelButton.className = "button is-outlined is-white";
             cancelButton.textContent = lang.cancel;
             footerDiv.appendChild(cancelButton);
 
@@ -774,8 +765,8 @@ class Mods {
                     // Reemplaza con la ruta real de tu archivo manifest.json
                     const apiKey = '$2a$10$S7nVFhQKpxteK4Fwf9yoxejmI.NjJiE53Qh4IeaDbIu/./oTM/MKa'; // Reemplaza con tu clave API de CurseForge
 
-                    
-                    
+
+
 
                     async function descargarModModrinth(archivo, randomString) {
 
@@ -800,7 +791,7 @@ class Mods {
                             loaderVersion = loader_;
                         }
 
-                        
+
 
                         if (name && description && version && loader && loaderVersion) {
                             fetch("https://battlylauncher.com/assets/img/mc-icon.png")
@@ -811,7 +802,7 @@ class Mods {
                                         buffer
                                     );
                                 });
-                            
+
 
                             let instance = {
                                 name: name,
@@ -929,7 +920,7 @@ class Mods {
                     const tipoArchivo = file.name.split('.').pop();
 
                     //ruta del archivo
-                    
+
                     let json;
 
                     if (tipoArchivo === 'zip') {
@@ -950,8 +941,8 @@ class Mods {
                         const destinationFolder = `${dataDirectory}/.battly/instances/${randomString}`;
 
 
-                        
-                        
+
+
                         if (!fs.existsSync(destinationFolder)) {
                             fs.mkdirSync(destinationFolder);
                         }
@@ -1029,12 +1020,12 @@ class Mods {
                                 loaderVersion = loader_.replace("quilt-", "");
                             }
 
-                        
+
 
                             if (name && description && version && loader && loaderVersion) {
 
-                        
-                            
+
+
                                 //descargar la imagen https://bulma.io/images/placeholders/128x128.png y moverla a la carpeta de la instancia
                                 fetch("https://battlylauncher.com/assets/img/mc-icon.png")
                                     .then((res) => res.buffer())
@@ -1044,7 +1035,7 @@ class Mods {
                                             buffer
                                         );
                                     });
-                            
+
 
                                 let instance = {
                                     name: name,
@@ -1090,19 +1081,19 @@ class Mods {
 
                                     if (restante === 0) {
                                         modalDiv.remove();
-                                    
+
                                         ipcRenderer.send("new-notification", {
-                                                title: lang.modpack_installed,
-                                                body: `ModPack ${name} ${lang.modpack_installed_correctly}.`
+                                            title: lang.modpack_installed,
+                                            body: `ModPack ${name} ${lang.modpack_installed_correctly}.`
                                         });
-                                        
+
                                         new Alert().ShowAlert({
                                             icon: 'success',
                                             title: lang.modpack_installed,
                                             text: `ModPack ${name} ${lang.modpack_installed_correctly}.`
                                         });
                                     }
-                                   
+
                                 }
                             }
                         }, 1000);
@@ -1122,7 +1113,7 @@ class Mods {
                             fs.mkdirSync(`${dataDirectory}/.battly/instances/${randomString}`);
                         }
                         const destinationFolder = `${dataDirectory}/.battly/instances/${randomString}`;
-                        
+
                         fs.mkdirSync(`${dataDirectory}/.battly/instances/${randomString}`, {
                             recursive: true
                         });
@@ -1142,7 +1133,7 @@ class Mods {
                         await fs.remove(path.join(destinationFolder, 'overrides'));
 
                         await descargarModModrinth(JSON.parse(json), randomString);
-                        
+
                     } else {
                         new Alert().ShowAlert({
                             icon: 'error',
@@ -1164,7 +1155,7 @@ class Mods {
         btnOpenMods.addEventListener("click", () => {
             document.getElementById("navbar-mods").style.display = "none";
             document.getElementById("home-features-mods").style.height = "100%";
-            this.CargarMods();
+            this.CargarMods(0, "mod");
         });
         let boton_mods = document.getElementById("boton_abrir_mods");
         boton_mods.addEventListener("click", () => {
@@ -1179,11 +1170,11 @@ class Mods {
         let mods_container = document.getElementById("mods_container");
         let actualPage = 0;
         /* comprobar si se ha deslizado el scroll hasta el final */
-        mods_container.addEventListener("scroll", () => {    
+        mods_container.addEventListener("scroll", () => {
             // Verificar si estamos cerca del final con un pequeño margen (por ejemplo, 10 píxeles)
             if (mods_container.scrollTop + mods_container.clientHeight + 10 >= mods_container.scrollHeight) {
                 actualPage += 50;
-                this.CargarMods(actualPage);
+                this.CargarMods(actualPage, "mod");
             }
         });
 
@@ -1202,17 +1193,19 @@ class Mods {
             if (event.keyCode === 13) {
                 event.preventDefault();
                 if (input_buscar_mods.value == "") {
-                    this.CargarMods();
+                    let typeOfSearch = document.getElementById("select-type-of-search-mods").value;
+                    this.CargarMods(0, typeOfSearch);
                 } else {
-                    this.BuscarModsPorNombre(input_buscar_mods.value);
+                    let typeOfSearch = document.getElementById("select-type-of-search-mods").value;
+                    this.BuscarModsPorNombre(input_buscar_mods.value, typeOfSearch);
                 }
             }
         });
     }
 
-    
 
-    async BuscarModsPorNombre(nombre) {
+
+    async BuscarModsPorNombre(nombre, typeOfSearch) {
         document.getElementById("navbar-mods").style.display = "none";
         document.getElementById("mods_container").classList.add("animate-height");
         document.getElementById("mods_container").style.height = "60%";
@@ -1232,7 +1225,7 @@ class Mods {
             const loadingText = document.getElementById("loading-text");
             loadingText.innerText = lang.searching_mods;
 
-            await axios.get(`https://api.modrinth.com/v2/search?limit=20&query=${nombre}&facets=[["project_type:mod"]]&index=relevance&offset=${offset}`).then(async (response) => {
+            await axios.get(`https://api.modrinth.com/v2/search?limit=20&query=${nombre}&facets=[["project_type:${typeOfSearch}"]]&index=relevance&offset=${offset}`).then(async (response) => {
                 selected_page = 0;
                 let mods = response.data.hits;
                 mods_container.innerHTML = "";
@@ -1294,12 +1287,12 @@ class Mods {
             });
         }
 
-        
+
         let totalhits;
         async function setTotalHits(total) {
             totalhits = total;
         }
-        
+
         document.getElementById("anterior_btn_mods").addEventListener("click", () => {
             if (currentOffset > 0) {
                 currentOffset -= limit;
@@ -1379,7 +1372,7 @@ class Mods {
         }
 
         // Ajusta la URL de la llamada a la API para incluir el offset
-        await axios.get(`https://api.modrinth.com/v2/search?limit=${limit}&query=${nombre}&facets=[["project_type:mod"]]&index=relevance&offset=${offset}`).then(async (response) => {
+        await axios.get(`https://api.modrinth.com/v2/search?limit=${limit}&query=${nombre}&facets=[["project_type:${typeOfSearch}"]]&index=relevance&offset=${offset}`).then(async (response) => {
             let mods = response.data.hits;
             let total_hits = response.data.total_hits;
             let totalMods = mods.length;
@@ -1446,7 +1439,7 @@ class Mods {
     }
 
 
-    async DescargarMod(downloadLink, mod, nombre, fileName, modData) {
+    async DescargarMod(downloadLink, mod, nombre, fileName, modData, project_type) {
 
         let mod_data = modData;
 
@@ -1460,26 +1453,70 @@ class Mods {
         let error_downloading_mod = lang.error_downloading_mod;
         let mod_downloaded_successfully = lang.mod_downloaded_successfully;
 
-        let file = fs.createWriteStream(`${dataDirectory}/.battly/mods/${fileName}`);
-        let request = await fetch(downloadLink);
-        await new Promise((resolve, reject) => {
-            request.body.pipe(file);
-            request.body.on("error", (err) => {
-                new Alert().ShowAlert({
-                    icon: 'error',
-                    title: `${error_downloading_mod} ${nombre}.`,
-                    text: err
-                })
-                reject(err);
+        if (project_type === "mod") {
+            let file = fs.createWriteStream(`${dataDirectory}/.battly/mods/${fileName}`);
+            let request = await fetch(downloadLink);
+            await new Promise((resolve, reject) => {
+                request.body.pipe(file);
+                request.body.on("error", (err) => {
+                    new Alert().ShowAlert({
+                        icon: 'error',
+                        title: `${error_downloading_mod} ${nombre}.`,
+                        text: err
+                    })
+                    reject(err);
+                });
+                file.on("finish", function () {
+                    resolve();
+                    new Alert().ShowAlert({
+                        icon: 'success',
+                        title: `${nombre} ${mod_downloaded_successfully}.`
+                    })
+                });
             });
-            file.on("finish", function () {
-                resolve();
-                new Alert().ShowAlert({
-                    icon: 'success',
-                    title: `${nombre} ${mod_downloaded_successfully}.`
-                })
+        } else if (project_type === "resourcepack") {
+            let file = fs.createWriteStream(`${dataDirectory}/.battly/resourcepacks/${fileName}`);
+            let request = await fetch(downloadLink);
+            await new Promise((resolve, reject) => {
+                request.body.pipe(file);
+                request.body.on("error", (err) => {
+                    new Alert().ShowAlert({
+                        icon: 'error',
+                        title: `${error_downloading_mod} ${nombre}.`,
+                        text: err
+                    })
+                    reject(err);
+                });
+                file.on("finish", function () {
+                    resolve();
+                    new Alert().ShowAlert({
+                        icon: 'success',
+                        title: `${nombre} ${mod_downloaded_successfully}.`
+                    })
+                });
             });
-        });
+        } else if (project_type === "shader") {
+            let file = fs.createWriteStream(`${dataDirectory}/.battly/shaderpacks/${fileName}`);
+            let request = await fetch(downloadLink);
+            await new Promise((resolve, reject) => {
+                request.body.pipe(file);
+                request.body.on("error", (err) => {
+                    new Alert().ShowAlert({
+                        icon: 'error',
+                        title: `${error_downloading_mod} ${nombre}.`,
+                        text: err
+                    })
+                    reject(err);
+                });
+                file.on("finish", function () {
+                    resolve();
+                    new Alert().ShowAlert({
+                        icon: 'success',
+                        title: `${nombre} ${mod_downloaded_successfully}.`
+                    })
+                });
+            });
+        }
 
 
 
@@ -1783,11 +1820,8 @@ class Mods {
 
         modalDiv.classList.add("is-active");
 
-
-
-
         downloadButton.addEventListener("click", () => {
-            this.DescargarMod(mod_data_downloads[selectElement.selectedIndex].files[0].url, mod_data.id, mod_data.title, mod_data_downloads[selectElement.selectedIndex].files[0].filename, mod_data_downloads[selectElement.selectedIndex]);
+            this.DescargarMod(mod_data_downloads[selectElement.selectedIndex].files[0].url, mod_data.id, mod_data.title, mod_data_downloads[selectElement.selectedIndex].files[0].filename, mod_data_downloads[selectElement.selectedIndex], mod_data.project_type);
         });
 
         deleteButton.addEventListener("click", () => {
@@ -1829,7 +1863,7 @@ class Mods {
     }
 
 
-    async CargarMods(page) {
+    async CargarMods(page, typeOfSearch) {
         document.getElementById("navbar-mods").style.display = "none";
         document.getElementById("home-features-mods").style.height = "100%";
         let mods_container = document.getElementById("mods_container");
@@ -1839,11 +1873,10 @@ class Mods {
         }
         const loadingText = document.getElementById("loading-text");
         loadingText.innerText = lang.searching_mods;
-        
-    
-    
-        
-        await axios.get(`https://api.modrinth.com/v2/search?limit=20&index=relevance&facets=[["project_type:mod"]]&offset=${page}`).then(async (response) => {
+
+
+
+        await axios.get(`https://api.modrinth.com/v2/search?limit=20&index=relevance&facets=[["project_type:${typeOfSearch}"]]&offset=${page}`).then(async (response) => {
             let mods = response.data.hits;
 
             let totalMods = mods.length;
