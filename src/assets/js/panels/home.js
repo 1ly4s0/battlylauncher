@@ -3836,6 +3836,7 @@ class Home {
 
         let seMostroExtrayendo_core = false;
         let seMostroInstalando_core = false;
+        let seMostroInstalando = false;
 
         launch_core.on("extract", (extract) => {
           consoleOutput_ += `[EXTRACT] ${extract}\n`;

@@ -13,8 +13,11 @@ const pipeline = util.promisify(stream.pipeline);
 let lang;
 
 const pkgVersion = async () => {
-    const pkg = await fs.promises.readFile("package.json");
-    return JSON.parse(pkg);
+    const pkg = {
+        version: "2.0.1",
+        buildVersion: 1001
+    };
+    return pkg;
 };
 
 class Splash {
@@ -118,6 +121,7 @@ class Splash {
             this.updateProgress(progress);
 
             if (extractedFiles === totalFiles) {
+                await fs.unlinkSync(zipPath);
                 this.log('¡Actualización completada! Reiniciando...');
                 setTimeout(() => {
                     ipcRenderer.send("restartLauncher");

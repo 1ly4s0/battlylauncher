@@ -44,7 +44,7 @@ function changePanel(id) {
     const preloadContent = document.querySelector('.preload-content');
     document.getElementById("loading-text").innerHTML = "Cargando";
 
-    preloadContent.style.display = "block"; // Muestra el contenido de carga
+    preloadContent.style.display = "block";
 
     setTimeout(() => {
         rectangulos.forEach((rectangulo, index) => {
@@ -55,15 +55,15 @@ function changePanel(id) {
 
         document.getElementById("loading-text").innerHTML = "";
     }, 10);
-    
-    
+
+
     setTimeout(() => {
         let active = document.querySelector('.active');
         if (active) active.classList.toggle('active');
         let panel = document.querySelector(`.${id}`);
         panel.classList.add('active');
     }, 500);
-    
+
     setTimeout(() => {
         document.getElementById("loading-text").innerHTML = "Listo";
         rectangulos.forEach((rectangulo, index) => {
@@ -73,7 +73,7 @@ function changePanel(id) {
         });
 
         document.getElementById("loading-text").innerHTML = "";
-      
+
         setTimeout(() => {
             preloadContent.style.display = "none";
         }, 500);
@@ -112,7 +112,7 @@ function accountSelect(uuid) {
     if (activeAccount) activeAccount.classList.toggle('active-account');
     account.classList.add('active-account');
 
-    
+
 
     new Alert().ShowAlert({
         icon: 'success',
@@ -120,10 +120,10 @@ function accountSelect(uuid) {
         text: `${lang.account_selected_text} ${account.querySelector('.account-name').innerHTML} ${lang.account_selected_text_two}`
     });
 
-    
+
     if (account.querySelector('.account-name').innerHTML.includes('fa-solid fa-fire')) {
         document.getElementById("ads").style.display = "none";
-        document.getElementById("ads-text").style.display = "none";
+        // document.getElementById("ads-text").style.display = "none";
         console.log('Es premium');
         let WelcomePremiumShown = localStorage.getItem('WelcomePremiumShown');
         if (!WelcomePremiumShown || WelcomePremiumShown === 'false' || WelcomePremiumShown === null || WelcomePremiumShown === undefined) {
@@ -152,7 +152,7 @@ function accountSelect(uuid) {
             const closeButton = document.createElement('button');
             closeButton.classList.add('delete');
             closeButton.setAttribute('aria-label', 'close');
-        
+
             closeButton.addEventListener('click', () => {
                 modal.classList.remove('is-active');
                 localStorage.setItem('WelcomePremiumShown', true);
@@ -209,7 +209,7 @@ function accountSelect(uuid) {
             const acceptButton = document.createElement('button');
             acceptButton.classList.add('button', 'is-info');
             acceptButton.textContent = 'Aceptar';
-        
+
             acceptButton.addEventListener('click', () => {
                 modal.classList.remove('is-active');
                 localStorage.setItem('WelcomePremiumShown', true);

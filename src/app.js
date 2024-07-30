@@ -608,9 +608,13 @@ ipcMain.handle("update-app", () => {
 });
 
 const pkgVersion = async () => {
-  let data = await fs.readFileSync("package.json");
-  return JSON.parse(data);
+  const pkg = {
+    version: "2.0.1",
+    buildVersion: 1001
+  };
+  return JSON.parse(pkg);
 };
+
 ipcMain.handle("update-new-app", async () => {
   console.log(await pkgVersion());
 
