@@ -473,3 +473,87 @@ div {
     font-weight: bold !important;
   }
 }
+
+/* Hide the default checkbox */
+.container-optifine input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container-optifine {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.2rem;
+  user-select: none;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: 5px;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  --clr: #3e8ed0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.1em;
+  width: 1.1em;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: 300ms;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-optifine input:checked ~ .checkmark {
+  background-color: var(--clr);
+  border-radius: 0.5rem;
+  animation: pulse1 500ms ease-in-out;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-optifine input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-optifine .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #e0e0e2;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+@keyframes pulse1 {
+  0% {
+    box-shadow: 0 0 0 #3e8ed0;
+    rotate: 20deg;
+  }
+
+  50% {
+    rotate: -20deg;
+  }
+
+  75% {
+    box-shadow: 0 0 0 10px #227cc5;
+  }
+
+  100% {
+    box-shadow: 0 0 0 13px #3e8ed0;
+    rotate: 0;
+  }
+}

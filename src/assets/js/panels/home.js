@@ -3758,6 +3758,19 @@ class Home {
             "Minecraft Crash Report",
           ];
 
+          const errorMessages = {
+            "Failed to start due to TypeError": langs.error_detected_one,
+            "Failed to start the minecraft server": langs.error_detected_one,
+            'Exception in thread "main" ': langs.error_detected_two,
+            "There is insufficient memory for the Java Runtime Environment to continue.": langs.error_detected_three,
+            "Could not reserve enough space for object heap": langs.error_detected_three,
+            "Forge patcher exited with code 1": langs.error_detected_four,
+            "Unable to launch": langs.error_detected_five,
+            "java.lang.ClassCastException": langs.error_detected_five,
+            "Minecraft has crashed!": langs.error_detected_five,
+            "Minecraft Crash Report": langs.error_detected_one,
+          };
+
           for (let errorMsg of startupErrors) {
             if (e.includes(errorMsg)) return showErrorReport(e, errorMessages[errorMsg]);
           }
@@ -4277,6 +4290,7 @@ class Home {
                     <label>${langs.choose_forge_version}
                     </label>
                     <br>
+                    <div style="display: flex; gap: 5px;">
                     <div class="select is-link" id="forge" style="width: auto;">
                       <select id="selectForge">
                       </select>
@@ -4286,6 +4300,12 @@ class Home {
                         <option value="recommended">${langs.recommended}</option>
                         <option value="latest">${langs.latest}</option>
                       </select>
+                    </div>
+                    <label class="container-optifine">
+                      <input checked type="checkbox" id="optiforge">
+                      <div class="checkmark"></div>
+                      OptiFine
+                    </label>
                     </div>
                   </div>
 
@@ -4390,6 +4410,10 @@ class Home {
         modalDiv.appendChild(modalCard);
 
         document.body.appendChild(modalDiv);
+
+        document.querySelector(".checkmark").addEventListener("click", () => {
+          document.getElementById("optiforge").attributes.checked.value = !document.getElementById("optiforge").attributes.checked.value;
+        });
         // Agregar el modal al cuerpo del documento
         modalCloseButton.addEventListener("click", function () {
           //eliminar el modal
@@ -6512,6 +6536,8 @@ class Home {
             }
           }
 
+          let isOptiForgeChecked = document.getElementById("optiforge");
+
           modalDiv.remove();
 
           // Crear el div modal principal
@@ -6811,6 +6837,7 @@ class Home {
 
           let opts;
           console.log(version);
+
           if (!version.endsWith("-extra") && !version.includes("OptiFine")) {
             if (account.type === "battly") {
               opts = {
@@ -6830,6 +6857,7 @@ class Home {
                   screen: screen,
                 },
                 downloadFileMultiple: 40,
+                isOptiForgeChecked: isOptiForgeChecked.checked,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {
@@ -6879,6 +6907,7 @@ class Home {
                   screen: screen,
                 },
                 downloadFileMultiple: 40,
+                isOptiForgeChecked: isOptiForgeChecked.checked,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {
@@ -6921,6 +6950,7 @@ class Home {
                 },
                 downloadFileMultiple: 40,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
+                isOptiForgeChecked: isOptiForgeChecked.checked,
                 version: versionData,
                 loader: {
                   type: type,
@@ -6965,6 +6995,7 @@ class Home {
                   screen: screen,
                 },
                 downloadFileMultiple: 40,
+                isOptiForgeChecked: isOptiForgeChecked.checked,
                 //javaPath: "C:\\Users\\ilyas\\Desktop\\RND Projects\\Java\\bin\\java.exe",
                 version: versionData,
                 loader: {
@@ -7165,7 +7196,7 @@ class Home {
           launch.on("speed", (speed) => {
             /*
                                                     let velocidad = speed / 1067008;
-  
+   
                                                     if (velocidad > 0) {
                                                         clearTimeout(timeoutId); // cancela el mensaje de alerta si la velocidad no es cero
                                                     } else {
@@ -7178,7 +7209,7 @@ class Home {
                                                             clearTimeout(timeoutId);
                                                             const swal  = require('sweetalert');
                                                             crasheo = true;
-  
+   
                                                             new Alert().ShowAlert({
                                                                 title: "Error",
                                                                 text: "Error al descargar esta versión. Reinicia el launcher o inténtalo de nuevo más tarde. [ERROR: 2]",
@@ -7189,7 +7220,7 @@ class Home {
                                                                     ipcRenderer.send('restartLauncher')
                                                                 }
                                                             });
-  
+   
                                                         }, 10000);
                                                     }*/
           });

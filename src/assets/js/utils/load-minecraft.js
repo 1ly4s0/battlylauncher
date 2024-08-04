@@ -15,6 +15,7 @@ let consoleOutput_ = + consoleOutput;
 import { logger, database, changePanel } from "../utils.js";
 import { Lang } from "./lang.js";
 import { CrashReport } from "./crash-report.js";
+const got = require("got");
 const dataDirectory = process.env.APPDATA || (process.platform == "darwin" ? `${process.env.HOME}/Library/Application Support` : process.env.HOME);
 const ShowCrashReport = new CrashReport().ShowCrashReport;
 let langs;
@@ -69,6 +70,65 @@ class LoadMinecraft {
     } else {
       version_real = options.version;
     }
+
+    async function downloadFile(url, outputPath) {
+      try {
+        // Realiza la solicitud HTTP para obtener el archivo
+        const response = await got(url, {
+          responseType: 'buffer' // Obtiene el archivo como un buffer
+        });
+
+        // Crea un flujo de escritura para guardar el archivo
+        fs.writeFileSync(outputPath, response.body);
+
+        console.log(`Archivo descargado y guardado en ${outputPath}`);
+      } catch (error) {
+        console.error('Error al descargar el archivo:', error.message);
+      }
+    }
+
+    // Función para manejar la descarga según la versión
+    async function handleDownload(version_real, account, dataDirectory) {
+      if (version_real.endsWith("-forge")) {
+        try {
+          const response = await got(`https://api.battlylauncher.com/battlylauncher/optifine/versions/${version_real.replace("-forge", "")}`, {
+            headers: {
+              Authorization: account.token,
+            },
+            responseType: 'json' // Obtiene la respuesta como JSON
+          });
+
+          const data = response.body;
+          console.log(data);
+
+          if (data.error) {
+            console.error(data.error);
+            return;
+          }
+
+          let versionToDownload = data[0];
+          let downloadUrl = versionToDownload.download.link;
+          let filename = versionToDownload.download.filename;
+          let destPath = path.join(dataDirectory, '.battly', 'mods', filename);
+
+          console.log(`Descargando OptiFine ${filename}...`);
+
+          await downloadFile(downloadUrl, destPath);
+
+          console.log(`OptiFine ${filename} descargado correctamente.`);
+        } catch (error) {
+          console.error(error.message);
+        }
+      }
+    }
+
+
+    console.log("EL valor recivido es" + options.isOptiForgeChecked)
+
+    if (options.isOptiForgeChecked) {
+      handleDownload(version_real, { token: account.token }, dataDirectory);
+    }
+
 
     await Launcher.Launch(options);
 
@@ -287,54 +347,71 @@ class LoadMinecraft {
         }
       }
 
-      if (e.includes("Failed to start the minecraft server"))
+      if (e.includes("Failed to start the minecraft server")) {
+        modalDiv1.remove();
         return ShowCrashReport(
           `${langs.error_detected_one} \nError:\n${e}`
         );
-      if (e.includes('Exception in thread "main" '))
+      }
+      if (e.includes('Exception in thread "main" ')) {
+        modalDiv1.remove();
         return ShowCrashReport(
           `${langs.error_detected_two} \nError:\n${e}`
         );
+      }
 
       if (
         e.includes(
           "There is insufficient memory for the Java Runtime Environment to continue."
         )
-      )
+      ) {
+        modalDiv1.remove();
         return ShowCrashReport(
           `${langs.error_detected_three} \nError:\n${e}`
         );
-      if (e.includes("Could not reserve enough space for object heap"))
+      }
+      if (e.includes("Could not reserve enough space for object heap")) {
+        modalDiv1.remove();
         return ShowCrashReport(
           `${langs.error_detected_three} \nError:\n${e}`
         );
+      }
 
       if (e.includes("Forge patcher exited with code 1")) {
+        modalDiv1.remove();
         ShowCrashReport(`${langs.error_detected_four} \nError:\n${e}`);
       }
 
-      if (e.includes("Unable to launch"))
+      if (e.includes("Unable to launch")) {
+        modalDiv1.remove();
         return ShowCrashReport(
           `${langs.error_detected_five} \nError:\n${e}`
         );
+      }
 
       if (
         e.includes("Minecraft Crash Report") &&
         !e.includes("THIS IS NOT A ERROR")
-      )
+      ) {
+        modalDiv1.remove();
         return ShowCrashReport(
           `${langs.error_detected_one} \nError:\n${e}`
         );
+      }
 
-      if (e.includes("java.lang.ClassCastException"))
+      if (e.includes("java.lang.ClassCastException")) {
+        modalDiv1.remove();
         return ShowCrashReport(
           `${langs.error_detected_five} \nError:\n${e}`
         );
+      }
 
-      if (e.includes("Minecraft has crashed!"))
+      if (e.includes("Minecraft has crashed!")) {
+        modalDiv1.remove();
         return ShowCrashReport(
           `${langs.error_detected_five} \nError:\n${e}`
         );
+      }
 
       if (
         e.includes(`Setting user: ${account.name}`) ||

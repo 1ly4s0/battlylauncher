@@ -239,6 +239,7 @@ class Login {
                             uuid: data.user.uuid,
                             name: data.user.username,
                             password: data.user.password,
+                            token: data.user.token,
                             user_properties: '{}',
                             meta: {
                                 type: "cracked",
@@ -454,6 +455,7 @@ class Login {
                         uuid: uuid_,
                         name: mailInput.value,
                         password: passwordInput.value,
+                        token: data.data.token,
                         user_properties: '{}',
                         meta: {
                             type: "cracked",
