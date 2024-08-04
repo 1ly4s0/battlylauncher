@@ -101,15 +101,15 @@ class Splash {
 			}
 		})
 
-		ipcRenderer.invoke('update-new-app').then(err => {
-			if (err) {
-				if (err.error) {
-					let error = err.message;
-					error = error.toString().slice(0, 50);
-					this.shutdown(`${lang.update_error}<br>${error}`);
-				}
-			}
-		})
+		// ipcRenderer.invoke('update-new-app').then(err => {
+		// 	if (err) {
+		// 		if (err.error) {
+		// 			let error = err.message;
+		// 			error = error.toString().slice(0, 50);
+		// 			this.shutdown(`${lang.update_error}<br>${error}`);
+		// 		}
+		// 	}
+		// })
 
 		ipcRenderer.on('updateAvailable', () => {
 			this.setStatus(lang.update_available);

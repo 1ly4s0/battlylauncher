@@ -7,7 +7,7 @@ import { database, changePanel, addAccount, accountSelect } from '../utils.js';
 const Swal = require('./assets/js/libs/sweetalert/sweetalert2.all.min.js');
 const usetube = require('./assets/js/libs/youtube/usetube');
 
-const ytdl = require('./assets/js/libs/distube/lib/index');
+const ytdl = require('@distube/ytdl-core');
 
 const dataDirectory = `${process.env.APPDATA || (process.platform == 'darwin' ? `${process.env.HOME}/Library/Application Support` : process.env.HOME)}/.battly`
 const fs = require('fs');
