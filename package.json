@@ -32,7 +32,6 @@
     "BattlyLauncher": "file:",
     "electron-updater": "^6.2.1",
     "got": "^11.8.6",
-    "got-cjs": "^12.5.4",
     "javascript-obfuscator": "^4.1.1",
     "marked": "^13.0.2",
     "minecraft-launcher-core": "^3.18.1",
