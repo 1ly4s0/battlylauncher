@@ -29,7 +29,6 @@
     "7zip-bin": "^5.2.0",
     "adm-zip": "^0.5.14",
     "axios": "^1.7.2",
-    "BattlyLauncher": "file:",
     "electron-updater": "^6.2.1",
     "got": "^11.8.6",
     "javascript-obfuscator": "^4.1.1",
