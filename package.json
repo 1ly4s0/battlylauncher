@@ -1,7 +1,7 @@
 {
   "name": "BattlyLauncher",
   "productname": "Battly Launcher",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "buildVersion": "1003",
   "description": "El mejor Launcher Personalizado para Minecraft Premium y No premium",
   "main": "src/app.js",
@@ -25,11 +25,12 @@
     "ext": "js,html,css"
   },
   "dependencies": {
-    "@distube/ytdl-core": "^4.13.7",
+    "@distube/ytdl-core": "^4.14.4",
     "7zip-bin": "^5.2.0",
     "adm-zip": "^0.5.14",
     "axios": "^1.7.2",
     "electron-updater": "^6.2.1",
+    "fs-extra": "^11.2.0",
     "got": "^11.8.6",
     "javascript-obfuscator": "^4.1.1",
     "marked": "^13.0.2",

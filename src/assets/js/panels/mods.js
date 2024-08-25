@@ -31,8 +31,16 @@ const Toast = Swal.mixin({
         toast.addEventListener('mouseleave', Swal.resumeTimer)
     }
 })
+
+const { Lang } = require("./assets/js/utils/lang.js");
 let lang;
-import { Lang } from "../utils/lang.js";
+new Lang().GetLang().then(lang_ => {
+    lang = lang_;
+}).catch(error => {
+    console.error("Error:", error);
+});
+
+
 import { Alert } from "../utils/alert.js";
 
 class Mods {

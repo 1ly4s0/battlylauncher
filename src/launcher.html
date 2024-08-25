@@ -116,6 +116,7 @@
       top: 30px;
       left: 50%;
       width: auto;
+      max-width: 70%;
       z-index: 99999;
       display: flex;
       justify-content: center;
@@ -125,7 +126,8 @@
 
     .panelalert {
       width: 55px;
-      height: 60px;
+      height: auto;
+      min-height: 60px;
       overflow: hidden;
       position: relative;
       border-radius: 10px;
@@ -134,6 +136,8 @@
       align-items: center;
       margin: 0 auto;
       z-index: 99999;
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
 
     .panelalert img {
@@ -147,15 +151,16 @@
     .panelalert-text {
       flex: 1;
       overflow: hidden;
+      white-space: nowrap;
       opacity: 0;
       font-size: 15px;
       transition: opacity 0.5s ease;
-      font-family: Poppins;
-      white-space: nowrap;
+      font-family: 'Poppins', sans-serif;
       text-align: left;
       color: #fff;
       margin-top: 5px;
       margin-right: 10px;
+      border-radius: 0px !important;
     }
 
     .panelalert-text strong {
@@ -178,22 +183,32 @@
     #panelbig {
       transform: scale(0);
       transition: transform 0.5s ease;
+      max-width: 80%;
     }
 
     .panelalert.active-alert {
       width: 100%;
-      height: 60px;
+      min-height: 60px;
     }
 
     .panelalert.active-alert .panelalert-text {
       opacity: 1;
     }
+
+    .header-text-to-add {
+      margin-left: 5px;
+    }
+
+    .header-text-to-add:hover {
+      cursor: pointer;
+      color: #3498db;
+    }
   </style>
   <div class="dragbar"></div>
-  <div class="frame">
-    <div class="titulo" style="font-weight: 800">Battly Launcher 2.0.3<span
-        style="font-size: 10px; margin-left: 5px">build
-        1003</span></div>
+  <div class="frame" id="header-frame">
+    <div class="titulo no-drag" style="font-weight: 800">Battly Launcher 2.1.0 <span id="header-text-to-add"
+        class="header-text-to-add"></span>
+    </div>
     <div class="buttons">
       <div id="minimize" class="button-frame icon-minimize no-drag"></div>
       <div id="maximize" class="button-frame icon-maximize no-drag"></div>

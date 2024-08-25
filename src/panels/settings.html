@@ -165,32 +165,79 @@
             <div class="title-settings" style="font-size: 50px;" id="battly-settings"></div>
             <div class="java-settings">
                 <div class="information">
-                    <br>
                     <span id="battly-settings-information"></span>
-                    <input type="checkbox" class="checkbox-settings" id="launcher-close"><label for="launcher-close">
-                        <div class="checkround"></div>
-                    </label>
-                    <span id="minimalize-battly"></span>
-                    <br>
-                    <input type="checkbox" class="checkbox-settings" id="launcher-open"><label for="launcher-open">
-                        <div class="checkround"></div>
-                    </label>
-                    <span id="keep-battly-opened"></span>
                     <br>
                     <br>
-                    <span id="music_settings_information" style="font-size: 20px; font-weight: 700;"></span>
+                    <div style="text-align: start; display: flex;">
+                        <div style="width: 100%;">
+                            <span id="battly-settings-what-to-do"></span>
+                            <br>
+                            <input type="checkbox" class="checkbox-settings" id="launcher-close"><label
+                                for="launcher-close">
+                                <div class="checkround"></div>
+                            </label>
+                            <span id="minimalize-battly"></span>
+                            <br>
+                            <input type="checkbox" class="checkbox-settings" id="launcher-open"><label
+                                for="launcher-open">
+                                <div class="checkround"></div>
+                            </label>
+                            <span id="keep-battly-opened"></span>
+                        </div>
+                        <div style="width: 100%;">
+                            <span id="music_settings_information" style="font-size: 20px; font-weight: 700;"></span>
+                            <br>
+                            <input type="checkbox" class="checkbox-settings" id="music-close"><label for="music-close">
+                                <div class="checkround"></div>
+                            </label>
+                            <span id="minimize_music"></span>
+                            <br>
+                            <input type="checkbox" class="checkbox-settings" id="music-open"><label for="music-open">
+                                <div class="checkround"></div>
+                            </label>
+                            <span id="keep_music_opened"></span>
+                        </div>
+                    </div>
                     <br>
-                    <input type="checkbox" class="checkbox-settings" id="music-close"><label for="music-close">
-                        <div class="checkround"></div>
-                    </label>
-                    <span id="minimize_music"></span>
                     <br>
-                    <input type="checkbox" class="checkbox-settings" id="music-open"><label for="music-open">
-                        <div class="checkround"></div>
-                    </label>
-                    <span id="keep_music_opened"></span>
-                    <br>
-                    <br>
+                    <div style="text-align: start; display: flex;">
+                        <div id="launchboost-panel" style="width: 100%;">
+                            <span id="launchboost_settings_information"
+                                style="font-size: 20px; font-weight: 700;">Battly Launch Boost™</span>
+                            <br>
+                            <div style="display: flex; gap: 10px;">
+                                <span id="launchboost_settings_information_text"
+                                    style="font-size: 15px; font-weight: 700; width: 100%;"></span><br>
+                                <label class="container-optifine" style="width: 40%;" id="launchboost-label">
+                                    <input checked type="checkbox" id="launchboost">
+                                    <div class="checkmark"></div>
+                                    Activar
+                                </label>
+                            </div>
+                        </div>
+                        <div style="width: 100%;">
+                            <span id="language_settings_information"
+                                style="font-size: 20px; font-weight: 700;">Idioma</span>
+                            <br>
+                            <div style="display: flex; gap: 10px;">
+                                <div class="select" style="height: 40px; width: 150px; font-size: 15px;">
+                                    <select id="language-selector" style="height: 40px; width: 150px; font-size: 15px;">
+                                        <option value="es">Español</option>
+                                        <option value="en">English</option>
+                                        <option value="pt">Português</option>
+                                        <option value="fr">Français</option>
+                                        <option value="ar">العربية</option>
+                                        <option value="ru">Русский</option>
+                                        <option value="de">Deutsch</option>
+                                        <option value="it">Italiano</option>
+                                        <option value="ja">日本語</option>
+                                    </select>
+                                </div>
+                                <button class="button is-info" id="language-selector-btn"
+                                    style="height: 40px;"></button>
+                            </div>
+                        </div>
+                    </div>
                     <b id="battly-logs-text" style="font-size: 20px;"></b>
                     <br>
                     <button class="button is-info" id="obtener-socketid"><i class="fa-solid fa-chart-simple"></i><span

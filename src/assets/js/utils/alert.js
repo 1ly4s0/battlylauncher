@@ -10,7 +10,7 @@ let isAnimating = false;
 let alertQueue = [];
 
 class Alert {
-  constructor() {}
+  constructor() { }
 
   async ShowAlert(info) {
     if (isAnimating) {
@@ -99,9 +99,13 @@ class Alert {
     panelbig.classList.remove('big-zoom');
 
     panel.classList.add('active-alert');
-    await this.wait(3600);
+    await this.wait(200);
+
+    panelText.style.whiteSpace = 'normal';
+    await this.wait(3400);
 
     panel.classList.remove('active-alert');
+    panelText.style.whiteSpace = 'nowrap';
 
     await this.wait(300);
 
@@ -118,7 +122,7 @@ class Alert {
   async wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
-  
+
 }
 
 export { Alert };

@@ -13,9 +13,15 @@ const dataDirectory = `${process.env.APPDATA || (process.platform == 'darwin' ? 
 const fs = require('fs');
 
 let musicList_ = [];
-import { Lang } from "../utils/lang.js";
-import { Alert } from "../utils/alert.js";
+const { Lang } = require("./assets/js/utils/lang.js");
 let lang;
+new Lang().GetLang().then(lang_ => {
+  lang = lang_;
+}).catch(error => {
+  console.error("Error:", error);
+});
+
+import { Alert } from "../utils/alert.js";
 
 class Music {
   static id = "music";
@@ -320,9 +326,7 @@ class Music {
             paragraph.innerText = `${lang.getting} ${song.name} (${newMusicList.length}/${playlist.songs.length})`;
             await ytdl.getInfo(song.url, { quality: 'highestaudio' })
               .then(info => {
-                console.log(info)
-                const audioFormat = info.formats.find(format => format.mimeType.includes('audio/mp4'));
-                console.log(audioFormat)
+                const audioFormat = info.formats.find(format => format.mimeType && format.mimeType.includes('audio/mp4'));
 
                 if (!audioFormat) {
                   console.error("No se encontró un formato de audio adecuado");
@@ -427,6 +431,10 @@ class Music {
           setTimeout(() => {
             modal.remove();
           }, 5000);
+
+          loadMusic(1);
+          playMusic();
+          playingSong();
         });
 
         const playIconSpan = document.createElement('span');
@@ -493,7 +501,7 @@ class Music {
     function playAudioFromVideoId(videoId) {
       ytdl.getInfo(videoId, { quality: 'highestaudio' })
         .then(info => {
-          const audioFormat = info.formats.find(format => format.mimeType.includes('audio/mp4'));
+          const audioFormat = info.formats.find(format => format.mimeType && format.mimeType.includes('audio/mp4'));
 
           if (!audioFormat) {
             console.error("No se encontró un formato de audio adecuado");

@@ -11,8 +11,14 @@ const axios = require('axios');
 const { ipcRenderer } = require('electron');
 import { Alert } from "./utils/alert.js";
 
+const { Lang } = require("./assets/js/utils/lang.js");
 let lang;
-import { Lang } from "./utils/lang.js";
+new Lang().GetLang().then(lang_ => {
+    lang = lang_;
+}).catch(error => {
+    console.error("Error:", error);
+});
+
 
 export {
     config as config,
@@ -24,10 +30,6 @@ export {
     accountSelect as accountSelect
 }
 
-async function Langs() {
-    lang = await new Lang().GetLang();
-}
-
 let db;
 async function LoadDatabase() {
     db = await new database().init();
@@ -36,8 +38,6 @@ async function LoadDatabase() {
 }
 
 LoadDatabase();
-
-Langs();
 
 function changePanel(id) {
     const rectangulos = document.querySelectorAll('.rectangulo');
@@ -100,7 +100,7 @@ async function addAccount(data, isPremium) {
 }
 
 function accountSelect(uuid) {
-    console.log(`✅ Cuenta seleccionada: ${uuid}`)
+    console.log(`✅ Cuenta seleccionada: ${uuid}`);
     let account = document.getElementById(uuid);
     let activeAccount = document.querySelector('.active-account');
 
@@ -125,6 +125,10 @@ function accountSelect(uuid) {
         document.getElementById("ads").style.display = "none";
         // document.getElementById("ads-text").style.display = "none";
         console.log('Es premium');
+        document.getElementById("header-text-to-add").innerHTML = "Premium Edition";
+        document.getElementById("header-frame").style.background = `linear-gradient(45deg, #C9A635, #B8860B, #A1752D, #8B6914, #70590E)`;
+
+
         let WelcomePremiumShown = localStorage.getItem('WelcomePremiumShown');
         if (!WelcomePremiumShown || WelcomePremiumShown === 'false' || WelcomePremiumShown === null || WelcomePremiumShown === undefined) {
             const modal = document.createElement('div');
@@ -232,6 +236,9 @@ function accountSelect(uuid) {
 
             document.body.appendChild(modal);
         }
+    } else {
+        document.getElementById("header-text-to-add").innerHTML = "Free Edition";
+        document.getElementById("header-frame").style.background = `#212121`;
     }
     //headplayer(pseudo);
 }

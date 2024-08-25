@@ -126,7 +126,7 @@ async function createWindow() {
           });
         } else {
           if (mainWindow) {
-            mainWindow.openDevTools();
+            //mainWindow.openDevTools();
             mainWindow.show();
           }
         }

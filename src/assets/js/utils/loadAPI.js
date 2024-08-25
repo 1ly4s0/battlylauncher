@@ -11,7 +11,7 @@ let news = `${url}/launcher/news-launcher/news.json`;
 const axios = require("axios")
 const https = require("https")
 const httpsAgent = new https.Agent({
-  rejectUnauthorized: false,
+    rejectUnauthorized: false,
 });
 const fs = require("fs");
 const path = require("path");
@@ -22,13 +22,19 @@ const versionsURL = "https://api.battlylauncher.com/battlylauncher/launcher/conf
 const versionsMojangURL = "https://launchermeta.mojang.com/mc/game/version_manifest_v2.json";
 
 const loadingText = document.getElementById("loading-text");
-import { Lang } from "./lang.js";
-
 const offlineMode = localStorage.getItem("offline-mode")
 
-let lang = await new Lang().GetLang();
+const { Lang } = require("./assets/js/utils/lang.js");
+let lang;
+new Lang().GetLang().then(lang_ => {
+    lang = lang_;
+}).catch(error => {
+    console.error("Error:", error);
+});
+
 class LoadAPI {
     constructor() {
+        this.lang = lang;
     }
     async GetConfig() {
         loadingText.innerHTML = lang.loading_config;
@@ -156,7 +162,7 @@ class LoadAPI {
                     console.log(err);
                     return Promise.reject(err);
                 }
-            } 
+            }
         }
     }
 }

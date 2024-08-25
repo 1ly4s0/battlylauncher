@@ -11,14 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="skin.css">
-
 </head>
 
 <body>
     <audio id="audioPlayer" controls autoplay style="display: none;"></audio>
     <div class="frame">
-        <div class="titulo" style="font-weight: 800">Battly Launcher 2.0.3 <span style="font-size: 10px">build
+        <div class="titulo" style="font-weight: 800">Battly Launcher 2.1.0 <span style="font-size: 10px">build
                 1003</span></div>
         <div class="buttons">
             <div id="minimize" class="button-frame icon-minimize no-drag"></div>
@@ -66,7 +64,7 @@
             <span class="button-span"></span>
         </button>
         <button id="music-btn" class="button is-info">
-            <span>
+            <span id="music-btn-text">
                 <i class="fa-solid fa-music"></i> Música
             </span>
             <span class="button-span"></span>
@@ -106,12 +104,12 @@
             </div>
             <div class="main-home-panel-left-online-friends">
                 <div class="main-home-panel-left-news-type">
-                    <h1 class="main-home-panel-left-title" style="margin-top: 20px; margin-bottom: 0px;">Amigos
+                    <h1 class="main-home-panel-left-title" id="connected-friends"
+                        style="margin-top: 20px; margin-bottom: 0px;">Amigos
                         conectados
                     </h1>
                     <button class="button is-info is-small" id="friends-btn"
-                        style="border-radius: 10px; margin-top: 20px;"><span>Ver
-                            amigos <i class="fa-solid fa-arrow-right"></i></span>
+                        style="border-radius: 10px; margin-top: 20px;"><span id="see-friends-btn"></span>
                 </div>
                 <div class="home-online-friends">
                     <div class="online-friend">
@@ -128,11 +126,7 @@
                 style="display: block; border-radius: 10px; margin-bottom: 10px;">
                 <div class="message-body"
                     style="font-weight: 600; padding: 0.5rem 0.8rem; font-size: 13px; border-radius: 10px;"
-                    id="warning-status-message">
-                    Las skins de
-                    momento sólo se ven en el modo un jugador, estamos trabajando en llevarlo al multijugador. ¡Gracias
-                    por confiar
-                    en Battly ♥!</div>
+                    id="warning-status-message">¡</div>
             </article>
             <div class="status-servers">
                 <div class="server">
@@ -838,7 +832,7 @@
     }
 
     .no-drag {
-        -webkit-app-region: no-drag;
+        -webkit-app-region: no-drag !important;
     }
 
     .button-frame {
@@ -851,13 +845,6 @@
         display: flex;
         margin-bottom: 0px !important;
         gap: 10px;
-    }
-
-    @font-face {
-        font-family: 'Icons';
-        src: url('Icons.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
     }
 
     [class^="icon-"]:before,

@@ -249,6 +249,9 @@ const strings = {
   version_java_error_title: "No puedes jugar versiones externas",
   version_java_error:
     "Para jugarlas, descarga la 1.20.1 de vanilla para que se configure Java.",
+  download_the_version_in_vanilla: "Descarga la versión en Vanilla",
+  download_the_version_in_vanilla_text:
+    "Para poder jugar esta versión, necesitas descargarla en Vanilla para que se configure Java automáticamente.",
   installing_minecraft_files: "Instalando archivos de Minecraft",
   client_files_downloaded_successfully: "Archivos del cliente completados",
   you_dont_have_friends_1: "No tienes amigos...😔 ¡Añade a alguien!",

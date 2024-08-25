@@ -25,10 +25,17 @@ const Toast = Swal.mixin({
 });
 
 let amigos;
+
+const { Lang } = require("./assets/js/utils/lang.js");
 let lang;
+new Lang().GetLang().then(lang_ => {
+    lang = lang_;
+}).catch(error => {
+    console.error("Error:", error);
+});
+
 
 const dataDirectory = process.env.APPDATA || (process.platform == 'darwin' ? `${process.env.HOME}/Library/Application Support` : process.env.HOME)
-import { Lang } from "../utils/lang.js";
 import { Alert } from "../utils/alert.js";
 
 class Friends {
@@ -36,7 +43,6 @@ class Friends {
     async init(config, news) {
         this.config = config;
         this.database = await new database().init();
-        lang = await new Lang().GetLang();
         this.AddFriend();
         this.Solicitudes();
         this.ObtenerAmigos();

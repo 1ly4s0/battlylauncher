@@ -13,18 +13,17 @@ const Launcher = new Launch();
 import { consoleOutput } from "./logger.js";
 let consoleOutput_ = + consoleOutput;
 import { logger, database, changePanel } from "../utils.js";
-import { Lang } from "./lang.js";
 import { CrashReport } from "./crash-report.js";
 const got = require("got");
 const dataDirectory = process.env.APPDATA || (process.platform == "darwin" ? `${process.env.HOME}/Library/Application Support` : process.env.HOME);
 const ShowCrashReport = new CrashReport().ShowCrashReport;
+const { Lang } = require("./assets/js/utils/lang.js");
 let langs;
-
-async function LoadLang() {
-  langs = await new Lang().GetLang();
-}
-
-LoadLang();
+new Lang().GetLang().then(lang_ => {
+  langs = lang_;
+}).catch(error => {
+  console.error("Error:", error);
+});
 
 class LoadMinecraft {
   async LaunchMinecraft(options) {
@@ -485,6 +484,8 @@ class LoadMinecraft {
     Launcher.on('error', err => {
       console.error(err);
       consoleOutput_ += `[ERROR] ${JSON.stringify(err, null, 2)}\n`;
+
+      if (err.type === "request-timeout") return
 
       modalDiv1.remove();
 

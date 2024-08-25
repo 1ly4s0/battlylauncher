@@ -15,8 +15,15 @@ let dev = process.env.NODE_ENV === 'dev';
 const fs = require('fs');
 const fetch = require('node-fetch');
 const axios = require("axios");
-import { Lang } from './utils/lang.js';
-let lang;
+const { Lang } = require('./assets/js/utils/lang.js');
+let lang;;
+new Lang().GetLang().then(lang_ => {
+	lang = lang_;
+}).catch(error => {
+	console.error("Error:", error);
+});
+
+let message;
 
 class Splash {
 
@@ -31,8 +38,6 @@ class Splash {
 	}
 
 	async LoadLang() {
-		lang = await new Lang().GetLang();
-		this.message.innerHTML = lang.salutate;
 	}
 
 	async start() {
@@ -41,7 +46,20 @@ class Splash {
 			"author": "TECNO BROS"
 		},]
 
-		console.log(document.getElementById("version_id"));
+
+		let strings = {
+			"es": "¡Hola!",
+			"en": "Hello!",
+			"fr": "Bonjour!",
+			"de": "Hallo!",
+			"it": "Ciao!",
+			"pt": "Olá!",
+			"ru": "Привет!",
+			"ja": "こんにちは!",
+			"ar": "مرحبا!",
+		}
+
+		this.message.innerHTML = strings[localStorage.getItem("lang")];
 
 		let sonidoDB = localStorage.getItem("sonido-inicio") ? localStorage.getItem("sonido-inicio") : "start";
 		let sonido_inicio = new Audio('./assets/audios/' + sonidoDB + '.mp3');

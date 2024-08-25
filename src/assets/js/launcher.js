@@ -10,6 +10,9 @@ const fs = require("fs");
 const { Microsoft, Mojang } = require("./assets/js/libs/mc/Index");
 const { ipcRenderer } = require("electron");
 
+const { Lang } = require("./assets/js/utils/lang.js");
+
+
 import {
   config,
   logger,
@@ -18,6 +21,7 @@ import {
   addAccount,
   accountSelect,
 } from "./utils.js";
+
 import Login from "./panels/login.js";
 import Home from "./panels/home.js";
 import Settings from "./panels/settings.js";
@@ -29,29 +33,37 @@ import Friends from "./panels/friends.js";
 import Chat from "./panels/chat.js";
 import Servers from "./panels/servers.js";
 
+
 class Launcher {
   async init() {
     const loadingText = document.getElementById("loading-text");
     loadingText.innerHTML = "Cargando Panel de Inicio";
     this.initLog();
     console.log("🔄 Iniciando Launcher...");
-    if (process.platform == "win32") this.initFrame();
-    this.config = await config.GetConfig().then((res) => res);
-    this.news = await config.GetNews().then((res) => res);
-    this.database = await new database().init();
-    this.createPanels(
-      Login,
-      Home,
-      Settings,
-      Welcome,
-      Mods,
-      Music,
-      NewsPanel,
-      Friends,
-      Chat,
-      Servers
-    );
-    this.getaccounts();
+    new Lang().GetLang().then(async (lang) => {
+      console.log("🔄 Iniciando Lang...");
+      console.log(lang)
+      if (process.platform == "win32") this.initFrame();
+      this.config = await config.GetConfig().then((res) => res);
+      this.news = await config.GetNews().then((res) => res);
+      this.database = await new database().init();
+      this.createPanels(
+        Login,
+        Home,
+        Settings,
+        Welcome,
+        Mods,
+        Music,
+        NewsPanel,
+        Friends,
+        Chat,
+        Servers
+      );
+      this.getaccounts();
+    }).catch(error => {
+      console.error("Error:", error);
+    });
+
   }
 
   initLog() {
@@ -170,7 +182,7 @@ class Launcher {
         )
           .then((response) => response.json())
           .then((data) => data)
-          .catch((err) => {});
+          .catch((err) => { });
       } catch (error) {
         premiums = [];
       }
