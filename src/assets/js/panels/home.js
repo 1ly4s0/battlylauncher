@@ -83,16 +83,14 @@ class Home {
     let account = this.database
       .getAccounts()
       .find((account) => account.uuid === uuid.selected);
+    console.log(account)
 
-    fetch("https://api.battlylauncher.com/api/users/obtenerAmigos", {
+    fetch("https://api.battlylauncher.com/api/v2/users/obtenerAmigos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: account.name,
-        password: account.password,
-      }),
+        Authorization: `Bearer ${account.token}`,
+      }
     })
       .then((res) => res.json())
       .then(async (res) => {
@@ -3014,6 +3012,15 @@ class Home {
         LoadMinecraftNews();
       }
     });
+
+    document.getElementById("header-text-to-add").addEventListener("click", () => {
+      const os = require("os");
+      if (os.platform() === "win32") {
+        shell.openExternal("https://battlylauncher.com/premium?utm_source=launcher&utm_medium=header&utm_campaign=premium");
+      } else {
+        window.open("https://battlylauncher.com/premium", "_blank");
+      }
+    });
   }
 
   async initLaunch() {
@@ -3079,10 +3086,10 @@ class Home {
     );
 
     let data = this.BattlyConfig;
-    let new_version = data.new_version;
-    let new_version_message = data.new_version_message;
-    let new_version_news = data.new_version_news;
-    let new_version_html = data.new_version_html;
+    let new_version = data.new_version_v2;
+    let new_version_message = data.new_version_message_v2;
+    let new_version_news = data.new_version_news_v2;
+    let new_version_html = data.new_version_html_v2;
 
     if (new_version == true) {
       const Swal_ = require("./assets/js/libs/sweetalert/sweetalert2.all.min");
@@ -3461,7 +3468,7 @@ class Home {
             enable: loaderEnable,
           },
           verify: false,
-          ignored: ["loader", "libraries"],
+          ignored: ["libraries/com/mojang/authlib"],
           java: false,
           memory: memory,
         };
@@ -3937,16 +3944,10 @@ class Home {
 
         launch_core.on("error", (err) => {
           consoleOutput_ += `[ERROR] ${JSON.stringify(err, null, 2)}\n`;
-          console.log(JSON.stringify(err, null, 2));
+          console.error(error.message);
           progressBar1.style.display = "none";
           info.style.display = "none";
           playBtn.style.display = "";
-          return new Alert().ShowAlert({
-            title: "Error",
-            text: `Error al iniciar Minecraft. Error desconocido. Vuelve a iniciar Minecraft. [ERROR: 7] \nError: ${err.error}`,
-            icon: "error",
-            button: "Aceptar",
-          });
         });
 
         launch_core.on("close", (code) => {
@@ -7437,6 +7438,10 @@ class Home {
   initBtn() {
     document.getElementById("settings-btn").addEventListener("click", () => {
       changePanel("settings");
+    });
+
+    document.getElementById("servers-btn").addEventListener("click", () => {
+      changePanel("servers");
     });
   }
 

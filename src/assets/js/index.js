@@ -59,7 +59,7 @@ class Splash {
 			"ar": "مرحبا!",
 		}
 
-		this.message.innerHTML = strings[localStorage.getItem("lang")];
+		this.message.innerHTML = strings[localStorage.getItem("lang") ? localStorage.getItem("lang") : "en"];
 
 		let sonidoDB = localStorage.getItem("sonido-inicio") ? localStorage.getItem("sonido-inicio") : "start";
 		let sonido_inicio = new Audio('./assets/audios/' + sonidoDB + '.mp3');

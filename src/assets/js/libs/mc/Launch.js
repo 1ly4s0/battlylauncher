@@ -10,6 +10,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const events_1 = require("events");
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
+const node_fetch_1 = __importDefault(require("node-fetch"));
+const crypto_1 = __importDefault(require("crypto"));
 const child_process_1 = require("child_process");
 const Minecraft_Json_js_1 = __importDefault(require("./Minecraft/Minecraft-Json.js"));
 const Minecraft_Libraries_js_1 = __importDefault(require("./Minecraft/Minecraft-Libraries.js"));
@@ -260,6 +262,44 @@ class Launch extends events_1.EventEmitter {
             json.nativesList = true;
         if ((0, Index_js_1.isold)(json))
             new Minecraft_Assets_js_1.default(this.options).copyAssets(json);
+        function calculateFileHash(filePath) {
+            return new Promise((resolve, reject) => {
+                const hash = crypto_1.default.createHash('sha1');
+                const stream = fs_1.default.createReadStream(filePath);
+                stream.on('data', data => hash.update(data));
+                stream.on('end', () => resolve(hash.digest('hex')));
+                stream.on('error', reject);
+            });
+        }
+        for (let asset of gameAssetsOther) {
+            try {
+                if (fs_1.default.existsSync(asset.path)) {
+                    const fileHash = await calculateFileHash(asset.path);
+                    if (fileHash === asset.hash) {
+                        console.log(`File ${asset.path} already exists and matches hash, skipping download.`);
+                        continue;
+                    }
+                    else {
+                        console.log(`File ${asset.path} exists but hash doesn't match, downloading again.`);
+                    }
+                }
+                const res = await (0, node_fetch_1.default)(asset.url);
+                if (!res.ok) {
+                    throw new Error(`Failed to fetch ${asset.url}: ${res.statusText}`);
+                }
+                const dest = fs_1.default.createWriteStream(asset.path);
+                await new Promise((resolve, reject) => {
+                    res.body.pipe(dest);
+                    res.body.on('error', reject);
+                    dest.on('finish', resolve);
+                    dest.on('error', reject);
+                });
+                console.log(`Downloaded ${asset.path} successfully.`);
+            }
+            catch (error) {
+                console.error(`Error downloading ${asset.path}: ${error.message}`);
+            }
+        }
         return {
             minecraftJson: json,
             minecraftLoader: loaderJson,

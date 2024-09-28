@@ -16,6 +16,7 @@ const path = require('path');
 const unzipper = require('unzipper');
 const toml = require('toml');
 const { shell } = require('electron');
+const marked = require('marked');
 
 const Swal = require('./assets/js/libs/sweetalert/sweetalert2.all.min.js');
 const preloadContent = document.querySelector('.preload-content');
@@ -1716,7 +1717,7 @@ class Mods {
   <i class="fa-solid fa-heart"></i> ${lang.followers}: ${mod_data.followers}
   <br>
   <br>
-  ${mod_data.body.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>').replace(/!\[(.*?)\]\((.*?)\)/g, '<img alt="$1" src="$2">').replace(/### (.*?)\n/g, '<h3>$1</h3>\n').replace(/## (.*?)\n/g, '<h2>$1</h2>\n').replace(/# (.*?)\n/g, '<h1>$1</h1>\n').replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>').replace(/- (.*)\n/g, '<li>$1</li>\n').replace(/\n---\n/g, '\n<hr>\n').replace(/<!--(.*?)-->/g, '<!--$1-->').replace(/__(.*?)__/g, '<u>$1</u>').replace(/_(.*?)_/g, '<i>$1</i>').replace(/\*(.*?)\*/g, '<i>$1</i>')}
+  ${marked.parse(mod_data.body)}
   <br>
   <br>
 

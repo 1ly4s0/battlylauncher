@@ -151,10 +151,11 @@ class Friends {
 
                 users.innerHTML = '';
 
-                fetch('https://api.battlylauncher.com/api/users/buscarUsuarios', {
+                fetch('https://api.battlylauncher.com/api/v2/users/buscarUsuarios', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${account.token}`,
                     },
                     body: JSON.stringify({
                         username: input.value
@@ -281,14 +282,13 @@ class Friends {
                                     });
                                     return;
                                 } else {
-                                    fetch('https://api.battlylauncher.com/api/users/enviarSolicitud', {
+                                    fetch('https://api.battlylauncher.com/api/v2/users/enviarSolicitud', {
                                         method: 'POST',
                                         headers: {
-                                            'Content-Type': 'application/json'
+                                            "Content-Type": "application/json",
+                                            Authorization: `Bearer ${account.token}`,
                                         },
                                         body: JSON.stringify({
-                                            username: account.name,
-                                            password: account.password,
                                             amigo: user,
                                         })
                                     }).then(res => res.json()).then(res => {
@@ -387,14 +387,13 @@ class Friends {
                                     });
                                     return;
                                 } else {
-                                    fetch('https://api.battlylauncher.com/api/users/enviarSolicitud', {
+                                    fetch('https://api.battlylauncher.com/api/v2/users/enviarSolicitud', {
                                         method: 'POST',
                                         headers: {
-                                            'Content-Type': 'application/json'
+                                            "Content-Type": "application/json",
+                                            Authorization: `Bearer ${account.token}`,
                                         },
                                         body: JSON.stringify({
-                                            username: account.name,
-                                            password: account.password,
                                             amigo: user
                                         })
                                     }).then(res => res.json()).then(res => {
@@ -472,15 +471,12 @@ class Friends {
             const modalBody = document.createElement('section');
             modalBody.className = 'modal-card-body';
 
-            fetch('https://api.battlylauncher.com/api/users/obtenerSolicitudes', {
+            fetch('https://api.battlylauncher.com/api/v2/users/obtenerSolicitudes', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    username: account.name,
-                    password: account.password
-                })
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${account.token}`,
+                }
             }).then(res => res.json()).then(async res => {
                 if (res.error) {
                     console.error(res.error);
@@ -611,15 +607,14 @@ class Friends {
                             });
 
                             acceptButton1.addEventListener('click', () => {
-                                fetch('https://api.battlylauncher.com/api/users/aceptarSolicitud', {
+                                fetch('https://api.battlylauncher.com/api/v2/users/aceptarSolicitud', {
                                     method: 'POST',
                                     headers: {
-                                        'Content-Type': 'application/json'
+                                        "Content-Type": "application/json",
+                                        Authorization: `Bearer ${account.token}`,
                                     },
                                     body: JSON.stringify({
-                                        username: account.name,
                                         solicitud: solicitud,
-                                        password: account.password
                                     })
                                 }).then(res => res.json()).then(res => {
                                     if (res.error) {
@@ -641,14 +636,13 @@ class Friends {
                             });
 
                             rejectButton1.addEventListener('click', () => {
-                                fetch('https://api.battlylauncher.com/api/users/rechazarSolicitud', {
+                                fetch('https://api.battlylauncher.com/v2/api/users/rechazarSolicitud', {
                                     method: 'POST',
                                     headers: {
-                                        'Content-Type': 'application/json'
+                                        "Content-Type": "application/json",
+                                        Authorization: `Bearer ${account.token}`,
                                     },
                                     body: JSON.stringify({
-                                        username: account.name,
-                                        password: account.password,
                                         amigo: solicitud
                                     })
                                 }).then(res => res.json()).then(res => {
@@ -752,15 +746,14 @@ class Friends {
                             });
 
                             acceptButton1.addEventListener('click', () => {
-                                fetch('https://api.battlylauncher.com/api/users/aceptarSolicitud', {
+                                fetch('https://api.battlylauncher.com/api/v2/users/aceptarSolicitud', {
                                     method: 'POST',
                                     headers: {
-                                        'Content-Type': 'application/json'
+                                        "Content-Type": "application/json",
+                                        Authorization: `Bearer ${account.token}`,
                                     },
                                     body: JSON.stringify({
-                                        username: account.name,
                                         solicitud: solicitud,
-                                        password: account.password
                                     })
                                 }).then(res => res.json()).then(res => {
                                     if (res.error) {
@@ -787,14 +780,13 @@ class Friends {
                             });
 
                             rejectButton1.addEventListener('click', () => {
-                                fetch('https://api.battlylauncher.com/api/users/rechazarSolicitud', {
+                                fetch('https://api.battlylauncher.com/v2/api/users/rechazarSolicitud', {
                                     method: 'POST',
                                     headers: {
-                                        'Content-Type': 'application/json'
+                                        "Content-Type": "application/json",
+                                        Authorization: `Bearer ${account.token}`,
                                     },
                                     body: JSON.stringify({
-                                        username: account.name,
-                                        password: account.password,
                                         amigo: solicitud
                                     })
                                 }).then(res => res.json()).then(res => {
@@ -880,6 +872,34 @@ class Friends {
 
                             modalBody.appendChild(box2);
                             img2.style.backgroundImage = "url('https://api.battlylauncher.com/api/skin/" + solicitud + ".png')";
+
+                            rejectButton2.addEventListener('click', () => {
+                                fetch('https://api.battlylauncher.com/api/v2/users/cancelarSolicitud', {
+                                    method: 'POST',
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                        Authorization: `Bearer ${account.token}`,
+                                    },
+                                    body: JSON.stringify({
+                                        amigo: solicitud
+                                    })
+                                }).then(res => res.json()).then(res => {
+                                    if (res.error) {
+                                        console.error(res.error);
+
+                                        new Alert().ShowAlert({
+                                            icon: "error",
+                                            title: lang.error_cancelling_request
+                                        });
+                                    } else {
+
+                                        new Alert().ShowAlert({
+                                            icon: "success",
+                                            title: lang.request_cancelled
+                                        });
+                                    }
+                                });
+                            });
                         } catch (error) {
                             console.log(`❌ Error al obtener la skin de ${solicitud}.`);
                             // Crear el segundo cuadro de solicitud
@@ -939,6 +959,34 @@ class Friends {
 
                             modalBody.appendChild(box2);
                             img2.style.backgroundImage = "url('https://minotar.net/skin/MHF_Steve.png')";
+
+                            rejectButton2.addEventListener('click', () => {
+                                fetch('https://api.battlylauncher.com/api/v2/users/cancelarSolicitud', {
+                                    method: 'POST',
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                        Authorization: `Bearer ${account.token}`,
+                                    },
+                                    body: JSON.stringify({
+                                        amigo: solicitud
+                                    })
+                                }).then(res => res.json()).then(res => {
+                                    if (res.error) {
+                                        console.error(res.error);
+
+                                        new Alert().ShowAlert({
+                                            icon: "error",
+                                            title: lang.error_cancelling_request
+                                        });
+                                    } else {
+
+                                        new Alert().ShowAlert({
+                                            icon: "success",
+                                            title: lang.request_cancelled
+                                        });
+                                    }
+                                });
+                            });
                         }
                     }
                 }
@@ -983,15 +1031,12 @@ class Friends {
             const loadingText = document.getElementById("loading-text");
             loadingText.innerHTML = lang.loading_friends;
 
-            fetch('https://api.battlylauncher.com/api/users/obtenerAmigos', {
+            fetch('https://api.battlylauncher.com/api/v2/users/obtenerAmigos', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    username: account.name,
-                    password: account.password
-                })
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${account.token}`,
+                }
             }).then(res => res.json()).then(async res => {
                 if (res.error) {
                     console.error(res.error);

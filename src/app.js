@@ -16,6 +16,7 @@ const { autoUpdater } = require("electron-updater");
 const { io } = require("socket.io-client");
 const socket = io("https://api.battlylauncher.com");
 //process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
+const fetch = require("node-fetch");
 const fs = require("fs");
 const path = require("path");
 const dataDirectory =
@@ -623,7 +624,7 @@ ipcMain.handle("update-app", () => {
 
 const pkgVersion = async () => {
   const pkg = {
-    version: "2.1.0",
+    version: "2.2.0",
     buildVersion: 1004
   };
   return pkg;
