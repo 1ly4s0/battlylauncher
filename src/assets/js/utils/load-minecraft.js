@@ -485,13 +485,7 @@ class LoadMinecraft {
       console.error(err);
       consoleOutput_ += `[ERROR] ${JSON.stringify(err, null, 2)}\n`;
 
-      if (err.type === "request-timeout") return
-
-      modalDiv1.remove();
-
-      return ShowCrashReport(
-        `${langs.error_detected_one} \nError:\n${JSON.stringify(err, null, 2)}`
-      );
+      logTextArea1.innerHTML += `\n❌ ${err}`;
     });
   }
 
