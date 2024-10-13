@@ -34,7 +34,7 @@ async function createWindow() {
     resizable: true,
     icon: `./src/assets/images/icon.${os.platform() === "win32" ? "ico" : "png"
       }`,
-    frame: false,
+    frame: os.platform() === "win32" ? false : true,
     show: false,
     webPreferences: {
       contextIsolation: false,
