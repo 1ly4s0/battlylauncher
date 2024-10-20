@@ -54,7 +54,7 @@ class database {
 
     addAccount(data) {
         let actualAccounts = localStorage.getItem('accounts');
-        
+
         if (actualAccounts) {
             actualAccounts = JSON.parse(actualAccounts);
             actualAccounts.push(data);
@@ -146,7 +146,7 @@ class database {
             }
         });
     }
-    
+
 
     delete(key, type) {
         let store = this.getStore(type);
@@ -159,7 +159,7 @@ class database {
             return "not found";
         }
         return this.db.transaction(type, "readwrite").objectStore(type);
-    } 
+    }
 
     genKey(int) {
         var key = 0;

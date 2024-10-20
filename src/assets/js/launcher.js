@@ -229,7 +229,7 @@ class Launcher {
 
           this.database.update(refresh_accounts, "accounts");
           this.database.update(refresh_profile, "profile");
-          addAccount(refresh_accounts);
+          addAccount(refresh_accounts, false, true);
           if (account.uuid === selectaccount) accountSelect(refresh.uuid);
         } else if (account.meta.type === "Mojang") {
           if (account.meta.offline) {
@@ -237,7 +237,7 @@ class Launcher {
             console.log(
               `🔄 Iniciando cuenta de Mojang con el nombre de ususario ${account.name}...`
             );
-            addAccount(account);
+            addAccount(account, false, true);
             if (account.uuid === selectaccount) accountSelect(account.uuid);
             continue;
           }
@@ -278,7 +278,7 @@ class Launcher {
           };
 
           this.database.update(refresh_accounts, "accounts");
-          addAccount(refresh_accounts);
+          addAccount(refresh_accounts, false, true);
           if (account.uuid === selectaccount) accountSelect(refresh.uuid);
         } else if (account.meta.type === "cracked") {
           console.log(
@@ -287,7 +287,7 @@ class Launcher {
           let isPremium;
           if (!premiums) isPremium = false;
           else isPremium = premiums.includes(account.name);
-          addAccount(account, isPremium);
+          addAccount(account, isPremium, false);
           if (account.uuid === selectaccount) accountSelect(account.uuid);
         }
       }

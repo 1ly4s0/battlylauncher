@@ -2536,6 +2536,7 @@ class Home {
             let version_optifine = version.replace(/OptiFine.*$/, "OptiFine");
             option.value = version + `-extra`;
             option.innerHTML = version_optifine;
+            option.setAttribute("requiredJavaVersion", this.Versions.versions.find((v) => v.version === version_optifine.toLowerCase()).requiredJavaVersion);
             versiones.appendChild(option);
           } else {
             option.value = version + `-extra`;
@@ -2550,7 +2551,8 @@ class Home {
         }
       }
     } catch (error) {
-      console.error("Error al cargar versiones: ", error);
+      console.error("Error al cargar versiones");
+      console.error(error);
     }
   }
 
@@ -3246,6 +3248,7 @@ class Home {
       .getElementById("startStartVersion")
       .addEventListener("click", async () => {
         let version = document.getElementById("listaDeVersiones").value;
+        let requiredJavaVersion = document.getElementById("listaDeVersiones").selectedOptions[0].getAttribute("requiredJavaVersion");
         console.log(version);
         let versionType;
         let progressBar1 = document.getElementById("progressBar1_");
@@ -3439,7 +3442,62 @@ class Home {
 
         console.log(`✅ Versión detectada: ${version}`);
 
-        const javapath = localStorage.getItem("java-path");
+        async function CheckAndDownloadJava() {
+          let folders = fs.readdirSync(`${dataDirectory}/.battly/runtime`);
+          let found = false;
+          let realJavaVersion;
+          folders.forEach((folder) => {
+            if (folder.startsWith(requiredJavaVersion)) {
+              found = true;
+              realJavaVersion = folder;
+            }
+          });
+
+          if (!found) {
+            console.log(document.getElementById("listaDeVersiones").value);
+            if (version.includes("OptiFine")) {
+              new Alert().ShowAlert({
+                icon: "error",
+                title: langs.download_the_version_in_vanilla,
+                text: langs.download_the_version_in_vanilla_text,
+              });
+            }
+
+            return false;
+          } else {
+            const inputRutaJava =
+              document.getElementById("ruta-java-input");
+            if (process.platform === "win32") {
+              let javaPath = `${dataDirectory}/.battly/runtime/${realJavaVersion}/bin/java.exe`;
+              if (fs.existsSync(javaPath)) {
+                inputRutaJava.value = javaPath;
+                localStorage.setItem("java-path", javaPath);
+                console.log(`Java reconfigurado a ${javaPath}`);
+              } else {
+                inputRutaJava.value =
+                  "Java no encontrado. Haz click aquí para buscarlo.";
+              }
+            } else {
+              let javaPath = `${dataDirectory}/.battly/runtime/${realJavaVersion}/bin/java`;
+              if (fs.existsSync(javaPath)) {
+                inputRutaJava.value = javaPath;
+                localStorage.setItem("java-path", javaPath);
+              } else {
+                inputRutaJava.value =
+                  "Java no encontrado. Haz click aquí para buscarlo.";
+              }
+            }
+          }
+
+          return true;
+        }
+
+
+        let javapath;
+        if (await CheckAndDownloadJava()) {
+          javapath = localStorage.getItem("java-path");
+        }
+
         const isExtra = version.endsWith("-extra");
         const gameUrl = this.config.game_url || `${urlpkg}/files`;
         const rootPath = `${dataDirectory}/.battly`;
@@ -3944,7 +4002,7 @@ class Home {
 
         launch_core.on("error", (err) => {
           consoleOutput_ += `[ERROR] ${JSON.stringify(err, null, 2)}\n`;
-          console.error(error.message);
+          console.error(err.message);
           progressBar1.style.display = "none";
           info.style.display = "none";
           playBtn.style.display = "";

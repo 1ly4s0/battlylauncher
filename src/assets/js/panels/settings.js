@@ -1178,15 +1178,17 @@ class Settings {
         await new Promise((resolve) => {
           let interval;
           interval = setInterval(() => {
+            console.log(javaPathInputFile.value)
             if (javaPathInputFile.value != "") resolve(clearInterval(interval));
           }, 100);
         });
 
         if (
-          javaPathInputFile.value.replace(".exe", "").endsWith("java") ||
-          javaPathInputFile.value.replace(".exe", "").endsWith("javaw")
+          javaPathInputFile.value.replace(".exe", "").endsWith("java")
         ) {
           let file = javaPathInputFile.files[0].path;
+          console.log(javaPathInputFile)
+          console.log(file);
           javaPathInputTxt.value = file;
           localStorage.setItem("java-path", file);
 

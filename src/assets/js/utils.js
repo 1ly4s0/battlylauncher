@@ -83,20 +83,24 @@ function changePanel(id) {
 
 
 
-async function addAccount(data, isPremium) {
+async function addAccount(data, isPremium, isOffline) {
     document.querySelector(".preload-content").style.display = "block";
     let div = document.createElement("div");
     div.classList.add("account");
     div.id = data.uuid;
     console.log(`✅ Cuenta: ${div.id} agregada`)
     div.innerHTML = `
-        <img class="account-image mc-face-viewer-8x">
-        <div class="account-name" id="user-name"> ${data.name}${isPremium ? '<i class="fa-solid fa-fire" style="cursor:pointer;margin-left:5px;"></i>' : ''}</div>
+        <img class="account-image mc-face-viewer-8x" data-offline="${isOffline}">
+        <div class="account-name" id="user-name">
+            ${data.name}
+            ${isPremium ? '<i class="fa-solid fa-fire" style="cursor:pointer;margin-left:5px;"></i>' : ''}
+            ${isOffline ? '<i class="fa-solid fa-cube" style="cursor:pointer;margin-left:5px;"></i>' : ''}
+        </div>
         <div class="account-delete"><i class="fa-solid fa-arrow-right" id="` + data.uuid + `"></i></div>
         `
     await document.querySelector('.accounts').appendChild(div);
 
-    headplayer(data.uuid, data.name);
+    headplayer(data.uuid, data.name, isOffline);
 }
 
 function accountSelect(uuid) {
@@ -243,13 +247,18 @@ function accountSelect(uuid) {
     //headplayer(pseudo);
 }
 
-async function headplayer(id, pseudo) {
-    try {
-        await axios.get(`https://api.battlylauncher.com/api/skin/${pseudo}.png`)
+async function headplayer(id, pseudo, isOffline) {
+    if (!isOffline) {
+        try {
+            await axios.get(`https://api.battlylauncher.com/api/skin/${pseudo}.png`)
+            const element = document.querySelector(`[id="${id}"] .account-image`);
+            element.style.backgroundImage = `url(https://api.battlylauncher.com/api/skin/${pseudo}.png)`
+        } catch (error) {
+            const element = document.querySelector(`[id="${id}"] .account-image`);
+            element.style.backgroundImage = `url(https://minotar.net/skin/MHF_Steve.png)`
+        }
+    } else {
         const element = document.querySelector(`[id="${id}"] .account-image`);
-        element.style.backgroundImage = `url(https://api.battlylauncher.com/api/skin/${pseudo}.png)`
-    } catch (error) {
-        const element = document.querySelector(`[id="${id}"] .account-image`);
-        element.style.backgroundImage = `url(https://minotar.net/skin/MHF_Steve.png)`
+        element.style.backgroundImage = `url(https://minotar.net/skin/${pseudo}.png)`
     }
 }

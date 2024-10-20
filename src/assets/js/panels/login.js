@@ -125,10 +125,10 @@ class Login {
                             meta: account_connect.meta
                         }
 
-                        this.database.addAccount(account)
+                        this.database.addAccount(account);
                         this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
 
-                        addAccount(account)
+                        addAccount(account, false, true);
                         accountSelect(account.uuid)
 
                         let news_shown = localStorage.getItem("news_shown_v2.0");
@@ -268,7 +268,7 @@ class Login {
                         let isPremium;
                         if (!premiums) isPremium = false;
                         else isPremium = premiums.includes(account.name);
-                        addAccount(account, isPremium);
+                        addAccount(account, isPremium, false);
 
                         document.getElementById("code-login-panel").classList.remove("is-active");
                         document.getElementById("code-text").value = "";
@@ -484,7 +484,7 @@ class Login {
                     let isPremium;
                     if (!premiums) isPremium = false;
                     else isPremium = premiums.includes(account.name);
-                    addAccount(account, isPremium);
+                    addAccount(account, isPremium, false);
 
                     if (isPremium) {
                         document.getElementById("header-text-to-add").innerHTML = "Premium Edition";

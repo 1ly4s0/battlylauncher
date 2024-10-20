@@ -12,6 +12,8 @@ let notificationWindow = undefined;
 let selectLangWindow = undefined;
 const { app, net, protocol } = require("electron");
 const { ipcMain } = require("electron");
+let dev = process.env.NODE_ENV === "dev";
+
 
 function getWindow() {
   return mainWindow;
@@ -126,7 +128,9 @@ async function createWindow() {
           });
         } else {
           if (mainWindow) {
-            //mainWindow.openDevTools();
+            if (dev) {
+              mainWindow.openDevTools();
+            }
             mainWindow.show();
           }
         }

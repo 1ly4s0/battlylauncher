@@ -122,10 +122,19 @@ class Mods {
             bodyText.innerHTML = lang.welcome_mods;
 
             const lineBreak = document.createElement('br');
+
+            const statusText = document.createElement('p');
+            statusText.innerHTML = `<i class="fa-solid fa-spinner fa-spin-pulse"></i> ${lang.loading_mods}`;
+
             const lineBreak2 = document.createElement('br');
+
+            const modalMods = document.createElement('div');
+            modalMods.style.display = 'none';
 
             modalBody.appendChild(bodyText);
             modalBody.appendChild(lineBreak);
+            modalBody.appendChild(statusText);
+            modalBody.appendChild(modalMods);
 
             modal.appendChild(modalBackground);
             modal.appendChild(modalCard);
@@ -174,10 +183,24 @@ class Mods {
                                 if (tomlData.mods && Array.isArray(tomlData.mods) && tomlData.mods.length > 0) {
                                     const modInfo = tomlData.mods[0];
 
+                                    const modIconEntry = zip.files.find(entry => entry.path.toLowerCase() === `assets/${modInfo.modId}/icon.png`);
+                                    let modIconBase64 = '';
+
+                                    if (modIconEntry) {
+                                        const modIconBuffer = await modIconEntry.buffer();
+
+                                        const base64Icon = modIconBuffer.toString('base64');
+
+                                        const mimeType = 'image/png'
+                                        modIconBase64 = `data:${mimeType};base64,${base64Icon}`;
+
+                                    }
+
                                     let modObject = {
                                         name: modInfo.displayName || '',
                                         version: modInfo.version || '',
                                         description: modInfo.description || '',
+                                        image: modIconBase64 || 'https://battlylauncher.com/assets/img/mc-icon.png',
                                     };
 
                                     modsArray.push(modObject);
@@ -194,9 +217,8 @@ class Mods {
 
                                     card1.innerHTML = `
    <header class="card-header is-flex">
-      <p class="card-header-title" style="
-         color: #fff;
-         ">${modObject.name}</p>
+   <img src="${modObject.image}" style="width: 30px; height: 30px; margin-left: 15px; align-self: center; border-radius: 5px;">
+      <p class="card-header-title" style="color: #fff;padding-left: 10px;">${modObject.name}</p>
       <div class="buttons buttons-no-margin" style="margin-right: 10px;">
       ${mods[i].endsWith('.disabledmod') ? '<i class="fa-solid fa-eye"></i>' : '<i class="fa-solid fa-eye-slash"></i>'}
                     <i class="fa-solid fa-folder-open"></i>
@@ -211,7 +233,7 @@ class Mods {
                                     `;
 
 
-                                    modalBody.appendChild(card1);
+                                    modalMods.appendChild(card1);
 
                                     const openButton = card1.querySelector('.buttons-no-margin').children[3];
                                     const deleteButton = card1.querySelector('.buttons-no-margin').children[2];
@@ -228,6 +250,8 @@ class Mods {
                                             deactivateButton.classList.remove('fa-eye');
                                             deactivateButton.classList.add('fa-eye-slash');
 
+                                            mods[i] = enabledModPath;
+
                                             new Alert().ShowAlert({
                                                 icon: 'success',
                                                 title: lang.mod_activated,
@@ -239,6 +263,8 @@ class Mods {
 
                                             deactivateButton.classList.remove('fa-eye-slash');
                                             deactivateButton.classList.add('fa-eye');
+
+                                            mods[i] = disabledModPath;
 
                                             new Alert().ShowAlert({
                                                 icon: 'success',
@@ -285,7 +311,7 @@ class Mods {
                                         }).then((result) => {
                                             if (result.isConfirmed) {
                                                 card1.remove();
-                                                lineBreak3.remove();
+
                                                 fs.unlinkSync(mods[i]);
                                                 new Alert().ShowAlert({
                                                     icon: 'success',
@@ -312,15 +338,28 @@ class Mods {
                             const manifestString = manifestContent.toString('utf8');
                             const manifest = JSON.parse(manifestString);
 
+                            const modIconEntry = zip.files.find(entry => entry.path.toLowerCase() === manifest.icon?.toLowerCase());
+                            let modIconBase64 = '';
+
+                            if (modIconEntry) {
+                                const modIconBuffer = await modIconEntry.buffer();
+
+                                const base64Icon = modIconBuffer.toString('base64');
+
+                                const mimeType = 'image/png'
+                                modIconBase64 = `data:${mimeType};base64,${base64Icon}`;
+
+                            }
+
                             let modObject = {
                                 name: manifest.name || '',
                                 version: manifest.version || '',
                                 description: manifest.description || '',
+                                image: modIconBase64 || 'https://battlylauncher.com/assets/img/mc-icon.png',
                             };
 
                             modsArray.push(modObject);
 
-                            // Crear el header de la primera tarjeta
 
                             const card1 = document.createElement('div');
                             card1.classList.add('card');
@@ -331,9 +370,8 @@ class Mods {
 
                             card1.innerHTML = `
    <header class="card-header is-flex">
-      <p class="card-header-title" style="
-         color: #fff;
-         ">${modObject.name}</p>
+   <img src="${modObject.image}" style="width: 30px; height: 30px; margin-left: 15px; align-self: center; border-radius: 5px;">
+      <p class="card-header-title" style="color: #fff;padding-left: 10px;">${modObject.name}</p>
       <div class="buttons buttons-no-margin" style="margin-right: 10px;">
       ${mods[i].endsWith('.disabledmod') ? '<i class="fa-solid fa-eye"></i>' : '<i class="fa-solid fa-eye-slash"></i>'}
                     <i class="fa-solid fa-folder-open"></i>
@@ -348,7 +386,7 @@ class Mods {
                                     `;
 
 
-                            modalBody.appendChild(card1);
+                            modalMods.appendChild(card1);
 
                             const openButton = card1.querySelector('.buttons-no-margin').children[3];
                             const deleteButton = card1.querySelector('.buttons-no-margin').children[2];
@@ -365,6 +403,8 @@ class Mods {
                                     deactivateButton.classList.remove('fa-eye');
                                     deactivateButton.classList.add('fa-eye-slash');
 
+                                    mods[i] = enabledModPath;
+
                                     new Alert().ShowAlert({
                                         icon: 'success',
                                         title: lang.mod_activated,
@@ -376,6 +416,8 @@ class Mods {
 
                                     deactivateButton.classList.remove('fa-eye-slash');
                                     deactivateButton.classList.add('fa-eye');
+
+                                    mods[i] = disabledModPath;
 
                                     new Alert().ShowAlert({
                                         icon: 'success',
@@ -421,7 +463,7 @@ class Mods {
                                 }).then((result) => {
                                     if (result.isConfirmed) {
                                         card1.remove();
-                                        lineBreak3.remove();
+
                                         fs.unlinkSync(mods[i]);
                                         new Alert().ShowAlert({
                                             icon: 'success',
@@ -440,10 +482,24 @@ class Mods {
                             const manifestString = manifestContent.toString('utf8');
                             const manifest = JSON.parse(manifestString);
 
+                            const modIconEntry = zip.files.find(entry => entry.path.toLowerCase() === manifest.icon?.toLowerCase());
+                            let modIconBase64 = '';
+
+                            if (modIconEntry) {
+                                const modIconBuffer = await modIconEntry.buffer();
+
+                                const base64Icon = modIconBuffer.toString('base64');
+
+                                const mimeType = 'image/png'
+                                modIconBase64 = `data:${mimeType};base64,${base64Icon}`;
+
+                            }
+
                             let modObject = {
-                                name: manifest.quilt_loader.metadata.name || '',
-                                version: manifest.quilt_loader.version || '',
-                                description: manifest.quilt_loader.metadata.description || '',
+                                name: manifest.name || '',
+                                version: manifest.version || '',
+                                description: manifest.description || '',
+                                image: modIconBase64 || 'https://battlylauncher.com/assets/img/mc-icon.png',
                             };
 
                             modsArray.push(modObject);
@@ -458,9 +514,8 @@ class Mods {
 
                             card1.innerHTML = `
    <header class="card-header is-flex">
-      <p class="card-header-title" style="
-         color: #fff;
-         ">${modObject.name}</p>
+    <img src="${modObject.image}" style="width: 30px; height: 30px; margin-left: 15px; align-self: center; border-radius: 5px;">
+      <p class="card-header-title" style="color: #fff;padding-left: 10px;">${modObject.name}</p>
       <div class="buttons buttons-no-margin" style="margin-right: 10px;">
       ${mods[i].endsWith('.disabledmod') ? '<i class="fa-solid fa-eye"></i>' : '<i class="fa-solid fa-eye-slash"></i>'}
                     <i class="fa-solid fa-folder-open"></i>
@@ -475,7 +530,7 @@ class Mods {
                                     `;
 
 
-                            modalBody.appendChild(card1);
+                            modalMods.appendChild(card1);
 
                             const openButton = card1.querySelector('.buttons-no-margin').children[3];
                             const deleteButton = card1.querySelector('.buttons-no-margin').children[2];
@@ -492,6 +547,8 @@ class Mods {
                                     deactivateButton.classList.remove('fa-eye');
                                     deactivateButton.classList.add('fa-eye-slash');
 
+                                    mods[i] = enabledModPath;
+
                                     new Alert().ShowAlert({
                                         icon: 'success',
                                         title: lang.mod_activated,
@@ -503,6 +560,8 @@ class Mods {
 
                                     deactivateButton.classList.remove('fa-eye-slash');
                                     deactivateButton.classList.add('fa-eye');
+
+                                    mods[i] = disabledModPath;
 
                                     new Alert().ShowAlert({
                                         icon: 'success',
@@ -548,7 +607,7 @@ class Mods {
                                 }).then((result) => {
                                     if (result.isConfirmed) {
                                         card1.remove();
-                                        lineBreak3.remove();
+
                                         fs.unlinkSync(mods[i]);
                                         new Alert().ShowAlert({
                                             icon: 'success',
@@ -571,6 +630,9 @@ class Mods {
                     document.body.appendChild(modal);
 
                 }
+
+                modalBody.removeChild(statusText);
+                modalMods.style.display = 'block';
             }
         });
     }
@@ -1132,7 +1194,12 @@ class Mods {
                         }
 
                         const zip = new AdmZip(destinationFile);
+                        const zipEntries = await zip.getEntries();
+                        console.log(zipEntries);
                         await zip.extractAllTo(destinationFolder, true);
+
+
+
                         json = await fs.readFile(path.join(destinationFolder, 'modrinth.index.json'), 'utf8');
 
                         //mover lo que hay en la carpeta overrides a la carpeta battly

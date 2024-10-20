@@ -275,8 +275,8 @@ class Launch extends events_1.EventEmitter {
             try {
                 if (fs_1.default.existsSync(asset.path)) {
                     const fileHash = await calculateFileHash(asset.path);
-                    if (fileHash === asset.hash) {
-                        console.log(`File ${asset.path} already exists and matches hash, skipping download.`);
+                    if (fileHash === asset.sha1) {
+                        console.info(`File ${asset.path} already exists and matches hash, skipping download.`);
                         continue;
                     }
                     else {

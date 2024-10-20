@@ -1,7 +1,7 @@
 {
   "name": "BattlyLauncher",
   "productname": "Battly Launcher",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "buildVersion": "1003",
   "description": "El mejor Launcher Personalizado para Minecraft Premium y No premium",
   "main": "src/app.js",
