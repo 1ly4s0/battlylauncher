@@ -456,6 +456,7 @@ class Home {
             cardDescription1.classList.add("content");
             cardDescription1.style.marginLeft = "10px";
             cardDescription1.textContent = instance_json.description;
+            cardDescription1.style.color = "#fff";
             //añadir font-family: 'Poppins';font-weight: 700;
             cardDescription1.style.fontFamily = "Poppins";
             cardDescription1.style.fontWeight = "700";
@@ -468,7 +469,7 @@ class Home {
             cardFooter1.style.display = "none";
 
             const openButton1 = document.createElement("button");
-            openButton1.classList.add("card-footer-item", "button", "is-info", "ten-radius");
+            openButton1.classList.add("card-footer-item", "button", "is-info", "ten-radius", "is-outlined");
             openButton1.innerHTML =
               '<span><i class="fa-solid fa-square-up-right"></i> ' +
               langs.open_instance +
@@ -479,7 +480,7 @@ class Home {
             editButton1.classList.add(
               "card-footer-item",
               "button",
-              "is-warning", "ten-radius"
+              "is-warning", "ten-radius", "is-outlined"
             );
             editButton1.innerHTML =
               '<span><i class="fa-solid fa-folder-open"></i> ' +
@@ -491,7 +492,7 @@ class Home {
             deleteButton1.classList.add(
               "card-footer-item",
               "button",
-              "is-danger", "ten-radius"
+              "is-danger", "ten-radius", "is-outlined"
             );
             deleteButton1.innerHTML =
               '<span><i class="fa-solid fa-folder-minus"></i> ' +
@@ -1131,11 +1132,6 @@ class Home {
               let opts;
               if (account.type === "battly") {
                 opts = {
-                  url:
-                    this.config.game_url === "" ||
-                      this.config.game_url === undefined
-                      ? `${urlpkg}/files`
-                      : this.config.game_url,
                   authenticator: account,
                   detached: true,
                   timeout: 10000,
@@ -1148,26 +1144,14 @@ class Home {
                     enable: true,
                   },
                   verify: false,
-                  ignored: ["loader", "libraries"],
                   java: false,
                   memory: {
                     min: `${ram.ramMin * 1024}M`,
                     max: `${ram.ramMax * 1024}M`,
                   },
-                  JVM_ARGS: [
-                    "-javaagent:authlib-injector.jar=https://api.battlylauncher.com",
-                    "-Dauthlibinjector.mojangAntiFeatures=enabled",
-                    "-Dauthlibinjector.noShowServerName",
-                    "-Dauthlibinjector.disableHttpd",
-                  ],
                 };
               } else {
                 opts = {
-                  url:
-                    this.config.game_url === "" ||
-                      this.config.game_url === undefined
-                      ? `${urlpkg}/files`
-                      : this.config.game_url,
                   authenticator: account,
                   detached: true,
                   timeout: 10000,
@@ -1180,7 +1164,6 @@ class Home {
                     enable: true,
                   },
                   verify: false,
-                  ignored: ["loader"],
                   java: false,
                   memory: {
                     min: `${ram.ramMin * 1024}M`,
@@ -2786,7 +2769,19 @@ class Home {
       "language-selector-btn": `${langs.change}`,
       "launchboost_settings_information_text": `${langs.launchboost_settings_information_text}`,
       "connected-friends": `${langs.connected_friends}`,
-      "see-friends-btn": `${langs.see_friends}`
+      "see-friends-btn": `${langs.see_friends} <i class='fa-solid fa-arrow-right'></i>`,
+      "username_text": `${langs.username}`,
+      "password_text": `${langs.password}`,
+      "music-panel-search-text": `${langs.search}`,
+      "your_playlist": `${langs.your_playlist}`,
+      "music-panel-results-text": `${langs.results}`,
+      "you-dont-have-songs-in-the-playlist-1": `${langs.you_dont_have_songs_in_the_playlist_1}`,
+      "you-dont-have-songs-in-the-playlist-2": `${langs.you_dont_have_songs_in_the_playlist_2}`,
+      "settings-button-text": `${langs.settings}`,
+      "news-button-text": `${langs.news}`,
+      "see-folder-text": `${langs.see_folder}`,
+      "startStartVersion": `${langs.launch}`,
+      "cancelStartVersion": `${langs.cancel}`,
     };
 
     // Apply updates for elements using only getElementById
@@ -2801,6 +2796,10 @@ class Home {
     document.getElementById("download-txt").innerHTML += `<i class="fa-solid fa-cloud-arrow-down"></i> ${langs.download}`;
     document.getElementById("play-txt").innerHTML += `<i class="fa-solid fa-gamepad"></i> ${langs.play}`;
     document.getElementById("music-btn-text").innerHTML = `<i class="fa-solid fa-music"></i> ${langs.music_settings_information}`;
+    document.getElementById("tpyeofnews")[0].innerHTML = langs.battly_news;
+    document.getElementById("tpyeofnews")[1].innerHTML = langs.minecraft_news;
+    document.getElementById("nombre-de-cancion").placeholder = langs.song_name;
+    document.getElementById("input_buscar_mods").placeholder = langs.search_mods;
 
     document
       .getElementById("boton_abrir_mods")
@@ -3525,7 +3524,7 @@ class Home {
             build: this.BattlyConfig.loader.build,
             enable: loaderEnable,
           },
-          verify: false,
+          verify: localStorage.getItem("offline-mode") === "true" ? false : true,
           ignored: ["libraries/com/mojang/authlib"],
           java: false,
           memory: memory,

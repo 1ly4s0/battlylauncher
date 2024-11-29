@@ -81,7 +81,7 @@ async function createWindow() {
     webPreferences: {
       contextIsolation: false,
       nodeIntegration: true,
-      devTools: false,
+      devTools: true,
     },
   });
 
@@ -106,12 +106,10 @@ async function createWindow() {
       .executeJavaScript("localStorage.getItem('lang')")
       .then((result) => {
         lang = result;
-        if (
-          lang === null ||
-          lang === undefined ||
-          lang === "" ||
-          lang === "null"
-        ) {
+        console.log(lang)
+        const validLanguages = ["es", "en", "fr", "pt", "ar", "de", "ru", "it", "ja"];
+
+        if (!validLanguages.includes(lang)) {
           selectLangWindow.loadFile(
             path.join(
               electron.app.getAppPath(),
@@ -122,8 +120,10 @@ async function createWindow() {
           );
           selectLangWindow.once("ready-to-show", () => {
             if (selectLangWindow) {
-              //selectLangWindow.openDevTools();
               selectLangWindow.show();
+              if (dev) {
+                selectLangWindow.openDevTools();
+              }
             }
           });
         } else {
@@ -134,6 +134,7 @@ async function createWindow() {
             mainWindow.show();
           }
         }
+
       })
       .catch((error) => {
         console.error("Error al ejecutar JavaScript:", error);

@@ -75,11 +75,11 @@ class Libraries {
                 fs_1.default.writeFileSync(`${this.options.path}/battly/launcher/mc-assets/extra-assets.json`, JSON.stringify(data, null, 4));
             }
             else {
-                data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/battly/launcher/mc-assets/extra-assets.json`, 'utf-8'));
+                data = [];
             }
         }
         catch (e) {
-            data = JSON.parse(fs_1.default.readFileSync(`${this.options.path}/battly/launcher/mc-assets/extra-assets.json`, 'utf-8'));
+            data = [];
         }
         let assets = [];
         for (let asset of data) {

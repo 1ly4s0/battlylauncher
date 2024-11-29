@@ -388,8 +388,20 @@ if (!gotTheLock) {
 } else {
   app.whenReady().then(() => {
     if (fs.existsSync(path.join(dataDirectory, ".battly/launchboost"))) {
-      fetch("https://api.battlylauncher.com/launcher/config-launcher/config.json").then(async res => {
+      fetch("https://api.battlylauncher.com/v2/launcher/config-launcher/config.json").then(async res => {
         let data = await res.json();
+        let version = data.latestVersion;
+        let actualVersion = (require("../package.json")).version;
+
+        if (actualVersion != version) {
+          const updateWindow = UpdateWindow.createWindow();
+        } else {
+          MainWindow.createWindow();
+        }
+      }).catch(async (error) => {
+        let file = await fs.readFileSync(path.join(dataDirectory, "/.battly/battly/launcher/config-launcher/config.json"), "utf8");
+        let data = JSON.parse(file);
+        console.log(data)
         let version = data.latestVersion;
         let actualVersion = (require("../package.json")).version;
 
@@ -624,7 +636,7 @@ ipcMain.handle("update-app", () => {
 
 const pkgVersion = async () => {
   const pkg = {
-    version: "2.3.0",
+    version: "2.4.0",
     buildVersion: 1004
   };
   return pkg;
@@ -634,7 +646,7 @@ ipcMain.handle("update-new-app", async () => {
   console.log(await pkgVersion());
 
   return new Promise(async (resolve, reject) => {
-    fetch("https://api.battlylauncher.com/launcher/config-launcher/config.json").then(async res => {
+    fetch("https://api.battlylauncher.com/v2/launcher/config-launcher/config.json").then(async res => {
       let data = await res.json();
       let version = data.battly.release;
 
@@ -649,6 +661,7 @@ ipcMain.handle("update-new-app", async () => {
       }
     }).catch((error) => {
       console.log(error);
+
       resolve({
         error: true,
         message: error,

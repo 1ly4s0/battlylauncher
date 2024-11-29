@@ -214,7 +214,7 @@ class Launch extends events_1.EventEmitter {
         if (gameJava.error)
             return gameJava;
         let filesList = await bundle.checkBundle([...gameLibraries, ...gameAssetsOther, ...gameAssets, ...gameJava.files]);
-        if (filesList.length > 0) {
+        if (filesList.length > 0 && this.options.verify) {
             let downloader = new Downloader_js_1.default();
             let totsize = await bundle.getTotalSize(filesList);
             downloader.on("progress", (DL, totDL, element) => {

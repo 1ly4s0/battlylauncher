@@ -49,33 +49,35 @@
 <div class="body-battly-music" id="music-panel-card">
   <div class="body-header-battly-music">
     <div class="body-header-search-panel-battly-music">
-      <p style="font-size: 30px;"">Buscar</p>
-                <div class=" body-header-search-panel-div-battly-music">
+      <p style="font-size: 30px;" id="music-panel-search-text">Buscar</p>
+      <div class=" body-header-search-panel-div-battly-music">
         <input class="input is-info body-header-battly-music-input" type="text" id="nombre-de-cancion"
           placeholder="Nombre de la canción" style="width: 40%;">
         <button id="reproducir-btn" class="body-header-battly-music-button button is-info" <i
           class="margin fa-solid fa-search"></i><span id="reproducir-btn-text"></span>
         </button>
+      </div>
+    </div>
+    <div class="body-header-playlist-panel-battly-music">
+      <p style="font-size: 30px; margin-left: 10px;" id="your_playlist">Mi Playlist</p>
+      <button id="save-playlist" class="button is-info" style=" justify-content: center;">
+        <i class="margin fa-solid fa-save"></i><span id="save-playlist-text"></span>
+      </button>
     </div>
   </div>
-  <div class="body-header-playlist-panel-battly-music">
-    <p style="font-size: 30px; margin-left: 10px;" id="your_playlist">Mi Playlist</p>
-    <button id="save-playlist" class="button is-info" style=" justify-content: center;">
-      <i class="margin fa-solid fa-save"></i><span id="save-playlist-text"></span>
-    </button>
-  </div>
-</div>
-<div class="body-body-battly-music">
-  <div class="body-body-search-panel-battly-music">
-    <p class="results-text">Resultados</p>
-    <div class="results" id="search-results">
+  <div class="body-body-battly-music">
+    <div class="body-body-search-panel-battly-music">
+      <p class="results-text" id="music-panel-results-text">Resultados</p>
+      <div class="results" id="search-results">
+      </div>
+    </div>
+    <div class="body-body-playlist-panel-battly-music" id="playlist">
+      <img src="./assets/images/icons/thinking.png" alt=""
+        style="width: 50px; height: 50px; margin-top: auto;margin-left: auto; margin-right: auto;">
+      <p style="text-align: center; margin-bottom: auto; margin-left: auto; margin-right: auto; margin-top: 10px;">
+        <span id="you-dont-have-songs-in-the-playlist-1">No tienes canciones en la lista de
+          reproducción.</span><br><span id="you-dont-have-songs-in-the-playlist-2">¡Busca una o carga una
+          playlist!</span>
+      </p>
     </div>
   </div>
-  <div class="body-body-playlist-panel-battly-music" id="playlist">
-    <img src="./assets/images/icons/thinking.png" alt=""
-      style="width: 50px; height: 50px; margin-top: auto;margin-left: auto; margin-right: auto;">
-    <p style="text-align: center; margin-bottom: auto; margin-left: auto; margin-right: auto; margin-top: 10px;">
-      No tienes canciones en la lista de
-      reproducción.<br>¡Busca una o carga una playlist!</p>
-  </div>
-</div>

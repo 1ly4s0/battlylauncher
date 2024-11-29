@@ -83,6 +83,7 @@
   border-radius: 10px;
   border-bottom: 2px solid #fff;
   color: #fff;
+  border-radius: 0px !important;
 }
 
 .body-header-battly-music-input {

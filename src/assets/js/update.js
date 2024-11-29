@@ -14,7 +14,7 @@ let lang;
 
 const pkgVersion = async () => {
     const pkg = {
-        version: "2.3.0",
+        version: "2.4.0",
         buildVersion: 1004
     };
     return pkg;
@@ -27,21 +27,21 @@ class Splash {
 
     async load() {
         try {
-            const res = await fetch("https://api.battlylauncher.com/launcher/config-launcher/config.json");
-            const data = await res.json();
-            const version = data.battly.release;
-            document.getElementById("version_id").innerHTML = `v${version.latest_version} (build ${version.latest_build})`;
-            document.getElementById("update-date").innerHTML = version.latest_version_date;
+            // const res = await fetch("https://api.battlylauncher.com/v2/launcher/config-launcher/config.json");
+            // const data = await res.json();
+            // const version = data.battly.release;
+            // document.getElementById("version_id").innerHTML = `v${version.latest_version} (build ${version.latest_build})`;
+            // document.getElementById("update-date").innerHTML = version.latest_version_date;
 
-            const newsRes = await fetch(version.latest_version_news_url);
-            let news = await newsRes.text();
-            news = marked.parse(news);
-            document.getElementById("version-news").innerHTML = news;
+            // const newsRes = await fetch(version.latest_version_news_url);
+            // let news = await newsRes.text();
+            // news = marked.parse(news);
+            // document.getElementById("version-news").innerHTML = news;
 
-            document.getElementById("start-download").addEventListener("click", () => {
-                this.startDownload(version);
-                document.getElementById("start-download").style.display = "none";
-            });
+            // document.getElementById("start-download").addEventListener("click", () => {
+            //     this.startDownload(version);
+            //     document.getElementById("start-download").style.display = "none";
+            // });
 
             lang = await new Lang().GetLang();
         } catch (error) {

@@ -476,6 +476,7 @@ class Music {
       animation: 250,
       ghostClass: 'seleccionado',
       chosenClass: 'seleccionado',
+      onEnd: handleSortEnd,
     });
 
     document.getElementById("return-btn").addEventListener("click", () => {
@@ -486,10 +487,10 @@ class Music {
       musicImg = document.getElementById("music-player-card-img"),
       musicName = document.getElementById("no_song"),
       musicAuthor = document.getElementById("music-author"),
+      mainAudio = document.getElementById("main-audio"),
       playPauseBtn = document.getElementById("music-player-card-pause"),
       prevBtn = document.getElementById("prev"),
       nextBtn = document.getElementById("next"),
-      mainAudio = document.getElementById("main-audio"),
       progressArea = document.getElementById("music-panel-progress"),
       progressBar = progressArea.querySelector(".progress-bar");
 
@@ -498,39 +499,113 @@ class Music {
 
 
 
-    function playAudioFromVideoId(videoId) {
-      ytdl.getInfo(videoId, { quality: 'highestaudio' })
-        .then(info => {
-          const audioFormat = info.formats.find(format => format.mimeType && format.mimeType.includes('audio/mp4'));
+    async function playAudioFromVideoId(videoId) {
+      try {
+        const info = await ytdl.getInfo(videoId, { quality: 'highestaudio' });
+        const audioFormat = info.formats.find(format => format.mimeType && format.mimeType.includes('audio/mp4'));
 
-          if (!audioFormat) {
-            console.error("No se encontró un formato de audio adecuado");
-            return;
-          }
+        if (!audioFormat) {
+          console.error("No se encontró un formato de audio adecuado");
+          return;
+        }
 
-          const audioUrl = audioFormat.url;
-          const duration = info.videoDetails.lengthSeconds;
-          const minutes = Math.floor(duration / 60);
-          const seconds = duration % 60;
-          const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
-          const durationString = minutes + ":" + formattedSeconds;
+        const audioUrl = audioFormat.url;
+        const duration = info.videoDetails.lengthSeconds;
+        const minutes = Math.floor(duration / 60);
+        const seconds = duration % 60;
+        const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+        const durationString = minutes + ":" + formattedSeconds;
 
-          musicList_.push({
-            url: videoId,
-            name: info.videoDetails.title,
-            author: info.videoDetails.author.name,
-            img: info.videoDetails.thumbnails[0].url,
-            audio: audioUrl,
-            duration: durationString
-          });
-
-          addMusicToPlaylist(musicList_.length);
-        })
-        .catch(error => {
-          console.error("Error al obtener información del video:");
-          console.error(error);
+        musicList_.push({
+          url: videoId,
+          name: info.videoDetails.title,
+          author: info.videoDetails.author.name,
+          img: info.videoDetails.thumbnails[0].url,
+          audio: audioUrl,
+          duration: durationString
         });
+
+        addMusicToPlaylist(musicList_.length);
+      } catch (error) {
+        console.error("Error al obtener información del video:");
+        console.error(error);
+      }
     }
+
+    function updatePlaylistDOM() {
+      const playlistContainer = document.getElementById('playlist');
+      playlistContainer.innerHTML = ""; // Limpiar el contenedor de la lista actual
+
+      // Volver a agregar los elementos de la lista según el nuevo orden en `musicList_`
+      for (let music of musicList_) {
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("playlist-song");
+
+        const img = document.createElement("img");
+        img.src = music.img;
+        img.classList.add("playlist-song-image");
+        cardDiv.appendChild(img);
+
+        const infoDiv = document.createElement("div");
+        infoDiv.classList.add("playlist-song-info");
+
+        const titleP = document.createElement("p");
+        titleP.classList.add("playlist-song-title");
+        titleP.innerText = music.name.substring(0, 20) + "...";
+        infoDiv.appendChild(titleP);
+
+        const artistP = document.createElement("p");
+        artistP.classList.add("playlist-song-artist");
+        artistP.innerHTML = `<span><i class="fa-solid fa-user"></i> ${music.author}  <i class="fa-solid fa-clock"></i> ${music.duration}</span>`;
+        infoDiv.appendChild(artistP);
+
+        cardDiv.appendChild(infoDiv);
+
+        const button = document.createElement("button");
+        button.classList.add("button", "is-danger", "is-outlined", "playlist-song-button");
+        button.innerHTML = '<i class="fa-solid fa-trash"></i>';
+
+        button.addEventListener("click", async () => {
+          button.disabled = true;
+          button.classList.add("is-loading");
+          const index = musicList_.indexOf(music);
+          if (index > -1) {
+            musicList_.splice(index, 1);
+          }
+          cardDiv.remove();
+          button.disabled = false;
+          button.classList.remove("is-loading");
+          button.classList.remove("is-info");
+          button.classList.add("is-success");
+
+          setTimeout(() => {
+            button.classList.remove("is-success");
+            button.classList.add("is-danger");
+          }, 2000);
+        });
+
+        cardDiv.appendChild(button);
+        playlistContainer.appendChild(cardDiv);
+      }
+    }
+
+    // Llama a `updatePlaylistDOM` después de reordenar
+    function handleSortEnd(event) {
+      const { oldIndex, newIndex } = event;
+
+      if (oldIndex === newIndex) return; // Si el índice no ha cambiado, no hacer nada
+
+      // Actualizar el array `musicList_` según la nueva ordenación
+      const movedMusic = musicList_.splice(oldIndex, 1)[0];
+      musicList_.splice(newIndex, 0, movedMusic);
+
+      console.log('Lista de canciones reordenada:', musicList_);
+
+      // Actualizar el DOM para reflejar el nuevo orden
+      updatePlaylistDOM();
+    }
+
+
 
     async function searchAndShowResults(songName) {
       let btnSearch = document.getElementById("reproducir-btn");
@@ -643,7 +718,6 @@ class Music {
               resultsDiv1.innerHTML = "";
 
               for (let music of musicList_) {
-
                 const cardDiv1 = document.createElement("div");
                 cardDiv1.classList.add("playlist-song");
 
@@ -695,15 +769,6 @@ class Music {
 
                 cardDiv1.appendChild(button1);
                 resultsDiv1.appendChild(cardDiv1);
-              }
-
-              function handleSortEnd(event) {
-                const { oldIndex, newIndex } = event;
-
-                // Actualizar el array musicList_ según la nueva ordenación
-                const movedMusic = musicList_.splice(oldIndex, 1)[0];
-                musicList_.splice(newIndex, 0, movedMusic);
-
               }
 
             }, 1000);
@@ -819,7 +884,6 @@ class Music {
       musicName.innerText = musicList_[indexNumb - 1].name;
       musicAuthor.innerText = musicList_[indexNumb - 1].author.substring(0, 7) + "..";
       musicImg.src = musicList_[indexNumb - 1].img;
-      mainAudio.src = musicList_[indexNumb - 1].audio;
       localStorage.setItem("songPlaying", musicList_[indexNumb - 1]);
       document.getElementById("music-img").src = musicList_[indexNumb - 1].img;
       document.getElementById("playing-now-body").innerText = musicList_[indexNumb - 1].name.substring(0, 30) + "...";
@@ -830,11 +894,97 @@ class Music {
       ipcRenderer.send("set-song", musicList_[indexNumb - 1]);
     }
 
-    function playMusic() {
-      wrapper.classList.add("paused");
-      playPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-      mainAudio.play();
+    let audiListener;
+
+    async function playMusic() {
+      console.log('Reproduciendo canción...');
+
+      // Pausar el elemento <audio> actual y eliminar su src
+      mainAudio.pause();
+      mainAudio.removeAttribute('src');
+      mainAudio.load(); // Limpiar cualquier carga previa
+
+      try {
+        console.log('Intentando cargar la canción...');
+        console.log(musicList_[musicIndex - 1].audio);
+
+        // Asignar la URL directamente al src del elemento <audio>
+        mainAudio.src = musicList_[musicIndex - 1].audio;
+        mainAudio.preload = 'auto'; // Pre-cargar la canción sin cargarla completamente
+
+        // Esperar a que pueda reproducirse sin interrupciones
+        mainAudio.addEventListener('canplay', () => {
+          mainAudio.play().catch(error => {
+            console.error("Error al intentar reproducir el audio:", error);
+          });
+        });
+
+        // Manejar errores de carga del audio
+        mainAudio.addEventListener('error', (e) => {
+          console.error("Error al cargar el audio:", e);
+          console.log('Intentando cargar la canción de nuevo desde YouTube...');
+          retryLoadFromYoutube(); // Función para intentar cargar desde YouTube en caso de error
+        });
+
+        mainAudio.load(); // Inicia la carga del audio
+
+      } catch (error) {
+        console.log('Error en el bloque principal de reproducción de audio:', error);
+        retryLoadFromYoutube(); // En caso de error inesperado, intenta cargar de YouTube
+      }
     }
+
+    async function retryLoadFromYoutube() {
+      const videoId = musicList_[musicIndex - 1].url;
+
+      try {
+        const info = await ytdl.getInfo(videoId, { quality: 'highestaudio' });
+        const audioFormat = info.formats.find(format => format.mimeType && format.mimeType.includes('audio/mp4'));
+
+        if (!audioFormat) {
+          console.error("No se encontró un formato de audio adecuado");
+          return;
+        }
+
+        let oldAudio = musicList_[musicIndex - 1].audio;
+        const audioUrl = audioFormat.url;
+
+        musicList_[musicIndex - 1].audio = audioUrl;
+
+        // Pausar el elemento <audio> actual y eliminar su src
+        mainAudio.pause();
+        mainAudio.removeAttribute("src");
+        mainAudio.load(); // Limpiar cualquier carga previa
+
+        // Asignar la nueva URL al src del elemento <audio>
+        mainAudio.src = audioUrl;
+        mainAudio.preload = 'auto'; // Pre-cargar la canción sin cargarla completamente
+
+        console.log(`La URL de la canción ha sido actualizada de ${oldAudio} a ${audioUrl}`);
+        console.log(musicList_[musicIndex - 1]);
+
+        // Esperar a que pueda reproducirse sin interrupciones
+        mainAudio.addEventListener('canplay', () => {
+          mainAudio.play().catch(error => {
+            console.error("Error al intentar reproducir el audio:", error);
+          });
+        });
+
+        // Manejar errores de carga del audio
+        mainAudio.addEventListener('error', (e) => {
+          console.error("Error al cargar el audio desde YouTube:", e);
+          // Aquí podrías intentar otro método o informar al usuario del fallo
+        });
+
+        mainAudio.load();
+        playingSong();
+
+      } catch (error) {
+        console.error("Error al obtener información del video desde YouTube:");
+        console.error(error);
+      }
+    }
+
 
     function playMusic1() {
       wrapper.classList.add("paused");

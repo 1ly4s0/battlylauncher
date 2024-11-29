@@ -25,19 +25,19 @@
             <li class="option-item">
                 <a href="#" id="settings-btn">
                     <i class="fa-solid fa-gear"></i>
-                    <span>Ajustes</span>
+                    <span id="settings-button-text">Ajustes</span>
                 </a>
             </li>
             <li class="option-item">
                 <a href="#" id="btnShowNews">
                     <i class="fa-solid fa-newspaper"></i>
-                    <span>Novedades</span>
+                    <span id="news-button-text">Novedades</span>
                 </a>
             </li>
             <li class="option-item">
                 <a href="#" id="openBattlyFolderButton">
                     <i class="fa-solid fa-folder-open"></i>
-                    <span>Ver carpeta</span>
+                    <span id="see-folder-text">Ver carpeta</span>
                 </a>
             </li>
             <li class="option-item">
@@ -816,6 +816,7 @@
         padding-right: 10px;
         align-items: center;
         color: #fff;
+        border-radius: 0px !important;
     }
 
     .frame * {
@@ -1023,7 +1024,7 @@
 </style>
 <style>
     .download-modal-panel {
-        width: 70% !important;
+        width: 65% !important;
         overflow: hidden;
     }
 
@@ -1033,7 +1034,7 @@
         align-items: center;
         width: 100%;
         margin: 0 auto;
-        background-color: #212121;
+        background-color: #101725;
         padding: 30px;
         font-family: Poppins, sans-serif;
         border-radius: 10px;
@@ -1041,6 +1042,10 @@
         transition: all 0.5s ease;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         align-items: stretch;
+        height: 0;
+        transition: height 0.5s ease-in-out;
+        height: 390px;
+
     }
 
     .download-panel-left {
@@ -1075,7 +1080,6 @@
         font-weight: 500;
     }
 
-
     .download-panel-right {
         width: 100%;
     }
@@ -1102,13 +1106,17 @@
         height: 45px;
         position: relative;
         border-radius: 10px;
-        background-color: #2a2e3c;
+        background-color: #26344f;
         transition: background-color 0.3s ease;
         margin-bottom: 0px !important;
     }
 
     .radio-input label:hover {
         background-color: #435dd8;
+
+        &:has(input:checked) {
+            background-color: #435dd8;
+        }
     }
 
     .radio-input label::before {
@@ -1126,9 +1134,13 @@
     }
 
     .radio-input .label:has(input:checked)::before {
-        background-color: #2d3750;
+        background-color: #26344f;
         border-color: #435dd8;
         height: 45px;
+    }
+
+    .radio-input .label:has(input:checked) {
+        background-color: transparent;
     }
 
     .radio-input .label .texto {
@@ -1136,7 +1148,7 @@
     }
 
     .radio-input .label input[type="radio"] {
-        background-color: #202030;
+        background-color: #0f1623;
         appearance: none;
         width: 17px;
         height: 17px;
@@ -1243,5 +1255,26 @@
 
     #download-panel-back-button {
         display: none;
+    }
+
+
+    button,
+    .button,
+    input,
+    .input {
+        border-radius: 10px !important;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .classed-home-download-input {
+        background-color: #26344f;
+        color: #fff;
+        border: 1px solid #26344f;
+        height: 3em !important;
+        padding: 10px 15px;
+
+        &::placeholder {
+            color: #ccc;
+        }
     }
 </style>

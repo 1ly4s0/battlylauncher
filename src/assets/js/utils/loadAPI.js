@@ -6,8 +6,8 @@
 const pkg = require('../package.json');
 let url = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url
 
-let config = `${url}/launcher/config-launcher/config.json`;
-let news = `${url}/launcher/news-launcher/news.json`;
+let config = 'https://api.battlylauncher.com/v2/launcher/config-launcher/config.json';
+let news = 'https://api.battlylauncher.com/v2/battlylauncher/launcher/news-launcher/news.json';
 const axios = require("axios")
 const https = require("https")
 const httpsAgent = new https.Agent({
@@ -17,8 +17,8 @@ const fs = require("fs");
 const path = require("path");
 const dataDirectory = process.env.APPDATA || (process.platform == "darwin" ? `${process.env.HOME}/Library/Application Support` : process.env.HOME);
 
-const configURL = "https://api.battlylauncher.com/battlylauncher/launcher/config-launcher/config.json";
-const versionsURL = "https://api.battlylauncher.com/battlylauncher/launcher/config-launcher/versions.json";
+const configURL = "https://api.battlylauncher.com/v2/battlylauncher/launcher/config-launcher/config.json";
+const versionsURL = "https://api.battlylauncher.com/v2/battlylauncher/launcher/config-launcher/versions.json";
 const versionsMojangURL = "https://launchermeta.mojang.com/mc/game/version_manifest_v2.json";
 
 const loadingText = document.getElementById("loading-text");

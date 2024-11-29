@@ -16,7 +16,7 @@ const fs = require('fs');
 const fetch = require('node-fetch');
 const axios = require("axios");
 const { Lang } = require('./assets/js/utils/lang.js');
-let lang;;
+let lang;
 new Lang().GetLang().then(lang_ => {
 	lang = lang_;
 }).catch(error => {
@@ -44,7 +44,7 @@ class Splash {
 		let splashes = [{
 			"message": "Battly Launcher",
 			"author": "TECNO BROS"
-		},]
+		}]
 
 
 		let strings = {

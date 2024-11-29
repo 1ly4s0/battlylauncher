@@ -9,36 +9,31 @@ let isLoadingCache = false;
 class Lang {
   GetLang() {
     const readLangFromFile = (langLocalStorage) => {
-      return new Promise((resolve, reject) => {
+      return new Promise(async (resolve, reject) => {
+        console.log("loading")
         const filePath = path.join(dataDirectory, ".battly", "battly", "launcher", "langs", `${langLocalStorage}.json`);
+        console.log(filePath)
 
-        fs.readFile(filePath, "utf8", (err, data) => {
-          if (err) {
-            console.error("Error reading language file:", err);
-            return reject(err);
-          }
-
-          try {
-            const parsedData = JSON.parse(data);
-            resolve(parsedData);
-          } catch (parseError) {
-            console.error("Error parsing JSON file:", parseError);
-            reject(parseError);
-          }
-        });
+        const data = await fs.readFileSync(filePath, "utf8");
+        const parsedData = JSON.parse(data);
+        resolve(parsedData);
       });
     };
 
     return new Promise(async (resolve, reject) => {
-      const langLocalStorage = localStorage.getItem("lang") || "en";
+      const langLocalStorage = localStorage.getItem("lang") || "es";
+
 
       if (!stringsCache && !isLoadingCache) {
         isLoadingCache = true;
 
         console.log("Cache doesn't exist, fetching from API...");
         if (localStorage.getItem("offline-mode") === "true") {
+          console.log("offline mode")
+          console.log(langLocalStorage)
           try {
             const fileData = await readLangFromFile(langLocalStorage);
+            console.log(fileData)
             stringsCache = fileData;
             isLoadingCache = false;
             resolve(stringsCache);
@@ -72,6 +67,7 @@ class Lang {
               console.error("Error fetching from API:", error);
               try {
                 const fileData = await readLangFromFile(langLocalStorage);
+                console.log(fileData)
                 resolve(fileData);
               } catch (fileError) {
                 reject(fileError);
