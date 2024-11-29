@@ -3524,7 +3524,7 @@ class Home {
             build: this.BattlyConfig.loader.build,
             enable: loaderEnable,
           },
-          verify: localStorage.getItem("offline-mode") === "true" ? false : true,
+          verify: false,
           ignored: ["libraries/com/mojang/authlib"],
           java: false,
           memory: memory,
