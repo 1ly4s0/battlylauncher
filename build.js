@@ -40,8 +40,9 @@ obfuscateSrc().then(() => {
                 {
                     provider: "github",
                     owner: "1ly4s0",
-                    repo: "battlylauncher",
-                    releaseType: "release"
+                    arch: "x86-64",
+                    repo: "battlyaur",
+                    releaseType: "archlinux-release"
                 }
             ],
             generateUpdatesFilesForAllChannels: true,
@@ -89,7 +90,7 @@ obfuscateSrc().then(() => {
                     target: "AppImage",
                     arch: ["x64"]
                 }, {
-                    target: "tar.gz",
+                    target: "pacman",
                     arch: ["x64"]
                 },
                 {
