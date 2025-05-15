@@ -21,3 +21,8 @@ Recordad que si tenéis alguna sugerencia para Battly me la podéis dejar aquí 
 
 ## Descargas
 Se puede descargar en la página oficial de Battly [aquí](https://battlylauncher.com/download)
+
+
+
+## Para Arch Linux
+Este port permite a los usuarios de Arch Linux instalarlo mediante AUR.
