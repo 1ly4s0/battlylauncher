@@ -1,486 +1,2238 @@
-<div class="modal" id="modaluserinfo">
-    <div class="modal-background"></div>
-    <div class="modal-card" style="width: 55%;">
-        <header class="modal-card-head">
-            <p id="account-information" class="modal-card-title" style="color: #fff"></p>
-            <button class="delete" aria-label="close" id="cerrar2-userinfo-btn"></button>
-        </header>
-        <section class="modal-card-body" style="overflow: hidden;">
-            <div class="modal-content">
-                <div class="box" style="padding: 1rem; height: 80px;">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-64x64">
-                                <div id="user-image" class="account-image mc-face-viewer-6x"
-                                    style="transform: translate(-10px, -18px); border-radius: 5px;"></div>
-                            </figure>
-                        </div>
-                        <div class="media-content" style="margin-left: -5px;">
-                            <div class="content">
-                                <p>
-                                    <strong id="user-name" style="font-size: 20px;">1ly4s0</strong>
-                                    <br>
-                                    <span id="mc-id-text"></span> <span id="user-uuid"></span><i
-                                        class="fa-solid fa-copy" id="copy-uuid"
-                                        style="cursor: pointer; margin-left: 5px;"></i>
-                                    <br>
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <footer class="modal-card-foot">
-            <button class="button is-info" id="mostrarskin-userinfo-btn"></button>
-            <button class="button is-danger" id="eliminarcuenta-userinfo-btn"></button>
-            <button class="button is-danger" id="establecer-skin"
-                onclick="js:window.open('https://battlylauncher.com/dashboard', '_blank')"></button>
-            <button class="button is-info" id="cerrar-userinfo-btn">Cerrar</button>
-        </footer>
-    </div>
-</div>
+<style>
+    /* ---------- TITLES ---------- */
+    #b-settings-title {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        margin-top: 60px;
+    }
 
-<div class="settings-content">
-    <div class="bottom_bar_settings">
-        <button id="accounts-btn" class="tab-btn-css button is-info tab-btn active-tab-btn default-tab-btn">
-            <i class="margin fa-solid fa-user"></i>
-            <span id="accounts-btn-text"></span>
-            <span class="button-span"></span>
-        </button>
-        <button id="java-btn" class="tab-btn-css button is-info tab-btn">
-            <i class="margin fa-brands fa-java"></i>
-            <span id="java-btn-text"></span>
-            <span class="button-span"></span>
-        </button>
-        <button id="ram-btn" class="tab-btn-css button is-info tab-btn">
-            <i class="margin fa-solid fa-memory"></i>
-            <span id="ram-btn-text"></span>
-            <span class="button-span"></span>
-        </button>
-        <button id="launcher-btn" class="tab-btn-css button is-info tab-btn">
-            <i class="margin fa-solid fa-b"></i>
-            <span id="launcher-btn-text"></span>
-            <span class="button-span"></span>
-        </button>
-        <button id="theme-btn" class="tab-btn-css button is-info tab-btn">
-            <i class="margin fa-solid fa-palette"></i>
-            <span id="theme-btn-text"></span>
-            <span class="button-span"></span>
-        </button>
-        <button id="background-btn" class="tab-btn-css button is-info tab-btn">
-            <i class="margin fa-solid fa-image"></i>
-            <span id="background-btn-text"></span>
-            <span class="button-span"></span>
-        </button>
-        <button id="save-btn" class="tab-btn-css button is-info save-tabs-btn">
-            <i class="margin fa-solid fa-floppy-disk"></i>
-            <span id="save-btn-text"></span>
-            <span class="button-span"></span>
-        </button>
-    </div>
-    <style>
-        .modal-card-body {
-            overflow: hidden;
+    h2 {
+        font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+        font-weight: 600;
+        margin-bottom: .5rem;
+    }
+
+    p,
+    li,
+    label,
+    button,
+    select {
+        font-size: clamp(.9rem, 1.4vw, 1rem);
+    }
+
+    /* ---------- PANEL ---------- */
+    .b-settings-panel {
+        width: 100%;
+        max-width: 760px;
+        background: #101318;
+        color: #E3E6EE;
+        padding: 1.5rem;
+        border-radius: 1.25rem;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, .35);
+        backdrop-filter: blur(8px);
+        display: none;
+        overflow: auto;
+        scrollbar-width: none;
+    }
+
+    /* ---------- CUENTAS ---------- */
+    .b-settings-acc-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .b-settings-acc-card,
+    .b-settings-acc-add {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #4C8BFF;
+        color: #FFFFFF;
+        font-weight: 700;
+        padding: .9rem 1.2rem;
+        border-radius: 1.25rem;
+        cursor: pointer;
+        transition: filter .2s;
+        border: 4px solid #4C8BFF;
+    }
+
+    .b-settings-acc-card:hover {
+        filter: brightness(1.08);
+    }
+
+    .b-settings-acc-card img {
+        width: 42px;
+        height: 42px;
+        border-radius: .3rem;
+        margin-right: .8rem;
+    }
+
+    .b-settings-menu-trigger {
+        flex: none;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+    }
+
+    /* ---------- FORM ELEMENTOS ---------- */
+    fieldset {
+        border: none;
+        margin: 0 0 1rem;
+        padding: 0;
+    }
+
+    .b-settings-flex {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .b-settings-radio {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        cursor: pointer;
+        color: #9DA2B0;
+    }
+
+    .b-settings-radio input {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #9DA2B0;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+    }
+
+    .b-settings-radio input::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #4C8BFF;
+        transform: scale(0);
+        transition: .15s;
+    }
+
+    .b-settings-radio input:checked::after {
+        transform: scale(1);
+    }
+
+    .b-settings-radio input:checked+span {
+        color: #E3E6EE;
+        font-weight: 600;
+    }
+
+    select.b-settings-select {
+        background: #171B22;
+        color: #E3E6EE;
+        border: none;
+        border-radius: .55rem;
+        padding: .55rem 2.2rem .55rem .9rem;
+        appearance: none;
+        font-weight: 600;
+        min-width: 140px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjOENGM0ZGIiB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTExLjM4IDEuMDZMNi41OSAzLjk3IDIuNTkuOTQgMS4yMSAyLjMzIDYuNTkgNi4yNCAxMC45IDEuODkgMTEuMzggMS4wNnoiLz48L3N2Zz4=");
+        background-repeat: no-repeat;
+        background-position: right .75rem center;
+        background-size: 12px 8px;
+    }
+
+    /* ---------- BOTONES ---------- */
+    .b-settings-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: .4rem;
+        font-weight: 600;
+        padding: .55rem .9rem;
+        border: none;
+        border-radius: .65rem;
+        cursor: pointer;
+        background: #4C8BFF;
+        color: #FFFFFF;
+        transition: filter .15s;
+        text-decoration: none;
+    }
+
+    .b-settings-btn:hover {
+        filter: brightness(1.1);
+    }
+
+    .b-settings-btn.outline {
+        background: transparent;
+        border: 2px solid #4C8BFF;
+        color: #4C8BFF;
+    }
+
+    .b-settings-btn.outline:hover {
+        background: #4C8BFF;
+        color: #FFFFFF;
+    }
+
+    /* ---------- THEMES ---------- */
+    .b-settings-theme-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 1rem;
+        margin: 1.25rem 0;
+    }
+
+    .b-settings-theme-card {
+        background: #171B22;
+        border: 2px solid transparent;
+        border-radius: .85rem;
+        height: 100px;
+        display: grid;
+        place-content: center;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    .b-settings-theme-card.selected {
+        border-color: #4C8BFF;
+    }
+
+    .b-settings-theme-card:hover {
+        filter: brightness(1.1);
+    }
+
+    /* ---------- FOOTER NAV ---------- */
+    nav.b-settings-footer {
+        margin-top: auto;
+        width: 100%;
+        max-width: 760px;
+        background: #171B22;
+        border-radius: .85rem;
+        padding: .6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .b-settings-footer-up {
+        display: flex;
+        gap: 10px;
+        justify-content: space-around;
+
+        & button {
+            width: 100%;
         }
-    </style>
-    <div class="tabs-settings-content active-tab-content" style="overflow-y: auto;">
-        <div class="center-align">
-            <div class="title-settings" id="my-accounts" style="font-size: 50px;"></div>
-            <div class="accounts">
-                <div class="account" id="add-account-btn">
-                    <div class="add-account-name" id="add-account-text" style="font-size: 30px;"></div>
-                    <div class="account-delete" id="add-account"><i class="fa-solid fa-square-plus"></i></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    }
 
-    <div class="tabs-settings-content" style="height: auto;">
-        <div class="settings-content-scroll">
-            <div class="title-settings" id="java-settings" style="font-size: 50px;">
-            </div>
-            <div class="java-settings">
-                <div class="information">
-                    <br>
-                    <span id="java-text-info"> </span><b><span id="java-path-txt"></span></b><br><span
-                        id="java-text-info2"></span>
-                    <br>
-                    <div class="java-path">
-                        <input type="text" class="java-path-input input is-info" disabled id="ruta-java-input"
-                            style="width: 80%; height: 40px; color: #fff;"
-                            placeholder="C:\Program Files\Java\jre1.8.0_301\bin\javaw.exe">
-                        <button class="java-path-btn button is-info" id="open-explorer-java-path"
-                            style="height: 40px;"><i class="fa-solid fa-folder-open"></i></button>
-                        <button class="java-path-btn button is-info" id="java-path-reset" style="height: 40px;"><i
-                                class="fa-solid fa-arrows-rotate"></i></button>
+    .b-settings-nav-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        color: #E3E6EE;
+        padding: .5rem .75rem;
+        border-radius: .65rem;
+        background: transparent;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: .15s;
+        font-family: 'Poppins' !important;
+    }
 
-                        <input type="file" style="width: 0px; height: 0px;" id="java-path-input-file"
-                            accept="application/octet-stream">
-                    </div>
-                    <br>
-                </div>
+    .b-settings-nav-btn:hover,
+    .b-settings-nav-btn.b-settings-active {
+        /* background: #4C8BFF; */
+        color: #FFFFFF;
+    }
 
-            </div>
-        </div>
-    </div>
+    /* ---------- PROFILE MENU ---------- */
+    .b-settings-profile-menu {
+        position: absolute;
+        z-index: 1000;
+        display: none;
+        background: #171B22;
+        border-radius: 1.25rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .45);
+        padding: 10px;
+        width: auto;
+        word-break: break-all
+    }
 
-    <div class="tabs-settings-content" style="height: auto;">
-        <div class="settings-content-scroll">
-            <div class="title-settings" style="font-size: 50px;" id="ram-settings"></div>
-            <div class="java-settings">
-                <div class="information">
-                    <br>
-                    <span style="font-size: 30px; font-weight: 700;">RAM</span><br><br><span id="ram-text-info"></span>
-                    <br>
-                    <div class="ram-info">
-                        <div class="memory-slider" min="0.5" max="8" step="0.5">
-                            <div class="slider-touch-left">
-                                <span value="0 GB"></span>
-                            </div>
-                            <div class="slider-touch-right">
-                                <span value="0 GB"></span>
-                            </div>
-                            <div class="slider-line">
-                                <span></span>
-                            </div>
-                        </div>
+    .b-settings-profile-menu::before {
+        content: "";
+        position: absolute;
+        top: -9px;
+        left: calc(50% - 9px);
+        border: 9px solid transparent;
+        border-bottom-color: #171B22;
+    }
 
-                        <div class="ram-info-block">
-                            <b><span id="you-have-a-total"></span> <span id="total-ram">0 GB</span> <span
-                                    id="of-ram"></span></b><br>
-                            <b><span id="you-have-a-total"></span> <span id="free-ram">0 GB</span> <span
-                                    id="of-ram-disponible"></span></b>
-                        </div>
-                    </div>
-                    <br>
-                </div>
+    .b-settings-item {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        padding: .6rem .5rem;
+        border-radius: 10px !important;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #E3E6EE;
+        font-weight: 600;
+        transition: border .15s, color .15s;
+        width: 100%;
+        text-align: left;
+        border: 2px solid transparent;
+    }
 
-            </div>
-        </div>
-    </div>
+    .b-settings-item:hover {
+        border: 2px solid #4C8BFF;
+        color: #FFFFFF;
+    }
 
-    <div class="tabs-settings-content" style="height: auto;">
-        <div class="center-page">
-            <div class="title-settings" style="font-size: 50px;" id="battly-settings"></div>
-            <div class="java-settings">
-                <div class="information">
-                    <span id="battly-settings-information"></span>
-                    <br>
-                    <br>
-                    <div style="text-align: start; display: flex;">
-                        <div style="width: 100%;">
-                            <span id="battly-settings-what-to-do"></span>
-                            <br>
-                            <input type="checkbox" class="checkbox-settings" id="launcher-close"><label
-                                for="launcher-close">
-                                <div class="checkround"></div>
-                            </label>
-                            <span id="minimalize-battly"></span>
-                            <br>
-                            <input type="checkbox" class="checkbox-settings" id="launcher-open"><label
-                                for="launcher-open">
-                                <div class="checkround"></div>
-                            </label>
-                            <span id="keep-battly-opened"></span>
-                        </div>
-                        <div style="width: 100%;">
-                            <span id="music_settings_information" style="font-size: 20px; font-weight: 700;"></span>
-                            <br>
-                            <input type="checkbox" class="checkbox-settings" id="music-close"><label for="music-close">
-                                <div class="checkround"></div>
-                            </label>
-                            <span id="minimize_music"></span>
-                            <br>
-                            <input type="checkbox" class="checkbox-settings" id="music-open"><label for="music-open">
-                                <div class="checkround"></div>
-                            </label>
-                            <span id="keep_music_opened"></span>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div style="text-align: start; display: flex;">
-                        <div id="launchboost-panel" style="width: 100%;">
-                            <span id="launchboost_settings_information"
-                                style="font-size: 20px; font-weight: 700;">Battly Launch Boost™</span>
-                            <br>
-                            <div style="display: flex; gap: 10px;">
-                                <span id="launchboost_settings_information_text"
-                                    style="font-size: 15px; font-weight: 700; width: 100%;"></span><br>
-                                <label class="container-optifine" style="width: 40%;" id="launchboost-label">
-                                    <input checked type="checkbox" id="launchboost">
-                                    <div class="checkmark"></div>
-                                    Activar
-                                </label>
-                            </div>
-                        </div>
-                        <div style="width: 100%;">
-                            <span id="language_settings_information"
-                                style="font-size: 20px; font-weight: 700;">Idioma</span>
-                            <br>
-                            <div style="display: flex; gap: 10px;">
-                                <div class="select" style="height: 40px; width: 150px; font-size: 15px;">
-                                    <select id="language-selector" style="height: 40px; width: 150px; font-size: 15px;">
-                                        <option value="es">Español</option>
-                                        <option value="en">English</option>
-                                        <option value="pt">Português</option>
-                                        <option value="fr">Français</option>
-                                        <option value="ar">العربية</option>
-                                        <option value="ru">Русский</option>
-                                        <option value="de">Deutsch</option>
-                                        <option value="it">Italiano</option>
-                                        <option value="ja">日本語</option>
-                                    </select>
-                                </div>
-                                <button class="button is-info" id="language-selector-btn"
-                                    style="height: 40px;"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <b id="battly-logs-text" style="font-size: 20px;"></b>
-                    <br>
-                    <button class="button is-info" id="obtener-socketid"><i class="fa-solid fa-chart-simple"></i><span
-                            id="obtener-socketid-text"></span></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <style>
-        /* Estilos para el input de tipo range */
-        input[type=range] {
-            padding: 0;
+    .b-settings-item+.b-settings-item {
+        margin-top: .15rem;
+    }
+
+    @media(max-width:480px) {
+        h1 {
+            font-size: 1.6rem;
         }
-    </style>
-    <div class="tabs-settings-content" style="height: auto;">
-        <div class="settings-content-scroll">
-            <div class="title-settings" id="battly-theme" style="font-size: 50px;"></div>
-            <div class="java-settings">
-                <div class="information">
-                    <span id="battly-theme-text">¡Bienvenido/a al nuevo panel de personalización de Battly! Aquí
-                        podrás personalizar Battly a tu gusto, cambiando el tema, las imágenes de fondo y mucho más.
-                        ¡Esperamos que te guste!</span>
-                    <br>
-                    <style>
-                        .actual-theme {
-                            background-color: #212121;
-                            padding: 40px;
-                            border-radius: 10px;
-                            margin-top: 20px;
-                            text-align: center;
-                            gap: 10px;
-                            display: flex;
-                            flex-direction: column;
-                        }
 
-                        .actual-theme-text {
-                            font-size: 30px;
-                            font-weight: 700;
-                            margin-bottom: 15px !important;
-                        }
+        nav.b-settings-footer {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 
-                        .select-theme-panel-1 {
-                            display: flex;
-                            gap: 10px
-                        }
+    #accounts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        display: contents;
+        justify-content: center;
+    }
+</style>
 
-                        .select-theme-panel-2 {
-                            width: 33%;
-                            display: flex;
-                            flex-direction: column;
-                        }
+<div style="width: 100%; height: 95%; display: flex; flex-direction: column; align-items: center;">
 
-                        .select-theme-panel-2 span {
-                            font-size: 20px;
-                            font-weight: 500;
-                            text-align: center;
-                        }
+    <h1 id="b-settings-title" data-string-id="settings.myAccounts">My Accounts</h1>
 
-                        .select-theme-panel-2 input {
-                            width: 100%;
-                            height: 50px;
-                            background-color: #212121;
-                            border: 0px;
-                            padding: 0px !important;
-                            overflow: hidden;
-                        }
+    <section id="b-settings-panel-cuentas" class="b-settings-panel">
+        <div class="b-settings-acc-list">
+            <a class="b-settings-acc-add" id="add-account-btn">
+                <span data-string-id="settings.addAccount">Add account</span>
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M12 5v14M5 12h14" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </a>
 
-                        .select-theme-panel-3 {
-                            display: flex;
-                            gap: 10px;
-                            margin-top: 20px;
-                        }
-
-                        .select-theme-panel-4 {
-                            width: 50%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            gap: 5px;
-                        }
-
-                        .select-theme-panel-4 span {
-                            font-size: 20px;
-                            font-weight: 500;
-                            text-align: center;
-                        }
-
-                        .select-theme-panel-4 input {
-                            width: 60%;
-                            height: 30px;
-                            border: 0px;
-                            padding: 0px !important;
-                            overflow: hidden;
-                            border-radius: 10px;
-                        }
-
-                        .select-theme-panel-4 input[type=range] {
-                            -webkit-appearance: none;
-                            background: #656565;
-                            overflow: hidden;
-                        }
-
-                        .select-theme-panel-4 input[type=range]::-webkit-slider-thumb {
-                            -webkit-appearance: none;
-                            appearance: none;
-                            width: 20px;
-                            height: 100%;
-                            background: #3498db;
-                            cursor: pointer;
-                        }
-
-                        .select-theme-panel-5 {
-                            display: flex;
-                            gap: 10px;
-                            justify-content: center;
-                        }
-                    </style>
-                    <div class="actual-theme">
-                        <span id="actual-theme-text" class="actual-theme-text">Tema actual</span>
-                        <div class="select-theme-panel-1">
-                            <div class="select-theme-panel-2">
-                                <span id="buttons-color">Color de los botones</span>
-                                <input type="color" id="theme-color" value="#ff0000">
-                            </div>
-                            <div class="select-theme-panel-2">
-                                <span id="bottom-bar-text">Color de la barra inferior</span>
-                                <input type="color" id="theme-color-bottom-bar" value="#ff0000">
-                            </div>
-                            <div class="select-theme-panel-2">
-                                <span id="background-loading-screen-color-text">Color de fondo de la pantalla de
-                                    carga</span>
-                                <input type="color" id="theme-color-loading-screen" value="#3498db">
-                            </div>
-                        </div>
-                        <div class="select-theme-panel-3">
-                            <div class="select-theme-panel-4">
-                                <span id="bottom-bar-opacity">Transparencia de la barra inferior</span>
-                                <input type="range" id="theme-opacity-bottom-bar" min="0.1" max="1" step="0.01"
-                                    value="1">
-                            </div>
-                            <div class="select-theme-panel-4">
-                                <span id="starting-music">Sonido de inicio</span>
-                                <div class="select-theme-panel-5">
-                                    <div class="select is-info is-normal"
-                                        style="background-color: rgb(62, 142, 208); height: 30px; width: 200px">
-                                        <select id="sonido-inicio" style=" height: 30px; width: 200px">
-                                            <option value="start">Retro</option>
-                                            <option value="start1">Fulgor</option>
-                                            <option value="start2">Neón</option>
-                                            <option value="start3">Centella</option>
-                                            <option value="start4">Adventure</option>
-                                            <option value="start5">Battle</option>
-                                            <option value="start6">Modern</option>
-                                        </select>
-                                    </div>
-                                    <button class="button is-info" id="reproducir-sonido-inicio"
-                                        style="background-color: rgb(62, 142, 208); height: 30px; width: 40px;"><i
-                                            class="fa-solid fa-play"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="accounts">
             </div>
         </div>
-    </div>
-    <div class="modal" id="modal-preview-background">
+    </section>
+
+    <section id="b-settings-panel-java" class="b-settings-panel">
+        <p data-string-id="settings.javaConfigDescription">In this section you can configure the Java version that will
+            be used to start your game.</p>
+
+        <h2 data-string-id="settings.javaPath">Java Path</h2>
+        <p style="color:#9DA2B0;margin-bottom:1.25rem;" data-string-id="settings.javaPathDescription">Battly uses an
+            integrated version of Java (official). You can specify a different one if you need it.</p>
+
+        <div class="b-settings-flex" style="align-items:center">
+            <input readonly id="ruta-java-input"
+                style="flex:1;background:#171B22;color:#E3E6EE;border:none;border-radius:.6rem;padding:.65rem;font-weight:600">
+            <input type="file" style="width: 0px; height: 0px; display: none;" id="java-path-input-file"
+                accept="application/octet-stream">
+            <button class="b-settings-btn" data-string-id-title="settings.chooseFile" title="Choose file"
+                id="open-explorer-java-path">
+                <i class="fa-solid fa-folder-open"></i>
+            </button>
+            <button class="b-settings-btn" data-string-id-title="settings.reset" title="Reset" id="java-path-reset">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </button>
+        </div>
+
+        <hr style="border:none;border-top:1px solid #1f2430;margin:1.25rem 0">
+
+        <h2 data-string-id="settings.javaVersions">Java Versions</h2>
+        <p style="color:#9DA2B0;margin-bottom:.75rem;" data-string-id="settings.javaVersionsDescription">Click on a
+            version to use it. If it appears in red, you can download it instantly.</p>
+
+        <div class="b-java-list" id="b-java-list"></div>
+
+        <div class="b-java-selected glass" id="b-java-selected" style="margin-top:1rem;display:none;">
+            <i class="fa-solid fa-circle-info"></i>
+            <span><span data-string-id="settings.using">Using:</span> <b id="b-java-selected-version"></b></span>
+            <button class="b-settings-btn outline" id="b-java-clear" style="margin-left:auto;">
+                <i class="fa-solid fa-xmark"></i> <span data-string-id="settings.remove">Remove</span>
+            </button>
+        </div>
+    </section>
+
+    <div class="modal" id="b-java-download-modal" aria-hidden="true">
         <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title" id="resize-image-text"></p>
+        <div class="modal-card glass" style="max-width:560px;">
+            <header class="modal-card-head" style="background:transparent;">
+                <p class="modal-card-title"><i class="fa-solid fa-download" style="margin-right:.5rem;"></i><span
+                        data-string-id="settings.downloadJava">Download Java</span>
+                </p>
+                <button class="delete" aria-label="close" id="b-java-modal-close"></button>
             </header>
-            <section class="modal-card-body">
-
-                <div class="box-2">
-                    <div class="result"></div>
+            <section class="modal-card-body" style="background:#0f1623;">
+                <p id="b-java-modal-text" style="margin-bottom:1rem;" data-string-id="settings.versionNotDownloaded">
+                    The version <b id="b-java-modal-version">Java 17</b> is not downloaded. Do you want to download it
+                    now?
+                </p>
+                <div id="b-java-progress-wrap" style="display:none;">
+                    <progress class="progress is-info" id="b-java-progress" max="100" value="0"></progress>
+                    <p id="b-java-progress-text" style="color:#9DA2B0;margin-top:.25rem;"
+                        data-string-id="settings.preparingDownload">Preparing download…</p>
                 </div>
-                <!--rightbox-->
-                <div class="box-2 img-result hide">
-                    <!-- result of crop -->
-                    <img class="cropped" src="" alt="">
-                </div>
+                <article class="message is-warning" id="b-java-warning" style="display:none;margin-top:.75rem;">
+                    <div class="message-body" style="background:#171B22;color:#fff;border:none;"
+                        data-string-id="settings.keepWindowOpen">
+                        Keep the window open while Java is being downloaded and extracted.
+                    </div>
+                </article>
             </section>
-            <footer class="modal-card-foot">
-                <button class="button is-success" id="establecer-fondo"></button>
-                <button class="button is-info" id="cerrar-preview-btn"></button>
+            <footer class="modal-card-foot" style="background:transparent;">
+                <button class="button is-info is-outlined" id="b-java-modal-download">
+                    <i class="fa-solid fa-cloud-arrow-down" style="margin-right:.35rem;"></i> <span
+                        data-string-id="settings.download">Download</span>
+                </button>
+                <button class="button" id="b-java-modal-cancel" data-string-id="settings.cancel">Cancel</button>
             </footer>
         </div>
     </div>
-    <div class="tabs-settings-content" style="height: auto;">
-        <div class="settings-content-scroll">
-            <div class="title-settings" id="customize-background" style="font-size: 50px;"></div>
-            <div class="java-settings">
-                <div class="information">
-                    <br>
-                    <b style="font-size: 30px;" id="resize-background"></b>
-                    <br>
-                    <input type="file" id="background-input-file" accept="video/mp4" style="display: none;">
-                    <div id="animated-background-div">
-                        <br>
-                        <span id="you_are_premium_background"></span>
-                        <div class="select">
-                            <select id="resize-background-select">
-                                <option value="dd" id="select_a_type_background" selected></option>
-                                <option value="static-background" id="static-background-text"></option>
-                                <option value="animated-background" id="animated-background-text"></option>
-                            </select>
+
+    <div class="modal" id="b-profile-customization-modal" aria-hidden="true">
+        <div class="modal-background"></div>
+        <div class="modal-card glass" style="max-width:1400px; width: 95%; max-height: 90vh; overflow: hidden;">
+            <header class="modal-card-head"
+                style="background: linear-gradient(135deg, rgba(15, 22, 35, 0.95) 0%, rgba(20, 27, 41, 0.9) 100%); border-bottom: 1px solid rgba(62, 142, 208, 0.2);">
+                <p class="modal-card-title" style="color: #fff; font-weight: 700; font-size: 1.4rem;">
+                    <i class="fa-solid fa-palette" style="margin-right: 0.75rem; color: #3e8ed0;"></i>
+                    <span data-string-id="settings.profileCustomization">Profile Customization</span>
+                </p>
+                <button class="delete" aria-label="close" id="b-profile-modal-close"
+                    style="color: rgba(255,255,255,0.8);"></button>
+            </header>
+            <style>
+                .custom-modal-layout {
+                    display: grid;
+                    grid-template-columns: 280px 1fr 400px;
+                    gap: 30px;
+                    height: 85%;
+                    padding: 30px;
+                    overflow: hidden;
+                }
+
+                .custom-tabs {
+                    display: flex;
+                    background: linear-gradient(145deg, rgba(30, 38, 55, 0.95) 0%, rgba(25, 32, 45, 0.9) 100%);
+                    border-radius: 16px;
+                    padding: 6px;
+                    margin-bottom: 25px;
+                    backdrop-filter: blur(20px);
+                    border: 1px solid rgba(62, 142, 208, 0.2);
+                    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                }
+
+                .custom-tab {
+                    flex: 1;
+                    padding: 14px 20px;
+                    border: none;
+                    background: transparent;
+                    color: rgba(255, 255, 255, 0.7);
+                    font-weight: 600;
+                    font-size: 14px;
+                    border-radius: 12px;
+                    cursor: pointer;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .custom-tab::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(62, 142, 208, 0.1), transparent);
+                    transition: left 0.5s;
+                }
+
+                .custom-tab:hover::before {
+                    left: 100%;
+                }
+
+                .custom-tab:hover {
+                    color: #fff;
+                    background: rgba(62, 142, 208, 0.1);
+                    transform: translateY(-2px);
+                }
+
+                .custom-tab.active {
+                    background: linear-gradient(135deg, #3e8ed0 0%, #ff7fac 100%);
+                    color: #fff;
+                    box-shadow: 0 4px 20px rgba(62, 142, 208, 0.4);
+                    transform: translateY(-2px);
+                }
+
+                .custom-tab.active::before {
+                    display: none;
+                }
+
+                .custom-sidebar {
+                    background: linear-gradient(145deg, rgba(30, 38, 55, 0.95) 0%, rgba(25, 32, 45, 0.9) 100%);
+                    backdrop-filter: blur(20px);
+                    border-radius: 20px;
+                    padding: 20px;
+                    border: 1px solid rgba(62, 142, 208, 0.2);
+                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                    height: fit-content;
+                    position: sticky;
+                    top: 30px;
+                    height: 350px;
+                }
+
+                .sidebar-title {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    text-align: center;
+                }
+
+                .sidebar-title i {
+                    color: #ffd700;
+                    filter: drop-shadow(0 2px 4px rgba(255, 215, 0, 0.3));
+                }
+
+                .preset-grid {
+                    display: flex;
+                    gap: 5px;
+                    flex-direction: column;
+                }
+
+                .preset-card {
+                    background: linear-gradient(145deg, rgba(20, 27, 41, 0.8) 0%, rgba(25, 32, 45, 0.6) 100%);
+                    border: 2px solid rgba(62, 142, 208, 0.2);
+                    border-radius: 12px;
+                    padding: 10px;
+                    cursor: pointer;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .preset-card::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(62, 142, 208, 0.1), transparent);
+                    transition: left 0.5s;
+                }
+
+                .preset-card:hover::before {
+                    left: 100%;
+                }
+
+                .preset-card:hover {
+                    border-color: #3e8ed0;
+                    transform: translateY(-3px);
+                    box-shadow: 0 8px 25px rgba(62, 142, 208, 0.3);
+                }
+
+                .preset-card:active {
+                    transform: translateY(-1px);
+                }
+
+                .preset-name {
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #fff;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+
+                .preset-preview {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .preset-avatar {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #fff;
+                    border: 2px solid #7289da;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+                }
+
+                .custom-controls-center {
+                    background: linear-gradient(145deg, rgba(30, 38, 55, 0.95) 0%, rgba(25, 32, 45, 0.9) 100%);
+                    backdrop-filter: blur(20px);
+                    border-radius: 20px;
+                    padding: 15px;
+                    border: 1px solid rgba(62, 142, 208, 0.2);
+                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                    overflow-y: auto;
+                    height: 350px;
+                    position: relative;
+                }
+
+                .custom-controls-center::-webkit-scrollbar {
+                    width: 8px;
+                }
+
+                .custom-controls-center::-webkit-scrollbar-track {
+                    background: rgba(15, 20, 30, 0.3);
+                    border-radius: 4px;
+                }
+
+                .custom-controls-center::-webkit-scrollbar-thumb {
+                    background: linear-gradient(180deg, #3e8ed0 0%, #ff7fac 100%);
+                    border-radius: 4px;
+                    border: 1px solid rgba(15, 20, 30, 0.3);
+                }
+
+                .controls-section {
+                    display: none;
+                    animation: fadeInSection 0.4s ease-out;
+                }
+
+                .controls-section.active {
+                    display: block;
+                }
+
+                @keyframes fadeInSection {
+                    from {
+                        opacity: 0;
+                        transform: translateX(20px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+
+                .section-title {
+                    font-size: 20px;
+                    font-weight: 700;
+                    background: linear-gradient(135deg, #3e8ed0 0%, #ff7fac 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .control-group {
+                    margin-bottom: 15px;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid rgba(62, 142, 208, 0.1);
+                    position: relative;
+                    border-radius: 0px !important;
+                }
+
+                .control-group:last-child {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+
+                .control-label {
+                    display: block;
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.9);
+                    margin-bottom: 10px;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+
+                .control-label i {
+                    color: #3e8ed0;
+                    font-size: 16px;
+                }
+
+                .color-control {
+                    display: flex;
+                    gap: 15px;
+                    align-items: center;
+                }
+
+                .color-picker-large {
+                    width: 60px;
+                    height: 50px;
+                    border: 3px solid rgba(62, 142, 208, 0.3);
+                    border-radius: 12px;
+                    cursor: pointer;
+                    background: linear-gradient(145deg, rgba(15, 22, 35, 0.8) 0%, rgba(20, 27, 41, 0.6) 100%);
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                    -webkit-appearance: none;
+                    appearance: none;
+                }
+
+                .color-picker-large::-webkit-color-swatch-wrapper {
+                    padding: 3px;
+                    border-radius: 8px;
+                }
+
+                .color-picker-large::-webkit-color-swatch {
+                    border: none;
+                    border-radius: 6px;
+                }
+
+                .color-picker-large:hover {
+                    border-color: #3e8ed0;
+                    transform: scale(1.05);
+                    box-shadow: 0 6px 20px rgba(62, 142, 208, 0.3);
+                }
+
+                .color-hex-input {
+                    flex: 1;
+                    background: linear-gradient(145deg, rgba(15, 22, 35, 0.8) 0%, rgba(20, 27, 41, 0.6) 100%);
+                    border: 2px solid rgba(62, 142, 208, 0.25);
+                    color: #fff;
+                    padding: 14px 18px;
+                    border-radius: 12px;
+                    font-size: 15px;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    font-weight: 500;
+                    font-family: 'Poppins', sans-serif;
+                    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+
+                .color-hex-input:focus {
+                    outline: none;
+                    border-color: #3e8ed0;
+                    background: linear-gradient(145deg, rgba(20, 27, 41, 0.9) 0%, rgba(25, 32, 45, 0.8) 100%);
+                    box-shadow: 0 0 0 4px rgba(62, 142, 208, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-2px);
+                }
+
+                .select-control {
+                    width: 100%;
+                    background: linear-gradient(145deg, rgba(15, 22, 35, 0.8) 0%, rgba(20, 27, 41, 0.6) 100%);
+                    border: 2px solid rgba(62, 142, 208, 0.25);
+                    color: #fff;
+                    padding: 14px 18px;
+                    border-radius: 12px;
+                    font-size: 15px;
+                    cursor: pointer;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    font-weight: 500;
+                    font-family: 'Poppins', sans-serif;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233e8ed0"><path d="M7 10l5 5 5-5z"/></svg>');
+                    background-repeat: no-repeat;
+                    background-position: right 15px center;
+                    background-size: 22px;
+                    padding-right: 50px;
+                    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+
+                .select-control:focus {
+                    outline: none;
+                    border-color: #3e8ed0;
+                    background: linear-gradient(145deg, rgba(20, 27, 41, 0.9) 0%, rgba(25, 32, 45, 0.8) 100%);
+                    box-shadow: 0 0 0 4px rgba(62, 142, 208, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-2px);
+                }
+
+                .select-control option {
+                    background: #141e30;
+                    color: #fff;
+                    padding: 12px;
+                }
+
+                .slider-control {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                .slider-track {
+                    flex: 1;
+                    height: 8px;
+                    background: linear-gradient(90deg, rgba(62, 142, 208, 0.2) 0%, rgba(62, 142, 208, 0.4) 100%);
+                    border-radius: 4px;
+                    position: relative;
+                    cursor: pointer;
+                    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+                }
+
+                .slider-fill {
+                    height: 100%;
+                    background: linear-gradient(90deg, #3e8ed0 0%, #ff7fac 100%);
+                    border-radius: 4px;
+                    width: 30%;
+                    transition: width 0.3s ease;
+                    box-shadow: 0 0 10px rgba(62, 142, 208, 0.5);
+                }
+
+                .slider-thumb {
+                    position: absolute;
+                    top: 50%;
+                    left: 30%;
+                    width: 24px;
+                    height: 24px;
+                    background: linear-gradient(135deg, #3e8ed0 0%, #ff7fac 100%);
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                    cursor: pointer;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    box-shadow: 0 4px 12px rgba(62, 142, 208, 0.5);
+                    border: 3px solid rgba(255, 255, 255, 0.3);
+                }
+
+                .slider-thumb:hover {
+                    background: linear-gradient(135deg, #5dade2 0%, #ff7fac 100%);
+                    transform: translate(-50%, -50%) scale(1.2);
+                    box-shadow: 0 6px 20px rgba(62, 142, 208, 0.7);
+                }
+
+                .slider-value {
+                    min-width: 50px;
+                    text-align: center;
+                    font-weight: 700;
+                    color: #3e8ed0;
+                    font-size: 16px;
+                    background: linear-gradient(135deg, rgba(62, 142, 208, 0.2) 0%, rgba(62, 142, 208, 0.1) 100%);
+                    padding: 8px 16px;
+                    border-radius: 10px;
+                    border: 2px solid rgba(62, 142, 208, 0.3);
+                    box-shadow: 0 2px 8px rgba(62, 142, 208, 0.2);
+                }
+
+                .file-upload-area {
+                    border: 2px dashed rgba(62, 142, 208, 0.4);
+                    border-radius: 15px;
+                    padding: 30px 20px;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    background: linear-gradient(145deg, rgba(62, 142, 208, 0.05) 0%, rgba(62, 142, 208, 0.02) 100%);
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .file-upload-area::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(62, 142, 208, 0.05), transparent);
+                    transition: left 0.5s;
+                }
+
+                .file-upload-area:hover::before {
+                    left: 100%;
+                }
+
+                .file-upload-area:hover {
+                    border-color: #3e8ed0;
+                    background: linear-gradient(145deg, rgba(62, 142, 208, 0.08) 0%, rgba(62, 142, 208, 0.04) 100%);
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 25px rgba(62, 142, 208, 0.2);
+                }
+
+                .upload-icon {
+                    font-size: 32px;
+                    color: #3e8ed0;
+                    margin-bottom: 15px;
+                    filter: drop-shadow(0 2px 4px rgba(62, 142, 208, 0.3));
+                }
+
+                .upload-text {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: 5px;
+                }
+
+                .upload-subtext {
+                    font-size: 12px;
+                    color: rgba(255, 255, 255, 0.6);
+                }
+
+                .custom-preview-panel {
+                    background: linear-gradient(145deg, rgba(30, 38, 55, 0.95) 0%, rgba(25, 32, 45, 0.9) 100%);
+                    backdrop-filter: blur(20px);
+                    border-radius: 20px;
+                    padding: 15px;
+                    border: 1px solid rgba(62, 142, 208, 0.2);
+                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                    height: fit-content;
+                    position: sticky;
+                    top: 30px;
+                }
+
+                .preview-header {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: 25px;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .preview-header i {
+                    color: #3e8ed0;
+                    filter: drop-shadow(0 2px 4px rgba(62, 142, 208, 0.3));
+                }
+
+                .preview-card-large {
+                    position: relative;
+                    background: linear-gradient(145deg, #2c2f33 0%, #23272a 100%);
+                    border-radius: 20px;
+                    overflow: hidden;
+                    height: 280px;
+                    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+                    border: 2px solid rgba(62, 142, 208, 0.2);
+                    transition: all 0.3s ease;
+                }
+
+                .preview-card-large:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+                    border-color: rgba(62, 142, 208, 0.4);
+                }
+
+                .preview-card-background {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 120px;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    z-index: 0;
+                    background-size: cover;
+                    background-position: center;
+                    transition: all 0.3s ease;
+                }
+
+                .preview-card-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+                }
+
+                .preview-card-content {
+                    position: relative;
+                    z-index: 1;
+                    padding: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+
+                .preview-avatar-wrapper {
+                    position: relative;
+                    width: 80px;
+                    height: 80px;
+                    margin: 50px auto 20px;
+                }
+
+                .preview-avatar {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: #fff;
+                    border: 3px solid #7289da;
+                    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+                    transition: all 0.3s ease;
+                    image-rendering: pixelated;
+                }
+
+                .preview-status-indicator {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 8px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: #43b581;
+                    border: 3px solid #2c2f33;
+                    box-shadow: 0 0 15px rgba(67, 181, 129, 0.6);
+                    animation: statusPulse 2s ease-in-out infinite;
+                }
+
+                @keyframes statusPulse {
+
+                    0%,
+                    100% {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+
+                    50% {
+                        transform: scale(1.1);
+                        opacity: 0.8;
+                    }
+                }
+
+                .preview-info {
+                    text-align: center;
+                    flex: 1;
+                }
+
+                .preview-username {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #ffffff;
+                    margin-bottom: 8px;
+                    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+                    letter-spacing: 0.5px;
+                }
+
+                .preview-status {
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.8);
+                    font-weight: 500;
+                    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                }
+
+                .custom-actions {
+                    display: flex;
+                    gap: 20px;
+                    padding-top: 10px;
+                    border-top: 2px solid rgba(62, 142, 208, 0.2);
+                    justify-content: center;
+                }
+
+                .custom-action-btn {
+                    padding: 16px 32px;
+                    border-radius: 14px;
+                    border: none;
+                    font-weight: 700;
+                    font-size: 15px;
+                    cursor: pointer;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 12px;
+                    letter-spacing: 0.5px;
+                    text-transform: uppercase;
+                    font-family: 'Poppins', sans-serif;
+                    position: relative;
+                    overflow: hidden;
+                    min-width: 180px;
+                }
+
+                .custom-action-btn::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                    transition: left 0.5s;
+                }
+
+                .custom-action-btn:hover::before {
+                    left: 100%;
+                }
+
+                .custom-action-btn-primary {
+                    background: linear-gradient(135deg, #3e8ed0 0%, #ff7fac 100%);
+                    color: #fff;
+                    box-shadow: 0 6px 20px rgba(62, 142, 208, 0.4);
+                }
+
+                .action-btn-primary:hover {
+                    background: linear-gradient(135deg, #5dade2 0%, #ff7fac 100%);
+                    transform: translateY(-3px);
+                    box-shadow: 0 10px 30px rgba(62, 142, 208, 0.6);
+                }
+
+                .action-btn-primary:active {
+                    transform: translateY(-1px);
+                }
+
+                .action-btn-secondary {
+                    background: linear-gradient(145deg, rgba(62, 142, 208, 0.1) 0%, rgba(62, 142, 208, 0.05) 100%);
+                    color: #3e8ed0;
+                    border: 2px solid rgba(62, 142, 208, 0.4);
+                }
+
+                .action-btn-secondary:hover {
+                    background: linear-gradient(145deg, rgba(62, 142, 208, 0.15) 0%, rgba(62, 142, 208, 0.1) 100%);
+                    border-color: #3e8ed0;
+                    transform: translateY(-3px);
+                    box-shadow: 0 6px 20px rgba(62, 142, 208, 0.3);
+                }
+
+                .action-btn-secondary:active {
+                    transform: translateY(-1px);
+                }
+
+                .premium-badge {
+                    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+                    color: #1a1d29;
+                    padding: 4px 10px;
+                    border-radius: 12px;
+                    font-size: 10px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    display: inline-block;
+                    margin-left: 8px;
+                    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+                    border: 1px solid rgba(255, 215, 0, 0.3);
+                    animation: premiumGlow 2s ease-in-out infinite alternate;
+                }
+
+                @keyframes premiumGlow {
+                    from {
+                        box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+                    }
+
+                    to {
+                        box-shadow: 0 2px 8px rgba(255, 215, 0, 0.6);
+                    }
+                }
+
+                .premium-notice {
+                    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+                    border: 2px solid rgba(255, 215, 0, 0.3);
+                    color: #ffd700;
+                    padding: 15px 20px;
+                    border-radius: 12px;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    margin-top: 12px;
+                    font-weight: 500;
+                    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
+                }
+
+                .current-image-display {
+                    margin-top: 15px;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    max-height: 150px;
+                    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+                    border: 2px solid rgba(62, 142, 208, 0.2);
+                    transition: all 0.3s ease;
+                }
+
+                .current-image-display:hover {
+                    transform: scale(1.02);
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+                }
+
+                .current-image-display img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    transition: all 0.3s ease;
+                }
+
+                .remove-image-btn {
+                    background: linear-gradient(135deg, rgba(231, 76, 60, 0.8) 0%, rgba(192, 57, 43, 0.9) 100%);
+                    border: 2px solid rgba(231, 76, 60, 0.6);
+                    color: #fff;
+                    padding: 10px 16px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    font-weight: 600;
+                    font-size: 13px;
+                    margin-top: 10px;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+                }
+
+                .remove-image-btn:hover {
+                    background: linear-gradient(135deg, rgba(241, 96, 80, 0.9) 0%, rgba(212, 77, 63, 1) 100%);
+                    color: #fff;
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+                    border-color: rgba(231, 76, 60, 0.8);
+                }
+
+                @media (max-width: 1400px) {
+                    .custom-modal-layout {
+                        grid-template-columns: 225px 1fr 375px;
+                        gap: 20px;
+                        padding: 15px;
+                    }
+                }
+
+                @media (max-width: 1200px) {
+                    .custom-modal-layout {
+                        grid-template-columns: 1fr;
+                        gap: 20px;
+                    }
+
+                    .custom-sidebar {
+                        position: relative;
+                        top: 0;
+                    }
+
+                    .custom-preview-panel {
+                        position: relative;
+                        top: 0;
+                    }
+
+                    .custom-tabs {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .custom-modal-layout {
+                        padding: 15px;
+                        gap: 15px;
+                    }
+
+                    .custom-controls-center,
+                    .custom-sidebar,
+                    .custom-preview-panel {
+                        padding: 20px;
+                    }
+
+                    .custom-actions {
+                        flex-direction: column;
+                        gap: 12px;
+                    }
+
+                    .custom-action-btn {
+                        min-width: auto;
+                    }
+
+                    .color-control {
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+
+                    .slider-control {
+                        flex-direction: column;
+                        gap: 15px;
+                    }
+                }
+            </style>
+            <section class="modal-card-body"
+                style="background: linear-gradient(135deg, rgba(15, 22, 35, 0.98) 0%, rgba(20, 27, 41, 0.95) 100%); padding: 0; overflow: hidden; height: calc(90vh - 80px);">
+
+                <div class="custom-modal-layout">
+
+                    <div style="grid-column: 1 / -1; margin-bottom: -50px;">
+                        <div class="custom-tabs">
+                            <button class="custom-tab active" id="custom-tab-border" data-section="border">
+                                <i class="fa-solid fa-border-all"></i>
+                                <span data-string-id="settings.border">Border</span>
+                            </button>
+                            <button class="custom-tab" id="custom-tab-name" data-section="name">
+                                <i class="fa-solid fa-font"></i>
+                                <span data-string-id="settings.name">Name</span>
+                            </button>
+                            <button class="custom-tab" id="custom-tab-background" data-section="background">
+                                <i class="fa-solid fa-image"></i>
+                                <span data-string-id="settings.backgroundTab">Background</span>
+                            </button>
                         </div>
-                        <br>
-                        <br>
                     </div>
-                    <div id="not-animated-background-div">
-                        <br>
-                        <span id="background-image-text"></span>
-                        <div class="file is-info is-boxed" style="justify-content: center;">
-                            <label class="file-label">
-                                <input class="file-input" type="file" name="resume" id="background-input"
-                                    accept="image/*">
-                                <span class="file-cta" style="border-radius: 10px;">
-                                    <span class="file-icon">
-                                        <i class="fas fa-cloud-upload-alt"></i>
-                                    </span>
-                                    <span class="file-label" id="select-a-background">
 
-                                    </span>
-                                </span>
-                            </label>
+                    <div class="custom-sidebar">
+                        <div class="sidebar-title">
+                            <i class="fa-solid fa-star"></i>
+                            <span data-string-id="settings.quickPresets">Quick Presets</span>
                         </div>
-                        <br>
-                        <br>
+                        <div class="preset-grid">
+                            <div class="preset-card" data-preset="default">
+                                <div class="preset-name" data-string-id="settings.default">Default</div>
+                            </div>
+                            <div class="preset-card" data-preset="classic">
+                                <div class="preset-name" data-string-id="settings.classic">Classic</div>
+                            </div>
+                            <div class="preset-card" data-preset="gaming">
+                                <div class="preset-name" data-string-id="settings.gaming">Gaming</div>
+                            </div>
+                            <div class="preset-card" data-preset="minimal">
+                                <div class="preset-name" data-string-id="settings.minimal">Minimal</div>
+                            </div>
+                            <div class="preset-card" data-preset="colorful">
+                                <div class="preset-name" data-string-id="settings.colorful">Colorful</div>
+                            </div>
+                            <div class="preset-card" data-preset="dark">
+                                <div class="preset-name" data-string-id="settings.dark">Dark</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <button class="button is-info" id="restablecer-fondo"></button>
-                    <!--
-                    <input type="checkbox" class="checkbox-settings" id="launcher-close"><label for="launcher-close"><div class="checkround"></div></label>  Imagen 1</br>
-                    <input type="checkbox" class="checkbox-settings" id="launcher-close-all"><label for="launcher-close-all"><div class="checkround"></div></label> Imagen 2</br>
-                    <input type="checkbox" class="checkbox-settings" id="launcher-open"><label for="launcher-open"><div class="checkround"></div></label> Imagen 3</br>
-                    <input type="checkbox" class="checkbox-settings" id="launcher-open"><label for="launcher-open"><div class="checkround"></div></label> Imagen 4</br>
-                    <input type="checkbox" class="checkbox-settings" id="launcher-open"><label for="launcher-open"><div class="checkround"></div></label> Imagen 5</br>
-                    -->
+                    <div class="custom-controls-center">
 
+                        <div class="controls-section active" id="border-controls-section">
+                            <div class="section-title">
+                                <i class="fa-solid fa-border-all"></i>
+                                <span data-string-id="settings.customizeBorder">Customize Border</span>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="control-label">
+                                    <i class="fa-solid fa-palette"></i>
+                                    <span data-string-id="settings.borderColor">Border Color</span>
+                                </div>
+                                <div class="color-control">
+                                    <input type="color" class="color-picker-large" id="border-color-picker"
+                                        value="#3e8ed0">
+                                    <input type="text" class="color-hex-input" id="border-color-text" value="#3e8ed0"
+                                        placeholder="#3e8ed0">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="control-label">
+                                    <i class="fa-solid fa-shapes"></i>
+                                    <span data-string-id="settings.borderStyle">Border Style</span>
+                                </div>
+                                <select class="select-control" id="border-style-select">
+                                    <option value="solid" data-string-id="settings.solid">Solid</option>
+                                    <option value="dashed" data-string-id="settings.dashed">Dashed</option>
+                                    <option value="dotted" data-string-id="settings.dotted">Dotted</option>
+                                    <option value="double" data-string-id="settings.double">Double</option>
+                                    <option value="groove" data-string-id="settings.groove">Groove</option>
+                                    <option value="ridge" data-string-id="settings.ridge">Ridge</option>
+                                </select>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="control-label">
+                                    <i class="fa-solid fa-ruler"></i>
+                                    <span data-string-id="settings.borderWidth">Border Width</span>
+                                </div>
+                                <div class="slider-control">
+                                    <div class="slider-track" id="border-width-track">
+                                        <div class="slider-fill" id="border-width-fill"></div>
+                                        <div class="slider-thumb" id="border-width-thumb"></div>
+                                    </div>
+                                    <div class="slider-value" id="border-width-value">3</div>
+                                    <input type="range" id="border-width-slider" min="1" max="10" value="3"
+                                        style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="controls-section" id="name-controls-section">
+                            <div class="section-title">
+                                <i class="fa-solid fa-font"></i>
+                                <span data-string-id="settings.customizeName">Customize Name</span>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="control-label">
+                                    <i class="fa-solid fa-palette"></i>
+                                    <span data-string-id="settings.textColor">Text Color</span>
+                                </div>
+                                <div class="color-control">
+                                    <input type="color" class="color-picker-large" id="name-color-picker"
+                                        value="#ffffff">
+                                    <input type="text" class="color-hex-input" id="name-color-text" value="#ffffff"
+                                        placeholder="#ffffff">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="controls-section" id="background-controls-section">
+                            <div class="section-title">
+                                <i class="fa-solid fa-image"></i>
+                                <span data-string-id="settings.customizeBackground">Customize Background</span>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="control-label">
+                                    <i class="fa-solid fa-palette"></i>
+                                    <span data-string-id="settings.backgroundColor">Background Color</span>
+                                </div>
+                                <div class="color-control">
+                                    <input type="color" class="color-picker-large" id="bg-color-picker" value="#2c2f33">
+                                    <input type="text" class="color-hex-input" id="bg-color-text" value="#2c2f33"
+                                        placeholder="#2c2f33">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="control-label">
+                                    <i class="fa-solid fa-upload"></i>
+                                    <span data-string-id="settings.backgroundImage">Background Image</span>
+                                    <span class="premium-badge" id="premium-badge-bg">BATTLY+</span>
+                                </div>
+                                <div class="file-upload-area" id="bg-image-label">
+                                    <i class="fa-solid fa-upload upload-icon"></i>
+                                    <div class="upload-text" data-string-id="settings.uploadImage">Upload image</div>
+                                    <div class="upload-subtext" data-string-id="settings.maxSize">Max. 5MB • PNG, JPG,
+                                        GIF</div>
+                                    <input type="file" id="bg-image-input" accept="image/*" style="display: none;">
+                                </div>
+                                <div class="premium-notice" id="premium-notice-bg" style="display: none;">
+                                    <i class="fa-solid fa-crown"></i>
+                                    <span data-string-id="settings.backgroundImagesOnlyBattlyPlus">Background images are
+                                        only available for Battly+ users</span>
+                                </div>
+                                <div class="current-image-display" id="current-bg-preview" style="display: none;">
+                                    <img id="current-bg-img" src="" data-string-id-alt="settings.currentBackground"
+                                        alt="Current background">
+                                    <button class="remove-image-btn" id="remove-bg-btn">
+                                        <i class="fa-solid fa-trash"></i>
+                                        <span data-string-id="settings.delete">Delete</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="custom-preview-panel">
+                        <div class="preview-header">
+                            <i class="fa-solid fa-eye"></i>
+                            <span data-string-id="settings.preview">Preview</span>
+                        </div>
+                        <div class="friend-card" id="preview-card" style="animation-delay: 0s;">
+                            <div class="friend-card-header">
+                                <div class="friend-avatar-container">
+                                    <div class="friend-avatar mc-face-viewer-8x" id="preview-avatar">
+                                    </div>
+                                    <div class="friend-status-indicator offline" id="preview-status-dot"></div>
+                                </div>
+                                <div class="friend-info">
+                                    <h3 class="friend-name">
+                                        <span class="friend-name-text" id="preview-username"
+                                            style="color: #ffffff"></span>
+                                    </h3>
+                                    <p class="friend-status-text" id="preview-status">
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="friend-card-actions">
+                                <button class="friend-action-btn" data-action="profile"
+                                    data-string-id-title="settings.seeProfile" title="See profile">
+                                    <i class="fa-solid fa-user"></i>
+                                    <span data-string-id="settings.profile">Profile</span>
+                                </button>
+                                <button class="friend-action-btn" data-action="chat" title="Chat">
+                                    <i class="fa-solid fa-message"></i>
+                                    <span>Chat</span>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-actions">
+                    <button class="custom-action-btn action-btn-secondary" id="reset-customization-btn">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <span data-string-id="settings.restore">Restore</span>
+                    </button>
+                    <button class="custom-action-btn action-btn-primary" id="save-customization-btn"
+                        data-string-id="settings.saveChanges"><i class="fa-solid fa-save"></i>
+                        <span data-string-id="settings.saveChanges">Save Changes</span>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <section id="b-settings-panel-ram" class="b-settings-panel">
+        <li><strong style="color: #fff;" data-string-id="settings.ramMax">Maximum RAM:</strong> <span
+                data-string-id="settings.ramMaxTip">do not exceed 50% of total RAM</span>.</li>
+        <li><strong style="color: #fff;" data-string-id="settings.ramMin">Minimum RAM:</strong> <span
+                data-string-id="settings.ramMinTip">recommended value 1 GB, maximum 3 GB</span>.</li>
+        </ul>
+        <br>
+        <div class="ram-info">
+            <div class="memory-slider" min="0.5" max="8" step="0.5">
+                <div class="slider-touch-left">
+                    <span value="0 GB"></span>
+                </div>
+                <div class="slider-touch-right">
+                    <span value="0 GB"></span>
+                </div>
+                <div class="slider-line">
+                    <span></span>
                 </div>
             </div>
         </div>
+
+        <br>
+        <p style="color:#9DA2B0"><span data-string-id="settings.youHaveTotalRam">You have a total of</span> <span
+                id="total-ram">0 GB</span> <span data-string-id="settings.ofRam">of RAM</span> – <span id="free-ram">0
+                GB</span> <span data-string-id="settings.ofRamAvailable">available</span></p>
+
+        <div class="b-auto-ram">
+            <label class="container-optifine" style="width:100%; align-items:center; gap:10px;">
+                <input type="checkbox" id="b-auto-ram-toggle">
+                <div class="checkmark"></div>
+                <span style="font-weight:700" data-string-id="settings.useRecommendedRam">Use Battly recommended
+                    RAM</span>
+            </label>
+
+            <div class="b-auto-ram-status" id="b-auto-ram-status" aria-live="polite">
+                <span data-string-id="settings.status">Status:</span> <b
+                    data-string-id="settings.deactivated">Deactivated</b>
+            </div>
+            <p id="b-auto-ram-reco" style="display:none;"></p>
+            <small class="b-auto-ram-note" data-string-id="settings.adjustsEvery5Min">
+                Adjusts every 5 minutes based on free RAM (max 70% of total). When this option is enabled, manual
+                customization is blocked.
+            </small>
+        </div>
+    </section>
+
+    <section id="b-settings-panel-launcher" class="b-settings-panel">
+        <p data-string-id="settings.configureBattlySettings">Configure Battly general settings.</p>
+
+        <fieldset class="b-settings-flex">
+            <legend>
+                <h2 data-string-id="settings.whatToDoWhenOpeningMinecraft">What to do when opening Minecraft</h2>
+            </legend>
+            <label class="b-settings-radio"><input type="radio" name="hide" id="launcher-close" checked><span
+                    data-string-id="settings.hideBattlyAfterStarting">Hide
+                    Battly after
+                    starting</span></label>
+            <label class="b-settings-radio"><input type="radio" name="hide" id="launcher-open"><span
+                    data-string-id="settings.keepBattlyOpen">Keep Battly
+                    open</span></label>
+        </fieldset>
+
+        <fieldset class="b-settings-flex">
+            <legend>
+                <h2 data-string-id="settings.music">Music</h2>
+            </legend>
+            <label class="b-settings-radio"><input type="radio" name="music" id="music-close" checked><span
+                    data-string-id="settings.hideMusicPanel">Hide
+                    music
+                    panel</span></label>
+            <label class="b-settings-radio"><input type="radio" name="music" id="music-open"><span
+                    data-string-id="settings.showMusicPanel">Show music
+                    panel</span></label>
+        </fieldset>
+
+        <fieldset class="b-settings-flex">
+            <legend>
+                <h2 data-string-id="settings.autoSync">Automatic Synchronization</h2>
+            </legend>
+            <label class="b-settings-radio">
+                <input type="checkbox" id="auto-sync-enabled">
+                <span data-string-id="settings.syncWorldsAutomatically">Sync worlds automatically when closing the
+                    game</span>
+            </label>
+            <p style="color: #aaa; font-size: 12px; margin-top: -1rem; margin-left: 1.7rem;"
+                data-string-id="settings.autoSyncDescription">
+                When enabled, your worlds will automatically back up to Google Drive each time you close
+                Minecraft.
+                Battly will stay in the background until the copy is complete and will notify you when finished.
+            </p>
+        </fieldset>
+
+        <h2 data-string-id="settings.language"></h2>
+        <div class="b-settings-flex" style="align-items:center">
+            <select class="b-settings-select" id="language-selector">
+                <option value="es" data-string-id="settings.spanish"></option>
+                <option value="en" data-string-id="settings.english"></option>
+                <option value="pt" data-string-id="settings.portuguese"></option>
+                <option value="fr">Français</option>
+                <option value="ar">العربية</option>
+                <option value="ru">Русский</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="ja">日本語</option>
+            </select>
+            <button class="b-settings-btn outline" id="language-selector-btn"
+                data-string-id="settings.changeLanguage">Change</button>
+        </div>
+
+        <fieldset class="b-settings-flex" style="margin-top:1.25rem;">
+            <legend>
+                <h2 data-string-id="settings.clickSound">Click sound</h2>
+            </legend>
+            <label class="b-settings-radio"><input type="radio" name="sound" checked><span
+                    data-string-id="settings.activate">Activate</span></label>
+            <label class="b-settings-radio"><input type="radio" name="sound"><span
+                    data-string-id="settings.deactivate">Deactivate</span></label>
+        </fieldset>
+
+        <div id="launchboost-panel" style="width: 100%;">
+            <span id="launchboost_settings_information" style="font-size: 20px; font-weight: 700;">Battly Launch
+                Boost™</span>
+            <br>
+            <div style="display: flex; gap: 10px;">
+                <span id="launchboost_settings_information_text"
+                    style="font-size: 15px; font-weight: 700; width: 100%;"></span><br>
+                <label class="container-optifine" style="width: 40%;" id="launchboost-label">
+                    <input checked type="checkbox" id="launchboost">
+                    <div class="checkmark"></div>
+                    Activar
+                </label>
+            </div>
+        </div>
+
+        <button class="b-settings-btn" style="margin-top:1.25rem;" id="obtener-socketid"
+            data-string-id="settings.getUniqueId">Get unique ID</button>
+    </section>
+
+    <section id="b-settings-panel-tema" class="b-settings-panel">
+        <p data-string-id="settings.themeDescription">Personaliza Battly a tu gusto eligiendo un tema o creando uno
+            nuevo.</p>
+        <div id="themeList" class="theme-list mb-5"></div>
+        <div class="b-settings-flex" style="justify-content:center">
+            <button id="createBtn" class="button is-medium is-info is-outlined btn-dont-change">
+                <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                <span data-string-id="settings.createTheme">Create theme</span>
+            </button>
+            <button id="shareBtn" class="button is-medium is-info is-outlined btn-dont-change">
+                <span class="icon"><i class="fa-solid fa-share-nodes"></i></span>
+                <span data-string-id="settings.share">Share</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="b-settings-panel-fondo" class="b-settings-panel">
+        <p data-string-id="settings.videoBackgroundDescription">As a Battly+ member, you can choose a background video
+            here.</p>
+        <button class="b-settings-btn" id="resize-background-select" data-string-id="settings.selectVideo">Select
+            video</button>
+        <button class="button is-info" id="restablecer-fondo"></button>
+        <input type="file" id="background-input-file" accept="video/mp4" style="display: none;">
+    </section>
+
+    <nav class="b-settings-footer" id="bottom_bar_settings">
+        <div class="b-settings-footer-up">
+            <button class="b-settings-nav-btn b-settings-active" id="accounts-btn" data-target="cuentas"
+                data-string-id="settings.accounts">Accounts</button>
+            <button class="b-settings-nav-btn" id="java-btn" data-target="java"
+                data-string-id="settings.java">Java</button>
+            <button class="b-settings-nav-btn" id="ram-btn" data-target="ram" data-string-id="settings.ram">RAM</button>
+            <button class="b-settings-nav-btn" id="launcher-btn" data-target="launcher"
+                data-string-id="settings.launcher">Launcher</button>
+            <button class="b-settings-nav-btn" id="theme-btn" data-target="tema"
+                data-string-id="settings.theme">Theme</button>
+            <button class="b-settings-nav-btn" id="background-btn" data-target="fondo"
+                data-string-id="settings.backgroundOption">Background</button>
+        </div>
+        <button class="b-settings-nav-btn button is-info" id="save-btn"
+            style="grid-column:1/-1;background:#4C8BFF;color:#FFFFFF;" data-string-id="settings.save">Save</button>
+    </nav>
+
+    <div class="b-settings-profile-menu" id="b-settings-profile-menu">
+        <button type="button" class="b-settings-item" id="b-settings-copy-uuid">
+            <i class="fa-solid fa-copy"></i><span data-string-id="settings.copyUUID">Copy UUID</span>
+        </button>
+        <button type="button" class="b-settings-item" id="b-settings-view-profile">
+            <i class="fa-solid fa-user"></i><span data-string-id="settings.seeProfile">See profile</span>
+        </button>
+        <button type="button" class="b-settings-item" id="b-settings-customize-profile">
+            <i class="fa-solid fa-palette"></i><span data-string-id="settings.customizeProfile">Customize profile</span>
+        </button>
+        <button type="button" class="b-settings-item" id="b-settings-skin">
+            <i class="fa-regular fa-face-smile-beam"></i><span data-string-id="settings.customizeSkin">Customize
+                skin</span>
+        </button>
+        <button type="button" class="b-settings-item" id="b-settings-logout">
+            <i class="fa-regular fa-trash-can"></i><span data-string-id="settings.logout">Logout</span>
+        </button>
     </div>
 </div>
+<style>
+    :root {
+        --btn-color: #3e8ed0;
+
+        --footer-color: #0a0a0a;
+
+        --loading-color: #000000;
+
+        --footer-opacity: .85;
+
+        --bg-dark: #0f1623;
+
+        --bg-darker: #0b121c;
+        --bg-hover: #1a2538;
+        --border-dark: #283347;
+        --text-soft: #b6bfd5;
+    }
+
+    .glass {
+        border-radius: 1.25rem;
+        background: #0f1623;
+        backdrop-filter: blur(14px) saturate(160%);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+    }
+
+    .b-theme-opacity-range {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 100%;
+        height: 30px;
+        border-radius: 10px;
+        background: #162033;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+    }
+
+    .b-theme-opacity-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 100%;
+        background: #3e8ed0;
+        cursor: pointer;
+    }
+
+    .b-auto-ram {
+        margin-top: 12px;
+        padding: 10px;
+        border-radius: 10px;
+        background: #121722;
+        border: 1px solid #1f2430;
+    }
+
+    .b-auto-ram-status b {
+        color: #66d1ff;
+    }
+
+    .b-auto-ram-note {
+        display: block;
+        margin-top: 6px;
+        color: #9DA2B0;
+    }
+
+    .memory-slider.is-ram-auto {
+        opacity: .6;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .b-auto-ram-reco {
+        margin-top: 6px;
+        color: #BFC3CF;
+        font-weight: 600;
+    }
+
+    .label {
+        color: #fff !important;
+    }
+
+    .theme-list {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        padding: 1rem 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .theme-list::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .theme-list::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, .05);
+    }
+
+    .theme-list::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, .25);
+        border-radius: 3px;
+    }
+
+    .theme-list:hover::-webkit-scrollbar-thumb {
+        background: var(--btn-color);
+    }
+
+    .theme-card {
+        flex: 0 0 200px;
+        aspect-ratio: 16/9;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 1rem;
+        background: #0d131d;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, .35);
+        transition: transform .18s, box-shadow .18s;
+        scroll-snap-align: start;
+    }
+
+    .theme-card::before,
+    .theme-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .theme-card::before {
+        background:
+            linear-gradient(to bottom,
+                var(--btn-color) 0 34%,
+                var(--loading-color) 34% 66%,
+                var(--footer-color) 66% 100%);
+        opacity: .85;
+    }
+
+    .theme-card::after {
+        background: rgba(0, 0, 0, .35);
+    }
+
+    .theme-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .45);
+    }
+
+    .theme-card.active {
+        box-shadow: 0 0 0 3px var(--btn-color), 0 8px 22px rgba(0, 0, 0, .5);
+    }
+
+    .theme-card[data-has-bg="true"] {
+        position: relative;
+        background: none;
+
+        overflow: hidden;
+
+    }
+
+    .theme-card[data-has-bg="true"]::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--thumb) center/cover no-repeat;
+        filter: blur(2px);
+        transform: scale(1.12);
+
+        z-index: 0;
+    }
+
+    .theme-card[data-has-bg="true"]::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, .35);
+        z-index: 1;
+    }
+
+    .theme-card[data-has-bg="true"]>* {
+        position: relative;
+        z-index: 2;
+    }
+
+    .theme-card-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        pointer-events: none;
+    }
+
+    .theme-card .card-actions {
+        position: absolute;
+        top: 6px;
+        right: 8px;
+        display: flex;
+        gap: 8px;
+        font-size: 16px;
+        opacity: 0;
+        transition: opacity .15s;
+        z-index: 2;
+
+    }
+
+    .theme-card:hover .card-actions {
+        opacity: 1;
+    }
+
+    .card-actions i {
+        pointer-events: auto;
+
+        width: 26px;
+        height: 26px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, .45);
+        backdrop-filter: blur(3px);
+        color: #fff;
+        cursor: pointer;
+        transition: background .15s;
+    }
+
+    .card-actions i:hover {
+        background: rgba(0, 0, 0, .75);
+    }
+
+    .modal-card.glass {
+        background: var(--bg-dark);
+        border-radius: 1rem;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, .45);
+    }
+
+    .modal-card-head,
+    .modal-card-foot {
+        background: transparent;
+        border: none;
+    }
+
+    .modal-card-title {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .modal-card-foot {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .user-option {
+        padding: .55rem 1rem;
+        border-radius: .5rem;
+        color: #fff;
+        cursor: pointer;
+        user-select: none;
+        transition: background .2s;
+    }
+
+    .user-option:hover {
+        background: var(--bg-hover);
+    }
+
+    .user-option.active {
+        background: var(--btn-color);
+    }
+
+    .footer-bar {
+        background-color: var(--footer-color);
+        opacity: var(--footer-opacity);
+        color: #fff;
+    }
+
+    .theme-modal input[type=color] {
+        width: 100%;
+        height: 45px;
+        background-color: #0f1623;
+        border: 0px;
+        padding: 0px !important;
+        overflow: hidden;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+    .theme-modal input[type=range] {
+        appearance: none;
+        -webkit-appearance: none;
+        background: #2c3c5c;
+        overflow: hidden;
+        height: 35px;
+        margin-top: 5px;
+        width: 100%;
+        border-radius: 0px !important;
+    }
+
+    .theme-modal input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 100%;
+        background: #3e8ed0;
+        cursor: pointer;
+    }
+
+    .theme-modal label {
+        margin-bottom: 0px !important;
+        margin-top: 10px !important;
+        font-weight: 600 !important;
+    }
+
+    .timeline {
+        --line: #d7134a;
+        --hole: #0f1623;
+        --size: 26px;
+        --stroke: 6px;
+        --gap: 110px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: var(--gap);
+        margin: 0px auto 40px;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: calc(var(--size)/2);
+        right: calc(var(--size)/2);
+        top: 50%;
+        height: var(--stroke);
+        background: var(--line);
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+
+    .timeline .step {
+        position: relative;
+        width: var(--size);
+        height: var(--size);
+        border: var(--stroke) solid var(--line);
+        border-radius: 50%;
+        background: var(--hole);
+        z-index: 1;
+        transition: background .3s, border-color .3s, opacity .3s;
+        opacity: .25;
+    }
+
+    .timeline .step.active {
+        background: var(--line);
+        border-color: var(--hole);
+        opacity: 1;
+    }
+
+    .timeline small {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(100% + 6px);
+        white-space: nowrap;
+        font-size: .75rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .b-themes-status-theme-text {
+        text-align: center;
+    }
+
+    .b-java-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .6rem;
+        margin-top: .4rem;
+    }
+
+    @media (min-width: 640px) {
+        .b-java-list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .b-java-card {
+        width: 100%;
+        background: #171B22;
+        color: #E3E6EE;
+        border-radius: .9rem;
+        padding: 0.45rem 0.6rem;
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: transform .12s ease, filter .12s ease, border-color .12s ease;
+        text-align: left;
+    }
+
+    .b-java-card:hover {
+        filter: brightness(1.05);
+        transform: translateY(-1px);
+    }
+
+    .b-java-card[data-installed="true"] {
+        border-color: #1f7a3a;
+    }
+
+    .b-java-card[data-installed="false"] {
+        border-color: #7a2a2a;
+    }
+
+    .b-java-left {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        flex: 1;
+        min-width: 0;
+        margin-left: 5px;
+    }
+
+    .b-java-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 999px;
+        display: inline-block;
+        flex: none;
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06) inset;
+    }
+
+    .b-ok {
+        background: #27ae60;
+    }
+
+    .b-missing {
+        background: #e74c3c;
+    }
+
+    .b-java-info {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    .b-java-title {
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .b-java-title small {
+        font-weight: 600;
+        color: #9DA2B0;
+    }
+
+    .b-java-tag {
+        background: rgba(255, 255, 255, .06);
+        padding: .1rem .4rem;
+        border-radius: .4rem;
+        margin-left: .35rem;
+        font-size: .75rem;
+    }
+
+    .b-java-status {
+        font-size: .85rem;
+        margin-top: .15rem;
+    }
+
+    .b-java-status.b-ok {
+        color: #7ddc9a;
+        background: transparent;
+    }
+
+    .b-java-status.b-missing {
+        color: #ff9d92;
+        background: transparent;
+    }
+
+    .b-java-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        align-items: end;
+    }
+
+    .b-java-action[hidden] {
+        display: none !important;
+    }
+
+    .b-java-action {
+        display: inline-flex;
+        align-items: center;
+        gap: .4rem;
+        padding: .35rem .6rem;
+        border-radius: .55rem;
+        font-weight: 700;
+        user-select: none;
+        font-size: 12px;
+    }
+
+    .b-java-action i {
+        width: 10px;
+        text-align: center;
+    }
+
+    .b-java-action.b-download {
+        background: rgba(231, 76, 60, .18);
+        color: #ffb3ab;
+        border: 1px solid rgba(231, 76, 60, .35);
+    }
+
+    .b-java-action.b-use {
+        background: rgba(39, 174, 96, .18);
+        color: #9be6b8;
+        border: 1px solid rgba(39, 174, 96, .35);
+    }
+
+    .b-java-selected {
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+        padding: .7rem .9rem;
+        border-radius: .9rem;
+        background: #171B22;
+        color: #E3E6EE;
+        border: 1px solid #273145;
+    }
+
+    .b-java-selected i {
+        opacity: .9;
+    }
+
+    #b-java-download-modal .modal-card {
+        border-radius: 1rem;
+    }
+
+    #b-java-download-modal .modal-card-title {
+        color: #fff;
+        font-weight: 700;
+    }
+</style>

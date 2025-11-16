@@ -1,289 +1,822 @@
-<style>
-    body {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-    }
-
-    .fullscreen-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 5vw;
-        background: linear-gradient(90deg, #3e8ed0 0%, #ff7fac 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-        white-space: nowrap;
-    }
-
-
-
-    .box2>span {
-        font-size: 20px;
-        background: linear-gradient(90deg, #3e8ed0 0%, #ff7fac 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 600;
-    }
-
-    .scaleup {
-        animation: scaleUp 5s ease-in-out
-    }
-
-    .fadeout {
-        animation: fadeout 1.5s ease-in-out
-    }
-
-    @keyframes scaleUp {
-        0% {
-            transform: translate(-50%, -50%) scale(1);
-        }
-
-        100% {
-            transform: translate(-50%, -50%) scale(500);
-        }
-    }
-
-    @keyframes fadeout {
-        0% {
-            transform: translate(-50%, -50%) scale(500);
-            opacity: 1;
-        }
-
-        100% {
-            transform: translate(-50%, -50%) scale(500);
-            opacity: 0;
-        }
-    }
-
-    .panel-container {
-        display: none;
-        text-align: center;
-        margin: 50px;
-        align-items: center;
-        justify-content: center;
-        --animate-duration: 500ms;
-        height: 80dvh;
-    }
-
-    .panel-container-creating {
-        display: none;
-        text-align: center;
-        margin: 50px;
-        align-items: center;
-        justify-content: center;
-        --animate-duration: 500ms;
-        height: 80dvh;
-    }
-
-    .box2 {
-        width: 40%;
-        background-color: #212121;
-        border-radius: 10px !important;
-        color: white;
-        font-weight: 600;
-    }
-
-    .box2 h1 {
-        font-size: 40px;
-        line-height: 1;
-    }
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: scale(0.8);
-        }
-
-        100% {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-
-    .control input {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-    }
-
-    .input-field {
-        margin-bottom: 20px;
-    }
-
-    .mcversion {
-        /* flex column */
-        display: flex;
-        flex-direction: column;
-    }
-
-    .mcversion p {
-        font-size: 20px;
-        color: white;
-        text-align: start;
-    }
-
-    .notification {
-        display: none;
-    }
-
-    .help {
-        font-size: 15px;
-        animation: fadeIn 0.5s infinite alternate;
-        text-align: start;
-    }
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0.7;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    .field {
-        text-align: start;
-    }
-
-    .control-buttons-create-server {
-        display: flex;
-        justify-content: flex-end;
-        gap: 5px;
-        margin-top: 30px;
-    }
-
-    #warningMessage {
-        text-align: start;
-        padding: 10px !important;
-        font-size: 15px;
-    }
-
-    .creating-server-text {
-        font-size: 35px;
-    }
-
-    .download-status-server {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-    }
-</style>
-<div class="fullscreen-text" style="display: none;">Battly Servers</div>
+<div class="fullscreen-text-div">
+    <span class="fullscreen-text" data-string-id="servers.title"></span>
+    <span class="fulscreen-subtext">
+        <span id="loading-b-servers-status-text" data-string-id="servers.connecting"></span>
+        <span id="b-servers-loading-text-dots"></span>
+    </span>
+    <div class="loader b-servers-loader"></div>
+    <div id="b-servers-error" class="notification is-danger" style="display:none"
+        data-string-id="servers.connectionError">
+    </div>
+</div>
 <div class="panel-container animate__animated">
     <div class="box box2">
-        <span>Battly Servers</span>
-        <h1>Vamos a crear tu servidor</h1>
+        <span data-string-id="servers.title"></span>
+        <h1 data-string-id="servers.createServer"></h1>
         <br>
-        <p style="font-size: 20px; text-align: start;">Dominio del Servidor</p>
-        <input id="domainInput" class="input is-info" type="text" maxlength="20" placeholder="Introduce el dominio">
-        <p class="help">La IP será: <span id="serverIP">dominio.battly.pro</span></p>
-        <div class="notification is-danger" id="warningMessage">
+        <p style="font-size: 20px; text-align: start;" data-string-id="servers.serverDomain"></p>
+        <input id="domainInput" class="input btn-dont-change" type="text" maxlength="20"
+            data-string-id="servers.enterDomain" placeholder="">
+        <p class="help"><span data-string-id="servers.ipWill"></span> <span id="serverIP">dominio.battly.pro</span></p>
+        <div class="notification is-danger" id="warningMessage" data-string-id="servers.domainNotAllowed">
             ¡Dominio no permitido! No puede contener palabras como api, server, oficial, battly.
         </div>
         <br>
         <div class="field mcversion">
-            <p>Versión de Minecraft</p>
+            <p data-string-id="servers.minecraftVersion"></p>
             <div class="select is-info is-small">
                 <select id="versionSelectServers" style="width: 100%;">
                 </select>
             </div>
         </div>
+        <div class="field regionfield" style="margin-top:10px;">
+            <p style="font-size:20px; text-align:start;" data-string-id="servers.serverRegion"></p>
+            <div style="display: flex; gap: 5px; align-items: center;">
+                <div class="select is-info is-small" style="width:100%;">
+                    <select id="regionSelectServers" style="width:100%;"></select>
+                </div>
+                <button class="button is-info" id="b-servers-checkForLatency" style="width: 10%;"
+                    data-string-id="servers.checkLatency"><i class="fa-solid fa-wifi"></i> Comprobar de nuevo
+                </button>
+            </div>
+
+            <p class="help" id="regionLatencyInfo" data-string-id="servers.calculatingLatency">…</p>
+        </div>
         <div class="control-buttons-create-server">
-            <button class="button is-danger">Cancelar</button>
-            <button class="button is-info" id="create-server">Crear servidor</button>
+            <button class="button is-danger is-outlined btn-dont-change" id="b-servers-cancel-server-creation"
+                data-string-id="servers.cancel">Cancelar</button>
+            <button class="button is-info is-outlined btn-dont-change" id="create-server"
+                data-string-id="servers.createButton">Crear servidor</button>
         </div>
     </div>
 </div>
 <div class="panel-container-creating">
-    <div class="box" id="download-server-status-panel">
-        <span>Battly Servers</span>
-        <p class="creating-server-text">Creando servidor</p>
+    <div class="box box2" id="download-server-status-panel">
+        <span data-string-id="servers.title"></span>
+        <p class="creating-server-text" data-string-id="servers.creatingServer"></p>
         <progress class="progress is-small is-info" max="100">45%</progress>
-        <div class="download-status-server">
-            <p class="whatisdownloading">
-                Configurando servidor
-            </p>
-            <p class="percentajewhatisloading">
-                100% <i class="fa-solid fa-check"></i>
-            </p>
+        <div class="panel-container-creating-progresses">
+            <div class="download-status-server">
+                <p class="whatisdownloading" data-string-id="servers.configuringServer">
+                </p>
+                <p class="percentajewhatisloading">
+                    100% <i class="fa-solid fa-check"></i>
+                </p>
+            </div>
+        </div>
+        <iframe src="https://battlylauncher.com/ads/video" style="width: 100%;" height="200"
+            allow="fullscreen; autoplay" allowtransparency="true"></iframe>
+    </div>
+</div>
+<div class="b-servers-main-container">
+
+    <aside class="b-servers-sidebar">
+        <div class="b-servers-brand" data-string-id="servers.title"></div>
+        <ul class="b-servers-menu-list">
+            <li>
+                <a href="javascript:void(0)" class="active is-inter" onclick="showPanel('general')"
+                    data-string-id="servers.general">
+                    <i class="fa fa-home"></i> General
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="is-inter" onclick="showPanel('recursos')"
+                    data-string-id="servers.resources">
+                    <i class="fa fa-chart-area"></i> Recursos
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="is-inter" onclick="showPanel('jugadores')"
+                    data-string-id="servers.players">
+                    <i class="fa fa-user-group"></i> Jugadores
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="is-inter" onclick="showPanel('opciones')"
+                    data-string-id="servers.options">
+                    <i class="fa fa-cogs"></i> Opciones
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="is-inter" onclick="showPanel('modloaders')"
+                    data-string-id="servers.modloaders">
+                    <i class="fa fa-cubes"></i> ModLoaders
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="is-inter" onclick="showPanel('archivos')"
+                    data-string-id="servers.archivos">
+                    <i class="fa fa-folder"></i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="is-inter" onclick="showPanel('logs')" data-string-id="servers.logs">
+                    <i class="fa fa-file-alt"></i> Logs
+                </a>
+            </li>
+            <li>
+                <a class="is-inter" id="b-servers-back-to-home" data-string-id="servers.backHome">
+                    <i class="fas fa-arrow-rotate-backward"></i> Volver al inicio
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="b-servers-content">
+
+        <div class="b-servers-content-header">
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <h1 class="is-inter" id="b-servers-header-title">Servidor de Minecraft - 1ly4s0.battly.pro</h1>
+
+                <button class="button is-info is-small" id="b-servers-share-button">
+                    <span class="is-inter is-white" data-string-id="servers.shareServer">Compartir servidor</span>
+                </button>
+            </div>
+            <div class="b-servers-search-box">
+                <input type="text" class="is-inter" placeholder="Buscar algo..." />
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+
+        <div id="general" class="b-servers-panel-container active">
+            <h2 class="title is-4 is-inter" style="color: #fff;" data-string-id="servers.generalInfo">Información
+                General</h2>
+            <p class="is-white" data-string-id="servers.generalDesc">Visualiza y controla la información principal de tu
+                servidor.</p>
+
+            <div class="b-servers-action-panel">
+                <a href="#" class="b-servers-action-button b-servers-stop-btn is-inter"
+                    data-string-id="servers.stopServer">
+                    <i class="fa fa-stop"></i> Parar servidor
+                </a>
+                <a href="#" class="b-servers-action-button b-servers-restart-btn is-inter"
+                    data-string-id="servers.restartServer">
+                    <i class="fa fa-redo-alt"></i> Reiniciar servidor
+                </a>
+                <a href="#" class="b-servers-action-button b-servers-connect-btn is-inter"
+                    data-string-id="servers.connectServer">
+                    <i class="fa fa-gamepad"></i> Conectarse al servidor
+                </a>
+            </div>
+
+            <div class="b-servers-console-panel">
+                <div class="b-servers-console-header">
+                    <strong class="is-white is-inter" data-string-id="servers.console">Consola (Registros)</strong>
+                    <span class="tag is-info is-radius-sm is-inter" data-string-id="servers.live">
+                        <span class="b-servers-blink" style="margin-right:3px;">🔴</span>
+                    </span>
+                </div>
+                <div class="b-servers-console-output" id="consoleOutput"></div>
+                <div class="b-servers-console-input">
+                    <input type="text" id="consoleCommand" data-string-id="servers.commandPlaceholder"
+                        placeholder="Escribe un comando..." />
+                    <button class="button is-info is-small is-inter b-servers-send-command-btn"
+                        data-string-id="servers.send" onclick="sendConsoleCommand()">Enviar</button>
+                    <input type="text" id="searchConsole" data-string-id="servers.searchPlaceholder"
+                        placeholder="Buscar..." style="height: 35px;" />
+                </div>
+            </div>
+        </div>
+
+        <div id="recursos" class="b-servers-panel-container">
+            <h2 class="title is-4 is-inter" style="color: #fff;" data-string-id="servers.resourcesTitle">Recursos del
+                Servidor</h2>
+            <p class="is-inter is-white" data-string-id="servers.resourcesDesc">Monitorea el uso de CPU y RAM con
+                gráficas de área</p>
+            <br />
+            <div style="display: flex; gap: 10px; width: 100%;">
+
+                <div class="b-servers-resource-chart-container">
+                    <h3 class="b-servers-chart-title is-inter" data-string-id="servers.cpuUsage">Uso de CPU</h3>
+                    <canvas id="cpuChart"></canvas>
+                </div>
+
+                <div class="b-servers-resource-chart-container">
+                    <h3 class="b-servers-chart-title is-inter" data-string-id="servers.ramUsage">Uso de RAM</h3>
+                    <canvas id="ramChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div id="jugadores" class="b-servers-panel-container">
+            <h2 class="title is-4 is-inter" style="color: #fff;" data-string-id="servers.playersTitle">Jugadores
+                Conectados</h2>
+            <p class="is-white" data-string-id="servers.playersDesc">Controla y visualiza la información de cada
+                jugador.</p>
+            <br />
+            <div class="columns is-multiline">
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-player-card">
+                        <div class="b-servers-player-avatar">
+                            <img src="https://mc-heads.net/avatar/gonza1221br/64" alt="gonza1221br">
+                        </div>
+                        <div class="b-servers-player-info">
+                            <h4 class="b-servers-player-name is-white">
+                                gonza1221br <span style="font-size:0.85rem;">🌙</span>
+                            </h4>
+                            <p class="b-servers-player-subtitle">Jugando en OptiFine 1.20.0</p>
+                        </div>
+                        <div class="b-servers-player-actions">
+                            <button class="b-servers-btn-op">
+                                <i class="fa fa-check"></i> OP
+                            </button>
+                            <button class="b-servers-btn-kick">
+                                <i class="fa fa-exclamation-triangle"></i>
+                                <span class="b-servers-tooltip">Expulsar al usuario</span>
+                            </button>
+                            <button class="b-servers-btn-ban" onclick="banPlayer('gonza1221br')">
+                                <i class="fa fa-ban"></i>
+                                <span class="b-servers-tooltip">Banear al usuario</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-player-card">
+                        <div class="b-servers-player-avatar">
+                            <img src="https://mc-heads.net/avatar/PlayerTwo/64" alt="PlayerTwo">
+                        </div>
+                        <div class="b-servers-player-info">
+                            <h4 class="b-servers-player-name is-white">PlayerTwo</h4>
+                            <p class="b-servers-player-subtitle">Jugando en Fabric 1.18.2</p>
+                        </div>
+                        <div class="b-servers-player-actions">
+                            <button class="b-servers-btn-op">
+                                <i class="fa fa-check"></i> OP
+                            </button>
+                            <button class="b-servers-btn-kick">
+                                <i class="fa fa-exclamation-triangle"></i>
+                                <span class="b-servers-tooltip">Expulsar al usuario</span>
+                            </button>
+                            <button class="b-servers-btn-ban" onclick="banPlayer('PlayerTwo')">
+                                <i class="fa fa-ban"></i>
+                                <span class="b-servers-tooltip">Banear al usuario</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="historico">
+                <h2 class="title is-4 is-inter" style="color: #fff;" data-string-id="servers.playerHistoryTitle">
+                    Historial de Jugadores</h2>
+                <p class="is-white" data-string-id="servers.playerHistoryDesc">Lista de jugadores que han entrado al
+                    servidor.</p>
+                <div class="columns is-multiline">
+                </div>
+            </div>
+
+            <div id="listasJugadores" style="margin-top: 30px;">
+                <h2 class="title is-4 is-inter" style="color: #fff;" data-string-id="servers.playerListsTitle">Listas de
+                    Jugadores</h2>
+                <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                    <button class="button is-danger is-small" data-string-id="servers.viewBanlist"
+                        onclick="openModal('banlistModal')">Ver lista de baneados</button>
+                    <button class="button is-danger is-small" data-string-id="servers.viewBlacklist"
+                        onclick="openModal('blacklistModal')">Ver lista negra</button>
+                    <button class="button is-success is-small" data-string-id="servers.viewWhitelist"
+                        onclick="openModal('whitelistModal')">Ver lista blanca</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="opciones" class="b-servers-panel-container">
+            <h2 class="title is-4" style="color: #fff;" data-string-id="servers.settingsTitle">Ajustes del Servidor
+                (server.properties)</h2>
+            <p class="is-white" data-string-id="servers.settingsDesc">Configura tu servidor de forma detallada. Cada
+                opción muestra su variable y valor actual.</p>
+            <br />
+            <div class="columns is-multiline">
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Máximo de jugadores</h3>
+                        <div class="field has-addons">
+                            <p class="control" style="width:100% !important;">
+                                <input class="b-servers-server-property-input input" type="number" value="20"
+                                    id="maxPlayersInput"
+                                    onchange="updatePropertyMeta('maxPlayersMeta','max-players',this.value)" />
+                            </p>
+                            <p class="control">
+                                <button class="button"
+                                    style="border-top-left-radius:0; border-bottom-left-radius:0; border:0;">
+                                    <i class="fa fa-user-group"></i>
+                                </button>
+                            </p>
+                        </div>
+                        <p class="b-servers-server-property-meta" id="maxPlayersMeta">max-players=20</p>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Uso de RAM Máx (MB)</h3>
+                        <div class="field has-addons">
+                            <p class="control" style="width:100% !important;">
+                                <input class="b-servers-server-property-input input" type="number" value="2048"
+                                    id="maxRamInput"
+                                    onchange="updatePropertyMeta('maxRamMeta','max-memory',this.value + 'MB')" />
+                            </p>
+                            <p class="control">
+                                <button class="button"
+                                    style="border-top-left-radius:0; border-bottom-left-radius:0; border:0;">
+                                    <i class="fa fa-memory"></i>
+                                </button>
+                            </p>
+                        </div>
+                        <p class="b-servers-server-property-meta" id="maxRamMeta">max-memory=2048MB</p>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Modo de juego (Gamemode)</h3>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select class="b-servers-server-property-input" id="gamemodeSelect"
+                                        onchange="updatePropertyMeta('gamemodeMeta','gamemode',this.value)">
+                                        <option value="survival" selected>Supervivencia</option>
+                                        <option value="creative">Creativo</option>
+                                        <option value="adventure">Aventura</option>
+                                        <option value="spectator">Espectador</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="b-servers-server-property-meta" id="gamemodeMeta">gamemode=survival</p>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Dificultad</h3>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select class="b-servers-server-property-input" id="difficultySelect"
+                                        onchange="updatePropertyMeta('difficultyMeta','difficulty',this.value)">
+                                        <option value="peaceful">Pacífico</option>
+                                        <option value="easy" selected>Fácil</option>
+                                        <option value="normal">Normal</option>
+                                        <option value="hard">Difícil</option>
+                                        <option value="hardcore">Hardcore</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="b-servers-server-property-meta" id="difficultyMeta">difficulty=easy</p>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Protección del spawn</h3>
+                        <div class="field has-addons">
+                            <p class="control" style="width:100% !important;">
+                                <input class="b-servers-server-property-input input" type="number" value="0"
+                                    id="spawnProtectionInput"
+                                    onchange="updatePropertyMeta('spawnProtectionMeta','spawn-protection',this.value)" />
+                            </p>
+                            <p class="control">
+                                <button class="button"
+                                    style="border-top-left-radius:0; border-bottom-left-radius:0; border:0;">
+                                    <i class="fa fa-shield-alt"></i>
+                                </button>
+                            </p>
+                        </div>
+                        <p class="b-servers-server-property-meta" id="spawnProtectionMeta">spawn-protection=0</p>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>PVP</h3>
+                        <div class="field is-grouped">
+                            <p class="control is-expanded">
+                                <span class="b-servers-server-property-meta" id="pvpMeta">pvp=true</span>
+                            </p>
+                            <p class="control">
+                                <button class="button b-servers-check-toggle" id="pvpToggle"
+                                    onclick="toggleProperty('pvpMeta','pvp')">
+                                    <i class="fa fa-check"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Animales</h3>
+                        <div class="field is-grouped">
+                            <p class="control is-expanded">
+                                <span class="b-servers-server-property-meta" id="animalsMeta">spawn-animals=true</span>
+                            </p>
+                            <p class="control">
+                                <button class="button b-servers-check-toggle" id="animalsToggle"
+                                    onclick="toggleProperty('animalsMeta','spawn-animals')">
+                                    <i class="fa fa-check"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Nether</h3>
+                        <div class="field is-grouped">
+                            <p class="control is-expanded">
+                                <span class="b-servers-server-property-meta" id="netherMeta">allow-nether=true</span>
+                            </p>
+                            <p class="control">
+                                <button class="button b-servers-check-toggle" id="netherToggle"
+                                    onclick="toggleProperty('netherMeta','allow-nether')">
+                                    <i class="fa fa-check"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Bloques de comandos</h3>
+                        <div class="field is-grouped">
+                            <p class="control is-expanded">
+                                <span class="b-servers-server-property-meta"
+                                    id="cmdBlocksMeta">enable-command-block=true</span>
+                            </p>
+                            <p class="control">
+                                <button class="button b-servers-check-toggle" id="cmdBlocksToggle"
+                                    onclick="toggleProperty('cmdBlocksMeta','enable-command-block')">
+                                    <i class="fa fa-check"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Mobs</h3>
+                        <div class="field is-grouped">
+                            <p class="control is-expanded">
+                                <span class="b-servers-server-property-meta" id="mobsMeta">spawn-monsters=true</span>
+                            </p>
+                            <p class="control">
+                                <button class="button b-servers-check-toggle" id="mobsToggle"
+                                    onclick="toggleProperty('mobsMeta','spawn-monsters')">
+                                    <i class="fa fa-check"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Forzar modo de juego</h3>
+                        <div class="field is-grouped">
+                            <p class="control is-expanded">
+                                <span class="b-servers-server-property-meta"
+                                    id="forceGamemodeMeta">force-gamemode=false</span>
+                            </p>
+                            <p class="control">
+                                <button class="button b-servers-cross-toggle" id="forceGamemodeToggle"
+                                    onclick="toggleProperty('forceGamemodeMeta','force-gamemode')">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Whitelist</h3>
+                        <div class="field is-grouped">
+                            <p class="control is-expanded">
+                                <span class="b-servers-server-property-meta" id="whitelistMeta">white-list=false</span>
+                            </p>
+                            <p class="control">
+                                <button class="button b-servers-cross-toggle" id="whitelistToggle"
+                                    onclick="toggleProperty('whitelistMeta','white-list')">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Pack de recursos requerido</h3>
+                        <div class="field is-grouped">
+                            <p class="control is-expanded">
+                                <input class="b-servers-server-property-input" type="text"
+                                    placeholder="https://example.com/resource-pack.zip" id="resourcePackInput"
+                                    oninput="updatePropertyMeta('resourcePackMeta','resource-pack',this.value)" />
+                            </p>
+                            <p class="control">
+                                <button class="button is-info" title="Subir/Descargar">
+                                    <i class="fa fa-cloud-upload-alt"></i>
+                                </button>
+                            </p>
+                        </div>
+                        <p class="b-servers-server-property-meta" id="resourcePackMeta">resource-pack=</p>
+                    </div>
+                </div>
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Resource Pack Prompt</h3>
+                        <input class="b-servers-server-property-input" type="text"
+                            placeholder="Click aquí para usar el resource pack" id="resourcePackPromptInput"
+                            oninput="updatePropertyMeta('resourcePackPromptMeta','resource-pack-prompt',this.value)" />
+                        <p class="b-servers-server-property-meta" id="resourcePackPromptMeta" style="margin-top:5px;">
+                            resource-pack-prompt=""
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-6 b-servers-column">
+                    <div class="b-servers-server-property-box">
+                        <h3>Eliminación del servidor</h3>
+                        <button class="button is-danger is-fullwidth btn-dont-change" id="b-servers-deleteServerButton"
+                            onclick="confirmDeleteServer()">Eliminar servidor</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modloaders" class="b-servers-panel-container">
+            <h2 class="title is-4" style="color: #fff;" data-string-id="servers.modloadersTitle">Gestión de ModLoaders
+            </h2>
+            <p class="is-white" data-string-id="servers.modloadersDesc">Instala o actualiza versiones de Forge, Fabric,
+                Spigot, Paper, etc.</p>
+            <div style="margin-top:15px;">
+                <div style="display: flex; align-items:center; margin-bottom:8px;">
+                    <i class="fa fa-cube" style="margin-right:8px; color:#59b2ff;"></i>
+                    <span class="is-white">Paper 1.19.2</span>
+                    <button class="button is-success is-small" style="margin-left:auto;">Instalar</button>
+                </div>
+                <div style="display: flex; align-items:center; margin-bottom:8px;">
+                    <i class="fa fa-cube" style="margin-right:8px; color:#59b2ff;"></i>
+                    <span class="is-white">Forge 1.16.5</span>
+                    <button class="button is-success is-small" style="margin-left:auto;">Instalar</button>
+                </div>
+                <div style="display: flex; align-items:center; margin-bottom:8px;">
+                    <i class="fa fa-cube" style="margin-right:8px; color:#59b2ff;"></i>
+                    <span class="is-white">Fabric 1.18.2</span>
+                    <button class="button is-success is-small" style="margin-left:auto;">Instalar</button>
+                </div>
+                <div style="display: flex; align-items:center; margin-bottom:8px;">
+                    <i class="fa fa-cube" style="margin-right:8px; color:#59b2ff;"></i>
+                    <span class="is-white">Spigot 1.17</span>
+                    <button class="button is-success is-small" style="margin-left:auto;">Instalar</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="archivos" class="b-servers-panel-container">
+            <h2 class="title is-4" style="color: #fff;" data-string-id="servers.filesTitle">Archivos del Servidor</h2>
+            <p class="is-white" data-string-id="servers.filesDesc">Sube, gestiona y edita tus archivos: plugins, mods,
+                configuraciones, etc.</p>
+
+            <table class="b-servers-table table is-fullwidth is-hoverable b-servers-table" style="margin-top:10px;">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tamaño</th>
+                        <th>Última modificación</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fa fa-folder"></i> plugins</td>
+                        <td>—</td>
+                        <td>2025-02-08 10:15</td>
+                        <td>
+                            <button class="button is-small is-link"><i class="fa fa-download"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-folder"></i> world</td>
+                        <td>—</td>
+                        <td>2025-02-07 22:03</td>
+                        <td>
+                            <button class="button is-small is-link"><i class="fa fa-download"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-file-alt"></i> server.properties</td>
+                        <td>3 KB</td>
+                        <td>2025-02-07 21:45</td>
+                        <td>
+                            <button class="button is-small is-info"><i class="fa fa-download"></i></button>
+                            <button class="button is-small is-success"><i class="fa fa-edit"></i></button>
+                            <button class="button is-small is-danger"><i class="fa fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-file-archive"></i> backup.zip</td>
+                        <td>20 MB</td>
+                        <td>2025-02-06 19:27</td>
+                        <td>
+                            <button class="button is-small is-info"><i class="fa fa-download"></i></button>
+                            <button class="button is-small is-danger"><i class="fa fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="logs" class="b-servers-panel-container">
+            <h2 class="title is-4" style="color: #fff;" data-string-id="servers.logsTitle">Logs Guardados</h2>
+            <p class="is-white" data-string-id="servers.logsDesc">Revisa, descarga y analiza logs históricos o archivos
+                de crash.</p>
+            <ul class="b-servers-saved-logs-list is-white">
+                <li>
+                    <i class="fa fa-file-alt"></i> latest.log
+                    <button class="button is-small is-link">Descargar</button>
+                </li>
+                <li>
+                    <i class="fa fa-file-alt"></i> 2025-02-07.log
+                    <button class="button is-small is-link">Descargar</button>
+                </li>
+                <li>
+                    <i class="fa fa-file-alt"></i> 2025-02-06-crash.log
+                    <button class="button is-small is-danger">Descargar</button>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
-<div class="servers-main-panel" style="display: none;">
-    <div class="servers-principal-panel">
-        <div class="servers-principal-panel-header">
-            Bienvenido a Battly Servers
-        </div>
-        <div class="servers-principal-panel-content" style="display: flex;">
-            <div class="servers-principal-panel-content-server-left-bar">
-                <button class="button is-info"><i class="fa-solid fa-house"></i> <span>General</span></button><button
-                    class="button is-info"><i class="fa-solid fa-user-group"></i>
-                    <span>Jugadores</span></button><button class="button is-info"><i class="fa-solid fa-terminal"></i>
-                    <span>Consola</span></button>
-                <button class="button is-info"><i class="fa-solid fa-gears"></i> <span>Opciones</span></button>
-                <button class="button is-info"><i class="fa-solid fa-cube"></i> <span>ModLoaders</span></button>
-                <button class="button is-info"><i class="fa-solid fa-folder"></i> <span>Archivos</span></button>
-                <button class="button is-info"><i class="fa-solid fa-file-lines"></i> <span>Logs</span></button>
-            </div>
-            <div class="servers-principal-panel-content-server">
-                <p class="servers-principal-panel-content-server-title"><i class="fa-solid fa-house"></i>
-                    <span>General</span>
-                </p>
-                <br>
-                <div class="servers-principal-panel-content-server-panel">
-                    <p class="servers-principal-panel-content-server-header-title">Servidor de prueba</p>
-                    <p class="servers-principal-panel-content-server-header-subtitle">prueba.battly.pro:25565 <i
-                            class="fa-solid fa-copy"></i></p>
-                    <br>
-                    <div style="height: 50px; border-radius: 10px; background-color: #ff5454; align-items: center; justify-content: center; display: flex;"
-                        id="server-status-panel">
-                        <p style="font-size: 20px" id="server-status-text">Servidor Offline</p>
-                    </div>
-                </div>
-                <br>
-                <button class="button is-success notchange" id="start-server-button"><i class="fa-solid fa-power-off"
-                        style="margin-right: 5px;"></i>
-                    Iniciar servidor</button>
-                <button class="button is-danger notchange" id="stop-server-button" style="display: none;"><i
-                        class="fa-solid fa-power-off" style="margin-right: 5px;"></i>
-                    Apagar servidor</button>
-                <br>
-                <br>
-                <button class="button is-link is-small notchange" id="connect-to-server-button" disabled>Conectarme al
-                    servidor</button>
-                <br>
-            </div>
-            <div class="servers-principal-panel-content-server">
-                <p class="servers-principal-panel-content-server-title">Jugadores</p>
-                <br>
-                <div class="servers-principal-panel-content-server-content">
-                    <div class="servers-principal-panel-content-server-content-players">
-                        <div class="servers-principal-panel-content-server-content-players-button-principal-options">
-                            <button class="button is-info">Whitelist</button>
-                            <button class="button is-info">Operadores</button>
-                            <button class="button is-danger notchange">Jugadores baneados</button>
-                            <button class="button is-info">IPs baneadas</button>
-                        </div>
-                        <br>
-                        <p class="servers-principal-panel-content-server-content-players-title">Lista de jugadores
-                            conectados</p>
-                        <div class="servers-principal-panel-content-server-content-players-players">
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="servers-principal-panel-content-server">
-                <p class="servers-principal-panel-content-server-title">Consola</p>
-                <br>
-                <textarea class="textarea" id="server-logs" readonly>This content is readonly</textarea>
-                <input class="input" type="text" placeholder="Text input">
-            </div>
-        </div>
+<div class="modal" id="whitelistModal">
+    <div class="modal-background" onclick="closeModal('whitelistModal')"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Whitelist</p>
+            <button class="delete" aria-label="close" onclick="closeModal('whitelistModal')"></button>
+        </header>
+        <section class="modal-card-body">
+            <table class="table is-fullwidth is-hoverable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha de Adición</th>
+                    </tr>
+                </thead>
+                <tbody id="whitelistTableBody">
 
+                </tbody>
+            </table>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button" onclick="closeModal('whitelistModal')">Cerrar</button>
+        </footer>
     </div>
+</div>
+
+<div class="modal" id="blacklistModal">
+    <div class="modal-background" onclick="closeModal('blacklistModal')"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Blacklist</p>
+            <button class="delete" aria-label="close" onclick="closeModal('blacklistModal')"></button>
+        </header>
+        <section class="modal-card-body">
+            <table class="table is-fullwidth is-hoverable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha de Adición</th>
+                    </tr>
+                </thead>
+                <tbody id="blacklistTableBody">
+
+                </tbody>
+            </table>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button" onclick="closeModal('blacklistModal')">Cerrar</button>
+        </footer>
+    </div>
+</div>
+
+<div class="modal" id="banlistModal">
+    <div class="modal-background" onclick="closeModal('banlistModal')"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Banlist</p>
+            <button class="delete" aria-label="close" onclick="closeModal('banlistModal')"></button>
+        </header>
+        <section class="modal-card-body">
+            <table class="table is-fullwidth is-hoverable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha de Adición</th>
+                    </tr>
+                </thead>
+                <tbody id="banlistTableBody">
+
+                </tbody>
+            </table>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button" onclick="closeModal('banlistModal')">Cerrar</button>
+        </footer>
+    </div>
+</div>
+
+<div class="modal" id="shareServerModal">
+    <div class="modal-background" onclick="closeModal('shareServerModal')"></div>
+    <div class="modal-card"
+        style="max-width: 500px; background: linear-gradient(135deg, rgba(31, 41, 64, 0.98) 0%, rgba(18, 24, 38, 0.95) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;">
+        <header class="modal-card-head"
+            style="background: linear-gradient(135deg, rgba(62, 142, 208, 0.2) 0%, rgba(46, 204, 113, 0.1) 100%); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+            <p class="modal-card-title is-inter" style="color: #fff; font-weight: 600;">
+                <i class="fa fa-share-alt"></i> Compartir Servidor
+            </p>
+            <button class="delete" aria-label="close" onclick="closeModal('shareServerModal')"></button>
+        </header>
+        <section class="modal-card-body" style="background: transparent; max-height: 500px; overflow-y: auto;">
+
+            <div class="field">
+                <label class="label is-inter" style="color: rgba(255, 255, 255, 0.9);">Buscar amigos</label>
+                <div class="control has-icons-left">
+                    <input class="input is-inter" type="text" id="share-friend-search"
+                        placeholder="Buscar por nombre..."
+                        style="background: rgba(44, 52, 70, 0.8); color: #fff; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <span class="icon is-left"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+
+            <div id="share-friends-loading" style="text-align: center; padding: 30px; display: none;">
+                <div class="b-servers-loader" style="margin: 0 auto;"></div>
+                <p class="is-inter" style="color: rgba(255, 255, 255, 0.7); margin-top: 15px;">Cargando amigos
+                    conectados...</p>
+            </div>
+
+            <div id="share-friends-list" style="margin-top: 15px;">
+
+            </div>
+
+            <div id="share-no-friends" style="text-align: center; padding: 30px; display: none;">
+                <i class="fa fa-user-slash" style="font-size: 48px; color: rgba(255, 255, 255, 0.3);"></i>
+                <p class="is-inter" style="color: rgba(255, 255, 255, 0.7); margin-top: 15px;">No tienes amigos
+                    conectados en este momento</p>
+            </div>
+        </section>
+        <footer class="modal-card-foot"
+            style="background: transparent; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <button class="button" onclick="closeModal('shareServerModal')"
+                style="background: rgba(255, 255, 255, 0.1); color: #fff; border: 1px solid rgba(255, 255, 255, 0.2);">Cerrar</button>
+        </footer>
+    </div>
+</div>
+
+<div class="modal" id="serverInviteModal">
+    <div class="modal-background"></div>
+    <div class="modal-card"
+        style="max-width: 450px; background: linear-gradient(135deg, rgba(31, 41, 64, 0.98) 0%, rgba(18, 24, 38, 0.95) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;">
+        <header class="modal-card-head"
+            style="background: linear-gradient(135deg, rgba(46, 204, 113, 0.2) 0%, rgba(62, 142, 208, 0.1) 100%); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+            <p class="modal-card-title is-inter" style="color: #fff; font-weight: 600;">
+                <i class="fa fa-envelope"></i> Invitación a Servidor
+            </p>
+        </header>
+        <section class="modal-card-body" style="background: transparent; text-align: center; padding: 30px;">
+            <div style="margin-bottom: 20px;">
+                <img id="invite-friend-avatar" src="" alt="Avatar"
+                    style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid rgba(62, 142, 208, 0.5); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);">
+            </div>
+            <h3 class="title is-4 is-inter" style="color: #fff; margin-bottom: 10px;">
+                <span id="invite-friend-name"></span>
+            </h3>
+            <p class="is-inter" style="color: rgba(255, 255, 255, 0.8); font-size: 1.1rem; margin-bottom: 5px;">
+                te invita a jugar en su servidor:
+            </p>
+            <p class="is-inter" style="color: #3e8ed0; font-weight: 600; font-size: 1.2rem; margin-bottom: 20px;">
+                <i class="fa fa-server"></i> <span id="invite-server-name"></span>
+            </p>
+            <p class="is-inter" style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">
+                Versión: <span id="invite-server-version"></span>
+            </p>
+        </section>
+        <footer class="modal-card-foot"
+            style="background: transparent; border-top: 1px solid rgba(255, 255, 255, 0.1); justify-content: center; gap: 15px;">
+            <button class="button is-success is-inter" id="accept-server-invite" style="min-width: 120px;">
+                <i class="fa fa-check"></i> Aceptar
+            </button>
+            <button class="button is-danger is-inter" id="reject-server-invite" style="min-width: 120px;">
+                <i class="fa fa-times"></i> Rechazar
+            </button>
+        </footer>
+    </div>
+</div>

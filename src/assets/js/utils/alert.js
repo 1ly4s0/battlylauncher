@@ -1,128 +1,76 @@
-
-
-/**
- * @author TECNO BROS
- 
- */
 "use strict";
 
-let isAnimating = false;
-let alertQueue = [];
-
 class Alert {
-  constructor() { }
+  constructor(defaultOptions = {}) {
+    this.defaults = {
+      effect: "slide",
+      speed: 300,
+      showIcon: true,
+      showCloseButton: false,
+      autoclose: true,
+      autotimeout: 5000,
+      notificationsGap: null,
+      notificationsPadding: null,
+      type: "outline",
+      position: "x-center",
+      customClass: "",
+      customIcon: "",
+      customWrapper: "",
+      soundSrc: "./assets/audios/alert.mp3",
+      soundVolume: 0.8
+    };
 
-  async ShowAlert(info) {
-    if (isAnimating) {
-      alertQueue.push(info);
+    this.defaults = { ...this.defaults, ...defaultOptions };
+  }
+
+  async ShowAlert(info = {}) {
+    if (!window.Notify) {
+      console.error("[Alert] Simple Notify no está disponible. Asegúrate de cargar la librería antes de usar Alert.");
       return;
     }
 
-    alertQueue.push(info);
-    await this.showNextAlert(info);
-  }
+    const status = this.#normalizeStatus(info.icon);
 
-  async showNextAlert(info) {
-    if (alertQueue.length <= 0) {
-      isAnimating = false;
-      return;
-    } else {
-      const info2 = alertQueue.shift();
-      isAnimating = true;
-      await this.displayAlert(info2);
-      await this.showNextAlert(info2);
-      isAnimating = false;
-    }
-  }
+    const payload = {
+      status,
+      title: info.title ?? "",
+      text: info.text ?? "",
+      effect: info.effect ?? this.defaults.effect,
+      speed: info.speed ?? this.defaults.speed,
+      customClass: info.customClass ?? this.defaults.customClass,
+      customIcon: info.customIcon ?? this.defaults.customIcon,
+      showIcon: typeof info.showIcon === "boolean" ? info.showIcon : this.defaults.showIcon,
+      showCloseButton: typeof info.showCloseButton === "boolean" ? info.showCloseButton : this.defaults.showCloseButton,
+      autoclose: typeof info.autoclose === "boolean" ? info.autoclose : this.defaults.autoclose,
+      autotimeout: typeof info.autotimeout === "number" ? info.autotimeout : this.defaults.autotimeout,
+      notificationsGap: info.notificationsGap ?? this.defaults.notificationsGap,
+      notificationsPadding: info.notificationsPadding ?? this.defaults.notificationsPadding,
+      type: info.type ?? this.defaults.type,
+      position: info.position ?? this.defaults.position,
+      customWrapper: info.customWrapper ?? this.defaults.customWrapper
+    };
 
-  async displayAlert(info) {
-    const { title, text, icon } = info;
-    let errorIcon = './assets/images/icons/error.png';
-    let successIcon = './assets/images/icons/success.png';
-    let warningIcon = './assets/images/icons/warning.png';
-    let infoIcon = './assets/images/icons/info.png';
-    let sonido_inicio = new Audio('./assets/audios/alert.mp3');
-    sonido_inicio.volume = 0.8;
-
-    let errorColor = '#fa415b';
-    let successColor = '#21c179';
-    let warningColor = '#ffa500';
-    let infoColor = '#2196f3';
-
-    let icontype = '';
-    let color = '';
-
-    switch (icon) {
-      case 'error':
-        icontype = errorIcon;
-        color = errorColor;
-        break;
-      case 'success':
-        icontype = successIcon;
-        color = successColor;
-        break;
-      case 'warning':
-        icontype = warningIcon;
-        color = warningColor;
-        break;
-      case 'info':
-        icontype = infoIcon;
-        color = infoColor;
-        break;
-      default:
-        icontype = infoIcon;
-        color = infoColor;
-        break;
+    const soundSrc = typeof info.soundSrc === "string" ? info.soundSrc : this.defaults.soundSrc;
+    if (soundSrc) {
+      try {
+        const audio = new Audio(soundSrc);
+        audio.volume = typeof info.soundVolume === "number" ? info.soundVolume : this.defaults.soundVolume;
+        audio.play().catch(() => { });
+      } catch { }
     }
 
-    const panel = document.getElementById('alert-panel');
-    const panelbig = document.getElementById('panelbig');
-    const panelIcon = document.getElementById('alert-panel-icon');
-    const panelText = document.getElementById('alert-panel-text');
+    new Notify(payload);
+  }
 
-    panelIcon.src = icontype;
-    if (text == null || text == undefined || text == '') {
-      panelText.innerHTML = `<strong>${title}</strong>`;
-    } else {
-      panelText.innerHTML = `<strong>${title}</strong><br>${text}`;
+  #normalizeStatus(icon) {
+    switch ((icon || "info").toLowerCase()) {
+      case "success": return "success";
+      case "error": return "error";
+      case "warning": return "warning";
+      case "info":
+      default: return "info";
     }
-    panel.style.backgroundColor = color;
-
-    panelbig.classList.add('normal-zoom');
-    sonido_inicio.play();
-
-    await this.wait(200);
-
-    panelbig.classList.add('big-zoom');
-    await this.wait(200);
-
-    panelbig.classList.remove('big-zoom');
-
-    panel.classList.add('active-alert');
-    await this.wait(200);
-
-    panelText.style.whiteSpace = 'normal';
-    await this.wait(3400);
-
-    panel.classList.remove('active-alert');
-    panelText.style.whiteSpace = 'nowrap';
-
-    await this.wait(300);
-
-    panelbig.classList.add('big-zoom');
-    await this.wait(200);
-
-    panelbig.classList.remove('big-zoom');
-    panelbig.classList.remove('normal-zoom');
-
-    isAnimating = false;
-    await this.showNextAlert();
   }
-
-  async wait(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
 }
 
 export { Alert };

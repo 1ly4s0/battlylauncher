@@ -1,83 +1,168 @@
-<div class="bottom_bar_music" id="buttom_bar_music">
-  <div class="bottom_bar_music_top">
-    <div class="playing-song">
-      <img class="playing-song-image" id="music-player-card-img" src="./assets/images/icons/music.gif" alt="">
-      <div class="playing-song-info">
-        <p class="playing-song-title" id="no_song"></p>
-        <span style="
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        " class="playing-song-artist">
-          <p class="playing-song-artist" id="music-author"></p>
-          <p class="current-time" id="current-time"></p>/
-          <p class="total-time" id="max-duration"></p>
-        </span>
-      </div>
-    </div>
-    <div class="song-control-area">
-      <div class="controls">
-        <button class="control-btn prev-btn" id="prev"><i class="fa-solid fa-backward-step"></i></button>
-        <button class="control-btn play-btn play-stop" id="music-player-card-pause"><i
-            class="fa-solid fa-play"></i></button>
-        <button class="control-btn next-btn" id="next"><i class="fa-solid fa-forward-step"></i></button>
-      </div>
-    </div>
-    <div class="volume-control">
-      <i class="fa-solid fa-volume-high" id="volume-info"></i>
-      <input name="slider" type="range" style="color: #fff" value="100" id="volumen">
-    </div>
-  </div>
-  <div class="playing-music-progress">
-    <div class="progress-area" id="music-panel-progress">
-      <div class="progress-bar">
-        <audio id="main-audio" src=""></audio>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="b-music-outer-container">
 
-
-<div class="header-battly-music">
-  <p style="font-size: 40px; color: #fff; font-weight: 800;">Battly <span style="color: #3e8ed0">Music</span></p>
-  <div class="header-battly-music-buttons">
-    <button id="show-playlists" class="button is-info" 1ly4s0><span id="show-playlists-text">
-        Playlists</span></button>
-    <button id="return-btn" class="button is-info" 1ly4s0>Volver</button>
+  <div class="b-music-sidebar">
+    <div>
+      <div class="b-music-brand">
+        <h2 data-string-id="music.battlyMusic"></h2>
+      </div>
+      <nav class="b-music-nav">
+        <div data-panel="b-music-panel-inicio">
+          <i class="fas fa-home"></i>
+          <p data-string-id="music.home"></p>
+        </div>
+        <div data-panel="b-music-panel-biblioteca">
+          <i class="fas fa-music"></i>
+          <p data-string-id="music.yourLibrary"></p>
+        </div>
+        <div data-panel="b-music-panel-playlists" id="b-music-show-playlists">
+          <i class="fas fa-list"></i>
+          <p data-string-id="music.playlists"></p>
+        </div>
+        <div data-panel="b-music-queue-panel" id="b-music-queue-panel-btn">
+          <i class="fas fa-list-ul"></i>
+          <p data-string-id="music.currentQueue"></p>
+        </div>
+        <div id="b-music-import-spotify-btn" data-panel="b-music-panel-import-spotify" class="premium-feature">
+          <i class="fa-brands fa-spotify"></i>
+          <p data-string-id="music.importPlaylistSidebar"></p>
+          <span class="battly-plus-badge">Battly+</span>
+        </div>
+        <div id="b-music-import-youtube-btn" data-panel="b-music-panel-import-youtube">
+          <i class="fa-brands fa-youtube"></i>
+          <p data-string-id="music.importPlaylistSidebar"></p>
+        </div>
+        <div id="b-music-back-btn">
+          <i class="fas fa-arrow-rotate-backward"></i>
+          <p data-string-id="music.backToHome"></p>
+        </div>
+      </nav>
+    </div>
   </div>
-</div>
-<div class="body-battly-music" id="music-panel-card">
-  <div class="body-header-battly-music">
-    <div class="body-header-search-panel-battly-music">
-      <p style="font-size: 30px;" id="music-panel-search-text">Buscar</p>
-      <div class=" body-header-search-panel-div-battly-music">
-        <input class="input is-info body-header-battly-music-input" type="text" id="nombre-de-cancion"
-          placeholder="Nombre de la canción" style="width: 40%;">
-        <button id="reproducir-btn" class="body-header-battly-music-button button is-info" <i
-          class="margin fa-solid fa-search"></i><span id="reproducir-btn-text"></span>
+
+  <div class="b-music-main-container">
+
+    <div class="b-music-top-bar">
+      <div class="b-music-nav-arrows">
+        <button class="b-music-nav-arrow-btn" id="arrow-back"><i class="fas fa-chevron-left"></i></button>
+        <button class="b-music-nav-arrow-btn" id="arrow-forward"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="b-music-search-bar-container">
+        <input type="text" placeholder="¿Qué quieres escuchar hoy?" data-string-id="music.searchPlaceholder"
+          id="top-search">
+        <button class="button is-primary" id="b-music-reproducir-btn">
+          <i class="fa fa-search"></i>
         </button>
+        <div class="b-music-search-results"></div>
       </div>
     </div>
-    <div class="body-header-playlist-panel-battly-music">
-      <p style="font-size: 30px; margin-left: 10px;" id="your_playlist">Mi Playlist</p>
-      <button id="save-playlist" class="button is-info" style=" justify-content: center;">
-        <i class="margin fa-solid fa-save"></i><span id="save-playlist-text"></span>
+
+    <div class="b-music-main-content">
+
+      <div class="b-music-panel b-music-panel-inicio active">
+        <h1 style="margin-bottom: 0px;" data-string-id="music.home"></h1>
+        <p style="margin-bottom:20px;" data-string-id="music.welcomeMessage">
+        </p>
+        <div class="b-music-recent-row">
+        </div>
+
+        <h2 style="margin-bottom: 0px;" data-string-id="music.recommendationsForYou"></h2>
+
+      </div>
+
+      <div class="b-music-panel b-music-panel-biblioteca">
+        <h1 data-string-id="music.yourLibrary"></h1>
+        <div class="b-music-library-sections">
+          <div class="b-music-library-section">
+            <h3 data-string-id="music.songsYouLike"></h3>
+            <div class="b-music-library-list" id="library-liked-list">p
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="b-music-panel b-music-panel-playlists">
+        <h1 data-string-id="music.yourPlaylists"></h1>
+        <div class="b-music-playlists-container">
+
+        </div>
+      </div>
+
+      <div class="b-music-panel b-music-panel-playlist-view">
+        <div class="playlist-header">
+          <img class="playlist-cover" src="" alt="Playlist Cover">
+          <div class="playlist-info">
+            <h1 class="playlist-title"></h1>
+            <p class="playlist-description"></p>
+            <div class="playlist-controls">
+              <button id="playlist-edit-btn" class="button is-small is-info is-outlined btn-dont-change">
+                <i class="fas fa-pen"></i>&nbsp;<span data-string-id="common.edit"></span>
+              </button>
+              <button id="playlist-delete-btn" class="button is-small is-danger is-outlined btn-dont-change">
+                <i class="fas fa-trash"></i>&nbsp;<span data-string-id="common.delete"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <p class="playlist-songs-title" data-string-id="music.songs"></p>
+        <div class="playlist-songs">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-music-bottom_bar_music" id="buttom_bar_music">
+    <div class="b-music-bottom_bar_music_top">
+      <div class="b-music-playing-song">
+        <img class="b-music-playing-song-image" id="music-player-card-img"
+          src="https://i.ytimg.com/vi/ZrFs1Q5GbMA/hqdefault.jpg" alt="">
+        <div class="b-music-playing-song-info">
+          <p class="b-music-playing-song-title" id="no_song" style="height: 25px;">
+          </p>
+          <span class="b-music-playing-song-artist-div">
+            <p class="b-music-playing-song-artist" id="music-author"></p>
+            <p class="b-music-current-time" id="current-time">0:00</p> /
+            <p class="b-music-total-time" id="max-duration">0:00</p>
+          </span>
+        </div>
+      </div>
+      <div class="b-music-song-control-area">
+        <div class="b-music-controls">
+          <button class="b-music-control-btn b-music-prev-btn" id="prev"><i
+              class="fa-solid fa-backward-step"></i></button>
+          <button class="b-music-control-btn b-music-play-btn b-music-play-stop" id="music-player-card-pause"><i
+              class="fa-solid fa-pause"></i></button>
+          <button class="b-music-control-btn b-music-next-btn" id="next"><i
+              class="fa-solid fa-forward-step"></i></button>
+        </div>
+      </div>
+      <div class="b-music-volume-control">
+        <i class="fa-solid fa-volume-high" id="volume-info"></i>
+        <input id="b-music-volumen" class="b-pengu-range" type="range" min="0" max="100" value="50"
+          aria-label="Volumen">
+      </div>
+    </div>
+    <div class="b-music-playing-music-progress">
+      <div class="b-music-progress-area" id="music-panel-progress">
+        <div class="b-music-progress-bar" style="width: 5.00123%;">
+          <audio id="main-audio" src="" preload="auto"></audio>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-music-queue-panel" data-panel="b-music-queue-panel">
+    <div class="queue-header">
+      <h2 data-string-id="music.playbackQueue"></h2>
+      <button class="queue-close" id="b-music-queue-panel-close">
+        <i class="fas fa-times"></i>
       </button>
     </div>
-  </div>
-  <div class="body-body-battly-music">
-    <div class="body-body-search-panel-battly-music">
-      <p class="results-text" id="music-panel-results-text">Resultados</p>
-      <div class="results" id="search-results">
-      </div>
+    <div class="b-music-queue-list">
+
     </div>
-    <div class="body-body-playlist-panel-battly-music" id="playlist">
-      <img src="./assets/images/icons/thinking.png" alt=""
-        style="width: 50px; height: 50px; margin-top: auto;margin-left: auto; margin-right: auto;">
-      <p style="text-align: center; margin-bottom: auto; margin-left: auto; margin-right: auto; margin-top: 10px;">
-        <span id="you-dont-have-songs-in-the-playlist-1">No tienes canciones en la lista de
-          reproducción.</span><br><span id="you-dont-have-songs-in-the-playlist-2">¡Busca una o carga una
-          playlist!</span>
-      </p>
-    </div>
+
+    <button class="button is-primary" id="b-music-save-playlist-btn" data-string-id="music.savePlaylistButton"></button>
   </div>
+</div>

@@ -6,8 +6,8 @@
 const pkg = require('../package.json');
 let url = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url
 
-let config = 'https://api.battlylauncher.com/v2/launcher/config-launcher/config.json';
-let news = 'https://api.battlylauncher.com/v2/battlylauncher/launcher/news-launcher/news.json';
+let config = 'https://api.battlylauncher.com/v3/launcher/config-launcher/config.json';
+let news = 'https://api.battlylauncher.com/v3/battlylauncher/launcher/news-launcher/news.json';
 const axios = require("axios")
 const https = require("https")
 const httpsAgent = new https.Agent({
@@ -26,6 +26,9 @@ class Config {
 
 
       const response = await axios.get(config, { httpsAgent });
+
+      console.log("Configuración del launcher descargada correctamente.");
+      console.log(response.data);
 
       fs.writeFileSync(
         path.join(

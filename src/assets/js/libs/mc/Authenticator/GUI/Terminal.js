@@ -1,7 +1,9 @@
 "use strict";
 /**
- * @author Luuxis
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
+ * This code is distributed under the CC-BY-NC 4.0 license:
+ * https://creativecommons.org/licenses/by-nc/4.0/
+ *
+ * Original author: Luuxis
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -14,3 +16,4 @@ module.exports = async function (url) {
     let result = await prompt_1.default.get(['copy-URL']);
     return result['copy-URL'].split("code=")[1].split("&")[0];
 };
+//# sourceMappingURL=Terminal.js.map

@@ -2,14 +2,16 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="preload" href="assets/images/icon.png" as="image">
   <link rel="stylesheet" href="assets/css/launcher.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.11/mediaelementplayer.css" />
+  <link rel="stylesheet" href="assets/js/libs/normalize.min.css" />
+  <link rel="stylesheet" href="assets/js/libs/cropper.min.css" />
+  <link rel="stylesheet" href="assets/js/libs/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/js/libs/mediaelementplayer.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="assets/js/libs/animate.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="assets/js/libs/bulma.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width">
@@ -23,9 +25,19 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
     data-tag="font" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.6.0/tinycolor.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.8.1/cropper.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+
+  <script src="assets/js/libs/Sortable.min.js"></script>
+  <script src="assets/js/libs/tinycolor.min.js"></script>
+  <script src="assets/js/libs/cropper.min.js"></script>
+  <script src="assets/js/libs/skinviewer.js"></script>
+  <link rel="stylesheet" href="assets/css/shepherd.css" />
+  <script src="https://apis.google.com/js/api.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify/dist/simple-notify.css" />
+  <script src="https://cdn.jsdelivr.net/npm/simple-notify/dist/simple-notify.min.js"></script>
 </head>
 
 <body class="hide">
@@ -42,196 +54,87 @@
   <video autoplay muted loop id="video-background">
     <source src="" type="video/mp4">
   </video>
-  <style>
-    #video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-  </style>
-  <style>
-    .contenedor-animacion {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .rectangulo {
-      position: absolute;
-      width: 100vw;
-      height: 50.07vh;
-      background-color: #3498db;
-      display: flex;
-      flex-direction: column;
-      /* Cambio a dirección de columna */
-      justify-content: center;
-      align-items: center;
-      color: #ffffff;
-      font-size: 24px;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .rectangulo img {
-      height: 100%;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-
-    .rectangulo-abajo {
-      transform: translate(0%, -50%) rotate(360deg);
-    }
-
-    .rectangulo-arriba {
-      transform: translate(0%, 50%) rotate(360deg);
-    }
-
-    .rectangulo:nth-child(2) {
-      top: 50vh;
-      background-color: #3498db;
-    }
-
-    .rectangulo.subiendo:nth-child(1) {
-      transform: translateY(-100%);
-    }
-
-    .rectangulo.bajando:nth-child(2) {
-      transform: translateY(100%);
-    }
-
-    .invertido {
-      transform: translateY(0) !important;
-    }
-
-    /* alerts */
-
-    .overlay {
-      position: fixed;
-      top: 30px;
-      left: 50%;
-      width: auto;
-      max-width: 70%;
-      z-index: 99999;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      transform: translateX(-50%);
-    }
-
-    .panelalert {
-      width: 55px;
-      height: auto;
-      min-height: 60px;
-      overflow: hidden;
-      position: relative;
-      border-radius: 10px;
-      transition: width 0.5s ease, height 0.5s ease;
-      display: flex;
-      align-items: center;
-      margin: 0 auto;
-      z-index: 99999;
-      padding-top: 5px;
-      padding-bottom: 5px;
-    }
-
-    .panelalert img {
-      width: 35px;
-      height: auto;
-      margin-left: 10px;
-      margin-right: 5px;
-      transition: transform 0.5s ease;
-    }
-
-    .panelalert-text {
-      flex: 1;
-      overflow: hidden;
-      white-space: nowrap;
-      opacity: 0;
-      font-size: 15px;
-      transition: opacity 0.5s ease;
-      font-family: 'Poppins', sans-serif;
-      text-align: left;
-      color: #fff;
-      margin-top: 5px;
-      margin-right: 10px;
-      border-radius: 0px !important;
-    }
-
-    .panelalert-text strong {
-      font-weight: 800;
-      font-size: 18px;
-      line-height: 1;
-      color: #fff;
-    }
-
-    #panelbig.normal-zoom {
-      transform: scale(1);
-      transition: transform 0.3s ease;
-    }
-
-    #panelbig.big-zoom {
-      transform: scale(1.1);
-      transition: transform 0.2s ease;
-    }
-
-    #panelbig {
-      transform: scale(0);
-      transition: transform 0.5s ease;
-      max-width: 80%;
-    }
-
-    .panelalert.active-alert {
-      width: 100%;
-      min-height: 60px;
-    }
-
-    .panelalert.active-alert .panelalert-text {
-      opacity: 1;
-    }
-
-    .header-text-to-add {
-      margin-left: 5px;
-      transition: color 0.3s ease;
-    }
-
-    .header-text-to-add:hover {
-      cursor: pointer;
-      color: #3498db;
-    }
-  </style>
   <div class="dragbar"></div>
-  <div class="frame" id="header-frame">
-    <div class="titulo no-drag" style="font-weight: 800">Battly Launcher 2.4.2 <span id="header-text-to-add"
-        class="header-text-to-add"></span>
+  <div class="titlebar" id="header-frame" role="banner">
+    <div class="title no-drag">
+      Battly Launcher 3.0.0
+      <span id="header-text-to-add" class="no-drag header-text-to-add"></span>
     </div>
-    <div class="buttons">
-      <div id="minimize" class="button-frame icon-minimize no-drag"></div>
-      <div id="maximize" class="button-frame icon-maximize no-drag"></div>
-      <div id="close" class="button-frame icon-close no-drag"></div>
+    <div class="window-controls">
+      <button id="minimize" class="win-btn no-drag" aria-label="Minimizar"></button>
+      <button id="maximize" class="win-btn no-drag" aria-label="Maximizar"></button>
+      <button id="close" class="win-btn no-drag" aria-label="Cerrar"></button>
     </div>
   </div>
 
-  <div class="preload-content">
-    <div class="contenedor-animacion">
-      <div class="rectangulo">
-        <img class="rectangulo-arriba" src="assets/images/icon.png" alt="Imagen A">
+  <div class="preload-content" id="loader-overlay" style="display:none;">
+    <div class="diamond diamond-left"></div>
+    <div class="diamond diamond-right"></div>
+
+    <div class="logo">
+      <img src="assets/images/icon.png" />
+      <div class="loader b-preload-spinner">
       </div>
-      <div class="rectangulo">
-        <img class="rectangulo-abajo" src="assets/images/icon.png" alt="Imagen B">
-      </div>
-      <h1 id="loading-text" style="margin-top: -50px; text-align: center;">Loading</h1>
+      <h1 id="loading-text">Loading</h1>
     </div>
   </div>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
 
   <div class="panels"></div>
+  <div id="christmas-snowflakes" style="display: none;">
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+  </div>
 
+  <script src="assets/js/utils/stringLoader.js"></script>
   <script src="assets/js/launcher.js" type="module"></script>
 </body>
 

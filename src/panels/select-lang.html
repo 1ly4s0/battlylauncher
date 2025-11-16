@@ -18,41 +18,6 @@
                 <img src="../assets/images/flags/en.png" alt="" style="margin-right: 5px;">English
             </span>
         </button>
-        <button class="button is-info is-outlined is-medium" value="fr">
-            <span style="display: flex; align-items: center;">
-                <img src="../assets/images/flags/fr.png" alt="" style="margin-right: 5px;">Français
-            </span>
-        </button>
-        <button class="button is-info is-outlined is-medium" value="pt">
-            <span style="display: flex; align-items: center;">
-                <img src="../assets/images/flags/pt.png" alt="" style="margin-right: 5px;">Português
-            </span>
-        </button>
-        <button class="button is-info is-outlined is-medium" value="de">
-            <span style="display: flex; align-items: center;">
-                <img src="../assets/images/flags/de.png" alt="" style="margin-right: 5px;">Deutsch
-            </span>
-        </button>
-        <button class="button is-info is-outlined is-medium" value="it">
-            <span style="display: flex; align-items: center;">
-                <img src="../assets/images/flags/it.png" alt="" style="margin-right: 5px;">Italiano
-            </span>
-        </button>
-        <button class="button is-info is-outlined is-medium" value="ja">
-            <span style="display: flex; align-items: center;">
-                <img src="../assets/images/flags/jp.png" alt="" style="margin-right: 5px;">Japanese
-            </span>
-        </button>
-        <button class="button is-info is-outlined is-medium" value="ru">
-            <span style="display: flex; align-items: center;">
-                <img src="../assets/images/flags/ru.png" alt="" style="margin-right: 5px;">Russian
-            </span>
-        </button>
-        <button class="button is-info is-outlined is-medium" value="ar">
-            <span style="display: flex; align-items: center;">
-                <img src="../assets/images/flags/ar.png" alt="" style="margin-right: 5px;">Arabic
-            </span>
-        </button>
     </div>
 
     <video id="video" autoplay loop muted>
@@ -110,12 +75,14 @@
         document.querySelector('.button-divs').style.display = 'flex';
     }, 2000);
 
+    const { getValue, setValue } = require('./assets/js/utils/storage');
+
     //obtener todos los botones y añadirles un evento click, dependiendo del idioma, hacer un ipcRenderer.send('change-lang', 'lang')
     const buttons = document.querySelectorAll('.button');
     buttons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', async () => {
             const lang = button.value;
-            localStorage.setItem('lang', lang);
+            await setValue('lang', lang);
             ipcRenderer.send('change-lang', lang);
         });
     });

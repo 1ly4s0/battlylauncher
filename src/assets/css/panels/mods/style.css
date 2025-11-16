@@ -14,7 +14,7 @@
   --dl-size-size-xsmall: 16px;
   --dl-space-space-unit: 10px;
   --dl-color-primary-100: #003eb3;
-  --dl-color-primary-300: #3e8ed0;
+  --dl-color-primary-300: #161d2b;
   --dl-color-primary-500: #14a9ff;
   --dl-color-primary-700: #85dcff;
   --dl-color-success-300: #199033;
@@ -69,7 +69,7 @@
 }
 .Content {
   font-size: 16px;
-  font-family: Inter;
+  font-family: Poppins;
   font-weight: 400;
   line-height: 1.15;
   text-transform: none;
@@ -77,7 +77,7 @@
 }
 .Heading {
   font-size: 32px;
-  font-family: Inter;
+  font-family: Poppins;
   font-weight: 700;
   line-height: 1.15;
   text-transform: none;

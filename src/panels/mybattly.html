@@ -1,0 +1,422 @@
+<div class="b-mybattly-main-panel">
+
+    <div class="b-mybattly-main-panel-left">
+
+        <div class="b-mybattly-main-panel-welcome">
+            <div class="b-mybattly-welcome-panel-left">
+                <h1 class="b-mybattly-is-inter b-mybattly-b-700 b-mybattly-white b-mybattly-f40">
+                    <span data-string-id="mybattly.hello">Hello</span> <span id="b-mybattly-username"></span>! 👋
+                </h1>
+                <p class="b-mybattly-is-inter b-mybattly-b-600 b-mybattly-white b-mybattly-f15"
+                    data-string-id="mybattly.welcome"></p>
+
+                <button id="back-mybattly-btn"
+                    class="button is-info b-mybattly-is-inter b-mybattly-b-600 is-outlined btn-dont-change"
+                    data-string-id="mybattly.backToHome">
+                    Back to home
+                </button>
+            </div>
+            <div class="b-mybattly-welcome-panel-right">
+                <div class="b-mybattly-main-panel-welcome-data">
+                    <h1><i class="fa-solid fa-cube"></i></h1>
+                    <h1 class="b-mybattly-b-600 b-mybattly-is-inter b-mybattly-white" data-string-id="mybattly.mods">
+                        Mods</h1>
+                    <p class="b-mybattly-b-500 b-mybattly-is-inter b-mybattly-ccc">
+                        <span id="mybattly-mods-count"></span> <span data-string-id="mybattly.modsLabel">mods</span>.
+                        <span id="mybattly-activated-mods-count"></span> <span
+                            data-string-id="mybattly.active">active</span>,
+                        <span id="mybattly-deactivated-mods-count"></span> <span
+                            data-string-id="mybattly.inactive">inactive</span>.
+                    </p>
+                </div>
+                <div class="b-mybattly-main-panel-welcome-data">
+                    <h1><i class="fa-solid fa-earth"></i></h1>
+                    <h1 class="b-mybattly-b-600 b-mybattly-is-inter b-mybattly-white"
+                        data-string-id="mybattly.worldsLabel">
+                        Worlds / Maps
+                    </h1>
+
+                    <p class="b-mybattly-b-500 b-mybattly-is-inter b-mybattly-ccc">
+                        <span id="mybattly-worlds-count">0</span> <span data-string-id="mybattly.worlds">worlds</span>
+                    </p>
+                </div>
+                <div class="b-mybattly-main-panel-welcome-data">
+                    <h1><i class="fa-solid fa-image"></i></h1>
+                    <h1 class="b-mybattly-b-600 b-mybattly-is-inter b-mybattly-white"
+                        data-string-id="mybattly.resourcePacksLabel">
+                        Resource Packs
+                    </h1>
+
+                    <p class="b-mybattly-b-500 b-mybattly-is-inter b-mybattly-ccc">
+                        <span id="mybattly-resourcepacks-count">0</span> <span
+                            data-string-id="mybattly.resourcePacks">resource packs</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <div class="b-mybattly-panel-container" style="position: relative;">
+            <div class="b-mybattly-panel-overlay" data-target="panel-mods">
+                <button class="button is-info b-mybattly-is-inter b-mybattly-load-panel" data-target="panel-mods"
+                    data-string-id="mybattly.loadMods">
+                    Load Mods
+                </button>
+            </div>
+            <div class="b-mybattly-main-panel-mods b-mybattly-blur-panel" id="panel-mods">
+                <h1 class="b-mybattly-white b-mybattly-f20 b-mybattly-is-inter b-mybattly-b-600"
+                    data-string-id="mybattly.yourMods">
+                    Your mods
+                </h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.icon"></th>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.name"></th>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.version">Versión</th>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.status"></th>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.actions"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="https://minotar.net/helm/1ly4s0" style="width: 30px; height: 30px;" alt="" />
+                            </td>
+                            <td>Sodium</td>
+                            <td>1.18.1 (NeoForge)</td>
+                            <td><span class="tag is-success">Activo</span></td>
+                            <td>
+                                <button
+                                    class="button is-info is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter btn-dont-change">
+                                    Desactivar
+                                </button>
+                                <button
+                                    class="button is-warning is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter btn-dont-change">
+                                    Ver carpeta
+                                </button>
+                                <button
+                                    class="button is-danger is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter btn-dont-change">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://minotar.net/helm/1ly4s0" style="width: 30px; height: 30px;" alt="" />
+                            </td>
+                            <td>Fabric API</td>
+                            <td>1.18.1 (Fabric)</td>
+                            <td><span class="tag is-success">Activo</span></td>
+                            <td>
+                                <button
+                                    class="button is-info is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter btn-dont-change">
+                                    Desactivar
+                                </button>
+                                <button
+                                    class="button is-warning is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter btn-dont-change">
+                                    Ver carpeta
+                                </button>
+                                <button
+                                    class="button is-danger is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter btn-dont-change">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://minotar.net/helm/1ly4s0" style="width: 30px; height: 30px;" alt="" />
+                            </td>
+                            <td>Iris Shaders</td>
+                            <td>1.18.1 (NeoForge)</td>
+                            <td><span class="tag is-success">Activo</span></td>
+                            <td>
+                                <button
+                                    class="button is-info is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter btn-dont-change">
+                                    Desactivar
+                                </button>
+                                <button
+                                    class="button is-warning is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter btn-dont-change">
+                                    Ver carpeta
+                                </button>
+                                <button
+                                    class="button is-danger is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter btn-dont-change">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br />
+
+        <div class="b-mybattly-panel-container" style="position: relative;">
+            <div class="b-mybattly-panel-overlay" data-target="panel-worlds">
+                <button class="button is-info b-mybattly-load-panel b-mybattly-is-inter" data-target="panel-worlds"
+                    data-string-id="mybattly.loadWorlds">
+                    Cargar Mundos
+                </button>
+            </div>
+            <div class="b-mybattly-main-panel-worlds b-mybattly-blur-panel" id="panel-worlds">
+                <h1 class="b-mybattly-white b-mybattly-f20 b-mybattly-is-inter b-mybattly-b-600"
+                    style="display: flex; justify-content: space-between; align-items: center;">
+                    <span data-string-id="mybattly.yourWorlds"></span>
+                    <div style="display: flex; gap: 10px;">
+                        <button
+                            class="button is-info is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter btn-dont-change"
+                            id="view-backup-history-btn" data-string-id="mybattly.viewBackupHistory">
+                            <i class="fas fa-history"></i> Ver historial
+                        </button>
+                        <button
+                            class="button is-success is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter btn-dont-change"
+                            id="save-drive" data-string-id="mybattly.makeBackup">
+                            <i class="fas fa-cloud-upload-alt"></i> Hacer copia de seguridad
+                        </button>
+                    </div>
+                </h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.icon"></th>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.name"></th>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.type">Tipo</th>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.actions"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="https://minotar.net/helm/1ly4s0" style="width: 30px; height: 30px;" alt="" />
+                            </td>
+                            <td>Mundo de supervivencia</td>
+                            <td>Supervivencia</td>
+                            <td>
+                                <button
+                                    class="button is-info is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Hacer copia de seguridad
+                                </button>
+                                <button
+                                    class="button is-danger is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://minotar.net/helm/1ly4s0" style="width: 30px; height: 30px;" alt="" />
+                            </td>
+                            <td>Mundo creativo</td>
+                            <td>Creativo</td>
+                            <td>
+                                <button
+                                    class="button is-info is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Hacer copia de seguridad
+                                </button>
+                                <button
+                                    class="button is-danger is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://minotar.net/helm/1ly4s0" style="width: 30px; height: 30px;" alt="" />
+                            </td>
+                            <td>Mundo de aventuras</td>
+                            <td>Aventuras</td>
+                            <td>
+                                <button
+                                    class="button is-info is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Hacer copia de seguridad
+                                </button>
+                                <button
+                                    class="button is-danger is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br />
+
+        <div class="b-mybattly-panel-container" style="position: relative;">
+            <div class="b-mybattly-panel-overlay" data-target="panel-resourcepacks">
+                <button class="button is-info b-mybattly-load-panel b-mybattly-is-inter"
+                    data-target="panel-resourcepacks" data-string-id="mybattly.loadResourcePacks">
+                    Cargar Resourcepacks
+                </button>
+            </div>
+            <div class="b-mybattly-main-panel-worlds b-mybattly-blur-panel" id="panel-resourcepacks">
+                <h1 class="b-mybattly-white b-mybattly-f20 b-mybattly-is-inter b-mybattly-b-600"
+                    data-string-id="mybattly.yourResourcePacks">
+                    Tus packs de recursos
+                </h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.icon"></th>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.name"></th>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.compatibility">Compatibilidad</th>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.status"></th>
+                            <th class="b-mybattly-b-500 b-mybattly-white b-mybattly-is-inter"
+                                data-string-id="mybattly.actions"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="https://minotar.net/helm/1ly4s0" style="width: 30px; height: 30px;" alt="" />
+                            </td>
+                            <td>Faithful</td>
+                            <td>32x</td>
+                            <td><span class="tag is-success">Activo</span></td>
+                            <td>
+                                <button
+                                    class="button is-info is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Desactivar
+                                </button>
+                                <button
+                                    class="button is-danger is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://minotar.net/helm/1ly4s0" style="width: 30px; height: 30px;" alt="" />
+                            </td>
+                            <td>PureBDCraft</td>
+                            <td>128x</td>
+                            <td><span class="tag is-warning">Inactivo</span></td>
+                            <td>
+                                <button
+                                    class="button is-info is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Activar
+                                </button>
+                                <button
+                                    class="button is-danger is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://minotar.net/helm/1ly4s0" style="width: 30px; height: 30px;" alt="" />
+                            </td>
+                            <td>John Smith Legacy</td>
+                            <td>64x</td>
+                            <td><span class="tag is-success">Activo</span></td>
+                            <td>
+                                <button
+                                    class="button is-info is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Desactivar
+                                </button>
+                                <button
+                                    class="button is-danger is-small is-outlined b-mybattly-b-600 b-mybattly-is-inter">
+                                    Eliminar
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-mybattly-messages">
+
+        <div class="b-mybattly-main-panel-msg">
+            <h1 class="b-mybattly-main-panel-msg-title b-mybattly-f20" data-string-id="mybattly.notifications">
+                <i class="fa-solid fa-bell"></i> <span data-string-id="mybattly.notifications">Your notifications</span>
+            </h1>
+            <div class="b-mybattly-notifications-list">
+                <div class="b-mybattly-notification-message">
+                    <h1><i class="fa-solid fa-cloud"></i> <span data-string-id="mybattly.backups">Backups</span></h1>
+                    <hr class="b-mybattly-hr" />
+                    <p id="backup-notification-text">
+                        <span data-string-id="mybattly.noBackupNotification"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-mybattly-main-panel-stats">
+            <h1 class="b-mybattly-white b-mybattly-f20 b-mybattly-is-inter b-mybattly-b-600"
+                data-string-id="mybattly.recentStats">
+                Estadísticas Recientes
+            </h1>
+            <div class="b-mybattly-stats-grid">
+                <div class="b-mybattly-stat-item">
+                    <h1><i class="fa-solid fa-clock"></i></h1>
+                    <div>
+                        <p class="b-mybattly-b-500 b-mybattly-is-inter b-mybattly-white">
+                            Tiempo jugado
+                        </p>
+                        <p class="b-mybattly-b-600 b-mybattly-is-inter b-mybattly-ccc" id="mybattly-stats-hours">
+                            42 horas este mes
+                        </p>
+                    </div>
+                </div>
+                <div class="b-mybattly-stat-item">
+                    <h1><i class="fa-solid fa-save"></i></h1>
+                    <div>
+                        <p class="b-mybattly-b-500 b-mybattly-is-inter b-mybattly-white">
+                            Copias de seguridad
+                        </p>
+                        <p class="b-mybattly-b-600 b-mybattly-is-inter b-mybattly-ccc">
+                            5 realizadas
+                        </p>
+                    </div>
+                </div>
+                <div class="b-mybattly-stat-item">
+                    <h1><i class="fa-solid fa-cube"></i></h1>
+                    <div>
+                        <p class="b-mybattly-b-500 b-mybattly-is-inter b-mybattly-white">
+                            Mods actualizados
+                        </p>
+                        <p class="b-mybattly-b-600 b-mybattly-is-inter b-mybattly-ccc">
+                            3 recientes
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-mybattly-main-panel-recent-worlds">
+            <h1 class="b-mybattly-white b-mybattly-f20 b-mybattly-is-inter b-mybattly-b-600"
+                data-string-id="mybattly.recentWorlds">
+                Últimos Mundos Jugados
+            </h1>
+            <ul>
+                <li>
+                    <p class="b-mybattly-b-600 b-mybattly-white">Mundo Supervivencia</p>
+                    <p class="b-mybattly-b-500 b-mybattly-ccc">Última jugada: 22/01/2025</p>
+                </li>
+                <li>
+                    <p class="b-mybattly-b-600 b-mybattly-white">Aventura Épica</p>
+                    <p class="b-mybattly-b-500 b-mybattly-ccc">Última jugada: 21/01/2025</p>
+                </li>
+                <li>
+                    <p class="b-mybattly-b-600 b-mybattly-white">Mundo Creativo</p>
+                    <p class="b-mybattly-b-500 b-mybattly-ccc">Última jugada: 20/01/2025</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

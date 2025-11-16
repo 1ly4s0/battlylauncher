@@ -1,17 +1,14 @@
-/**
- * @author TECNO BROS
- 
- */
-
 "use strict";
 
-// libs
 const fs = require("fs");
 const { Microsoft, Mojang } = require("./assets/js/libs/mc/Index");
 const { ipcRenderer } = require("electron");
+const { getValue, setValue } = require('./assets/js/utils/storage');
+import { Alert } from "./utils/alert.js";
 
-const { Lang } = require("./assets/js/utils/lang.js");
+import { createPerformanceTimer } from "./utils/launcherLogger.js";
 
+require('./assets/js/libs/errorReporter');
 
 import {
   config,
@@ -22,48 +19,117 @@ import {
   accountSelect,
 } from "./utils.js";
 
-import Login from "./panels/login.js";
-import Home from "./panels/home.js";
-import Settings from "./panels/settings.js";
-import Welcome from "./panels/welcome.js";
-import Mods from "./panels/mods.js";
-import Music from "./panels/music.js";
-import NewsPanel from "./panels/news.js";
-import Friends from "./panels/friends.js";
-import Chat from "./panels/chat.js";
-import Servers from "./panels/servers.js";
-
+import { LoadAPI } from "./utils/loadAPI.js";
 
 class Launcher {
   async init() {
+    this.initTheme();
     const loadingText = document.getElementById("loading-text");
     loadingText.innerHTML = "Cargando Panel de Inicio";
     this.initLog();
     console.log("🔄 Iniciando Launcher...");
-    new Lang().GetLang().then(async (lang) => {
-      console.log("🔄 Iniciando Lang...");
-      console.log(lang)
-      if (process.platform == "win32") this.initFrame();
-      this.config = await config.GetConfig().then((res) => res);
-      this.news = await config.GetNews().then((res) => res);
-      this.database = await new database().init();
-      this.createPanels(
-        Login,
-        Home,
-        Settings,
-        Welcome,
-        Mods,
-        Music,
-        NewsPanel,
-        Friends,
-        Chat,
-        Servers
-      );
-      this.getaccounts();
-    }).catch(error => {
-      console.error("Error:", error);
+
+    console.time("LangLauncher");
+    const { Lang } = require("./assets/js/utils/lang.js");
+    const langInstance = new Lang();
+
+    const langTimer = createPerformanceTimer("Language Loading");
+    const lang = await langInstance.GetLang().then((lang) => {
+      langTimer.end();
+      return lang;
+    }).catch((error) => {
+      console.error("Failed to load language", { error: error.message });
+      return null;
     });
 
+    const apiTimer = createPerformanceTimer("API Config Loading");
+    await new LoadAPI().GetConfig().then((config) => {
+      apiTimer.end();
+      console.info("API Config loaded successfully");
+      return config;
+    }).catch((error) => {
+      console.error("Failed to load API config", { error: error.message });
+    });
+
+    console.info("Starting Launcher initialization");
+
+    if (process.platform == "win32") this.initFrame();
+
+    const { config } = await import("./utils.js");
+
+    const configTimer = createPerformanceTimer("Config Initialization");
+    this.config = await new LoadAPI().GetConfig()
+    configTimer.end();
+
+    const newsTimer = createPerformanceTimer("News Loading");
+    this.news = await config.GetNews();
+    newsTimer.end();
+
+    const dbTimer = createPerformanceTimer("Database Loading");
+    const { database } = await import("./utils.js");
+
+    dbTimer.end();
+
+    const dbInitTimer = createPerformanceTimer("Database Initialization");
+    this.database = await new database().init();
+    dbInitTimer.end();
+
+    const panelsTimer = createPerformanceTimer("Panels Loading");
+    const panelNames = [
+      "login",
+      "music",
+      "home",
+      "settings",
+      "mods",
+      "news",
+      "friends",
+      "chat",
+      "servers",
+      "mybattly",
+    ];
+
+    const panels = await Promise.all(panelNames.map(async (name, index) => {
+      const panelTimer = createPerformanceTimer(`Panel ${name}`);
+
+      const loadingText = document.getElementById("loading-text");
+      loadingText.innerHTML = `Cargando ${name}`;
+
+      try {
+        const panel = await import(`./panels/${name}.js`);
+        panelTimer.end({ panelName: name, index });
+        console.debug(`Panel ${name} loaded successfully`, { index });
+        return panel;
+      } catch (error) {
+        console.error(`Failed to load panel ${name}`, {
+          error: error.message,
+          panelName: name,
+          index
+        });
+        throw error;
+      }
+    }));
+    panelsTimer.end({ totalPanels: panelNames.length });
+
+    console.info("Starting panels initialization");
+
+    const createPanelsTimer = createPerformanceTimer("Panels Creation");
+    await this.createPanels(...panels.map((p, index) => ({ panel: p.default, index })));
+    createPanelsTimer.end();
+
+    const accountsTimer = createPerformanceTimer("Accounts Loading");
+    await this.getAccounts();
+    console.timeEnd("🕐 getAccountsLauncher");
+
+    console.time("🕐 DisableIframeLogsLauncher")
+    await this.disableIframeLogs();
+    console.timeEnd("🕐 DisableIframeLogsLauncher");
+  }
+
+  async initTheme() {
+    let backgroundLoadingScreenColor = await getValue("background-loading-screen-color");
+    if (backgroundLoadingScreenColor) {
+      document.querySelectorAll(".diamond").forEach(rect => rect.style.backgroundColor = backgroundLoadingScreenColor);
+    }
   }
 
   initLog() {
@@ -121,10 +187,10 @@ class Launcher {
 
   initFrame() {
     const loadingText = document.getElementById("loading-text");
-    loadingText.innerHTML = "Cargando Panel";
+    loadingText.innerHTML = "Cargando paneles";
     document.querySelector(".preload-content").style.display = "block";
     console.log("🔄 Iniciando Frame...");
-    document.querySelector(".frame").classList.toggle("hide");
+    document.querySelector(".titlebar").classList.toggle("hide");
     document.querySelector(".dragbar").classList.toggle("hide");
 
     document.querySelector("#minimize").addEventListener("click", () => {
@@ -146,194 +212,187 @@ class Launcher {
     });
   }
 
-  createPanels(...panels) {
+  async createPanels(...panels) {
     document.querySelector(".preload-content").style.display = "";
     let panelsElem = document.querySelector(".panels");
-    for (let panel of panels) {
+
+    console.time("🕐 Load Panels");
+
+    const panelPromises = panels.map(async ({ panel }) => {
       console.log(`🔄 Iniciando panel de ${panel.name}...`);
+
       let div = document.createElement("div");
       div.classList.add("panel", panel.id);
-      div.innerHTML = fs.readFileSync(
-        `${__dirname}/panels/${panel.id}.html`,
-        "utf8"
-      );
+
+      const content = await fs.promises.readFile(`${__dirname}/panels/${panel.id}.html`, "utf8");
+
+      div.innerHTML = content;
       panelsElem.appendChild(div);
+
       new panel().init(this.config, this.news);
-    }
+    });
+
+    await Promise.all(panelPromises);
+
+    console.timeEnd("🕐 Load Panels");
   }
 
-  async getaccounts() {
+  async getAccounts() {
     const loadingText = document.getElementById("loading-text");
-    loadingText.innerHTML = "Cargando Cuentas";
-    document.querySelector(".preload-content").style.display = "block";
-    let accounts = await this.database.getAccounts();
-    let selectaccount = (await this.database.get("1234", "accounts-selected"))
-      ?.value?.selected;
-    console.log(`🔄 Iniciando ${accounts.length} cuenta(s)...`);
+    const preload = document.querySelector(".preload-content");
+    const showPreload = (msg) => { loadingText.textContent = msg; preload.style.display = "block"; };
+    const hidePreload = () => { preload.style.display = "none"; };
 
-    if (!accounts.length) {
+    showPreload("Cargando cuentas…");
+
+    const accounts = await this.database.getAccounts();
+    const selectedAccount = await this.database.getSelectedAccount();
+
+    if (!accounts?.length) {
       changePanel("login");
-      document.querySelector(".preload-content").style.display = "none";
-    } else {
-      let premiums = [];
+      hidePreload();
+      return;
+    }
+
+    console.log(`🔄 Iniciando ${accounts.length} cuenta(s)…`);
+
+    const processAccount = async (acc) => {
+      if (!acc?.meta) return;
       try {
-        premiums = await fetch(
-          "https://api.battlylauncher.com/api/usuarios/obtenerUsuariosPremium"
-        )
-          .then((response) => response.json())
-          .then((data) => data)
-          .catch((err) => { });
-      } catch (error) {
-        premiums = [];
-      }
+        if (acc.type === "microsoft") {
+          console.log(`🔄 Autenticando Microsoft (Xbox) – ${acc.name}`);
+          showPreload("Autenticando cuenta de Microsoft…");
 
-      for (let account of accounts) {
-        if (account.meta.type === "Xbox") {
-          console.log(
-            `🔄 Iniciando cuenta de xbox con el nombre de usuario ${account.name}...`
-          );
-          let refresh = await new Microsoft(this.config.client_id).refresh(
-            account
-          );
-          let refresh_accounts;
-          let refresh_profile;
+          const refresh = await new Microsoft(this.config.client_id).refresh(acc);
+          if (refresh?.error) throw new Error(refresh.errorMessage);
 
-          if (refresh.error) {
-            this.database.delete(account.uuid, "accounts");
-            this.database.delete(account.uuid, "profile");
-            if (account.uuid === selectaccount)
-              this.database.update({ uuid: "1234" }, "accounts-selected");
-            console.error(`[Cuenta] ${account.uuid}: ${refresh.errorMessage}`);
-            continue;
-          }
-
-          refresh_accounts = {
+          const updatedAccount = {
+            type: "microsoft",
             access_token: refresh.access_token,
             client_token: refresh.client_token,
             uuid: refresh.uuid,
             name: refresh.name,
             refresh_token: refresh.refresh_token,
             user_properties: refresh.user_properties,
-            meta: {
-              type: refresh.meta.type,
-              xuid: refresh.meta.xuid,
-              demo: refresh.meta.demo,
-            },
+            meta: { type: refresh.meta.type, xuid: refresh.meta.xuid, demo: refresh.meta.demo }
           };
-
-          refresh_profile = {
+          const updatedProfile = {
             uuid: refresh.uuid,
-            skins: refresh.profile.skins || [],
-            capes: refresh.profile.capes || [],
+            skins: refresh.profile?.skins ?? [],
+            capes: refresh.profile?.capes ?? []
           };
 
-          this.database.update(refresh_accounts, "accounts");
-          this.database.update(refresh_profile, "profile");
-          addAccount(refresh_accounts, false, true);
-          if (account.uuid === selectaccount) accountSelect(refresh.uuid);
-        } else if (account.meta.type === "Mojang") {
-          if (account.meta.offline) {
-            document.querySelector(".preload-content").style.display = "block";
-            console.log(
-              `🔄 Iniciando cuenta de Mojang con el nombre de ususario ${account.name}...`
-            );
-            addAccount(account, false, true);
-            if (account.uuid === selectaccount) accountSelect(account.uuid);
-            continue;
+          await this.database.updateAccount(acc.uuid, updatedAccount);
+
+          addAccount(updatedAccount, false, true);
+          if (refresh.uuid === selectedAccount?.uuid) accountSelect(refresh.uuid);
+        } else if (acc.type === "battly") {
+          console.log(`🔄 Autenticando Battly – ${acc.name}`);
+          try {
+            const res = await fetch("https://battlylauncher.com/api/launcher/hello", {
+              headers: { Authorization: `Bearer ${acc.token}` }
+            });
+            const data = await res.json();
+            if (data.status !== 200) {
+              throw new Error(`Battly API devolvió ${data.status}`);
+            }
+
+            const updatedAccount = {
+              type: "battly",
+              uuid: data.data.uuid,
+              name: data.data.username,
+              token: acc.token,
+              access_token: "1234",
+              client_token: "1234",
+              user_properties: "{}",
+              premium: data.data.premium,
+              skins: data.data.skins,
+              connections: data.data.connections,
+              meta: { type: "battly", offline: true }
+            };
+
+            await this.database.updateAccount(acc.uuid, updatedAccount);
+            showPreload(`Actualizando perfil de ${updatedAccount.name}…`);
+            addAccount(updatedAccount, data.data.premium, false);
+
+            if (updatedAccount.uuid === selectedAccount?.uuid) {
+              accountSelect(updatedAccount.uuid);
+            }
+          } catch (err) {
+            throw new Error(`Error al autenticar con Battly: ${err.message ?? err}`);
           }
+        }
+      } catch (err) {
+        console.error(`[Cuenta] ${acc.uuid}: ${err.message ?? err}`);
+        await this.database.deleteAccount(acc.uuid);
+        if (acc.uuid === selectedAccount?.uuid) {
+          console.warn(`Cuenta seleccionada eliminada: ${acc.uuid}`);
+          await this.database.removeAccount();
+          const accounts = await this.database.getAccounts();
+          if (accounts.length > 0) {
+            const firstUuid = accounts[0].uuid;
+            await this.database.selectAccount(firstUuid);
 
-          let validate = await Mojang.validate(account);
-          if (!validate) {
-            this.database.delete(account.uuid, "accounts");
-            if (account.uuid === selectaccount)
-              this.database.update({ uuid: "1234" }, "accounts-selected");
-            console.error(`[Cuenta] ${account.uuid}: El token es inválido.`);
-            continue;
+            if (!document.getElementById(firstUuid)) {
+              let theresAccount = false;
+              setInterval(() => {
+                if (theresAccount) return;
+                const accountElem = document.getElementById(firstUuid);
+                if (accountElem) {
+                  accountSelect(firstUuid);
+                  theresAccount = true;
+
+                  new Alert().ShowAlert({
+                    title: "Cuenta eliminada",
+                    text: `La cuenta ${acc.name} ha sido eliminada. Se ha seleccionado la cuenta ${accounts[0].name} automáticamente.`,
+                    type: "info",
+                  });
+                }
+              }, 1000);
+            }
+          } else {
+            console.warn("No hay cuentas disponibles, cambiando al panel de login.");
+            changePanel("login");
           }
-
-          let refresh = await Mojang.refresh(account);
-          console.log(
-            `🔄 Iniciando cuenta de Mojang con el nombre de usuario ${account.name}...`
-          );
-          let refresh_accounts;
-
-          if (refresh.error) {
-            this.database.delete(account.uuid, "accounts");
-            if (account.uuid === selectaccount)
-              this.database.update({ uuid: "1234" }, "accounts-selected");
-            console.error(`[Cuenta] ${account.uuid}: ${refresh.errorMessage}`);
-            continue;
-          }
-
-          refresh_accounts = {
-            access_token: refresh.access_token,
-            client_token: refresh.client_token,
-            uuid: refresh.uuid,
-            name: refresh.name,
-            user_properties: refresh.user_properties,
-            meta: {
-              type: refresh.meta.type,
-              offline: refresh.meta.offline,
-            },
-          };
-
-          this.database.update(refresh_accounts, "accounts");
-          addAccount(refresh_accounts, false, true);
-          if (account.uuid === selectaccount) accountSelect(refresh.uuid);
-        } else if (account.meta.type === "cracked") {
-          console.log(
-            `🔄 Iniciando cuenta de Battly con el nombre de usuario ${account.name}...`
-          );
-          let isPremium;
-          if (!premiums) isPremium = false;
-          else isPremium = premiums.includes(account.name);
-          addAccount(account, isPremium, false);
-          if (account.uuid === selectaccount) accountSelect(account.uuid);
         }
       }
+    };
 
-      if (
-        !(await this.database.get("1234", "accounts-selected")).value.selected
-      ) {
-        let uuid = (await this.database.getAll("accounts"))[0]?.value?.uuid;
-        if (uuid) {
-          this.database.update(
-            { uuid: "1234", selected: uuid },
-            "accounts-selected"
-          );
-          accountSelect(uuid);
+    await Promise.allSettled(accounts.map(processAccount));
+
+    const stillSelected = await this.database.getSelectedAccount();
+    if (!stillSelected) {
+      const firstUuid = (await this.database.getAccounts())[0]?.uuid;
+      if (firstUuid) {
+        await this.database.selectAccount(firstUuid);
+        accountSelect(firstUuid);
+      }
+    }
+
+    if ((await this.database.getAccounts()).length === 0) {
+      changePanel("login");
+      hidePreload();
+      return;
+    }
+
+    hidePreload();
+    changePanel("home");
+  }
+
+  async disableIframeLogs() {
+    const iframes = Array.from(document.getElementsByTagName('iframe'));
+    for (const iframe of iframes) {
+      iframe.addEventListener("load", () => {
+        try {
+          iframe.contentWindow.console.error = () => { };
+        } catch (e) {
+
         }
-      }
-
-      if ((await this.database.getAccounts()).length == 0) {
-        changePanel("login");
-        document.querySelector(".preload-content").style.display = "none";
-        return;
-      }
-
-      //comprobar si es la primera vez que se inicia el launcher
-      try {
-        if (
-          !(await this.database.get("1234", "first-launch")).value.firstlaunch
-        ) {
-          changePanel("login");
-          this.database.update(
-            { uuid: "1234", firstlaunch: true },
-            "first-launch"
-          );
-        }
-      } catch (e) {
-        changePanel("login");
-        this.database.update(
-          { uuid: "1234", firstlaunch: true },
-          "first-launch"
-        );
-      }
-
-      document.querySelector(".preload-content").style.display = "none";
-      changePanel("home");
+      });
     }
   }
+
 }
 
 new Launcher().init();
+

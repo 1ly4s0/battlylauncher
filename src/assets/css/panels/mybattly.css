@@ -1,0 +1,486 @@
+html {
+  background-color: #14161a;
+}
+
+/* ============ CLASES TIPOGRÁFICAS ============ */
+.b-mybattly-is-inter {
+  font-family: "Inter", sans-serif !important;
+}
+
+.b-mybattly-is-poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.b-mybattly-b-400 {
+  font-weight: 400 !important;
+}
+
+.b-mybattly-b-500 {
+  font-weight: 500 !important;
+}
+
+.b-mybattly-b-600 {
+  font-weight: 600 !important;
+}
+
+.b-mybattly-b-700 {
+  font-weight: 700 !important;
+}
+
+.b-mybattly-b-800 {
+  font-weight: 800 !important;
+}
+
+.b-mybattly-b-900 {
+  font-weight: 900 !important;
+}
+
+.b-mybattly-white {
+  color: #fff !important;
+}
+
+.b-mybattly-ccc {
+  color: #ccc !important;
+}
+
+.b-mybattly-f40 {
+  font-size: 40px !important;
+}
+
+.b-mybattly-f30 {
+  font-size: 30px !important;
+}
+
+.b-mybattly-f20 {
+  font-size: 20px !important;
+}
+
+.b-mybattly-f15 {
+  font-size: 15px !important;
+}
+
+/* Ajuste de botón Bulma */
+.button {
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 10px !important;
+}
+
+/* ============ TABLAS ============ */
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  background-color: transparent !important;
+}
+
+td {
+  vertical-align: middle !important;
+}
+
+tr,
+td,
+th,
+table {
+  background-color: transparent !important;
+}
+
+thead tr {
+  background-color: #070d16 !important;
+  color: #fff;
+}
+
+th,
+tr,
+td {
+  padding: 10px !important;
+}
+
+th {
+  background-color: #3b3f51;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+td {
+  background-color: transparent !important;
+  border-bottom: 1px solid #444b57;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+td:first-child {
+  border-right: 1px solid #3b3f51;
+}
+
+table {
+  width: 100% !important;
+  text-align: start !important;
+  margin: 20px auto !important;
+  border: 1px solid #3b3f51 !important;
+  border-collapse: separate !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+/* ============ CSS ORIGINAL (Renombrado con prefijo) ============ */
+.b-mybattly-main-panel {
+  margin: 50px;
+  margin-top: 70px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  max-height: 85%;
+}
+
+.b-mybattly-main-panel-left {
+  width: 80%;
+  height: auto;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.b-mybattly-main-panel-welcome {
+  width: 100%;
+  background-color: #0f1623;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  height: auto;
+  justify-content: space-between;
+}
+
+.b-mybattly-last-registers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.b-mybattly-main-panel-mods {
+  width: 100%;
+  background-color: #0f1623;
+  border-radius: 10px;
+  padding: 20px;
+  height: auto;
+}
+
+.b-mybattly-main-panel-mods h1 {
+  font-size: 20px;
+}
+
+.b-mybattly-main-panel-mods-texts {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.b-mybattly-main-panel-worlds {
+  width: 100%;
+  background-color: #0f1623;
+  border-radius: 10px;
+  padding: 20px;
+  height: auto;
+}
+
+.b-mybattly-main-panel-worlds h1 {
+  font-size: 20px;
+}
+
+.b-mybattly-main-panel-worlds-texts {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.b-mybattly-user-profile-last-register-date {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.b-mybattly-user-profile-last-register-date p {
+  font-size: 15px;
+  color: #fff;
+  transform: translateX(10px);
+}
+
+.b-mybattly-user-profile-last-register {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: #070d16;
+  padding: 5px;
+  border-radius: 10px;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.b-mybattly-user-profile-last-register:hover {
+  background-color: #0b131f;
+}
+
+.b-mybattly-user-profile-last-register-profile {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.b-mybattly-user-profile-last-register-actions {
+  display: flex;
+  gap: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.b-mybattly-user-profile-last-register-actions button {
+  border-radius: 10px !important;
+  font-size: 10px !important;
+}
+
+.b-mybattly-user-profile-last-register-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.b-mybattly-user-profile-last-register-profile p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.b-mybattly-notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.b-mybattly-notifications-list-status {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.b-mybattly-main-panel-welcome-data {
+  background-color: #070d16;
+  box-shadow: 0px 5px 5px 0px #070d16;
+  border-radius: 10px;
+  padding: 20px;
+  width: 150px;
+}
+
+.b-mybattly-main-panel-welcome-data h1 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.1;
+}
+
+.b-mybattly-welcome-panel-left h1 {
+  font-size: 30px;
+}
+
+.b-mybattly-welcome-panel-right {
+  display: flex;
+  gap: 10px;
+}
+
+.b-mybattly-main-panel-msg {
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  background-color: #0f1623;
+  border-radius: 10px;
+}
+
+.b-mybattly-main-panel-msg-title {
+  font-size: 22px;
+  color: #fff;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.b-mybattly-main-panel-msg h1 {
+  font-size: 20px;
+}
+
+.b-mybattly-messages {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.b-mybattly-notification-message {
+  background-color: #070d16;
+  box-shadow: 0px 5px 5px 0px #070d16;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.b-mybattly-notification-message-status {
+  background-color: #070d16;
+  box-shadow: 0px 5px 5px 0px #070d16;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+.b-mybattly-notification-message-status h1 {
+  font-size: 20px;
+  color: #fff;
+}
+
+.b-mybattly-notification-message h1 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.b-mybattly-notification-message p {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.b-mybattly-hr {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* ---- OVERLAYS Y BLUR (renombrado con b-mybattly-) ---- */
+.b-mybattly-panel-container {
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.b-mybattly-panel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* Aplica blur y desactiva eventos en los paneles hasta que se carguen */
+.b-mybattly-blur-panel {
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+@keyframes disableBlur {
+  0% {
+    filter: blur(6px);
+    pointer-events: none;
+    opacity: 1;
+  }
+
+  99% {
+    filter: blur(0px);
+    pointer-events: all;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+/* ============ STATS Y RECIENTES (extra) ============ */
+.b-mybattly-main-panel-stats {
+  background-color: #0f1623;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.b-mybattly-stats-grid {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.b-mybattly-stat-item {
+  background-color: #070d16;
+  box-shadow: 0px 5px 5px 0px #070d16;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-align: start;
+}
+
+.b-mybattly-stat-item h1 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.b-mybattly-stat-item p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.b-mybattly-main-panel-recent-worlds {
+  background-color: #0f1623;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.b-mybattly-main-panel-recent-worlds ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.b-mybattly-main-panel-recent-worlds li {
+  margin-bottom: 15px;
+}
+
+.b-mybattly-main-panel-recent-worlds p {
+  margin: 0;
+}
+
+#back-mybattly-btn {
+  margin-top: 10px;
+}
+
+.b-mybattly-actions-td {
+  display: flex;
+  gap: 10px;
+}
+
+.b-mybattly-actions-td i {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.b-mybattly-actions-td i:hover {
+  color: #ccc;
+}

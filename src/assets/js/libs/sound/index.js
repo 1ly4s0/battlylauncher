@@ -1,10 +1,8 @@
 const { exec } = require('child_process')
 const execPromise = require('util').promisify(exec)
 
-/* MAC PLAY COMMAND */
 const macPlayCommand = (path, volume) => `afplay \"${path}\" -v ${volume}`
 
-/* WINDOW PLAY COMMANDS */
 const addPresentationCore = `Add-Type -AssemblyName presentationCore;`
 const createMediaPlayer = `$player = New-Object system.windows.media.mediaplayer;`
 const loadAudioFile = path => `$player.open('${path}');`
@@ -17,12 +15,8 @@ const windowPlayCommand = (path, volume) =>
   )} $player.Volume = ${volume}; ${playAudio} ${stopAudio}`
 
 module.exports = {
-  play: async (path, volume=0.5) => {
-    /**
-     * Window: mediaplayer's volume is from 0 to 1, default is 0.5
-     * Mac: afplay's volume is from 0 to 255, default is 1. However, volume > 2 usually result in distortion.
-     * Therefore, it is better to limit the volume on Mac, and set a common scale of 0 to 1 for simplicity
-     */
+  play: async (path, volume = 0.5) => {
+
     const volumeAdjustedByOS = process.platform === 'darwin' ? Math.min(2, volume * 2) : volume
 
     const playCommand =
@@ -34,3 +28,4 @@ module.exports = {
     }
   },
 }
+

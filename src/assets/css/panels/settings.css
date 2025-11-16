@@ -19,10 +19,6 @@ section {
   overflow: hidden;
 }
 
-.modal-card-body {
-  overflow: hidden;
-}
-
 .bottom_bar_settings {
   display: flex;
   justify-content: space-between;
@@ -172,15 +168,11 @@ section {
 }
 
 .account-image {
-  position: absolute;
-  height: 70px;
-  margin: 15px 20px;
+  position: relative;
   pointer-events: none;
 }
 
 .account-name {
-  margin: 0 100px;
-  margin-top: 25px;
   font: normal normal bold 40px/45px Poppins;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -231,7 +223,7 @@ section {
  ******************************************************************************/
 
 .java-settings {
-  background: #292929;
+  background: #0f1623;
   border-radius: 5px;
   width: 90%;
   margin: 0 auto;
@@ -240,9 +232,9 @@ section {
 
 .memory-slider {
   position: relative;
-  margin: 24px;
+  /* margin: 24px; */
   height: 18px;
-  width: 550px;
+  width: 540px;
   user-select: none;
 }
 
@@ -263,7 +255,7 @@ section {
   width: 20px;
   height: 10px;
   background: #f1f1f1;
-  border: 4px solid #3e8ed0;
+  border: 2px solid #3e8ed0;
   transition: background-color 0.2s, border 0.2s;
   border-radius: 18px;
   cursor: pointer;
@@ -272,7 +264,6 @@ section {
 .slider-touch-left span:after,
 .slider-touch-right span:after {
   content: attr(value);
-  color: #3e8ed0;
   font: normal normal bold 12px/18px Poppins;
   white-space: nowrap;
   pointer-events: none;
@@ -300,7 +291,7 @@ section {
   display: block;
   height: 100%;
   width: 0%;
-  background: #3e8ed0;
+  background: #161d2b;
   transition: background-color 0.2s;
 }
 
@@ -308,7 +299,6 @@ section {
   display: flex;
   align-items: center;
   font: normal normal bold 15px/25px Poppins;
-  color: #f1f1f1f1;
 }
 
 .path {
@@ -318,8 +308,7 @@ section {
   padding: 8px 16px;
   margin: 0 40px;
   margin-top: 2%;
-  color: #f1f1f1f1;
-  background-color: #1f1f1f;
+  background-color: #0f1623;
   user-select: text;
   transition: color 0.2s, background-color 0.2s;
   border: none;
@@ -339,7 +328,7 @@ section {
 }
 
 .path-button:hover {
-  background-color: #1f1f1f;
+  background-color: #0f1623;
 }
 
 .path-button-reset {
@@ -355,7 +344,7 @@ section {
 }
 
 .path-button-reset:hover {
-  background-color: #1f1f1f;
+  background-color: #0f1623;
 }
 
 .path-file {
@@ -370,8 +359,7 @@ section {
   padding: 8px 16px;
   margin: 0 40px;
   margin-top: 2%;
-  color: #f1f1f1f1;
-  background-color: #1f1f1f;
+  background-color: #0f1623;
   user-select: text;
   transition: color 0.2s, background-color 0.2s;
   border: none;
@@ -398,13 +386,13 @@ section {
 
 .input-settings {
   text-align: center;
-  background: #1f1f1f;
+  background: #0f1623;
   border: none;
   outline: none;
   border-radius: 40px;
   font-size: 20px;
   width: 100px;
-  color: #f1f1f1f1;
+  color: #f0f16231;
 }
 
 .size-cross {

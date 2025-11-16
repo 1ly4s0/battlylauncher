@@ -1,102 +1,142 @@
 "use strict";
 /**
- * @author Luuxis
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0/
+ * This code is distributed under the CC-BY-NC 4.0 license:
+ * https://creativecommons.org/licenses/by-nc/4.0/
+ *
+ * Original author: Luuxis
  */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Index_js_1 = require("../../../utils/Index.js");
-const Downloader_js_1 = __importDefault(require("../../../utils/Downloader.js"));
-const node_fetch_1 = __importDefault(require("node-fetch"));
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const events_1 = require("events");
+const Index_js_1 = require("../../../utils/Index.js");
+const Downloader_js_1 = __importDefault(require("../../../utils/Downloader.js"));
+/**
+ * A class that handles downloading the Fabric loader JSON metadata
+ * and the libraries needed to launch Fabric.
+ */
 class FabricMC extends events_1.EventEmitter {
-    constructor(options = {}) {
+    constructor(options = { path: '', loader: { version: '', build: '' } }) {
         super();
         this.options = options;
     }
+    /**
+     * Fetches metadata from the Fabric API to identify the correct build for the given version.
+     * If the build is "latest" or "recommended", it picks the first entry from the loader array.
+     * Otherwise, it tries to match the specific build requested by the user.
+     *
+     * @param Loader A LoaderObject with metaData and json URLs for Fabric.
+     * @returns      A FabricJSON object on success, or an error object.
+     */
     async downloadJson(Loader) {
-        let build;
+        let selectedBuild;
+        // Fetch overall metadata
+        const metaPath = path_1.default.join(this.options.path, 'mc-assets', 'legacyfabric-meta.json');
         let metaData;
+        // Try to fetch metadata from online source first, then fallback to local cache
         try {
-            metaData = await (0, node_fetch_1.default)(Loader.metaData).then(res => res.json());
-            if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'legacyfabric', this.options.loader.version))) {
-                fs_1.default.mkdirSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'legacyfabric', this.options.loader.version), { recursive: true });
-            }
-            fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'legacyfabric', this.options.loader.version, 'metaData.json'), JSON.stringify(metaData));
+            const response = await fetch(Loader.metaData);
+            metaData = await response.json();
+            fs_1.default.mkdirSync(path_1.default.dirname(metaPath), { recursive: true });
+            fs_1.default.writeFileSync(metaPath, JSON.stringify(metaData, null, 4));
         }
         catch (error) {
-            metaData = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'legacyfabric', this.options.loader.version, 'metaData.json')).toString());
+            // Fetch failed; attempt loading from local cache
+            if (!fs_1.default.existsSync(metaPath)) {
+                return { error: "No cached metadata available and unable to fetch from network" };
+            }
+            metaData = JSON.parse(fs_1.default.readFileSync(metaPath, 'utf-8'));
         }
-        let version = metaData.game.find(version => version.version === this.options.loader.version);
-        let AvailableBuilds = metaData.loader.map(build => build.version);
-        if (!version)
+        // Check if the requested Minecraft version is supported
+        const versionExists = metaData.game.find((ver) => ver.version === this.options.loader.version);
+        if (!versionExists) {
             return { error: `FabricMC doesn't support Minecraft ${this.options.loader.version}` };
+        }
+        // Extract all possible loader builds
+        const availableBuilds = metaData.loader.map((b) => b.version);
+        // If user wants the "latest" or "recommended" build, use the first in the array
         if (this.options.loader.build === 'latest' || this.options.loader.build === 'recommended') {
-            build = metaData.loader[0];
+            selectedBuild = metaData.loader[0];
         }
         else {
-            build = metaData.loader.find(loader => loader.version === this.options.loader.build);
+            // Otherwise, search for a matching build
+            selectedBuild = metaData.loader.find((loaderBuild) => loaderBuild.version === this.options.loader.build);
         }
-        if (!build)
-            return { error: `Fabric Loader ${this.options.loader.build} not found, Available builds: ${AvailableBuilds.join(', ')}` };
-        let url = Loader.json.replace('${build}', build.version).replace('${version}', this.options.loader.version);
-        let json;
+        if (!selectedBuild) {
+            return {
+                error: `Fabric Loader ${this.options.loader.build} not found, Available builds: ${availableBuilds.join(', ')}`
+            };
+        }
+        // Construct the final URL for fetching the Fabric JSON
+        const url = Loader.json
+            .replace('${build}', selectedBuild.version)
+            .replace('${version}', this.options.loader.version);
+        // Fetch and parse the JSON
         try {
-            json = await (0, node_fetch_1.default)(url).then(res => res.json());
-            if (!fs_1.default.existsSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'legacyfabric', this.options.loader.version, 'fabric.json'))) {
-                fs_1.default.writeFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'legacyfabric', this.options.loader.version, 'fabric.json'), JSON.stringify(json));
-            }
+            const response = await fetch(url);
+            const fabricJson = await response.json();
+            return fabricJson;
         }
-        catch (e) {
-            json = JSON.parse(fs_1.default.readFileSync(path_1.default.resolve(this.options.path, '..', '..', 'battly', 'launcher', 'legacyfabric', this.options.loader.version, 'fabric.json'), 'utf-8'));
+        catch (err) {
+            return { error: err.message || 'Failed to fetch or parse Fabric loader JSON' };
         }
-        return json;
     }
+    /**
+     * Iterates over the libraries in the Fabric JSON, checks if they exist locally,
+     * and if not, downloads them. Skips libraries that have "rules" (usually platform-specific).
+     *
+     * @param json The Fabric loader JSON object with a "libraries" array.
+     * @returns    The same libraries array after downloads, or an error object if something fails.
+     */
     async downloadLibraries(json) {
-        let { libraries } = json;
-        let downloader = new Downloader_js_1.default();
-        let files = [];
-        let check = 0;
-        let size = 0;
-        for (let lib of libraries) {
+        const { libraries } = json;
+        const downloader = new Downloader_js_1.default();
+        let pendingDownloads = [];
+        let checkedCount = 0;
+        let totalSize = 0;
+        // Evaluate each library for possible download
+        for (const lib of libraries) {
+            // Skip if library has rules that might disqualify it for this platform
             if (lib.rules) {
-                this.emit('check', check++, libraries.length, 'libraries');
+                this.emit('check', checkedCount++, libraries.length, 'libraries');
                 continue;
             }
-            let file = {};
-            let libInfo = (0, Index_js_1.getPathLibraries)(lib.name);
-            let pathLib = path_1.default.resolve(this.options.path, 'libraries', libInfo.path);
-            let pathLibFile = path_1.default.resolve(pathLib, libInfo.name);
-            if (!fs_1.default.existsSync(pathLibFile)) {
-                let url = `${lib.url}${libInfo.path}/${libInfo.name}`;
-                let sizeFile = 0;
-                let res = await downloader.checkURL(url);
-                if (res.status === 200) {
-                    sizeFile = res.size;
-                    size += res.size;
+            // Build the local file path
+            const libInfo = (0, Index_js_1.getPathLibraries)(lib.name);
+            const libFolder = path_1.default.resolve(this.options.path, 'libraries', libInfo.path);
+            const libFilePath = path_1.default.resolve(libFolder, libInfo.name);
+            // If it doesn't exist, prepare to download
+            if (!fs_1.default.existsSync(libFilePath)) {
+                const libUrl = `${lib.url}${libInfo.path}/${libInfo.name}`;
+                let fileSize = 0;
+                // Check if the file is available and get its size
+                const checkRes = await downloader.checkURL(libUrl);
+                if (checkRes && typeof checkRes === 'object' && 'status' in checkRes && checkRes.status === 200) {
+                    fileSize = checkRes.size;
+                    totalSize += fileSize;
                 }
-                file = {
-                    url: url,
-                    folder: pathLib,
-                    path: `${pathLib}/${libInfo.name}`,
+                pendingDownloads.push({
+                    url: libUrl,
+                    folder: libFolder,
+                    path: libFilePath,
                     name: libInfo.name,
-                    size: sizeFile
-                };
-                files.push(file);
+                    size: fileSize
+                });
             }
-            this.emit('check', check++, libraries.length, 'libraries');
+            this.emit('check', checkedCount++, libraries.length, 'libraries');
         }
-        if (files.length > 0) {
-            downloader.on("progress", (DL, totDL) => {
-                this.emit("progress", DL, totDL, 'libraries');
+        // Download all missing libraries in bulk
+        if (pendingDownloads.length > 0) {
+            downloader.on('progress', (downloaded, total) => {
+                this.emit('progress', downloaded, total, 'libraries');
             });
-            await downloader.downloadFileMultiple(files, size, this.options.downloadFileMultiple);
+            await downloader.downloadFileMultiple(pendingDownloads, totalSize, this.options.downloadFileMultiple);
         }
         return libraries;
     }
 }
 exports.default = FabricMC;
+//# sourceMappingURL=legacyFabric.js.map

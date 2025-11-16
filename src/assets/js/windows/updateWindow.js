@@ -5,7 +5,7 @@
 
 "use strict";
 const electron = require("electron");
-const { ipcMain } = require("electron");
+const { ipcMain, BrowserView } = require("electron");
 const path = require("path");
 const os = require("os");
 let updateWindow = undefined;
@@ -39,8 +39,6 @@ async function createWindow() {
             devTools: true
         },
     });
-
-
 
     electron.Menu.setApplicationMenu(null);
     updateWindow.setMenuBarVisibility(false);

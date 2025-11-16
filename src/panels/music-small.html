@@ -1,245 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mini-player Battly</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+
+  <style>
+    :root {
+      --accent-1: #6d4dff;
+      --accent-2: #26d4ff;
+      --bg-blur: rgba(5, 5, 70, .55);
+      --text-main: #fff;
+      --text-sub: #cfcfe6;
+
+      --progress: 0%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: none
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+
+    .gradient-border {
+      padding: 2px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      align-self: flex-end;
+    }
+
+    #player {
+      width: 340px;
+      background: var(--bg-blur);
+      backdrop-filter: blur(14px);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 14px 18px 16px;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    #cover {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 12px
+    }
+
+    h1 {
+      color: var(--text-main);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.25em;
+      max-height: 2.5em;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      word-break: break-word;
+    }
+
+    p {
+      color: var(--text-sub);
+      font-size: 13px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
+
+    .track {
+      position: relative;
+      height: 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, .15)
+    }
+
+    .track::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: var(--progress);
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      border-radius: 4px;
+      transition: width .2s linear;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-evenly
+    }
+
+    .controls button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      transition: transform .18s ease;
+    }
+
+    .controls button:hover {
+      transform: scale(1.18)
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #fff;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .close-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
 <body>
-
-  <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font" />
-  </head>
-  <div id="boxes">
-
-
-
-
-    <div id="player03" class="player horizontal">
-      <div class="wrapper">
-
-
-        <div class="info-wrapper">
-
-          <img id="musicSmallImg" src="" alt="Música">
-
-          <div class="info">
-            <h1 id="musicSmallName"></h1>
-            <p id="musicSmallDesc"></p>
-          </div>
-
+  <div class="gradient-border">
+    <div id="player">
+      <button class="close-btn" id="closeBtn" title="Cerrar panel de música">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="info">
+        <img id="cover" src="" alt="Portada">
+        <div>
+          <h1 id="title">Título</h1>
+          <p id="artist">Artista</p>
         </div>
+      </div>
 
-        <div class="controls">
-          <div class="prev" id="prev">
-            <i class="fa-solid fa-backward fa-xl" style="color: #fff"></i>
-          </div>
-          <div class="play" id="play">
-            <i class="fa-solid fa-pause fa-xl" id="pauseBtn" style="color: #fff"></i>
-          </div>
-          <div class="next" id="next">
-            <i class="fa-solid fa-forward fa-xl" style="color: #fff"></i>
-          </div>
-        </div>
+      <div class="track"></div>
+
+      <div class="controls">
+        <button id="prev"><i class="fas fa-backward"></i></button>
+        <button id="play"><i id="iconPlay" class="fas fa-pause"></i></button>
+        <button id="next"><i class="fas fa-forward"></i></button>
       </div>
     </div>
   </div>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+
+    ipcRenderer.on('get-song-test', (_, song) => {
+      document.getElementById('title').textContent = song.title;
+      document.getElementById('artist').textContent = song.artist;
+      document.getElementById('cover').src = song.thumbnail;
+    });
+
+    const playBtn = document.getElementById('play');
+    const iconPlay = document.getElementById('iconPlay');
+    playBtn.addEventListener('click', () => {
+      ipcRenderer.send('play-pause');
+      iconPlay.classList.toggle('fa-play');
+      iconPlay.classList.toggle('fa-pause');
+    });
+
+    document.getElementById('next').addEventListener('click', () => ipcRenderer.send('next'));
+    document.getElementById('prev').addEventListener('click', () => ipcRenderer.send('prev'));
+
+    // Botón de cerrar
+    document.getElementById('closeBtn').addEventListener('click', () => {
+      ipcRenderer.send('close-mini-player');
+    });
+
+    ipcRenderer.on('play-song', () => { iconPlay.classList.remove('fa-play'); iconPlay.classList.add('fa-pause'); });
+    ipcRenderer.on('pause-song', () => { iconPlay.classList.remove('fa-pause'); iconPlay.classList.add('fa-play'); });
+
+    ipcRenderer.on('update-song-time', (_, { currentTime, duration }) => {
+      if (!duration) return;
+      const percent = (currentTime / duration) * 100;
+      document.querySelector('.track').style.setProperty('--progress', `${percent}%`);
+    });
+  </script>
 </body>
-<script>
 
-  const { ipcRenderer } = require("electron");
-
-  ipcRenderer.on('get-song-test', (event, song) => {
-    document.getElementById("musicSmallName").innerText = song.name.substring(0, 30) + "...";
-    document.getElementById("musicSmallDesc").innerText = song.author;
-    document.getElementById("musicSmallImg").src = song.img;
-  });
-
-  document.getElementById("play").addEventListener("click", () => {
-    ipcRenderer.send("play-pause");
-    let pauseBtn = document.getElementById("pauseBtn");
-    if (pauseBtn.classList.contains("fa-pause")) {
-      pauseBtn.classList.remove("fa-pause");
-      pauseBtn.classList.add("fa-play");
-    } else {
-      pauseBtn.classList.remove("fa-play");
-      pauseBtn.classList.add("fa-pause");
-    }
-  });
-
-  ipcRenderer.on("play-song", (event, data) => {
-    let pauseBtn = document.getElementById("pauseBtn");
-    if (pauseBtn.classList.contains("fa-play")) {
-      pauseBtn.classList.remove("fa-play");
-      pauseBtn.classList.add("fa-pause");
-    }
-  })
-
-  ipcRenderer.on("pause-song", (event, data) => {
-    let pauseBtn = document.getElementById("pauseBtn");
-    if (pauseBtn.classList.contains("fa-pause")) {
-      pauseBtn.classList.remove("fa-pause");
-      pauseBtn.classList.add("fa-play");
-    }
-  })
-
-  document.getElementById("next").addEventListener("click", () => {
-    ipcRenderer.send("next");
-  });
-
-  document.getElementById("prev").addEventListener("click", () => {
-    ipcRenderer.send("prev");
-  });
-</script>
-<style>
-  #prev,
-  #play,
-  #next {
-    cursor: pointer;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: 'Poppins';
-  }
-
-  body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    user-select: none;
-    font-family: 'Poppins';
-  }
-
-
-  #boxes * {
-    border: 1px solid transparent;
-  }
-
-  #boxes {
-    display: grid;
-    grid-template-columns: max-content max-content;
-    grid-template-areas:
-      'A B'
-      'A C';
-    gap: 32px;
-    place-content: center;
-    height: 100vh;
-  }
-
-  #player03 {
-    grid-area: C;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-  }
-
-  #player03 .controls {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .player {
-    background-color: #080747;
-    padding: 28px;
-    border-radius: 20px;
-  }
-
-  .player img {
-    width: 84px;
-    height: 84px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-
-  .info {
-    color: #E1E1E6;
-    pointer-events: none;
-    font-family: 'Poppins';
-  }
-
-  .info p {
-    opacity: 0.68;
-    font-size: 13px;
-    font-family: 'Poppins';
-  }
-
-  .info-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    pointer-events: none;
-    font-family: 'Poppins';
-  }
-
-  .player h1 {
-    font-size: 17px;
-    color: #E1E1E6;
-    padding-bottom: 7px;
-    font-family: 'Poppins';
-  }
-
-
-  .controls {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    font-family: 'Poppins';
-  }
-
-  .track {
-    padding-top: 28px;
-    position: relative;
-    font-family: 'Poppins';
-
-  }
-
-  .track::before {
-    content: '';
-    height: 6px;
-    width: 100%;
-    display: block;
-    background: #D9D9D9;
-    opacity: 0.3;
-    border-radius: 10px;
-    position: absolute;
-  }
-
-  .track::after {
-    content: '';
-    height: 6px;
-    width: 85%;
-    display: block;
-    background: #D9D9D9;
-    border-radius: 10px;
-
-
-  }
-
-  .time {
-    opacity: 0.7;
-    font-size: 14px;
-    color: gainsboro;
-
-    display: flex;
-    justify-content: space-between;
-    padding-top: 9.6px;
-    font-family: 'Poppins';
-  }
-
-  @media (max-width: 670px) {
-    #boxes {
-      display: flex;
-      flex-direction: column;
-
-      max-width: 270px;
-      margin: auto;
-
-
-      height: auto;
-      padding-block: 60px;
-    }
-  }
-</style>
+</html>

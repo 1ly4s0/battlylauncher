@@ -4,15 +4,24 @@
 
 "use strict";
 const electron = require("electron");
+const { BrowserView } = require("electron");
 const path = require("path");
 const os = require("os");
 const pkg = require("../../../../package.json");
 let mainWindow = undefined;
 let notificationWindow = undefined;
 let selectLangWindow = undefined;
+let syncInProgress = false; // Flag para controlar si hay sincronización en progreso
 const { app, net, protocol } = require("electron");
 const { ipcMain } = require("electron");
 let dev = process.env.NODE_ENV === "dev";
+const { getValue, setValue } = require('../utils/storage');
+const fs = require("fs");
+const dataDirectory =
+  process.env.APPDATA ||
+  (process.platform == "darwin"
+    ? `${process.env.HOME}/Library/Application Support`
+    : process.env.HOME);
 
 
 function getWindow() {
@@ -34,26 +43,39 @@ async function createWindow() {
     minWidth: 980,
     minHeight: 552,
     resizable: true,
+    transparent: false,
     icon: `./src/assets/images/icon.${os.platform() === "win32" ? "ico" : "png"
       }`,
     frame: os.platform() === "win32" ? false : true,
-    show: false,
+    show: fs.existsSync(`${dataDirectory}\\.battly\\launchboost`) ? false : true,
     webPreferences: {
       contextIsolation: false,
       nodeIntegration: true,
       devTools: true,
+      experimentalFeatures: false,
     },
   });
+
+  if (mainWindow) {
+    if (dev) {
+      mainWindow.openDevTools();
+    }
+  }
+
+  mainWindow.loadFile(
+    path.join(electron.app.getAppPath(), "src", "launcher.html")
+  );
+
 
   notificationWindow = new electron.BrowserWindow({
     title: pkg.productname,
     width: 350,
-    height: 200,
+    height: 170,
     minWidth: 200,
     minHeight: 100,
     resizable: false,
     x: electron.screen.getPrimaryDisplay().workAreaSize.width - 370,
-    y: electron.screen.getPrimaryDisplay().workAreaSize.height - 220,
+    y: electron.screen.getPrimaryDisplay().workAreaSize.height - 200,
     icon: `./src/assets/images/icon.${os.platform() === "win32" ? "ico" : "png"
       }`,
     transparent: true,
@@ -62,7 +84,7 @@ async function createWindow() {
     webPreferences: {
       contextIsolation: false,
       nodeIntegration: true,
-      devTools: false,
+      devTools: true,
     },
   });
 
@@ -91,88 +113,148 @@ async function createWindow() {
     path.join(electron.app.getAppPath(), "src", "panels", "music-small.html")
   );
 
-  notificationWindow.hide();
-
-  mainWindow.loadFile(
-    path.join(electron.app.getAppPath(), "src", "launcher.html")
-  );
+  // notificationWindow.hide();
 
   electron.Menu.setApplicationMenu(null);
   mainWindow.setMenuBarVisibility(false);
 
   let lang;
-  mainWindow.once("ready-to-show", () => {
-    mainWindow.webContents
-      .executeJavaScript("localStorage.getItem('lang')")
-      .then((result) => {
-        lang = result;
-        console.log(lang)
-        const validLanguages = ["es", "en", "fr", "pt", "ar", "de", "ru", "it", "ja"];
+  mainWindow.once("ready-to-show", async () => {
+    try {
+      lang = await getValue('lang');
+      console.log("Current language:", lang);
 
-        if (!validLanguages.includes(lang)) {
-          selectLangWindow.loadFile(
-            path.join(
-              electron.app.getAppPath(),
-              "src",
-              "panels",
-              "select-lang.html"
-            )
-          );
-          selectLangWindow.once("ready-to-show", () => {
-            if (selectLangWindow) {
-              selectLangWindow.show();
-              if (dev) {
-                selectLangWindow.openDevTools();
-              }
-            }
-          });
-        } else {
-          if (mainWindow) {
+      // Si no hay idioma configurado (primera vez), establecer español y mostrar el selector
+      if (!lang || lang === null || lang === undefined) {
+        // Establecer español como idioma predeterminado
+        await setValue('lang', 'es');
+
+        selectLangWindow.loadFile(
+          path.join(
+            electron.app.getAppPath(),
+            "src",
+            "panels",
+            "select-lang.html"
+          )
+        );
+        selectLangWindow.once("ready-to-show", () => {
+          if (selectLangWindow) {
+            selectLangWindow.show();
             if (dev) {
-              mainWindow.openDevTools();
+              selectLangWindow.openDevTools();
             }
-            mainWindow.show();
           }
-        }
-
-      })
-      .catch((error) => {
-        console.error("Error al ejecutar JavaScript:", error);
-      });
-  });
-
-  let musicPlayed = false;
-  ipcMain.on("set-song", () => {
-    musicPlayed = true;
-  });
-
-  notificationWindow.once("ready-to-show", () => {
-    if (notificationWindow) {
-      //notificationWindow.openDevTools();
-      notificationWindow.show();
+        });
+      } else {
+        mainWindow.show();
+      }
+    } catch (error) {
+      console.error("Error al ejecutar JavaScript:", error);
+      mainWindow.show();
     }
   });
 
-  mainWindow.once("minimize", () => {
-    // Mostrar la ventana de notificación después de un retraso mínimo
-    if (mainWindow) {
-      if (musicPlayed) {
-        setTimeout(() => {
+  let musicPlayed = false;
+  let musicPanelClosed = false;
+  let currentSongData = null; // Almacenar información de la canción actual
+
+  ipcMain.on("set-song", async (event, song) => {
+    console.log('🎵 Nueva canción detectada:', song?.title || 'Sin título');
+    musicPlayed = true;
+    musicPanelClosed = false; // Reset cuando se reproduce una nueva canción
+    currentSongData = song; // Guardar datos de la canción
+
+    // Si la ventana principal está minimizada u oculta, mostrar el mini player según configuración
+    if (mainWindow && (mainWindow.isMinimized() || !mainWindow.isVisible())) {
+      console.log('   Ventana minimizada/oculta - Verificando configuración...');
+      try {
+        const launcherConfig = await getValue('launcher');
+        const closeMusic = launcherConfig?.launcher?.closeMusic || 'close-music';
+
+        console.log('   Configuración closeMusic:', closeMusic);
+
+        if (closeMusic === 'open-music' && notificationWindow) {
           notificationWindow.show();
-        }, 100);
+          // Enviar información de la canción actual al panel
+          if (currentSongData) {
+            notificationWindow.webContents.send("get-song-test", currentSongData);
+          }
+          console.log('✅ Panel de música mostrado (nueva canción)');
+        }
+      } catch (error) {
+        console.error('❌ Error al verificar configuración:', error);
+      }
+    } else {
+      console.log('   Ventana visible - Panel no se muestra aún');
+    }
+  });
+
+  notificationWindow.once("ready-to-show", async () => {
+    if (notificationWindow) {
+      if (dev) {
+        notificationWindow.openDevTools();
+      }
+
+      // Leer la configuración para saber si debe mostrarse
+      try {
+        const launcherConfig = await getValue('launcher');
+        const closeMusic = launcherConfig?.launcher?.closeMusic || 'close-music';
+
+        // Solo mostrar si la configuración es 'open-music' y hay música reproduciéndose
+        if (closeMusic === 'open-music' && musicPlayed) {
+          notificationWindow.show();
+          // Enviar información de la canción actual al panel
+          if (currentSongData) {
+            notificationWindow.webContents.send("get-song-test", currentSongData);
+          }
+        } else {
+          notificationWindow.hide();
+        }
+      } catch (error) {
+        console.error('Error al leer configuración de música:', error);
+        notificationWindow.hide();
+      }
+    }
+  });
+
+  mainWindow.once("minimize", async () => {
+    if (mainWindow) {
+      if (musicPlayed && !musicPanelClosed) {
+        // Verificar configuración antes de mostrar
+        try {
+          const launcherConfig = await getValue('launcher');
+          const closeMusic = launcherConfig?.launcher?.closeMusic || 'close-music';
+
+          if (closeMusic === 'open-music') {
+            setTimeout(() => {
+              notificationWindow.show();
+              // Enviar información de la canción actual al panel
+              if (currentSongData) {
+                notificationWindow.webContents.send("get-song-test", currentSongData);
+              }
+            }, 100);
+          }
+        } catch (error) {
+          console.error('Error al verificar configuración:', error);
+        }
       }
     }
   });
 
   mainWindow.once("restore", () => {
-    // Ocultar la ventana de notificación
     if (notificationWindow) {
       notificationWindow.hide();
     }
   });
 
-  mainWindow.on("close", () => {
-    process.exit(0);
+  mainWindow.on("close", (event) => {
+    if (syncInProgress) {
+      console.log('🔄 Sincronización en progreso. Ocultando ventana en lugar de cerrar...');
+      event.preventDefault(); // Prevenir el cierre
+      mainWindow.hide(); // Solo ocultar la ventana
+    } else {
+      process.exit(0);
+    }
   });
 
   ipcMain.on("closed", () => {
@@ -182,10 +264,52 @@ async function createWindow() {
     }
   });
 
-  ipcMain.on("main-window-hide", () => {
+  ipcMain.on("main-window-hide", async (event, data) => {
     if (mainWindow) {
-      if (musicPlayed) {
-        notificationWindow.show();
+      const shouldHideLauncher = data?.shouldHideLauncher !== false; // Por defecto true para compatibilidad
+
+      console.log('🎮 Minecraft iniciado - Verificando panel de música...');
+      console.log('   musicPlayed:', musicPlayed, '| musicPanelClosed:', musicPanelClosed);
+      console.log('   shouldHideLauncher:', shouldHideLauncher);
+
+      // Manejar el panel de música independientemente de la configuración del launcher
+      if (musicPlayed && !musicPanelClosed) {
+        // Verificar configuración antes de mostrar
+        try {
+          const launcherConfig = await getValue('launcher');
+          const closeMusic = launcherConfig?.launcher?.closeMusic || 'close-music';
+
+          console.log('   Configuración closeMusic:', closeMusic);
+
+          if (closeMusic === 'open-music') {
+            // Pequeño delay para asegurar que la ventana principal ya está oculta
+            setTimeout(() => {
+              if (notificationWindow && !notificationWindow.isDestroyed()) {
+                notificationWindow.show();
+                // Enviar información de la canción actual al panel
+                if (currentSongData) {
+                  notificationWindow.webContents.send("get-song-test", currentSongData);
+                }
+                console.log('✅ Panel de música mostrado');
+              }
+            }, 300);
+          } else {
+            console.log('⏭️  Panel de música no mostrado (configuración: close-music)');
+          }
+        } catch (error) {
+          console.error('❌ Error al verificar configuración:', error);
+        }
+      } else {
+        if (!musicPlayed) console.log('⏭️  No hay música reproduciéndose');
+        if (musicPanelClosed) console.log('⏭️  Panel cerrado manualmente por el usuario');
+      }
+
+      // Ocultar la ventana principal solo si la configuración lo permite
+      if (shouldHideLauncher) {
+        mainWindow.hide();
+        console.log('🔽 Ventana principal oculta');
+      } else {
+        console.log('👁️  Ventana principal permanece visible');
       }
     }
   });
@@ -196,7 +320,36 @@ async function createWindow() {
     }
   });
 
+  // Manejar el cierre manual del panel de música
+  ipcMain.on("close-mini-player", () => {
+    if (notificationWindow) {
+      musicPanelClosed = true;
+      notificationWindow.hide();
+    }
+  });
+
+  // Manejar cambio de configuración del panel de música
+  ipcMain.on("music-panel-config-changed", (event, newConfig) => {
+    console.log('🎵 Configuración de panel de música cambiada a:', newConfig);
+
+    // Si cambió a "open-music" y hay música reproduciéndose y la ventana está minimizada
+    if (newConfig === 'open-music' && musicPlayed && !musicPanelClosed) {
+      if (mainWindow && (mainWindow.isMinimized() || !mainWindow.isVisible())) {
+        notificationWindow.show();
+        // Enviar información de la canción actual al panel
+        if (currentSongData) {
+          notificationWindow.webContents.send("get-song-test", currentSongData);
+        }
+      }
+    }
+    // Si cambió a "close-music", ocultar el panel
+    else if (newConfig === 'close-music') {
+      notificationWindow.hide();
+    }
+  });
+
   ipcMain.on("get-song", (song) => {
+    console.log("get-song", song);
     notificationWindow.webContents.send("get-song-test", song);
   });
 
@@ -222,10 +375,36 @@ async function createWindow() {
     ipcMain.send("prev");
   });
 
+  ipcMain.on("update-song-time", (event, time) => {
+    if (notificationWindow) {
+      notificationWindow.webContents.send("update-song-time", time);
+    }
+  });
+
   ipcMain.on("change-lang", (event, lang) => {
     selectLangWindow.close();
     app.relaunch();
     app.exit();
+  });
+
+  ipcMain.on("reload-app", () => {
+    if (mainWindow) {
+      mainWindow.reload();
+    }
+    if (notificationWindow) {
+      notificationWindow.reload();
+    }
+  });
+
+  // Control de sincronización en progreso
+  ipcMain.on("sync-started", () => {
+    console.log('🔄 Sincronización iniciada - bloqueando cierre de aplicación');
+    syncInProgress = true;
+  });
+
+  ipcMain.on("sync-finished", () => {
+    console.log('✅ Sincronización completada - permitiendo cierre de aplicación');
+    syncInProgress = false;
   });
 }
 

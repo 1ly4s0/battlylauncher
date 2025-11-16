@@ -1,171 +1,168 @@
-/**
- * @author TECNO BROS
- 
- */
+const { app } = require('electron');
+const Store = require('electron-store');
 
-class database {
+class Database {
+    constructor() {
+
+        this.store = new Store({ name: 'battly-data' });
+
+        if (!this.store.has('accounts')) {
+            this.store.set('accounts', []);
+        }
+        if (!this.store.has('verify-install')) {
+            this.store.set('verify-install', false);
+        }
+    }
+
     async init() {
-        this.db = await new Promise((resolve) => {
-            let request = indexedDB.open('database', 1);
+        this.db = await new Promise((resolve, reject) => {
+            const request = indexedDB.open('database', 1);
 
             request.onupgradeneeded = (event) => {
-                let db = event.target.result;
+                const db = event.target.result;
+                const stores = [
+                    'accounts', 'accounts-selected', 'java-path',
+                    'java-args', 'launcher', 'profile', 'ram', 'screen',
+                ];
 
-                if (!db.objectStoreNames.contains('accounts')) {
-                    db.createObjectStore('accounts', { keyPath: "key" });
-                }
+                stores.forEach((storeName) => {
+                    if (!db.objectStoreNames.contains(storeName)) {
+                        db.createObjectStore(storeName, { keyPath: 'key' });
+                    }
+                });
+            };
 
-                if (!db.objectStoreNames.contains('accounts-selected')) {
-                    db.createObjectStore('accounts-selected', { keyPath: "key" });
-                }
-
-                if (!db.objectStoreNames.contains('java-path')) {
-                    db.createObjectStore('java-path', { keyPath: "key" });
-                }
-
-                if (!db.objectStoreNames.contains('java-args')) {
-                    db.createObjectStore('java-args', { keyPath: "key" });
-                }
-
-                if (!db.objectStoreNames.contains('launcher')) {
-                    db.createObjectStore('launcher', { keyPath: "key" });
-                }
-
-                if (!db.objectStoreNames.contains('profile')) {
-                    db.createObjectStore('profile', { keyPath: "key" });
-                }
-
-                if (!db.objectStoreNames.contains('ram')) {
-                    db.createObjectStore('ram', { keyPath: "key" });
-                }
-
-                if (!db.objectStoreNames.contains('screen')) {
-                    db.createObjectStore('screen', { keyPath: "key" });
-                }
-            }
-
-            request.onsuccess = (event) => {
-                resolve(event.target.result);
-            }
+            request.onsuccess = (event) => resolve(event.target.result);
+            request.onerror = (event) => reject(event.target.error);
         });
+
         return this;
     }
 
-
-    addAccount(data) {
-        let actualAccounts = localStorage.getItem('accounts');
-
-        if (actualAccounts) {
-            actualAccounts = JSON.parse(actualAccounts);
-            actualAccounts.push(data);
-        } else {
-            actualAccounts = [data];
+    async performTransaction(storeName, mode, callback) {
+        if (!this.db.objectStoreNames.contains(storeName)) {
+            return Promise.reject(`Store '${storeName}' no existe.`);
         }
 
-        localStorage.setItem('accounts', JSON.stringify(actualAccounts));
+        const transaction = this.db.transaction(storeName, mode);
+        const store = transaction.objectStore(storeName);
+
+        return new Promise((resolve, reject) => {
+            const request = callback(store);
+            if (!request) return;
+            request.onsuccess = (event) => resolve(event.target.result);
+            request.onerror = (event) => reject(event.target.error);
+        });
+    }
+
+    async addAccount(data) {
+        const accounts = this.store.get('accounts');
+        accounts.push(data);
+        this.store.set('accounts', accounts);
     }
 
     getAccounts() {
-        let actualAccounts = localStorage.getItem('accounts');
-        console.log(JSON.parse(actualAccounts));
-        if (actualAccounts) {
-            return JSON.parse(actualAccounts);
-        } else {
-            return [];
-        }
+        return this.store.get('accounts');
     }
 
-    deleteAccount(uuid) {
-        let actualAccounts = localStorage.getItem('accounts');
-        actualAccounts = actualAccounts ? JSON.parse(actualAccounts) : [];
-
-        let newAccounts = actualAccounts.filter(account => account.uuid !== uuid);
-        localStorage.setItem('accounts', JSON.stringify(newAccounts));
+    async deleteAccount(uuid) {
+        const accounts = this.store.get('accounts');
+        const filtered = accounts.filter(acc => acc.uuid !== uuid);
+        this.store.set('accounts', filtered);
     }
 
-    getAccount(uuid) {
-        let actualAccounts = localStorage.getItem('accounts');
-        actualAccounts = actualAccounts ? JSON.parse(actualAccounts) : [];
-
-        return actualAccounts.find(account => account.uuid === uuid);
+    async getAccount(uuid) {
+        const accounts = this.store.get('accounts');
+        return accounts.find(acc => acc.uuid === uuid) || null;
     }
 
     verifyInstall() {
-        let verifyInstall = localStorage.getItem('verify-install');
-        if (!verifyInstall) {
-            localStorage.setItem('verify-install', false);
-            return false;
-        } else {
-            return verifyInstall;
-        }
+        return this.store.get('verify-install') === true;
     }
 
-    add(data, type) {
-        let store = this.getStore(type);
-        return store.add({ key: this.genKey(data.uuid), value: data });
+    setVerifiedInstall(value = true) {
+        this.store.set('verify-install', !!value);
     }
 
-    get(keys, type) {
-        let store = this.getStore(type);
-        if (store && typeof store.get === 'function') {
-            let Key = this.genKey(keys);
-            return new Promise((resolve) => {
-                let get = store.get(Key);
-                get.onsuccess = (event) => {
-                    resolve(event.target.result);
+    async selectAccount(uuid) {
+        const accounts = this.store.get('accounts');
+        const selected = accounts.find(acc => acc.uuid === uuid);
+        if (!selected) return null;
+
+        this.store.set('selected-account', selected.uuid);
+        return selected;
+    }
+
+    async removeAccount() {
+        this.store.delete('selected-account');
+        return true;
+    }
+
+    async getSelectedAccountToken() {
+        const sel = await this.store.get('selected-account');
+        if (!sel) return null;
+        const account = await this.getAccount(sel);
+        return account ? account.token : null;
+    }
+
+    async getSelectedAccount() {
+        const sel = await this.store.get('selected-account');
+        if (!sel) return null;
+        return await this.getAccount(sel);
+    }
+
+    async add(data, type) {
+        return this.performTransaction(type, 'readwrite', (store) =>
+            store.add({ key: this.genKey(data.uuid), value: data })
+        );
+    }
+
+    async get(keys, type) {
+        return this.performTransaction(type, 'readonly', (store) =>
+            store.get(this.genKey(keys))
+        );
+    }
+
+    async getAll(type) {
+        return this.performTransaction(type, 'readonly', (store) =>
+            store.getAll()
+        );
+    }
+
+    async update(data, type) {
+        return this.performTransaction(type, 'readwrite', (store) => {
+            const request = store.get(this.genKey(data.uuid));
+            request.onsuccess = (event) => {
+                const record = event.target.result;
+                if (record) {
+                    Object.assign(record, { value: data });
+                    store.put(record);
                 }
-            });
-        } else {
-            return Promise.reject(new Error('Invalid store or missing "get" method.'));
-        }
-    }
-
-    getAll(type) {
-        let store = this.getStore(type);
-        return new Promise((resolve) => {
-            let getAll = store.getAll();
-            getAll.onsuccess = (event) => {
-                resolve(event.target.result);
-            }
+            };
         });
     }
 
-    update(data, type) {
-        let self = this;
-        return new Promise(async (resolve) => {
-            let store = self.getStore(type);
-            if (store && store.openCursor) {
-                let keyCursor = store.openCursor(self.genKey(data.uuid));
-                keyCursor.onsuccess = async (event) => {
-                    let cursor = event.target.result;
-                    for (let [key, value] of Object.entries({ value: data })) cursor.value[key] = value;
-                    resolve(cursor.update(cursor.value));
-                }
-            } else {
-                resolve("Object store or openCursor method not found");
-            }
-        });
+    async delete(key, type) {
+        return this.performTransaction(type, 'readwrite', (store) =>
+            store.delete(this.genKey(key))
+        );
     }
 
-
-    delete(key, type) {
-        let store = this.getStore(type);
-        return store.delete(this.genKey(key));
+    genKey(uuid) {
+        return uuid.split('').reduce((key, char) =>
+            (((key << 5) - key) + char.charCodeAt()) & 0xFFFFFFFF
+            , 0);
     }
 
-    getStore(type) {
-        const objectStoreNames = Array.from(this.db.objectStoreNames);
-        if (!objectStoreNames.includes(type)) {
-            return "not found";
-        }
-        return this.db.transaction(type, "readwrite").objectStore(type);
-    }
+    async updateAccount(uuid, data) {
+        const accounts = this.store.get('accounts');
+        const index = accounts.findIndex(acc => acc.uuid === uuid);
+        if (index === -1) return false;
 
-    genKey(int) {
-        var key = 0;
-        for (let c of int.split("")) key = (((key << 5) - key) + c.charCodeAt()) & 0xFFFFFFFF;
-        return key;
+        accounts[index] = { ...accounts[index], ...data };
+        this.store.set('accounts', accounts);
+        return true;
     }
 }
 
-export default database;
+export default Database;

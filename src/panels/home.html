@@ -1,1280 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
+<audio id="audioPlayer" controls autoplay style="display: none;"></audio>
+<div class="bottom_bar">
+    <button id="more-settings-btn" class="button is-info" oncontextmenu="return false;">
+        <span style="font-size: 20px;">
+            <i class="fa-solid fa-angle-up"></i>
+        </span>
+    </button>
+    <ul class="more-options">
+        <li class="option-item">
+            <a href="#" id="mybattly-btn">
+                <i class="fa-solid fa-user-tag"></i>
+                <span data-string-id="navigation.myBattly"></span>
+            </a>
+        </li>
+        <li class="option-item">
+            <a href="#" id="settings-btn">
+                <i class="fa-solid fa-gear"></i>
+                <span data-string-id="navigation.settings"></span>
+            </a>
+        </li>
+        <li class="option-item">
+            <a href="#" id="btnShowNews">
+                <i class="fa-solid fa-newspaper"></i>
+                <span data-string-id="navigation.news"></span>
+            </a>
+        </li>
+        <li class="option-item">
+            <a href="#" id="openBattlyFolderButton">
+                <i class="fa-solid fa-folder-open"></i>
+                <span data-string-id="navigation.seeFolder"></span>
+            </a>
+        </li>
+        <li class="option-item">
+            <a href="#" id="BotonUnirseServidorDiscord">
+                <i class="fa-brands fa-discord"></i>
+                <span data-string-id="navigation.discord"></span>
+            </a>
+        </li>
+    </ul>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <button id="boton_abrir_mods" class="button is-info">
+        <span>
+            <i class="fa-solid fa-cube"></i> <span data-string-id="navigation.mods"></span>
+        </span>
+        <span class="button-span"></span>
+    </button>
+    <button id="music-btn" class="button is-info">
+        <span>
+            <i class="fa-solid fa-music"></i> <span data-string-id="navigation.music"></span>
+        </span>
+        <span class="button-span"></span>
+    </button>
+    <button id="servers-btn" class="button is-info">
+        <span>
+            <i class="fa-solid fa-server"></i> <span data-string-id="buttons.serversBtn"></span>
+        </span>
+    </button>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
-
-<body>
-    <audio id="audioPlayer" controls autoplay style="display: none;"></audio>
-    <div class="bottom_bar">
-        <button id="more-settings-btn" class="button is-info" oncontextmenu="return false;">
-            <span style="font-size: 20px;">
-                <i class="fa-solid fa-angle-up"></i>
-            </span>
-        </button>
-        <ul class="more-options">
-            <li class="option-item">
-                <a href="#" id="settings-btn">
-                    <i class="fa-solid fa-gear"></i>
-                    <span id="settings-button-text">Ajustes</span>
-                </a>
+    <button id="instancias-btn" class="button is-info">
+        <span>
+            <i class="fa-solid fa-folder"></i> <span data-string-id="navigation.instances"></span>
+        </span>
+        <span class="button-span"></span>
+    </button>
+    <button id="download-btn" class="button is-info">
+        <span>
+            <i class="fa-solid fa-cloud-arrow-down"></i> <span data-string-id="common.download"></span>
+        </span>
+        <span class="button-span"></span>
+    </button>
+    <button id="play-btn" class="button is-info">
+        <span>
+            <i class="fa-solid fa-gamepad"></i> <span data-string-id="common.play"></span>
+        </span>
+        <span class="play-button-span"></span>
+    </button>
+</div>
+<div class="main-home-panel">
+    <div class="main-home-panel-left">
+        <div class="main-home-panel-left-news-type">
+            <h1 class="main-home-panel-left-title" data-string-id="home.latestNews">Últimas novedades de Battly</h1>
+            <div class="select is-small" style="border-radius: 10px !important;" id="typeofnewsMain">
+                <select class="modified-select" id="typeOfNews">
+                    <option value="battly" data-string-id="home.battlyNews"></option>
+                    <option value="minecraft" data-string-id="home.minecraftNews"></option>
+                </select>
+            </div>
+        </div>
+        <div class="home-news" id="battly-news-div">
+        </div>
+        <div class="main-home-panel-left-see-more" style="display: none;">
+            <p data-string-id="home.seeMore"></p>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="main-home-panel-left-online-friends">
+            <div class="main-home-panel-left-news-type">
+                <h1 class="main-home-panel-left-title" style="margin-top: 20px; margin-bottom: 0px;"
+                    data-string-id="home.connectedFriends">conectados
+                </h1>
+                <button class="button is-info is-small" id="friends-btn"
+                    style="border-radius: 10px; margin-top: 20px;"><span data-string-id="friends.seeFriendsBtn">Ver
+                        amigos <i class='fa-solid fa-arrow-right'></i></span>
+            </div>
+            <div class="home-online-friends">
+                <div class="online-friend">
+                    <div class="online-friend-data">
+                        <p class="online-friend-name" data-string-id="home.loadingFriends"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-home-panel-right">
+        <h1 class="main-home-panel-left-title" style="margin-bottom: 0px;" data-string-id="home.status"></h1>
+        <article class="message is-warning" id="warning-status"
+            style="display: block; border-radius: 10px; margin-bottom: 10px;">
+            <div class="message-body"
+                style="font-weight: 600; padding: 0.5rem 0.8rem; font-size: 13px; border-radius: 10px;"
+                id="warning-status-message"></div>
+        </article>
+        <div class="status-servers">
+            <div class="server">
+                <img class="server-img" src="assets/images/icon.png">
+                <div class="server-text">
+                    <div class="name" data-string-id="home.battlyApi"></div>
+                    <div class="desc" id="Battly_API_Desc"><span class="green"
+                            data-string-id="home.operative"></span></div>
+                </div>
+            </div>
+            <div class="server">
+                <img class="server-img" src="assets/images/icon.png">
+                <div class="server-text">
+                    <div class="name" data-string-id="home.battlyWeb"></div>
+                    <div class="desc" id="Battly_WEB_Desc"><span class="green"
+                            data-string-id="home.operative"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="status-servers-online-users">
+            <img src="assets/images/icon.png" alt="">
+            <p id="Miembros_Online" class="status-servers-online-users-text">1500 <span
+                    data-string-id="home.usersOnline"></span></p>
+        </div>
+        <div class="status-servers-playing-song">
+            <img id="music-img" src="./assets/images/icons/music.gif" alt="">
+            <div class="status-servers-playing-song-info">
+                <p class="status-servers-playing-song-title" data-string-id="home.playingNow"></p>
+                <p class="status-servers-playing-song-name" data-string-id="home.playingNowBody">Nada reproduciéndose
+                </p>
+            </div>
+        </div>
+        <!-- <img src="https://i.giphy.com/sbKB14BJY34ik20XsO.gif" alt="" id="ads" class="ad"> -->
+        <iframe src="https://battlylauncher.com/ads/728x90" autoplay muted="muted" allow="fullscreen; autoplay"
+            class="ad" id="ads" allowtransparency="true"></iframe>
+    </div>
+</div>
+<div class="wrapper-contextmenu">
+    <div class="content-contextmenu">
+        <ul class="menu-contextmenu">
+            <li class="item-contextmenu">
+                <i class="fa fa-eye"></i>
+                <span>Preview</span>
             </li>
-            <li class="option-item">
-                <a href="#" id="btnShowNews">
-                    <i class="fa-solid fa-newspaper"></i>
-                    <span id="news-button-text">Novedades</span>
-                </a>
+            <li class="item-contextmenu share-menu">
+                <div>
+                    <i class="fa fa-share"></i>
+                    <span>Share</span>
+                </div>
+                <i class="uil uil-angle-right"></i>
+                <ul class="share-menu-contextmenu">
+                    <li class="item-contextmenu">
+                        <i class="fa-brands fa-twitter"></i>
+                        <span>Twitter</span>
+                    </li>
+                    <li class="item-contextmenu">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </li>
+                    <li class="item-contextmenu">
+                        <i class="fa-brands fa-dribbble"></i>
+                        <span>Dribble</span>
+                    </li>
+                    <li class="item-contextmenu">
+                        <i class="fa-brands fa-telegram"></i>
+                        <span>Telegram</span>
+                    </li>
+                </ul>
             </li>
-            <li class="option-item">
-                <a href="#" id="openBattlyFolderButton">
-                    <i class="fa-solid fa-folder-open"></i>
-                    <span id="see-folder-text">Ver carpeta</span>
-                </a>
+            <li class="item-contextmenu">
+                <i class="fa fa-link"></i>
+                <span>Get Link</span>
             </li>
-            <li class="option-item">
-                <a href="#" id="BotonUnirseServidorDiscord">
-                    <i class="fa-brands fa-discord"></i>
-                    <span>Discord</span>
-                </a>
+            <li class="item-contextmenu">
+                <i class="fa fa-pencil"></i>
+                <span>Rename</span>
+            </li>
+            <li class="item-contextmenu">
+                <i class="fa fa-trash"></i>
+                <span>Delete</span>
             </li>
         </ul>
-
-        <button id="boton_abrir_mods" class="button is-info">
-            <span>
-                <i class="fa-solid fa-cube"></i> Mods
-            </span>
-            <span class="button-span"></span>
-        </button>
-        <button id="music-btn" class="button is-info">
-            <span id="music-btn-text">
-                <i class="fa-solid fa-music"></i> Música
-            </span>
-            <span class="button-span"></span>
-        </button>
-        <button id="servers-btn" style="display: none;" class="button is-info"><span><i class="fa-solid fa-server"></i>
-                Servidores</span></button>
-
-        <button id="instancias-btn" class="button is-info">
-            <span id="instancias-txt"></span>
-            <span class="button-span"></span>
-        </button>
-        <button id="download-btn" class="button is-info">
-            <span id="download-txt"></span>
-            <span class="button-span"></span>
-        </button>
-        <button id="play-btn" class="button is-info">
-            <span id="play-txt"></span>
-            <span class="play-button-span"></span>
-        </button>
-    </div>
-    <div class="main-home-panel">
-        <div class="main-home-panel-left">
-            <div class="main-home-panel-left-news-type">
-                <h1 class="main-home-panel-left-title" id="news-battly">Últimas novedades de Battly</h1>
-                <div class="select is-small" style="border-radius: 10px !important;">
-                    <select class="modified-select" id="tpyeofnews">
-                        <option value="battly">Novedades de Battly</option>
-                        <option value="minecraft">Novedades de Minecraft</option>
-                    </select>
-                </div>
-            </div>
-            <div class="home-news" id="battly-news-div">
-            </div>
-            <div class="main-home-panel-left-see-more" style="display: none;">
-                <p>Ver más</p>
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            <div class="main-home-panel-left-online-friends">
-                <div class="main-home-panel-left-news-type">
-                    <h1 class="main-home-panel-left-title" id="connected-friends"
-                        style="margin-top: 20px; margin-bottom: 0px;">Amigos
-                        conectados
-                    </h1>
-                    <button class="button is-info is-small" id="friends-btn"
-                        style="border-radius: 10px; margin-top: 20px;"><span id="see-friends-btn"></span>
-                </div>
-                <div class="home-online-friends">
-                    <div class="online-friend">
-                        <div class="online-friend-data">
-                            <p class="online-friend-name">Cargando amigos...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="main-home-panel-right">
-            <h1 class="main-home-panel-left-title" style="margin-bottom: 0px;" id="status-battly">Estado</h1>
-            <article class="message is-warning" id="warning-status"
-                style="display: block; border-radius: 10px; margin-bottom: 10px;">
-                <div class="message-body"
-                    style="font-weight: 600; padding: 0.5rem 0.8rem; font-size: 13px; border-radius: 10px;"
-                    id="warning-status-message">¡</div>
-            </article>
-            <div class="status-servers">
-                <div class="server">
-                    <img class="server-img" src="assets/images/icon.png">
-                    <div class="server-text">
-                        <div class="name" id="Battly_API">Battly API</div>
-                        <div class="desc" id="Battly_API_Desc"><span class="green">Operativo</span></div>
-                    </div>
-                </div>
-                <div class="server">
-                    <img class="server-img" src="assets/images/icon.png">
-                    <div class="server-text">
-                        <div class="name" id="Battly_WEB">Battly WEB</div>
-                        <div class="desc" id="Battly_WEB_Desc"><span class="green">Operativo</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="status-servers-online-users">
-                <img src="assets/images/icon.png" alt="">
-                <p id="Miembros_Online" class="status-servers-online-users-text">1500 usuarios online</p>
-            </div>
-            <div class="status-servers-playing-song">
-                <img id="music-img" src="./assets/images/icons/music.gif" alt="">
-                <div class="status-servers-playing-song-info">
-                    <p class="status-servers-playing-song-title" id="playing-now-text">
-                    </p>
-                    <p class="status-servers-playing-song-name" id="playing-now-body">Canción de ejemplo</p>
-                </div>
-            </div>
-            <img src="https://i.giphy.com/sbKB14BJY34ik20XsO.gif" alt="" id="ads" class="ad">
+        <div class="setting-contextmenu">
+            <li class="item-contextmenu">
+                <i class="uil uil-setting"></i>
+                <span>Settings</span>
+            </li>
         </div>
     </div>
-    <div class="modal" style="z-index: 10000;" id="modalStartVersion">
-        <div class="modal-background"></div>
-        <div class="modal-card" style="background-color: #212121; border-radius: 10px;">
-            <header class="modal-card-head" style="background-color: #212121;">
-                <p class="modal-card-title" id="start_minecraft_text" style="color: #fff;"></p>
-                <button class="delete" aria-label="close" id="closeStartVersion"></button>
-            </header>
-            <section class="modal-card-body" style="height: 250px; overflow: hidden;  background-color: #212121;">
-                <div class="card" style="height: 200px; background-color: #212121;">
-                    <div class="card-header" style="background-color: #212121;">
-                        <p class="card-header-title" id="textInfo" style="color: #fff;"></p>
-                    </div>
-                    <div class="card-content" style="background-color: #212121;">
-                        <div class="content">
-
-                            <div class="select is-info">
-                                <select id="listaDeVersiones" style="border-radius: 10px;">
-                                    <option value="dx" id="select_a_version" selected></option>
-                                </select>
-                            </div>
-                            <button class="button is-info is-small" id="reiniciar-versiones"><span><i
-                                        class="fa-solid fa-arrows-rotate"></i></span></button>
-                            <br>
-                            <br>
-                            <div class="progress-bar info battly-s3gsqm animated-fill" id="progress-bar"
-                                style="display: none;">
-                                <div class="progress-fill battly-s3gsqm" id="progress" style="width: 88%;"></div>
-                            </div>
-                            <style>
-                                .marginright5px {
-                                    margin-right: 5px;
-                                }
-                            </style>
-                            <div id="tipo-de-versiones" style="display: none;">
-                                <input type="radio" class="radio-button__input" id="radio10-inicio" name="loader"
-                                    value="vanilla">
-                                <label class="radio-button__label radio-button__input-with-margin marginright5px"
-                                    id="radioVanilla" for="radio10-inicio">
-                                    <span class="radio-button__custom"></span>
-                                    Vanilla
-                                </label>
-
-                                <input type="radio" class="radio-button__input" id="radio11-inicio" name="loader"
-                                    value="fabric">
-                                <label class="radio-button__label radio-button__input-with-margin marginright5px"
-                                    id="radioFabric" for="radio11-inicio">
-                                    <span class="radio-button__custom"></span>
-                                    Fabric
-                                </label>
-
-                                <input type="radio" class="radio-button__input" id="radio12-inicio" name="loader"
-                                    value="forge">
-                                <label class="radio-button__label radio-button__input-with-margin marginright5px"
-                                    id="radioForge" for="radio12-inicio">
-                                    <span class="radio-button__custom"></span>
-                                    Forge
-                                </label>
-
-                                <input type="radio" class="radio-button__input" id="radio13-inicio" name="loader"
-                                    value="quilt">
-                                <label class="radio-button__label radio-button__input-with-margin marginright5px"
-                                    id="radioQuilt" for="radio13-inicio">
-                                    <span class="radio-button__custom"></span>
-                                    Quilt
-                                </label>
-
-                                <input type="radio" class="radio-button__input" id="radio35-inicio" name="loader"
-                                    value="neoforge">
-                                <label class="radio-button__label radio-button__input-with-margin marginright5px"
-                                    id="radioNeoForge" for="radio35-inicio">
-                                    <span class="radio-button__custom"></span>
-                                    NeoForge
-                                </label>
-
-                                <input type="radio" class="radio-button__input" id="radio36-inicio" name="loader"
-                                    value="legacyfabric">
-                                <label class="radio-button__label radio-button__input-with-margin marginright5px"
-                                    id="radioLegacyFabric" for="radio36-inicio">
-                                    <span class="radio-button__custom"></span>
-                                    LegacyFabric
-                                </label>
-                            </div>
-                            <div id="carga-de-versiones" style="display:none;">
-                                <br>
-                                <p style="font-size: 10px; color: #fff;" id="textInfoStatus"></p>
-                                <progress class="progress is-info" id="progressBar1_"
-                                    style="border-radius: 5px; display: none;" value="1" max="100"
-                                    style="transition: all 0.5s;"></progress>
-                                <br>
-                                <p style="font-size: 10px;" id="logTextArea1_"></p>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-            <footer class="modal-card-foot" id="footermodaliniciarversion"
-                style="display: none; background-color: #212121;">
-                <button class="button is-success is-small" id="startStartVersion">Iniciar</button>
-                <button class="button is-danger is-small" id="cancelStartVersion">Cancelar</button>
-            </footer>
-        </div>
-    </div>
-    <div class="wrapper-contextmenu">
-        <div class="content-contextmenu">
-            <ul class="menu-contextmenu">
-                <li class="item-contextmenu">
-                    <i class="fa fa-eye"></i>
-                    <span>Preview</span>
-                </li>
-                <li class="item-contextmenu share-menu">
-                    <div>
-                        <i class="fa fa-share"></i>
-                        <span>Share</span>
-                    </div>
-                    <i class="uil uil-angle-right"></i>
-                    <ul class="share-menu-contextmenu">
-                        <li class="item-contextmenu">
-                            <i class="fa-brands fa-twitter"></i>
-                            <span>Twitter</span>
-                        </li>
-                        <li class="item-contextmenu">
-                            <i class="fa-brands fa-instagram"></i>
-                            <span>Instagram</span>
-                        </li>
-                        <li class="item-contextmenu">
-                            <i class="fa-brands fa-dribbble"></i>
-                            <span>Dribble</span>
-                        </li>
-                        <li class="item-contextmenu">
-                            <i class="fa-brands fa-telegram"></i>
-                            <span>Telegram</span>
-                        </li>
-                    </ul>
-                </li>
-                <li class="item-contextmenu">
-                    <i class="fa fa-link"></i>
-                    <span>Get Link</span>
-                </li>
-                <li class="item-contextmenu">
-                    <i class="fa fa-pencil"></i>
-                    <span>Rename</span>
-                </li>
-                <li class="item-contextmenu">
-                    <i class="fa fa-trash"></i>
-                    <span>Delete</span>
-                </li>
-            </ul>
-            <div class="setting-contextmenu">
-                <li class="item-contextmenu">
-                    <i class="uil uil-setting"></i>
-                    <span>Settings</span>
-                </li>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
-<style>
-    p,
-    span,
-    button,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    select,
-    option {
-        font-weight: 600;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    button {
-        border-radius: 10px !important;
-    }
-
-    .modified-select {
-        background-color: #212121 !important;
-        color: #fff !important;
-        border: 0px !important;
-        appearance: none;
-        border-radius: 10px !important;
-    }
-
-    .modified-select option {
-        background-color: #212121 !important;
-        text-decoration: none !important;
-        outline: none !important;
-    }
-
-    .modified-select:focus {
-        border: 0px !important;
-        box-shadow: none !important;
-        outline: none !important;
-    }
-
-    .more-options {
-        max-height: 0;
-        opacity: 0;
-        visibility: hidden;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0s 0.3s;
-        position: absolute;
-        bottom: 65px;
-        left: 0px;
-        flex-direction: column;
-        background-color: rgba(33, 33, 33, 0.7);
-        border-radius: 10px;
-        padding: 10px;
-        z-index: 9999;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .more-options.active {
-        max-height: 300px;
-        opacity: 1;
-        visibility: visible;
-        transition: max-height 0.3s ease-in, opacity 0.3s ease-in, visibility 0s;
-    }
-
-    .option-item {
-        position: relative;
-    }
-
-    .option-item a {
-        background-color: rgba(33, 33, 33, 0.7);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        color: white;
-        padding: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-        display: flex;
-        gap: 5px;
-    }
-
-    .option-item a:hover {
-        background-color: rgba(18, 18, 18, 0.9);
-        color: #fff !important;
-    }
-
-    .option-item span.button-span {
-        position: absolute;
-        left: 50%;
-        bottom: 100%;
-        opacity: 0;
-        visibility: hidden;
-        margin-bottom: 1em;
-        padding: 1em;
-        background-color: #000;
-        border-radius: 10px;
-        font-size: 0.6em;
-        line-height: 1.6;
-        text-align: left;
-        white-space: nowrap;
-        transform: translate(-50%, 1em);
-        transition: all 0.15s ease-in-out;
-    }
-
-    .option-item span.button-span::before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border: 0.5em solid transparent;
-        border-top-color: #000;
-        transform: translate(-50%, 0);
-    }
-
-    .option-item:hover span.button-span {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-50%, 0);
-    }
-
-    #more-settings-btn i {
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .main-home-panel {
-        display: flex;
-        margin-top: 30px;
-        justify-content: space-between;
-        height: 85%;
-        padding: 10px;
-    }
-
-    .main-home-panel-left {
-        height: 100%;
-        width: 70%;
-        justify-content: center;
-        padding: 10px;
-        border-radius: 10px;
-        flex-direction: column;
-    }
-
-    .main-home-panel-right {
-        width: 30%;
-        height: 100%;
-        justify-content: center;
-        padding: 10px;
-        border-radius: 10px;
-        margin-top: 10px;
-    }
-
-    .main-home-panel-left-news-type {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .main-home-panel-left-title {
-        color: white;
-        font-size: 1.8em;
-        font-weight: 800;
-        margin-bottom: 10px;
-        margin-left: 5px;
-    }
-
-    .main-home-panel-left-see-more {
-        color: white;
-        background-color: rgba(33, 33, 33);
-        border-radius: 10px;
-        padding: 10px;
-        padding-left: 15px;
-        padding-right: 20px;
-        font-size: 1.2em;
-        font-weight: 800;
-        margin-top: 10px;
-        cursor: pointer;
-        position: sticky;
-        bottom: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: opacity 0.5s;
-        opacity: 0.4;
-    }
-
-    .main-home-panel-left-see-more i {
-        font-size: 1.2em;
-    }
-
-    .main-home-panel-left-see-more:hover {
-        opacity: 1;
-    }
-
-    .main-home-panel-left-online-friends {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .home-online-friends {
-        display: flex;
-        gap: 10px;
-        overflow-x: auto;
-        scrollbar-width: none;
-        user-select: none;
-    }
-
-    .home-online-friends.active {
-        cursor: grabbing;
-    }
-
-    .online-friend {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        background-color: rgba(33, 33, 33);
-        padding: 7px;
-        border-radius: 10px;
-        flex: 0 0 auto;
-        transition: opacity 0.5s;
-        cursor: pointer;
-        opacity: 0.4;
-    }
-
-    .online-friend:hover {
-        opacity: 1;
-    }
-
-    .online-friend-avatar {
-        background-color: white;
-        border-radius: 5px;
-    }
-
-    .online-friend-name {
-        color: white;
-        font-weight: 800;
-    }
-
-    .online-friend-status {
-        color: white;
-        font-weight: 500;
-    }
-
-    .status-servers {
-        width: 100%;
-        display: flex;
-        gap: 10px;
-    }
-
-    .server {
-        width: 100%;
-        height: 60px;
-        background-color: #292929;
-        border-radius: 10px;
-        opacity: 0.4;
-        margin-bottom: 10px;
-        align-items: center;
-        display: flex;
-        padding: 5px;
-        transition: opacity 0.5s;
-    }
-
-    .server:hover {
-        opacity: 1;
-    }
-
-    .server1:hover {
-        transition: opacity 1s;
-        opacity: 1;
-    }
-
-    .server-img {
-        width: 45px;
-        height: 45px;
-    }
-
-    .name {
-        font: normal normal bold 17px/25px Poppins;
-        color: #e1e1e1;
-        transition: color 0.2s;
-    }
-
-    .desc {
-        font: normal normal normal 11px/17px Poppins;
-        color: #e1e1e1;
-        transition: all 0.2s;
-        transition: color 0.2s;
-    }
-
-    .green {
-        color: #1ac707;
-    }
-
-    .red {
-        color: #ff0409;
-    }
-
-    .text {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font: normal normal bold 13px/15px Poppins;
-        letter-spacing: 0px;
-        color: #e1e1e1;
-        transition: color 0.2s;
-    }
-
-    .online {
-        position: absolute;
-        top: -6px;
-        left: 41px;
-        width: 10px;
-        height: 10px;
-        border-radius: 5px;
-        border: 2px solid #1a1a1a;
-        transition: all 0.2s;
-        background-color: #1ac707;
-    }
-
-    .online.off {
-        background-color: #ff0409;
-    }
-
-    .status-servers-online-users {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        background-color: #212121;
-        border-radius: 10px;
-        padding: 5px;
-        transition: opacity 0.5s;
-        opacity: 0.4;
-    }
-
-    .status-servers-online-users:hover {
-        opacity: 1;
-    }
-
-    .status-servers-online-users-text {
-        color: white;
-        font-weight: 800;
-        font-size: 1.2em;
-    }
-
-    .status-servers-online-users img {
-        width: 45px;
-        height: 45px;
-    }
-
-    .status-servers-playing-song {
-        margin-top: 10px;
-        display: flex;
-        gap: 10px;
-        background-color: #212121;
-        border-radius: 10px;
-        padding: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-        transition: opacity 0.5s;
-        opacity: 0.4;
-        overflow: hidden;
-    }
-
-    .status-servers-playing-song:hover {
-        opacity: 1;
-    }
-
-    .status-servers-playing-song-title {
-        color: white;
-        font-weight: 800;
-        font-size: 1.1em;
-    }
-
-    .status-servers-playing-song-name {
-        color: white;
-        font-weight: 500;
-        font-size: 0.9em;
-    }
-
-    .status-servers-playing-song img {
-        width: 45px;
-        height: 45px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 5px;
-    }
-
-    .home-news {
-        width: 100%;
-        justify-content: center;
-        flex-direction: column;
-        margin-right: 10px;
-        border-radius: 10px;
-        overflow: hidden;
-        overflow-y: auto;
-        scrollbar-width: none;
-        height: 65%;
-    }
-
-    .new-panel {
-        width: 100%;
-        background-color: rgba(33, 33, 33);
-        border-radius: 15px;
-        margin-bottom: 10px;
-        transition: opacity 0.5s;
-        opacity: 0.4;
-    }
-
-    .new-panel:hover {
-        opacity: 1;
-    }
-
-    .new-panel-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #252525;
-        padding: 10px;
-        padding-left: 20px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-
-    .new-panel-title {
-        font-size: 1.2em;
-        color: white;
-        font-weight: 800;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .new-panel-date {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .new-panel-date-day {
-        font-size: 1.2em;
-        color: white;
-        font-weight: 800;
-        line-height: 1;
-    }
-
-    .new-panel-date-month {
-        font-size: 0.8em;
-        color: white;
-        font-weight: 800;
-    }
-
-    .new-panel-bottom {
-        padding: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .new-panel-description {
-        color: white;
-        font-weight: 500;
-        font-size: 0.8em;
-        line-height: 1.5;
-    }
-
-    .new-panel-author {
-        color: white;
-        font-weight: 800;
-        margin-top: 10px;
-        align-self: flex-end;
-        font-size: 0.85em;
-    }
-
-    .ad {
-        margin-top: 10px;
-        width: auto;
-        height: auto;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 10px;
-        cursor: pointer;
-        opacity: 0.8;
-    }
-
-    .frame {
-        background: #212121;
-        position: fixed;
-        display: flex;
-        justify-content: space-between;
-        top: 0px;
-        right: 0px;
-        left: 0px;
-        z-index: 11;
-        -webkit-app-region: drag;
-        height: 40px;
-        padding-left: 10px;
-        padding-right: 10px;
-        align-items: center;
-        color: #fff;
-        border-radius: 0px !important;
-    }
-
-    .frame * {
-        pointer-events: auto;
-    }
-
-    .no-drag {
-        -webkit-app-region: no-drag !important;
-    }
-
-    .button-frame {
-        transition: color 0.2s, background-color 0.2s;
-        color: #ffffff;
-        cursor: pointer;
-    }
-
-    .buttons {
-        display: flex;
-        margin-bottom: 0px !important;
-        gap: 10px;
-    }
-
-    [class^="icon-"]:before,
-    [class*=" icon-"]:before,
-    [class^="icon-"]:after,
-    [class*=" icon-"]:after,
-    .select-wrap:after {
-        font-style: normal;
-        font-weight: normal;
-        display: inline-block;
-        text-decoration: inherit;
-        width: 1em;
-        text-align: center;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1em;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    .icon-close:before {
-        font-family: "Icons";
-        content: "\e90e";
-    }
-
-    .icon-minimize:before {
-        font-family: "Icons";
-        content: "\e90b";
-    }
-
-    .icon-maximize:before {
-        font-family: "Icons";
-        content: "\e90c";
-    }
-
-    .icon-restore-down:before {
-        font-family: "Icons";
-        content: "\e90d";
-    }
-
-    .home-top-panel {
-        width: 100%;
-        display: flex;
-        position: fixed;
-        justify-content: space-between;
-        align-items: center;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 10px;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .bottom_bar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-height: 80px;
-        padding: 10px;
-        background-color: rgba(33, 33, 33, 0.7);
-        position: fixed;
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: auto;
-        gap: 6px;
-        z-index: 9999;
-        border-radius: 15px !important;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    }
-
-    .button {
-        border-radius: 10px;
-    }
-
-    button:hover .button-span {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-50%, 0);
-    }
-
-    button .button-span {
-        position: absolute;
-        left: 50%;
-        bottom: 100%;
-        opacity: 0;
-        visibility: hidden;
-        margin-bottom: 1em;
-        padding: 1em;
-        background-color: #000;
-        border-radius: 10px;
-        font-size: 0.6em;
-        line-height: 1.6;
-        text-align: left;
-        white-space: nowrap;
-        transform: translate(-50%, 1em);
-        transition: all 0.15s ease-in-out;
-    }
-
-    button .button-span::before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border: 0.5em solid transparent;
-        border-top-color: #000;
-        transform: translate(-50%, 0);
-    }
-
-    /* play button */
-    button:hover .play-button-span {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-50%, 0);
-    }
-
-    button .play-button-span {
-        position: absolute;
-        left: 20%;
-        bottom: 100%;
-        opacity: 0;
-        visibility: hidden;
-        margin-bottom: 1em;
-        padding: 1em;
-        background-color: #000;
-        border-radius: 10px;
-        font-size: 0.6em;
-        line-height: 1.6;
-        text-align: left;
-        white-space: nowrap;
-        transform: translate(-50%, 1em);
-        transition: all 0.15s ease-in-out;
-    }
-
-    button .play-button-span::before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 65%;
-        width: 0;
-        height: 0;
-        border: 0.5em solid transparent;
-        border-top-color: #000;
-        transform: translate(-50%, 0);
-    }
-
-    /* settings button */
-    button:hover .settings-button-span {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-10%, 0);
-    }
-
-    button .settings-button-span {
-        position: absolute;
-        left: 20%;
-        bottom: 100%;
-        opacity: 0;
-        visibility: hidden;
-        margin-bottom: 1em;
-        padding: 1em;
-        background-color: #000;
-        border-radius: 10px;
-        font-size: 0.6em;
-        line-height: 1.6;
-        text-align: left;
-        white-space: nowrap;
-        transform: translate(-10%, 1em);
-        transition: all 0.15s ease-in-out;
-    }
-
-    button .settings-button-span::before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 15%;
-        width: 0;
-        height: 0;
-        border: 0.5em solid transparent;
-        border-top-color: #000;
-        transform: translate(-40%, 0);
-    }
-</style>
-<style>
-    .download-modal-panel {
-        width: 65% !important;
-        overflow: hidden;
-    }
-
-    .download-panel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 0 auto;
-        background-color: #101725;
-        padding: 30px;
-        font-family: Poppins, sans-serif;
-        border-radius: 10px;
-        gap: 20px;
-        transition: all 0.5s ease;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        align-items: stretch;
-        height: 0;
-        transition: height 0.5s ease-in-out;
-        height: 390px;
-
-    }
-
-    .download-panel-left {
-        width: 100%;
-        border-right: 1px solid #fff;
-        padding-right: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .download-panel-left>div {
-        flex-shrink: 0;
-    }
-
-    .download-panel-left .small {
-        font-size: 0.8rem;
-        align-items: flex-end;
-    }
-
-    .download-panel-left h1 {
-        color: #fff;
-        font-size: 2rem;
-        line-height: 1;
-        font-weight: 700;
-    }
-
-    .download-panel-left p {
-        color: #fff;
-        font-size: 1rem;
-        margin-top: 10px;
-        font-weight: 500;
-    }
-
-    .download-panel-right {
-        width: 100%;
-    }
-
-    .radio-input {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
-        width: 100%;
-    }
-
-    .radio-input * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-    }
-
-    .radio-input label {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        padding: 0px 20px;
-        cursor: pointer;
-        height: 45px;
-        position: relative;
-        border-radius: 10px;
-        background-color: #26344f;
-        transition: background-color 0.3s ease;
-        margin-bottom: 0px !important;
-    }
-
-    .radio-input label:hover {
-        background-color: #435dd8;
-
-        &:has(input:checked) {
-            background-color: #435dd8;
-        }
-    }
-
-    .radio-input label::before {
-        position: absolute;
-        content: "";
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 45px;
-        z-index: -1;
-        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        border-radius: 10px;
-        border: 2px solid transparent;
-    }
-
-    .radio-input .label:has(input:checked)::before {
-        background-color: #26344f;
-        border-color: #435dd8;
-        height: 45px;
-    }
-
-    .radio-input .label:has(input:checked) {
-        background-color: transparent;
-    }
-
-    .radio-input .label .texto {
-        color: #fff;
-    }
-
-    .radio-input .label input[type="radio"] {
-        background-color: #0f1623;
-        appearance: none;
-        width: 17px;
-        height: 17px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .radio-input .label input[type="radio"]:checked {
-        background-color: #435dd8;
-        -webkit-animation: pulse 0.7s forwards;
-        animation: pulse 0.7s forwards;
-    }
-
-    .radio-input .label input[type="radio"]:before {
-        content: "";
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
-        background-color: #fff;
-        transform: scale(0);
-    }
-
-    .radio-input .label input[type="radio"]:checked::before {
-        transform: scale(1);
-    }
-
-    @keyframes pulse {
-        0% {
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-        }
-
-        70% {
-            box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
-        }
-
-        100% {
-            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-        }
-    }
-
-    .download-panel-control-options {
-        justify-content: center;
-        margin-top: 20px;
-        overflow: hidden;
-    }
-
-    .download-panel-right-version {
-        display: none;
-        max-height: 300px;
-        flex-direction: column;
-        gap: 20px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .download-panel-right-version h1 {
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 700;
-        margin-bottom: -10px;
-    }
-
-    .download-panel-right-version .radio-input {
-        overflow-y: auto;
-        scrollbar-width: none;
-        overflow-x: hidden;
-    }
-
-    .download-panel-panel.active {
-        animation: moveFromRightToLeft 0.5s forwards;
-    }
-
-    .download-panel-panel.not-active {
-        animation: moveFromLeftToRight 0.5s forwards;
-    }
-
-    @keyframes moveFromRightToLeft {
-        0% {
-            display: flex !important;
-            transform: translateX(100%);
-        }
-
-        100% {
-            transform: translateX(0%);
-            display: flex !important;
-        }
-    }
-
-    @keyframes moveFromLeftToRight {
-        0% {
-            transform: translateX(0%);
-            opacity: 1;
-        }
-
-        100% {
-            transform: translateX(-100%);
-            display: none;
-            opacity: 0;
-        }
-    }
-
-    #download-panel-back-button {
-        display: none;
-    }
-
-
-    button,
-    .button,
-    input,
-    .input {
-        border-radius: 10px !important;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    .classed-home-download-input {
-        background-color: #26344f;
-        color: #fff;
-        border: 1px solid #26344f;
-        height: 3em !important;
-        padding: 10px 15px;
-
-        &::placeholder {
-            color: #ccc;
-        }
-    }
-</style>
+</div>

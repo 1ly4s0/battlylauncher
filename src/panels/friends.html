@@ -1,35 +1,168 @@
-<div class="bottom_bar" id="buttom_bar_friends">
-    <div>
-        <p style="font-size: 40px; color: #fff; font-weight: 800;">Battly <span style="color: #3e8ed0">Social</span>
-        </p>
-    </div>
-    <div>
-        <button id="add-friends" class="button is-info" style="background-color: rgb(62, 142, 208);">
-        </button>
-        <button id="chat-btn" class="button is-info" style="background-color: rgb(62, 142, 208);">Chat
-        </button>
-        <button id="solicitudes" class="button is-info" style="background-color: rgb(62, 142, 208);">
-        </button>
-        <button id="friends-volver-btn" class="button is-info" style="background-color: rgb(62, 142, 208);">
-        </button>
-    </div>
-</div>
-<div class="card panel-amigos" style="background-color: #212121;">
-    <div class="card-content" style="background-color: #212121;">
-        <div class="content">
-            <p class="center" style="font-size: 20px; color: #fff;" id="welcome_battly_social">
-            </p>
+<div class="friends-container">
 
-            <div class="card first-card-has-separation" style="background-color: #2b2b2b;">
-                <div class="card-content">
-                    <div class="content">
-                        <p class="center" style="font-size: 18px; color: #fff;" id="friends_list_text">
-                        </p>
-                        <div class="lista-de-amigos" id="lista-de-amigos">
-                        </div>
-                    </div>
+    <div class="friends-header">
+        <div class="friends-header-left">
+            <h1 class="friends-title">
+                Battly <span class="friends-title-accent" data-string-id="friends.social"></span>
+            </h1>
+            <p class="friends-subtitle" data-string-id="friends.welcomeBattlySocial">
+                👋 Bienvenido/a al nuevo panel de amigos de Battly. Aquí podrás ver a todos tus amigos, añadirlos, ver
+                qué están jugando y sus estadísticas
+            </p>
+        </div>
+        <div class="friends-header-actions">
+            <button id="add-friends" class="btn-action btn-primary" data-tooltip="Añadir amigo">
+                <i class="fa-solid fa-user-plus"></i>
+                <span data-string-id="friends.addFriend"></span>
+            </button>
+            <button id="solicitudes" class="btn-action btn-secondary" data-tooltip="Ver solicitudes">
+                <i class="fa-solid fa-bell"></i>
+                <span data-string-id="friends.showRequests"></span>
+                <span class="badge-notification" id="requests-badge" style="display: none;"></span>
+            </button>
+            <button id="chat-btn" class="btn-action btn-secondary" data-tooltip="Chat">
+                <i class="fa-solid fa-comments"></i>
+                <span data-string-id="friends.chat"></span>
+            </button>
+            <button id="friends-volver-btn" class="btn-action btn-back" data-tooltip="Volver">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span data-string-id="friends.back"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="friends-toolbar">
+        <div class="friends-search-container">
+            <i class="fa-solid fa-search friends-search-icon"></i>
+            <input type="text" id="friends-search-input" class="friends-search-input" placeholder="Buscar amigos..."
+                data-string-id-placeholder="friends.searchPlaceholder" />
+            <button id="friends-search-clear" class="friends-search-clear" style="display: none;">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+
+        <div class="friends-filters">
+            <div class="filter-group">
+                <label class="filter-label" data-string-id="friends.filterByStatus"></label>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fa-solid fa-users"></i>
+                        <span data-string-id="friends.filterAll"></span>
+                        <span class="filter-count" id="count-all">0</span>
+                    </button>
+                    <button class="filter-btn" data-filter="online">
+                        <span class="status-dot status-online"></span>
+                        <span data-string-id="friends.filterOnline"></span>
+                        <span class="filter-count" id="count-online">0</span>
+                    </button>
+                    <button class="filter-btn" data-filter="playing">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <span data-string-id="friends.filterPlaying"></span>
+                        <span class="filter-count" id="count-playing">0</span>
+                    </button>
+                    <button class="filter-btn" data-filter="offline">
+                        <span class="status-dot status-offline"></span>
+                        <span data-string-id="friends.filterOffline"></span>
+                        <span class="filter-count" id="count-offline">0</span>
+                    </button>
+                    <button class="filter-btn" data-filter="favorites">
+                        <i class="fa-solid fa-star"></i>
+                        <span data-string-id="friends.filterFavorites"></span>
+                        <span class="filter-count" id="count-favorites">0</span>
+                    </button>
                 </div>
             </div>
+
+            <div class="sort-group">
+                <label class="filter-label" data-string-id="friends.sortBy"></label>
+                <select id="friends-sort-select" class="sort-select">
+                    <option value="status" data-string-id="friends.sortByStatus"></option>
+                    <option value="name" data-string-id="friends.sortByName"></option>
+                    <option value="recent" data-string-id="friends.sortByRecent"></option>
+                </select>
+            </div>
         </div>
+    </div>
+
+    <div class="friends-content">
+
+        <div class="view-toggle-floating">
+            <button class="view-btn active" data-view="grid" data-tooltip="Vista cuadrícula">
+                <i class="fa-solid fa-grid-2"></i>
+            </button>
+            <button class="view-btn" data-view="list" data-tooltip="Vista lista">
+                <i class="fa-solid fa-list"></i>
+            </button>
+        </div>
+
+        <div class="friends-loading" id="friends-loading">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+        </div>
+
+        <div class="friends-grid" id="lista-de-amigos">
+
+        </div>
+
+        <div class="friends-empty" id="friends-empty" style="display: none;">
+            <div class="empty-icon">
+                <i class="fa-solid fa-user-group"></i>
+            </div>
+            <h3 class="empty-title" data-string-id="friends.noFriendsTitle"></h3>
+            <p class="empty-description" data-string-id="friends.noFriendsDesc">
+                Comienza a añadir amigos para ver su actividad y jugar juntos
+            </p>
+            <button class="btn-action btn-primary" id="add-friends-empty">
+                <i class="fa-solid fa-user-plus"></i>
+                <span data-string-id="friends.addFriend"></span>
+            </button>
+        </div>
+
+        <div class="friends-no-results" id="friends-no-results" style="display: none;">
+            <div class="empty-icon">
+                <i class="fa-solid fa-search"></i>
+            </div>
+            <h3 class="empty-title" data-string-id="friends.noResults"></h3>
+            <p class="empty-description" data-string-id="friends.noResultsDesc">
+                Intenta con otro término de búsqueda
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="context-menu" id="friend-context-menu" style="display: none;">
+    <div class="context-menu-item" data-action="profile">
+        <i class="fa-solid fa-user"></i>
+        <span data-string-id="friends.viewProfile"></span>
+    </div>
+    <div class="context-menu-item" data-action="chat">
+        <i class="fa-solid fa-message"></i>
+        <span data-string-id="friends.sendMessage"></span>
+    </div>
+    <div class="context-menu-item" data-action="join">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <span data-string-id="friends.joinGame"></span>
+    </div>
+    <div class="context-menu-divider"></div>
+    <div class="context-menu-item" data-action="favorite">
+        <i class="fa-solid fa-star"></i>
+        <span data-string-id="friends.addToFavorites"></span>
+    </div>
+    <div class="context-menu-item" data-action="note">
+        <i class="fa-solid fa-note-sticky"></i>
+        <span data-string-id="friends.addNote"></span>
+    </div>
+    <div class="context-menu-divider"></div>
+    <div class="context-menu-item context-menu-danger" data-action="remove">
+        <i class="fa-solid fa-user-minus"></i>
+        <span data-string-id="friends.removeFriend"></span>
+    </div>
+    <div class="context-menu-item context-menu-danger" data-action="block">
+        <i class="fa-solid fa-ban"></i>
+        <span data-string-id="friends.blockUser"></span>
     </div>
 </div>

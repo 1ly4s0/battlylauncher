@@ -1,3 +1,1034 @@
+/* ==========================================
+   NUEVO DISEÑO DE PANEL DE AMIGOS - PROFESIONAL
+   ========================================== */
+
+/* Variables de Color y Temas */
+:root {
+  --friends-bg-primary: #0f1623;
+  --friends-bg-secondary: #141e30;
+  --friends-bg-tertiary: #1a2332;
+  --friends-bg-hover: #1f2937;
+  --friends-accent: #3e8ed0;
+  --friends-accent-dark: #2e6ea8;
+  --friends-text-primary: #ffffff;
+  --friends-text-secondary: rgba(255, 255, 255, 0.7);
+  --friends-text-muted: rgba(255, 255, 255, 0.5);
+  --friends-border: rgba(255, 255, 255, 0.1);
+  --friends-success: #48c774;
+  --friends-danger: #f14668;
+  --friends-warning: #ffdd57;
+  --status-online: #48c774;
+  --status-offline: #7a8288;
+  --status-playing: #3e8ed0;
+  --status-away: #ffdd57;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+/* Contenedor Principal */
+.friends-container {
+  margin-top: 40px;
+  width: 100%;
+  height: 95%;
+  background: var(--friends-bg-primary);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+.friends-header {
+  background: linear-gradient(
+    135deg,
+    var(--friends-bg-secondary) 0%,
+    var(--friends-bg-tertiary) 100%
+  );
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--friends-border);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.friends-header-left {
+  flex: 1;
+}
+
+.friends-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--friends-text-primary);
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.5px;
+}
+
+.friends-title-accent {
+  background: linear-gradient(135deg, #3e8ed0 0%, #5fa3e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.friends-subtitle {
+  font-size: 0.85rem;
+  color: var(--friends-text-secondary);
+  margin: 0;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.friends-header-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Botones de Acción */
+.btn-action {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-action::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-action:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-action i {
+  font-size: 1.1rem;
+  z-index: 1;
+}
+
+.btn-action span {
+  z-index: 1;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--friends-accent) 0%, #5fa3e0 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(62, 142, 208, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(62, 142, 208, 0.4);
+}
+
+.btn-secondary {
+  background: var(--friends-bg-tertiary);
+  color: var(--friends-text-primary);
+  border: 1px solid var(--friends-border);
+}
+
+.btn-secondary:hover {
+  background: var(--friends-bg-hover);
+  border-color: var(--friends-accent);
+  transform: translateY(-2px);
+}
+
+.btn-back {
+  background: transparent;
+  color: var(--friends-text-secondary);
+  border: 1px solid var(--friends-border);
+}
+
+.btn-back:hover {
+  background: var(--friends-bg-tertiary);
+  color: var(--friends-text-primary);
+}
+
+.badge-notification {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--friends-danger);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  min-width: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(241, 70, 104, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Tooltips */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-normal);
+  z-index: 1000;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+/* ==========================================
+   TOOLBAR (Búsqueda y Filtros)
+   ========================================== */
+.friends-toolbar {
+  background: var(--friends-bg-secondary);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--friends-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  flex-shrink: 0;
+}
+
+/* Búsqueda */
+.friends-search-container {
+  position: relative;
+  max-width: 500px;
+}
+
+.friends-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--friends-text-muted);
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.friends-search-input {
+  width: 100%;
+  padding: 0.7rem 3rem 0.7rem 3rem;
+  background: var(--friends-bg-tertiary);
+  border: 2px solid var(--friends-border);
+  border-radius: 10px;
+  color: var(--friends-text-primary);
+  font-size: 0.9rem;
+  transition: all var(--transition-normal);
+}
+
+.friends-search-input:focus {
+  outline: none;
+  border-color: var(--friends-accent);
+  background: var(--friends-bg-primary);
+  box-shadow: 0 0 0 4px rgba(62, 142, 208, 0.1);
+}
+
+.friends-search-input::placeholder {
+  color: var(--friends-text-muted);
+}
+
+.friends-search-clear {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--friends-text-muted);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+}
+
+.friends-search-clear:hover {
+  background: var(--friends-bg-hover);
+  color: var(--friends-text-primary);
+}
+
+/* Filtros */
+.friends-filters {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-group,
+.sort-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.filter-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--friends-text-secondary);
+  white-space: nowrap;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  background: var(--friends-bg-tertiary);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: var(--friends-text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.filter-btn:hover {
+  background: var(--friends-bg-hover);
+  color: var(--friends-text-primary);
+  transform: translateY(-1px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--friends-accent) 0%, #5fa3e0 100%);
+  color: white;
+  border-color: var(--friends-accent);
+  box-shadow: 0 4px 12px rgba(62, 142, 208, 0.3);
+}
+
+.filter-count {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  min-width: 24px;
+  text-align: center;
+}
+
+.filter-btn.active .filter-count {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-online {
+  background: var(--status-online);
+  box-shadow: 0 0 8px var(--status-online);
+}
+
+.status-offline {
+  background: var(--status-offline);
+}
+
+.status-playing {
+  background: var(--status-playing);
+  box-shadow: 0 0 8px var(--status-playing);
+}
+
+.status-away {
+  background: var(--status-away);
+  box-shadow: 0 0 8px var(--status-away);
+}
+
+/* Select de Ordenamiento */
+.sort-select {
+  padding: 0.5rem 2.5rem 0.5rem 0.85rem;
+  background: var(--friends-bg-tertiary);
+  border: 2px solid var(--friends-border);
+  border-radius: 8px;
+  color: var(--friends-text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+}
+
+.sort-select:hover {
+  background-color: var(--friends-bg-hover);
+  border-color: var(--friends-accent);
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: var(--friends-accent);
+  box-shadow: 0 0 0 4px rgba(62, 142, 208, 0.1);
+}
+
+/* Toggle de Vista - REMOVIDO del toolbar */
+
+/* ==========================================
+   CONTENIDO PRINCIPAL
+   ========================================== */
+.friends-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1.5rem 2rem;
+  position: relative;
+}
+
+/* Toggle de Vista Flotante */
+.view-toggle-floating {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.25rem;
+  background: rgba(20, 30, 48, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 0.35rem;
+  border-radius: 10px;
+  z-index: 100;
+  opacity: 0.3;
+  transition: opacity var(--transition-normal),
+    transform var(--transition-normal);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.view-toggle-floating:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.view-toggle-floating .view-btn {
+  padding: 0.6rem 0.85rem;
+  background: transparent;
+  border: none;
+  color: var(--friends-text-secondary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+}
+
+.view-toggle-floating .view-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--friends-text-primary);
+}
+
+.view-toggle-floating .view-btn.active {
+  background: var(--friends-accent);
+  color: white;
+  box-shadow: 0 2px 8px rgba(62, 142, 208, 0.4);
+}
+
+.friends-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.friends-content::-webkit-scrollbar-track {
+  background: var(--friends-bg-primary);
+}
+
+.friends-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--friends-accent) 0%, #5fa3e0 100%);
+  border-radius: 10px;
+}
+
+.friends-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5fa3e0 0%, var(--friends-accent) 100%);
+}
+
+/* ==========================================
+   GRID DE AMIGOS
+   ========================================== */
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Vista Lista */
+.friends-grid.view-list {
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.friends-grid.view-list .friend-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 1.5rem;
+}
+
+.friends-grid.view-list .friend-card-header {
+  flex: 1;
+  margin-bottom: 0;
+  min-width: 0;
+}
+
+.friends-grid.view-list .friend-card-actions {
+  margin-top: 0;
+  margin-left: auto;
+  opacity: 1;
+  transform: translateY(0);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.friends-grid.view-list .friend-action-btn {
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+  min-width: auto;
+}
+
+.friends-grid.view-list .friend-action-btn span {
+  display: inline;
+}
+
+.friends-grid.view-list .friend-card:hover .friend-card-actions {
+  opacity: 1;
+}
+
+.friends-grid.view-list .friend-favorite-badge {
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+/* ==========================================
+   TARJETA DE AMIGO
+   ========================================== */
+.friend-card {
+  background: linear-gradient(
+    135deg,
+    var(--friends-bg-secondary) 0%,
+    var(--friends-bg-tertiary) 100%
+  );
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 2px solid var(--friends-border);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  animation: cardFadeIn 0.4s ease backwards;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.friend-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--friends-accent), #5fa3e0);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.friend-card:hover::before {
+  opacity: 1;
+}
+
+.friend-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--friends-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.friend-card:active {
+  transform: translateY(-2px);
+}
+
+/* Badge de Favorito */
+.friend-favorite-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #ffdd57, #ffa500);
+  color: #000;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(255, 221, 87, 0.4);
+  animation: starPulse 2s infinite;
+  z-index: 2;
+}
+
+@keyframes starPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Contenido de la Tarjeta */
+.friend-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.friend-avatar-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.friend-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal);
+}
+
+.friend-card:hover .friend-avatar {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.friend-status-indicator {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--friends-bg-secondary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.friend-status-indicator.online {
+  background: var(--status-online);
+  box-shadow: 0 0 12px var(--status-online);
+  animation: statusPulse 2s infinite;
+}
+
+@keyframes statusPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 12px var(--status-online);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--status-online);
+  }
+}
+
+.friend-status-indicator.offline {
+  background: var(--status-offline);
+}
+
+.friend-status-indicator.playing {
+  background: var(--status-playing);
+  box-shadow: 0 0 12px var(--status-playing);
+  animation: statusPulse 2s infinite;
+}
+
+.friend-status-indicator.away {
+  background: var(--status-away);
+  box-shadow: 0 0 12px var(--status-away);
+}
+
+.friend-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.friend-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--friends-text-primary);
+  margin: 0 0 0.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.friend-name-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.friend-status-text {
+  font-size: 0.85rem;
+  color: var(--friends-text-secondary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.friend-game-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* Información Adicional */
+.friend-card-details {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--friends-border);
+}
+
+.friend-detail-item {
+  flex: 1;
+  text-align: center;
+}
+
+.friend-detail-label {
+  font-size: 0.75rem;
+  color: var(--friends-text-muted);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.friend-detail-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--friends-text-primary);
+}
+
+/* Acciones Rápidas */
+.friend-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all var(--transition-normal);
+}
+
+.friend-card:hover .friend-card-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.friend-action-btn {
+  flex: 1;
+  padding: 0.6rem;
+  background: var(--friends-bg-tertiary);
+  border: 1px solid var(--friends-border);
+  border-radius: 8px;
+  color: var(--friends-text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.friend-action-btn:hover {
+  background: var(--friends-accent);
+  color: white;
+  border-color: var(--friends-accent);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   SKELETON LOADERS
+   ========================================== */
+.friends-loading {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.skeleton-card {
+  background: var(--friends-bg-secondary);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 2px solid var(--friends-border);
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* ==========================================
+   ESTADOS VACÍOS
+   ========================================== */
+.friends-empty,
+.friends-no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  color: var(--friends-text-muted);
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.empty-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--friends-text-primary);
+  margin: 0 0 0.75rem 0;
+}
+
+.empty-description {
+  font-size: 1rem;
+  color: var(--friends-text-secondary);
+  margin: 0 0 2rem 0;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   MENÚ CONTEXTUAL
+   ========================================== */
+.context-menu {
+  position: fixed;
+  background: var(--friends-bg-tertiary);
+  border: 1px solid var(--friends-border);
+  border-radius: 12px;
+  padding: 0.5rem 0;
+  min-width: 200px;
+  box-shadow: var(--shadow-lg);
+  z-index: 10000;
+  animation: contextMenuAppear 0.15s ease;
+}
+
+@keyframes contextMenuAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.context-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--friends-text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.context-menu-item:hover {
+  background: var(--friends-bg-hover);
+  color: var(--friends-accent);
+}
+
+.context-menu-item i {
+  width: 18px;
+  text-align: center;
+}
+
+.context-menu-danger {
+  color: var(--friends-danger);
+}
+
+.context-menu-danger:hover {
+  background: rgba(241, 70, 104, 0.1);
+  color: var(--friends-danger);
+}
+
+.context-menu-divider {
+  height: 1px;
+  background: var(--friends-border);
+  margin: 0.5rem 0;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 1200px) {
+  .friends-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .friends-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .friends-header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .btn-action span {
+    display: none;
+  }
+
+  .friends-toolbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .friends-filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .filter-buttons {
+    width: 100%;
+  }
+
+  .view-toggle {
+    margin-left: 0;
+  }
+
+  .friends-content {
+    padding: 1rem 1.5rem;
+  }
+
+  .friends-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Compatibilidad con clases antiguas */
 .has-separation {
   margin: 30px;
 }
@@ -6,50 +1037,80 @@
   text-align: center;
 }
 
-.lista-de-amigos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* ==========================================
+   UTILIDADES
+   ========================================== */
+.fade-in {
+  animation: fadeIn 0.3s ease;
 }
 
-.friend-card {
-  width: calc(33% - 20px);
-  margin: 10px;
+.slide-up {
+  animation: slideUp 0.3s ease;
 }
 
-.friend-username {
-  font-size: 23px;
-  display: inline;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.status-overlay {
+/* ==========================================
+   MODAL DE AÑADIR AMIGO
+   ========================================== */
+.modal-card-head .delete {
   position: absolute;
-  bottom: -10px;
-  right: -5px;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
 }
 
-.resultado-amigos::-webkit-scrollbar {
-  width: var(--scroll-size, 15px);
+.modal-card-head .delete:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
 }
 
-.resultado-amigos::-webkit-scrollbar-thumb {
-  background: var(--scroll-thumb, linear-gradient(45deg, #00aeff, #a68eff));
+.modal-card-head .delete::before,
+.modal-card-head .delete::after {
+  background-color: white;
 }
 
-.resultado-amigos::-webkit-scrollbar-track {
-  background: var(--scroll-track, rgb(255 255 255 / 10%));
+.modal-card-body .control {
+  position: relative;
 }
 
-.panel-amigos {
-  position: fixed;
-  overflow-y: auto;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -45%);
-  width: 90%;
-  height: 70%;
+.modal-card-body .control .input {
+  padding-left: 3rem !important;
+  padding-right: 1rem;
 }
 
-.panel-amigos::-webkit-scrollbar {
-  width: 0px;
+.modal-card-body .control .icon.is-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-card-body .control .icon.is-left i {
+  font-size: 1rem;
 }

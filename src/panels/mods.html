@@ -1,52 +1,94 @@
-<div id="battly_mods">
-  <link href="./assets/css/panels/mods.css" rel="stylesheet" />
+<div class="b-mods-wrapper">
 
-  <div class="home-container">
-    <span class="home-text">
-      <p style="color: #fff; font-weight: 800;">Battly <span style="color: #3e8ed0" id="battlymodstext">Mods</span></p>
-      <br />
-    </span>
-    <div class="home-features" id="home-features-mods">
-      <div class="home-container1" id="mods_container">
-      </div>
+  <div class="b-mods-title-container">
+    <div style="display: flex; flex-direction: column; gap: 0px;">
+      <h1 style="line-height: 1;">Battly <span id="battlymodstext" data-string-id="mods.mods"></span></h1>
+      <span style="font-size: 12px; color: #fff;">Con la tecnología de
+        <span style="color: #1bd96a; font-weight: 700;">Modrinth</span>
+      </span>
+    </div>
+    <div>
+      <button class="button is-info b-mod-button btn-dont-change" id="button_ver_mods"
+        data-string-id="mods.modsListButton"></button>
+      <button class="button is-info b-mod-button btn-dont-change" id="button_instalar_modpack"
+        data-string-id="mods.installModpack"></button>
+      <button class="button is-info b-mod-button btn-dont-change" id="volver" data-string-id="common.return"></button>
     </div>
   </div>
-  <nav class="pagination is-centered" role="navigation" id="navbar-mods" aria-label="pagination" style="
-        padding: 0 45px;
-        position: fixed;
-        bottom: 65;
-        width: 100%;
-        z-index: 100;
-    ">
-    <a class="pagination-previous button is-info" id="anterior_btn_mods" style="opacity: 0;">Anterior</a>
-    <a class="pagination-next button is-info" id="siguiente_btn_mods" style="opacity: 0;">Siguiente</a>
-    <ul class="pagination-list" id="pagination-mods">
-    </ul>
-  </nav>
-  <div class="bottom_bar_mods">
-    <div style="
-      display: flex;
-      justify-content: center;
-      gap: 5px;
-  ">
-      <input class="buscar-mods input" id="input_buscar_mods" type="text" placeholder="Buscar mods...">
-      <div class="select is-info" id="select_mods" style="height: 40px;">
-        <select style="height: 40px;" id="select-type-of-search-mods">
-          <option value="mod">Mods</option>
-          <option value="resourcepack">Resourcepacks</option>
-          <option value="shader">Shaders</option>
-        </select>
-      </div>
+
+  <div class="b-mods-search-sort-container">
+    <div class="b-mods-search-bar">
+      <input type="text" data-string-id="mods.searchPlaceholder" id="input_buscar_mods" />
+      <button id="searchBtn"><i class="fa fa-search"></i></button>
     </div>
-    <div style="
-      display: flex;
-      gap: 5px;
-      justify-content: center;
-  ">
-      <button class="button is-info" id="button_instalar_modpack" style="background-color: rgb(62, 142, 208);">Instalar
-        ModPack</button>
-      <button class="button is-info" id="button_ver_mods">Mis Mods</button>
-      <button class="boton-volver button is-info" id="volver">Volver</button>
+    <div class="b-mods-sort-container">
+      <label for="sort-select" data-string-id="mods.sortBy"></label>
+      <select id="sort-select">
+        <option value="relevance" data-string-id="mods.relevance"></option>
+        <option value="downloads" data-string-id="mods.downloads"></option>
+        <option value="follows" data-string-id="mods.follows"></option>
+        <option value="updated" data-string-id="mods.updated"></option>
+      </select>
     </div>
+    <div class="b-mods-sort-container">
+      <label for="loader-select" data-string-id="mods.loader"></label>
+      <select id="loader-select">
+        <option value="" data-string-id="mods.any"></option>
+        <option value="fabric" data-string-id="mods.fabric"></option>
+        <option value="forge" data-string-id="mods.forge"></option>
+        <option value="quilt" data-string-id="mods.quilt"></option>
+        <option value="neoforge" data-string-id="mods.neoforge"></option>
+      </select>
+    </div>
+    <div class="b-mods-sort-container">
+      <label for="content-select" data-string-id="mods.type"></label>
+      <select id="content-select">
+        <option value="" data-string-id="mods.any"></option>
+        <option value="mod" data-string-id="mods.mod"></option>
+        <option value="resourcepack" data-string-id="mods.resourcepack"></option>
+        <option value="shader" data-string-id="mods.shader"></option>
+        <option value="modpack" data-string-id="mods.modpack"></option>
+        <option value="datapack" data-string-id="mods.datapack"></option>
+      </select>
+    </div>
+    <span class="b-mods-results-count" id="results-count">0 - 0</span>
+  </div>
+
+  <div class="b-mods-versions-container">
+    <span data-string-id="mods.gameVersion"></span>
+    <label>
+      <input class="b-mods-version-checkbox" type="checkbox" value="1.20.1" />1.20.1
+    </label>
+    <label>
+      <input class="b-mods-version-checkbox" type="checkbox" value="1.20" />1.20
+    </label>
+    <label>
+      <input class="b-mods-version-checkbox" type="checkbox" value="1.19.4" />1.19.4
+    </label>
+    <label>
+      <input class="b-mods-version-checkbox" type="checkbox" value="1.19.3" />1.19.3
+    </label>
+    <label>
+      <input class="b-mods-version-checkbox" type="checkbox" value="1.19.2" />1.19.2
+    </label>
+    <label>
+      <input class="b-mods-version-checkbox" type="checkbox" value="1.18.2" />1.18.2
+    </label>
+    <button class="b-mods-reset-btn" id="resetBtn" data-string-id="mods.reset"></button>
+  </div>
+
+  <div class="b-mods-mod-list-container">
+    <div class="b-mods-mod-grid" id="mod-grid">
+
+    </div>
+  </div>
+
+  <div class="b-mods-pagination">
+    <button id="prevPage" data-string-id="mods.previous"></button>
+    <span id="pageInfo" data-string-id="mods.page"></span>
+    <button id="nextPage" data-string-id="mods.next"></button>
+    <label for="goToPageInput" style="margin-left: 0.5rem;" data-string-id="mods.goToPage"></label>
+    <input type="number" id="goToPageInput" min="1" />
+    <button id="goToPageBtn" data-string-id="mods.go"></button>
   </div>
 </div>

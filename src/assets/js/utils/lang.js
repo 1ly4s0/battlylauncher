@@ -1,94 +1,115 @@
 const fetch = require("node-fetch");
-const fs = require("fs");
+const fs = require("fs").promises;
 const path = require("path");
+const { getValue, setValue } = require('./storage');
 
-const dataDirectory = process.env.APPDATA || (process.platform === "darwin" ? `${process.env.HOME}/Library/Application Support` : process.env.HOME);
-let stringsCache;
-let isLoadingCache = false;
+const dataDirectory =
+  process.env.APPDATA ||
+  (process.platform === "darwin"
+    ? `${process.env.HOME}/Library/Application Support`
+    : process.env.HOME);
+
+let instance = null; // Singleton
 
 class Lang {
-  GetLang() {
-    const readLangFromFile = (langLocalStorage) => {
-      return new Promise(async (resolve, reject) => {
-        console.log("loading")
-        const filePath = path.join(dataDirectory, ".battly", "battly", "launcher", "langs", `${langLocalStorage}.json`);
-        console.log(filePath)
+  constructor() {
+    if (instance) return instance;
+    instance = this;
 
-        const data = await fs.readFileSync(filePath, "utf8");
-        const parsedData = JSON.parse(data);
-        resolve(parsedData);
-      });
+    this.stringsCache = null;
+    this.cachePromise = null;
+
+    // Cargar el idioma en segundo plano al iniciar
+    this.init();
+  }
+
+  async init() {
+    try {
+      this.stringsCache = await this.loadLang();
+    } catch (error) {
+      console.error("Failed to load language at init:", error);
+    }
+  }
+
+  async loadLang() {
+    let langLocalStorage = await getValue("lang");
+    if (!langLocalStorage) {
+      langLocalStorage = "es";
+      await setValue("lang", "es");
+    }
+    const langPath = path.join(
+      dataDirectory,
+      ".battly",
+      "battly",
+      "launcher",
+      "langs",
+      `${langLocalStorage}.json`
+    );
+    const offlineMode = await getValue("offline-mode") === "true";
+
+    const readLangFromFile = async () => {
+      try {
+        const data = await fs.readFile(langPath, "utf8");
+        return JSON.parse(data);
+      } catch (error) {
+        console.warn("Language file not found or unreadable, defaulting:", error);
+        return {};
+      }
     };
 
-    return new Promise(async (resolve, reject) => {
-      const langLocalStorage = localStorage.getItem("lang") || "es";
-
-
-      if (!stringsCache && !isLoadingCache) {
-        isLoadingCache = true;
-
-        console.log("Cache doesn't exist, fetching from API...");
-        if (localStorage.getItem("offline-mode") === "true") {
-          console.log("offline mode")
-          console.log(langLocalStorage)
-          try {
-            const fileData = await readLangFromFile(langLocalStorage);
-            console.log(fileData)
-            stringsCache = fileData;
-            isLoadingCache = false;
-            resolve(stringsCache);
-          } catch (error) {
-            isLoadingCache = false;
-            reject(error);
-          }
-        } else {
-          fetch(`https://api.battlylauncher.com/launcher/langs/${langLocalStorage}`)
-            .then(res => res.json())
-            .then(data => {
-              const { strings, version } = data;
-              const localStorageLangVersion = localStorage.getItem("langVersion") || 0;
-
-              if (version !== localStorageLangVersion) {
-                localStorage.setItem("langVersion", version);
-
-                const langDir = path.join(dataDirectory, ".battly", "battly", "launcher", "langs");
-                if (!fs.existsSync(langDir)) {
-                  fs.mkdirSync(langDir, { recursive: true });
-                }
-
-                fs.writeFileSync(path.join(langDir, `${langLocalStorage}.json`), JSON.stringify(strings), "utf8");
-              }
-
-              stringsCache = strings;
-              isLoadingCache = false;
-              resolve(stringsCache);
-            })
-            .catch(async error => {
-              console.error("Error fetching from API:", error);
-              try {
-                const fileData = await readLangFromFile(langLocalStorage);
-                console.log(fileData)
-                resolve(fileData);
-              } catch (fileError) {
-                reject(fileError);
-              } finally {
-                isLoadingCache = false;
-              }
-            });
-        }
-      } else if (stringsCache && !isLoadingCache) {
-        console.log("Cache exists, returning it...");
-        resolve(stringsCache);
-      } else {
-        console.log("Cache is loading, waiting...");
-        const interval = setInterval(() => {
-          if (!isLoadingCache) {
-            clearInterval(interval);
-            resolve(stringsCache);
-          }
-        }, 100);
+    const saveLangToFile = async (data) => {
+      try {
+        await fs.mkdir(path.dirname(langPath), { recursive: true });
+        await fs.writeFile(langPath, JSON.stringify(data), "utf8");
+      } catch (error) {
+        console.error("Error saving language file:", error);
       }
-    });
+    };
+
+    if (offlineMode) {
+      console.log("Offline mode: loading language from local file...");
+      return readLangFromFile();
+    }
+
+    try {
+      console.log("Fetching language from API...");
+      const response = await fetch(
+        `https://api.battlylauncher.com/launcher/langs/${langLocalStorage}`
+      );
+      const { strings, version } = await response.json();
+
+      const localVersion = await getValue("langVersion") || 0;
+
+      console.log(`API version: ${version}, local version: ${localVersion}`);
+      if (version.toString() !== localVersion.toString()) {
+        console.log("New language version, saving to local file...");
+        await setValue("langVersion", version);
+        await saveLangToFile(strings);
+      }
+
+      return strings;
+    } catch (error) {
+      console.error(
+        "Error fetching language from API, falling back to local file:",
+        error
+      );
+      return readLangFromFile();
+    }
+  }
+
+  async GetLang() {
+    if (this.stringsCache) {
+      return this.stringsCache;
+    }
+
+    if (!this.cachePromise) {
+      this.cachePromise = this.loadLang().then((data) => {
+        this.stringsCache = data;
+        return data;
+      });
+    }
+
+    return this.cachePromise;
   }
 }
 
