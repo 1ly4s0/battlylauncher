@@ -391,12 +391,12 @@ class Mods {
 
                 modGrid.innerHTML = "";
                 pageInfo.textContent = totalHits > 0
-                    ? window.stringLoader.getString("mods.pageInfo", { currentPage, totalPages })
+                    ? window.stringLoader.getString("mods.pageInfo", { currentPage: currentPage.toString(), totalPages: totalPages.toString() })
                     : window.stringLoader.getString("mods.noResults");
                 const start = totalHits > 0 ? offset + 1 : 0;
                 const end = totalHits > 0 ? Math.min(offset + limit, totalHits) : 0;
                 resultsCount.textContent = totalHits > 0
-                    ? window.stringLoader.getString("mods.resultsCount", { start, end, totalHits })
+                    ? window.stringLoader.getString("mods.resultsCount", { start: start.toString(), end: end.toString(), totalHits: totalHits.toString() })
                     : window.stringLoader.getString("mods.noResultsCount");
 
                 prevPageBtn.disabled = currentPage <= 1 || totalHits === 0;

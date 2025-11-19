@@ -111,14 +111,10 @@ class StringLoader {
         }
     }
 
-    getString(path) {
+    getString(path, replacements = null) {
         if (!this.strings) {
             console.warn('⚠️ StringLoader: Strings not loaded yet, returning path as fallback');
             return path;
-        }
-
-        if (this.stringCache.has(path)) {
-            return this.stringCache.get(path);
         }
 
         const keys = path.split('.');
@@ -129,12 +125,16 @@ class StringLoader {
                 value = value[key];
             } else {
                 console.warn(`⚠️ StringLoader: String not found - ${path}`);
-                this.stringCache.set(path, path);
                 return path;
             }
         }
 
-        this.stringCache.set(path, value);
+        if (replacements && typeof value === 'string') {
+            for (const [key, val] of Object.entries(replacements)) {
+                value = value.replace(new RegExp(`\\{${key}\\}`, 'g'), val);
+            }
+        }
+
         return value;
     }
 
