@@ -14,7 +14,7 @@ const {
   screen,
 } = require("electron");
 const { Worker } = require("worker_threads");
-const { Microsoft } = require("./assets/js/libs/mc");
+const { Microsoft } = require("./assets/js/libs/mc/Index");
 const { autoUpdater } = require("electron-updater");
 const { io } = require("socket.io-client");
 const fetch = require("node-fetch");
