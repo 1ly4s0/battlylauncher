@@ -608,6 +608,39 @@ ipcMain.handle("analytics-log", async (_event, level, message, context = {}) => 
   return { success: false, error: "Analytics not initialized" };
 });
 
+ipcMain.handle("analytics-flush-logs", async (_event, logsArray = []) => {
+  if (!analytics) {
+    return { success: false, error: "Analytics not initialized" };
+  }
+
+  if (!Array.isArray(logsArray) || logsArray.length === 0) {
+    return { success: true, sent: 0 };
+  }
+
+  try {
+    console.log(`[Analytics] Flushing ${logsArray.length} logs...`);
+
+    let sent = 0;
+    for (const logEntry of logsArray) {
+      try {
+        await analytics.log(logEntry.level, logEntry.message, {
+          ...logEntry.context,
+          timestamp: logEntry.timestamp
+        });
+        sent++;
+      } catch (err) {
+        console.error("[Analytics] Error sending log:", err.message);
+      }
+    }
+
+    console.log(`[Analytics] ${sent}/${logsArray.length} logs sent`);
+    return { success: true, sent, total: logsArray.length };
+  } catch (error) {
+    console.error("Analytics flush error:", error);
+    return { success: false, error: error.message };
+  }
+});
+
 ipcMain.handle("get-system-info", async () => {
 
   const disp = screen.getPrimaryDisplay();

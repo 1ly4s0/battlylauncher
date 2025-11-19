@@ -7,6 +7,7 @@ const { StringLoader } = require("./assets/js/utils/stringLoader.js");
 
 const { ipcRenderer, ipcMain, shell } = require("electron");
 
+const AnalyticsController = require("./assets/js/utils/analyticsController.js");
 
 import { LoadAPI } from "../utils/loadAPI.js";
 import { CrashReport } from "../utils/crash-report.js";

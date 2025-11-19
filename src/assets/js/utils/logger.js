@@ -30,7 +30,6 @@ class logger {
             if (typeof value === 'object') value = JSON.stringify(value);
             consoleOutput += `[LOG] ${new Date().toISOString()} - ${value}\n`;
 
-            // Send to analytics
             AnalyticsHelper.log(AnalyticsHelper.LogLevel.INFO, value, { logger: name })
                 .catch(err => console_error.call(console, 'Analytics log error:', err));
         };
@@ -41,7 +40,6 @@ class logger {
             if (typeof value === 'object') value = JSON.stringify(value);
             consoleOutput += `[INFO] ${new Date().toISOString()} - ${value}\n`;
 
-            // Send to analytics
             AnalyticsHelper.log(AnalyticsHelper.LogLevel.INFO, value, { logger: name })
                 .catch(err => console_error.call(console, 'Analytics log error:', err));
         };
@@ -52,7 +50,6 @@ class logger {
             if (typeof value === 'object') value = JSON.stringify(value);
             consoleOutput += `[WARN] ${new Date().toISOString()} - ${value}\n`;
 
-            // Send to analytics
             AnalyticsHelper.log(AnalyticsHelper.LogLevel.WARN, value, { logger: name })
                 .catch(err => console_error.call(console, 'Analytics log error:', err));
         };
@@ -63,7 +60,6 @@ class logger {
             if (typeof value === 'object') value = JSON.stringify(value);
             consoleOutput += `[DEBUG] ${new Date().toISOString()} - ${value}\n`;
 
-            // Send to analytics
             AnalyticsHelper.log(AnalyticsHelper.LogLevel.DEBUG, value, { logger: name })
                 .catch(err => console_error.call(console, 'Analytics log error:', err));
         };
@@ -74,10 +70,9 @@ class logger {
             if (typeof value === 'object') value = JSON.stringify(value);
             consoleOutput += `[ERROR] ${new Date().toISOString()} - ${value}\n`;
 
-            // Send to analytics
-            AnalyticsHelper.log(AnalyticsHelper.LogLevel.ERROR, value, { 
-                logger: name, 
-                error: error ? error.message : null 
+            AnalyticsHelper.log(AnalyticsHelper.LogLevel.ERROR, value, {
+                logger: name,
+                error: error ? error.message : null
             }).catch(err => console_error.call(console, 'Analytics log error:', err));
         };
 
