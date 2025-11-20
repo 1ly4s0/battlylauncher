@@ -75,7 +75,7 @@ class StringLoader {
         try {
             // Intentar cargar desde la API primero
             const baseURL = 'https://api.battlylauncher.com';
-            const apiUrl = `${baseURL}/api/v2/launcher/strings/${language}`;
+            const apiUrl = `${baseURL}/launcher/langs/${language}`;
 
             const response = await fetch(apiUrl);
 

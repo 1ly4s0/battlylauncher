@@ -4,7 +4,6 @@ const fsp = fs.promises;
 const path = require("path");
 const https = require("https");
 const { getValue, setValue } = require("./assets/js/utils/storage");
-const { Lang } = require("./assets/js/utils/lang.js");
 
 const CONFIG_URL = "https://api.battlylauncher.com/v3/launcher/config-launcher/config.json";
 const VERSIONS_URL = "https://api.battlylauncher.com/v3/battlylauncher/launcher/config-launcher/versions.json";
@@ -96,7 +95,7 @@ function setLoadingText(keyOrText) {
     if (!el) return;
     el.innerHTML = keyOrText;
 }
-function applyChristmasUI(config, { startup, lang }) {
+function applyChristmasUI(config, { startup }) {
     if (!config || typeof document === "undefined") return;
     const snow = getEl("christmas-snowflakes");
     const up = getEl("rectangulo-arriba");
@@ -134,33 +133,35 @@ class LoadAPI {
             versions: `${this.paths.versions}.meta.json`,
             mojang: `${this.paths.mojangVersions}.meta.json`,
         };
-        this._langPromise = null;
     }
 
-    async lang() {
-        if (!this._langPromise) this._langPromise = new Lang().GetLang();
+    async getString(key) {
         try {
-            return await this._langPromise;
+            if (typeof window !== 'undefined' && window.stringLoader) {
+                return window.stringLoader.getString(`launcher.${key}`) || key;
+            }
         } catch (e) {
-            console.error("Lang load error:", e);
-            return {
-                loading_config: "Cargando configuración...",
-                config_loaded: "Configuración cargada.",
-                error_loading_config: "Error cargando configuración.",
-                loading_versions: "Cargando versiones...",
-                versions_loaded: "Versiones cargadas.",
-                error_loading_versions: "Error cargando versiones.",
-                loading_minecraft_versions: "Cargando versiones de Minecraft...",
-                minecraft_versions_loaded: "Versiones de Minecraft cargadas.",
-                error_loading_minecraft_versions: "Error cargando versiones de Minecraft.",
-                starting_battly: "Iniciando Battly...",
-            };
+            console.error("StringLoader error:", e);
         }
+
+        const fallbacks = {
+            loading_config: "Loading configuration...",
+            config_loaded: "Configuration loaded.",
+            error_loading_config: "Error loading configuration.",
+            loading_versions: "Loading versions...",
+            versions_loaded: "Versions loaded.",
+            error_loading_versions: "Error loading versions.",
+            loading_minecraft_versions: "Loading Minecraft versions...",
+            minecraft_versions_loaded: "Minecraft versions loaded.",
+            error_loading_minecraft_versions: "Error loading Minecraft versions.",
+            starting_battly: "Starting Battly...",
+        };
+        return fallbacks[key] || key;
     }
 
     async loadFile({ url, localPath, metaPath, loadingKey, successKey, errorKey, startup = false, applyUI = false }) {
-        const lang = await this.lang();
-        if (!startup) setLoadingText(lang[loadingKey] || loadingKey);
+        const loadingText = await this.getString(loadingKey);
+        if (!startup) setLoadingText(loadingText || loadingKey);
         let offlineMode = "false";
         try {
             offlineMode = String(await getValue("offline-mode"));
@@ -168,11 +169,13 @@ class LoadAPI {
         if (offlineMode === "true") {
             try {
                 const data = await readJSONSafe(localPath);
-                if (!startup) setLoadingText(lang[successKey] || successKey);
-                if (applyUI && url === CONFIG_URL) applyChristmasUI(data, { startup, lang });
+                const successText = await this.getString(successKey);
+                if (!startup) setLoadingText(successText || successKey);
+                if (applyUI && url === CONFIG_URL) applyChristmasUI(data, { startup });
                 return data;
             } catch (err) {
-                if (!startup) setLoadingText(lang[errorKey] || errorKey);
+                const errorText = await this.getString(errorKey);
+                if (!startup) setLoadingText(errorText || errorKey);
                 throw err;
             }
         }
@@ -187,9 +190,10 @@ class LoadAPI {
                 lastModified: res.headers["last-modified"] || meta.lastModified || null,
                 updatedAt: Date.now(),
             });
-            if (!startup) setLoadingText(lang[successKey] || successKey);
+            const successText = await this.getString(successKey);
+            if (!startup) setLoadingText(successText || successKey);
             if (applyUI && url === CONFIG_URL) {
-                applyChristmasUI(data, { startup, lang });
+                applyChristmasUI(data, { startup });
                 if (data?.christmasTheme?.songEnabled && !songPlayed) {
                     songPlayed = true;
                 }
@@ -199,18 +203,19 @@ class LoadAPI {
             console.warn("Fallo online, intentando offline:", networkErr?.message || networkErr);
             try {
                 const data = await readJSONSafe(localPath);
-                if (!startup) setLoadingText(lang[errorKey] || errorKey);
-                if (applyUI && url === CONFIG_URL) applyChristmasUI(data, { startup, lang });
+                const errorText = await this.getString(errorKey);
+                if (!startup) setLoadingText(errorText || errorKey);
+                if (applyUI && url === CONFIG_URL) applyChristmasUI(data, { startup });
                 return data;
             } catch (diskErr) {
-                if (!startup) setLoadingText(lang[errorKey] || errorKey);
+                const errorText = await this.getString(errorKey);
+                if (!startup) setLoadingText(errorText || errorKey);
                 throw diskErr;
             }
         }
     }
 
     async GetConfig(startup = false) {
-        const lang = await this.lang();
         return this.loadFile({
             url: CONFIG_URL,
             localPath: this.paths.config,
@@ -247,8 +252,8 @@ class LoadAPI {
             startup: false,
             applyUI: false,
         });
-        const lang = await this.lang();
-        setTimeout(() => setLoadingText(lang.starting_battly || "Starting Battly..."), 2000);
+        const startingText = await this.getString("starting_battly");
+        setTimeout(() => setLoadingText(startingText || "Starting Battly..."), 2000);
         return data;
     }
 }

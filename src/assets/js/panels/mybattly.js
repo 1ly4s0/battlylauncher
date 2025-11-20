@@ -1,18 +1,9 @@
-'use strict';
-
-console.time("🕐 MyBattly");
 import { logger, database, changePanel } from '../utils.js';
 import { Alert } from "../utils/alert.js";
 import * as NBT from "../../../../node_modules/nbtify/dist/index.js";
 
-const { Lang } = require("./assets/js/utils/lang.js");
+require('./assets/js/utils/stringLoader.js');
 const dataDirectory = process.env.APPDATA || (process.platform == 'darwin' ? `${process.env.HOME}/Library/Application Support` : process.env.HOME);
-let lang;
-new Lang().GetLang().then(lang_ => {
-    lang = lang_;
-}).catch(error => {
-    console.error("Error:", error);
-});
 
 import { AskModal } from '../utils/askModal.js';
 const modal = new AskModal();
@@ -27,7 +18,6 @@ class MyBattly {
 
         this.database = await new database().init();
         this.config = config;
-        lang = await new Lang().GetLang();
         this.Load();
         this.LoadFriends();
 
@@ -394,11 +384,11 @@ class MyBattly {
                                     deleteIcon.addEventListener("click", async () => {
                                         try {
                                             await modal.ask({
-                                                title: lang.are_you_sure,
-                                                text: lang.are_you_sure_text,
+                                                title: window.stringLoader?.getString("common.are_you_sure") || "¿Estás seguro?",
+                                                text: window.stringLoader?.getString("common.are_you_sure_text") || "Esta acción no se puede deshacer",
                                                 showCancelButton: true,
-                                                confirmButtonText: lang.yes_delete,
-                                                cancelButtonText: lang.no_cancel,
+                                                confirmButtonText: window.stringLoader?.getString("common.yes_delete") || "Sí, eliminar",
+                                                cancelButtonText: window.stringLoader?.getString("common.no_cancel") || "Cancelar",
                                                 confirmButtonColor: "#f14668",
                                                 cancelButtonColor: "#3e8ed0",
                                                 preConfirm: () => true
@@ -539,11 +529,11 @@ class MyBattly {
 
                                     try {
                                         await modal.ask({
-                                            title: lang.are_you_sure,
-                                            text: lang.are_you_sure_text,
+                                            title: window.stringLoader?.getString("common.are_you_sure") || "¿Estás seguro?",
+                                            text: window.stringLoader?.getString("common.are_you_sure_text") || "Esta acción no se puede deshacer",
                                             showCancelButton: true,
-                                            confirmButtonText: lang.yes_delete,
-                                            cancelButtonText: lang.no_cancel,
+                                            confirmButtonText: window.stringLoader?.getString("common.yes_delete") || "Sí, eliminar",
+                                            cancelButtonText: window.stringLoader?.getString("common.no_cancel") || "Cancelar",
                                             confirmButtonColor: "#f14668",
                                             cancelButtonColor: "#3e8ed0",
                                             preConfirm: () => true
@@ -779,11 +769,11 @@ class MyBattly {
                                 deleteBtn.addEventListener("click", async () => {
                                     try {
                                         await modal.ask({
-                                            title: lang.are_you_sure,
-                                            text: lang.are_you_sure_text,
+                                            title: window.stringLoader?.getString("common.are_you_sure") || "¿Estás seguro?",
+                                            text: window.stringLoader?.getString("common.are_you_sure_text") || "Esta acción no se puede deshacer",
                                             showCancelButton: true,
-                                            confirmButtonText: lang.yes_delete,
-                                            cancelButtonText: lang.no_cancel,
+                                            confirmButtonText: window.stringLoader?.getString("common.yes_delete") || "Sí, eliminar",
+                                            cancelButtonText: window.stringLoader?.getString("common.no_cancel") || "Cancelar",
                                             confirmButtonColor: "#f14668",
                                             cancelButtonColor: "#3e8ed0",
                                             preConfirm: () => true

@@ -6,13 +6,13 @@ let dev = process.env.NODE_ENV === 'dev';
 const fs = require('fs');
 const fetch = require('node-fetch');
 const axios = require("axios");
-const { Lang } = require('./assets/js/utils/lang.js');
 const { getValue, setValue } = require('./assets/js/utils/storage');
 import { LoadAPI } from "./utils/loadAPI.js";
 
 require('./assets/js/libs/errorReporter');
+require('./assets/js/utils/stringLoader.js');
 
-let lang = null;
+let stringLoader = null;
 
 let splash_;
 let splashMessage;
@@ -26,7 +26,7 @@ class Splash {
 	}
 
 	async init() {
-		await this.LoadLang();
+		await this.LoadStrings();
 
 		if (document.readyState === "complete" || document.readyState === "interactive") {
 			splash_ = document.querySelector(".splash");
@@ -41,13 +41,14 @@ class Splash {
 		}
 	}
 
-	async LoadLang() {
-		if (!lang) {
+	async LoadStrings() {
+		if (!stringLoader) {
 			try {
-				lang = await new Lang().GetLang();
-				console.log("Idioma cargado:", lang);
+				await window.ensureStringLoader();
+				stringLoader = window.stringLoader;
+				console.log("Strings loaded successfully");
 			} catch (error) {
-				console.error("Error cargando el idioma:", error);
+				console.error("Error loading strings:", error);
 			}
 		}
 	}
@@ -68,7 +69,7 @@ class Splash {
 			"ar": "مرحبا!",
 		};
 
-		message.innerHTML = strings[await getValue("lang") ? await getValue("lang") : "en"];
+		message.innerHTML = strings[stringLoader?.getCurrentLanguage() || "en"];
 
 		let sonidoDB = await getValue("sonido-inicio") || "start";
 		let sonido_inicio = new Audio(`./assets/audios/${sonidoDB}.mp3`);
@@ -96,11 +97,11 @@ class Splash {
 			await setValue("offline-mode", false);
 		}).catch(async () => {
 			await setValue("offline-mode", true);
-			this.setStatus(lang.checking_connection);
+			this.setStatus(stringLoader?.getString("launcher.checking_connection") || "Checking connection...");
 			await sleep(1000);
-			this.setStatus(lang.no_connection);
+			this.setStatus(stringLoader?.getString("launcher.no_connection") || "No connection");
 			await sleep(1500);
-			this.setStatus(lang.starting_battly);
+			this.setStatus(stringLoader?.getString("launcher.starting_battly") || "Starting Battly...");
 			await sleep(500);
 			this.startBattly();
 		});
@@ -111,7 +112,7 @@ class Splash {
 			const res = await new LoadAPI().GetConfig(true);
 
 			if (res.maintenance) return this.shutdown(res.maintenance_message);
-			this.setStatus(lang.starting_launcher);
+			this.setStatus(stringLoader?.getString("launcher.starting_launcher") || "Starting launcher...");
 			await sleep(500);
 			setTimeout(() => {
 				this.checkForUpdates();
@@ -119,7 +120,7 @@ class Splash {
 			return true;
 		} catch (error) {
 			console.error(error);
-			return this.shutdown(lang.error_connecting_server);
+			return this.shutdown(stringLoader?.getString("launcher.error_connecting_server") || "Error connecting to server");
 		}
 	}
 
@@ -127,17 +128,17 @@ class Splash {
 		splash_.classList.remove("translate");
 		splashMessage.classList.add("animate__animated", "animate__flipOutX");
 		splashAuthor.classList.add("animate__animated", "animate__flipOutX");
-		this.setStatus(lang.ending);
+		this.setStatus(stringLoader?.getString("launcher.ending") || "Closing...");
 		await sleep(500);
 		ipcRenderer.send('main-window-open');
 		ipcRenderer.send('update-window-close');
 	}
 
 	shutdown(text) {
-		this.setStatus(`${text}<br>${lang.closing_countdown} 10s`);
+		this.setStatus(`${text}<br>${stringLoader?.getString("launcher.closing_countdown") || "Closing in"} 10s`);
 		let i = 10;
 		setInterval(() => {
-			this.setStatus(`${text}<br>${lang.closing_countdown} ${i}s`);
+			this.setStatus(`${text}<br>${stringLoader?.getString("launcher.closing_countdown") || "Closing in"} ${i}s`);
 			if (i < 0) ipcRenderer.send('update-window-close');
 			i--;
 		}, 1000);
@@ -166,25 +167,25 @@ class Splash {
 			this.startBattly();
 		});
 
-		this.setStatus(lang.checking_updates);
+		this.setStatus(stringLoader?.getString("launcher.checking_updates") || "Checking for updates...");
 
 		ipcRenderer.invoke('update-app').then(err => {
 			if (err) {
 				if (err.error) {
 					let error = err.message;
 					error = error.toString().slice(0, 50);
-					this.shutdown(`${lang.update_error} <br> ${error}`);
+					this.shutdown(`${stringLoader?.getString("launcher.update_error") || "Update error"} <br> ${error}`);
 				}
 			}
 		})
 
 		ipcRenderer.on('updateAvailable', () => {
-			this.setStatus(lang.update_available);
+			this.setStatus(stringLoader?.getString("launcher.update_available") || "Update available");
 
 			let boton_actualizar = document.getElementById("btn_actualizar");
 			boton_actualizar.style.display = "block";
 			boton_actualizar.addEventListener("click", () => {
-				this.setStatus(lang.downloading_update);
+				this.setStatus(stringLoader?.getString("launcher.downloading_update") || "Downloading update...");
 				this.toggleProgress();
 				ipcRenderer.send('start-update');
 			})
@@ -192,13 +193,13 @@ class Splash {
 			let boton_cancelar = document.getElementById("btn_jugar");
 			boton_cancelar.style.display = "block";
 			boton_cancelar.addEventListener("click", () => {
-				this.setStatus(lang.update_cancelled);
+				this.setStatus(stringLoader?.getString("launcher.update_cancelled") || "Update cancelled");
 				this.checkMaintenance();
 			})
 		})
 
 		ipcRenderer.on('updateNewAvailable', () => {
-			this.setStatus(lang.update_available);
+			this.setStatus(stringLoader?.getString("launcher.update_available") || "Update available");
 
 			ipcRenderer.send('start-new-update');
 		})
@@ -212,7 +213,7 @@ class Splash {
 		})
 
 		ipcRenderer.on('update-downloaded', async () => {
-			this.setStatus(lang.update_downloaded);
+			this.setStatus(stringLoader?.getString("launcher.update_downloaded") || "Update downloaded");
 			await sleep(5000);
 			this.toggleProgress();
 			ipcRenderer.send('update-window-close');

@@ -1,5 +1,29 @@
 {
   "version": 15,
+  "launcher": {
+    "loading_config": "Loading configuration...",
+    "config_loaded": "Configuration loaded.",
+    "error_loading_config": "Error loading configuration.",
+    "loading_versions": "Loading versions...",
+    "versions_loaded": "Versions loaded.",
+    "error_loading_versions": "Error loading versions.",
+    "loading_minecraft_versions": "Loading Minecraft versions...",
+    "minecraft_versions_loaded": "Minecraft versions loaded.",
+    "error_loading_minecraft_versions": "Error loading Minecraft versions.",
+    "starting_battly": "Starting Battly...",
+    "checking_updates": "Checking for updates...",
+    "update_available": "Update available",
+    "downloading_update": "Downloading update...",
+    "update_cancelled": "Update cancelled",
+    "update_error": "Update error",
+    "update_downloaded": "Update downloaded",
+    "checking_connection": "Checking connection...",
+    "no_connection": "No internet connection",
+    "starting_launcher": "Starting launcher...",
+    "error_connecting_server": "Error connecting to server",
+    "ending": "Closing...",
+    "closing_countdown": "Closing in"
+  },
   "common": {
     "welcome": "Welcome to Battly!",
     "salutate": "Hello!",
@@ -54,7 +78,10 @@
     "playlistSavedSuccessfully": "The playlist has been saved successfully",
     "addedToQueue": "Songs added",
     "songsAddedToQueue": "The songs have been added to the queue",
-    "errorImportingPlaylist": "An error occurred while importing the playlist"
+    "errorImportingPlaylist": "An error occurred while importing the playlist",
+    "account_selected": "Account Selected",
+    "account_selected_text": "You are now using account:",
+    "account_selected_text_two": "Select another account to change it"
   },
   "startup": {
     "checkingConnection": "Checking internet connection",
@@ -1044,7 +1071,14 @@
     "lts": "LTS",
     "javaAlreadyInstalled": "Already installed",
     "downloadingJava": "Downloading… 0%",
-    "completedJava": "Completed"
+    "completedJava": "Completed",
+    "account_selected": "Account selected",
+    "account_selected_text": "You have selected",
+    "account_selected_text_two": "as your active account",
+    "are_you_sure": "Are you sure?",
+    "are_you_sure_text": "This action cannot be undone",
+    "yes_delete": "Yes, delete",
+    "no_cancel": "Cancel"
   },
   "logs": {
     "logsTitle": "Battly Logs",

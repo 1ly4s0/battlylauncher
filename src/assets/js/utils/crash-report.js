@@ -2,14 +2,9 @@ const { ipcRenderer } = require("electron");
 const fs = require("fs");
 const path = require("path");
 const { shell } = require("electron");
-const { Lang } = require("./assets/js/utils/lang.js");
+require("./assets/js/utils/stringLoader.js");
 const { getValue, setValue } = require('./assets/js/utils/storage');
-let lang;
-new Lang().GetLang().then(lang_ => {
-    lang = lang_;
-}).catch(error => {
-    console.error("Error:", error);
-});
+let lang = {};
 
 let showed;
 
@@ -17,13 +12,13 @@ class CrashReport {
     async ShowCrashReport(error) {
         if (showed) return;
         showed = true;
-        lang = await new Lang().GetLang();
+        await window.ensureStringLoader?.();
         let audioError = new Audio("./assets/audios/error.mp3");
         audioError.play();
 
         ipcRenderer.send("new-notification", {
-            title: lang["notification_crash_report_title"],
-            body: lang["notification_crash_report_text"]
+            title: window.stringLoader?.getString("common.notification_crash_report_title") || "Reporte de Error",
+            body: window.stringLoader?.getString("common.notification_crash_report_text") || "Ocurrió un error"
         });
 
         const modalDiv = document.createElement("div");

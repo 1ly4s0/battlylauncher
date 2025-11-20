@@ -6,13 +6,7 @@ const { ipcRenderer, shell } = require('electron');
 const Swal = require("./assets/js/libs/sweetalert/sweetalert2.all.min.js");
 const { getValue, setValue } = require('./assets/js/utils/storage');
 
-const { Lang } = require("./assets/js/utils/lang.js");
-let lang;
-new Lang().GetLang().then(lang_ => {
-    lang = lang_;
-}).catch(error => {
-    console.error("Error:", error);
-});
+require('./assets/js/utils/stringLoader.js');
 
 import { AskModal } from '../utils/askModal.js';
 const modal = new AskModal();
@@ -22,7 +16,6 @@ class Login {
     async init(config) {
         this.config = config
         this.database = await new database().init();
-        lang = await new Lang().GetLang();
         this.getOffline()
         this.getOnline()
     }
@@ -45,19 +38,19 @@ class Login {
         microsoftBtn.addEventListener("click", async () => {
             try {
                 await modal.ask({
-                    title: lang.login_microsoft_adv_title,
-                    text: lang.login_microsoft_adv_text,
+                    title: window.stringLoader?.getString("login.login_microsoft_adv_title") || "Iniciar sesión con Microsoft",
+                    text: window.stringLoader?.getString("login.login_microsoft_adv_text") || "Se abrirá una ventana del navegador",
                     icon: 'info',
                     showCancelButton: true,
-                    confirmButtonText: lang.login_microsoft_accept,
-                    cancelButtonText: lang.login_microsoft_cancel,
+                    confirmButtonText: window.stringLoader?.getString("login.login_microsoft_accept") || "Continuar",
+                    cancelButtonText: window.stringLoader?.getString("login.login_microsoft_cancel") || "Cancelar",
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
                     preConfirm: () => true
                 });
 
                 document.querySelector(".preload-content").style.display = "";
-                document.getElementById("loading-text").innerHTML = lang.a_microsoft_panel_opened;
+                document.getElementById("loading-text").innerHTML = window.stringLoader?.getString("login.a_microsoft_panel_opened") || "Panel de Microsoft abierto";
                 microsoftBtn.disabled = true;
 
                 try {
@@ -65,10 +58,10 @@ class Login {
                     console.log(account_connect);
 
                     document.querySelector(".preload-content").style.display = "";
-                    document.getElementById("loading-text").innerHTML = lang.logging_in;
+                    document.getElementById("loading-text").innerHTML = window.stringLoader?.getString("login.logging_in") || "Iniciando sesión...";
 
                     if (!account_connect) {
-                        document.getElementById("loading-text").innerHTML = lang.error_logging_in;
+                        document.getElementById("loading-text").innerHTML = window.stringLoader?.getString("login.error_logging_in") || "Error al iniciar sesión";
                         setTimeout(() => {
                             document.querySelector(".preload-content").style.display = "none";
                             changePanel("settings");
@@ -104,16 +97,20 @@ class Login {
                         changePanel("home");
                     }
 
-                } catch (err) {
-                    console.log(err);
-                    microsoftBtn.disabled = false;
-                    document.getElementById("loading-text").innerHTML = lang.error_logging_in;
+                    document.getElementById("loading-text").innerHTML = window.stringLoader?.getString("login.error_logging_in") || "Error al iniciar sesión"; (() => {
+                        document.querySelector(".preload-content").style.display = "none";
+                        changePanel("settings");
+                    }, 3000);
+                } catch (error) {
+                    console.log("❌ Error al iniciar sesión con Microsoft");
+                    console.error(error);
+                    document.getElementById("loading-text").innerHTML = window.stringLoader?.getString("login.error_logging_in") || "Error al iniciar sesión";
                     setTimeout(() => {
                         document.querySelector(".preload-content").style.display = "none";
                         changePanel("settings");
                     }, 3000);
                 }
-
+                
                 microsoftBtn.disabled = false;
 
             } catch (err) {
@@ -165,7 +162,7 @@ class Login {
             } else {
 
                 infoLoginPanel.classList.add("is-active");
-                infoLogin.innerHTML = lang.checking_auth_code;
+                infoLogin.innerHTML = window.stringLoader?.getString("login.checking_auth_code") || "Verificando código de autenticación...";
 
                 fetch("https://battlylauncher.com/api/battly/google/verify", {
                     method: "POST",
@@ -190,7 +187,7 @@ class Login {
                         }, 3000);
                     } else {
 
-                        infoLogin.innerHTML = lang.logging_in;
+                        infoLogin.innerHTML = window.stringLoader?.getString("login.logging_in") || "Iniciando sesión...";
 
                         let account = {
                             type: "battly",
@@ -206,7 +203,7 @@ class Login {
                             }
                         }
 
-                        infoLogin.innerHTML = lang.checking_if_you_are_premium;
+                        infoLogin.innerHTML = window.stringLoader?.getString("login.checking_if_you_are_premium") || "Verificando si eres premium...";
 
                         let premiums = [];
                         try {
@@ -255,12 +252,12 @@ class Login {
                         blockWelcome.innerHTML = `
                         <div class="news-header">
                             <div class="header-text">
-                                <div class="title_">${lang.welcome_again_to_battly}, ${account.name}</div>
+                                <div class="title_">${window.stringLoader?.getString("login.welcome_again_to_battly") || "¡Bienvenido a Battly!"}, ${account.name}</div>
                             </div>
                         </div>
                         <div class="news-content">
                             <div class="bbWrapper">
-                                <p>${lang.we_hope_you_enjoy}</p>
+                                <p>${window.stringLoader?.getString("login.we_hope_you_enjoy") || "Esperamos que disfrutes"}</p>
                             </div>
                         </div>`;
                         welcome.prepend(blockWelcome);
@@ -307,7 +304,7 @@ class Login {
                         }
                     }
 
-                    infoLogin.innerHTML = lang.checking_if_you_are_premium;
+                    infoLogin.innerHTML = window.stringLoader?.getString("login.checking_if_you_are_premium") || "Verificando si eres premium...";
 
                     let premiums = [];
                     try {
@@ -353,12 +350,12 @@ class Login {
                     blockWelcome.innerHTML = `
                     <div class="news-header">
                         <div class="header-text">
-                            <div class="title_">${lang.welcome_again_to_battly}, ${account.name}</div>
+                            <div class="title_">${window.stringLoader?.getString("login.welcome_again_to_battly") || "¡Bienvenido a Battly!"}, ${account.name}</div>
                         </div>
                     </div>
                     <div class="news-content">
                         <div class="bbWrapper">
-                            <p>${lang.we_hope_you_enjoy}</p>
+                            <p>${window.stringLoader?.getString("login.we_hope_you_enjoy") || "Esperamos que disfrutes"}</p>
                         </div>
                     </div>`;
                     welcome.prepend(blockWelcome);
@@ -375,8 +372,8 @@ class Login {
         cancelMojangBtn.addEventListener("click", () => {
             if (this.database.getAccounts().length == 0) {
                 new Alert().ShowAlert({
-                    title: lang.no_accounts,
-                    message: lang.no_accounts_message,
+                    title: window.stringLoader?.getString("login.no_accounts") || "Sin cuentas",
+                    message: window.stringLoader?.getString("login.no_accounts_message") || "No hay cuentas disponibles",
                     type: "error"
                 })
             } else {
@@ -390,10 +387,10 @@ class Login {
             mailInput.disabled = true;
             passwordInput.disabled = true;
             infoLoginPanel.classList.add("is-active");
-            infoLogin.innerHTML = lang.logging_in;
+            infoLogin.innerHTML = window.stringLoader?.getString("login.logging_in") || "Iniciando sesión...";
 
             if (mailInput.value == "") {
-                infoLogin.innerHTML = lang.set_your_username;
+                infoLogin.innerHTML = window.stringLoader?.getString("login.set_your_username") || "Establece tu nombre de usuario";
                 setTimeout(() => {
                     infoLoginPanel.classList.remove("is-active");
                 }, 3000);
@@ -405,7 +402,7 @@ class Login {
             }
 
             if (mailInput.value.length < 3) {
-                infoLogin.innerHTML = lang.threecharacters_username;
+                infoLogin.innerHTML = window.stringLoader?.getString("login.threecharacters_username") || "El nombre debe tener más de 3 caracteres";
                 setTimeout(() => {
                     infoLoginPanel.classList.remove("is-active");
                 }, 3000);
@@ -417,7 +414,7 @@ class Login {
             };
 
             if (passwordInput.value == "") {
-                infoLogin.innerHTML = lang.set_your_password;
+                infoLogin.innerHTML = window.stringLoader?.getString("login.set_your_password") || "Establece tu contraseña";
                 setTimeout(() => {
                     infoLoginPanel.classList.remove("is-active");
                 }, 3000);
@@ -429,7 +426,7 @@ class Login {
             }
 
             if (passwordInput.value.length < 3) {
-                infoLogin.innerHTML = lang.threecharacters_password;
+                infoLogin.innerHTML = window.stringLoader?.getString("login.threecharacters_password") || "La contraseña debe tener más de 3 caracteres";
                 setTimeout(() => {
                     infoLoginPanel.classList.remove("is-active");
                 }, 3000);
@@ -462,7 +459,7 @@ class Login {
             if (accounts.length != 0) {
                 let account = accounts.find(account => account.uuid == uuid_);
                 if (account) {
-                    infoLogin.innerHTML = lang.account_already_exists;
+                    infoLogin.innerHTML = window.stringLoader?.getString("login.account_already_exists") || "Esta cuenta ya existe";
 
                     setTimeout(() => {
                         infoLoginPanel.classList.remove("is-active");
@@ -514,7 +511,7 @@ class Login {
                         }
                     }
 
-                    infoLogin.innerHTML = lang.checking_premium;
+                    infoLogin.innerHTML = window.stringLoader?.getString("login.checking_premium") || "Verificando premium...";
 
                     let premiums = [];
                     try {
@@ -567,19 +564,19 @@ class Login {
                     blockWelcome.innerHTML = `
                     <div class="news-header">
                         <div class="header-text">
-                            <div class="title_">${lang.welcome_again_to_battly}, ${account.name}</div>
+                            <div class="title_">${window.stringLoader?.getString("login.welcome_again_to_battly") || "¡Bienvenido a Battly!"}, ${account.name}</div>
                         </div>
                     </div>
                     <div class="news-content">
                         <div class="bbWrapper">
-                            <p>${lang.we_hope_you_enjoy}</p>
+                            <p>${window.stringLoader?.getString("login.we_hope_you_enjoy") || "Esperamos que disfrutes"}</p>
                         </div>
                     </div>`;
                     welcome.prepend(blockWelcome);
                 }
             }).catch(err => {
                 console.log(err)
-                infoLogin.innerHTML = lang.error_logging_in;
+                infoLogin.innerHTML = window.stringLoader?.getString("login.error_logging_in") || "Error al iniciar sesión";
                 setTimeout(() => {
                     infoLoginPanel.classList.remove("is-active");
                 }, 3000);

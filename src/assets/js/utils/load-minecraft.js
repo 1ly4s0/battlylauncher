@@ -12,17 +12,15 @@ import { CrashReport } from "./crash-report.js";
 const got = require("got");
 const dataDirectory = process.env.APPDATA || (process.platform == "darwin" ? `${process.env.HOME}/Library/Application Support` : process.env.HOME);
 const ShowCrashReport = new CrashReport().ShowCrashReport;
-const { Lang } = require("./assets/js/utils/lang.js");
-let langs;
-new Lang().GetLang().then(lang_ => {
-  langs = lang_;
-}).catch(error => {
-  console.error("Error:", error);
-});
+require('./assets/js/utils/stringLoader.js');
+let langs = {};
 
 class LoadMinecraft {
   async LaunchMinecraft(options) {
-    console.log("Launching Minecraft...");
+    // Auxiliary function to get strings from stringLoader with fallbacks
+    const getString = (key, fallback = '') => {
+      return window.stringLoader?.getString(`launcher.${key}`) || fallback || key;
+    };
     console.log(options);
     const db = await new database().init();
     const BattlyConfig = await new LoadAPI().GetConfig();
@@ -158,17 +156,17 @@ class LoadMinecraft {
               const progressText = document.getElementById("progressText1-download");
               const logTextArea = document.getElementById("battly-logs");
               if (progressText && percent !== 'unknown') {
-                progressText.innerHTML = `☕ ${langs.downloading_java || 'Descargando Java'} ${javaMajorVersion}... ${percent}%`;
+                progressText.innerHTML = `☕ ${getString('downloading_java', 'Descargando Java')} ${javaMajorVersion}... ${percent}%`;
               }
               if (logTextArea) {
                 if (progress.fileIndex === 1 && progress.totalFiles) {
-                  logTextArea.innerHTML += `\n☕ ${langs.downloading_java || 'Descargando Java'} ${javaMajorVersion}...`;
+                  logTextArea.innerHTML += `\n☕ ${getString('downloading_java', 'Descargando Java')} ${javaMajorVersion}...`;
                 }
                 if (percent !== 'unknown') {
 
                   const lines = logTextArea.innerHTML.split('\n');
                   if (lines.length > 0 && lines[lines.length - 1].includes('☕')) {
-                    lines[lines.length - 1] = `☕ ${langs.downloading_java || 'Descargando Java'} ${javaMajorVersion}... ${percent}%`;
+                    lines[lines.length - 1] = `☕ ${getString('downloading_java', 'Descargando Java')} ${javaMajorVersion}... ${percent}%`;
                     logTextArea.innerHTML = lines.join('\n');
                   }
                 }

@@ -5,7 +5,7 @@ import { Alert } from "./alert.js";
 import { LoadAPI } from "../utils/loadAPI.js";
 
 const { ipcRenderer, shell } = require('electron');
-const { Lang } = require("./assets/js/utils/lang.js");
+require("./assets/js/utils/stringLoader.js");
 const { Launch, Mojang } = require("./assets/js/libs/mc/Index");
 const pkg = require('../package.json');
 const fs = require('fs');
@@ -297,10 +297,9 @@ class Instances {
         const VersionsMojang = await loadAPI.GetVersionsMojang();
         const database_ = await new database().init();
         const config_ = BattlyConfig;
-        const langInstance = new Lang();
-        const langs = await langInstance.GetLang();
 
-        this.langs = langs;
+        await window.ensureStringLoader?.();
+        this.langs = window.stringLoader || {};
         this.Versions = Versions;
         this.VersionsMojang = VersionsMojang;
 

@@ -29,18 +29,9 @@ class Launcher {
     this.initLog();
     console.log("🔄 Iniciando Launcher...");
 
-    console.time("LangLauncher");
-    const { Lang } = require("./assets/js/utils/lang.js");
-    const langInstance = new Lang();
-
-    const langTimer = createPerformanceTimer("Language Loading");
-    const lang = await langInstance.GetLang().then((lang) => {
-      langTimer.end();
-      return lang;
-    }).catch((error) => {
-      console.error("Failed to load language", { error: error.message });
-      return null;
-    });
+    const stringLoaderTimer = createPerformanceTimer("String Loader Initialization");
+    await window.ensureStringLoader?.();
+    stringLoaderTimer.end();
 
     const apiTimer = createPerformanceTimer("API Config Loading");
     await new LoadAPI().GetConfig().then((config) => {

@@ -2332,7 +2332,7 @@ body {
   height: 90%;
   background-color: var(--bg-section);
   /* transition: right 0.3s ease; */
-  z-index: 9999;
+  z-index: 9999 !important;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
   position: fixed;
 

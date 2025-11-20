@@ -1,5 +1,29 @@
 {
   "version": 15,
+  "launcher": {
+    "loading_config": "Cargando configuración...",
+    "config_loaded": "Configuración cargada.",
+    "error_loading_config": "Error cargando configuración.",
+    "loading_versions": "Cargando versiones...",
+    "versions_loaded": "Versiones cargadas.",
+    "error_loading_versions": "Error cargando versiones.",
+    "loading_minecraft_versions": "Cargando versiones de Minecraft...",
+    "minecraft_versions_loaded": "Versiones de Minecraft cargadas.",
+    "error_loading_minecraft_versions": "Error cargando versiones de Minecraft.",
+    "starting_battly": "Iniciando Battly...",
+    "checking_updates": "Verificando actualizaciones...",
+    "update_available": "Actualización disponible",
+    "downloading_update": "Descargando actualización...",
+    "update_cancelled": "Actualización cancelada",
+    "update_error": "Error de actualización",
+    "update_downloaded": "Actualización descargada",
+    "checking_connection": "Verificando conexión...",
+    "no_connection": "Sin conexión a internet",
+    "starting_launcher": "Iniciando launcher...",
+    "error_connecting_server": "Error al conectar con el servidor",
+    "ending": "Cerrando...",
+    "closing_countdown": "Cerrando en"
+  },
   "common": {
     "welcome": "¡Bienvenid@ a Battly!",
     "salutate": "¡Hola!",
@@ -54,7 +78,10 @@
     "playlistSavedSuccessfully": "La playlist se ha guardado correctamente",
     "addedToQueue": "Canciones añadidas",
     "songsAddedToQueue": "Las canciones se han añadido a la cola",
-    "errorImportingPlaylist": "Ocurrió un error al importar la playlist"
+    "errorImportingPlaylist": "Ocurrió un error al importar la playlist",
+    "account_selected": "Cuenta Seleccionada",
+    "account_selected_text": "Ahora estás usando la cuenta:",
+    "account_selected_text_two": "Selecciona otra cuenta para cambiarla"
   },
   "startup": {
     "checkingConnection": "Comprobando conexión a internet",
@@ -1008,7 +1035,14 @@
     "reset": "Restablecer",
     "usingJava": "Usando",
     "downloadingJava": "Descargando… 0%",
-    "completedJava": "Completado"
+    "completedJava": "Completado",
+    "account_selected": "Cuenta seleccionada",
+    "account_selected_text": "Has seleccionado",
+    "account_selected_text_two": "como tu cuenta activa",
+    "are_you_sure": "¿Estás seguro?",
+    "are_you_sure_text": "Esta acción no se puede deshacer",
+    "yes_delete": "Sí, eliminar",
+    "no_cancel": "Cancelar"
   },
   "logs": {
     "logsTitle": "Logs de Battly",

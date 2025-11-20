@@ -31,14 +31,7 @@ import { Alert } from "../utils/alert.js";
 import { AskModal } from '../utils/askModal.js';
 const ModalAsk = new AskModal();
 
-const { Lang } = require("./assets/js/utils/lang.js");
-const { StringLoader } = require("./assets/js/utils/stringLoader.js");
-let lang;
-new Lang().GetLang().then(lang_ => {
-  lang = lang_;
-}).catch(error => {
-  console.error("Error:", error);
-});
+require("./assets/js/utils/stringLoader.js");
 class Settings {
   static id = "settings";
   async init(config) {
@@ -110,7 +103,7 @@ class Settings {
         localStorage.removeItem("background-video");
 
         new Alert().ShowAlert({
-          title: lang.background_set_successfully,
+          title: window.stringLoader?.getString("settings.background_set_successfully") || "Fondo establecido correctamente",
           icon: "success",
         });
       });
@@ -126,8 +119,8 @@ class Settings {
       let lang_ = document.getElementById("language-selector");
 
       new Alert().ShowAlert({
-        title: lang.changing_language,
-        text: lang.changing_language_text,
+        title: window.stringLoader?.getString("settings.changing_language") || "Cambiando idioma...",
+        text: window.stringLoader?.getString("settings.changing_language_text") || "Battly se reiniciará para aplicar el cambio",
         icon: "info",
       });
 
@@ -480,7 +473,7 @@ class Settings {
 
           document.getElementById(uuid ? uuid : uuid_).remove();
           new Alert().ShowAlert({
-            title: lang.account_deleted_successfully,
+            title: window.stringLoader?.getString("settings.account_deleted_successfully") || "Cuenta eliminada correctamente",
             icon: "success",
           });
 
@@ -923,7 +916,7 @@ class Settings {
     const javaPathStored =
       (typeof configClient === "string" && configClient) ||
       (configClient?.java_config?.java_path) ||
-      (lang?.java_path_didnt_set || "");
+      (window.stringLoader?.getString("settings.javaPathDidntSet") || "Java path not set");
 
     const javaPathInputTxt = document.getElementById("ruta-java-input");
     const javaPathInputFile = document.getElementById("java-path-input-file");
@@ -947,7 +940,7 @@ class Settings {
     });
 
     document.getElementById("java-path-reset").addEventListener("click", async () => {
-      if (javaPathInputTxt) javaPathInputTxt.value = lang?.java_path_didnt_set || "Ruta de java no establecida";
+      if (javaPathInputTxt) javaPathInputTxt.value = window.stringLoader?.getString("settings.javaPathDidntSet") || "Ruta de java no establecida";
       await setValue("java-path", "");
       new Alert().ShowAlert({ title: await window.getString("settings.javaPathResetSuccessfully"), icon: "success" });
     });
@@ -1590,7 +1583,7 @@ class Settings {
     clearBtn?.addEventListener("click", async () => {
       await setSelectedMajor("");
       await setValue("java-path", "");
-      if (javaPathInputTxt) javaPathInputTxt.value = lang?.java_path_didnt_set || "Ruta de java no establecida";
+      if (javaPathInputTxt) javaPathInputTxt.value = window.stringLoader?.getString("settings.javaPathDidntSet") || "Ruta de java no establecida";
       if (selectedBar) selectedBar.style.display = "none";
       new Alert().ShowAlert({ title: await window.getString("settings.javaSelectionCleared"), icon: "success" });
     });
