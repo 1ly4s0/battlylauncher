@@ -288,7 +288,13 @@
     }
   },
   "instances": {
+    "instances": "Instances",
     "welcome": "👋 Welcome to the new Battly instances panel. Here you can manage the instances you will use in Battly for your versions.",
+    "welcomeInstances": "👋 Welcome to the instances manager",
+    "recommended": "Recommended",
+    "latest": "Latest",
+    "noBuilds": "No builds available",
+    "installingLoader": "Installing loader",
     "openInstance": "Open",
     "openInstanceFolder": "Open folder",
     "deleteInstance": "Delete",
@@ -299,6 +305,7 @@
     "instanceDescription": "Instance description",
     "instanceImage": "Instance image",
     "instanceVersion": "Instance version",
+    "instanceVersion2": "Select Minecraft version",
     "instanceVersionWarning": "Editing your instance version may cause problems (especially with modpacks). Make sure the version is compatible with your installed mods.",
     "instanceDeletedCorrectly": "Instance deleted successfully.",
     "instanceSavedCorrectly": "Instance saved successfully.",

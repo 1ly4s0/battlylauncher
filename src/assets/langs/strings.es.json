@@ -288,7 +288,13 @@
     }
   },
   "instances": {
+    "instances": "Instancias",
     "welcome": "👋 Bienvenido/a al nuevo panel de instancias de Battly. Aquí podrás gestionar las instancias que usarás en Battly para tus versiones.",
+    "welcomeInstances": "👋 Bienvenido al gestor de instancias",
+    "recommended": "Recomendado",
+    "latest": "Última versión",
+    "noBuilds": "Sin builds disponibles",
+    "installingLoader": "Instalando loader",
     "openInstance": "Abrir",
     "openInstanceFolder": "Abrir carpeta",
     "deleteInstance": "Eliminar",
@@ -299,6 +305,7 @@
     "instanceDescription": "Descripción de la instancia",
     "instanceImage": "Imagen de la instancia",
     "instanceVersion": "Versión de la instancia",
+    "instanceVersion2": "Selecciona la versión de Minecraft",
     "instanceVersionWarning": "Editar la versión de tu instancia puede causar problemas (y más cuando son modpacks), asegúrate de que la versión sea compatible con los mods que tienes instalados.",
     "instanceDeletedCorrectly": "Se ha eliminado la instancia correctamente.",
     "instanceSavedCorrectly": "Se ha guardado la instancia correctamente.",

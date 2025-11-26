@@ -3567,6 +3567,7 @@ class Settings {
     const token = account.token || localStorage.getItem('battly_token');
     const username = account.name || localStorage.getItem('battly_username');
     const isPremium = account.premium || false;
+    currentProfile.isPremium = isPremium;
 
     elements.tabs = {
       border: document.getElementById('custom-tab-border'),
@@ -3875,9 +3876,9 @@ class Settings {
         return;
       }
 
-      const response = await fetch(`${baseURL} /api/v2 / users / profile / ${username} `, {
+      const response = await fetch(`${baseURL}/api/v2/users/profile/${username}`, {
         headers: {
-          'Authorization': `Bearer ${token} `
+          'Authorization': `Bearer ${token}`
         }
       });
       const data = await response.json();
@@ -4006,10 +4007,10 @@ class Settings {
         const formData = new FormData();
         formData.append('background', elements.bgImageInput.files[0]);
 
-        const uploadResponse = await fetch(`${baseURL} /api/v2 / users / profile / upload - background`, {
+        const uploadResponse = await fetch(`${baseURL}/api/v2/users/profile/upload-background`, {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${token} `
+            'Authorization': `Bearer ${token}`
           },
           body: formData
         });
@@ -4023,11 +4024,11 @@ class Settings {
         }
       }
 
-      const response = await fetch(`${baseURL} /api/v2 / users / profile`, {
+      const response = await fetch(`${baseURL}/api/v2/users/profile`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token} `
+          'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify({
           borderColor: currentProfile.borderColor,
@@ -4060,7 +4061,8 @@ class Settings {
         throw new Error(data.message || 'Error al guardar');
       }
     } catch (error) {
-      console.error('Error al guardar:', error);
+      console.error('Error al guardar:');
+      console.error(error);
       new Alert().ShowAlert({
         icon: 'error',
         title: 'Error al guardar',
@@ -4085,10 +4087,10 @@ class Settings {
     if (!confirmDelete.isConfirmed) return;
 
     try {
-      const response = await fetch(`${baseURL} /api/v2 / users / profile / background`, {
+      const response = await fetch(`${baseURL}/api/v2/users/profile/background`, {
         method: 'DELETE',
         headers: {
-          'Authorization': `Bearer ${token} `
+          'Authorization': `Bearer ${token}`
         }
       });
 

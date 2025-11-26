@@ -307,6 +307,44 @@ class Instances {
 
         instanciasBtn.addEventListener("click", async () => {
 
+            // Load all localized strings
+            const langs = {
+                instances: window.stringLoader?.getString("instances.instances") || "Instancias",
+                welcome_instances: window.stringLoader?.getString("instances.welcomeInstances") || "Bienvenido al gestor de instancias",
+                loading: window.stringLoader?.getString("common.loading") || "Cargando",
+                recommended: window.stringLoader?.getString("instances.recommended") || "Recomendado",
+                latest: window.stringLoader?.getString("instances.latest") || "Última versión",
+                no_builds: window.stringLoader?.getString("instances.noBuilds") || "Sin builds disponibles",
+                open_instance: window.stringLoader?.getString("instances.openInstance") || "Abrir instancia",
+                open_instance_folder: window.stringLoader?.getString("instances.openInstanceFolder") || "Abrir carpeta",
+                delete_instance: window.stringLoader?.getString("instances.deleteInstance") || "Eliminar",
+                folder_opened: window.stringLoader?.getString("instances.folderOpened") || "Carpeta abierta",
+                are_you_sure: window.stringLoader?.getString("settings.are_you_sure") || "¿Estás seguro?",
+                are_you_sure_text: window.stringLoader?.getString("settings.are_you_sure_text") || "Esta acción no se puede deshacer",
+                yes_delete: window.stringLoader?.getString("settings.yes_delete") || "Sí, eliminar",
+                no_cancel: window.stringLoader?.getString("settings.no_cancel") || "No, cancelar",
+                instance_deleted_correctly: window.stringLoader?.getString("instances.instanceDeletedCorrectly") || "Instancia eliminada correctamente",
+                create_instance: window.stringLoader?.getString("instances.createInstance") || "Crear instancia",
+                edit_instance: window.stringLoader?.getString("instances.editInstance") || "Editar instancia",
+                instance_name: window.stringLoader?.getString("instances.instanceName") || "Nombre de la instancia",
+                instance_description: window.stringLoader?.getString("instances.instanceDescription") || "Descripción",
+                instance_image: window.stringLoader?.getString("instances.instanceImage") || "Imagen de la instancia",
+                select_a_file: window.stringLoader?.getString("common.selectAFile") || "Selecciona un archivo",
+                instance_version: window.stringLoader?.getString("instances.instanceVersion") || "Versión",
+                instance_version2: window.stringLoader?.getString("instances.instanceVersion2") || "Selecciona la versión de Minecraft",
+                save_instance: window.stringLoader?.getString("instances.saveInstance") || "Guardar",
+                instance_saved_correctly: window.stringLoader?.getString("instances.instanceSavedCorrectly") || "Instancia guardada correctamente",
+                fill_all_fields: window.stringLoader?.getString("instances.fillAllFields") || "Rellena todos los campos",
+                name: window.stringLoader?.getString("common.name") || "Nombre",
+                description: window.stringLoader?.getString("common.description") || "Descripción",
+                instance_created_correctly: window.stringLoader?.getString("instances.instanceCreatedCorrectly") || "Instancia creada correctamente",
+                preparing_instance: window.stringLoader?.getString("instances.preparingInstance") || "Preparando instancia",
+                downloading_version: window.stringLoader?.getString("instances.downloadingVersion") || "Descargando versión",
+                installing_loader: window.stringLoader?.getString("instances.installingLoader") || "Instalando loader",
+                downloading_java: window.stringLoader?.getString("instances.downloadingJava") || "Descargando Java",
+                downloading_loader: window.stringLoader?.getString("instances.downloadingLoader") || "Descargando loader"
+            };
+
             const { modal, modalCard, modalHeader, closeBtn, listIcon, gridIcon } = createModalBase({
                 titleText: `<i class="fa-solid fa-folder"></i> ${langs.instances}`
             });
@@ -1073,6 +1111,7 @@ class Instances {
 
         let inicio = false;
         launch.on("data", (e) => {
+            console.log(e);
             if (!inicio) {
                 if (e.includes("Launching wrapped minecraft") || e.includes("Setting user: ")) {
                     preparingModal.remove();
