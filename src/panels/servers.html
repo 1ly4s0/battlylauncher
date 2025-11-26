@@ -638,18 +638,9 @@
             <h2 class="title is-4" style="color: #fff;" data-string-id="servers.logsTitle">Logs Guardados</h2>
             <p class="is-white" data-string-id="servers.logsDesc">Revisa, descarga y analiza logs históricos o archivos
                 de crash.</p>
-            <ul class="b-servers-saved-logs-list is-white">
-                <li>
-                    <i class="fa fa-file-alt"></i> latest.log
-                    <button class="button is-small is-link">Descargar</button>
-                </li>
-                <li>
-                    <i class="fa fa-file-alt"></i> 2025-02-07.log
-                    <button class="button is-small is-link">Descargar</button>
-                </li>
-                <li>
-                    <i class="fa fa-file-alt"></i> 2025-02-06-crash.log
-                    <button class="button is-small is-danger">Descargar</button>
+            <ul class="b-servers-saved-logs-list is-white" id="logs-list">
+                <li class="has-text-centered" style="padding: 20px;">
+                    <i class="fa fa-spinner fa-spin"></i> Cargando logs...
                 </li>
             </ul>
         </div>
@@ -752,7 +743,7 @@
                 <div class="control has-icons-left">
                     <input class="input is-inter" type="text" id="share-friend-search"
                         placeholder="Buscar por nombre..."
-                        style="background: rgba(44, 52, 70, 0.8); color: #fff; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        style="height: auto; background: rgba(44, 52, 70, 0.8); color: #fff; border: 1px solid rgba(255, 255, 255, 0.1);">
                     <span class="icon is-left"><i class="fa fa-search"></i></span>
                 </div>
             </div>
