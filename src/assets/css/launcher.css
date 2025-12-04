@@ -537,6 +537,7 @@ i.margin {
 .sn-notifications-container {
   justify-content: center !important;
   justify-items: center !important;
+  z-index: 9999999999 !important;
 }
 
 .titlebar {
@@ -1290,4 +1291,8 @@ i.margin {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+}
+
+.modal {
+  z-index: 999999 !important;
 }

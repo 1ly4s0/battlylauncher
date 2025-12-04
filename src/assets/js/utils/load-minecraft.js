@@ -4,7 +4,7 @@ const path = require("path");
 const AnalyticsHelper = require('./assets/js/utils/analyticsHelper.js');
 import * as NBT from "../../../../node_modules/nbtify/dist/index.js";
 import { LoadAPI } from "../utils/loadAPI.js";
-const { Launch } = require("./assets/js/libs/mc/Index");
+const { loadMinecraftJavaCore } = require('./assets/js/utils/library-loader.js');
 import { consoleOutput } from "./logger.js";
 let consoleOutput_ = + consoleOutput;
 import { logger, database, changePanel } from "../utils.js";
@@ -260,7 +260,7 @@ class LoadMinecraft {
     // Cargar la librería minecraft-java-core dinámicamente
     const minecraftLib = await loadMinecraftJavaCore(BattlyConfig);
     const { Launch } = minecraftLib;
-    
+
     const Launcher = new Launch();
     await Launcher.Launch(options);
 

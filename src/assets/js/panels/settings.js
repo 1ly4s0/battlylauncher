@@ -1821,6 +1821,18 @@ class Settings {
         const file = bgInput.files[0];
         if (!file) return;
 
+        // Máximo de 8 MB
+        if (file.size > 8 * 1024 * 1024) {
+          ModalAsk.ask({
+            title: await window.getString("settings.fileTooLarge"),
+            text: await window.getString("settings.fileMaxSize8MB"),
+            icon: 'error',
+            confirmButtonText: await window.getString("settings.accept"),
+            confirmButtonColor: '#3085d6'
+          });
+          return;
+        }
+
         const isGifSelected = (file.type && file.type.toLowerCase() === 'image/gif') || /\.gif$/i.test(file.name || '');
 
         if (isGifSelected && !isPremium) {
