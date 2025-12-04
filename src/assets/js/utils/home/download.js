@@ -9,9 +9,9 @@ const path = require("path");
 const AnalyticsHelper = require('./assets/js/utils/analyticsHelper.js');
 import * as NBT from "../../../../../node_modules/nbtify/dist/index.js";
 import { LoadAPI } from "../../utils/loadAPI.js";
-const { Launch } = require("./assets/js/libs/mc/Index");
+const { loadMinecraftJavaCore } = require('./assets/js/utils/library-loader');
 const { Client } = require("minecraft-launcher-core");
-const Launcher = new Launch();
+let Launcher = null; // Se cargará dinámicamente cuando se necesite
 import { consoleOutput } from "../logger.js";
 let consoleOutput_ = + consoleOutput;
 import { logger, database, changePanel } from "../../utils.js";

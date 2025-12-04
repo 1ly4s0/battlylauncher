@@ -1,7 +1,7 @@
 "use strict";
 
 const fs = require("fs");
-const { Microsoft, Mojang } = require("./assets/js/libs/mc/Index");
+const { loadMinecraftJavaCore } = require('./assets/js/utils/library-loader');
 const { ipcRenderer } = require("electron");
 const { getValue, setValue } = require('./assets/js/utils/storage');
 import { Alert } from "./utils/alert.js";
@@ -254,6 +254,9 @@ class Launcher {
           console.log(`🔄 Autenticando Microsoft (Xbox) – ${acc.name}`);
           showPreload("Autenticando cuenta de Microsoft…");
 
+          // Cargar dinámicamente minecraft-java-core
+          const minecraftLib = await loadMinecraftJavaCore(this.BattlyConfig);
+          const { Microsoft } = minecraftLib;
           const refresh = await new Microsoft(this.config.client_id).refresh(acc);
           if (refresh?.error) throw new Error(refresh.errorMessage);
 

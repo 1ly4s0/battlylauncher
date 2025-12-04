@@ -4,7 +4,7 @@ console.time("🕐 LoadHomeImports")
 import { logger, database, changePanel } from "../utils.js";
 
 const { StringLoader } = require("./assets/js/utils/stringLoader.js");
-
+const { loadMinecraftJavaCore } = require('./assets/js/utils/library-loader');
 const { ipcRenderer, ipcMain, shell } = require("electron");
 
 const AnalyticsController = require("./assets/js/utils/analyticsController.js");
@@ -248,7 +248,7 @@ class Home {
             console.log("Opciones de lanzamiento:");
             console.log(opts);
 
-            const { Launch } = require("./assets/js/libs/mc/Index");
+            const minecraftLib = await loadMinecraftJavaCore(this.BattlyConfig); const { Launch } = minecraftLib;
             const Launcher = new Launch();
 
             await Launcher.Launch(opts);

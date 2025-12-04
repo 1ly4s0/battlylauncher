@@ -3,6 +3,7 @@ const path = require("path");
 const { ipcRenderer } = require("electron");
 const { getValue, setValue } = require('./storage');
 import { logger, database, changePanel } from "../utils.js";
+const { getLibraryLoader } = require('./assets/js/utils/library-loader');
 
 const dataDirectory =
     process.env.APPDATA ||
@@ -46,6 +47,13 @@ async function LaunchDownloadedVersion(instance, versionData) {
     ];
 
     if (!isExtra) {
+        // Cargar la librería minecraft-java-core dinámicamente
+        const libraryLoader = getLibraryLoader();
+        const libraryConfig = instance.BattlyConfig.libraries.package_mimbpyzw_s52o;
+        
+        await libraryLoader.loadMinecraftLibrary(libraryConfig);
+        const { Launch } = libraryLoader.requireMinecraftLibrary();
+
         const opts = {
             url: gameUrl,
             authenticator: selectedAccount,
@@ -70,7 +78,6 @@ async function LaunchDownloadedVersion(instance, versionData) {
         console.log("Opciones de lanzamiento:");
         console.log(opts);
 
-        const { Launch } = require("./assets/js/libs/mc/Index");
         const Launcher = new Launch();
 
         await Launcher.Launch(opts);

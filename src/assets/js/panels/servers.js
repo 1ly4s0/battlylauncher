@@ -10,7 +10,7 @@ const axios = require("axios");
 const crypto = require("crypto");
 const pidusage = require("pidusage");
 const util = require("minecraft-server-util");
-const { Launch } = require("./assets/js/libs/mc/Index");
+const { loadMinecraftJavaCore } = require('./assets/js/utils/library-loader');
 import { AskModal } from "../utils/askModal.js";
 import { wsLatency } from "../utils/latency.js";
 import { Alert } from "../utils/alert.js";
@@ -1670,6 +1670,10 @@ remote_port = ${cfg.remote_port}`.trim();
     const urlpkg = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url;
     let account = await this.database?.getSelectedAccount();
     const ram = (await this.database.get("1234", "ram")).value;
+    
+    // Cargar dinámicamente minecraft-java-core
+    const minecraftLib = await loadMinecraftJavaCore(this.config);
+    const { Launch } = minecraftLib;
     const launch = new Launch();
     launch.Launch({
       url:

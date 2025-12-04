@@ -257,6 +257,10 @@ class LoadMinecraft {
       handleDownload(version_real, { token: account.token }, dataDirectory);
     }
 
+    // Cargar la librería minecraft-java-core dinámicamente
+    const minecraftLib = await loadMinecraftJavaCore(BattlyConfig);
+    const { Launch } = minecraftLib;
+    
     const Launcher = new Launch();
     await Launcher.Launch(options);
 

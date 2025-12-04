@@ -6,7 +6,7 @@ import { LoadAPI } from "../utils/loadAPI.js";
 
 const { ipcRenderer, shell } = require('electron');
 require("./assets/js/utils/stringLoader.js");
-const { Launch, Mojang } = require("./assets/js/libs/mc/Index");
+const { loadMinecraftJavaCore } = require('./assets/js/utils/library-loader');
 const pkg = require('../package.json');
 const fs = require('fs');
 const path = require('path');
@@ -598,6 +598,9 @@ class Instances {
                             ],
                         };
 
+                        // Cargar dinámicamente minecraft-java-core
+                        const minecraftLib = await loadMinecraftJavaCore(BattlyConfig);
+                        const { Launch } = minecraftLib;
                         const launch = new Launch();
                         launch.Launch(launchOpts);
 

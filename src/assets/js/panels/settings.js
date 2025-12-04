@@ -1678,7 +1678,6 @@ class Settings {
 
   async newTheme() {
     const API = 'https://api.battlylauncher.com/api/themes';
-    const IMGUR_CLIENT_ID = '56b4c1812c2116a';
     const account = await this.database.getSelectedAccount();
     if (account.type !== "battly") return;
     const authToken = account?.token;
